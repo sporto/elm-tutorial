@@ -14,11 +14,17 @@ main =
   Signal.map show Mouse.x
 ```
 
+If you run this example in the browser you will see the changing x coordinate as you move your mouse.
+
+
+
 ## Transforming signals
 
-
+## Filtering signals
 
 ## Combining signals
+
+## Sampling signals
 
 ## Keeping state
 
