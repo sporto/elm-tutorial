@@ -15,3 +15,4 @@ main =
 ```
 
 If you run this example in the browser you will see the changing x coordinate as you move your mouse.
+
