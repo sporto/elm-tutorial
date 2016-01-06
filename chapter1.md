@@ -32,5 +32,14 @@ add 1 2
 When you need to call a function which includes the result of another function you will use parentesis to group them:
 
 ```elm
-
+add 1 (divide 12 3)
 ```
+
+Here the result of `divide 12 3` is given to `add` as the second parameter. 
+
+For contrast in many other languages this will be written like:
+
+```js
+add(1, divide(12, 3))
+```
+
