@@ -1,4 +1,4 @@
-# Functions
+# Function basics
 
 
 This chapter covers basic Elm syntax that is important to get familiar with. These are functions, function signatures, the pipe operator and auto binding.
@@ -42,4 +42,7 @@ For contrast in many other languages this will be written like:
 ```js
 add(1, divide(12, 3))
 ```
+
+## Auto binding
+
 
