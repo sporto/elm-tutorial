@@ -7,7 +7,11 @@ Signals in Elm can be passed around, transformed, filtered and combined as you s
 Let's see a basic signal:
 
 ```elm
-mouseSignal
+import Graphics.Element exposing (..)
+import Mouse
+
+main =
+  Signal.map show Mouse.x
 ```
 
 ## Transforming signals
