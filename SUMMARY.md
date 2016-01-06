@@ -11,4 +11,5 @@
 * The first layer
 * Adding a resource
 * Adding routing
+* Fetching data
 
