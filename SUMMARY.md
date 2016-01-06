@@ -5,7 +5,7 @@
 * Hello
 * [Functions](chapter1.md)
 * [Signals](signals.md)
-   * Introduction to signals
+   * [Introduction to signals](introduction_to_signals.md)
 * Mailbox
 * Start App
    * The first layer
