@@ -6,4 +6,5 @@
 * [Functions](chapter1.md)
 * [Signals](signals.md)
 * Mailbox
+* Start App
 
