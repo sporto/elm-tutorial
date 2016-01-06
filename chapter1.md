@@ -1,7 +1,7 @@
 # Function basics
 
 
-This chapter covers basic Elm syntax that is important to get familiar with. These are functions, function signatures, the pipe operator and auto binding.
+This chapter covers basic Elm syntax that is important to get familiar with. These are functions, function signatures, partial application and the pipe operator.
 
 ## Functions
 
@@ -27,7 +27,7 @@ You call this function by writing:
 add 1 2
 ```
 
-### Parenthesis
+### Grouping with parenthesis
 
 When you need to call a function which includes the result of another function you will use parentesis to group them:
 
@@ -43,6 +43,37 @@ For contrast in many other languages this will be written like:
 add(1, divide(12, 3))
 ```
 
-## Auto binding
+## Partial application
 
+In Elm you can take a function like `add` above and call it with only one argument e.g. `add 2`.
 
+This will return another function with the first parameter bound to `2`, then you call this returned function with other parameter:
+
+```elm
+add2 = add 2
+add2 3 ==> 5
+```
+
+Another way of thinking about a function signature like `add : Int -> Int -> Int`. Is that this is a function that takes one integer as argument and returns another function. This returned function takes another integer and returns an integer.
+
+Partial application is incredible useful in Elm for making your code more readable and passing state between functions in your application.
+
+## The pipe operator
+
+As shown above you can nest functions like:
+
+```elm
+add 1 (divide 2 3)
+```
+
+Maybe this is a trivial example, but conside a more complex one:
+
+```elm
+sum (filter (isOver 100) (map getCost records))
+```
+
+This could be hard to read as it resolves inside out. The pipe operator makes writing these examples in a more readable way:
+
+```elm
+
+```
