@@ -6,7 +6,7 @@
 * [Functions](chapter1.md)
 * [Signals](signals.md)
 * Mailbox
-* The first layer
 * Start App
    * The first layer
+* The first layer
 
