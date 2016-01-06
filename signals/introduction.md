@@ -20,4 +20,12 @@ In the first line we are importing the Graphics.Element module from core and add
 
 In the second line we import `Mouse` from core, this module has various utilities for working with the mouse.
 
-`main` 
+In Elm applications `main` can take an static element or a signal. In this case `main` is taking a signal. 
+
+Let's deconstruct the last line.
+
+`Mouse.x` gives us a signal of the x mouse coordinate as it changes. This signal has the signature `Signal.Signal Int`, so it is a signal that carries a simple integer.
+
+We cannot display this signal directly, we need to convert it to a different signal for display. `Graphics.Element.show` is a function that __converts anything to its textual representation__, so we will use that.
+
+
