@@ -63,7 +63,7 @@ Partial application is incredible useful in Elm for making your code more readab
 As shown above you can nest functions like:
 
 ```elm
-add 1 (divide 2 3)
+add 1 (multiply 2 3)
 ```
 
 Maybe this is a trivial example, but conside a more complex one:
@@ -75,5 +75,16 @@ sum (filter (isOver 100) (map getCost records))
 This could be hard to read as it resolves inside out. The pipe operator makes writing these examples in a more readable way:
 
 ```elm
-
+3
+  |> multiply 2
+  |> add 1
 ```
+
+```elm
+records
+  |> map getCost
+  |> filter (isOver 100)
+  |> sum
+```
+
+This relies heavily on partial application, in the first example `3` is passed to a partially applied function `multiply 2`, then that result is passed to another partially applied function `add 1`.
