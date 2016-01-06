@@ -2,7 +2,7 @@
 
 * [Introduction](README.md)
 * Installing Elm
-   * Hello
+* Hello
 * [Functions](chapter1.md)
 * [Signals](signals.md)
 * Mailbox
