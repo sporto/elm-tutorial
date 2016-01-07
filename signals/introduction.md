@@ -24,8 +24,28 @@ In Elm applications `main` can take an static element or a signal. In this case 
 
 Let's deconstruct the last line.
 
+#### Mouse.x
+
 `Mouse.x` gives us a signal of the x mouse coordinate as it changes. This signal has the signature `Signal.Signal Int`, so it is a signal that carries a simple integer.
+
+#### Graphics.Element.show
 
 We cannot display this signal directly, we need to convert it to a different signal for display. `Graphics.Element.show` is a function that __converts anything to its textual representation__, so we will use that.
 
+#### Signal.map
 
+`Signal.map` is a function that __converts__ or __maps__ one signal to a different signal. The first argument of map is a function that will receive the values from the source signal. The second argument is the source signal.
+
+Signal.map returns a new signal with the result of mapping the source signal through the provided function.
+
+Here is another example of map:
+
+```elm
+double x =
+  x * 2
+
+doubleSignal =
+  Signal.map double Mouse.x
+```
+
+`double` is a function that doubles the input. So `doubleSignal` is a signal that gives us the current mouse x coordinate multiplied by 2.
