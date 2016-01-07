@@ -49,3 +49,7 @@ doubleSignal =
 ```
 
 `double` is a function that doubles the input. So `doubleSignal` is a signal that gives us the current mouse x coordinate multiplied by 2.
+
+### Excersice
+
+Try combining the basic mouse x example above with `doubleSignal` so you see the current x multiplied by 2 in the browser as you move.
