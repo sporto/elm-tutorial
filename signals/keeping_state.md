@@ -21,4 +21,10 @@ main =
   Signal.map view countSignal
 ```
 
-To introduce things gradually here we have an application that just shows `1` all the time. The `view` function shows 
+To introduce things gradually here we have an application that just shows `1` all the time. The `view` function displays the given count, in this case it is always 1.
+
+The `countSignal` function produces a signal of integers, it takes the `Mouse.clicks` signal and maps it to always `1` for now.
+
+`main` takes this `countSignal` and maps it through the `view` function.
+
+
