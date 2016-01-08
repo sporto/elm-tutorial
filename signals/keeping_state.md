@@ -58,5 +58,4 @@ Signal.foldp takes three arguments:
 - The initial state, in this case `0`
 - And the source signal: `Mouse.clicks`
 
-The accumulation function 
-
+The syntax: `\x y -> x + y` is an inline function in Elm. Equivalent to something like `(x, y) => x + y;` in ES6.
