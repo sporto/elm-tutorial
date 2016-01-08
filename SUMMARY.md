@@ -6,6 +6,7 @@
 * [Functions](chapter1.md)
 * [Signals](signals.md)
    * [Introduction to signals](signals/introduction.md)
+   * Keeping state
 * Mailbox
 * Start App
    * The first layer
