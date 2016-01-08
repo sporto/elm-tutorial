@@ -43,7 +43,7 @@ view count =
 
 countSignal : Signal Int
 countSignal =
-  Signal.foldp (\_ acc -> acc + 1) 0 Mouse.clicks
+  Signal.foldp (\_ state -> state + 1) 0 Mouse.clicks
 
 main: Signal.Signal Html.Html
 main =
@@ -54,8 +54,10 @@ Let's see what is happening in the `Signal.foldp` line.
 
 Signal.foldp takes three arguments:
 
-- An accumulation function: `(\_ acc -> acc + 1)`
+- An accumulation function: `(\_ state -> state + 1)`
 - The initial state, in this case `0`
 - And the source signal: `Mouse.clicks`
 
 The syntax: `\x y -> x + y` is an inline function in Elm. Equivalent to something like `(x, y) => x + y;` in ES6.
+
+The accumulation function above take the input from `Mouse.clicks` and the previous state
