@@ -64,7 +64,8 @@ This is how `foldp` works:
 
 - Each time `foldp` receives an input from the __source signal__ it will call the __accumulation__ function. 
 - This __accumulation__ function receives the output of the __source signal__ and the __previous state__. 
-- The __accumulation__ function calculates and return a new state. - `folp` keeps this new state.
+- The __accumulation__ function calculates and return a new state.
+- `folp` keeps this new state.
 - 
 
 The accumulation function above takes the input from `Mouse.clicks` and the previous state and returns the new state. The input from `Mouse.clicks` is always `()` which is called the unit type in Elm. We ignore this by using `_` in the accumulator function.
