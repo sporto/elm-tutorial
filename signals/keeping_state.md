@@ -20,3 +20,5 @@ main: Signal.Signal Html.Html
 main =
   Signal.map view countSignal
 ```
+
+To introduce things gradually here we have an application that just shows `1` all the time. The `view` function shows 
