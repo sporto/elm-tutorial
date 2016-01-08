@@ -19,5 +19,4 @@ countSignal =
 main: Signal.Signal Html.Html
 main =
   Signal.map view countSignal
-
 ```
