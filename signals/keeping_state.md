@@ -49,3 +49,5 @@ main: Signal.Signal Html.Html
 main =
   Signal.map view countSignal
 ```
+
+Let's see what is happening in the `Signal.foldp` line.
