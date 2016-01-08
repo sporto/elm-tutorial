@@ -54,9 +54,9 @@ Let's see what is happening in the `Signal.foldp` line.
 
 Signal.foldp takes three arguments:
 
-- The function to calculate the new state: `(\_ acc -> acc + 1)`
+- An accumulation function: `(\_ acc -> acc + 1)`
 - The initial state, in this case `0`
 - And the source signal: `Mouse.clicks`
 
- 
+The accumulation function 
 
