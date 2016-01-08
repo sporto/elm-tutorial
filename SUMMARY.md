@@ -7,7 +7,6 @@
    * Keeping state
 * [Signals](signals.md)
    * [Introduction to signals](signals/introduction.md)
-       * Keeping state
    * Keeping state
 * Mailbox
 * Start App
