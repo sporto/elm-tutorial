@@ -50,15 +50,22 @@ main =
   Signal.map view countSignal
 ```
 
-Let's see what is happening in the `Signal.foldp` line.
+Let's see what's happening in the `Signal.foldp` line.
 
 Signal.foldp takes three arguments:
 
-- An accumulation function: `(\_ state -> state + 1)`
-- The initial state, in this case `0`
-- And the source signal: `Mouse.clicks`
+- An __accumulation__ function: `(\_ state -> state + 1)`
+- The __initial state__, in this case `0`
+- And the __source signal__: `Mouse.clicks`
 
 The syntax: `\x y -> x + y` is an inline function in Elm. Equivalent to something like `(x, y) => x + y;` in ES6.
+
+This is how `foldp` works:
+
+- Each time `foldp` receives an input from the __source signal__ it will call the __accumulation__ function. 
+- This __accumulation__ function receives the output of the __source signal__ and the __previous state__. 
+- The __accumulation__ function calculates and return a new state. - `folp` keeps this new state.
+- 
 
 The accumulation function above takes the input from `Mouse.clicks` and the previous state and returns the new state. The input from `Mouse.clicks` is always `()` which is called the unit type in Elm. We ignore this by using `_` in the accumulator function.
 
