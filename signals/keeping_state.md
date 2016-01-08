@@ -27,4 +27,6 @@ The `countSignal` function produces a signal of integers, it takes the `Mouse.cl
 
 `main` takes this `countSignal` and maps it through the `view` function.
 
+## Signal.foldp
 
+`Signal.foldp` for 'fold past' is a signal that takes past state and combines it with a current input. It is quite similar `inject` in JavaScript arrays.
