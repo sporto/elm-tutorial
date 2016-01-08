@@ -7,11 +7,15 @@ Signals in Elm can be passed around, transformed, filtered and combined as you s
 Let's see a basic signal:
 
 ```elm
-import Graphics.Element exposing (..)
+import Html
 import Mouse
 
+view x =
+  Html.text (toString x)
+
 main =
-  Signal.map show Mouse.x
+  Signal.map view Mouse.x
+
 ```
 
 If you run this example in the browser you will see the changing x coordinate as you move your mouse.
