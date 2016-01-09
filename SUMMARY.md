@@ -10,7 +10,6 @@
    * [Keeping state](signals/keeping_state.md)
 * The Elm architecture
    * [Model](elm_arch/model.md)
-       * Update
    * Update
 * Mailbox
 * The first layer
