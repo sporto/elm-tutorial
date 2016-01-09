@@ -14,6 +14,5 @@
 * Adding a resource
 * Fetching data
 * Adding routing
-* Installing Elm
 * Foundations
 
