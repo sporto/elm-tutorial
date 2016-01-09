@@ -60,7 +60,7 @@ Signal.foldp takes three arguments:
 
 The syntax: `\x y -> x + y` is an inline function in Elm. Equivalent to something like `(x, y) => x + y;` in ES6.
 
-This is how `foldp` works:
+#### This is how `foldp` works
 
 - Each time `foldp` receives an __input signal__ it will call the __accumulation__ function.
 - This __accumulation__ function receives the output of the __input signal__ and the __previous state__. 
@@ -68,6 +68,15 @@ This is how `foldp` works:
 - The __accumulation__ function calculates and returns a new state.
 - `folp` keeps this new state and pass it as the previous state the next time it calls the __accumulator__ function.
 
-The accumulation function above takes the input from `Mouse.clicks` and the previous state and returns the new state. The input from `Mouse.clicks` is always `()` which is called the unit type in Elm. We ignore this by using `_` in the accumulator function.
+
+#### The accumulation function
+
+```elm
+\_ state -> state + 1
+```
+
+The __accumulation__ function above takes the input from `Mouse.clicks` and the previous state and returns a new state.
+
+The input from `Mouse.clicks` is always `()` which is called the unit type in Elm. We don't need to do anything with this value, so we ignore it by using `_`.
 
 WRITE SOMETHIGN ABOUT THE UNIT TYPE OR LINK
