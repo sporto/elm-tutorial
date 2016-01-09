@@ -72,4 +72,13 @@ countSignal =
   Signal.foldp (\_ state -> {state | count = state.count + 1}) initialModel Mouse.clicks
 ```
 
-Instead of having `countSignal` be a signal of `Signal
+Instead of having `countSignal` be a signal of `Signal.Signal Int`, now it is a `Signal.Signal Model`. So it is a signal that emits `Model`.
+
+The __accumulation__ function in `foldp` takes the previous model and returns a new one. It updates the `count` attribute in the previous model using:
+
+```elm
+{state | count = state.count + 1}
+```
+
+In Elm all data structure are immutable. So this syntax above is how you return a new immutable record with one property updated. Read mode ABOUT THIS HERE.
+
