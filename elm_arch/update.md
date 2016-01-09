@@ -43,4 +43,8 @@ update _ model =
   {model | count = model.count + 1}
 ```
 
+This function is equivalent to what we had before:
 
+```elm
+
+```
