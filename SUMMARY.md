@@ -9,7 +9,7 @@
    * [Introduction to signals](signals/introduction.md)
    * [Keeping state](signals/keeping_state.md)
 * Mailbox
-* Start App
+* The Elm architecture
    * The first layer
 * The first layer
 * Adding a resource
