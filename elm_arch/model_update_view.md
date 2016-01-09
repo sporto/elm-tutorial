@@ -1,4 +1,4 @@
-# Model, update, view
+# Model
 
 Now that we can keep state using `foldp`, we can refactor our application to follow the __Elm architecture__ pattern.
 
