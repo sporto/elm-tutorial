@@ -53,10 +53,12 @@ But instead of an inline function it is now an standalone one. __update__ take t
 
 #### foldp
 
-In `foldp` instead of using the inline function we replace it with the __udpate__ function:
+In `foldp` instead of using the inline function we replace it with the __update__ function:
 
 ```elm
 countSignal : Signal.Signal Model
 countSignal =
   Signal.foldp update initialModel Mouse.clicks
 ```
+
+The appplication work exactly the same but we are now using the __Model, Update, View__ pattern.
