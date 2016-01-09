@@ -4,7 +4,6 @@
 * Installing Elm
 * [Hello](hello.md)
 * [Functions](chapter1.md)
-   * Keeping state
 * [Signals](signals.md)
    * [Introduction to signals](signals/introduction.md)
    * [Keeping state](signals/keeping_state.md)
