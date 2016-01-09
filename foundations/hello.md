@@ -31,6 +31,10 @@ In Elm you need to import the __modules__  you want to use explicitly. In this c
 
 ### main
 
-Every application in Elm starts on a `main` function. `main` should be a function that returns an static element or a signal of elements (more on signals later). In this case `main` just returns an `Html.Html` element.
+Every application in Elm starts on a `main` function. `main` should be a function that returns an static element or a signal of elements (more on signals later). In this case `main` just returns an `Html.Html` element (Html element from the Html module).
+
+### elm reactor
+
+
 
 
