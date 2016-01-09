@@ -61,4 +61,4 @@ countSignal =
   Signal.foldp update initialModel Mouse.clicks
 ```
 
-The appplication work exactly the same but we are now using the __Model, Update, View__ pattern.
+The appplication work exactly the same as before but we are now using the __Model, Update, View__ pattern.
