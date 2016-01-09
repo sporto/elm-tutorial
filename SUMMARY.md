@@ -3,8 +3,8 @@
 * [Introduction](README.md)
 * Foundations
    * Installing Elm
-   * [Functions](chapter1.md)
    * [Hello](hello.md)
+* [Functions](chapter1.md)
 * [Signals](signals.md)
    * [Introduction to signals](signals/introduction.md)
    * [Keeping state](signals/keeping_state.md)
