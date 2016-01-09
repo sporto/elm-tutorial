@@ -2,7 +2,7 @@
 
 * [Introduction](README.md)
 * Foundations
-   * Installing Elm
+   * [Installing Elm](foundations/installing_elm.md)
    * [Hello](hello.md)
    * [Functions](chapter1.md)
 * [Signals](signals.md)
