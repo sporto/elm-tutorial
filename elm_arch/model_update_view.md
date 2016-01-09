@@ -13,8 +13,7 @@ type alias Model = {
   }
 
 initialModel : Model
-initialModel =
-  {
+initialModel = {
     count = 0
   }
 
