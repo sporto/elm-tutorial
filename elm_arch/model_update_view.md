@@ -21,7 +21,7 @@ view : Model -> Html.Html
 view model =
   Html.text (toString model.count)
 
-countSignal : Signal Model
+countSignal : Signal.Signal Model
 countSignal =
   Signal.foldp (\_ state -> {state | count = state.count + 1}) initialModel Mouse.clicks
 
@@ -67,7 +67,9 @@ Our view now takes a `Model` record and displays the count by accessing `model.c
 ### State signal
 
 ```elm
-countSignal : Signal Model
+countSignal : Signal.Signal Model
 countSignal =
   Signal.foldp (\_ state -> {state | count = state.count + 1}) initialModel Mouse.clicks
 ```
+
+Instead of having `countSignal` be a signal of `Signal
