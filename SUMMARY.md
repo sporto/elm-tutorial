@@ -12,7 +12,6 @@
    * [Model](elm_arch/model.md)
    * [Update](elm_arch/update.md)
 * Mailbox
-* The first layer
 * Adding a resource
 * Fetching data
 * Adding routing
