@@ -8,9 +8,9 @@
 * [Signals](signals.md)
    * [Introduction to signals](signals/introduction.md)
    * [Keeping state](signals/keeping_state.md)
-* Mailbox
 * The Elm architecture
    * The first layer
+* Mailbox
 * The first layer
 * Adding a resource
 * Fetching data
