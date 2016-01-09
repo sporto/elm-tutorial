@@ -1,7 +1,6 @@
 # Summary
 
 * [Introduction](README.md)
-* Installing Elm
 * [Hello](hello.md)
 * [Functions](chapter1.md)
 * [Signals](signals.md)
@@ -15,5 +14,6 @@
 * Adding a resource
 * Fetching data
 * Adding routing
+* Installing Elm
 * Foundations
 
