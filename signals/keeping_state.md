@@ -80,3 +80,5 @@ The __accumulation__ function above takes the input from `Mouse.clicks` and the 
 The input from `Mouse.clicks` is always `()` which is called the unit type in Elm. We don't need to do anything with this value, so we ignore it by using `_`.
 
 WRITE SOMETHIGN ABOUT THE UNIT TYPE OR LINK
+
+
