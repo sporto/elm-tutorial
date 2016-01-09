@@ -46,5 +46,7 @@ update _ model =
 This function is equivalent to what we had before:
 
 ```elm
-
+ (\_ state -> {state | count = state.count + 1})
 ```
+
+But instead of an inline function it is now an standalone one. __update__ take the unit type (Given by Mouse.clicks), the previous `Model` and returns a new `Model`.
