@@ -9,9 +9,9 @@
    * [Introduction to signals](signals/introduction.md)
    * [Keeping state](signals/keeping_state.md)
 * The Elm architecture
-   * Update
    * [Model](elm_arch/model.md)
        * Update
+   * Update
 * Mailbox
 * The first layer
 * Adding a resource
