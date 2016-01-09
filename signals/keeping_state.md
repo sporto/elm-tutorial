@@ -60,7 +60,7 @@ Signal.foldp takes three arguments:
 
 The syntax: `\x y -> x + y` is an inline function in Elm. Equivalent to something like `(x, y) => x + y;` in ES6.
 
-#### This is how `foldp` works
+#### How `foldp` works
 
 - Each time `foldp` receives an __input signal__ it will call the __accumulation__ function.
 - This __accumulation__ function receives the output of the __input signal__ and the __previous state__. 
