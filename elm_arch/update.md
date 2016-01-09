@@ -35,7 +35,7 @@ main =
 
 Here we have introduced an __update__ function.
 
-#### Update
+#### update
 
 ```elm
 update : () -> Model -> Model
@@ -50,3 +50,13 @@ This function is equivalent to what we had before:
 ```
 
 But instead of an inline function it is now an standalone one. __update__ take the unit type (given by Mouse.clicks), the previous `Model` and returns a new `Model`.
+
+#### foldp
+
+In `foldp` instead of using the inline function we replace it with the __udpate__ function:
+
+```elm
+countSignal : Signal.Signal Model
+countSignal =
+  Signal.foldp update initialModel Mouse.clicks
+```
