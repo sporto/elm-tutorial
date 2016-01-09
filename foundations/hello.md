@@ -22,4 +22,4 @@ elm reactor 0.16.0
 Listening on http://0.0.0.0:8000/
 ```
 
-Open `http://0.0.0.0:8000/` on a browser. And click on `Hello.elm`
+Open `http://0.0.0.0:8000/` on a browser. And click on `Hello.elm`. You should see `Hello` on your browser.
