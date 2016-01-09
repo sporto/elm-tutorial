@@ -33,4 +33,14 @@ main =
 
 ```
 
+Here we have introduced an __update__ function.
+
+#### Update
+
+```elm
+update : () -> Model -> Model
+update _ model =
+  {model | count = model.count + 1}
+```
+
 
