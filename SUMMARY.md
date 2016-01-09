@@ -15,4 +15,5 @@
 * Fetching data
 * Adding routing
 * Foundations
+   * Installing Elm
 
