@@ -7,3 +7,22 @@ So far we have been listening to a "raw" signal like `Mouse.x` and using that fo
 In Elm we use __mailboxes__ for this. A mailbox is a communication hub that receives messages from UI elements and tasks and rebrodcasted them as a signal.
 
 To understand this better, let's start by creating a page with a button:
+
+```elm
+import Html
+
+view : String -> Html.Html
+view message =
+  Html.div [] [
+    Html.div [] [ Html.text message ],
+    Html.button [] [ Html.text "Click" ]
+  ]
+
+messageSignal : Signal String
+messageSignal =
+  Signal.constant ""
+
+main: Signal Html.Html
+main =
+  Signal.map view messageSignal
+```
