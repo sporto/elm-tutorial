@@ -8,6 +8,7 @@
 * [Signals](signals.md)
    * [Introduction to signals](signals/introduction.md)
    * [Keeping state](signals/keeping_state.md)
+   * Mailboxes
 * The Elm architecture
    * [Model](elm_arch/model.md)
    * [Update](elm_arch/update.md)
