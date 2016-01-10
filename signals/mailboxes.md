@@ -32,3 +32,7 @@ main =
 `messageSignal` is a string signal with the constant value of "Hello", it never changes.
 
 `main` maps the latest value from `messageSignal` to `view`. So if you run this code on your browser you will see `Hello` which is the constant value coming from `messageSignal`.
+
+## Adding interaction
+
+We want to be able to click on the button and change the message. We will need to use a __Mailbox__ for this.
