@@ -35,4 +35,8 @@ main =
 
 ## Adding interaction
 
-We want to be able to click on the button and change the message. We will need to use a __Mailbox__ for this.
+We want to be able to click on the button and change the message. To do this we use __Html.Events.onClick__. Have a look at the documentation for the __Html.Events__ module. All of them have this signature: `Signal.Address a -> a -> Html.Attribute`
+
+
+
+We will need to use a __Mailbox__ for this.
