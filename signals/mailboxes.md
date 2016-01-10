@@ -39,7 +39,6 @@ We want to be able to click on the button and change the message. To do this we 
 
 There are a lot of new concepts here, so we need to go into more details.
 
-
 ## Messages
 
 
