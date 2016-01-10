@@ -4,7 +4,7 @@
 * Foundations
    * [Installing Elm](foundations/installing_elm.md)
    * [Hello](foundations/hello.md)
-   * More on functions
+   * [More on functions](foundations/more_on_functions.md)
    * [Functions](foundations/functions.md)
    * More on functions
 * [Signals](signals.md)
