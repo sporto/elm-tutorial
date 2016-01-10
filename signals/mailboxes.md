@@ -29,4 +29,4 @@ main =
 
 `view` display a message and a button for us to click. This button doesn't do anything at the moment.
 
-`messageSignal` is a string signal with the constant value of "", it never changes.
+`messageSignal` is a string signal with the constant value of "Hello", it never changes.
