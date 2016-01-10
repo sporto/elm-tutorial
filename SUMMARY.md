@@ -6,7 +6,6 @@
    * [Hello](foundations/hello.md)
    * [Functions](foundations/functions.md)
    * [More on functions](foundations/more_on_functions.md)
-   * More on functions
 * [Signals](signals.md)
    * [Introduction to signals](signals/introduction.md)
    * [Keeping state](signals/keeping_state.md)
