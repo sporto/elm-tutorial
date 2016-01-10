@@ -20,7 +20,7 @@ view message =
 
 messageSignal : Signal String
 messageSignal =
-  Signal.constant ""
+  Signal.constant "Hello"
 
 main: Signal Html.Html
 main =
