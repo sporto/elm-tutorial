@@ -30,3 +30,5 @@ main =
 `view` display a message and a button for us to click. This button doesn't do anything at the moment.
 
 `messageSignal` is a string signal with the constant value of "Hello", it never changes.
+
+`main` maps the latest value from `messageSignal` to `view`. So if you run this code on your browser you will see `Hello` which is the constant value coming from `messageSignal`.
