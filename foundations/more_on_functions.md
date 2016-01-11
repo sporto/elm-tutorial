@@ -26,5 +26,10 @@ switch (x, y) =
   (y, x)
 ```
 
-This function takes a tuple of types `a`, `b` and returns a tuple of types `b`, `a`.
+This function takes a tuple of types `a`, `b` and returns a tuple of types `b`, `a`. All these are valid calls:
 
+```elm
+switch (1, 2)
+switch ("A", 2)
+switch (1, ["B"])
+```
