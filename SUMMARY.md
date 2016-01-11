@@ -13,7 +13,6 @@
 * The Elm architecture
    * [Model](elm_arch/model.md)
 * [Update](elm_arch/update.md)
-   * Actions
 * Actions
 * Actions
 * Mailbox
