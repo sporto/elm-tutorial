@@ -12,3 +12,6 @@ This hypothetical function takes a string and array of strings and returns the i
 
 But what if we have an array of integers instead. We won't be able to use this function. We can make this function __generic__ by using __type variables__ instead.
 
+```elm
+indexOf : a -> Array a -> Int
+```
