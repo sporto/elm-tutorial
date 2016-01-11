@@ -98,7 +98,15 @@ main =
   Signal.map (view mb.address) mb.signal
 ```
 
+#### view
+
+The `view` function now takes a `Signal.Address` as first argument.
 
 
+In `Events.onClick address "Hello"` we use this address to send the "Hello" message to.
+
+#### main
+
+`main` now 
 
 
