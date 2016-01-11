@@ -47,6 +47,8 @@ An __address__ is a pointer to an specific signal. It allows us to send __messag
 
 To obtain an __address__ where to send messages to we need to use a `Mailbox`.
 
+## Mailbox
+
 You create a __mailbox__ like this:
 
 ```elm
@@ -55,3 +57,4 @@ mb =
   Signal.mailbox ""
 ```
 
+`mb` is a function that returns a `Mailbox`. This specific mailbox deals with strings i.e. it receives messages with strings and returns a signal of strings.
