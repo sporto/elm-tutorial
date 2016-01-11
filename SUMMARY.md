@@ -12,6 +12,7 @@
    * [Mailboxes](signals/mailboxes.md)
 * The Elm architecture
    * [Model](elm_arch/model.md)
+* Actions
 * [Update](elm_arch/update.md)
    * Actions
 * Mailbox
