@@ -85,7 +85,7 @@ view address message =
   Html.div [] [
     Html.div [] [ Html.text message ],
     Html.button [
-      onClick address "Hello"
+      Events.onClick address "Hello"
     ] [ Html.text "Click" ]
   ]
 
