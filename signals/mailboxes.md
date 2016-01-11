@@ -71,5 +71,5 @@ This function returns the mailbox which is a record with two attributes:
 
 This record has the `address` we can send messages to and the `signal` that we can listen to.
 
-
+## Using the mailbox
 
