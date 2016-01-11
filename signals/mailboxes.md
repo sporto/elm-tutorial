@@ -37,7 +37,7 @@ main =
 
 We want to be able to click on the button and change the message. To do this we use __Html.Events.onClick__. Have a look at the documentation for the __Html.Events__ module. All of them have this signature: `Signal.Address a -> a -> Html.Attribute`
 
-So they take an `Address` of any type as first argument, that same type as second argument and return an `Html.Attribute`.
+So they take an `Signal.Address` of any type as first argument, that same type as second argument and return an `Html.Attribute`.
 
 But what is an `Address`?
 
