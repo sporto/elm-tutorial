@@ -18,4 +18,8 @@ indexOf : a -> Array a -> Int
 
 We replaced `String` with `a`. So the signature is now saying that this function takes any type and an array of that same type and returns an integer. As long as the types match the compiler will be happy. You can call this function with a `String` or a `Int` and it will be work.
 
-In this way we can make function more generic.
+In this way we can make function more generic. You can have several __type variables__ as well:
+
+```elm
+
+```
