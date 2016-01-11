@@ -21,5 +21,6 @@ We replaced `String` with `a`. So the signature is now saying that this function
 In this way we can make function more generic. You can have several __type variables__ as well:
 
 ```elm
-switch: (a, b) -> (b, a)
+switch : (a, b) -> (b, a)
 ```
+
