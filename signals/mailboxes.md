@@ -47,3 +47,6 @@ An __address__ is a pointer to an specific signal. It allows us to send __messag
 
 To obtain an __address__ where to send messages to we need to use a `Mailbox`.
 
+You create a __mailbox__ like this:
+
+
