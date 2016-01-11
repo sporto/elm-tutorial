@@ -66,3 +66,20 @@ main =
   Signal.map view modelSignal
 ```
 
+#### actions
+
+We added `type Action ...` as described before.
+
+#### update
+
+```elm
+update : Action -> Model -> Model
+update action model =
+  case action of
+    Increase ->
+      {model | count = model.count + 1}
+    _ ->
+      model
+```
+
+The `update` function now takes an `Action` as first argument.
