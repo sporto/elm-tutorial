@@ -48,6 +48,7 @@ An address is a pointer to an specific signal. It allows us to send __messages__
 ## Messages
 
 
+
 ## Addresses
 
 The first argument is `Signal.Address a`:
