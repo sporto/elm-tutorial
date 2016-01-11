@@ -43,7 +43,7 @@ But what is an `Address`?
 
 ## Address
 
-An address is a pointer to an specific signal. It allows us to send __messages__ to that signal.
+An address is a pointer to an specific signal. It allows us to send __messages__ to that signal. TODO: HOW DO YOU OBTAIN AN ADDRESS
 
 ## Messages
 
