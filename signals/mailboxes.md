@@ -45,8 +45,6 @@ But what is an `Address`?
 
 An address is a pointer to an specific signal. It allows us to send __messages__ to that signal. TODO: HOW DO YOU OBTAIN AN ADDRESS
 
-To send a
-
 ## Addresses
 
 The first argument is `Signal.Address a`:
