@@ -24,3 +24,5 @@ In this way we can make function more generic. You can have several __type varia
 switch : (a, b) -> (b, a)
 ```
 
+This function takes a tuple of types `a`, `b` and returns a tuple of types `b`, `a`.
+
