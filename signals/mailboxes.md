@@ -76,4 +76,27 @@ This record has the `address` we can send messages to and the `signal` that we c
 The next step is to use the mailbox in our application so we can send and refresh messages.
 
 
+```elm
+import Html
+import Html.Events exposing (..)
+
+view : Signal.Address String -> String -> Html.Html
+view address message =
+  Html.div [] [
+    Html.div [] [ Html.text message ],
+    Html.button [
+      onClick address "Hello"
+    ] [ Html.text "Click" ]
+  ]
+
+mb : Signal.Mailbox String
+mb =
+  Signal.mailbox ""
+
+main: Signal Html.Html
+main =
+  Signal.map (view mb.address) mb.signal
+```
+
+
 
