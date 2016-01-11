@@ -41,9 +41,9 @@ So they take an `Signal.Address` of any type as first argument, that same type a
 
 But what is an `Address`?
 
-## Address
+## Addresses
 
-An address is a pointer to an specific signal. It allows us to send __messages__ to that signal. TODO: HOW DO YOU OBTAIN AN ADDRESS
+An `Address` is a pointer to an specific signal. It allows us to send __messages__ to that signal. TODO: HOW DO YOU OBTAIN AN ADDRESS
 
 ## Addresses
 
