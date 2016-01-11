@@ -111,7 +111,7 @@ In `Events.onClick address "Hello"` we use this address to send the "Hello" mess
 
 ### Conclusion
 
-Mailbox are a communication hub for receving messages from our UI and broadcasting them to othe parts of our application. A mailbox will become an integral building block for creating a web application.
+Mailboxes are a communication hub, they receive messages from our UI and broadcast them to other parts of our application. A mailbox will become an integral building block for creating a web application.
 
 
 
