@@ -61,5 +61,11 @@ mb =
 
 A NICE DIAGRAM OF A MAILBOX
 
+This function returns the mailbox which is a record with two attributes:
 
+```elm
+{ address : Signal.Address a
+ signal : Signal.Signal a 
+}
+```
 
