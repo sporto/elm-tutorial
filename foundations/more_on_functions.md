@@ -2,6 +2,14 @@
 
 ## Type variables
 
+Consider a function with a type signature like:
+
+```elm
+position : List String -> String -> Int
+```
+
+This function 
+
 Sometimes you will see functions like:
 
 ```elm
