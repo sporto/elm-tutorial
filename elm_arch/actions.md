@@ -82,4 +82,5 @@ update action model =
       model
 ```
 
-The `update` function now takes an `Action` as first argument.
+The `update` function now takes an `Action` as first argument, instead of `()`.
+
