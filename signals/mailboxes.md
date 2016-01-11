@@ -107,6 +107,6 @@ In `Events.onClick address "Hello"` we use this address to send the "Hello" mess
 
 #### main
 
-`main` now 
+`main` now maps the output signal from our __mailbox__ to the view. But we also pass the __mailbox address__ to the view, we do this through partial application.
 
 
