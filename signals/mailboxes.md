@@ -78,7 +78,7 @@ The next step is to use the mailbox in our application so we can send and refres
 
 ```elm
 import Html
-import Html.Events exposing (..)
+import Html.Events as Events
 
 view : Signal.Address String -> String -> Html.Html
 view address message =
