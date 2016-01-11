@@ -73,5 +73,7 @@ This record has the `address` we can send messages to and the `signal` that we c
 
 ## Using the mailbox
 
+The next step is to use the mailbox in our application so we can send and refresh messages.
+
 
 
