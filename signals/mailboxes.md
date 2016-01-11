@@ -45,10 +45,5 @@ But what is an `Address`?
 
 An __address__ is a pointer to an specific signal. It allows us to send __messages__ to that signal. TODO: HOW DO YOU OBTAIN AN ADDRESS
 
-## Addresses
+To obtain an __address__ where to send messages to we need to use a `Mailbox`.
 
-The first argument is `Signal.Address a`:
-
-- `Signal.Address`an __address__ is 
-
-We will need to use a __Mailbox__ for this.
