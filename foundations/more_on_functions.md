@@ -22,8 +22,8 @@ In this way we can make function more generic. You can have several __type varia
 
 ```elm
 switch : (a, b) -> (b, a)
-switch (a, b) =
-  (b, a)
+switch (x, y) =
+  (y, x)
 ```
 
 This function takes a tuple of types `a`, `b` and returns a tuple of types `b`, `a`.
