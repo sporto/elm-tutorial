@@ -49,4 +49,9 @@ To obtain an __address__ where to send messages to we need to use a `Mailbox`.
 
 You create a __mailbox__ like this:
 
+```elm
+mb : Signal.Mailbox String
+mb =
+  Signal.mailbox ""
+```
 
