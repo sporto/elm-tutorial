@@ -39,8 +39,6 @@ We want to be able to click on the button and change the message. To do this we 
 
 So they take an `Address` of any type as first argument, that same type as second argument and return an `Html.Attribute`.
 
-There are a lot of new concepts here, so we need to go into more details.
-
 ## Messages
 
 
