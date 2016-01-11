@@ -109,4 +109,9 @@ In `Events.onClick address "Hello"` we use this address to send the "Hello" mess
 
 `main` now maps the output signal from our __mailbox__ to the view. But we also pass the __mailbox address__ to the view as the first argument, we do this through partial application `(view mb.address)`.
 
+### Conclusion
+
+Mailbox are a communication hub for receving messages from our UI and broadcasting them to othe parts of our application. A mailbox will become an integral building block for creating a web application.
+
+
 
