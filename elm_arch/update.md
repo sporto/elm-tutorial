@@ -61,4 +61,4 @@ modelSignal =
   Signal.foldp update initialModel Mouse.clicks
 ```
 
-The appplication works the same as before but we are now using the __Model, Update, View__ pattern.
+The appplication works the same as before but we are now using the __Model, Update, View__ pattern. This `update` function centralised changes in our application model in one place.
