@@ -64,7 +64,7 @@ view model =
 
 Our view now takes a `Model` record and displays the count by accessing `model.count`.
 
-### State signal
+### Model signal
 
 ```elm
 modelSignal : Signal.Signal Model
