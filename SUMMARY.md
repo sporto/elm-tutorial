@@ -11,8 +11,8 @@
    * [Keeping state](signals/keeping_state.md)
    * [Mailboxes](signals/mailboxes.md)
 * The Elm architecture
+   * [Update](elm_arch/update.md)
    * [Model](elm_arch/model.md)
-* [Update](elm_arch/update.md)
 * Actions
 * Actions
 * Mailbox
