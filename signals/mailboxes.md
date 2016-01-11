@@ -114,4 +114,3 @@ In `Events.onClick address "Hello"` we use this address to send the "Hello" mess
 Mailboxes are a communication hub, they receive messages from our UI and broadcast them to other parts of our application. They will become an integral building block when creating a complex web application.
 
 
-
