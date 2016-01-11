@@ -43,7 +43,7 @@ But what is an `Address`?
 
 ## Addresses
 
-An __address__ is a pointer to an specific signal. It allows us to send __messages__ to that signal. TODO: HOW DO YOU OBTAIN AN ADDRESS
+An __address__ is a pointer to an specific signal. It allows us to send __messages__ to that signal.
 
 To obtain an __address__ where to send messages to we need to use a `Mailbox`.
 
