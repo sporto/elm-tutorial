@@ -15,6 +15,7 @@
    * [Update](elm_arch/update.md)
    * [Actions](elm_arch/actions.md)
        * Mailbox
+   * Mailbox
 * Actions
 * Actions
 * Mailbox
