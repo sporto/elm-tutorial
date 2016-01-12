@@ -175,7 +175,6 @@ Finally, you can send a payload with your actions:
 ```elm
 import Html
 import Mouse
-import Keyboard
 
 type alias Model = {
     count : Int
