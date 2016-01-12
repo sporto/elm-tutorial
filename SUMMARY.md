@@ -5,7 +5,7 @@
    * [Hello World](foundations/hello.md)
    * [Functions](foundations/functions.md)
    * [More on functions](foundations/more_on_functions.md)
-* [Signals](signals/intro.md)
+* [Signals](signals/cover.md)
    * [Introduction to signals](signals/introduction.md)
    * [Keeping state](signals/keeping_state.md)
    * [Mailboxes](signals/mailboxes.md)
