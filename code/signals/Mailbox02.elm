@@ -1,12 +1,12 @@
 import Html
-import Html.Events exposing (..)
+import Html.Events as Events
 
 view : Signal.Address String -> String -> Html.Html
 view address message =
   Html.div [] [
     Html.div [] [ Html.text message ],
     Html.button [
-      onClick address "Hello"
+      Events.onClick address "Hello"
     ] [ Html.text "Click" ]
   ]
 

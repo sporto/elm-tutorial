@@ -18,10 +18,10 @@ update : () -> Model -> Model
 update _ model =
   {model | count = model.count + 1}
 
-countSignal : Signal.Signal Model
-countSignal =
+modelSignal : Signal.Signal Model
+modelSignal =
   Signal.foldp update initialModel Mouse.clicks
 
 main: Signal.Signal Html.Html
 main =
-  Signal.map view countSignal
+  Signal.map view modelSignal
