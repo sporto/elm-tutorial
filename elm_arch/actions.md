@@ -213,3 +213,12 @@ main: Signal.Signal Html.Html
 main =
   Signal.map view modelSignal
 ```
+
+Note the new __actions__ declaration:
+
+```
+MouseClick Int
+```
+
+This is saying that the `MouseClick` action should be accompanied with an integer.
+
