@@ -94,4 +94,4 @@ actionSignal =
   Signal.map (\_ -> Increase) Mouse.clicks
 ```
 
-Instead of mapping directly
+Here we introduce a new signal as an intermediate step before the `modelSignal`. This signal listens for mouse clicks and maps them to an action. In this case `Increase`.
