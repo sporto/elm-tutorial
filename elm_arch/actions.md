@@ -85,3 +85,11 @@ update action model =
 The `update` function now takes an `Action` as first argument, instead of `()`.
 
 We added a `case` to deal with different actions. This case checks for the type of action and acts accordingly.
+
+### actionSignal
+
+```elm
+actionSignal : Signal.Signal Action
+actionSignal =
+  Signal.map (\_ -> Increase) Mouse.clicks
+```
