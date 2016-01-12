@@ -88,10 +88,10 @@ We added a `case` to deal with different actions. This case checks for the type 
 
 ### actionSignal
 
-
-
 ```elm
 actionSignal : Signal.Signal Action
 actionSignal =
   Signal.map (\_ -> Increase) Mouse.clicks
 ```
+
+Instead of mapping directly
