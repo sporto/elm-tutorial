@@ -2,7 +2,6 @@
 
 * [Introduction](README.md)
 * Foundations
-   * [Installing Elm](foundations/installing_elm.md)
    * [Hello World](foundations/hello.md)
    * [Functions](foundations/functions.md)
    * [More on functions](foundations/more_on_functions.md)
