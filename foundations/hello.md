@@ -1,4 +1,10 @@
-# Hello
+# Our first Elm application
+
+## Installing Elm
+
+Go to http://elm-lang.org/install and download the appropriate installer for your system.
+
+## Hello World
 
 Let's write our first Elm application, create a folder for your application and add a `Hello.elm` file. In this file write:
 
