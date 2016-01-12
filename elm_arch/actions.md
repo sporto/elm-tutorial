@@ -88,6 +88,8 @@ We added a `case` to deal with different actions. This case checks for the type 
 
 ### actionSignal
 
+
+
 ```elm
 actionSignal : Signal.Signal Action
 actionSignal =
