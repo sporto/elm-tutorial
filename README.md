@@ -15,4 +15,4 @@ Read it online [here](https://www.gitbook.com/book/sporto/web-apps-with-elm/deta
 
 ## Contributing
 
-Please open issues and send PR at https://github.com/sporto/web-apps-with-elm
+Please open issues and send PRs at https://github.com/sporto/web-apps-with-elm
