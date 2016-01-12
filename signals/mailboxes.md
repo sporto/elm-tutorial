@@ -59,7 +59,7 @@ mb =
 
 `mb` is a function that returns a `Mailbox`. This specific mailbox deals with strings i.e. it receives messages with strings and returns a signal of strings. 
 
-A NICE DIAGRAM OF A MAILBOX
+![Mailbox](mailbox.png)
 
 This function returns the mailbox which is a record with two attributes:
 
