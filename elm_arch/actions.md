@@ -95,3 +95,13 @@ actionSignal =
 ```
 
 Here we introduce a new signal as an intermediate step before the `modelSignal`. This signal listens for mouse clicks and maps them to an action. In this case `Increase`.
+
+### modelSignal
+
+```elm
+modelSignal : Signal.Signal Model
+modelSignal =
+  Signal.foldp update initialModel actionSignal
+```
+
+The model signal now takes the `actionSignal` as input and calls update with the action.
