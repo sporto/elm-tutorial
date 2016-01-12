@@ -13,6 +13,12 @@
 * The Elm architecture
    * [Model](elm_arch/model.md)
    * [Update](elm_arch/update.md)
+   * [Actions](elm_arch/actions.md)
+   * [Mailbox](elm_arch/mailbox.md)
+   * [StartApp](elm_arch/startapp.md)
+   * StartApp with effects
+* Actions
+* Actions
 * Mailbox
 * Adding a resource
 * Fetching data

@@ -23,13 +23,13 @@ update : () -> Model -> Model
 update _ model =
   {model | count = model.count + 1}
 
-countSignal : Signal.Signal Model
-countSignal =
+modelSignal : Signal.Signal Model
+modelSignal =
   Signal.foldp update initialModel Mouse.clicks
 
 main: Signal.Signal Html.Html
 main =
-  Signal.map view countSignal
+  Signal.map view modelSignal
 
 ```
 
@@ -56,9 +56,9 @@ But instead of an inline function it is now an standalone one. __update__ take t
 In `foldp` instead of using the inline function we replace it with the __update__ function:
 
 ```elm
-countSignal : Signal.Signal Model
-countSignal =
+modelSignal : Signal.Signal Model
+modelSignal =
   Signal.foldp update initialModel Mouse.clicks
 ```
 
-The appplication works the same as before but we are now using the __Model, Update, View__ pattern.
+The appplication works the same as before but we are now using the __Model, Update, View__ pattern. This `update` function centralised changes in our application model in one place, this will become clearer later.

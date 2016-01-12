@@ -45,7 +45,7 @@ But what is an `Address`?
 
 An __address__ is a pointer to an specific signal. It allows us to send __messages__ to that signal.
 
-To obtain an __address__ where to send messages to we need to use a `Mailbox`.
+To obtain an __address__, where to send messages to, we need to use a `Mailbox`.
 
 ## Mailbox
 
@@ -75,5 +75,42 @@ This record has the `address` we can send messages to and the `signal` that we c
 
 The next step is to use the mailbox in our application so we can send and refresh messages.
 
+
+```elm
+import Html
+import Html.Events as Events
+
+view : Signal.Address String -> String -> Html.Html
+view address message =
+  Html.div [] [
+    Html.div [] [ Html.text message ],
+    Html.button [
+      Events.onClick address "Hello"
+    ] [ Html.text "Click" ]
+  ]
+
+mb : Signal.Mailbox String
+mb =
+  Signal.mailbox ""
+
+main: Signal Html.Html
+main =
+  Signal.map (view mb.address) mb.signal
+```
+
+#### view
+
+The `view` function now takes a `Signal.Address` as first argument.
+
+
+In `Events.onClick address "Hello"` we use this address to send the "Hello" message to.
+
+#### main
+
+`main` now maps the output signal from our __mailbox__ to the view. But we also pass the __mailbox address__ to the view as the first argument, we do this through partial application `(view mb.address)`.
+
+### Conclusion
+
+Mailboxes are a communication hub, they receive messages from our UI and broadcast them to other parts of our application. They will become an integral building block when creating a complex web application.
 
 

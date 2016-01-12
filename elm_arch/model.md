@@ -21,13 +21,13 @@ view : Model -> Html.Html
 view model =
   Html.text (toString model.count)
 
-countSignal : Signal.Signal Model
-countSignal =
+modelSignal : Signal.Signal Model
+modelSignal =
   Signal.foldp (\_ state -> {state | count = state.count + 1}) initialModel Mouse.clicks
 
 main: Signal.Signal Html.Html
 main =
-  Signal.map view countSignal
+  Signal.map view modelSignal
 
 ```
 
@@ -64,15 +64,15 @@ view model =
 
 Our view now takes a `Model` record and displays the count by accessing `model.count`.
 
-### State signal
+### Model signal
 
 ```elm
-countSignal : Signal.Signal Model
-countSignal =
+modelSignal : Signal.Signal Model
+modelSignal =
   Signal.foldp (\_ state -> {state | count = state.count + 1}) initialModel Mouse.clicks
 ```
 
-Instead of having `countSignal` be a signal of `Signal.Signal Int`, now it is a `Signal.Signal Model`. So it is a signal that emits `Model`.
+Instead of having `modelSignal` be a signal of `Signal.Signal Int`, now it is a `Signal.Signal Model`. So it is a signal that emits `Model`.
 
 The __accumulation__ function in `foldp` takes the previous model and returns a new one. It updates the `count` attribute in the previous model using:
 
