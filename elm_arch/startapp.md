@@ -7,3 +7,4 @@ In this chapter we have added:
 - __actions__ so we can handle different user actions
 - A __mailbox__ so we have a central place where to send messages to
 
+This pattern for organising an Elm application is referred as the __Elm architecture__.
