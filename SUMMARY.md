@@ -16,6 +16,7 @@
    * [Actions](elm_arch/actions.md)
    * [Mailbox](elm_arch/mailbox.md)
    * [StartApp](elm_arch/startapp.md)
+   * StartApp with effects
 * Actions
 * Actions
 * Mailbox
