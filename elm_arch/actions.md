@@ -105,3 +105,7 @@ modelSignal =
 ```
 
 The model signal now takes the `actionSignal` as input and calls update with the action.
+
+## More actions
+
+To understand the beauty of this, imagine what would happen if you have several actions that can happen in your application e.g. mouse clicks, key up, key downs, etc. By converting everything to __actions__ our application can handle all these cases.
