@@ -170,7 +170,7 @@ Every mouse click increases the count, every key press decreases the count. Note
 
 ## Sending values
 
-Finally, you can send a payload with your actions:
+You can send a payload with your actions:
 
 ```elm
 import Html
@@ -231,3 +231,10 @@ mouseClickSignal =
 
 We map mouse clicks to the `MouseClick` action with `2` as its payload.
 
+Finally, `update` uses __pattern matching__ in the case statement to extract the payload:
+
+```elm
+case action of
+    MouseClick amount ->
+      {model | count = model.count + amount}
+```
