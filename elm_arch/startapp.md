@@ -14,7 +14,11 @@ This pattern for organising an Elm application is referred as the __Elm architec
 
 ## Install start app 
 
+Install start app by doing:
 
+```bash
+elm package install evancz/start-app
+```
 
 ## Using start app
 
