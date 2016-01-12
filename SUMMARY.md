@@ -1,7 +1,7 @@
 # Summary
 
 * [Introduction](README.md)
-* [Foundations](foundations/intro.md)
+* [Foundations](foundations/cover.md)
    * [Hello World](foundations/hello.md)
    * [Functions](foundations/functions.md)
    * [More on functions](foundations/more_on_functions.md)
