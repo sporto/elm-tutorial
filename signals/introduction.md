@@ -51,6 +51,8 @@ Signal.map returns a new signal with the result of mapping the source signal thr
 
 ![Signal map](signal-map.png)
 
+Diagram: We have a source signal (A). Signal.map produces a second signal (B). This second signal produces values that are the double of the original signal.
+
 Here is another example of map:
 
 ```elm
