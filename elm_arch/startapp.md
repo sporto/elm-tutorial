@@ -10,4 +10,6 @@ In this chapter we have added:
 This pattern for organising an Elm application is referred as the __Elm architecture__. This pattern is so useful that there is an elm package called __StartApp__ built just for this. __StartApp__ abstracts the common parts of the pattern:
 
 - Creating a mailbox
-- 
+- Mapping our signals through `foldp`
+
+Let's 
