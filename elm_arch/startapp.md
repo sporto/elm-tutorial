@@ -22,4 +22,5 @@ elm package install evancz/start-app
 
 ## Using start app
 
-Let's convert our application to use start app
+Let's convert our application to use start app:
+
