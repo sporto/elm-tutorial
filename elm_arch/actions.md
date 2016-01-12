@@ -109,3 +109,61 @@ The model signal now takes the `actionSignal` as input and calls update with the
 ## More actions
 
 To understand the beauty of this, imagine what would happen if you have several actions that can happen in your application e.g. mouse clicks, key up, key downs, etc. By converting everything to __actions__ our application can handle all these cases.
+
+Here is an application that responds to both mouse clicks and key presses:
+
+```elm
+import Html
+import Mouse
+import Keyboard
+
+type alias Model = {
+    count : Int
+  }
+
+type Action =
+  NoOp |
+  MouseClick |
+  KeyPress
+
+initialModel : Model
+initialModel = {
+    count = 0
+  }
+
+view : Model -> Html.Html
+view model =
+  Html.text (toString model.count)
+
+update : Action -> Model -> Model
+update action model =
+  case action of
+    MouseClick ->
+      {model | count = model.count + 1}
+    KeyPress ->
+      {model | count = model.count - 1}
+    _ ->
+      model
+
+mouseClickSignal : Signal.Signal Action
+mouseClickSignal =
+  Signal.map (\_ -> MouseClick) Mouse.clicks
+
+keyPressSignal : Signal.Signal Action
+keyPressSignal =
+  Signal.map (\_ -> KeyPress) Keyboard.presses
+
+actionSignal : Signal.Signal Action
+actionSignal =
+  Signal.merge mouseClickSignal keyPressSignal
+
+modelSignal : Signal.Signal Model
+modelSignal =
+  Signal.foldp update initialModel actionSignal
+
+main: Signal.Signal Html.Html
+main =
+  Signal.map view modelSignal
+```
+
+Every mouse click increases the count, every key press decreases the count. Note how we __merge__ the signals (mouseClickSignal and keyPressSignal) into one, as they both are `Signal.Signal Action` can handle them.
