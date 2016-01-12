@@ -1,7 +1,7 @@
 # Summary
 
-* [Introduction](README.md)
 * [Introduction](readme.md)
+* [Introduction](README.md)
 * Foundations
    * [Installing Elm](foundations/installing_elm.md)
    * [Hello](foundations/hello.md)
