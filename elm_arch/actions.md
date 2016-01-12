@@ -231,7 +231,7 @@ mouseClickSignal =
 
 We map mouse clicks to the `MouseClick` action with `2` as its payload.
 
-Finally, `update` uses __pattern matching__ in the case statement to extract the payload:
+Finally, `update` uses __pattern matching__ in the case expression to extract the payload:
 
 ```elm
 case action of
