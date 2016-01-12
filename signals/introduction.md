@@ -49,6 +49,8 @@ Let's deconstruct the last line.
 
 Signal.map returns a new signal with the result of mapping the source signal through the provided function.
 
+![](signal-map.png)
+
 Here is another example of map:
 
 ```elm
