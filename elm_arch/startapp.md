@@ -12,4 +12,8 @@ This pattern for organising an Elm application is referred as the __Elm architec
 - Creating a mailbox
 - Mapping our signals through `foldp`
 
+## Install start app 
+
+## Using start app
+
 Let's convert our application to use start app
