@@ -1,2 +1,1 @@
-# Introduction
-
+# Developing web applications with Elm
