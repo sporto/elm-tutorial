@@ -19,7 +19,6 @@
    * [StartApp](elm_arch/startapp.md)
    * StartApp with effects
 * Actions
-* Actions
 * Mailbox
 * Adding a resource
 * Fetching data
