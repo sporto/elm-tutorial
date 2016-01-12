@@ -2,6 +2,8 @@
 
 Signals in Elm are one of the basic building blocks for creating applications. You can think of as a signal as a stream of values that change over time.
 
+
+
 Signals in Elm can be passed around, transformed, filtered and combined as you see fit.
 
 Let's see a basic signal:
