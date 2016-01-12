@@ -222,3 +222,9 @@ MouseClick Int
 
 This is saying that the `MouseClick` action should be accompanied with an integer.
 
+Then in mouseClickSignal:
+
+```elm
+mouseClickSignal =
+  Signal.map (\_ -> MouseClick 2) Mouse.clicks
+```
