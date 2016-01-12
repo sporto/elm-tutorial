@@ -228,3 +228,6 @@ Then in mouseClickSignal:
 mouseClickSignal =
   Signal.map (\_ -> MouseClick 2) Mouse.clicks
 ```
+
+We map mouse clicks to the `MouseClick` action with `2` as its payload.
+
