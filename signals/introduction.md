@@ -4,7 +4,7 @@ Signals in Elm are one of the basic building blocks for creating applications. Y
 
 Signals in Elm can merged, transformed, filtered as you see fit.
 
-![Signal](../../assets/signals/signal.png)
+![Signal](signal.png)
 
 Let's see a basic signal:
 
