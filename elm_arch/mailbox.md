@@ -47,5 +47,5 @@ main =
   Signal.map (view mb.address) modelSignal
 ```
 
-The big difference is the introduction of the __mailbox__. See the chapter on Signals/Mailbox for more information.
+The big difference is the introduction of the __mailbox__. The mailbox provides an address where to send messages and a signal to listen to. See the chapter on Signals/Mailbox for more information.
 
