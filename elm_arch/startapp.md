@@ -72,3 +72,18 @@ We have removed two things:
 
 - The __mailbox__
 - And the __modelSignal__, which used `foldp`
+
+StartApp provides these two things for us.
+
+Now we start our application by calling the `start` method of __StartApp.Simple__:
+
+```elm
+main =
+  StartApp.Simple.start {
+    model = initialModel,
+    view = view,
+    update = update
+  }
+```
+
+Here we provide our __initial model__, our main __view__ and our __update__ function. StartApp will take care of wiring them together (using a mailbox and foldp).
