@@ -143,3 +143,18 @@ update action model =
 ```
 
 `update` takes an __action__ and the __previous state__ as before but it now returns a `(new_model, effect_to_run)` tuple.
+
+### app
+
+```elm
+app : StartApp.App Model
+app = 
+  StartApp.start {
+    init = init,
+    inputs = [],
+    update = update,
+    view = view
+  }
+```
+
+We have also moved the call to `StartApp.run` to its own function, called `app`.
