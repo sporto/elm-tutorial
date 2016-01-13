@@ -157,4 +157,6 @@ app =
   }
 ```
 
-We have also moved the call to `StartApp.run` to its own function, called `app`. This is because we will be using a signal provided by StartApp called 
+We have also moved the call to `StartApp.run` to its own function, called `app`. __StartApp__ complete takes different inputs than __StartApp.Simple__. `view` and `update` are the same, but now we have `init` and `inputs`.
+
+`init` is our initial application input as described above i.e. `(initialModel, initialEffect)`
