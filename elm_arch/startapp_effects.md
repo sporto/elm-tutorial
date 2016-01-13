@@ -19,7 +19,9 @@ update : Action -> Model -> Model
 
 From now on the signature for __update__ will be:
 
+```elm
 update : Action -> Model -> (Model, Effects Action)
+```
 
 ## Using StartApp complete
 
