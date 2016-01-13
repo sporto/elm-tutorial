@@ -49,6 +49,8 @@ To obtain an __address__, where to send messages to, we need to use a `Mailbox`.
 
 ## Mailbox
 
+![Mailbox](mailbox.png)
+
 You create a __mailbox__ like this:
 
 ```elm
@@ -58,8 +60,6 @@ mb =
 ```
 
 `mb` is a function that returns a `Mailbox`. This specific mailbox deals with strings i.e. it receives messages with strings and returns a signal of strings. 
-
-![Mailbox](mailbox.png)
 
 This function returns the mailbox which is a record with two attributes:
 
