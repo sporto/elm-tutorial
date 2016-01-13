@@ -174,3 +174,13 @@ main =
 ```
 
 `main` now calls `app.html`. `.html` provides a Signal of Html. This signal is provided by StartApp.
+
+### port
+
+```elm
+port tasks : Signal (Task.Task Never ())
+port tasks =
+  app.tasks
+```
+
+Finally we need to create a `port`. `tasks` is the name of the port. This port is necessary so any task send via effects are run. If this port is ommitted, then any effects that we send via update won't be run.
