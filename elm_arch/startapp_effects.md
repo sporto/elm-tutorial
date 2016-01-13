@@ -98,3 +98,4 @@ init =
   (initialModel, Effects.none)
 ```
 
+We now have an `init` function, this function gives us the initial input for our application.
