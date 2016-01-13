@@ -19,7 +19,7 @@
    * [Tasks](effects/tasks.md)
    * Ports
    * [StartApp complete](effects/startapp_complete.md)
-   * StartApp with effects
+   * [StartApp with effects](effects/startapp_with_effects.md)
 * Adding a resource
 * Fetching data
 * Adding routing
