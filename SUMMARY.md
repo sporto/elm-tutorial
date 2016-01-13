@@ -16,6 +16,7 @@
    * [Mailbox](elm_arch/mailbox.md)
    * [StartApp](elm_arch/startapp.md)
 * Effects
+   * Tasks
 * [StartApp with effects](elm_arch/startapp_effects.md)
 * Adding a resource
 * Fetching data
