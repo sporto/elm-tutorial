@@ -87,3 +87,5 @@ main =
 ```
 
 Here we provide our __initial model__, our main __view__ and our __update__ function. StartApp will take care of wiring them together (using a mailbox and foldp).
+
+
