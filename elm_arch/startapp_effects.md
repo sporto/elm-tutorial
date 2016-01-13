@@ -9,19 +9,22 @@ These are definitely necessary things to do when building a web application. We 
 
 ## Effects
 
-__StartApp__ (not simple) introduces the concepts of __effects__. Instead of returning just the new state in our __update__ function we will now return a tuple with new state and effect to run. It looks like: `(model, fx)`.
+__StartApp__ (not simple) introduces the concepts of __effects__. Instead of returning just the new state in our __update__ function we will now return a tuple with the __new state__ and an __effect__ to run. It looks like: `(model, fx)`.
 
 Our previous signature for __update__ was like:
 
 ```elm
 update : Action -> Model -> Model
 ```
+In this case __update__ returns a new state based on an __action__ and the __previous state__.
 
 From now on the signature for __update__ will be:
 
 ```elm
 update : Action -> Model -> (Model, Effects Action)
 ```
+
+Here __update__ will returns the tuple `(new state, effect to run)`.
 
 ## Using StartApp complete
 
