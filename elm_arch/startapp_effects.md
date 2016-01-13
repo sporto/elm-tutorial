@@ -77,4 +77,4 @@ port tasks =
   app.tasks
 ```
 
-There are many changes here, let's go through them.
+There are many changes here, let's go through them one by one.
