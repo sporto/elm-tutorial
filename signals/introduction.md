@@ -87,4 +87,4 @@ doubleSignal =
 
 ### Exercise
 
-Try combining the basic mouse x example above with `doubleSignal` so you see the current `x` multiplied by 2 as you move.
+Try combining the basic mouse `x` coordinate example above with `doubleSignal` so you see the current `x` multiplied by 2 as you move your mouse.
