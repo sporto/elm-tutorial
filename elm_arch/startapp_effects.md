@@ -165,3 +165,12 @@ We have also moved the call to `StartApp.run` to its own function, called `app`.
 
 `inputs` are additional signals to listen to. StartApp will listen to these signals and merge them with any signals coming from the internal __mailbox__. What this mean is that these additional signals need to be of the same type as the main model signal.
 
+### main
+
+```elm
+main: Signal.Signal Html.Html
+main =
+  app.html
+```
+
+`main` now calls `app.html`. `.html` provides a Signal of Html. This signal is provided by StartApp.
