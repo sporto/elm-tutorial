@@ -183,4 +183,4 @@ port tasks =
   app.tasks
 ```
 
-Finally we need to create a `port`. `tasks` is the name of the port. This port is necessary so any task send via effects are run. If this port is ommitted, then any effects that we send via update won't be run.
+Finally we need to create a `port`. `tasks` is the name of the port. This port is necessary so any task send via effects are run. If this port is omitted then any effects that we return in __update__ won't be run.
