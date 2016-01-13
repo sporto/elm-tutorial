@@ -106,7 +106,7 @@ There are many changes here, let's go through them one by one.
 import StartApp
 ```
 
-We import StartApp instead of StartApp.Simple
+We import `StartApp` instead of `StartApp.Simple`.
 
 
 ### imports
