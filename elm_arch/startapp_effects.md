@@ -130,4 +130,6 @@ We now have an `init` function, this function gives us the initial input for our
 
 In this case we are using `Effects.none`, meaning that we don't want any effects to run. But we could send an initial effect here, e.g. change the browser location.
 
+### update
+
 
