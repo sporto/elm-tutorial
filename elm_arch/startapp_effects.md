@@ -13,4 +13,5 @@ Stop elm reactor if running and install elm-effects
 
 ```bash
 elm package install evancz/elm-effects
+elm reactor
 ```
