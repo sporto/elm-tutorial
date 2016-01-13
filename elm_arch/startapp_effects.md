@@ -157,4 +157,4 @@ app =
   }
 ```
 
-We have also moved the call to `StartApp.run` to its own function, called `app`.
+We have also moved the call to `StartApp.run` to its own function, called `app`. This is because we will be using a signal provided by StartApp called 
