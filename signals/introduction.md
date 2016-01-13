@@ -23,9 +23,9 @@ main =
 
 If you run this example in the browser you will see the changing `x` coordinate as you move your mouse.
 
-In the first line we are importing the Html module from core, which we will use to display the `x` coordinate.
+In the first line we import the `Html` module from core, which we will use to display the `x` coordinate.
 
-In the second line we import `Mouse` from core, this module has various utilities for working with the mouse.
+In the second line we import `Mouse` from core. This module has various utilities for working with the mouse.
 
 #### view
 
@@ -35,7 +35,7 @@ But `Html.text` takes a string, so we need to convert `x` to a string first. Thi
 
 #### main
 
-In Elm applications `main` can return a static element or a signal. In this case `main` is returning a signal of Html (`Signal.Signal Html.Html`). 
+In Elm applications `main` can return a __static element__ or a __signal__. In this case `main` is returning a signal of Html (`Signal.Signal Html.Html`). That is, the HTML output by this application can vary over time!.
 
 Let's deconstruct the last line.
 
