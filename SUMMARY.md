@@ -19,6 +19,7 @@
    * Tasks
    * Ports
    * [StartApp with effects](elm_arch/startapp_effects.md)
+   * StartApp with effects
 * Adding a resource
 * Fetching data
 * Adding routing
