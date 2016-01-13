@@ -129,3 +129,5 @@ init =
 We now have an `init` function, this function gives us the initial input for our application. Before our initial input was just `initialModel`. Now our initial input is a tuple of `(initialModel, effect_to_run`).
 
 In this case we are using `Effects.none`, meaning that we don't want any effects to run. But we could send an initial effect here, e.g. change the browser location.
+
+
