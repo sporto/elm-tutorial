@@ -45,11 +45,18 @@ To understand how this is accomplished, let us deconstruct the last line of the 
 
 #### Signal.map
 
-`Signal.map` is a function that __converts__ or __maps__ one signal to a different signal. Its type signature is  `Signal.map : (a -> result) -> Signal a -> Signal result`
+`Signal.map` is a function that __converts__ or __maps__ one signal to a different signal.
+
+Its type signature is `Signal.map : (a -> result) -> Signal a -> Signal result`.
+
+
 
 The first argument of map is a function that will receive the values from the source signal. In this case the `view` function we defined above. The second argument is the source signal.
 
 Signal.map returns a new signal with the result of mapping the source signal through the provided function.
+
+
+
 
 ![Signal map](signal-map.png)
 
