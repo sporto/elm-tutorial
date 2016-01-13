@@ -89,3 +89,6 @@ We import StartApp instead of StartApp.Simple
 import Effects exposing (Effects, Never)
 import Task
 ```
+
+We need to import Effects and Task, more on this later.
+
