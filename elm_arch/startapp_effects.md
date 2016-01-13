@@ -14,7 +14,12 @@ __StartApp__ (not simple) introduces the concepts of __effects__. Instead of ret
 Our previous signature for __update__ was like:
 
 ```elm
+update : Action -> Model -> Model
 ```
+
+From now on the signature for __update__ will be:
+
+update : Action -> Model -> (Model, Effects Action)
 
 ## Using StartApp complete
 
