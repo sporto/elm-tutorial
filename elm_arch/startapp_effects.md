@@ -108,6 +108,9 @@ import StartApp
 
 We import StartApp instead of StartApp.Simple
 
+
+### imports
+
 ```
 import Effects exposing (Effects, Never)
 import Task
@@ -115,10 +118,14 @@ import Task
 
 We need to import Effects and Task, more on this later.
 
+### init
+
 ```elm
 init : (Model, Effects Action)
 init =
   (initialModel, Effects.none)
 ```
 
-We now have an `init` function, this function gives us the initial input for our application.
+We now have an `init` function, this function gives us the initial input for our application. Before our initial input was just `initialModel`. Now our initial input is a tuple of `(initialModel, effect_to_run`).
+
+In this case we are using `Effects.none`, meaning that we don't want any effects to run. But we could send an initial effect here, e.g. change the browser location.
