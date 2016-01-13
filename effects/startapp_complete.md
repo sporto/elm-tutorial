@@ -1,6 +1,6 @@
 # StartApp complete
 
-__StartApp.Simple__ may be sufficient for some applications, but there is a problem with it. It doesn't allow for having side effects. Side effects might include:
+As discussed __StartApp.Simple__ doesn't allow for having side effects. This side effects might be:
 
 - Changing the browser route
 - Sending an Ajax request
