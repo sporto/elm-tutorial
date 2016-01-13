@@ -141,3 +141,6 @@ update action model =
     _ ->
       (model, Effects.none)
 ```
+
+`update` takes an __action__ and the __previous state__ as before but it now returns a `(new_model, effect_to_run)` tuple.
+
