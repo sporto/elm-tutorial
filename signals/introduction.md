@@ -51,9 +51,7 @@ Its type signature is `Signal.map : (a -> result) -> Signal a -> Signal result`.
 
 - The first argument is a function that receives a value of type `a` and outputs a value of type `result`. This functions converts values from the source signal to values for the output signal.
 - The second argument to `Signal.map` is the source signal, i.e. the signal to be transformed.  It has to be a signal of values of type `a`.
-- The output has the type `Signal result`. That is, it is a signal of values of type `result`.  
-
-The first argument of map is a function that will receive the values from the source signal. In this case the `view` function we defined above. The second argument is the source signal.
+- The output has the type `Signal result`. That is, it is a signal of values of type `result`.
 
 Signal.map returns a new signal with the result of mapping the source signal through the provided function.
 
