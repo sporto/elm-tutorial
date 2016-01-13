@@ -92,3 +92,9 @@ import Task
 
 We need to import Effects and Task, more on this later.
 
+```elm
+init : (Model, Effects Action)
+init =
+  (initialModel, Effects.none)
+```
+
