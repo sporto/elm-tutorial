@@ -24,7 +24,7 @@ From now on the signature for __update__ will be:
 update : Action -> Model -> (Model, Effects Action)
 ```
 
-Here __update__ will returns the tuple `(new state, effect to run)`.
+Here __update__ will returns the tuple `(new_state, effect_to_run)`.
 
 ## Using StartApp complete
 
