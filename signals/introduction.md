@@ -57,7 +57,9 @@ Its type signature is `Signal.map : (a -> result) -> Signal a -> Signal result`.
 
 __Diagram__: We have a source signal (A). Signal.map produces a second signal (B). This second signal produces values that are the double of the original signal.
 
-#### Going back to our example
+---
+
+Going back to our example:
 
 ```elm
   Signal.map view Mouse.x
