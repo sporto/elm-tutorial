@@ -26,6 +26,8 @@ update : Action -> Model -> (Model, Effects Action)
 
 Here __update__ will returns the tuple `(new_state, effect_to_run)`.
 
+__StartApp__ will take care of taking this effect and running it. This is done by sending the effect to a __port__.
+
 ## Using StartApp complete
 
 We need to install `elm-effects` for this: 
