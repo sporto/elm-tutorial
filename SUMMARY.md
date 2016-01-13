@@ -18,7 +18,7 @@
 * Effects
    * [Tasks](effects/tasks.md)
    * Ports
-   * [StartApp complete](elm_arch/startapp_effects.md)
+   * [StartApp complete](effects/startapp_complete.md)
    * StartApp with effects
 * Adding a resource
 * Fetching data
