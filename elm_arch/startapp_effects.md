@@ -7,3 +7,10 @@ __StartApp.Simple__ may be sufficient for some application, but there is a probl
 
 These are definitely necessary things to do when building a web application. We will use the full version of StartApp from now on.
 
+We need to install `elm-effects` for this: 
+
+Stop elm reactor if running and install elm-effects
+
+```bash
+elm package install evancz/elm-effects
+```
