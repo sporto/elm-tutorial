@@ -35,7 +35,7 @@ But `Html.text` takes a string, so we need to convert `x` to a string first. Thi
 
 #### main
 
-In Elm applications `main` can return a __static element__ or a __signal__. In this case `main` is returning a signal of Html (`Signal.Signal Html.Html`). That is, the HTML output by this application can vary over time!.
+In Elm applications `main` can return a __static element__ or a __signal__. In this case `main` is returning a signal of Html (`Signal.Signal Html.Html`). That is, the HTML output by this application can vary over time!
 
 Let's deconstruct the last line.
 
