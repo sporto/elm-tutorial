@@ -76,3 +76,5 @@ port tasks : Signal (Task.Task Never ())
 port tasks =
   app.tasks
 ```
+
+There are many changes here, let's go through them.
