@@ -159,4 +159,6 @@ app =
 
 We have also moved the call to `StartApp.run` to its own function, called `app`. __StartApp__ complete takes different inputs than __StartApp.Simple__. `view` and `update` are the same, but now we have `init` and `inputs`.
 
-`init` is our initial application input as described above i.e. `(initialModel, initialEffect)`
+`init` is our initial application input as described above i.e. `(initialModel, initialEffect)`.
+
+`inputs` are additional signals to listen to. StartApp will listen to these signals and merge them with any signals coming from the internal __mailbox__.
