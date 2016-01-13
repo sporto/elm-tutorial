@@ -132,4 +132,12 @@ In this case we are using `Effects.none`, meaning that we don't want any effects
 
 ### update
 
-
+```elm
+update : Action -> Model -> (Model, Effects Action)
+update action model =
+  case action ofit
+    Increase ->
+      ({model | count = model.count + 1}, Effects.none)
+    _ ->
+      (model, Effects.none)
+```
