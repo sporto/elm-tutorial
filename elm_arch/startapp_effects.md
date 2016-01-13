@@ -84,3 +84,8 @@ import StartApp
 ```
 
 We import StartApp instead of StartApp.Simple
+
+```
+import Effects exposing (Effects, Never)
+import Task
+```
