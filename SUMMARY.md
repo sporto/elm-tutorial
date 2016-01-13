@@ -16,7 +16,7 @@
    * [Mailbox](elm_arch/mailbox.md)
    * [StartApp](elm_arch/startapp.md)
 * Effects
-   * Tasks
+   * [Tasks](effects/tasks.md)
    * Ports
    * [StartApp complete](elm_arch/startapp_effects.md)
    * StartApp with effects
