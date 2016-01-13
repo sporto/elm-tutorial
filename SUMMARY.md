@@ -19,4 +19,5 @@
 * Adding a resource
 * Fetching data
 * Adding routing
+* Effects
 
