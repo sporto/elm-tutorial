@@ -79,3 +79,8 @@ port tasks =
 
 There are many changes here, let's go through them one by one.
 
+```elm
+import StartApp
+```
+
+We import StartApp instead of StartApp.Simple
