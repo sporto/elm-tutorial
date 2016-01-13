@@ -69,6 +69,7 @@ The second argument (`Mouse.x`) is a signal of `Int` values. So the output is a 
  
 `Signal.map` returns a new signal with the result of mapping the values of the source signal through the provided transformation function. As the source signal changes, each new value is transformed into, or mapped to, a value of the target signal type.
 
+---
 
 Here is another example of map:
 
