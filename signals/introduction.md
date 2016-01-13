@@ -53,8 +53,11 @@ Its type signature is `Signal.map : (a -> result) -> Signal a -> Signal result`.
 - The second argument to `Signal.map` is the source signal, i.e. the signal to be transformed.  It has to be a signal of values of type `a`.
 - The output has the type `Signal result`. That is, it is a signal of values of type `result`.
 
+![Signal map](signal-map.png)
 
-Going back to our example:
+__Diagram__: We have a source signal (A). Signal.map produces a second signal (B). This second signal produces values that are the double of the original signal.
+
+#### Going back to our example
 
 ```elm
   Signal.map view Mouse.x
@@ -66,9 +69,6 @@ The second argument (`Mouse.x`) is a signal of `Int` values. So the output is a 
  
 `Signal.map` returns a new signal with the result of mapping the values of the source signal through the provided transformation function. As the source signal changes, each new value is transformed into, or mapped to, a value of the target signal type.
 
-![Signal map](signal-map.png)
-
-__Diagram__: We have a source signal (A). Signal.map produces a second signal (B). This second signal produces values that are the double of the original signal.
 
 Here is another example of map:
 
