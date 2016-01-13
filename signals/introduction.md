@@ -2,7 +2,7 @@
 
 In Elm, __signals__ are one of the basic building blocks for creating applications. You can think of as a signal as a stream of values that change over time.
 
-Signals in Elm can merged, transformed, filtered as you see fit.
+Signals can be merged, transformed and filtered as you see fit.
 
 ![Signal](signal.png)
 
