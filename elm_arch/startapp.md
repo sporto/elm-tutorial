@@ -88,6 +88,8 @@ main =
 
 Here we provide our __initial model__, our main __view__ and our __update__ function. StartApp will take care of wiring them together (using a mailbox and foldp).
 
+## Conclusion
+
 __StartApp.Simple__ may be sufficient for some applications, but there is a problem with it. It doesn't allow for having side effects. Side effects might include sending ajax request, interacting with local storage, changing the browser location, etc.
 
 In the next chapter we will learn about effects and tasks.
