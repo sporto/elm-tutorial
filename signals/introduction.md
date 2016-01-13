@@ -41,7 +41,7 @@ To understand how this is accomplished, let us deconstruct the last line of the 
 
 #### Mouse.x
 
-`Mouse.x` gives us a signal of the x mouse coordinate as it changes. This signal has the signature `Signal.Signal Int`, so it is a signal that carries an integer.
+`Mouse.x` gives us a signal of the mouse `x` coordinate as it changes. This signal has the signature `Signal.Signal Int`, so it is a signal that carries an integer.
 
 #### Signal.map
 
