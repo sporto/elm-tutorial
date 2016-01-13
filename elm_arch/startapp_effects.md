@@ -7,7 +7,9 @@ __StartApp.Simple__ may be sufficient for some application, but there is a probl
 
 These are definitely necessary things to do when building a web application. We will use the full version of StartApp from now on.
 
+## Effects
 
+__StartApp__ (not simple) introduces the concepts of __effects__. 
 
 ## Using StartApp complete
 
