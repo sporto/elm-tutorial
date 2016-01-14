@@ -36,6 +36,8 @@ Let's go through the example:
 - `main` maps the `messageSignal` through `view` in order to produce a signal of html, which is what we see.
 
 
+## Adding a tasks
+
 
 
 
