@@ -15,7 +15,7 @@ clockSignal =
 
 messageSignal : Signal String
 messageSignal = 
-  Signal.map (\x -> toString x) clockSignal
+  Signal.map toString clockSignal
 
 view : String -> Html.Html
 view message =
@@ -28,8 +28,10 @@ main =
 
 In you run this in your browser you will see a number that changes slightly every second. This number is the current time (as a unix timestamp).
 
-This example 
+Let's go through the example:
 
+- `clockSignal` gives a signal that changes every second, the output of this signal is the current timestamp.
+- `messageSignal` just converts `clockSignal` to a string.
 
 
 
