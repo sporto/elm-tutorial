@@ -40,7 +40,7 @@ Let's go through the example:
 
 Now, instead of displaying the current timestamp every second, we want to get ???
 
-First let's install the http module, stop Elm reactor, then:
+First let's install the `Http` module, stop Elm reactor, then:
 
 ```elm
 elm package install evancz/elm-http
