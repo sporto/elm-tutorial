@@ -4,4 +4,6 @@ In Elm, __tasks__ allow us to make asynchronous operations. A task might success
 
 
 
-Read more about tasks [in the official site](http://elm-lang.org/guide/reactivity).
+
+
+You can read more about tasks [in the official site](http://elm-lang.org/guide/reactivity).
