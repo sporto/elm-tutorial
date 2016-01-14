@@ -36,7 +36,7 @@ Let's go through the example:
 - `main` maps the `messageSignal` through `view` in order to produce a signal of html, which is what we see.
 
 
-## Adding a tasks
+## Adding a task
 
 Now, instead of displaying the current timestamp every second, we want to get ???
 
@@ -46,6 +46,7 @@ First let's install the http module, stop Elm reactor, then:
 elm package install evancz/elm-http
 elm reactor
 ```
+
 
 
 You can read more about tasks [in the official site](http://elm-lang.org/guide/reactivity).
