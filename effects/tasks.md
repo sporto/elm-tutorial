@@ -32,6 +32,8 @@ Let's go through the example:
 
 - `clockSignal` gives a signal that changes every second, the output of this signal is the current timestamp.
 - `messageSignal` just converts `clockSignal` to a string.
+- `view` takes a string and return html
+- `main` maps the `messageSignal` through `view` in order to produce a signal of html, which is what we see.
 
 
 
