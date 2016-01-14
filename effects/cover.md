@@ -2,7 +2,7 @@
 
 This chapter covers:
 
-- Effects
 - Tasks
+- Effects
 - Ports
 - StartApp complete
