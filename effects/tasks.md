@@ -24,7 +24,6 @@ view message =
 main: Signal.Signal Html.Html
 main =
   Signal.map view messageSignal
-
 ```
 
 
