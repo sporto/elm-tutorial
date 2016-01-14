@@ -38,7 +38,7 @@ Let's go through the example:
 
 ## Adding a tasks
 
-
+Now, instead of displaying the current timestamp every second, we want to get ???
 
 
 
