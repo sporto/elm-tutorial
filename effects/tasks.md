@@ -26,5 +26,11 @@ main =
   Signal.map view messageSignal
 ```
 
+In you run this in your browser you will see a number that changes slightly every second. This number is the current time (as a unix timestamp).
+
+This example 
+
+
+
 
 You can read more about tasks [in the official site](http://elm-lang.org/guide/reactivity).
