@@ -38,7 +38,7 @@ Let's go through the example:
 
 ## Adding a task
 
-Now, instead of displaying the current timestamp every second, we want to get ???
+Now, instead of displaying the current timestamp every second, we want to get ???TODO
 
 First let's install the __Http__ module, stop Elm reactor, then:
 
@@ -47,6 +47,7 @@ elm package install evancz/elm-http
 elm reactor
 ```
 
+TODO
 
 
 You can read more about tasks [in the official site](http://elm-lang.org/guide/reactivity).
