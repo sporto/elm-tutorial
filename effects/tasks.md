@@ -169,6 +169,13 @@ We need a mailbox to send the result of the task to.
 
 The view display the given messsage.
 
-#### 
+#### runTask
+
+```elm
+runTask : Time.Time -> Task.Task Http.Error ()
+runTask _ =
+  httpTask
+    |> (flip Task.andThen) (Signal.send mb.address)
+```
 
 You can read more about tasks [in the official site](http://elm-lang.org/guide/reactivity).
