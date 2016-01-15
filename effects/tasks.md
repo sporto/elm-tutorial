@@ -197,11 +197,12 @@ This function creates a chain between `httpTask` and our __mailbox__.
 
 It is saying: "When this task is done send the results to sendToMb". This function doesn't do anything by itself either, it just wires things up and returns a new task. 
 
-There quite a bit happening in these lines:
+There is quite a bit happening in these lines:
 
 - `Task.andThen` takes an __input task__ and a __callback__. When the input task is done it calls the callback with the success result of the input task.
 - `andThen` first argument is the task, but as we are using the pipe operator we want the first argument to be the callback. We need to use `flip` for flipping the order of the first two arguments of `andThen`.
-- `Signal.send mb.address` is the callback.
+- `andThen` will only call the callback if successful, in case of error `andThen` won't proceed
+- `sendToMb` receives the success value from the input task
 - `andThen` returns a new task.
 
 You can read more about tasks [in the official site](http://elm-lang.org/guide/reactivity).
