@@ -105,25 +105,29 @@ import Time
 import Http
 import Task
 
+view : String -> Html.Html
+view message =  
+  Html.text message
+
 clockSignal : Signal Time.Time
 clockSignal =
   Time.every (2 * Time.second)
+
+mb =
+  Signal.mailbox ""
 
 httpTask : Task.Task Http.Error String
 httpTask =
   Http.getString "http://localhost:3000/"
 
-mb =
-  Signal.mailbox ""
-
-view : String -> Html.Html
-view message =
-  Html.text message
+sendToMb : String -> Task.Task x ()
+sendToMb result =
+  Signal.send mb.address result
 
 runTask : Task.Task Http.Error ()
 runTask =
   httpTask
-    |> (flip Task.andThen) (Signal.send mb.address)
+    |> (flip Task.andThen) sendToMb
 
 main: Signal.Signal Html.Html
 main =
@@ -132,6 +136,7 @@ main =
 port runner : Signal (Task.Task Http.Error ())
 port runner =
   Signal.map (always runTask) clockSignal
+
 ```
 
 If you open this application using Elm Reactor you will see a random number changing every second. This random number is coming from the __node__ server we created above.
