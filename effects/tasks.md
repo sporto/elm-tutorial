@@ -138,19 +138,21 @@ If you open this application using Elm Reactor you will see a random number chan
 
 Let's dissect this code:
 
-#### HttpTask
-
-```elm
-type alias HttpTask = Task.Task Http.Error String
-```
-
-
-
 #### clockSignal
 
 Just before we will use this `clockSignal` for refreshing the view. Every 2 seconds in this case.
 
 #### httpTask
+
+```elm
+httpTask : Task.Task Http.Error String
+httpTask =
+  Http.getString "http://localhost:3000/"
+```
+
+This function returns a __task__. This particular __task__ is `Task.Task Http.Error String`. The first type after `Task.Task` is the failure value, the second type if the success value. So this means that if this tasks fails it will give us an `Http.Error` record. If it succeeds it will give us a `String`.
+
+`Http.getString "http://localhost:3000/"` creates the task. But this code doesn't actually do anything by itself, in order to actually run the task we need to send it to a __port__.
 
 
 
