@@ -154,6 +154,6 @@ This function returns a __task__. This particular __task__ is `Task.Task Http.Er
 
 `Http.getString "http://localhost:3000/"` creates the task. But this code doesn't actually do anything by itself, in order to actually run the task we need to send it to a __port__.
 
-
+More details on the Http module [here](http://package.elm-lang.org/packages/evancz/elm-http/latest).
 
 You can read more about tasks [in the official site](http://elm-lang.org/guide/reactivity).
