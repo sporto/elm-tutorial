@@ -22,6 +22,7 @@ view timestap =
 But our view may not care about this timestamp at all. We could ignore it:
 
 ```
+view : Time.Time -> Html.Html
 view _ =
   ...
 ```
