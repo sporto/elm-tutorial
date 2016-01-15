@@ -220,6 +220,7 @@ taskSignal =
 Here we take the clockSignal, which gives us a heartbeat every 2 seconds and we map it through `runTask`. 
 
 - We don't really care about the value given by `clockSignal` this is why we use `(always runTask)`. EXPLIAN MORE ON ALWAYS
+- This function return a signal of the tasks. As `runTask` has the signature of `Task.Task Http.Error ()`, then the signal has the signature of `Signal (Task.Task Http.Error ())`.
 
 #### main
 
@@ -236,9 +237,9 @@ In main we pick the output signal from the mailbox and we pipe it through the `v
 ```elm
 port runner : Signal (Task.Task Http.Error ())
 port runner =
-  Signal.map (always runTask) clockSignal
+  taskSignal
 ```
 
-Finally, this is where the magic happens. Without this part the application will do nothing. __port__ tell Elm to run the task
+Finally, this is where the magic happens. Without this part the application will do nothing. __port__ tell Elm to take the `taskSignal` and actually run the tasks coming from it.
 
 You can read more about tasks [in the official site](http://elm-lang.org/guide/reactivity).
