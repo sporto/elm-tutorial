@@ -248,4 +248,6 @@ TODO: DIAGRAM
 
 ## Conclusion
 
+Task are how you achieve side effects in Elm, they are a key building block for web application.
+
 You can read more about tasks [in the official site](http://elm-lang.org/guide/reactivity).
