@@ -88,9 +88,7 @@ node index.js
 
 Open `http://localhost:3000/` in your browser, you should a random number, if you refresh you will get a different one. We will use call this from Elm. Keep this server running.
 
-
-
-
+## Using tasks for http
 
 First let's install the __Http__ module, stop Elm reactor, then:
 
@@ -99,7 +97,46 @@ elm package install evancz/elm-http
 elm reactor
 ```
 
-TODO
+Then create an Elm application like:
+
+```elm
+import Html
+import Time
+import Http
+import Task
+
+type alias HttpTask = Task.Task Http.Error String
+
+clockSignal : Signal Time.Time
+clockSignal =
+  Time.every (2 * Time.second)
+
+httpTask : HttpTask
+httpTask =
+  Http.getString "http://localhost:3000/"
+
+mb =
+  Signal.mailbox ""
+
+view : String -> Html.Html
+view message =
+  Html.text message
+
+sendQuery : Time.Time -> Task.Task Http.Error ()
+sendQuery time =
+  httpTask
+    |> (flip Task.andThen) (Signal.send mb.address)
+
+main: Signal.Signal Html.Html
+main =
+  Signal.map view mb.signal
+
+port runner : Signal (Task.Task Http.Error ())
+port runner =
+  Signal.map sendQuery clockSignal
+```
+
+
 
 
 You can read more about tasks [in the official site](http://elm-lang.org/guide/reactivity).
