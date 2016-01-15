@@ -23,4 +23,5 @@
 * Adding a resource
 * Fetching data
 * Adding routing
+* Tips and Tricks
 
