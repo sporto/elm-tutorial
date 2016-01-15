@@ -128,6 +128,10 @@ runTask : Task.Task Http.Error ()
 runTask =
   httpTask
     |> (flip Task.andThen) sendToMb
+    
+taskSignal : Signal (Task.Task Http.Error ())
+taskSignal =
+  Signal.map (always runTask) clockSignal
 
 main: Signal.Signal Html.Html
 main =
@@ -204,5 +208,26 @@ There is quite a bit happening in these lines:
 - `andThen` will only call the callback if successful, in case of error `andThen` won't proceed
 - `sendToMb` receives the success value from the input task
 - `andThen` returns a new task. This new task has `Http.Error` as the possible error result because the original input task (`httpTask`) has that error type.
+
+
+#### main
+
+```elm
+main: Signal.Signal Html.Html
+main =
+  Signal.map view mb.signal
+```
+
+In main we pick the output signal from the mailbox and we pipe it through the `view`. As the mailbox address gets the results from the tasks the mailbox signal will output this results for the view to consume.
+
+#### port
+
+```elm
+port runner : Signal (Task.Task Http.Error ())
+port runner =
+  Signal.map (always runTask) clockSignal
+```
+
+Finally, this is where the magic happens. Without this part the application will do nothing. __port__ tell Elm to run the task
 
 You can read more about tasks [in the official site](http://elm-lang.org/guide/reactivity).
