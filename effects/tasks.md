@@ -38,7 +38,7 @@ Let's go through the example:
 
 ## Adding a task
 
-Now, instead of displaying the current timestamp every second, we want to display a message comming through ajax.
+Now, instead of displaying the current timestamp every second, we want to display a message comming through ajax. To do this we will need a mock server.
 
 
 
