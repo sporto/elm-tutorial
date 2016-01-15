@@ -140,6 +140,9 @@ If you open this application using Elm Reactor you will see a random number chan
 
 Let's dissect this code:
 
+#### clockSignal
+
+Just before we will use this `clockSignal` for refreshing the view. Every 2 seconds in this case.
 
 
 
