@@ -244,7 +244,13 @@ Finally, this is where the magic happens. Without this part the application will
 
 - `runner` is the name of the port, it could be anything you want.
 
-TODO: DIAGRAM
+---
+
+Here is a diagram that should help clarify what is happening:
+
+![Tasks](tasks.png)
+
+
 
 ## Conclusion
 
