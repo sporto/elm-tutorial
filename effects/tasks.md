@@ -167,7 +167,7 @@ We need a mailbox to send the result of the task to.
 
 #### view
 
-The view display the given messsage.
+The view display the given message.
 
 #### runTask
 
@@ -180,6 +180,13 @@ runTask =
 
 This function creates a chain between `httpTask` and our __mailbox__.
 
+It is saying: "When this task is done send the results to mb.address". This function doesn't do anything by itself either, it just wires things up and returns a new task. 
 
+
+Things to note:
+
+- `Task.andThen` takes an __input task__ and a __callback__. When the input task is done it calls the callback with the success result of the input task.
+- `andThen` first argument is the callback, but a
+- `andThen` returns a new task.
 
 You can read more about tasks [in the official site](http://elm-lang.org/guide/reactivity).
