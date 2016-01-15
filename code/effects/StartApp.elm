@@ -32,7 +32,7 @@ view address model =
 
 update : Action -> Model -> (Model, Effects Action)
 update action model =
-  case action of
+  case action ofit
     Increase ->
       ({model | count = model.count + 1}, Effects.none)
     _ ->
