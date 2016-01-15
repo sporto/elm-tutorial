@@ -120,8 +120,8 @@ view : String -> Html.Html
 view message =
   Html.text message
 
-runTask : Time.Time -> Task.Task Http.Error ()
-runTask time =
+runTask : Task.Task Http.Error ()
+runTask =
   httpTask
     |> (flip Task.andThen) (Signal.send mb.address)
 
@@ -131,7 +131,7 @@ main =
 
 port runner : Signal (Task.Task Http.Error ())
 port runner =
-  Signal.map runTask clockSignal
+  Signal.map (always runTask) clockSignal
 ```
 
 If you open this application using Elm Reactor you will see a random number changing every second. This random number is coming from the __node__ server we created above.
@@ -172,12 +172,12 @@ The view display the given messsage.
 #### runTask
 
 ```elm
-runTask : Time.Time -> Task.Task Http.Error ()
-runTask _ =
+runTask : Task.Task Http.Error ()
+runTask =
   httpTask
     |> (flip Task.andThen) (Signal.send mb.address)
 ```
 
-<!--This function takes-->
+This function creates a chain between `httpTask` and our __mailbox__.
 
 You can read more about tasks [in the official site](http://elm-lang.org/guide/reactivity).
