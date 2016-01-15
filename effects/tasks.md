@@ -38,7 +38,9 @@ Let's go through the example:
 
 ## Adding a task
 
-Now, instead of displaying the current timestamp every second, we want to get ???TODO
+Now, instead of displaying the current timestamp every second, we want to display a message comming through ajax.
+
+
 
 First let's install the __Http__ module, stop Elm reactor, then:
 
