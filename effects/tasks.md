@@ -65,7 +65,7 @@ var jsonServer = require('json-server')
 // Returns an Express server
 var server = jsonServer.create()
 
-server.get('/status', function (req, res) { 
+server.get('/', function (req, res) { 
 	res.send(Math.random().toString()) 
 })
 
