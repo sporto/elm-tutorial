@@ -136,7 +136,9 @@ port runner =
   Signal.map sendQuery clockSignal
 ```
 
+If you open this application using Elm Reactor you will see a random number changing every second. This random number is coming from the __node__ server we created above.
 
+TODO
 
 
 You can read more about tasks [in the official site](http://elm-lang.org/guide/reactivity).
