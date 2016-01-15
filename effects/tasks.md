@@ -45,6 +45,18 @@ Now, instead of displaying the current timestamp every second, we want to displa
 
 We will use node for our fake server, because if you are reading this is quite likely that you already have node installed and are familiar with it.
 
+In another terminal go to the same folder with your Elm code and start a node project with all the defaults:
+
+```bash
+npm init
+```
+
+Then install `json-server`:
+
+```bash
+npm install json-server -S
+```
+
 
 First let's install the __Http__ module, stop Elm reactor, then:
 
