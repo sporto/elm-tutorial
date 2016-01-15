@@ -38,9 +38,11 @@ Let's go through the example:
 
 ## Adding a task
 
-Now, instead of displaying the current timestamp every second, we want to display a message comming through ajax. To do this we will need a fake server.
+Now, instead of displaying the current timestamp every second, we want to display a message coming through ajax. To do this we will need a fake server.
 
 ## Adding a fake server
+
+
 
 
 
