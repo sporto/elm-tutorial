@@ -209,6 +209,14 @@ There is quite a bit happening in these lines:
 - `sendToMb` receives the success value from the input task
 - `andThen` returns a new task. This new task has `Http.Error` as the possible error result because the original input task (`httpTask`) has that error type.
 
+#### taskSignal
+
+```elm
+taskSignal : Signal (Task.Task Http.Error ())
+taskSignal =
+  Signal.map (always runTask) clockSignal
+```
+
 
 #### main
 
