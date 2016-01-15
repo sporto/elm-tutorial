@@ -139,7 +139,7 @@ main =
 
 port runner : Signal (Task.Task Http.Error ())
 port runner =
-  Signal.map (always runTask) clockSignal
+  taskSignal
 
 ```
 
