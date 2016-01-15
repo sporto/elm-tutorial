@@ -158,7 +158,7 @@ mb =
   Signal.mailbox ""
 ```
 
-We need a mailbox to send the result of the task to.
+We need a mailbox to send the results of the task to.
 
 #### httpTask
 
