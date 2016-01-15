@@ -79,12 +79,7 @@ Run `json-server`:
 node index.js
 ```
 
-Open `http://localhost:3000/` in your browser, you should see the json-server welcome page.
-
-Exit json-server by doing `Ctrl-C`.
-
-The first time we ran json-server it generated a `db.json` file. Open this file in a text editor and add:
-
+Open `http://localhost:3000/` in your browser, you should a random number, if you refresh you will get a different one. We will use call this from Elm. Keep this server running.
 
 
 
