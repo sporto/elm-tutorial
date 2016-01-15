@@ -24,4 +24,5 @@
 * Fetching data
 * Adding routing
 * Tips and Tricks
+   * Signal map with always
 
