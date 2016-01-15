@@ -57,13 +57,36 @@ Then install `json-server`:
 npm install json-server -S
 ```
 
+Create an `index.js` file in that directory with:
+
+```js
+var jsonServer = require('json-server')
+
+// Returns an Express server
+var server = jsonServer.create()
+
+server.get('/status', function (req, res) { 
+	res.send(Math.random().toString()) 
+})
+
+console.log('Listening at 3000')
+server.listen(3000)
+```
+
 Run `json-server`:
 
 ```bash
-./node_modules/.bin/json-server  --watch db.json
+node index.js
 ```
 
 Open `http://localhost:3000/` in your browser, you should see the json-server welcome page.
+
+Exit json-server by doing `Ctrl-C`.
+
+The first time we ran json-server it generated a `db.json` file. Open this file in a text editor and add:
+
+
+
 
 
 
