@@ -203,6 +203,6 @@ There is quite a bit happening in these lines:
 - `andThen` first argument is the task, but as we are using the pipe operator we want the first argument to be the callback. We need to use `flip` for flipping the order of the first two arguments of `andThen`.
 - `andThen` will only call the callback if successful, in case of error `andThen` won't proceed
 - `sendToMb` receives the success value from the input task
-- `andThen` returns a new task.
+- `andThen` returns a new task. This new task has `Http.Error` as the possible error result because the original input task (`httpTask`) has that error type.
 
 You can read more about tasks [in the official site](http://elm-lang.org/guide/reactivity).
