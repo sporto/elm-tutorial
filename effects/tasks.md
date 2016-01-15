@@ -217,6 +217,9 @@ taskSignal =
   Signal.map (always runTask) clockSignal
 ```
 
+Here we take the clockSignal, which gives us a heartbeat every 2 seconds and we map it through `runTask`. 
+
+- We don't really care about the value given by `clockSignal` this is why we use `(always runTask)`. EXPLIAN MORE ON ALWAYS
 
 #### main
 
