@@ -250,7 +250,14 @@ Here is a diagram that should help clarify what is happening:
 
 ![Tasks](tasks.png)
 
-
+1. We have a clock signal for a heartbeat every 2 seconds
+2. We map this clock signal to a task signal
+3. The task signal creates a task
+4. In order for the tasks to run we need to send the task signal to a __port__
+5. When a task is done we send the result to the mailbox
+6. The mailbox provides an output signal
+7. We map the mailbox signal through view and send it to main
+8. view renders the output of the mailbox, which is the result of the tasks
 
 ## Conclusion
 
