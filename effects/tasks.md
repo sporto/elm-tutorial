@@ -242,4 +242,10 @@ port runner =
 
 Finally, this is where the magic happens. Without this part the application will do nothing. __port__ tell Elm to take the `taskSignal` and actually run the tasks coming from it.
 
+- `runner` is the name of the port, it could be anything you want.
+
+TODO: DIAGRAM
+
+## Conclusion
+
 You can read more about tasks [in the official site](http://elm-lang.org/guide/reactivity).
