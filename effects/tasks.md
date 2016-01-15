@@ -59,8 +59,9 @@ npm install json-server -S
 
 Run `json-server`:
 
-
-
+```bash
+./node_modules/.bin/json-server  --watch db.json
+```
 
 First let's install the __Http__ module, stop Elm reactor, then:
 
