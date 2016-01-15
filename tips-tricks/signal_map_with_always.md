@@ -1,6 +1,6 @@
 # Signal map with always
 
-Consider mapping a signal to a function:
+Consider mapping a signal to a view function:
 
 ```elm
 clockSignal : Signal Time.Time
@@ -27,4 +27,22 @@ view _ =
   ...
 ```
 
+But we are forcing our view to still get an argument for it `Time.Time`.
+
+It will be better if our view function could just be:
+
+```
+view : Html.Html
+view =
+  ...
+```
+
+We can use `always` in the Signal.map to do this:
+
+```elm
+signal =
+  Signal.map (always view) clockSignal
+```
+
+With `(always view)` the value coming from `clockSignal` will be discarded, and view will be called without any arguments.
 
