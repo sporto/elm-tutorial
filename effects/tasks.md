@@ -178,4 +178,6 @@ runTask _ =
     |> (flip Task.andThen) (Signal.send mb.address)
 ```
 
+<!--This function takes-->
+
 You can read more about tasks [in the official site](http://elm-lang.org/guide/reactivity).
