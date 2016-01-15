@@ -182,6 +182,7 @@ sendToMb result =
   Signal.send mb.address result
 ```
 
+This function takes a string and sends it to the mailbox (via address). It uses `Signal.send` for this. It returns a new __task__. This new task has a `Task.Task x ()` signature, where `x` is the possible error value and `()` is an empty success value.
 
 #### runTask
 
@@ -189,15 +190,14 @@ sendToMb result =
 runTask : Task.Task Http.Error ()
 runTask =
   httpTask
-    |> (flip Task.andThen) (Signal.send mb.address)
+    |> (flip Task.andThen) sendToMb
 ```
 
 This function creates a chain between `httpTask` and our __mailbox__.
 
-It is saying: "When this task is done send the results to mb.address". This function doesn't do anything by itself either, it just wires things up and returns a new task. 
+It is saying: "When this task is done send the results to sendToMb". This function doesn't do anything by itself either, it just wires things up and returns a new task. 
 
-
-There is a lot happening in this line:
+There quite a bit happening in these lines:
 
 - `Task.andThen` takes an __input task__ and a __callback__. When the input task is done it calls the callback with the success result of the input task.
 - `andThen` first argument is the task, but as we are using the pipe operator we want the first argument to be the callback. We need to use `flip` for flipping the order of the first two arguments of `andThen`.
