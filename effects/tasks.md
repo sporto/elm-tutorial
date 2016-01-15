@@ -105,13 +105,11 @@ import Time
 import Http
 import Task
 
-type alias HttpTask = Task.Task Http.Error String
-
 clockSignal : Signal Time.Time
 clockSignal =
   Time.every (2 * Time.second)
 
-httpTask : HttpTask
+httpTask : Task.Task Http.Error String
 httpTask =
   Http.getString "http://localhost:3000/"
 
