@@ -143,9 +143,22 @@ If you open this application using Elm Reactor you will see a random number chan
 
 Let's dissect this code:
 
+#### view
+
+The view display the given message.
+
 #### clockSignal
 
 Just before we will use this `clockSignal` for refreshing the view. Every 2 seconds in this case.
+
+#### mb
+
+```elm
+mb =
+  Signal.mailbox ""
+```
+
+We need a mailbox to send the result of the task to.
 
 #### httpTask
 
@@ -160,19 +173,6 @@ This function returns a __task__. This particular __task__ is `Task.Task Http.Er
 `Http.getString "http://localhost:3000/"` creates the task. But this code doesn't actually do anything by itself, in order to actually run the task we need to send it to a __port__.
 
 More details on the Http module [here](http://package.elm-lang.org/packages/evancz/elm-http/latest).
-
-#### mb
-
-```elm
-mb =
-  Signal.mailbox ""
-```
-
-We need a mailbox to send the result of the task to.
-
-#### view
-
-The view display the given message.
 
 #### runTask
 
