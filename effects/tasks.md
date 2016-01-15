@@ -63,6 +63,10 @@ Run `json-server`:
 ./node_modules/.bin/json-server  --watch db.json
 ```
 
+Open `http://localhost:3000/` in your browser, you should see the json-server welcome page.
+
+
+
 First let's install the __Http__ module, stop Elm reactor, then:
 
 ```elm
