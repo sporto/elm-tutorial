@@ -43,7 +43,7 @@ Now, instead of displaying the current timestamp every second, we want to displa
 ## Adding a fake server
 
 
-
+We will use node for our fake server, because if you are reading this is quite likely that you already have node installed and are familiar with it.
 
 
 First let's install the __Http__ module, stop Elm reactor, then:
