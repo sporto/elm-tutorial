@@ -57,6 +57,10 @@ Then install `json-server`:
 npm install json-server -S
 ```
 
+Run `json-server`:
+
+
+
 
 First let's install the __Http__ module, stop Elm reactor, then:
 
