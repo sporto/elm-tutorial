@@ -13,9 +13,9 @@ This is a guide for learning to develop single page applications (SPAs) in Elm. 
 
 Read it online [here](https://www.gitbook.com/book/sporto/web-apps-with-elm/details)
 
-## Example code
+## Code
 
-https://github.com/sporto/web-apps-with-elm-code
+Example code can be found at https://github.com/sporto/web-apps-with-elm-code
 
 ## Contributing
 
