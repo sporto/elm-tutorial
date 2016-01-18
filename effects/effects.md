@@ -217,3 +217,15 @@ modelSignal =
   Signal.map fst modelAndFxSignal
 ```
 
+#### fxSignal
+
+We need to send the effects to a port, so we do the same as we did with the model i.e. we create a new signal that only carries the effects:
+
+```elm
+fxSignal : Signal.Signal (Effects.Effects Action)
+fxSignal =
+  Signal.map snd modelAndFxSignal
+```
+
+
+
