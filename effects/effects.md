@@ -4,7 +4,7 @@ Effects are a higher level abstraction than tasks for anything that produces sid
 
 Most of the time we will be creating __tasks__ and converting them to effects.
 
-__The example below is complex, if you find it difficult to understand don't worry too much, we will be using StartApp in the next chapter, which simplifies the code__.
+__The example below is complex, if you find it difficult to understand don't worry too much. We will be using StartApp in the next chapter, which simplifies the code__.
 
 ## Sample application
 
