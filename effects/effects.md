@@ -184,7 +184,28 @@ Note the `OnRefresh result ->` in here we extract the `result` payload by using 
 
 #### modelAndFxSignal
 
+```elm
+modelAndFxSignal : Signal.Signal (Model, Effects.Effects Action)
+modelAndFxSignal =
+  let
+    modelAndFx action (previousModel, _) =
+      update action previousModel
+    modelAndManyFxs actions (previousModel, _) =
+      List.foldl modelAndFx (previousModel, Effects.none) actions
+    initial =
+      ("-", Effects.none)
+  in
+    Signal.foldp modelAndManyFxs initial actionsMailbox.signal
+```
+
 This function is the core of the application and thus fairly complex. This function:
 
-- 
+- Takes the signal coming from the mailbox (which is a list of actions)
+- Maps through all the actions in that signal, calling `update` for each action
+- While running `update` on each action we collect a list of `effects` to run and we change the model
+- Finally `foldp` keeps the latest model and effect for the next time.
+
+This function returns a signal with the signature: `Signal.Signal (Model, Effects.Effects Action)`. So a signal with a tuple (model, effects).
+
+
 
