@@ -105,33 +105,6 @@ In order to run this app, you will also need to have the __node json-server__, r
 
 This application display a "Refresh" button. When this button is clicked the application sends an ajax request to the node server, then the result is displayed when it comes back.
 
-## Diagram
-
-Here is a diagram of what is happening:
-
-![fx](effects-v04.png)
-
-1. We start with an initial model. `modelSignal` picks up this initial model
-2. `main` maps `modelSignal`
-3. main renders the `view`
-4. When the user clicks we send an action to `oneActionAddress`
-5. This action is forwarded to `mailbox.address`
-6. Mailbox produces a signals with the actions
-7. `modelAndFxSignal` picks up the changes from `mailbox.signal` and calls `update`
-8. Update returns a new model and effects to run
-9. `fxSignal` picks up the result of `modelAndFxSignal`
-10. `taskSignal` converts `fxSignal` into a signal of tasks
-11. `port` runs the `tasks` produced by `taskSignal`
-12. When the task is finished the result is picked up by `taskSignal`. 
-13. `taskSignal` sends messages to `mailbox.address` with the results.
-14. `actionsMailbox` sends the result through its signal
-15. `modelAndFxSignal` picks this signal and calls `update` again
-16. `modelAndFxSignal` calls update again and stores the updated model
-17. `modelSignal` picks up the model change from `modelAndFxSignal`
-18. `main` maps `modelSignal` through `view`. Here we see the response.
-
-
-
 As usual, let's go through the parts of this app:
 
 #### actions
@@ -275,6 +248,31 @@ DIAGRAM
 ### port runner
 
 Finally, we take the signal produced by `taskSignal` and send it to a __port__. Without this our application wouldn't ran any Ajax requests.
+
+## Diagram
+
+Here is a diagram of what is happening:
+
+![fx](effects-v04.png)
+
+1. We start with an initial model. `modelSignal` picks up this initial model
+2. `main` maps `modelSignal`
+3. main renders the `view`
+4. When the user clicks we send an action to `oneActionAddress`
+5. This action is forwarded to `mailbox.address`
+6. Mailbox produces a signals with the actions
+7. `modelAndFxSignal` picks up the changes from `mailbox.signal` and calls `update`
+8. Update returns a new model and effects to run
+9. `fxSignal` picks up the result of `modelAndFxSignal`
+10. `taskSignal` converts `fxSignal` into a signal of tasks
+11. `port` runs the `tasks` produced by `taskSignal`
+12. When the task is finished the result is picked up by `taskSignal`. 
+13. `taskSignal` sends messages to `mailbox.address` with the results.
+14. `actionsMailbox` sends the result through its signal
+15. `modelAndFxSignal` picks this signal and calls `update` again
+16. `modelAndFxSignal` calls update again and stores the updated model
+17. `modelSignal` picks up the model change from `modelAndFxSignal`
+18. `main` maps `modelSignal` through `view`. Here we see the response.
 
 ## Conclusion
 
