@@ -86,3 +86,12 @@ port runner : Signal (Task.Task Never ())
 port runner =
   app.tasks
 ```
+
+#### actions
+
+As previously, `Refresh` is send to trigger a refresh, `OnRefresh` is send when the Ajax request has completed.
+
+#### view
+
+Same view as we had in the __Effects__ chapter. This view renders a "Refresh" button and the provided message. When the "Refresh" button is clicked we send the `Refresh` action to __StartApp__.
+
