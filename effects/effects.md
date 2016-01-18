@@ -172,5 +172,9 @@ httpTask by itself is a task that may fail or succeed. `Task.toResult` converts 
 
 At the top of the file we declare a `OnRefresh (Result Http.Error String)` action. On the previous line we converted `httpTask` to a task that always succeeds with `(Result Http.Error String)`, which is exactly what the `OnRefresh` action expects as payload.
 
-`Task.map` transforms the task to another task, in this case a task that always succeeds with `OnRefresh (Result ...)` as the result
+`Task.map` transforms the task to another task, in this case a task that always succeeds with `OnRefresh (Result ...)` as the result.
+
+`Effects.task` creates an effect from a task. This is was we will be passing around.
+
+
 
