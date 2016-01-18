@@ -9,9 +9,9 @@ These are definitely necessary things to do when building a web application. We 
 
 ## Effects
 
-__StartApp__ (not simple) introduces the concepts of __effects__. Instead of returning just the new state in our __update__ function we will now return a tuple with the __new state__ and an __effect__ to run. It looks like: `(model, fx)`.
+__StartApp__ (not simple) introduces the concepts of __effects__. Instead of returning just the new state in our __update__ function we will now return a tuple with the __new state__ and __effects__ to run. It looks like: `(model, effects)`.
 
-Our previous signature for __update__ was like:
+Our previous signature for __update__ was:
 
 ```elm
 update : Action -> Model -> Model
@@ -39,7 +39,7 @@ elm package install evancz/elm-effects
 elm reactor
 ```
 
-This is how the application looks like using StartApp complete:
+This is how the counter application looks like using StartApp complete:
 
 ```elm
 import Html
