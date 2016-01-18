@@ -93,5 +93,9 @@ As previously, `Refresh` is send to trigger a refresh, `OnRefresh` is send when 
 
 #### view
 
-Same view as we had in the __Effects__ chapter. This view renders a "Refresh" button and the provided message. When the "Refresh" button is clicked we send the `Refresh` action to __StartApp__.
+Same view as we had in the __Effects__ chapter. This view renders a "Refresh" button and the provided message. When the "Refresh" button is clicked we send the `Refresh` action to an address provided by __StartApp__.
+
+#### httpTask and refreshFx
+
+These two create an http task and wrap it into an `Effects`. When the effects are ran we will send the `OnRefresh` action. For more details on this code see the previous chapter.
 
