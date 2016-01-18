@@ -117,3 +117,7 @@ type Action =
   OnRefresh (Result Http.Error String)
 ```
 
+The `Refresh` action will trigger the ajax request.
+When the request is finished we will trigger a `OnRefresh` action. This `OnRefresh` action will have a `Result` as payload. This result may have an http error or a string. This string is the response from the server when the result is successful.
+
+
