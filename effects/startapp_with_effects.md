@@ -87,25 +87,25 @@ port runner =
   app.tasks
 ```
 
-#### actions
+### actions
 
 As previously, `Refresh` is send to trigger a refresh, `OnRefresh` is send when the Ajax request has completed.
 
-#### view
+### view
 
 Same view as we had in the __Effects__ chapter. This view renders a "Refresh" button and the provided message. When the "Refresh" button is clicked we send the `Refresh` action to an address provided by __StartApp__.
 
-#### httpTask and refreshFx
+### httpTask and refreshFx
 
 These two create an http task and wrap it into an `Effects`. When the effects are ran we will send the `OnRefresh` action. For more details on this code see the previous chapter.
 
-#### init
+### init
 
 We now have an `init` function, this function gives us the initial input for our application, which is a tuple of `(initialModel, effect_to_run`).
 
 In this case we are using `Effects.none`, meaning that we don't want any effects to run. But we could send an initial effect here, e.g. an initial request when the application loads.
 
-#### update
+### update
 
 Same `update` as in the previous chapter, it responds to `Refresh` by returning the current model and the `refreshFx`. And it responds to `OnRefresh` by changing the model.
 
@@ -126,3 +126,17 @@ app =
 We have a new function `app`. This function bootstraps StartApp. 
 
 `init` is our initial application input as described above i.e. `(initialModel, initialEffect)`. 
+
+#### inputs
+
+`inputs` are additional signals to listen to. StartApp will listen to these signals and merge them with any signals coming from the internal __mailbox__. What this mean is that these additional signals need to be of the same type as the main model signal.
+
+This function returns an __StartApp__ record like:
+
+```elm
+{ 
+  html  : Signal.Signal Html.Html,
+  model : Signal.Signal model,
+  tasks : Signal.Signal (Task.Task Effects.Never ()) 
+}
+```
