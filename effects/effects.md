@@ -124,4 +124,6 @@ When the request is finished we will trigger a `OnRefresh` action. This `OnRefre
 
 The `view` display the "Refresh" button and a message (this message will be the response from the server). When the "Refresh" button is clicked we send a `Refresh` action to the provided address.
 
+#### actionsMailbox
 
+A mailbox where to send action messages. Note however that this mailbox expects a list of actions, not just one action: `Signal.Mailbox (List Action)`.
