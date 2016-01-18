@@ -104,7 +104,7 @@ port runner =
 
 In order to run this app, you will also need to have the __node json-server__, refer to the __Task__ chapter for the instructions on setting this up.
 
-This application display a "Refresh" button.
+This application display a "Refresh" button. When this button is clicked the application sends an ajax request to the node server, then the result is displayed when it comes back.
 
 As usual, let's go through the parts of this app:
 
