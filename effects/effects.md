@@ -109,7 +109,7 @@ This application display a "Refresh" button. When this button is clicked the app
 
 Here is a diagram of what is happening:
 
-![Fx](effects.png)
+
 
 1. We start with an initial model. `modelSignal` picks up this initial model
 2. `main` maps `modelSignal`
