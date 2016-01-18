@@ -118,6 +118,10 @@ type Action =
 ```
 
 The `Refresh` action will trigger the ajax request.
-When the request is finished we will trigger a `OnRefresh` action. This `OnRefresh` action will have a `Result` as payload. This result may have an http error or a string. This string is the response from the server when the result is successful.
+When the request is finished we will trigger a `OnRefresh` action. This `OnRefresh` action will have a `Result` as payload. This result may have an http error or a string. This string is the response body from the server when the result is successful.
+
+#### view
+
+The `view` display the "Refresh" button and a message (this message will be the response from the server). When the "Refresh" button is clicked we send a `Refresh` action to the provided address.
 
 
