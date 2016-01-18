@@ -239,7 +239,15 @@ After a task finishes we want to send its result back to our application. We map
 
 An example should make the clearer:
 
+DIAGRAM
 
+#### main 
+
+`main` maps the model signal through the view.
+
+### port runner
+
+Finally, we take the signal produced by `taskSignal` and send it to a __port__. Without this our application wouldn't ran any Ajax requests.
 
 
 
