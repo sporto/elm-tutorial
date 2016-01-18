@@ -127,3 +127,7 @@ The `view` display the "Refresh" button and a message (this message will be the 
 #### actionsMailbox
 
 A mailbox where to send action messages. Note however that this mailbox expects a list of actions, not just one action: `Signal.Mailbox (List Action)`.
+
+This is because the way __effects__ work. `Effects` is a collection of effects, not just one. When effects are ran and translated back to actions they will produce a list of them.
+
+
