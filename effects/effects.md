@@ -162,5 +162,5 @@ refreshFx =
     |> Effects.task
 ```
 
-
+In this application we are passing __Effects__ around. So we convert the `httpTask` to an effect.
 
