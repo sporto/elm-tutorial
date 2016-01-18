@@ -176,5 +176,7 @@ At the top of the file we declare a `OnRefresh (Result Http.Error String)` actio
 
 `Effects.task` creates an effect from a task. This is was we will be passing around.
 
+#### update
 
+Our `update` function take an action and the current model. Based on the action it returns a tuple with the new model and the effects to run.
 
