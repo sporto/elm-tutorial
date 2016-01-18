@@ -249,7 +249,11 @@ DIAGRAM
 
 Finally, we take the signal produced by `taskSignal` and send it to a __port__. Without this our application wouldn't ran any Ajax requests.
 
-DIA
+## Diagram
+
+Here is a diagram of what is happening:
+
+![Effects](effects.png)
 
 ## Conclusion
 
