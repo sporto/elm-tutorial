@@ -253,7 +253,7 @@ DIA
 
 ## Conclusion
 
-Adding effects to our application complicates the wiring of the application a fair amount. Thankfully, we don't have to do (or understand) all these wiring directly, we can use StartApp.
+Adding effects to our application complicates the wiring of the application a fair amount. Thankfully, we don't have to do (or understand) all these wiring directly, we can use __StartApp__.
 
 
 
