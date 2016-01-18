@@ -23,6 +23,7 @@
    * Planning
    * Initial code
    * Using the compiler
+   * Adding external CSS
 * Adding a resource
 * Fetching data
 * Adding routing
