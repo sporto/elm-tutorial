@@ -103,5 +103,5 @@ These two create an http task and wrap it into an `Effects`. When the effects ar
 
 We now have an `init` function, this function gives us the initial input for our application, which is a tuple of `(initialModel, effect_to_run`).
 
-In this case we are using `Effects.none`, meaning that we don't want any effects to run. But we could send an initial effect here, e.g. change the browser location.
+In this case we are using `Effects.none`, meaning that we don't want any effects to run. But we could send an initial effect here, e.g. an initial request when the application loads.
 
