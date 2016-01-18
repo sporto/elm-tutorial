@@ -180,3 +180,9 @@ At the top of the file we declare a `OnRefresh (Result Http.Error String)` actio
 
 Our `update` function take an __action__ and the __current model__. Based on the __action__ it returns a tuple with the __new model__ and the __effects__ to run.
 
+Note the `OnRefresh result ->` in here we extract the `result` payload by using pattern matching.
+
+#### modelAndFxSignal
+
+
+
