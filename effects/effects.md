@@ -207,5 +207,7 @@ This function is the core of the application and thus fairly complex. This funct
 
 This function returns a signal with the signature: `Signal.Signal (Model, Effects.Effects Action)`. So a signal with a tuple (model, effects).
 
+#### modelSignal
 
+In order to render the view with changes over time we will need signal with the model. We could use the signal with the (model, effects). But 
 
