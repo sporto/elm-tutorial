@@ -102,7 +102,7 @@ port runner =
   taskSignal
 ```
 
-In order to run this app, you will also need to have the node-server 
+In order to run this app, you will also need to have the __node json-server__, refer to the __Task__ chapter for the instructions on setting this up.
 
 This application display a "Refresh" button.
 
