@@ -184,5 +184,7 @@ Note the `OnRefresh result ->` in here we extract the `result` payload by using 
 
 #### modelAndFxSignal
 
+This function is the core of the application and thus fairly complex. This function:
 
+- 
 
