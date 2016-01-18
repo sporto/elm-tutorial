@@ -109,7 +109,7 @@ This application display a "Refresh" button. When this button is clicked the app
 
 Here is a diagram of what is happening:
 
-![Effects](effects-v02.png)
+![Fx](effects-v03.png)
 
 1. We start with an initial model. `modelSignal` picks up this initial model
 2. `main` maps `modelSignal`
@@ -119,6 +119,10 @@ Here is a diagram of what is happening:
 6. Mailbox produces a signals with the actions
 7. `modelAndFxSignal` picks up the changes from `mailbox.signal` and calls `update`
 8. Update returns a new model and effects to run
+9. `fxSignal` picks up the result of `modelAndFxSignal`
+10. `taskSignal` converts `fxSignal` into a signal of tasks
+11. `port` runs the `tasks` produced by `taskSignal`
+
 
 
 As usual, let's go through the parts of this app:
