@@ -18,7 +18,6 @@
 * [Effects](effects/cover.md)
    * [Tasks](effects/tasks.md)
    * [Effects](effects/effects.md)
-   * [StartApp complete](effects/startapp_complete.md)
    * [StartApp with effects](effects/startapp_with_effects.md)
 * Adding a resource
 * Fetching data
