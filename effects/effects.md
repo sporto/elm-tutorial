@@ -101,3 +101,6 @@ port runner : Signal (Task.Task Effects.Never ())
 port runner =
   taskSignal
 ```
+
+As usual, let's go through the parts of this app:
+
