@@ -7,7 +7,7 @@ As discussed __StartApp.Simple__ doesn't allow for having side effects. This sid
 
 These are definitely necessary things to do when building a web application. We will use the full version of StartApp from now on.
 
-## Effects
+## Using StartApp
 
 __StartApp__ (not simple) introduces the concepts of __effects__. Instead of returning just the new state in our __update__ function we will now return a tuple with the __new state__ and __effects__ to run. It looks like: `(model, effects)`.
 
@@ -167,4 +167,4 @@ Finally we need to create a `port`. `runner` is the name of the port. This port 
 
 ## Conclusion
 
-Using __StartApp__ is much simpler than doing our own thing (as we did in the previous chapter).
+Using __StartApp__ is much simpler than doing our own thing (as we did in the previous chapter). A bunch of complex code is encapsulated within StartApp.
