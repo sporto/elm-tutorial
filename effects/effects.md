@@ -105,6 +105,22 @@ In order to run this app, you will also need to have the __node json-server__, r
 
 This application display a "Refresh" button. When this button is clicked the application sends an ajax request to the node server, then the result is displayed when it comes back.
 
+## Diagram
+
+Here is a diagram of what is happening:
+
+![Effects](effects.png)
+
+1. We start with an initial model. `modelSignal` picks up this initial model
+2. `main` maps `modelSignal`
+3. main renders the `view`
+4. When the user clicks we send an action to `oneActionAddress`
+5. This action is forwarded to `mailbox.address`
+6. Mailbox produces a signals with the actions
+7. `modelAndFxSignal` picks up the changes from `mailbox.signal` and calls `update`
+8. Update returns a new model and effects to run
+
+
 As usual, let's go through the parts of this app:
 
 #### actions
@@ -248,12 +264,6 @@ DIAGRAM
 ### port runner
 
 Finally, we take the signal produced by `taskSignal` and send it to a __port__. Without this our application wouldn't ran any Ajax requests.
-
-## Diagram
-
-Here is a diagram of what is happening:
-
-![Effects](effects.png)
 
 ## Conclusion
 
