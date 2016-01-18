@@ -20,6 +20,7 @@
    * [Effects](effects/effects.md)
    * [StartApp with effects](effects/startapp_with_effects.md)
 * Building an app
+   * Planning
 * Adding a resource
 * Fetching data
 * Adding routing
