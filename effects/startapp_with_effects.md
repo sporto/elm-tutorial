@@ -109,3 +109,20 @@ In this case we are using `Effects.none`, meaning that we don't want any effects
 
 Same `update` as in the previous chapter, it responds to `Refresh` by returning the current model and the `refreshFx`. And it responds to `OnRefresh` by changing the model.
 
+### app
+
+```elm
+app : StartApp.App Model
+app = 
+  StartApp.start {
+    init = init,
+    inputs = [],
+    update = update,
+    view = view
+  }
+
+```
+
+We have a new function `app`. This function bootstraps StartApp. 
+
+`init` is our initial application input as described above i.e. `(initialModel, initialEffect)`. 
