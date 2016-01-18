@@ -276,7 +276,7 @@ Here is a diagram of what is happening:
 
 ## Conclusion
 
-Adding effects to our application complicates the wiring of the application a fair amount. Thankfully, we don't have to do (or understand) all these wiring directly, we can use __StartApp__.
+Adding effects to our application complicates the wiring of the application a fair amount. Thankfully, we don't have to do (or understand) all these wiring directly, we can use __StartApp__. We will look into __StartApp__ in the next chapter.
 
 
 
