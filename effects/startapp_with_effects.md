@@ -105,3 +105,7 @@ We now have an `init` function, this function gives us the initial input for our
 
 In this case we are using `Effects.none`, meaning that we don't want any effects to run. But we could send an initial effect here, e.g. an initial request when the application loads.
 
+#### update
+
+Same `update` as in the previous chapter, it responds to `Refresh` by returning the current model and the `refreshFx`. And it responds to `OnRefresh` by changing the model.
+
