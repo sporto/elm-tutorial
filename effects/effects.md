@@ -138,4 +138,14 @@ oneActionAddress =
   Signal.forwardTo actionsMailbox.address (\action -> [action])
 ```
 
+`Events.onClick address Refresh` on the view sends only one action. So the address receiving this message has to be able to deal with only one action. However our mailbox is set to receive list of actions.
+
+We need way of creating an address that takes only one action. And we need to forward that action to another address, but while doing that we need to convert that action to a list of actions.
+
+This is what `Signal.forwardTo` does, it forwards a message to an address and it allows us to change the message in some way `(\action -> [action])`.
+
+`Signal.forwardTo` returns an address. In this case it is an address that takes one action: `Signal.Address Action`.
+
+We will be using this address for the `view`.
+
 
