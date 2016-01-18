@@ -140,3 +140,8 @@ This function returns an __StartApp__ record like:
   tasks : Signal.Signal (Task.Task Effects.Never ()) 
 }
 ```
+
+- `html` is a signal of html elements.
+- `model` is a signal with the application model.
+- `tasks` is a signal with tasks to run.
+
