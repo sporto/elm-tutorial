@@ -102,5 +102,18 @@ port runner =
   taskSignal
 ```
 
+In order to run this app, you will also need to have the node-server 
+
+This application display a "Refresh" button.
+
 As usual, let's go through the parts of this app:
+
+#### actions
+
+```elm
+type Action =
+  NoOp |
+  Refresh |
+  OnRefresh (Result Http.Error String)
+```
 
