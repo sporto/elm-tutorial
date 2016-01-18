@@ -158,9 +158,13 @@ main =
 ### port
 
 ```elm
-port tasks : Signal (Task.Task Never ())
-port tasks =
+port runner : Signal (Task.Task Never ())
+port runner =
   app.tasks
 ```
 
-Finally we need to create a `port`. `tasks` is the name of the port. This port is necessary so any task send via effects are run. If this port is omitted then any effects that we return in __update__ won't be run.
+Finally we need to create a `port`. `runner` is the name of the port. This port is necessary so any task send via effects are actually run. If this port is omitted then any effects that we return in __update__ won't be run.
+
+## Conclusion
+
+Using __StartApp__ is much simpler than doing our own thing (as we did in the previous chapter).
