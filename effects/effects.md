@@ -209,5 +209,11 @@ This function returns a signal with the signature: `Signal.Signal (Model, Effect
 
 #### modelSignal
 
-In order to render the view with changes over time we will need signal with the model. We could use the signal with the (model, effects). But 
+In order to render the view with changes over time we will need signal with the model. We could use the signal with the (model, effects). But `view` doesn't really care about the effects, so we create a new signal that just carries the model:
+
+```elm
+modelSignal : Signal.Signal Model
+modelSignal =
+  Signal.map fst modelAndFxSignal
+```
 
