@@ -24,8 +24,8 @@
    * Initial code
    * Using the compiler
    * Adding external CSS
+   * Adding a resource
    * Fetching data
-* Adding a resource
 * Adding routing
 * Tips and Tricks
    * [Signal map with always](tips-tricks/signal_map_with_always.md)
