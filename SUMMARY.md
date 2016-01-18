@@ -21,8 +21,8 @@
    * [StartApp with effects](effects/startapp_with_effects.md)
 * Building an app
    * Planning
-   * Using the compiler
    * Initial code
+   * Using the compiler
 * Adding a resource
 * Fetching data
 * Adding routing
