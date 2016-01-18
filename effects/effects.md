@@ -4,6 +4,8 @@ Effects are a higher level abstraction than tasks for anything that produces sid
 
 Most of the time we will be creating __tasks__ and converting them to effects.
 
+__The example below is complex, if you find it difficult to understand don't worry too much, we will be using StartApp in the next chapter, which simplifies the code__.
+
 ## Sample application
 
 Following is a sample application using Effects. Don't worry too much if this application doesn't make full sense, later on we will use __StartApp__ again, encapsulates a lot of complexity here.
@@ -101,7 +103,7 @@ port runner =
   taskSignal
 ```
 
-In order to run this app, you will also need to have the __node json-server__, refer to the __Task__ chapter for the instructions on setting this up.
+In order to run this app, you will also need to have the __node json-server__, refer to the __Task__ chapter for the instructions on setting it up.
 
 This application display a "Refresh" button. When this button is clicked the application sends an ajax request to the node server, then the result is displayed when it comes back.
 
