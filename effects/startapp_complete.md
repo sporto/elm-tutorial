@@ -39,7 +39,7 @@ elm package install evancz/elm-effects
 elm reactor
 ```
 
-This is how the counter application looks like using StartApp complete:
+This is how the counter application looks like using __StartApp__ complete:
 
 ```elm
 import Html
