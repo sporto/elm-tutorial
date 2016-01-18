@@ -126,7 +126,9 @@ Here is a diagram of what is happening:
 13. `taskSignal` sends messages to `mailbox.address` with the results.
 14. `actionsMailbox` sends the result through its signal
 15. `modelAndFxSignal` picks this signal and calls `update` again
-16. 
+16. `modelAndFxSignal` calls update again and stores the updated model
+17. `modelSignal` picks up the model change from `modelAndFxSignal`
+18. `main` maps `modelSignal` through `view`. Here we see the response.
 
 
 
