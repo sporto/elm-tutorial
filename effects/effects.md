@@ -130,4 +130,12 @@ A mailbox where to send action messages. Note however that this mailbox expects 
 
 This is because the way __effects__ work. `Effects` is a collection of effects, not just one. When effects are ran and translated back to actions they will produce a list of them.
 
+#### oneActionAddress
+
+```elm
+oneActionAddress : Signal.Address Action
+oneActionAddress =
+  Signal.forwardTo actionsMailbox.address (\action -> [action])
+```
+
 
