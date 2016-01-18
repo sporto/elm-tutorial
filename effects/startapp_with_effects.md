@@ -145,3 +145,22 @@ This function returns an __StartApp__ record like:
 - `model` is a signal with the application model.
 - `tasks` is a signal with tasks to run.
 
+### main
+
+```elm
+main: Signal.Signal Html.Html
+main =
+  app.html
+```
+
+`main` now uses `app.html` which is the signal of html provided by StartApp.
+
+### port
+
+```elm
+port tasks : Signal (Task.Task Never ())
+port tasks =
+  app.tasks
+```
+
+Finally we need to create a `port`. `tasks` is the name of the port. This port is necessary so any task send via effects are run. If this port is omitted then any effects that we return in __update__ won't be run.
