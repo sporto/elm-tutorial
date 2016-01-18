@@ -19,10 +19,10 @@
    * [Tasks](effects/tasks.md)
    * [Effects](effects/effects.md)
    * [StartApp with effects](effects/startapp_with_effects.md)
+* Building an app
 * Adding a resource
 * Fetching data
 * Adding routing
 * Tips and Tricks
    * [Signal map with always](tips-tricks/signal_map_with_always.md)
-* Building an app
 
