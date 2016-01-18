@@ -229,7 +229,13 @@ fxSignal =
 
 #### taskSignal
 
+```elm
+taskSignal : Signal (Task.Task Effects.Never ())
+taskSignal =
+  Signal.map (Effects.toTask actionsMailbox.address) fxSignal
+```
 
+After a task finishes we want to send its result back to our application. We map the effects coming from `fxSignal` through `(Effects.toTask actionsMailbox.address)`. `Effects.toTask` converts __effects__ back to tasks.
 
 
 
