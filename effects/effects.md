@@ -54,7 +54,6 @@ refreshFx =
     |> Task.map OnRefresh
     |> Effects.task
 
--- OK
 update : Action -> Model -> (Model, Effects.Effects Action)
 update action model =
   case action of
@@ -147,5 +146,21 @@ This is what `Signal.forwardTo` does, it forwards a message to an address and it
 `Signal.forwardTo` returns an address. In this case it is an address that takes one action: `Signal.Address Action`.
 
 We will be using this address for the `view`.
+
+#### httpTask
+
+This creates a http task.
+
+#### refreshFx
+
+```elm
+refreshFx : Effects.Effects Action
+refreshFx =
+  httpTask
+    |> Task.toResult
+    |> Task.map OnRefresh
+    |> Effects.task
+```
+
 
 
