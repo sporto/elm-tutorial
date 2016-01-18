@@ -249,5 +249,11 @@ DIAGRAM
 
 Finally, we take the signal produced by `taskSignal` and send it to a __port__. Without this our application wouldn't ran any Ajax requests.
 
+DIA
+
+## Conclusion
+
+Adding effects to our application complicates the wiring of the application a fair amount. Thankfully, we don't have to do (or understand) all these wiring directly, we can use StartApp.
+
 
 
