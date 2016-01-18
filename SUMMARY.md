@@ -22,6 +22,7 @@
 * Building an app
    * Planning
    * Using the compiler
+   * Initial code
 * Adding a resource
 * Fetching data
 * Adding routing
