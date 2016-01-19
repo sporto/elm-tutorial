@@ -255,7 +255,7 @@ Finally, we take the signal produced by `taskSignal` and send it to a __port__. 
 
 Here is a diagram of what is happening:
 
-![fx](effects-v04.png)
+![Fx](effects-v05.png)
 
 1. We start with an initial model. `modelSignal` picks up this initial model
 2. `main` maps `modelSignal`
