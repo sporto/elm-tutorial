@@ -20,3 +20,7 @@ The application will have three views:
 
 ![Wireframe](plan-v01.png)
 
+### Screen 1
+
+Will show a list of players, from here you can add, delete or edit a player.
+
