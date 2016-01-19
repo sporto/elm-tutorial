@@ -254,10 +254,9 @@ Here is a diagram that should help clarify what is happening:
 3. We send the `taskSignal` to a port so it gets ran
 4. Result from the port is send back to `runTask`
 5. `runTaks` executes the next step after `andThen`
-5. We send the result of the task to the mailbox
-6. The mailbox broadcasts an output signal
-7. We map the mailbox signal through view and send it to main
-8. view renders the output of the mailbox, which is the result of the tasks
+6. We send the result of the task to the mailbox
+7. The mailbox broadcasts an output signal
+8. `main` picks up the signal from the mailbox and renders a view, this vies shows the result of the tasks
 
 ## Conclusion
 
