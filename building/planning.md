@@ -18,3 +18,5 @@ This application will demonstrate:
 
 The application will have three views:
 
+![](plan-v01.png)
+
