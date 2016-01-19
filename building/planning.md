@@ -14,7 +14,7 @@ This application will demonstrate:
 - Validations
 - Ajax requests
 
-## Resources
+### Resources
 
 During the rest of this guide I will use the word __resources__ to refer to models that are the subject of our application. These are __players__ and __perks__. Using the word __model__ can be confusing because component specific state is also a model (for example the expanded / collapse state of a component).
 
