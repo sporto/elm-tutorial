@@ -24,3 +24,15 @@ The application will have three views:
 
 Will show a list of players, from here you can add, delete or edit a player.
 
+### Screen 2
+
+Shows the edit view for a player. In this screen you can:
+
+- Change the name
+- Change the level
+- Add or remove perks
+
+### Screen 3
+
+Show a list of all available perk. In this screen you can search for a perk, see how many players have this perk and expand the details of a perk.
+
