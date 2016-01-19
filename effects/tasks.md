@@ -248,6 +248,7 @@ Finally, this is where the magic happens. Without this part the application will
 Here is a diagram that should help clarify what is happening:
 
 ![Tasks](tasks-v04.png)
+
 1. We have a clock signal for a heartbeat every 2 seconds
 2. In `taskSignal` we map this clock signal creating a task
 3. We send the `taskSignal` to a port so it gets ran
