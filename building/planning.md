@@ -1,6 +1,8 @@
 # Planning
 
-We will build an application that tracks our friends and their hobbies. This application will demonstrate:
+We will build an application that tracks an imaginary roll playing game, this game will have __playes__ and __perks__ that can be associated with each player. 
+
+This application will demonstrate:
 
 - Multiple views
 - Nested components
