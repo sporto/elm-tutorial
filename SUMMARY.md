@@ -20,7 +20,7 @@
    * [Effects](effects/effects.md)
    * [StartApp with effects](effects/startapp_with_effects.md)
 * [Building an app](building/cover.md)
-   * Planning
+   * [Planning](building/planning.md)
    * Initial code
    * Using the compiler
    * Adding external CSS
