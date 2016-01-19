@@ -1,2 +1,9 @@
 # Initial code
 
+Create a folder where to put the application. In that folder install the modules we will need:
+
+```bash
+elm package install evancz/elm-html
+elm package install evancz/elm-http
+elm package install evancz/elm-effects
+```
