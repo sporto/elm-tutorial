@@ -247,15 +247,15 @@ Finally, this is where the magic happens. Without this part the application will
 
 Here is a diagram that should help clarify what is happening:
 
-
 ![Tasks](tasks-v03.png)
 
 1. We have a clock signal for a heartbeat every 2 seconds
 2. In `taskSignal` we map this clock signal creating a task
-3. 
-4. In order for the tasks to run we need to send the task signal to a __port__
-5. When a task is done we send the result to the mailbox
-6. The mailbox provides an output signal
+3. We send the `taskSignal` to a port so it gets ran
+4. Result from the port is send back to `runTask`
+5. `runTaks` executes the next step after `andThen`
+5. We send the result of the task to the mailbox
+6. The mailbox broadcasts an output signal
 7. We map the mailbox signal through view and send it to main
 8. view renders the output of the mailbox, which is the result of the tasks
 
