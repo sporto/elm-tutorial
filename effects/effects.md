@@ -257,24 +257,23 @@ Here is a diagram of what is happening:
 
 ![Fx](effects-v05.png)
 
-1. We start with an initial model. `modelSignal` picks up this initial model
-2. `main` maps `modelSignal`
-3. main renders the `view`
+1. We start with an initial model. 
+2. `modelSignal` picks up this initial model
+3. `main` maps `modelSignal` rendering the `view`
 4. When the user clicks we send an action to `oneActionAddress`
-5. This action is forwarded to `mailbox.address`
-6. Mailbox produces a signals with the actions
-7. `modelAndFxSignal` picks up the changes from `mailbox.signal` and calls `update`
-8. Update returns a new model and effects to run
-9. `fxSignal` picks up the result of `modelAndFxSignal`
-10. `taskSignal` converts `fxSignal` into a signal of tasks
-11. `port` runs the `tasks` produced by `taskSignal`
-12. When the task is finished the result is picked up by `taskSignal`. 
-13. `taskSignal` sends messages to `mailbox.address` with the results.
-14. `actionsMailbox` sends the result through its signal
-15. `modelAndFxSignal` picks this signal and calls `update` again
-16. `modelAndFxSignal` calls update again and stores the updated model
-17. `modelSignal` picks up the model change from `modelAndFxSignal`
-18. `main` maps `modelSignal` through `view`. Here we see the response.
+5. This action is forwarded to `actionsMailbox.address`
+6. This mailbox produces a signals with the actions
+7. `modelAndFxSignal` picks up the changes from `actionsMailbox.signal` and calls `update`. Update returns a new model and effects to run
+8. `fxSignal` picks up the effects from `modelAndFxSignal`
+9. `taskSignal` converts `fxSignal` into a signal of tasks
+10. `port` runs the `tasks` produced by `taskSignal`
+11. When the task is done the port will publish the result
+12. `taskSignal` picks up the results from `port`
+13. `taskSignal` sends messages to `mailbox.address` with the results
+14. `actionsMailbox` broadcasts the result through its signal
+15. `modelAndFxSignal` picks this signal and calls `update` again, storing the updated model
+16. `modelSignal` picks up the model change from `modelAndFxSignal`
+17. `main` maps `modelSignal` through `view`. Showing the messsage coming from the server.
 
 ## Conclusion
 
