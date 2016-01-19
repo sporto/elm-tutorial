@@ -247,7 +247,7 @@ Finally, this is where the magic happens. Without this part the application will
 
 Here is a diagram that should help clarify what is happening:
 
-![Tasks](tasks.png)
+![Tasks](tasks-v02.png)
 
 1. We have a clock signal for a heartbeat every 2 seconds
 2. We map this clock signal to a task signal
