@@ -23,6 +23,7 @@ During the rest of this guide I will use the word __resources__ to refer to mode
 The application will have three views:
 
 ![Wireframe](plan-v01.png)
+![Plan](plan-v02.png)
 
 ### Screen 1
 
