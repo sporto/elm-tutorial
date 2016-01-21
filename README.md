@@ -15,10 +15,10 @@ Read it online [here](https://www.gitbook.com/book/sporto/web-apps-with-elm/deta
 
 ## Code
  
- Code for examples can be found at https://github.com/sporto/web-apps-with-elm-code
+ Code for the examples can be found at https://github.com/sporto/elm-tutorial-assets
  
- Code for the example application built in the second part of the guide can be found at https://github.com/sporto/web-apps-with-elm-app
+ Code for the example application built in the second part of the guide can be found at https://github.com/sporto/elm-tutorial-app
 
 ## Contributing
 
-Please open issues and send PRs at https://github.com/sporto/web-apps-with-elm
+Please open issues and send PRs at https://github.com/sporto/elm-tutorial
