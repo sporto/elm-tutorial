@@ -16,3 +16,5 @@ Install __json-server__:
 npm i json-server -S
 ```
 
+Make `index.js` in the root of the project:
+
