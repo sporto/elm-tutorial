@@ -86,7 +86,7 @@ Add `db.json` at the root:
     {
       "perkId": 4,
       "playerId": 4
-    },
+    }
   ]
 }
 
