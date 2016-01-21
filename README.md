@@ -1,4 +1,6 @@
-# Developing web applications with [Elm](http://elm-lang.org/)
+# Elm Tutorial
+
+__Developing web applications with [Elm](http://elm-lang.org/)__
 
 This is a guide for learning to develop single page applications (SPAs) in Elm. This guide will cover:
 
