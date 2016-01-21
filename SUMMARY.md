@@ -20,10 +20,9 @@
    * [Effects](effects/effects.md)
    * [StartApp with effects](effects/startapp_with_effects.md)
 * [Building an app](building/cover.md)
-   * [Backend](building/backend.md)
    * [Planning](building/planning.md)
    * [Initial code](building/initial_code.md)
-       * [Backend](building/backend.md)
+   * [Backend](building/backend.md)
    * Using the compiler
    * Adding external CSS
    * Fetching data
