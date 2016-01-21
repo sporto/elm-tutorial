@@ -11,7 +11,7 @@ This is a guide for learning to develop single page applications (SPAs) in Elm. 
 - Routing
 - Testing
 
-Read it online [here](https://www.gitbook.com/book/sporto/web-apps-with-elm/details)
+Read it online [here](http://www.elm-tutorial.org/)
 
 ## Code
  
