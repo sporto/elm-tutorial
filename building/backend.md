@@ -19,6 +19,7 @@ npm i json-server -S
 Make `index.js` in the root of the project:
 
 ```js
+ss
 ```
 
 Add `db.json` at the root:
