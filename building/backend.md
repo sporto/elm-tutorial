@@ -98,3 +98,11 @@ Start the server by doing:
 node index.js
 ```
 
+Test this fake api by going to:
+
+- http://localhost:3000/players
+- http://localhost:3000/perks
+- http://localhost:3000/perksPlayers
+
+
+
