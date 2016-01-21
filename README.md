@@ -22,3 +22,4 @@ Read it online [here](http://www.elm-tutorial.org/)
 ## Contributing
 
 Please open issues and send PRs at https://github.com/sporto/elm-tutorial
+
