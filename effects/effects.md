@@ -168,7 +168,7 @@ In this application we are passing __Effects__ around. So we convert the `httpTa
 
 `httpTask |> Task.toResult`
 
-httpTask by itself is a task that may fail or succeed. `Task.toResult` converts it to a task that only succeeds, but the success value is a `Result` type. This result can be either (Err Http.Error) or (ok String). In this way we don't throw away the error.
+httpTask by itself is a task that may fail or succeed. `Task.toResult` converts it to a task that only succeeds, but the success value is a `Result` type. This result can be either `(Err Http.Error)` or `(ok String)`. In this way we don't throw away the error.
 
 `|> Task.map OnRefresh`
 
@@ -176,11 +176,11 @@ At the top of the file we declare a `OnRefresh (Result Http.Error String)` actio
 
 `Task.map` transforms the task to another task, in this case a task that always succeeds with `OnRefresh (Result ...)` as the result.
 
-`Effects.task` creates an effect from a task. This is was we will be passing around.
+`Effects.task` creates an effect from a task. This is what we will be passing around.
 
 #### update
 
-Our `update` function take an __action__ and the __current model__. Based on the __action__ it returns a tuple with the __new model__ and the __effects__ to run.
+Our `update` function takes an __action__ and the __current model__. Based on the __action__ it returns a tuple with the __new model__ and the __effects__ to run.
 
 Note the `OnRefresh result ->` in here we extract the `result` payload by using pattern matching.
 
@@ -278,6 +278,3 @@ Here is a diagram of what is happening:
 ## Conclusion
 
 Adding effects to our application complicates the wiring of the application a fair amount. Thankfully, we don't have to do (or understand) all these wiring directly, we can use __StartApp__. We will look into it in the next chapter.
-
-
-
