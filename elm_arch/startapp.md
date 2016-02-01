@@ -33,7 +33,8 @@ import StartApp.Simple
 
 
 type alias Model =
-  { count : Int }
+  { count : Int 
+  }
 
 
 type Action
