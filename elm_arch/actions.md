@@ -249,6 +249,8 @@ main =
   Signal.map view modelSignal
 ```
 
+<https://github.com/sporto/elm-tutorial-assets/blob/master/elm_arch/ActionsWithPayload.elm>
+
 Note the new __actions__ declaration:
 
 ```
