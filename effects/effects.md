@@ -26,7 +26,7 @@ type Action =
 type alias Model = String
 
 view : Signal.Address Action -> Model -> Html.Html
-view address message =  
+view address message =
   Html.div [] [
     Html.button [
       Events.onClick address Refresh
@@ -243,7 +243,7 @@ An example should make the clearer:
 
 DIAGRAM
 
-#### main 
+#### main
 
 `main` maps the model signal through the view.
 
@@ -281,6 +281,3 @@ Here is a diagram of what is happening:
 ## Conclusion
 
 Adding effects to our application complicates the wiring of the application a fair amount. Thankfully, we don't have to do (or understand) all these wiring directly, we can use __StartApp__. We will look into it in the next chapter.
-
-
-

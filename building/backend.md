@@ -59,6 +59,3 @@ Test this fake API by going to:
 - <http://localhost:3000/players>
 - <http://localhost:3000/perks>
 - <http://localhost:3000/perksPlayers>
-
-
-

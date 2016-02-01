@@ -1,6 +1,5 @@
 # Function basics
 
-
 This chapter covers basic Elm syntax that is important to get familiar with. These are functions, function signatures, partial application and the pipe operator.
 
 ## Functions
@@ -35,7 +34,7 @@ When you need to call a function which includes the result of another function y
 add 1 (divide 12 3)
 ```
 
-Here the result of `divide 12 3` is given to `add` as the second parameter. 
+Here the result of `divide 12 3` is given to `add` as the second parameter.
 
 For contrast in many other languages this will be written like:
 

@@ -29,7 +29,7 @@ type Action =
 type alias Model = String
 
 view : Signal.Address Action -> Model -> Html.Html
-view address message =  
+view address message =
   Html.div [] [
     Html.button [
       Events.onClick address Refresh
@@ -70,7 +70,7 @@ update action model =
       (model, Effects.none)
 
 app : StartApp.App Model
-app = 
+app =
   StartApp.start {
     init = init,
     inputs = [],
@@ -113,7 +113,7 @@ Same `update` as in the previous chapter, it responds to `Refresh` by returning 
 
 ```elm
 app : StartApp.App Model
-app = 
+app =
   StartApp.start {
     init = init,
     inputs = [],
@@ -123,9 +123,9 @@ app =
 
 ```
 
-We have a new function `app`. This function bootstraps StartApp. 
+We have a new function `app`. This function bootstraps StartApp.
 
-`init` is our initial application input as described above i.e. `(initialModel, initialEffect)`. 
+`init` is our initial application input as described above i.e. `(initialModel, initialEffect)`.
 
 #### inputs
 
@@ -134,10 +134,10 @@ We have a new function `app`. This function bootstraps StartApp.
 This function returns an __StartApp__ record like:
 
 ```elm
-{ 
+{
   html  : Signal.Signal Html.Html,
   model : Signal.Signal model,
-  tasks : Signal.Signal (Task.Task Effects.Never ()) 
+  tasks : Signal.Signal (Task.Task Effects.Never ())
 }
 ```
 

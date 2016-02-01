@@ -65,10 +65,10 @@ Going back to our example:
   Signal.map view Mouse.x
 ```
 
-In the example above, the `view` function is used as the transformation or mapping function. It takes an `Int` value and outputs `Html.Html`. 
+In the example above, the `view` function is used as the transformation or mapping function. It takes an `Int` value and outputs `Html.Html`.
 
 The second argument (`Mouse.x`) is a signal of `Int` values. So the output is a signal of `Html.Html` values.  Which is what we want the function `main` to output.
- 
+
 `Signal.map` returns a new signal with the result of mapping the values of the source signal through the provided transformation function. As the source signal changes, each new value is transformed into, or mapped to, a value of the target signal type.
 
 ---

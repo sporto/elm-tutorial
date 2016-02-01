@@ -13,7 +13,7 @@ clockSignal =
   Time.every Time.second
 
 messageSignal : Signal String
-messageSignal = 
+messageSignal =
   Signal.map toString clockSignal
 
 view : String -> Html.Html
@@ -66,13 +66,13 @@ var server = jsonServer.create()
 
 // Allow CORS
 server.use(function(req, res, next) {
-	res.header("Access-Control-Allow-Origin", "*");
-	res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
-	next();
+  res.header("Access-Control-Allow-Origin", "*");
+  res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
+  next();
 });
 
-server.get('/', function (req, res) { 
-	res.send(Math.random().toString()) 
+server.get('/', function (req, res) {
+  res.send(Math.random().toString())
 })
 
 console.log('Listening at 3000')
@@ -105,7 +105,7 @@ import Http
 import Task
 
 view : String -> Html.Html
-view message =  
+view message =
   Html.text message
 
 clockSignal : Signal Time.Time
@@ -127,7 +127,7 @@ runTask : Task.Task Http.Error ()
 runTask =
   httpTask
     |> (flip Task.andThen) sendToMb
-    
+
 taskSignal : Signal (Task.Task Http.Error ())
 taskSignal =
   Signal.map (always runTask) clockSignal
@@ -198,7 +198,7 @@ runTask =
 
 This function creates a chain between `httpTask` and our __mailbox__.
 
-It is saying: "When this task is done send the results to sendToMb". This function doesn't do anything by itself either, it just wires things up and returns a new task. 
+It is saying: "When this task is done send the results to sendToMb". This function doesn't do anything by itself either, it just wires things up and returns a new task.
 
 There is quite a bit happening in these lines:
 
@@ -216,7 +216,7 @@ taskSignal =
   Signal.map (always runTask) clockSignal
 ```
 
-Here we take the clockSignal, which gives us a heartbeat every 2 seconds and we map it through `runTask`. 
+Here we take the clockSignal, which gives us a heartbeat every 2 seconds and we map it through `runTask`.
 
 - We don't really care about the value given by `clockSignal` this is why we use `(always runTask)`. EXPLIAN MORE ON ALWAYS
 - This function return a signal of the tasks. As `runTask` has the signature of `Task.Task Http.Error ()`, then the signal has the signature of `Signal (Task.Task Http.Error ())`.

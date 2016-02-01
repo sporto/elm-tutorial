@@ -42,5 +42,3 @@ Every application in Elm starts on a `main` function. `main` should be a functio
 ### elm reactor
 
 Elm __reactor__ creates a server that compiles Elm code on the fly. __reactor__ is useful for developing applications without worring too much about setup up a build process. However __reactor__ has limitations, so we will need to switch to a build process later on.
-
-

@@ -1,6 +1,6 @@
 # Keeping state
 
-We created a little application that display the current mouse x coordinate. But in most web applications we want to keep some state around as the user interacts with our application. 
+We created a little application that display the current mouse x coordinate. But in most web applications we want to keep some state around as the user interacts with our application.
 
 Let's create an application that tracks clicks.
 
@@ -65,7 +65,7 @@ The syntax: `\x y -> x + y` is an inline function in Elm. Equivalent to somethin
 ![Foldp](foldp.png)
 
 - Each time `foldp` receives an __input signal__ it will call the __accumulation__ function.
-- This __accumulation__ function receives the output of the __input signal__ and the __previous state__. 
+- This __accumulation__ function receives the output of the __input signal__ and the __previous state__.
 - The first time `foldp` receives an __input signal__ it will pass the __initial state__ as previous state to the __accumulation__ function.
 - The __accumulation__ function calculates and returns a new state.
 - `folp` keeps this new state and pass it as the previous state the next time it calls the __accumulator__ function.

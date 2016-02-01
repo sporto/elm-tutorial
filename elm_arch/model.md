@@ -81,4 +81,3 @@ The __accumulation__ function in `foldp` takes the previous model and returns a 
 ```
 
 In Elm all data structure are immutable. So this syntax above is how you return a new immutable record with one property updated. Read mode ABOUT THIS HERE.
-

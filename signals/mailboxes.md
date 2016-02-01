@@ -59,13 +59,13 @@ mb =
   Signal.mailbox ""
 ```
 
-`mb` is a function that returns a `Mailbox`. This specific mailbox deals with strings i.e. it receives messages with strings and returns a signal of strings. 
+`mb` is a function that returns a `Mailbox`. This specific mailbox deals with strings i.e. it receives messages with strings and returns a signal of strings.
 
 This function returns the mailbox which is a record with two attributes:
 
 ```elm
 { address : Signal.Address a
- signal : Signal.Signal a 
+ signal : Signal.Signal a
 }
 ```
 
@@ -112,5 +112,3 @@ In `Events.onClick address "Hello"` we use this address to send the "Hello" mess
 ### Conclusion
 
 Mailboxes are a communication hub, they receive messages from our UI and broadcast them to other parts of our application. They will become an integral building block when creating a complex web application.
-
-
