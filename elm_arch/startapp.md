@@ -44,7 +44,8 @@ type Action
 
 initialModel : Model
 initialModel =
-  { count = 0 }
+  { count = 0 
+  }
 
 
 view : Signal.Address Action -> Model -> Html.Html
