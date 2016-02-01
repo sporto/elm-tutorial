@@ -8,17 +8,17 @@ Consider a function with a type signature like:
 indexOf : String -> Array String -> Int
 ```
 
-This hypothetical function takes a string and array of strings and returns the index where the given string is in the array or -1 if not found.
+This hypothetical function takes a string and an array of strings and returns the index where the given string was found in the array or -1 if not found.
 
-But what if we have an array of integers instead. We won't be able to use this function. We can make this function __generic__ by using __type variables__ instead.
+But what if we instead have an array of integers? We wouldn't be able to use this function. However, we can make this function __generic__ by using __type variables__ instead of specific types of variables.
 
 ```elm
 indexOf : a -> Array a -> Int
 ```
 
-We replaced `String` with `a`. So the signature is now saying that this function takes any type and an array of that same type and returns an integer. As long as the types match the compiler will be happy. You can call this function with a `String` or a `Int` and it will be work.
+By replacing `String` with `a`, the signature now says that `indexOf` takes a value of any type `a` and an array of that same type `a` and returns an integer. As long as the types match the compiler will be happy. You can call `indexOf` with a `String` and an array of `String`, or a `Int` and an array of `Int`, and it will work.
 
-In this way we can make function more generic. You can have several __type variables__ as well:
+This way functions can be made more generic. You can have several __type variables__ as well:
 
 ```elm
 switch : ( a, b ) -> ( b, a )
