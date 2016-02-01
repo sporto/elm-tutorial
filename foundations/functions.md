@@ -12,7 +12,7 @@ add x y =
   x + y
 ```
 
-The first line in the example is the function signature. This signature is optional in Elm, but recommended because it makes the intention of your clearer.
+The first line in the example is the function signature. This signature is optional in Elm, but recommended because it makes the intention of your function clearer.
 
 This function called `add` takes two integers (`Int -> Int`) and returns another integer (The third `-> Int`).
 
@@ -28,7 +28,7 @@ add 1 2
 
 ### Grouping with parenthesis
 
-When you need to call a function which includes the result of another function you will use parenthesis to group them:
+When you want to call a function with the result of another function call you need to use parenthesis for grouping the calls:
 
 ```elm
 add 1 (divide 12 3)
@@ -36,7 +36,7 @@ add 1 (divide 12 3)
 
 Here the result of `divide 12 3` is given to `add` as the second parameter.
 
-For contrast in many other languages this will be written like:
+In contrast, in many other languages it would be written:
 
 ```js
 add(1, divide(12, 3))
@@ -44,18 +44,18 @@ add(1, divide(12, 3))
 
 ## Partial application
 
-In Elm you can take a function like `add` above and call it with only one argument e.g. `add 2`.
+In Elm, you can take a function, like `add` above, and call it with only one argument, e.g. `add 2`.
 
-This will return another function with the first parameter bound to `2`, then you call this returned function with other parameter:
+This returns another function with the value `2` bound as the first parameter. Calling the returned function with a second value returns `2 + ` the second value:
 
 ```elm
 add2 = add 2
 add2 3 ==> 5
 ```
 
-Another way of thinking about a function signature like `add : Int -> Int -> Int`. Is that this is a function that takes one integer as argument and returns another function. This returned function takes another integer and returns an integer.
+Another way to think about a function signature like `add : Int -> Int -> Int`, is that it is a function that takes one integer as argument and returns another function. The returned function takes another integer and returns an integer.
 
-Partial application is incredible useful in Elm for making your code more readable and passing state between functions in your application.
+Partial application is incredibly useful in Elm for making your code more readable and passing state between functions in your application.
 
 ## The pipe operator
 
@@ -65,13 +65,13 @@ As shown above you can nest functions like:
 add 1 (multiply 2 3)
 ```
 
-Maybe this is a trivial example, but consider a more complex one:
+This is a trivial example, but consider a more complex example:
 
 ```elm
 sum (filter (isOver 100) (map getCost records))
 ```
 
-This could be hard to read as it resolves inside out. The pipe operator makes writing these examples in a more readable way:
+This code is difficult to read, because it resolves inside out. The pipe operator allows us to write such expressions in a more readable way:
 
 ```elm
 3
@@ -79,11 +79,13 @@ This could be hard to read as it resolves inside out. The pipe operator makes wr
   |> add 1
 ```
 
+This relies heavily on partial application. In this example the value `3` is passed to a partially applied function `multiply 2`. Its result is in turn passed to another partially applied function `add 1`.
+
+Using the pipe operator the complex example above would be written like:
+
 ```elm
 records
   |> map getCost
   |> filter (isOver 100)
   |> sum
 ```
-
-This relies heavily on partial application, in the first example `3` is passed to a partially applied function `multiply 2`, then that result is passed to another partially applied function `add 1`.

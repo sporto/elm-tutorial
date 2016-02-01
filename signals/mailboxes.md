@@ -35,25 +35,25 @@ main =
 
 <https://github.com/sporto/elm-tutorial-assets/blob/master/signals/Mailbox01.elm>
 
-`view` shows a message and a button for us to click. This button doesn't do anything at the moment.
+`view` displays a message and a button for us to click. The button does nothing so far.
 
-`messageSignal` is a string signal with the constant value of "Hello", it never changes.
+`messageSignal` is a `String` signal with the constant value of "Hello", meaning it never changes.
 
-`main` maps the latest value from `messageSignal` to `view`. So if you run this code on your browser you will see `Hello` which is the constant value coming from `messageSignal`.
+`main` maps the latest value from `messageSignal` to `view`. If you run this code in your browser you will see `Hello` which is the constant value coming from `messageSignal`.
 
 ## Adding interaction
 
-We want to be able to click on the button and change the message. To do this we use __Html.Events.onClick__. Have a look at the documentation for the __Html.Events__ module. All of them have this signature: `Signal.Address a -> a -> Html.Attribute`
+We want to be able to click on the button and change the message. To do this we will use __Html.Events.onClick__. If you read the documentation for the __Html.Events__ module, you will see that all events have the same signature: `Signal.Address a -> a -> Html.Attribute`
 
-So they take an `Signal.Address` of any type as first argument, that same type as second argument and return an `Html.Attribute`.
+They take a `Signal.Address` of any type as first argument, the same type as second argument and return an `Html.Attribute`.
 
 But what is an `Address`?
 
 ## Addresses
 
-An __address__ is a pointer to an specific signal. It allows us to send __messages__ to that signal.
+An __address__ is a pointer to a specific signal. It allows us to send __messages__ to that signal.
 
-To obtain an __address__, where to send messages to, we need to use a `Mailbox`.
+To obtain an __address__ to send messages to, we need to use a `Mailbox`.
 
 ## Mailbox
 
@@ -67,7 +67,7 @@ mb =
   Signal.mailbox ""
 ```
 
-`mb` is a function that returns a `Mailbox`. This specific mailbox deals with strings i.e. it receives messages with strings and returns a signal of strings.
+`mb` is a function that returns a `Mailbox`. This specific mailbox deals with strings, i.e. it receives messages of type `String` and returns a signal of type `String`. The argument is the default value for the signal the mailbox provides, in this case it is the empty string.
 
 This function returns the mailbox which is a record with two attributes:
 
@@ -127,4 +127,4 @@ In `Events.onClick address "Hello"` we use this address to send the "Hello" mess
 
 ### Conclusion
 
-Mailboxes are a communication hub, they receive messages from our UI and broadcast them to other parts of our application. They will become an integral building block when creating a complex web application.
+Mailboxes are communication hubs, they receive messages from our UI and broadcast them to other parts of our application. They are an integral building block when creating complex web applications.

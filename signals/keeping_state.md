@@ -1,6 +1,6 @@
 # Keeping state
 
-We created a little application that display the current mouse x coordinate. But in most web applications we want to keep some state around as the user interacts with our application.
+In the previous section, we created a little application that displays the current mouse x coordinate. In it,  the current state was discarded as input values were received. But in most web applications we want to store some state as the user interacts with the application.
 
 Let's create an application that tracks clicks.
 
@@ -28,15 +28,17 @@ main =
 
 <https://github.com/sporto/elm-tutorial-assets/blob/master/signals/Clicks.elm>
 
-To introduce things gradually here we have an application that just shows `1` all the time. The `view` function displays the given count, in this case it is always 1.
+To introduce things gradually, here is an application that shows `1` all the time.
 
-The `countSignal` function produces a signal of integers, it takes the `Mouse.clicks` signal and maps it to always `1` for now.
+The `view` function displays the given count, but in this case it is always 1.
+
+The `countSignal` function produces a signal of integers. As its input, it takes the `Mouse.clicks` signal and maps it to `(always 1)`.
 
 `main` takes this `countSignal` and maps it through the `view` function.
 
 ## Signal.foldp
 
-`Signal.foldp` for 'fold past' is a signal that takes past state and combines it with a current input. It is quite similar `inject` in JavaScript arrays.
+`Signal.foldp` for 'fold past' is a signal that takes past state and combines it with a current input. It is similar to `reduce` in JavaScript arrays.
 
 Here is the application using `foldp`:
 
@@ -64,15 +66,15 @@ main =
 
 <https://github.com/sporto/elm-tutorial-assets/blob/master/signals/ClicksWithFoldp.elm>
 
-Let's see what's happening in the `Signal.foldp` line.
+Let's see what happens on the `Signal.foldp` line.
 
-Signal.foldp takes three arguments:
+`Signal.foldp` takes three arguments:
 
 - An __accumulation__ function: `(\_ state -> state + 1)`
 - The __initial state__, in this case `0`
 - And the __input signal__: `Mouse.clicks`
 
-The syntax: `\x y -> x + y` is an inline function in Elm. Equivalent to something like `(x, y) => x + y;` in ES6.
+The syntax `\x y -> x + y` is an anonymous function. It is equivalent to `(x, y) => x + y;` in ES6.
 
 #### How `foldp` works
 
@@ -83,7 +85,7 @@ The syntax: `\x y -> x + y` is an inline function in Elm. Equivalent to somethin
 - The first time `foldp` receives an __input signal__ it will pass the __initial state__ as previous state to the __accumulation__ function.
 - The __accumulation__ function calculates and returns a new state.
 - `folp` keeps this new state and pass it as the previous state the next time it calls the __accumulator__ function.
-- Finally, `folp` provides an __output signal__.
+- Finally, `foldp` produces an __output signal__.
 
 
 #### The accumulation function
