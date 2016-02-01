@@ -4,7 +4,7 @@
 
 So far we have been listening to a "raw" signal like `Mouse.x` and using that for displaying information on the page. In a larger application we want to be able to react to the user's interaction with UI elements. For example clicking on a link or button.
 
-In Elm we use __mailboxes__ for this. A mailbox is a communication hub that receives messages from UI elements and tasks and brodcasts a signal.
+In Elm we use __mailboxes__ for this. A mailbox is a communication hub that receives messages from UI elements and tasks and broadcasts a signal.
 
 To understand this better, let's start by creating a page with a button:
 
@@ -32,6 +32,8 @@ main : Signal Html.Html
 main =
   Signal.map view messageSignal
 ```
+
+<https://github.com/sporto/elm-tutorial-assets/blob/master/signals/Mailbox01.elm>
 
 `view` shows a message and a button for us to click. This button doesn't do anything at the moment.
 
