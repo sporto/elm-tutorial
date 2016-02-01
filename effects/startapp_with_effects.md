@@ -39,8 +39,10 @@ view address message =
   Html.div
     []
     [ Html.button
-        [ Events.onClick address Refresh ]
-        [ Html.text "Refresh" ]
+        [ Events.onClick address Refresh 
+        ]
+        [ Html.text "Refresh" 
+        ]
     , Html.text message
     ]
 
