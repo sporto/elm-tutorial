@@ -16,6 +16,8 @@ main =
   Html.text "Hello"
 ```
 
+<https://github.com/sporto/elm-tutorial-assets/blob/master/foundations/Hello.elm>
+
 Go to this folder on the terminal and type:
 
 ```
