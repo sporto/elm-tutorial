@@ -78,6 +78,8 @@ main =
     }
 ```
 
+<https://github.com/sporto/elm-tutorial-assets/blob/master/elm_arch/StartAppSimple.elm>
+
 We have removed two things:
 
 - The __mailbox__
