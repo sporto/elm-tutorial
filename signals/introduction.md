@@ -25,6 +25,8 @@ main =
   Signal.map view Mouse.x
 ```
 
+<https://github.com/sporto/elm-tutorial-assets/blob/master/signals/BasicMouse.elm>
+
 If you run this example in the browser you will see the changing `x` coordinate as you move your mouse.
 
 In the first line we import the `Html` module from core, which we will use to display the `x` coordinate.
