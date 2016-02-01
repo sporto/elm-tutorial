@@ -35,6 +35,8 @@ main =
   Signal.map view modelSignal
 ```
 
+<https://github.com/sporto/elm-tutorial-assets/blob/master/elm_arch/Model.elm>
+
 Let's look at what's new.
 
 ### Model
