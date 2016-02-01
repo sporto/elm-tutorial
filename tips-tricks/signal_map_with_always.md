@@ -6,7 +6,8 @@ Consider mapping a signal to a view function:
 clockSignal : Signal Time.Time
 clockSignal =
   Time.every Time.second
-  
+
+
 signal =
   Signal.map view clockSignal
 ```
@@ -15,7 +16,7 @@ signal =
 
 ```elm
 view : Time.Time -> Html.Html
-view timestap =
+view timestamp =
   ...
 ```
 
@@ -45,4 +46,3 @@ signal =
 ```
 
 With `(always view)` the value coming from `clockSignal` will be discarded, and view will be called without any arguments.
-

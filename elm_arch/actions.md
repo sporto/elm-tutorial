@@ -5,7 +5,7 @@ We created an `update` function.
 ```elm
 update : () -> Model -> Model
 update _ model =
-  {model | count = model.count + 1}
+  { model | count = model.count + 1 }
 ```
 
 As is, this `update` function can work with only one input signal i.e. `Mouse.clicks` which produces the expected `()` input.
@@ -13,9 +13,9 @@ As is, this `update` function can work with only one input signal i.e. `Mouse.cl
 But what we really want if for `update` to be able to handle different actions in our application. For this we will introduce the concept of __actions__ in Elm. We will use __enumerable__ types for this.
 
 ```elm
-type Action =
-  NoOp |
-  Increase
+type Action
+  = NoOp
+  | Increase
 ```
 
 Here we have an `Action` that can be either be `NoOp` (Do nothing) or `Increase` (Increase the counter).
@@ -25,43 +25,52 @@ Here we have an `Action` that can be either be `NoOp` (Do nothing) or `Increase`
 Let's refactor the application to use actions:
 
 ```elm
+module Main (..) where
+
 import Html
 import Mouse
 
-type alias Model = {
-    count : Int
-  }
 
-type Action =
-  NoOp |
-  Increase
+type alias Model =
+  { count : Int }
+
+
+type Action
+  = NoOp
+  | Increase
+
 
 initialModel : Model
-initialModel = {
-    count = 0
-  }
+initialModel =
+  { count = 0 }
+
 
 view : Model -> Html.Html
 view model =
   Html.text (toString model.count)
 
+
 update : Action -> Model -> Model
 update action model =
   case action of
     Increase ->
-      {model | count = model.count + 1}
+      { model | count = model.count + 1 }
+
     _ ->
       model
+
 
 actionSignal : Signal.Signal Action
 actionSignal =
   Signal.map (\_ -> Increase) Mouse.clicks
 
+
 modelSignal : Signal.Signal Model
 modelSignal =
   Signal.foldp update initialModel actionSignal
 
-main: Signal.Signal Html.Html
+
+main : Signal.Signal Html.Html
 main =
   Signal.map view modelSignal
 ```
@@ -77,7 +86,8 @@ update : Action -> Model -> Model
 update action model =
   case action of
     Increase ->
-      {model | count = model.count + 1}
+      { model | count = model.count + 1 }
+
     _ ->
       model
 ```
@@ -113,55 +123,67 @@ To understand the beauty of this, imagine what would happen if you have several 
 Here is an application that responds to both mouse clicks and key presses:
 
 ```elm
+module Main (..) where
+
 import Html
 import Mouse
 import Keyboard
 
-type alias Model = {
-    count : Int
-  }
 
-type Action =
-  NoOp |
-  MouseClick |
-  KeyPress
+type alias Model =
+  { count : Int }
+
+
+type Action
+  = NoOp
+  | MouseClick
+  | KeyPress
+
 
 initialModel : Model
-initialModel = {
-    count = 0
-  }
+initialModel =
+  { count = 0 }
+
 
 view : Model -> Html.Html
 view model =
   Html.text (toString model.count)
 
+
 update : Action -> Model -> Model
 update action model =
   case action of
     MouseClick ->
-      {model | count = model.count + 1}
+      { model | count = model.count + 1 }
+
     KeyPress ->
-      {model | count = model.count - 1}
+      { model | count = model.count - 1 }
+
     _ ->
       model
+
 
 mouseClickSignal : Signal.Signal Action
 mouseClickSignal =
   Signal.map (\_ -> MouseClick) Mouse.clicks
 
+
 keyPressSignal : Signal.Signal Action
 keyPressSignal =
   Signal.map (\_ -> KeyPress) Keyboard.presses
+
 
 actionSignal : Signal.Signal Action
 actionSignal =
   Signal.merge mouseClickSignal keyPressSignal
 
+
 modelSignal : Signal.Signal Model
 modelSignal =
   Signal.foldp update initialModel actionSignal
 
-main: Signal.Signal Html.Html
+
+main : Signal.Signal Html.Html
 main =
   Signal.map view modelSignal
 ```
@@ -173,43 +195,52 @@ Every mouse click increases the count, every key press decreases the count. Note
 You can send a payload with your actions:
 
 ```elm
+module Main (..) where
+
 import Html
 import Mouse
 
-type alias Model = {
-    count : Int
-  }
 
-type Action =
-  NoOp |
-  MouseClick Int
+type alias Model =
+  { count : Int }
+
+
+type Action
+  = NoOp
+  | MouseClick Int
+
 
 initialModel : Model
-initialModel = {
-    count = 0
-  }
+initialModel =
+  { count = 0 }
+
 
 view : Model -> Html.Html
 view model =
   Html.text (toString model.count)
 
+
 update : Action -> Model -> Model
 update action model =
   case action of
     MouseClick amount ->
-      {model | count = model.count + amount}
+      { model | count = model.count + amount }
+
     _ ->
       model
+
 
 mouseClickSignal : Signal.Signal Action
 mouseClickSignal =
   Signal.map (\_ -> MouseClick 2) Mouse.clicks
 
+
 modelSignal : Signal.Signal Model
 modelSignal =
   Signal.foldp update initialModel mouseClickSignal
 
-main: Signal.Signal Html.Html
+
+main : Signal.Signal Html.Html
 main =
   Signal.map view modelSignal
 ```
@@ -235,6 +266,6 @@ Finally, `update` uses __pattern matching__ in the case expression to extract th
 
 ```elm
 case action of
-    MouseClick amount ->
-      {model | count = model.count + amount}
+  MouseClick amount ->
+    { model | count = model.count + amount }
 ```

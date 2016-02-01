@@ -12,7 +12,7 @@ This pattern for organising an Elm application is referred as the __Elm architec
 - Creating a mailbox
 - Mapping our signals through `foldp`
 
-## Install start app 
+## Install start app
 
 Install start app by doing:
 
@@ -25,47 +25,55 @@ elm package install evancz/start-app
 Let's convert our application to use start app:
 
 ```elm
+module Main (..) where
+
 import Html
 import Html.Events as Events
 import StartApp.Simple
 
-type alias Model = {
-    count : Int
-  }
 
-type Action =
-  NoOp |
-  Increase
+type alias Model =
+  { count : Int }
+
+
+type Action
+  = NoOp
+  | Increase
+
 
 initialModel : Model
-initialModel = {
-    count = 0
-  }
+initialModel =
+  { count = 0 }
+
 
 view : Signal.Address Action -> Model -> Html.Html
 view address model =
-  Html.div [] [
-    Html.div [] [ Html.text (toString model.count) ],
-    Html.button [
-      Events.onClick address Increase
-    ] [ Html.text "Click" ]
-  ]
+  Html.div
+    []
+    [ Html.div [] [ Html.text (toString model.count) ]
+    , Html.button
+        [ Events.onClick address Increase ]
+        [ Html.text "Click" ]
+    ]
+
 
 update : Action -> Model -> Model
 update action model =
   case action of
     Increase ->
-      {model | count = model.count + 1}
+      { model | count = model.count + 1 }
+
     _ ->
       model
 
-main: Signal.Signal Html.Html
+
+main : Signal.Signal Html.Html
 main =
-  StartApp.Simple.start {
-    model = initialModel,
-    view = view,
-    update = update
-  }
+  StartApp.Simple.start
+    { model = initialModel
+    , view = view
+    , update = update
+    }
 ```
 
 We have removed two things:
@@ -78,12 +86,13 @@ StartApp provides these two things for us.
 Now we start our application by calling the `start` method of __StartApp.Simple__:
 
 ```elm
+main : Signal.Signal Html.Html
 main =
-  StartApp.Simple.start {
-    model = initialModel,
-    view = view,
-    update = update
-  }
+  StartApp.Simple.start
+    { model = initialModel
+    , view = view
+    , update = update
+    }
 ```
 
 Here we provide our __initial model__, our main __view__ and our __update__ function. StartApp will take care of wiring them together (using a mailbox and foldp).

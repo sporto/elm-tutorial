@@ -21,9 +21,9 @@ We replaced `String` with `a`. So the signature is now saying that this function
 In this way we can make function more generic. You can have several __type variables__ as well:
 
 ```elm
-switch : (a, b) -> (b, a)
-switch (x, y) =
-  (y, x)
+switch : ( a, b ) -> ( b, a )
+switch ( x, y ) =
+  ( y, x )
 ```
 
 This function takes a tuple of types `a`, `b` and returns a tuple of types `b`, `a`. All these are valid calls:

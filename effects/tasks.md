@@ -5,22 +5,28 @@ In Elm, __tasks__ allow us to make asynchronous operations. A task might success
 Let's start with an application that displays a message every second:
 
 ```elm
+module Main (..) where
+
 import Html
 import Time
+
 
 clockSignal : Signal Time.Time
 clockSignal =
   Time.every Time.second
 
+
 messageSignal : Signal String
-messageSignal = 
+messageSignal =
   Signal.map toString clockSignal
+
 
 view : String -> Html.Html
 view message =
   Html.text message
 
-main: Signal.Signal Html.Html
+
+main : Signal.Signal Html.Html
 main =
   Signal.map view messageSignal
 ```
@@ -40,7 +46,6 @@ Let's go through the example:
 Now, instead of displaying the current timestamp every second, we want to display a message coming through ajax. To do this we will need a fake server, so we can send a request to it and get a message back.
 
 ## Adding a fake server
-
 
 We will use node for our fake server, because if you are reading this is quite likely that you already have node installed and are familiar with it.
 
@@ -66,13 +71,13 @@ var server = jsonServer.create()
 
 // Allow CORS
 server.use(function(req, res, next) {
-	res.header("Access-Control-Allow-Origin", "*");
-	res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
-	next();
+  res.header("Access-Control-Allow-Origin", "*");
+  res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
+  next();
 });
 
-server.get('/', function (req, res) { 
-	res.send(Math.random().toString()) 
+server.get('/', function (req, res) {
+  res.send(Math.random().toString())
 })
 
 console.log('Listening at 3000')
@@ -99,47 +104,57 @@ elm reactor
 Then create an Elm application like:
 
 ```elm
+module Main (..) where
+
 import Html
 import Time
 import Http
 import Task
 
+
 view : String -> Html.Html
-view message =  
+view message =
   Html.text message
+
 
 clockSignal : Signal Time.Time
 clockSignal =
   Time.every (2 * Time.second)
 
+
 mb =
   Signal.mailbox ""
+
 
 httpTask : Task.Task Http.Error String
 httpTask =
   Http.getString "http://localhost:3000/"
 
+
 sendToMb : String -> Task.Task x ()
 sendToMb result =
   Signal.send mb.address result
+
 
 runTask : Task.Task Http.Error ()
 runTask =
   httpTask
     |> (flip Task.andThen) sendToMb
-    
+
+
 taskSignal : Signal (Task.Task Http.Error ())
 taskSignal =
   Signal.map (always runTask) clockSignal
 
-main: Signal.Signal Html.Html
+
+main : Signal.Signal Html.Html
 main =
   Signal.map view mb.signal
+
 
 port runner : Signal (Task.Task Http.Error ())
 port runner =
   taskSignal
-
 ```
 
 If you open this application using Elm Reactor you will see a random number changing every second. This random number is coming from the __node__ server we created above.
@@ -198,7 +213,7 @@ runTask =
 
 This function creates a chain between `httpTask` and our __mailbox__.
 
-It is saying: "When this task is done send the results to sendToMb". This function doesn't do anything by itself either, it just wires things up and returns a new task. 
+It is saying: "When this task is done send the results to sendToMb". This function doesn't do anything by itself either, it just wires things up and returns a new task.
 
 There is quite a bit happening in these lines:
 
@@ -216,7 +231,7 @@ taskSignal =
   Signal.map (always runTask) clockSignal
 ```
 
-Here we take the clockSignal, which gives us a heartbeat every 2 seconds and we map it through `runTask`. 
+Here we take the clockSignal, which gives us a heartbeat every 2 seconds and we map it through `runTask`.
 
 - We don't really care about the value given by `clockSignal` this is why we use `(always runTask)`. EXPLIAN MORE ON ALWAYS
 - This function return a signal of the tasks. As `runTask` has the signature of `Task.Task Http.Error ()`, then the signal has the signature of `Signal (Task.Task Http.Error ())`.
@@ -224,7 +239,7 @@ Here we take the clockSignal, which gives us a heartbeat every 2 seconds and we 
 #### main
 
 ```elm
-main: Signal.Signal Html.Html
+main : Signal.Signal Html.Html
 main =
   Signal.map view mb.signal
 ```
@@ -250,13 +265,14 @@ Here is a diagram that should help clarify what is happening:
 ![Task](tasks-v08.png)
 
 1. We have a clock signal for a heartbeat every 2 seconds
-2. In `taskSignal` we map this clock signal creating a task
-3. We send the `taskSignal` to a port so it gets ran
-4. Result from the port is send back to `runTask`
-5. `runTaks` executes the next step after `andThen`
-6. We send the result of the task to the mailbox
-7. The mailbox broadcasts an output signal
-8. `main` picks up the signal from the mailbox and renders a view, this vies shows the result of the tasks
+1. In `taskSignal` we map this clock signal creating a task
+1. We send the `taskSignal` to a port so it gets ran
+1. Result from the port is send back to `runTask`
+1. `runTaks` executes the next step after `andThen`
+1. We send the result of the task to the mailbox
+1. The mailbox broadcasts an output signal
+1. `main` picks up the signal from the mailbox and renders a view, this vies
+   shows the result of the tasks
 
 ## Conclusion
 

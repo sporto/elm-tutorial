@@ -26,7 +26,7 @@ type Action =
 type alias Model = String
 
 view : Signal.Address Action -> Model -> Html.Html
-view address message =  
+view address message =
   Html.div [] [
     Html.button [
       Events.onClick address Refresh
@@ -237,13 +237,13 @@ taskSignal =
   Signal.map (Effects.toTask actionsMailbox.address) fxSignal
 ```
 
-After a task finishes we want to send its result back to our application. We map the effects coming from `fxSignal` through `(Effects.toTask actionsMailbox.address)`. `Effects.toTask` takes and __address_ and __effects__. When the effects are ran `toTask` sends the resulting messages to the address.
+After a task finishes we want to send its result back to our application. We map the effects coming from `fxSignal` through `(Effects.toTask actionsMailbox.address)`. `Effects.toTask` takes and __address__ and __effects__. When the effects are ran `toTask` sends the resulting messages to the address.
 
 An example should make the clearer:
 
 DIAGRAM
 
-#### main 
+#### main
 
 `main` maps the model signal through the view.
 
@@ -257,27 +257,27 @@ Here is a diagram of what is happening:
 
 ![Fx](effects-v05.png)
 
-1. We start with an initial model. 
-2. `modelSignal` picks up this initial model
-3. `main` maps `modelSignal` rendering the `view`
-4. When the user clicks we send an action to `oneActionAddress`
-5. This action is forwarded to `actionsMailbox.address`
-6. This mailbox produces a signals with the actions
-7. `modelAndFxSignal` picks up the changes from `actionsMailbox.signal` and calls `update`. Update returns a new model and effects to run
-8. `fxSignal` picks up the effects from `modelAndFxSignal`
-9. `taskSignal` converts `fxSignal` into a signal of tasks
-10. `port` runs the `tasks` produced by `taskSignal`
-11. When the task is done the port will publish the result
-12. `taskSignal` picks up the results from `port`
-13. `taskSignal` sends messages to `mailbox.address` with the results
-14. `actionsMailbox` broadcasts the result through its signal
-15. `modelAndFxSignal` picks this signal and calls `update` again, storing the updated model
-16. `modelSignal` picks up the model change from `modelAndFxSignal`
-17. `main` maps `modelSignal` through `view`. Showing the messsage coming from the server.
+1. We start with an initial model.
+1. `modelSignal` picks up this initial model
+1. `main` maps `modelSignal` rendering the `view`
+1. When the user clicks we send an action to `oneActionAddress`
+1. This action is forwarded to `actionsMailbox.address`
+1. This mailbox produces a signals with the actions
+1. `modelAndFxSignal` picks up the changes from `actionsMailbox.signal` and
+   calls `update`. Update returns a new model and effects to run
+1. `fxSignal` picks up the effects from `modelAndFxSignal`
+1. `taskSignal` converts `fxSignal` into a signal of tasks
+1. `port` runs the `tasks` produced by `taskSignal`
+1. When the task is done the port will publish the result
+1. `taskSignal` picks up the results from `port`
+1. `taskSignal` sends messages to `mailbox.address` with the results
+1. `actionsMailbox` broadcasts the result through its signal
+1. `modelAndFxSignal` picks this signal and calls `update` again, storing the
+   updated model
+1. `modelSignal` picks up the model change from `modelAndFxSignal`
+1. `main` maps `modelSignal` through `view`. Showing the messsage coming from
+   the server.
 
 ## Conclusion
 
 Adding effects to our application complicates the wiring of the application a fair amount. Thankfully, we don't have to do (or understand) all these wiring directly, we can use __StartApp__. We will look into it in the next chapter.
-
-
-

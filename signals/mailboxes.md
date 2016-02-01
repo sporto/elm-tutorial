@@ -9,20 +9,26 @@ In Elm we use __mailboxes__ for this. A mailbox is a communication hub that rece
 To understand this better, let's start by creating a page with a button:
 
 ```elm
+module Main (..) where
+
 import Html
+
 
 view : String -> Html.Html
 view message =
-  Html.div [] [
-    Html.div [] [ Html.text message ],
-    Html.button [] [ Html.text "Click" ]
-  ]
+  Html.div
+    []
+    [ Html.div [] [ Html.text message ]
+    , Html.button [] [ Html.text "Click" ]
+    ]
+
 
 messageSignal : Signal String
 messageSignal =
   Signal.constant "Hello"
 
-main: Signal Html.Html
+
+main : Signal Html.Html
 main =
   Signal.map view messageSignal
 ```
@@ -59,13 +65,13 @@ mb =
   Signal.mailbox ""
 ```
 
-`mb` is a function that returns a `Mailbox`. This specific mailbox deals with strings i.e. it receives messages with strings and returns a signal of strings. 
+`mb` is a function that returns a `Mailbox`. This specific mailbox deals with strings i.e. it receives messages with strings and returns a signal of strings.
 
 This function returns the mailbox which is a record with two attributes:
 
 ```elm
 { address : Signal.Address a
- signal : Signal.Signal a 
+, signal : Signal.Signal a
 }
 ```
 
@@ -77,23 +83,29 @@ The next step is to use the mailbox in our application so we can send and refres
 
 
 ```elm
+module Main (..) where
+
 import Html
 import Html.Events as Events
 
+
 view : Signal.Address String -> String -> Html.Html
 view address message =
-  Html.div [] [
-    Html.div [] [ Html.text message ],
-    Html.button [
-      Events.onClick address "Hello"
-    ] [ Html.text "Click" ]
-  ]
+  Html.div
+    []
+    [ Html.div [] [ Html.text message ]
+    , Html.button
+        [ Events.onClick address "Hello" ]
+        [ Html.text "Click" ]
+    ]
+
 
 mb : Signal.Mailbox String
 mb =
   Signal.mailbox ""
 
-main: Signal Html.Html
+
+main : Signal Html.Html
 main =
   Signal.map (view mb.address) mb.signal
 ```
@@ -112,5 +124,3 @@ In `Events.onClick address "Hello"` we use this address to send the "Hello" mess
 ### Conclusion
 
 Mailboxes are a communication hub, they receive messages from our UI and broadcast them to other parts of our application. They will become an integral building block when creating a complex web application.
-
-

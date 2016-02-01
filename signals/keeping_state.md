@@ -1,22 +1,27 @@
 # Keeping state
 
-We created a little application that display the current mouse x coordinate. But in most web applications we want to keep some state around as the user interacts with our application. 
+We created a little application that display the current mouse x coordinate. But in most web applications we want to keep some state around as the user interacts with our application.
 
 Let's create an application that tracks clicks.
 
 ```elm
+module Main (..) where
+
 import Html
 import Mouse
+
 
 view : Int -> Html.Html
 view count =
   Html.text (toString count)
 
+
 countSignal : Signal Int
 countSignal =
   Signal.map (always 1) Mouse.clicks
 
-main: Signal.Signal Html.Html
+
+main : Signal.Signal Html.Html
 main =
   Signal.map view countSignal
 ```
@@ -34,18 +39,23 @@ The `countSignal` function produces a signal of integers, it takes the `Mouse.cl
 Here is the application using `foldp`:
 
 ```elm
+module Main (..) where
+
 import Html
 import Mouse
+
 
 view : Int -> Html.Html
 view count =
   Html.text (toString count)
 
+
 countSignal : Signal Int
 countSignal =
   Signal.foldp (\_ state -> state + 1) 0 Mouse.clicks
 
-main: Signal.Signal Html.Html
+
+main : Signal.Signal Html.Html
 main =
   Signal.map view countSignal
 ```
@@ -65,7 +75,7 @@ The syntax: `\x y -> x + y` is an inline function in Elm. Equivalent to somethin
 ![Foldp](foldp.png)
 
 - Each time `foldp` receives an __input signal__ it will call the __accumulation__ function.
-- This __accumulation__ function receives the output of the __input signal__ and the __previous state__. 
+- This __accumulation__ function receives the output of the __input signal__ and the __previous state__.
 - The first time `foldp` receives an __input signal__ it will pass the __initial state__ as previous state to the __accumulation__ function.
 - The __accumulation__ function calculates and returns a new state.
 - `folp` keeps this new state and pass it as the previous state the next time it calls the __accumulator__ function.
@@ -82,6 +92,4 @@ The __accumulation__ function above takes the input from `Mouse.clicks` and the 
 
 The input from `Mouse.clicks` is always `()` which is called the unit type in Elm. We don't need to do anything with this value, so we ignore it by using `_`.
 
-WRITE SOMETHIGN ABOUT THE UNIT TYPE OR LINK
-
-
+WRITE SOMETHING ABOUT THE UNIT TYPE OR LINK
