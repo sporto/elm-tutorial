@@ -75,6 +75,8 @@ main =
   Signal.map view modelSignal
 ```
 
+<https://github.com/sporto/elm-tutorial-assets/blob/master/elm_arch/Actions.elm>
+
 #### actions
 
 We added `type Action ...` as described before.
