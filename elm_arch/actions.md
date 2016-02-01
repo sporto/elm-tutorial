@@ -189,6 +189,7 @@ main : Signal.Signal Html.Html
 main =
   Signal.map view modelSignal
 ```
+
 <https://github.com/sporto/elm-tutorial-assets/blob/master/elm_arch/ActionsMultiple.elm>
 
 Every mouse click increases the count, every key press decreases the count. Note how we __merge__ the signals (mouseClickSignal and keyPressSignal) into one, as they both are `Signal.Signal Action` can handle them.
