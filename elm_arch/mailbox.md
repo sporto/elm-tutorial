@@ -22,7 +22,8 @@ type Action
 
 initialModel : Model
 initialModel =
-  { count = 0 }
+  { count = 0
+  }
 
 
 view : Signal.Address Action -> Model -> Html.Html
@@ -55,5 +56,7 @@ main : Signal.Signal Html.Html
 main =
   Signal.map (view mb.address) modelSignal
 ```
+
+<https://github.com/sporto/elm-tutorial-assets/blob/master/elm_arch/Mailbox.elm>
 
 The big difference is the introduction of the __mailbox__. The mailbox provides an address where to send messages and a signal to listen to. See the chapter on Signals/Mailbox for more information.
