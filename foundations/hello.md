@@ -11,7 +11,8 @@ Let's write our first Elm application, create a folder for your application and 
 ```elm
 import Html
 
-main: Html.Html
+
+main : Html.Html
 main =
   Html.text "Hello"
 ```

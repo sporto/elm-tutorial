@@ -7,6 +7,7 @@ clockSignal : Signal Time.Time
 clockSignal =
   Time.every Time.second
 
+
 signal =
   Signal.map view clockSignal
 ```
@@ -15,7 +16,7 @@ signal =
 
 ```elm
 view : Time.Time -> Html.Html
-view timestap =
+view timestamp =
   ...
 ```
 

@@ -14,6 +14,8 @@ __StartApp__ (not simple) introduces the concepts of __effects__. Instead of ret
 Let's convert the application we looked at in the last chapter to __StartApp__.
 
 ```elm
+module Main (..) where
+
 import Effects exposing (Effects, Never)
 import Html
 import Html.Events as Events
@@ -21,28 +23,32 @@ import Http
 import StartApp
 import Task
 
-type Action =
-  NoOp |
-  Refresh |
-  OnRefresh (Result Http.Error String)
 
-type alias Model = String
+type Action
+  = NoOp
+  | Refresh
+  | OnRefresh (Result Http.Error String)
+
+
+type alias Model =
+  String
+
 
 view : Signal.Address Action -> Model -> Html.Html
 view address message =
-  Html.div [] [
-    Html.button [
-      Events.onClick address Refresh
+  Html.div
+    []
+    [ Html.button
+        [ Events.onClick address Refresh ]
+        [ Html.text "Refresh" ]
+    , Html.text message
     ]
-    [
-      Html.text "Refresh"
-    ],
-    Html.text message
-  ]
+
 
 httpTask : Task.Task Http.Error String
 httpTask =
   Http.getString "http://localhost:3000/"
+
 
 refreshFx : Effects.Effects Action
 refreshFx =
@@ -51,36 +57,43 @@ refreshFx =
     |> Task.map OnRefresh
     |> Effects.task
 
-init : (Model, Effects Action)
-init =
-  ("", Effects.none)
 
-update : Action -> Model -> (Model, Effects.Effects Action)
+init : ( Model, Effects Action )
+init =
+  ( "", Effects.none )
+
+
+update : Action -> Model -> ( Model, Effects.Effects Action )
 update action model =
   case Debug.log "action" action of
     Refresh ->
-      (model, refreshFx)
+      ( model, refreshFx )
+
     OnRefresh result ->
       let
         message =
           Result.withDefault "" result
       in
-        (message, Effects.none)
+        ( message, Effects.none )
+
     _ ->
-      (model, Effects.none)
+      ( model, Effects.none )
+
 
 app : StartApp.App Model
 app =
-  StartApp.start {
-    init = init,
-    inputs = [],
-    update = update,
-    view = view
-  }
+  StartApp.start
+    { init = init
+    , inputs = []
+    , update = update
+    , view = view
+    }
 
-main: Signal.Signal Html.Html
+
+main : Signal.Signal Html.Html
 main =
   app.html
+
 
 port runner : Signal (Task.Task Never ())
 port runner =
@@ -114,13 +127,12 @@ Same `update` as in the previous chapter, it responds to `Refresh` by returning 
 ```elm
 app : StartApp.App Model
 app =
-  StartApp.start {
-    init = init,
-    inputs = [],
-    update = update,
-    view = view
-  }
-
+  StartApp.start
+    { init = init
+    , inputs = []
+    , update = update
+    , view = view
+    }
 ```
 
 We have a new function `app`. This function bootstraps StartApp.
@@ -134,10 +146,9 @@ We have a new function `app`. This function bootstraps StartApp.
 This function returns an __StartApp__ record like:
 
 ```elm
-{
-  html  : Signal.Signal Html.Html,
-  model : Signal.Signal model,
-  tasks : Signal.Signal (Task.Task Effects.Never ())
+{ html : Signal.Signal Html.Html
+, model : Signal.Signal model
+, tasks : Signal.Signal (Task.Task Effects.Never ())
 }
 ```
 
@@ -148,7 +159,7 @@ This function returns an __StartApp__ record like:
 ### main
 
 ```elm
-main: Signal.Signal Html.Html
+main : Signal.Signal Html.Html
 main =
   app.html
 ```

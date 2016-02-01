@@ -9,20 +9,26 @@ In Elm we use __mailboxes__ for this. A mailbox is a communication hub that rece
 To understand this better, let's start by creating a page with a button:
 
 ```elm
+module Main (..) where
+
 import Html
+
 
 view : String -> Html.Html
 view message =
-  Html.div [] [
-    Html.div [] [ Html.text message ],
-    Html.button [] [ Html.text "Click" ]
-  ]
+  Html.div
+    []
+    [ Html.div [] [ Html.text message ]
+    , Html.button [] [ Html.text "Click" ]
+    ]
+
 
 messageSignal : Signal String
 messageSignal =
   Signal.constant "Hello"
 
-main: Signal Html.Html
+
+main : Signal Html.Html
 main =
   Signal.map view messageSignal
 ```
@@ -65,7 +71,7 @@ This function returns the mailbox which is a record with two attributes:
 
 ```elm
 { address : Signal.Address a
- signal : Signal.Signal a
+, signal : Signal.Signal a
 }
 ```
 
@@ -77,23 +83,29 @@ The next step is to use the mailbox in our application so we can send and refres
 
 
 ```elm
+module Main (..) where
+
 import Html
 import Html.Events as Events
 
+
 view : Signal.Address String -> String -> Html.Html
 view address message =
-  Html.div [] [
-    Html.div [] [ Html.text message ],
-    Html.button [
-      Events.onClick address "Hello"
-    ] [ Html.text "Click" ]
-  ]
+  Html.div
+    []
+    [ Html.div [] [ Html.text message ]
+    , Html.button
+        [ Events.onClick address "Hello" ]
+        [ Html.text "Click" ]
+    ]
+
 
 mb : Signal.Mailbox String
 mb =
   Signal.mailbox ""
 
-main: Signal Html.Html
+
+main : Signal Html.Html
 main =
   Signal.map (view mb.address) mb.signal
 ```

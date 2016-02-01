@@ -5,18 +5,23 @@ We created a little application that display the current mouse x coordinate. But
 Let's create an application that tracks clicks.
 
 ```elm
+module Main (..) where
+
 import Html
 import Mouse
+
 
 view : Int -> Html.Html
 view count =
   Html.text (toString count)
 
+
 countSignal : Signal Int
 countSignal =
   Signal.map (always 1) Mouse.clicks
 
-main: Signal.Signal Html.Html
+
+main : Signal.Signal Html.Html
 main =
   Signal.map view countSignal
 ```
@@ -34,18 +39,23 @@ The `countSignal` function produces a signal of integers, it takes the `Mouse.cl
 Here is the application using `foldp`:
 
 ```elm
+module Main (..) where
+
 import Html
 import Mouse
+
 
 view : Int -> Html.Html
 view count =
   Html.text (toString count)
 
+
 countSignal : Signal Int
 countSignal =
   Signal.foldp (\_ state -> state + 1) 0 Mouse.clicks
 
-main: Signal.Signal Html.Html
+
+main : Signal.Signal Html.Html
 main =
   Signal.map view countSignal
 ```
