@@ -62,6 +62,8 @@ main =
   Signal.map view countSignal
 ```
 
+<https://github.com/sporto/elm-tutorial-assets/blob/master/signals/ClicksWithFoldp.elm>
+
 Let's see what's happening in the `Signal.foldp` line.
 
 Signal.foldp takes three arguments:
