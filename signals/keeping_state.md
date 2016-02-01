@@ -26,6 +26,8 @@ main =
   Signal.map view countSignal
 ```
 
+<https://github.com/sporto/elm-tutorial-assets/blob/master/signals/Clicks.elm>
+
 To introduce things gradually here we have an application that just shows `1` all the time. The `view` function displays the given count, in this case it is always 1.
 
 The `countSignal` function produces a signal of integers, it takes the `Mouse.clicks` signal and maps it to always `1` for now.
