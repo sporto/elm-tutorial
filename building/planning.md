@@ -8,7 +8,7 @@ This application will demonstrate:
 - Nested components
 - Breaking the application into resources
 - Routing
-- Shared state accross the application
+- Shared state across the application
 - State specific to a component
 - Editing
 - Validations
@@ -18,7 +18,7 @@ This application will demonstrate:
 
 During the rest of this guide I will use the word __resources__ to refer to models that are the subject of our application. These are __players__ and __perks__. Using the word __model__ can be confusing because component specific state is also a model (for example the expanded / collapse state of a component).
 
-## Wireframes:
+## Wireframes
 
 The application will have three views:
 
