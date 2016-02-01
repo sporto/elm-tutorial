@@ -112,6 +112,8 @@ main =
   Signal.map (view mb.address) mb.signal
 ```
 
+<https://github.com/sporto/elm-tutorial-assets/blob/master/signals/Mailbox02.elm>
+
 #### view
 
 The `view` function now takes a `Signal.Address` as first argument.
