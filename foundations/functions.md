@@ -14,7 +14,7 @@ add x y =
 
 The first line in the example is the function signature. This signature is optional in Elm, but recommended because it makes the intention of your clearer.
 
-This function called `add` takes two intergers (`Int -> Int`) and returns another integer (The third `-> Int`).
+This function called `add` takes two integers (`Int -> Int`) and returns another integer (The third `-> Int`).
 
 The second line is the function declaration. The parameters are `x` and `y`.
 
@@ -28,7 +28,7 @@ add 1 2
 
 ### Grouping with parenthesis
 
-When you need to call a function which includes the result of another function you will use parentesis to group them:
+When you need to call a function which includes the result of another function you will use parenthesis to group them:
 
 ```elm
 add 1 (divide 12 3)
@@ -65,7 +65,7 @@ As shown above you can nest functions like:
 add 1 (multiply 2 3)
 ```
 
-Maybe this is a trivial example, but conside a more complex one:
+Maybe this is a trivial example, but consider a more complex one:
 
 ```elm
 sum (filter (isOver 100) (map getCost records))
