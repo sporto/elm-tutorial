@@ -56,7 +56,7 @@ update action model =
     Increase ->
       { model | count = model.count + 1 }
 
-    _ ->
+    NoOp ->
       model
 
 
@@ -90,13 +90,17 @@ update action model =
     Increase ->
       { model | count = model.count + 1 }
 
-    _ ->
+    NoOp ->
       model
 ```
 
 The `update` function now takes an `Action` as first argument, instead of `()`.
 
 We added a `case` to deal with different actions. This case checks for the type of action and acts accordingly.
+
+The Increase case returns a new model with it's count property incremented, same as before.
+
+The NoOp case just returns the same model.
 
 ### actionSignal
 
@@ -161,7 +165,7 @@ update action model =
     KeyPress ->
       { model | count = model.count - 1 }
 
-    _ ->
+    NoOp ->
       model
 
 
@@ -230,7 +234,7 @@ update action model =
     MouseClick amount ->
       { model | count = model.count + amount }
 
-    _ ->
+    NoOp ->
       model
 
 
