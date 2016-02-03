@@ -6,7 +6,7 @@ Go to http://elm-lang.org/install and download the appropriate installer for you
 
 ## Our first Elm application
 
-Let's write our first Elm application, create a folder for your application and add a `Hello.elm` file. In this file write:
+Let's write our first Elm application. Create a folder for your application and add a `Hello.elm` file. In this file write:
 
 ```elm
 import Html
@@ -35,12 +35,12 @@ Open `http://0.0.0.0:8000/` on a browser. And click on `Hello.elm`. You should s
 
 ### imports
 
-In Elm you need to import the __modules__  you want to use explicitly. In this case we want to use the __Html__ module from core. This module has many functions to work with html, we will be using `.text`.
+In Elm you need to import the __modules__  you want to use explicitly. In this case we want to use the __Html__ module from core. This module has many functions to work with html. We will be using `.text`.
 
 ### main
 
-Every application in Elm starts on a `main` function. `main` should be a function that returns an static element or a signal of elements (more on signals later). In this case `main` just returns an `Html.Html` element (Html element from the Html module).
+Every application in Elm starts on a `main` function. `main` should be a function that returns a static element or a signal of elements (more on signals later). In this case `main` just returns an `Html.Html` element (Html element from the Html module).
 
 ### elm reactor
 
-Elm __reactor__ creates a server that compiles Elm code on the fly. __reactor__ is useful for developing applications without worring too much about setting up a build process. However __reactor__ has limitations, so we will need to switch to a build process later on.
+Elm __reactor__ creates a server that compiles Elm code on the fly. __reactor__ is useful for developing applications without worrying too much about setting up a build process. However __reactor__ has limitations, so we will need to switch to a build process later on.
