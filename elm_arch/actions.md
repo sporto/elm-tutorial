@@ -10,7 +10,7 @@ update _ model =
 
 As is, this `update` function can work with only one input signal i.e. `Mouse.clicks` which produces the expected `()` input.
 
-But what we really want if for `update` to be able to handle different actions in our application. For this we will introduce the concept of __actions__ in Elm. We will use __enumerable__ types for this.
+But what we really want is for `update` to be able to handle different actions in our application. For this we will introduce the concept of __actions__ in Elm. We will use __enumerable__ types for this.
 
 ```elm
 type Action
@@ -106,7 +106,7 @@ actionSignal =
   Signal.map (\_ -> Increase) Mouse.clicks
 ```
 
-Here we introduce a new signal as an intermediate step before the `modelSignal`. This signal listens for mouse clicks and maps them to an action. In this case `Increase`.
+Here we introduce a new signal as an intermediate step before the `modelSignal`. This signal listens for mouse clicks and maps them to an action, in this case `Increase`.
 
 ### modelSignal
 
@@ -120,7 +120,7 @@ The model signal now takes the `actionSignal` as input and calls update with the
 
 ## More actions
 
-To understand the beauty of this, imagine what would happen if you have several actions that can happen in your application e.g. mouse clicks, key up, key downs, etc. By converting everything to __actions__ our application can handle all these cases.
+To understand the beauty of this, imagine what will happen if you have several actions that can happen in your application e.g. mouse clicks, key up, key downs, etc. By converting everything to __actions__ our application can handle all these cases.
 
 Here is an application that responds to both mouse clicks and key presses:
 
