@@ -56,7 +56,7 @@ This function is equivalent to what we had before:
 (\_ state -> { state | count = state.count + 1 })
 ```
 
-But instead of an inline function it is now an standalone one. __update__ take the unit type (given by Mouse.clicks), the previous `Model` and returns a new `Model`.
+But instead of an inline function it is now an standalone one. __update__ takes the unit type (given by Mouse.clicks), the previous `Model`, and returns a new `Model`.
 
 #### foldp
 
@@ -68,4 +68,4 @@ modelSignal =
   Signal.foldp update initialModel Mouse.clicks
 ```
 
-The application works the same as before but we are now using the __Model, Update, View__ pattern. This `update` function centralised changes in our application model in one place, this will become clearer later.
+The application works the same as before but we are now using the __Model, Update, View__ pattern. This `update` function centralises changes to our application model. This will become clearer later.
