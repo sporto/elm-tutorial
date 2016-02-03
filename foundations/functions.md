@@ -1,6 +1,6 @@
 # Function basics
 
-This chapter covers basic Elm syntax that is important to get familiar with. These are functions, function signatures, partial application and the pipe operator.
+This chapter covers basic Elm syntax that is important to get familiar with: functions, function signatures, partial application and the pipe operator.
 
 ## Functions
 
@@ -26,9 +26,9 @@ You call this function by writing:
 add 1 2
 ```
 
-### Grouping with parenthesis
+### Grouping with parentheses
 
-When you want to call a function with the result of another function call you need to use parenthesis for grouping the calls:
+When you want to call a function with the result of another function call you need to use parentheses for grouping the calls:
 
 ```elm
 add 1 (divide 12 3)
@@ -44,7 +44,7 @@ add(1, divide(12, 3))
 
 ## Partial application
 
-In Elm, you can take a function, like `add` above, and call it with only one argument, e.g. `add 2`.
+In Elm you can take a function, like `add` above, and call it with only one argument, e.g. `add 2`.
 
 This returns another function with the value `2` bound as the first parameter. Calling the returned function with a second value returns `2 + ` the second value:
 
@@ -53,7 +53,7 @@ add2 = add 2
 add2 3 ==> 5
 ```
 
-Another way to think about a function signature like `add : Int -> Int -> Int`, is that it is a function that takes one integer as argument and returns another function. The returned function takes another integer and returns an integer.
+Another way to think about a function signature like `add : Int -> Int -> Int` is that it is a function that takes one integer as argument and returns another function. The returned function takes another integer and returns an integer.
 
 Partial application is incredibly useful in Elm for making your code more readable and passing state between functions in your application.
 
