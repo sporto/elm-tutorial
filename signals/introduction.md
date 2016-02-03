@@ -61,7 +61,7 @@ Its type signature is `Signal.map : (a -> result) -> Signal a -> Signal result`.
 
 ![Signal map](signal-map.png)
 
-__Diagram__: We have a source signal (A). Signal.map produces a second signal (B). This second signal produces values that are the double of the original signal.
+__Diagram__: We have a source signal `A`. Signal.map produces a second signal `B`. This second signal produces values that are the double of the original signal.
 
 ---
 
