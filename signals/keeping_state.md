@@ -74,7 +74,7 @@ Let's see what happens on the `Signal.foldp` line.
 - The __initial state__, in this case `0`
 - And the __input signal__: `Mouse.clicks`
 
-The syntax `\x y -> x + y` is an anonymous function. It is equivalent to `(x, y) => x + y;` in ES6.
+The syntax `\x y -> x + y` is an anonymous function. It is equivalent to `(x, y) => x + y` in ES6.
 
 #### How `foldp` works
 
