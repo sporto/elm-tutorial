@@ -74,7 +74,7 @@ Let's see what happens on the `Signal.foldp` line.
 - The __initial state__, in this case `0`
 - And the __input signal__: `Mouse.clicks`
 
-The syntax `\x y -> x + y` is an anonymous function. It is equivalent to `(x, y) => x + y;` in ES6.
+The syntax `\x y -> x + y` is an anonymous function. It is equivalent to `(x, y) => x + y` in ES6.
 
 #### How `foldp` works
 
@@ -84,7 +84,7 @@ The syntax `\x y -> x + y` is an anonymous function. It is equivalent to `(x, y)
 - This __accumulation__ function receives the output of the __input signal__ and the __previous state__.
 - The first time `foldp` receives an __input signal__ it will pass the __initial state__ as previous state to the __accumulation__ function.
 - The __accumulation__ function calculates and returns a new state.
-- `folp` keeps this new state and pass it as the previous state the next time it calls the __accumulator__ function.
+- `foldp` keeps this new state and passes it as the previous state the next time it calls the __accumulator__ function.
 - Finally, `foldp` produces an __output signal__.
 
 
