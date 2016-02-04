@@ -272,7 +272,7 @@ Here is a diagram that should help clarify what is happening:
 1. In `taskSignal` we map this clock signal creating a task
 1. We send the `taskSignal` to a port so it gets ran
 1. Result from the port is send back to `runTask`
-1. `runTaks` executes the next step after `andThen`
+1. `runTask` executes the next step after `andThen`
 1. We send the result of the task to the mailbox
 1. The mailbox broadcasts an output signal
 1. `main` picks up the signal from the mailbox and renders a view, this vies
