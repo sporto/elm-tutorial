@@ -12,7 +12,7 @@ Let's write our first Elm application. Create a folder for your application. In 
 elm package install evancz/elm-html
 ```
 
-This will install the _elm-html_ module. Then add a `Hello.elm` file. In this file write:
+This will install the _elm-html_ module. Then add a `Hello.elm` file, with the following code:
 
 ```elm
 import Html
