@@ -6,7 +6,13 @@ Go to http://elm-lang.org/install and download the appropriate installer for you
 
 ## Our first Elm application
 
-Let's write our first Elm application. Create a folder for your application and add a `Hello.elm` file. In this file write:
+Let's write our first Elm application. Create a folder for your application. In this folder run the following command in the terminal:
+
+```
+elm package install evancz/elm-html
+```
+
+This will install the _elm-html_ module. Then add a `Hello.elm` file. In this file write:
 
 ```elm
 import Html
