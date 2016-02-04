@@ -41,7 +41,7 @@ Open `http://0.0.0.0:8000/` on a browser. And click on `Hello.elm`. You should s
 
 ### imports
 
-In Elm you need to import the __modules__  you want to use explicitly. In this case we want to use the __Html__ module from core. This module has many functions to work with html. We will be using `.text`.
+In Elm you need to import the __modules__  you want to use explicitly. In this case we want to use the __Html__ module. This module has many functions to work with html. We will be using `.text`.
 
 ### main
 
