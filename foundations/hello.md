@@ -26,7 +26,7 @@ main =
 
 Go to this folder on the terminal and type:
 
-```
+```bash
 elm reactor
 ```
 
