@@ -8,7 +8,7 @@ Go to http://elm-lang.org/install and download the appropriate installer for you
 
 Let's write our first Elm application. Create a folder for your application. In this folder run the following command in the terminal:
 
-```
+```bash
 elm package install evancz/elm-html
 ```
 
