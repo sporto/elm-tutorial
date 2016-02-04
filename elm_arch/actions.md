@@ -10,7 +10,7 @@ update _ model =
 
 As is, this `update` function can work with only one input signal i.e. `Mouse.clicks` which produces the expected `()` input.
 
-But what we really want is for `update` to be able to handle different actions in our application. For this we will introduce the concept of __actions__ in Elm. We will use __enumerable__ types for this.
+But what we really want is for `update` to be able to handle different actions in our application. For this we will introduce the concept of __actions__ in Elm. We will use __Algebraic data types (ADT)__ for this.
 
 ```elm
 type Action
