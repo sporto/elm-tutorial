@@ -14,6 +14,15 @@ elm package install sporto/hop
 
 Libraries change and major updates could be release. So it is worth mentioning what versions this tutorial is using:
 
-- StartApp : 2.0.2
-- Hop : 2.1
-- Html : 4.0.2
+- StartApp : `2.0.2`
+- Hop : `2.1`
+- Http : `3.0`
+
+#### Additional entries
+
+We will be using modules like `Effects` and `Html` in our code. This are dependencies already of .... In order to have access to them 
+
+## First version
+
+Let's build a basic StartApp application:
+
