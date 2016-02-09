@@ -1,6 +1,6 @@
 # Initial code
 
-Create a folder where to put the application. In that folder install the modules we will need:
+In the application folder install the Elm modules we will need:
 
 ```bash
 elm package install evancz/start-app
