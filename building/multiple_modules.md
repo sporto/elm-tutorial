@@ -27,3 +27,7 @@ In this case what we need to do is move the `Player` model out of `Main`. In a p
 
 To deal with circular dependencies in Elm the easiest thing to do is to break your application in smaller modules. Try creating smaller modules for things like __actions__, __models__, __effects__ and __utilities__, which are modules that are usually imported by many components.
 
+## Breaking our application
+
+Let's break our application in smaller modules:
+
