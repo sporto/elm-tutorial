@@ -22,7 +22,7 @@ Make `index.js` in the root of the project:
 ss
 ```
 
-Add `db.json` at the root:
+Add `db.json` at the root.
 You can grab a copy from here <https://github.com/sporto/elm-tutorial-app/blob/100-fake-api/db.json>
 
 ```
@@ -60,3 +60,6 @@ Test this fake API by going to:
 - <http://localhost:3000/players>
 - <http://localhost:3000/perks>
 - <http://localhost:3000/perksPlayers>
+
+At this stage your app should look like:
+<https://github.com/sporto/elm-tutorial-app/tree/100-fake-api>
