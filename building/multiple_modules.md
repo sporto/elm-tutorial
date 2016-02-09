@@ -31,3 +31,13 @@ To deal with circular dependencies in Elm the easiest thing to do is to break yo
 
 Let's break our application in smaller modules:
 
+`src/Actions.elm`
+
+```
+module Actions (..) where
+
+
+type Action
+  = NoOp
+
+```
