@@ -23,7 +23,7 @@
    * [Planning](building/planning.md)
    * [Backend](building/backend.md)
    * [Initial code](building/initial_code.md)
-   * Multiple modules
+   * [Multiple modules](building/multiple_modules.md)
    * Using the compiler
    * Adding external CSS
    * Fetching data
