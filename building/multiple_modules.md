@@ -36,7 +36,6 @@ Let's break our application in smaller modules:
 ```
 module Actions (..) where
 
-
 type Action
   = NoOp
 
