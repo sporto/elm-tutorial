@@ -23,6 +23,7 @@ ss
 ```
 
 Add `db.json` at the root:
+You can grab a copy from here <https://github.com/sporto/elm-tutorial-app/blob/100-fake-api/db.json>
 
 ```
 {
