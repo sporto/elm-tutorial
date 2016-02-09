@@ -19,4 +19,10 @@ PlayerView --> Main
 
 #### How to break it?
 
+In this case what we need to do is move the `Player` model out of `Main`. In a place where it can be imported by both `Main` and `PlayerView`. We will end up with three modules:
+
+- Main
+- PlayerView
+- Models (contains Player)
+
 
