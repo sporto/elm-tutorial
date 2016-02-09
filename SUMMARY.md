@@ -28,5 +28,7 @@
    * Fetching data
    * Adding a resource
    * Adding routing
+   * Multiple modules
 * Tips and Tricks
    * [Signal map with always](tips-tricks/signal_map_with_always.md)
+
