@@ -23,12 +23,12 @@
    * [Planning](building/planning.md)
    * [Backend](building/backend.md)
    * [Initial code](building/initial_code.md)
+   * Multiple modules
    * Using the compiler
    * Adding external CSS
    * Fetching data
    * Adding a resource
    * Adding routing
-   * Multiple modules
 * Tips and Tricks
    * [Signal map with always](tips-tricks/signal_map_with_always.md)
 
