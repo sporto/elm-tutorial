@@ -123,7 +123,7 @@ clockSignal : Signal Time.Time
 clockSignal =
   Time.every (2 * Time.second)
 
-
+mb : Signal.Mailbox String
 mb =
   Signal.mailbox ""
 
@@ -176,6 +176,7 @@ Just before we will use this `clockSignal` for refreshing the view. Every 2 seco
 #### mb
 
 ```elm
+mb : Signal.Mailbox String
 mb =
   Signal.mailbox ""
 ```
