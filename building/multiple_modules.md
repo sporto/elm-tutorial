@@ -2,7 +2,7 @@
 
 Our application is going to grow fast, so keeping things in one file will become hard to maintain quite fast. 
 
-#### Circular dependencies
+### Circular dependencies
 
 Another issue we are likely to hit at some point will be circular dependencies in Elm. For example we might have:
 
@@ -16,4 +16,7 @@ We now have a circular dependency:
 Main --> PlayerView
 PlayerView --> Main
 ```
+
+#### How to break it?
+
 
