@@ -40,3 +40,15 @@ type Action
   = NoOp
 ```
 
+__src/Models.elm__
+
+```elm
+module Models (..) where
+
+type alias AppModel =
+  {}
+
+initialModel : AppModel
+initialModel =
+  {}
+```
