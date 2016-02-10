@@ -174,3 +174,8 @@ type Action
   = NoOp
   | PlayersAction Players.Actions.Action
 ```
+
+## Main View
+
+Also __src/View.elm__:
+
