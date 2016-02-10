@@ -26,7 +26,6 @@
    * [Multiple modules](building/multiple_modules.md)
    * [Webpack](building/webpack.md)
    * Adding a list of users
-   * Adding external CSS
    * Fetching data
    * Adding a resource
    * Adding routing
