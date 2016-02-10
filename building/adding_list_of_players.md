@@ -17,3 +17,5 @@ type Action
   = NoOp
 ```
 
+Here we will put all the actions related to players.
+
