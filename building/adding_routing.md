@@ -126,6 +126,7 @@ router =
 
 The code should be clear from the comments. In this module we:
 
-- define some action that can happen when a location changes.
-- define the available views, see `AvailableViews`
-- define how to react the actions, see `update`
+- define actions that can happen when a location changes, see `Action`
+- define available views, see `AvailableViews`
+- define how to react to the actions, see `update`
+- define how browser locations map to actions, see `routes`.
