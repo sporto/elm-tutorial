@@ -91,7 +91,7 @@ Finally we want to add some npm scripts so we can run our servers easily. In __p
 - `npm run watch` runs the webpack watcher and puts bundles in `dist` as we change our source.
 - `npm run dev` runs the webpack dev server
 
-## Test
+## Test it
 
 Let's test our setup
 
