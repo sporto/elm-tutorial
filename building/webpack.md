@@ -10,10 +10,10 @@ Webpack is a code bundler. It looks at your dependency tree and only bundles the
 Stop Elm reactor if running and install webpack:
 
 ```bash
-npm i webpack webpack-dev-middleware elm-webpack-loader file-loader style-loader url-loader -S
+npm i webpack webpack-dev-middleware elm-webpack-loader file-loader style-loader css-loader url-loader -S
 ```
 
 This tutorial is using __webpack__ version __1.12__ and __elm-webpack-loader__ version __2.0__.
 
-
+Loaders are extensions that allow webpack to load different formats. E.g. `css-loader` allows webpack to load .css files.
 
