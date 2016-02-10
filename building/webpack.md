@@ -109,6 +109,7 @@ In other terminal window run:
 npm run dev
 ```
 
+If you browse to `http://localhost:3000/` you should see our application, which outputs "Hello".
 
 
 
