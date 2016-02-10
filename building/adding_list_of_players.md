@@ -4,7 +4,7 @@ Let's create some content for our application.
 
 ## Players Model
 
-Create __src/Players/Models.elm__.
+Create __src/Players/Models.elm__
 
 ```elm
 module Players.Models (..) where
@@ -45,7 +45,7 @@ addPerkToPlayer : PerkId -> PlayerId -> Player
 
 ## Players actions
 
-Create a file __src/Players/Actions.elm__
+Create __src/Players/Actions.elm__
 
 ```elm
 module Players.Actions (..) where
@@ -60,4 +60,7 @@ type Action
 
 Here we will put all the actions related to players.
 
-## 
+## Players List
+
+Create __src/Players/List.elm__
+
