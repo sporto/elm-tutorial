@@ -126,6 +126,8 @@ playerRow address model player =
       ]
 ```
 
+<https://github.com/sporto/elm-tutorial-app/blob/140-players/src/Players/List.elm>
+
 This view shows a list of users. 
 
 #### ViewModel
