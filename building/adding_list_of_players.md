@@ -209,3 +209,6 @@ Here `view` calls `page`, this split will make more sense when we add a router.
 
 Also note how we create the necessary `viewModel` to pass to `Players.List.view`.
 
+## Main update
+
+Finally __src/Update.elm__ should also account for the introduction of `PlayersActions`.
