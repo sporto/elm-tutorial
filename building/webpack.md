@@ -82,7 +82,7 @@ Finally we want to add some npm scripts so we can run our servers easily. In __p
     "api": "node api.js",
     "build": "webpack",
     "watch": "webpack --watch",
-    "dev": "webpack-dev-server"
+    "dev": "webpack-dev-server --port 3000"
 },
 ```
 
