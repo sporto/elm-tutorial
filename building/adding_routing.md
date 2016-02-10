@@ -135,4 +135,22 @@ The code should be clear from the comments. In this module we:
 
 The main application model needs to be change to include the routing model. Change __src/Model.elm__ to:
 
+```elm
+module Models (..) where
 
+import Players.Models exposing (Player)
+import Routing
+
+
+type alias AppModel =
+  { players : List Player
+  , routing : Routing.Model
+  }
+
+
+initialModel : AppModel
+initialModel =
+  { players = [ Player 1 "Sam" 1 ]
+  , routing = Routing.initialModel
+  }
+```
