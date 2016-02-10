@@ -135,6 +135,8 @@ Also __elm-package.json__ needs to be changed:
 
 Without this the Elm compiler will try to find the imports in the root of our project and fail.
 
+You can find the code here <https://github.com/sporto/elm-tutorial-app/tree/120-multiple-modules>
+
 ---
 
 There are a lot more `import ...` statements now, this is a necessary drawback of splitting code into many modules.
@@ -152,3 +154,4 @@ My rule for using `expose (..)` is as follows:
 - Application modules that are in the same level are 'mixed in'. E.g. `Main` and `Actions` are in the same level, `Action` are actions that relate directly to `Main`.
 
 - Application modules that are in a different level are not mixed in. For example we might have `Main.elm` and `Players/Models.elm`. If `Main` needs to import `Players.Models` it should not do it using `expose(..)`.
+
