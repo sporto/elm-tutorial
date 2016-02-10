@@ -60,6 +60,10 @@ type Action
 
 Here we will put all the actions related to players.
 
+## Players Update
+
+
+
 ## Players List
 
 Create __src/Players/List.elm__
