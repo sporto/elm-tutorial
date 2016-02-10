@@ -17,3 +17,7 @@ This tutorial is using __webpack__ version __1.12__ and __elm-webpack-loader__ v
 
 Loaders are extensions that allow webpack to load different formats. E.g. `css-loader` allows webpack to load .css files.
 
+## Webpack config
+
+We need to add a __webpack.config.js__ at the root.
+
