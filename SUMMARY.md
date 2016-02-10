@@ -27,7 +27,6 @@
    * [Webpack](building/webpack.md)
    * Adding a list of users
    * Fetching data
-   * Adding a resource
    * Adding routing
 * Tips and Tricks
    * [Signal map with always](tips-tricks/signal_map_with_always.md)
