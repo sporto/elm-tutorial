@@ -130,3 +130,4 @@ The code should be clear from the comments. In this module we:
 - define available views, see `AvailableViews`
 - define how to react to the actions, see `update`
 - define how browser locations map to actions, see `routes`.
+
