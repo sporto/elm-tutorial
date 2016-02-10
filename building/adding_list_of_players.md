@@ -209,6 +209,8 @@ Here `view` calls `page`, this split will make more sense when we add a router.
 
 Also note how we create the necessary `viewModel` to pass to `Players.List.view`.
 
-## Main update
+---
 
-Finally __src/Update.elm__ should also account for the introduction of `PlayersActions`.
+When you run the application you should see a list with only one user.
+
+The application should look like <https://github.com/sporto/elm-tutorial-app/tree/140-players>
