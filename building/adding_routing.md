@@ -11,46 +11,21 @@ module Routing (..) where
 
 import Effects exposing (Effects, Never)
 import Hop
-import Debug
 
 
-{-
-All Actions related to routing
--}
-
-
-type
-  Action
-  -- Actions performed by Hop e.g. changing the location
+type Action
   = HopAction Hop.Action
-    -- Actions that happend after a location change, there are called by Hop
   | ShowPlayers Hop.Payload
   | EditPlayer Hop.Payload
-  | ShowPerks Hop.Payload
   | ShowNotFound Hop.Payload
-    -- Action to ask for route change
   | NavigateTo String
   | NoOp
 
 
-
-{-
-All available views in our application
--}
-
-
 type AvailableViews
   = PlayersView
-  | PerksView
   | EditPlayerView
   | NotFoundView
-
-
-
-{-
-Model related to routing, this holds the router payload given by Hop
-and the current view
--}
 
 
 type alias Model =
@@ -82,9 +57,6 @@ update action model =
     EditPlayer payload ->
       ( { model | view = EditPlayerView, routerPayload = payload }, Effects.none )
 
-    ShowPerks payload ->
-      ( { model | view = PerksView, routerPayload = (Debug.log "" payload) }, Effects.none )
-
     _ ->
       ( model, Effects.none )
 
@@ -101,7 +73,6 @@ routes =
   [ ( "/", ShowPlayers )
   , ( "/players", ShowPlayers )
   , ( "/players/:id/edit", EditPlayer )
-  , ( "/perks", ShowPerks )
   ]
 
 
@@ -117,5 +88,6 @@ router =
     { routes = routes
     , notFoundAction = ShowNotFound
     }
+
 ```
 
