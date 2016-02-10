@@ -165,3 +165,13 @@ Here we have a hardcoded player for now.
 
 Modify __src/Actions.elm__ to include players actions:
 
+```elm
+module Actions (..) where
+
+import Players.Actions
+
+
+type Action
+  = NoOp
+  | PlayersAction Players.Actions.Action
+```
