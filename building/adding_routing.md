@@ -1,4 +1,4 @@
-# Adding routing
+# Adding routing (WIP)
 
 Let's add a router for our application. We will be using [Hop](https://github.com/sporto/hop) version 2.1.
 
@@ -160,4 +160,7 @@ initialModel =
 ## Main View
 
 ## Edit Player View
+
+## Players Update
+
 
