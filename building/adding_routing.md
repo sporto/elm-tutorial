@@ -124,3 +124,7 @@ router =
 
 ```
 
+The code should be clear from the comments. In this module we:
+
+- Define some action that can happen when a location changes.
+- Define the available views
