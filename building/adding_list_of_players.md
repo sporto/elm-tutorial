@@ -29,7 +29,19 @@ new =
   }
 ```
 
-Here we define how a player record looks like, it has an id, a name and a level.
+Here we define how a player record looks like, it has an id, a name and a level. 
+
+Also note the definition for `PlayerId`, it is just an alias to `Int`, doing this is useful for clarity later on when we have function that take many ids. For example:
+
+```elm
+addPerkToPlayer : Int -> Int -> Player
+```
+
+is much clearer written as:
+
+```elm
+addPerkToPlayer : PerkId -> PlayerId -> Player
+```
 
 ## Players actions
 
