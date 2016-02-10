@@ -133,4 +133,5 @@ Also __elm-package.json__ needs to be changed:
 ...
 ```
 
+Without this the Elm compiler will try to find the imports in the root of our project and fail.
 
