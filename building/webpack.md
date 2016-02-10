@@ -19,5 +19,5 @@ Loaders are extensions that allow webpack to load different formats. E.g. `css-l
 
 ## Webpack config
 
-We need to add a __webpack.config.js__ at the root.
+We need to add a __webpack.config.js__ at the root. Copy it from here <https://github.com/sporto/elm-tutorial-app/blob/130-webpack/webpack.config.js>
 
