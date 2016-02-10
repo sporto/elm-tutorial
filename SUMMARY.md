@@ -24,7 +24,7 @@
    * [Backend](building/backend.md)
    * [Initial code](building/initial_code.md)
    * [Multiple modules](building/multiple_modules.md)
-   * Webpack
+   * [Webpack](building/webpack.md)
    * Using the compiler
    * Adding external CSS
    * Fetching data
