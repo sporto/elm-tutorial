@@ -64,6 +64,8 @@ Here we will put all the actions related to players.
 
 Create __src/Players/List.elm__
 
+<https://github.com/sporto/elm-tutorial-app/blob/140-players/src/Players/List.elm>
+
 ```elm
 module Players.List (..) where
 
@@ -125,8 +127,6 @@ playerRow address model player =
           []
       ]
 ```
-
-<https://github.com/sporto/elm-tutorial-app/blob/140-players/src/Players/List.elm>
 
 This view shows a list of users. 
 
