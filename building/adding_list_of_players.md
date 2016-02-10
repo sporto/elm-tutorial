@@ -62,7 +62,27 @@ Here we will put all the actions related to players.
 
 ## Players Update
 
+As we have a Players.Model and Players.Action we should add a Players.Update as well, in this way we follow the Elm architecture.
 
+Add __src/Players/Update.elm__
+
+```elm
+module Players.Update (..) where
+
+import Effects exposing (Effects)
+import Players.Actions exposing (..)
+import Players.Models exposing (..)
+
+
+type alias UpdateModel =
+  { players : List Player
+  }
+
+
+update : Action -> UpdateModel -> ( List Player, Effects Action )
+update action model =
+  ( model.players, Effects.none )
+```
 
 ## Players List
 
