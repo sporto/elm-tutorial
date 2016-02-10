@@ -137,3 +137,8 @@ This view expects a `ViewModel` as model. Why not simply pass a list of users? T
 Also note:
 
 - `bonuses` is hardcoded to `999` for now, we will need to get this from other models.
+
+## Main Models
+
+Modify __src/Models.elm__ to include players:
+
