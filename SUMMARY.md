@@ -25,12 +25,12 @@
    * [Initial code](building/initial_code.md)
    * [Multiple modules](building/multiple_modules.md)
    * [Webpack](building/webpack.md)
+   * Adding a list of users
    * Using the compiler
    * Adding external CSS
    * Fetching data
    * Adding a resource
    * Adding routing
-   * Adding a list of users
 * Tips and Tricks
    * [Signal map with always](tips-tricks/signal_map_with_always.md)
 
