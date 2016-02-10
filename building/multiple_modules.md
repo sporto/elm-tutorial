@@ -135,7 +135,11 @@ Also __elm-package.json__ needs to be changed:
 
 Without this the Elm compiler will try to find the imports in the root of our project and fail.
 
-## Things to note
+---
 
-- There are a lot more `import ...` statements now, this is a necessary drawback of splitting code into many modules.
+There are a lot more `import ...` statements now, this is a necessary drawback of splitting code into many modules.
+
+## Exposing functions
+
+Many import are using `expose (..)`, this means that we bring all the functions from that module into the current namespace.
 
