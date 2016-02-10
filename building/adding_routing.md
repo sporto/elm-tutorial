@@ -131,3 +131,8 @@ The code should be clear from the comments. In this module we:
 - define how to react to the actions, see `update`
 - define how browser locations map to actions, see `routes`.
 
+## Main Model
+
+The main application model needs to be change to include the routing model. Change __src/Model.elm__ to:
+
+
