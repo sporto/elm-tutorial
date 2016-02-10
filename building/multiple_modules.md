@@ -143,3 +143,12 @@ There are a lot more `import ...` statements now, this is a necessary drawback o
 
 Many import are using `expose (..)`, this means that we bring all the functions from that module into the current namespace.
 
+My rule for using `expose (..)` is as follows:
+
+- Common modules that are unlikely to cause collision expose everything. e.g Html exposes `div`, `a`, etc.
+
+- Common modules that have methods named are not 'mixed in'. For example `Signal`, `Task` and `Effect` they all implement `map`. So I prefer to be explicit and use `Effect.map` later on.
+
+- Application modules that are in the same level are 'mixed in'. E.g. `Main` and `Actions` are in the same level, `Action` are actions that relate directly to `Main`.
+
+- Application modules that are in a different level are not mixed in. For example we might have `Main.elm` and `Players/Models.elm`. If `Main` needs to import `Players.Models` it should not do it using `expose(..)`.
