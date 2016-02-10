@@ -84,6 +84,8 @@ update action model =
   ( model.players, Effects.none )
 ```
 
+
+
 ## Players List
 
 Create __src/Players/List.elm__
