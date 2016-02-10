@@ -201,6 +201,12 @@ type Action
   | PlayersAction Players.Actions.Action
 ```
 
+## Main Update
+
+Change __src/Update.elm__ to:
+
+
+
 ## Main View
 
 Also __src/View.elm__:
