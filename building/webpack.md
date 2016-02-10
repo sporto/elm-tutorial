@@ -26,7 +26,7 @@ We need to add a __webpack.config.js__ at the root. Copy it from here <https://g
 - This config creates a Webpack dev server, see the key `devServer`. We will be using this server for development instead of Elm reactor.
 - Entry point for our application will be `./src/index.js`, see the `entry` key.
 
-## Index.html
+## index.html
 
 As we are not using Elm reactor anymore we will need to create our own HTML for containing the application. Create __src/index.html__:
 
@@ -43,6 +43,10 @@ As we are not using Elm reactor anymore we will need to create our own HTML for 
   </body>
 </html>
 ```
+
+## index.js
+
+
 
 
 
