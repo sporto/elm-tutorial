@@ -28,7 +28,21 @@ We need to add a __webpack.config.js__ at the root. Copy it from here <https://g
 
 ## Index.html
 
-As we are not using Elm reactor anymore we will need to create our own HTML for containing the application.
+As we are not using Elm reactor anymore we will need to create our own HTML for containing the application. Create __src/index.html__:
+
+```html
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Elm SPA example</title>
+  </head>
+  <body>
+    <div id="main">Loading...</div>
+    <script src="/app.js"></script>
+  </body>
+</html>
+```
 
 
 
