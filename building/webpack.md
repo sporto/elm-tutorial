@@ -23,7 +23,7 @@ We also want to use a couple of extra libraries:
 - FontAwesome for icons
 
 ```bash
-
+npm i basscss font-awesome -S
 ```
 
 ## Webpack config
