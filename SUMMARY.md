@@ -25,7 +25,7 @@
    * [Initial code](building/initial_code.md)
    * [Multiple modules](building/multiple_modules.md)
    * [Webpack](building/webpack.md)
-   * [Adding a list of players](building/adding_a_list_of_users.md)
+   * [Adding a list of players](building/adding_a_list_of_players.md)
    * Fetching data
    * Adding routing
 * Tips and Tricks
