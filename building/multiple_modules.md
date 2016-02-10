@@ -66,3 +66,19 @@ update : Action -> AppModel -> ( AppModel, Effects Action )
 update action model =
   ( model, Effects.none )
 ```
+
+__src/View.elm__
+
+```elm
+module View (..) where
+
+import Html exposing (..)
+import Actions exposing (..)
+import Models exposing (..)
+
+view : Signal.Address Action -> AppModel -> Html
+view address model =
+  div
+    []
+    [ text "Hello" ]
+```
