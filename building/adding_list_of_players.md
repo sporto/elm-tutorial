@@ -84,7 +84,7 @@ update action model =
   ( model.players, Effects.none )
 ```
 
-
+This update doesn't do anything at the moment. Also note how it follows the pattern of defining its own model `UpdateModel`, this will allow to pass more parameters later.
 
 ## Players List
 
