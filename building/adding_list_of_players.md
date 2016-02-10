@@ -204,3 +204,8 @@ page address model =
   in
     Players.List.view (Signal.forwardTo address PlayersAction) viewModel
 ```
+
+Here `view` calls `page`, this split will make more sense when we add a router.
+
+Also note how we create the necessary `viewModel` to pass to `Players.List.view`.
+
