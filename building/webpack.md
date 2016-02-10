@@ -17,6 +17,15 @@ This tutorial is using __webpack__ version __1.12__ and __elm-webpack-loader__ v
 
 Loaders are extensions that allow webpack to load different formats. E.g. `css-loader` allows webpack to load .css files.
 
+We also want to use a couple of extra libraries:
+
+- Basscss for CSS
+- FontAwesome for icons
+
+```bash
+
+```
+
 ## Webpack config
 
 We need to add a __webpack.config.js__ at the root. Copy it from here <https://github.com/sporto/elm-tutorial-app/blob/130-webpack/webpack.config.js>
