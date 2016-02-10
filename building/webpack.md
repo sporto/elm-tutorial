@@ -111,5 +111,7 @@ npm run dev
 
 If you browse to `http://localhost:3000/` you should see our application, which outputs "Hello".
 
+Your application should look like <https://github.com/sporto/elm-tutorial-app/tree/130-webpack>
+
 
 
