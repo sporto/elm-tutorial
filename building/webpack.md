@@ -95,6 +95,19 @@ Finally we want to add some npm scripts so we can run our servers easily. In __p
 
 Let's test our setup
 
+In one terminal window run:
+
+```
+npm run api`
+```
+
+You should be able to access `http://localhost:4000/players` and see a list of players.
+
+In other terminal window run:
+
+```
+npm run dev
+```
 
 
 
