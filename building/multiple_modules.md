@@ -122,3 +122,13 @@ port runner : Signal (Task.Task Never ())
 port runner =
   app.tasks
 ```
+
+Also __elm-package.json__ needs to be changed:
+
+```
+...
+"source-directories": [
+    "src"
+],
+```
+
