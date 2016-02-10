@@ -29,6 +29,8 @@ new =
   }
 ```
 
+Here we define how a player record looks like, it has an id, a name and a level.
+
 ## Players actions
 
 Create a file __src/Players/Actions.elm__
