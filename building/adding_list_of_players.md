@@ -160,3 +160,8 @@ initialModel =
 ```
 
 Here we have a hardcoded player for now.
+
+## Main Actions
+
+Modify __src/Actions.elm__ to include players actions:
+
