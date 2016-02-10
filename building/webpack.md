@@ -21,3 +21,7 @@ Loaders are extensions that allow webpack to load different formats. E.g. `css-l
 
 We need to add a __webpack.config.js__ at the root. Copy it from here <https://github.com/sporto/elm-tutorial-app/blob/130-webpack/webpack.config.js>
 
+#### Things to note:
+
+- This config creates a Webpack dev server, see the key `devServer`. We will be using this server for development instead of Elm reactor.
+
