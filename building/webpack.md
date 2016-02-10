@@ -57,7 +57,21 @@ As we are not using Elm reactor anymore we will need to create our own HTML for 
 
 This is the entry point that Webpack will look for when creating a bundle. Add __src/index.js__:
 
+```js
+'use strict';
 
+require('basscss/css/basscss.css');
+require('font-awesome/css/font-awesome.css');
+
+// Require index.html so it gets copied to dist
+require('./index.html');
+
+var Elm = require('./Main.elm');
+var mountNode = document.getElementById('main');
+
+// The third value on embed are the initial values for incomming ports into Elm
+var app = Elm.embed(Elm.Main, mountNode);
+```
 
 
 
