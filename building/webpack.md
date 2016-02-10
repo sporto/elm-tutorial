@@ -13,5 +13,7 @@ Stop Elm reactor if running and install webpack:
 npm i webpack webpack-dev-middleware elm-webpack-loader file-loader style-loader url-loader -S
 ```
 
-This tutorial is using webpack version __1.12__.
+This tutorial is using __webpack__ version __1.12__ and __elm-webpack-loader__ version __2.0__.
+
+
 
