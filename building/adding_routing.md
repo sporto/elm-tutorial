@@ -159,4 +159,5 @@ initialModel =
 
 ## Main View
 
-## Edit view
+## Edit Player View
+
