@@ -19,7 +19,7 @@ Loaders are extensions that allow webpack to load different formats. E.g. `css-l
 
 We also want to use a couple of extra libraries:
 
-- Basscss for CSS
+- [Basscss](http://www.basscss.com/) for CSS
 - FontAwesome for icons
 
 ```bash
