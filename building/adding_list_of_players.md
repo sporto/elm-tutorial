@@ -158,3 +158,5 @@ initialModel =
   { players = [ Player 1 "Sam" 1 ]
   }
 ```
+
+Here we have a hardcoded player for now.
