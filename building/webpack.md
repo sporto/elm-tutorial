@@ -73,6 +73,11 @@ var mountNode = document.getElementById('main');
 var app = Elm.embed(Elm.Main, mountNode);
 ```
 
+## package.json
+
+Finally we want to add some npm scripts so we can run our servers easily. In __package.json__ add:
+
+
 
 
 
