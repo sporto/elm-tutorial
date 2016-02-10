@@ -46,6 +46,8 @@ As we are not using Elm reactor anymore we will need to create our own HTML for 
 
 ## index.js
 
+This is the entry point that Webpack will look for when creating a bundle. Add __src/index.js__:
+
 
 
 
