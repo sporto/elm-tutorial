@@ -125,3 +125,8 @@ playerRow address model player =
           []
       ]
 ```
+
+This view shows a list of users. Note:
+
+- This view expects a `ViewModel` as model. 
+- `bonuses` is hardcoded to `999` for now, we will need to get this from other models.
