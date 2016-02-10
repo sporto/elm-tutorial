@@ -126,7 +126,12 @@ playerRow address model player =
       ]
 ```
 
-This view shows a list of users. Also note:
+This view shows a list of users. 
 
-- This view expects a `ViewModel` as model. 
+#### ViewModel
+
+This view expects a `ViewModel` as model. Why not simply pass a list of users? That would be fine for many cases, but often in your views you might need additional data. By creating a view model we allow space to evolve without having to refactor too much later.
+
+Also note:
+
 - `bonuses` is hardcoded to `999` for now, we will need to get this from other models.
