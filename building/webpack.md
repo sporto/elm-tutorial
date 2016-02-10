@@ -78,12 +78,12 @@ var app = Elm.embed(Elm.Main, mountNode);
 Finally we want to add some npm scripts so we can run our servers easily. In __package.json__ replace `scripts` with:
 
 ```json
-  "scripts": {
+"scripts": {
     "api": "node api.js",
     "build": "webpack",
     "watch": "webpack --watch",
     "dev": "webpack-dev-server"
-  },
+},
 ```
 
 
