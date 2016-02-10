@@ -125,7 +125,7 @@ port runner =
 
 Also __elm-package.json__ needs to be changed:
 
-```
+```json
 ...
 "source-directories": [
     "src"
