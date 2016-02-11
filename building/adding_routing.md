@@ -294,8 +294,6 @@ notFoundView =
     -  Then we filter the `model.players` collection to find that id.
     -  Then we add a case expression that either shows the edit view or a 'not found view' if the player is not found.
 
----
-
 ## Edit Player View
 
 We need a new view to show when hitting `/players/3/edit`. Create __src/Players/Edit/elm__:
