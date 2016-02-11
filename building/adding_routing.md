@@ -155,7 +155,26 @@ initialModel =
   }
 ```
 
+## Main Actions
+
+In __src/Actions.elm__ we need to add a new action so we can route actions coming from the router:
+
+```elm
+module Actions (..) where
+
+import Players.Actions
+import Routing
+
+
+type Action
+  = NoOp
+  | RoutingAction Routing.Action
+  | PlayersAction Players.Actions.Action
+```
+
 ## Main Update
+
+__src/Update.elm__ also needs to account for the newly added 
 
 ## Main View
 
