@@ -8,6 +8,12 @@ __The example below is complex, if you find it difficult to understand don't wor
 
 ## Sample application
 
+First we need to install `elm-effects`:
+
+```bash
+elm package install evancz/elm-effects
+```
+
 Following is a sample application using Effects. Don't worry too much if this application doesn't make full sense, later on we will use __StartApp__ again, encapsulates a lot of complexity here.
 
 ```elm
