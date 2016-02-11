@@ -448,6 +448,10 @@ a [ class "btn button-narrow", href "#/players" ] [ i [ class "fa fa-chevron-lef
 
 Here we have a link that will trigger a browser location change thus showing the players' list again.
 
+## Players Actions
+
+When we 
+
 ## Players List
 
 The players' list needs to show buttons to go to the player's edit view. In __src/Players/List.elm__.
