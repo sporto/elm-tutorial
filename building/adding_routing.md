@@ -483,6 +483,8 @@ editBtn address player =
     [ i [ class "fa fa-pencil mr1" ] [], text "Edit" ]
 ```
 
+Here we trigger `EditPlayer` with the id of the player that we want to edit.
+
 And change `playersRow` to include this button:
 
 ```elm
@@ -512,7 +514,37 @@ playerRow address model player =
 
 ## Players Update
 
-__src/Players/Update.elm__
+Players Update need to respond to `EditPlayer`. Change __src/Players/Update.elm__ to:
+
+module Players.Update (..) where
+
+import Hop
+import Effects exposing (Effects)
+import Players.Actions exposing (..)
+import Players.Models exposing (..)
+
+
+type alias UpdateModel =
+  { players : List Player
+  }
+
+
+update : Action -> UpdateModel -> ( List Player, Effects Action )
+update action model =
+  case action of
+    EditPlayer id ->
+      let
+        path =
+          "/players/" ++ (toString id) ++ "/edit"
+      in
+        ( model.players, Effects.map HopAction (Hop.navigateTo path) )
+
+    HopAction payload ->
+      ( model.players, Effects.none )
+
+    NoOp ->
+      ( model.players, Effects.none )
+
 
 
 
