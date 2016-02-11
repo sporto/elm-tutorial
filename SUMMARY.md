@@ -1,7 +1,6 @@
 # Summary
 
 * [Introduction](README.md)
-   * Routing
 * [Foundations](foundations/cover.md)
    * [Hello World](foundations/hello.md)
    * [Functions](foundations/functions.md)
