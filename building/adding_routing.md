@@ -442,6 +442,14 @@ This view show a form with player's:
 
 As we did before `bonuses` is just hard coded to `999` for now.
 
+There is one important line in the `nav` function above:
+
+```elm
+a [ class "btn button-narrow", href "#/players" ] [ i [ class "fa fa-chevron-left" ] [], text " Players" ]
+```
+
+Here we have a link that will trigger a browser location change thus showing the player's list again.
+
 ## Players Update
 
 
