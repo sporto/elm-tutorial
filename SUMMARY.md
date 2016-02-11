@@ -29,7 +29,7 @@
    * [Routing](building/routing_1.md)
    * [Routing 2](building/routing_2.md)
    * Fetching data
-   * Routing 3
+   * [Routing 3](building/routing_3.md)
 * Tips and Tricks
    * [Signal map with always](tips-tricks/signal_map_with_always.md)
 
