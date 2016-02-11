@@ -465,7 +465,7 @@ type Action
   | HopAction Hop.Action
 ```
 
-
+We will trigger `EditPlayer` whenever we want to edit a player.
 
 ## Players List
 
