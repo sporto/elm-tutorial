@@ -448,11 +448,40 @@ There is one important line in the `nav` function above:
 a [ class "btn button-narrow", href "#/players" ] [ i [ class "fa fa-chevron-left" ] [], text " Players" ]
 ```
 
-Here we have a link that will trigger a browser location change thus showing the player's list again.
+Here we have a link that will trigger a browser location change thus showing the players' list again.
+
+## Players List
+
+The players' list needs to show buttons to go to the player's edit view. In __src/Players/List.elm__.
+
+Change `playersRow` to include this button:
+
+```elm
+playerRow : Signal.Address Action -> ViewModel -> Player -> Html.Html
+playerRow address model player =
+  let
+    bonuses =
+      999
+
+    strength =
+      bonuses + player.level
+  in
+    tr
+      []
+      [ td [] [ text (toString player.id) ]
+      , td [] [ text player.name ]
+      , td [] [ text (toString player.level) ]
+      , td [] [ text (toString bonuses) ]
+      , td [] [ text (toString strength) ]
+      , td
+          []
+          [ editBtn address player ]
+      ]
+```
 
 ## Players Update
 
-
+__src/Players/Update.elm__
 
 
 
