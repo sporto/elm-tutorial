@@ -454,7 +454,19 @@ Here we have a link that will trigger a browser location change thus showing the
 
 The players' list needs to show buttons to go to the player's edit view. In __src/Players/List.elm__.
 
-Change `playersRow` to include this button:
+Add a new function for this button at the end:
+
+```elm
+editBtn : Signal.Address Action -> Player -> Html.Html
+editBtn address player =
+  button
+    [ class "btn regular"
+    , onClick address (EditPlayer player.id)
+    ]
+    [ i [ class "fa fa-pencil mr1" ] [], text "Edit" ]
+```
+
+And change `playersRow` to include this button:
 
 ```elm
 playerRow : Signal.Address Action -> ViewModel -> Player -> Html.Html
@@ -478,6 +490,8 @@ playerRow address model player =
           [ editBtn address player ]
       ]
 ```
+
+
 
 ## Players Update
 
