@@ -28,6 +28,7 @@
    * [Adding a list of players](building/adding_list_of_players.md)
    * [Adding routing](building/adding_routing.md)
    * Fetching data
+   * Routing 2
 * Tips and Tricks
    * [Signal map with always](tips-tricks/signal_map_with_always.md)
 
