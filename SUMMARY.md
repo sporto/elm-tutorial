@@ -30,7 +30,7 @@
    * [Routing 2](building/routing_2.md)
    * [Routing 3](building/routing_3.md)
    * Fetching data
+* Routing
 * Tips and Tricks
    * [Signal map with always](tips-tricks/signal_map_with_always.md)
-* Routing
 
