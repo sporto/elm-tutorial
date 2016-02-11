@@ -452,6 +452,7 @@ Here we have a link that will trigger a browser location change thus showing the
 
 We need a new Players action to trigger a location change to the player edit view. Change __src/Players/Actions.elm__ to:
 
+```elm
 module Players.Actions (..) where
 
 import Hop
@@ -462,6 +463,8 @@ type Action
   = NoOp
   | EditPlayer PlayerId
   | HopAction Hop.Action
+```
+
 
 
 ## Players List
