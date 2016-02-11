@@ -469,9 +469,9 @@ We will trigger `EditPlayer` whenever we want to edit a player.
 
 ## Players List
 
-The players' list needs to show a button for each player in order to go to that player's edit view. In __src/Players/List.elm__.
+The players' list needs to show a button for each player in order to go to that player's edit view. 
 
-Add a new function for this button at the end:
+In __src/Players/List.elm__. Add a new function for this button at the end:
 
 ```elm
 editBtn : Signal.Address Action -> Player -> Html.Html
