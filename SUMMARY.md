@@ -26,7 +26,7 @@
    * [Multiple modules](building/multiple_modules.md)
    * [Webpack](building/webpack.md)
    * [Adding a list of players](building/adding_list_of_players.md)
-   * [Routing](building/routing-1.md)
+   * [Routing](building/routing_1.md)
    * Fetching data
    * [Routing 2](building/routing_2.md)
 * Tips and Tricks
