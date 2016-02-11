@@ -1,7 +1,5 @@
 # Routing 2
 
-
-
 ## Main Model
 
 The main application model needs to be change to include the routing model. Change __src/Model.elm__ to:
