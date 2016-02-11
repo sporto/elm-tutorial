@@ -212,6 +212,8 @@ update action model =
       ( model, Effects.none )
 ```
 
+Here we added `RoutingAction`. We follow the same pattern as before and send those actions to the `Routing` module and then replace `.routing` in our main model.
+
 ## Main View
 
 ## Edit Player View
