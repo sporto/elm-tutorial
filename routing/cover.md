@@ -1,3 +1,3 @@
 # Routing
 
-This chapter covers adding a router to our application
+This chapter covers adding a router to our application.
