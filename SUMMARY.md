@@ -36,7 +36,7 @@
    * [Navigation from List to Edit](routing/navigation_from_list_to_edit.md)
    * [Navigation from Edit to List](routing/navigation_from_edit_to_list.md)
 * [Fetching resources](fetching_resources/cover.md)
-   * Fetching players
+   * [Fetching players](fetching_resources/fetching_players.md)
 * Tips and Tricks
    * [Signal map with always](tips-tricks/signal_map_with_always.md)
 
