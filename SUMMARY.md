@@ -33,7 +33,7 @@
    * [Main view](routing/main_view.md)
    * [Try it](routing/try_it.md)
    * [Navigation from List to Edit](routing/navigation_from_list_to_edit.md)
-   * Navigation from Edit to List
+   * [Navigation from Edit to List](routing/navigation_from_edit_to_list.md)
    * [Player Edit: Actions, Model and Update](routing/player_actions.md)
 * Router
 * [Routing](building/routing_1.md)
