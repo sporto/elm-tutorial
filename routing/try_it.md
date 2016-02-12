@@ -2,3 +2,8 @@
 
 We have added the necessary wiring to have a working router.
 
+Try it:
+
+- Going to `http://localhost:3000/#/players` should show you a list of player
+- Going to `http://localhost:3000/#/players/1/edit` should show you the player edit view
+- - Going to `http://localhost:3000/#/xyz` should show you "Not found"
