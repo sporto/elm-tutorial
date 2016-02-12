@@ -61,11 +61,10 @@ playerRow address model player =
 
 ## Players Update
 
-Finally __src/Players/Update.elm__ needs to respond to this action:
+Finally __src/Players/Update.elm__ needs to respond to this action. Add a new branch to the case statement:
 
 ```elm
-    HopAction payload ->
-      ( model.players, Effects.none )
+    ...
 
     EditPlayer id ->
       let
@@ -75,5 +74,5 @@ Finally __src/Players/Update.elm__ needs to respond to this action:
         ( model.players, Effects.map HopAction (Hop.navigateTo path) )
 
     NoOp ->
-      ( model.players, Effects.none )
+      ...
 ```
