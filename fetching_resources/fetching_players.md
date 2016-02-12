@@ -42,10 +42,12 @@ __src/Players/Update.elm__ should account for this new action. Add a new branch 
           ( players, Effects.none )
 
         Err error ->
-          ( [], Effects.none )
+          ( model.players, Effects.none )
 ```
 
-We pattern match a successful response with `Ok players`. The successful result payload has the fetched players, so we return that payload to update the collection.
+We pattern match a successful response with `Ok players`. The successful result payload has the fetched players, so we return that payload to update the players collection.
+
+`Err error` matches the case of an error. We will deal with that in the next chapter, for now we just return an empty collection
 
 ## Players Effects
 
