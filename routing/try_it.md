@@ -8,6 +8,11 @@ Try it:
 - Going to `http://localhost:3000/#/players/1/edit` should show you the player edit view
 - Going to `http://localhost:3000/#/xyz` should show you "Not found"
 
+In summary:
+
+- When the browser location changes Hop matches our route definitions and sends a message to the StartApp mailbox
+- 
+
 At this point your application code should look like <https://github.com/sporto/elm-tutorial-app/tree/150-routing>
 
 
