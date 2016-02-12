@@ -45,7 +45,7 @@ __src/Players/Update.elm__ should account for this new action. Add a new branch 
           ( [], Effects.none )
 ```
 
-We pattern match a successful response with `Ok players`. The successful result payload has the fetched players, so we just return that result to update the collection.
+We pattern match a successful response with `Ok players`. The successful result payload has the fetched players, so we return that payload to update the collection.
 
 ## Players Effects
 
