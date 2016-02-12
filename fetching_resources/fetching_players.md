@@ -29,8 +29,16 @@ type Action
 
 `FetchAllDone` will be called when we get the response from the server. This action will have a `Result` payload that will either contain an `Http.Error` or a list of players.
 
+## Players Update
+
+__src/Players/Update.elm__ should account for this new action. Add a new branch to the case expression:
+
+```elm
+
+```
+
 ## Players Effects
 
-## Players Update
+
 
 ## Main
