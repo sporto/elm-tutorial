@@ -10,8 +10,10 @@ Try it:
 
 In summary:
 
-- When the browser location changes Hop matches our route definitions and sends a message to the StartApp mailbox
-- 
+- When the browser location changes Hop matches our route definitions and sends a message e.g. ShowPlayerEdit to the StartApp mailbox
+- StartApp triggers the necessary updates which reach the Routing module
+- The Routing module set the view to PlayerEditView in the model
+- StartApp then re-renders the application
 
 At this point your application code should look like <https://github.com/sporto/elm-tutorial-app/tree/150-routing>
 
