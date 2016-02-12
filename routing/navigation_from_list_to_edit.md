@@ -1,5 +1,7 @@
 # Navigation from List to Edit
 
+## EditPlayer action
+
 
 
 ## Players List
