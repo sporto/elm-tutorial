@@ -31,3 +31,6 @@ app =
     , view = view
     }
 ```
+
+Note `inputs = [ routerSignal ]`.
+
