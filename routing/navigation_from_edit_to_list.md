@@ -3,6 +3,8 @@
 Finally, let's add a back to list button to the edit view.
 
 
+## Actions
+
 Add an `ListPlayers` action to __src/Players/Actions.elm__:
 
 ```elm
