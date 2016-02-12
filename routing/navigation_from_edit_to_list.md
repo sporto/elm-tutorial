@@ -11,6 +11,10 @@ Add one more action `ListPlayers` to __src/Players/Actions.elm__
     | ListPlayers
 ```
 
+## Players Edit
+
+/src/Players/Edit.elm
+
 
 There is one important line in the `nav` function above:
 
