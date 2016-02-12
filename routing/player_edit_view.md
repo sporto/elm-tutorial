@@ -131,7 +131,6 @@ formPerks address model =
         [ class "col col-7" ]
         []
     ]
-
 ```
 
 This view show a form with player's:
