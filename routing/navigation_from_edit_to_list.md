@@ -69,3 +69,4 @@ update action model =
 
 Refresh the browser and go to the edit view. You should see the list button at the top. Clicking this button will change the location to `/players`.
 
+At this moment your application code should look like <https://github.com/sporto/elm-tutorial-app/tree/160-navigation>.
