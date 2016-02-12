@@ -34,6 +34,7 @@ type Action
 __src/Players/Update.elm__ should account for this new action. Add a new branch to the case expression:
 
 ```elm
+  case action of
     ...
     FetchAllDone result ->
       case result of
