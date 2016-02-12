@@ -29,7 +29,7 @@
    * [Routing 2](building/routing_2.md)
    * [Routing 3](building/routing_3.md)
    * Fetching data
-* Routing
+* [Routing](routing.md)
    * [Router](routing/router.md)
 * Router
 * [Routing](building/routing_1.md)
