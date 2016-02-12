@@ -34,7 +34,14 @@ type Action
 __src/Players/Update.elm__ should account for this new action. Add a new branch to the case expression:
 
 ```elm
+    ...
+    FetchAllDone result ->
+      case result of
+        Ok players ->
+          ( players, Effects.none )
 
+        Err error ->
+          ( [], Effects.none )
 ```
 
 ## Players Effects
