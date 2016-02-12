@@ -45,6 +45,8 @@ __src/Players/Update.elm__ should account for this new action. Add a new branch 
           ( [], Effects.none )
 ```
 
+We pattern match a successful response with `Ok players`. The successful result payload has the fetched players
+
 ## Players Effects
 
 
