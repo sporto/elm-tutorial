@@ -61,7 +61,7 @@ playerRow address model player =
 
 ## Players Update
 
-Finally __src/Players/Update.elm__ needs to respond to this action. Add a new branch to the case expresion:
+Finally __src/Players/Update.elm__ needs to respond to this action. Add a new branch to the case expression:
 
 ```elm
     ...
@@ -77,7 +77,7 @@ Finally __src/Players/Update.elm__ needs to respond to this action. Add a new br
       ...
 ```
 
-
+`Hop.navigateTo path` returns an effect. When this effect is run by Elm the location of the browser will change. Read more about how this works [here](https://github.com/sporto/hop).
 
 ## Test it
 
