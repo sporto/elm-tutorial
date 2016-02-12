@@ -51,6 +51,8 @@ We pattern match a successful response with `Ok players`. The successful result 
 
 ## Players Effects
 
+Now we need to create the tasks and effects to fetch the players from the server. Create __src/Players/Effects.elm__:
+
 
 
 ## Main
