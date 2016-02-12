@@ -95,7 +95,58 @@ memberDecoder =
     ("level" := Decode.int)
 ```
 
+`memberDecoder` creates a Json decoder that returns a `Player` record. 
+
+TODO explain how it works
+- object3 applies a function, the function is Player
+
+`collectionDecoder` applies `memberDecoder` to each record on the Json array. 
+
+And we have `fetchAll`:
+
+```elm
+fetchAll =
+  Http.get collectionDecoder fetchAllUrl
+    |> Task.toResult
+    |> Task.map Actions.FetchAllDone
+    |> Effects.task
+```
+
+`Http.get` takes a decoder and a url string. It:
+- creates a task that makes an ajax request
+- when done parses the result body through the decoder
+- and returns another task with result `Task.Task Http.Error value`
+
+Remember that none of this actually executes until it is send to a port.
+
+- In `Task.toResult` we convert this `Task.Task Http.Error value` to a task that resolves with a `Result`. At this point the result of the task would be `Result Http.Error value`
+- Then we map this task to `FetchAllDone`. So at this point the result of the task would be `FetchAllDone (Result Http.Error value)`.
+
+
+
 ## Main
+
+Finally we need to run the `fetchAll` when starting the application.
+
+Update __src/Main.elm__:
+
+```elm
+...
+import Players.Effects
+
+init =
+  let
+    fxs =
+      [ Effects.map PlayersAction Players.Effects.fetchAll
+      ]
+
+    fx =
+      Effects.batch fxs
+  in
+    ( Models.initialModel, fx )
+```
+
+`init` now returns a list of effects to run when the application starts. For now is a list of one but we will adding more to this list soon. `Effects.batch` batches a list of effects into one `Effects`.
 
 ---
 
