@@ -120,9 +120,8 @@ fetchAll =
 Remember that none of this actually executes until it is send to a port.
 
 - In `Task.toResult` we convert this `Task.Task Http.Error value` to a task that resolves with a `Result`. At this point the result of the task would be `Result Http.Error value`
-- Then we map this task to `FetchAllDone`. So at this point the result of the task would be `FetchAllDone (Result Http.Error value)`.
+- Then we map this task to `FetchAllDone`. So now the result of the task would be `FetchAllDone (Result Http.Error value)`.
 - And lastly we convert the task to an effect.
-
 
 ## Main
 
