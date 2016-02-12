@@ -33,6 +33,7 @@
    * [Router](routing/router.md)
    * [Main: Actions, Model and Update](routing/main_actions.md)
    * [Player Edit: Actions, Model and Update](routing/player_actions.md)
+   * Player edit view
 * Router
 * [Routing](building/routing_1.md)
 * Tips and Tricks
