@@ -14,9 +14,9 @@ initialModel =
   }
 ```
 
-
-
 ## Players Actions
+
+
 
 ## Players Effects
 
