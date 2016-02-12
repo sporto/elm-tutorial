@@ -34,6 +34,7 @@
    * [Main: Actions, Model and Update](routing/main_actions.md)
    * [Player edit view](routing/player_edit_view.md)
    * [Player Edit: Actions, Model and Update](routing/player_actions.md)
+   * Main view
 * Router
 * [Routing](building/routing_1.md)
 * Tips and Tricks
