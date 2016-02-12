@@ -15,21 +15,36 @@ Add an `ListPlayers` action to __src/Players/Actions.elm__:
 
 ## Players Edit
 
-/src/Players/Edit.elm
+In __/src/Players/Edit.elm__:
 
-
-There is one important line in the `nav` function above:
+Add one more import:
 
 ```elm
-a [ class "btn button-narrow", href "#/players" ] [ i [ class "fa fa-chevron-left" ] [], text " Players" ]
+import Html.Events exposing (onClick)
 ```
 
-Here we have a link that will trigger a browser location change thus showing the players' list again.
+Add a new function at the end for the list button:
 
+```elm
+listBtn : Signal.Address Action -> ViewModel -> Html.Html
+listBtn address model =
+  button
+    [ class "btn regular"
+    , onClick address ListPlayers
+    ]
+    [ i [ class "fa fa-chevron-left mr1" ] [], text "List" ]
+```
 
+Here we send the `ListPlayers` when the button is clicked.
 
+And add this button to the list, change the `nav` function to:
 
-
-
-
+```elm
+nav : Signal.Address Action -> ViewModel -> Html.Html
+nav address model =
+  div
+    [ class "clearfix mb2 white bg-black p1" ]
+    []
+    [ listBtn address model ]
+```
 
