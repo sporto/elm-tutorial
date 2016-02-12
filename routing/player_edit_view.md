@@ -1,6 +1,8 @@
 # Player edit view
 
-We need a new view to show when hitting `/players/3/edit`. Create __src/Players/Edit/elm__:
+We need a new view to show when hitting `/players/3/edit`. 
+
+Create __src/Players/Edit/elm__:
 
 ```elm
 module Players.Edit (..) where
