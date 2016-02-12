@@ -53,6 +53,52 @@ We pattern match a successful response with `Ok players`. The successful result 
 
 Now we need to create the tasks and effects to fetch the players from the server. Create __src/Players/Effects.elm__:
 
+```elm
+module Players.Effects (..) where
 
+import Effects exposing (Effects)
+import Http
+import Json.Decode as Decode exposing ((:=))
+import Task
+import Players.Models exposing (PlayerId, Player)
+import Players.Actions as Actions
+
+
+fetchAll : Effects Actions.Action
+fetchAll =
+  Http.get collectionDecoder fetchAllUrl
+    |> Task.toResult
+    |> Task.map Actions.FetchAllDone
+    |> Effects.task
+
+
+fetchAllUrl : String
+fetchAllUrl =
+  "http://localhost:4000/players"
+
+
+
+-- DECODERS
+
+
+collectionDecoder : Decode.Decoder (List Player)
+collectionDecoder =
+  Decode.list memberDecoder
+
+
+memberDecoder : Decode.Decoder Player
+memberDecoder =
+  Decode.object3
+    Player
+    ("id" := Decode.int)
+    ("name" := Decode.string)
+    ("level" := Decode.int)
+```
 
 ## Main
+
+---
+
+Try it! Refresh the browser, our application should now fetch the list of players from the server.
+
+Your application code should look at this stage like <https://github.com/sporto/elm-tutorial-app/tree/170-fetch-players>.
