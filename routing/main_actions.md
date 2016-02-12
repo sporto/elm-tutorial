@@ -1,4 +1,4 @@
-# Main Actions, Model and Update
+# Main: Actions, Model and Update
 
 ## Main Model
 
