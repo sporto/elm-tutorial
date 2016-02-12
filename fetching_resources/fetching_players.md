@@ -9,7 +9,6 @@ Remove the hardcoded list of players in __src/Model.elm__
 ```elm
 initialModel : AppModel
 initialModel =
-  { players = [ Player 1 "Sam" 1 ]
   { players = []
   , routing = Routing.initialModel
   }
