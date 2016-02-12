@@ -31,7 +31,7 @@
    * [Main: Actions, Model and Update](routing/main_actions.md)
    * [Player edit view](routing/player_edit_view.md)
    * [Main view](routing/main_view.md)
-   * Try it
+   * [Try it](routing/try_it.md)
    * [Player Edit: Actions, Model and Update](routing/player_actions.md)
 * Router
 * [Routing](building/routing_1.md)
