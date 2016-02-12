@@ -14,10 +14,12 @@ initialModel =
   }
 ```
 
-## Main
+
 
 ## Players Actions
 
 ## Players Effects
 
 ## Players Update
+
+## Main
