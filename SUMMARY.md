@@ -27,7 +27,6 @@
    * [Webpack](building/webpack.md)
    * [Adding a list of players](building/adding_list_of_players.md)
    * [Routing 2](building/routing_2.md)
-   * [Routing 3](building/routing_3.md)
    * Fetching data
 * [Routing](routing/cover.md)
    * [Router](routing/router.md)
