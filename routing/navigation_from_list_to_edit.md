@@ -32,7 +32,7 @@ editBtn address player =
     [ i [ class "fa fa-pencil mr1" ] [], text "Edit" ]
 ```
 
-Here we trigger `EditPlayer` with the id of the player that we want to edit.
+Here we trigger `EditPlayer` with the id of the player that we want to edit. To do this we send the `EditPlayer` with the use id to the address.
 
 And change `playersRow` to include this button:
 
@@ -61,7 +61,7 @@ playerRow address model player =
 
 ## Players Update
 
-Finally __src/Players/Update.elm__ needs to respond to this action. Add a new branch to the case statement:
+Finally __src/Players/Update.elm__ needs to respond to this action. Add a new branch to the case expresion:
 
 ```elm
     ...
@@ -76,6 +76,8 @@ Finally __src/Players/Update.elm__ needs to respond to this action. Add a new br
     NoOp ->
       ...
 ```
+
+
 
 ## Test it
 
