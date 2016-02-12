@@ -64,3 +64,7 @@ update action model =
         ( model.players, Effects.map HopAction (Hop.navigateTo path) )
     ...
 ```
+
+## Try it
+
+Refresh the browser and go to the edit view. You should see the list button at the top. Clicking this button will change the location to `/players`.
