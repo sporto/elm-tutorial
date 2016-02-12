@@ -34,6 +34,7 @@
    * [Try it](routing/try_it.md)
    * [Player Edit: Actions, Model and Update](routing/player_actions.md)
    * Navigation from List to Edit
+   * Navigation from Edit to List
 * Router
 * [Routing](building/routing_1.md)
 * Tips and Tricks
