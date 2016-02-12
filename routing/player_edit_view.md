@@ -143,6 +143,14 @@ This view show a form with player's:
 
 As we did before `bonuses` is just hard coded to `999` for now.
 
+
+
+
+
+
+
+-- MOVE
+
 There is one important line in the `nav` function above:
 
 ```elm
