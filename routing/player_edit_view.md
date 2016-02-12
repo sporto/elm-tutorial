@@ -1,7 +1,5 @@
 # Player edit view
 
-## Edit Player View
-
 We need a new view to show when hitting `/players/3/edit`. Create __src/Players/Edit/elm__:
 
 ```elm
@@ -31,8 +29,7 @@ nav : Signal.Address Action -> ViewModel -> Html.Html
 nav address model =
   div
     [ class "clearfix mb2 white bg-black p1" ]
-    [ a [ class "btn button-narrow", href "#/players" ] [ i [ class "fa fa-chevron-left" ] [], text " Players" ]
-    ]
+    []
 
 
 form : Signal.Address Action -> ViewModel -> Html.Html
@@ -134,6 +131,7 @@ formPerks address model =
         [ class "col col-7" ]
         []
     ]
+
 ```
 
 This view show a form with player's:
