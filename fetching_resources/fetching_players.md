@@ -61,14 +61,14 @@ import Http
 import Json.Decode as Decode exposing ((:=))
 import Task
 import Players.Models exposing (PlayerId, Player)
-import Players.Actions as Actions
+import Players.Actions exposing (..)
 
 
-fetchAll : Effects Actions.Action
+fetchAll : Effects Action
 fetchAll =
   Http.get collectionDecoder fetchAllUrl
     |> Task.toResult
-    |> Task.map Actions.FetchAllDone
+    |> Task.map FetchAllDone
     |> Effects.task
 
 
@@ -108,7 +108,7 @@ And we have `fetchAll`:
 fetchAll =
   Http.get collectionDecoder fetchAllUrl
     |> Task.toResult
-    |> Task.map Actions.FetchAllDone
+    |> Task.map FetchAllDone
     |> Effects.task
 ```
 
@@ -121,7 +121,7 @@ Remember that none of this actually executes until it is send to a port.
 
 - In `Task.toResult` we convert this `Task.Task Http.Error value` to a task that resolves with a `Result`. At this point the result of the task would be `Result Http.Error value`
 - Then we map this task to `FetchAllDone`. So at this point the result of the task would be `FetchAllDone (Result Http.Error value)`.
-
+- And lastly we convert the task to an effect.
 
 
 ## Main
