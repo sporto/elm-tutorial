@@ -50,3 +50,15 @@ nav address model =
 
 ## Players Update
 
+Players Update needs to respond to the `ListPlayers` action. In __src/Players/Update.elm__ at more more branch to the case expression:
+
+```elm
+...
+    ListPlayers ->
+      let
+        path =
+          "/players/"
+      in
+        ( model.players, Effects.map HopAction (Hop.navigateTo path) )
+...
+```
