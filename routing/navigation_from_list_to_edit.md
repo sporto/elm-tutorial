@@ -20,7 +20,7 @@ We will trigger this action when we intent to edit a player.
 
 ## Players List
 
-The players' list needs to show a button for each player that triggger this action. 
+The players' list needs to show a button for each player that triggers this action. 
 
 In __src/Players/List.elm__. Add a new function for this button at the end:
 
