@@ -1,5 +1,11 @@
 # Player Edit: Actions, Model and Update
 
+
+
+
+
+
+MOVE TO NAVIGATION
 ## Players Actions
 
 We need a new Players action to trigger a location change to the player edit view. Change __src/Players/Actions.elm__ to:
