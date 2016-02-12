@@ -11,5 +11,5 @@ Try it:
 At this point your application code should look like <https://github.com/sporto/elm-tutorial-app/tree/150-routing>
 
 
-Next step is to add some navigation 
+Next step is to add some navigation .
 
