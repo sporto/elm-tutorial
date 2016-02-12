@@ -1,6 +1,8 @@
 # Navigation from Edit to List
 
-Finally let's add a back to list button to the edit view.
+Finally, let's add a back to list button to the edit view.
+
+
 
 
 
