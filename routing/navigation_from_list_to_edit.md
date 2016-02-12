@@ -76,3 +76,7 @@ Finally __src/Players/Update.elm__ needs to respond to this action. Add a new br
     NoOp ->
       ...
 ```
+
+## Test it
+
+Go to the list `http://localhost:3000/#/players`. You should now see an Edit button, upon clicking it the location should change to the edit view.
