@@ -31,7 +31,7 @@
    * Fetching data
 * [Routing](routing/cover.md)
    * [Router](routing/router.md)
-   * [Main Actions, Model and Update](routing/main_actions.md)
+   * [Main: Actions, Model and Update](routing/main_actions.md)
    * Player Edit: Actions, Model and Update
 * Router
 * [Routing](building/routing_1.md)
