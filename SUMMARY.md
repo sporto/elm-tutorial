@@ -31,6 +31,7 @@
    * Fetching data
 * [Routing](routing/cover.md)
    * [Router](routing/router.md)
+   * Main Actions, Model and Update
 * Router
 * [Routing](building/routing_1.md)
 * Tips and Tricks
