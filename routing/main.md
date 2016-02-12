@@ -34,3 +34,12 @@ app =
 
 Note `inputs = [ routerSignal ]`.
 
+Finally in order to get location changes on the browser we need to tell Elm to run tasks coming from the router. Add a port for this:
+
+```elm
+port routeRunTask : Task.Task () ()
+port routeRunTask =
+  router.run
+```
+
+__src/Main.elm__ should look like <https://github.com/sporto/elm-tutorial-app/blob/150-routing/src/Main.elm>
