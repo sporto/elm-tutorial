@@ -42,7 +42,7 @@ NotFoundView is necessary when no route matches the location
 
 type AvailableViews
   = PlayersView
-  | EditPlayerView
+  | PlayerEditView
   | NotFoundView
 
 
@@ -78,16 +78,16 @@ update action model =
       ( model, Effects.map HopAction (Hop.navigateTo path) )
 
     {-
-    ShowPlayers and EditPlayer
+    ShowPlayers and ShowPlayerEdit
     Actions called after a location change happens
     these are triggered by Hop
     -}
     ShowPlayers payload ->
       ( { model | view = PlayersView, routerPayload = payload }, Effects.none )
 
-    EditPlayer payload ->
-      ( { model | view = EditPlayerView, routerPayload = payload }, Effects.none )
-      
+    ShowPlayerEdit payload ->
+      ( { model | view = PlayerEditView, routerPayload = payload }, Effects.none )
+
     ShowNotFound payload ->
       ( { model | view = NotFoundView, routerPayload = payload }, Effects.none )
 
@@ -106,7 +106,7 @@ routes : List ( String, Hop.Payload -> Action )
 routes =
   [ ( "/", ShowPlayers )
   , ( "/players", ShowPlayers )
-  , ( "/players/:id/edit", EditPlayer )
+  , ( "/players/:id/edit", ShowPlayerEdit )
   ]
 
 
