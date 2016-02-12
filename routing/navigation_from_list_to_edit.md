@@ -2,11 +2,23 @@
 
 ## EditPlayer action
 
+Add a new action `EditPlayer` in __src/Players/Actions.elm__
+
+```elm
+...
+
+type Action
+  = NoOp
+  | HopAction Hop.Action
+  | EditPlayer PlayerId
+```
+
+We will trigger this action when we intent to edit a player.
 
 
 ## Players List
 
-The players' list needs to show a button for each player in order to go to that player's edit view. 
+The players' list needs to show a button for each player that triggger this action. 
 
 In __src/Players/List.elm__. Add a new function for this button at the end:
 
@@ -45,4 +57,23 @@ playerRow address model player =
           []
           [ editBtn address player ]
       ]
+```
+
+## Players Update
+
+Finally __src/Players/Update.elm__ needs to respond to this action:
+
+```elm
+    HopAction payload ->
+      ( model.players, Effects.none )
+
+    EditPlayer id ->
+      let
+        path =
+          "/players/" ++ (toString id) ++ "/edit"
+      in
+        ( model.players, Effects.map HopAction (Hop.navigateTo path) )
+
+    NoOp ->
+      ( model.players, Effects.none )
 ```
