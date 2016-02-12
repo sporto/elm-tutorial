@@ -74,9 +74,11 @@ notFoundView =
 
 ```
 
-- Now we have a function `page` which has a case expression to show the correct view dependending on what is in `model.routing.view`.
-- When hitting the edit player view (e.g. `/players/3/edit`) we may or may not have a player with that id. 
-    -  We get the `id` from `model.routing.routerPayload.params`.
-    -  Then we filter the `model.players` collection to find that id.
-    -  Then we add a case expression that either shows the edit view or a 'not found view' if the player is not found.
+Now we have a function `page` which has a case expression to show the correct view dependending on what is in `model.routing.view`.
+
+When hitting the edit player view (e.g. `/players/3/edit`) we may or may not have a player with that id. 
+    
+-  We get the `id` from `model.routing.routerPayload.params`.
+-  Then we filter the `model.players` collection to find that id.
+-  Then we add a case expression that either shows the edit view or a 'not found view' if the player is not found.
 
