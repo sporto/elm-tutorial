@@ -156,6 +156,14 @@ Here we have a link that will trigger a browser location change thus showing the
 
 
 
+
+
+
+
+
+
+ -- MOVE TO NAV
+ 
 ## Players List
 
 The players' list needs to show a button for each player in order to go to that player's edit view. 
