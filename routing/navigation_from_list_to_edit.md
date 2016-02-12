@@ -1,5 +1,7 @@
 # Navigation from List to Edit
 
+Next let add an "Edit" button to the players' list.
+
 ## EditPlayer action
 
 Add a new action `EditPlayer` in __src/Players/Actions.elm__
