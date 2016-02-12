@@ -16,7 +16,16 @@ initialModel =
 
 ## Players Actions
 
+Add a new import and action to __src/Players/Actions.elm__
 
+```elm
+...
+import Http
+
+type Action
+    ...
+    | FetchAllDone (Result Http.Error (List Player))
+```
 
 ## Players Effects
 
