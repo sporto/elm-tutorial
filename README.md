@@ -27,6 +27,8 @@ found at <https://github.com/sporto/elm-tutorial-app>.
 
 Please open issues and send PRs at <https://github.com/sporto/elm-tutorial>.
 
-<a href="https://twitter.com/share" class="twitter-share-button" data-via="sebasporto" data-size="large">Tweet</a>
+---
 
-<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+[Share on Twitter](https://twitter.com/intent/tweet?&text=Elm%20Tutorial&url=http%3A%2F%2Fwww.elm-tutorial.org&via=sebasporto) | [Follow @sebasporto](https://twitter.com/intent/user?screen_name=sebasporto)
+
+© Sebastian Porto 2016
