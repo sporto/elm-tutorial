@@ -28,7 +28,7 @@
 * [Resources](resources/cover.md)
    * [Players](resources/players.md)
    * Players List
-   * Main
+   * [Main](resources/main.md)
 * [Routing](routing/cover.md)
    * [Router](routing/router.md)
    * [Main: Actions, Model and Update](routing/main_actions.md)
