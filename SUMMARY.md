@@ -26,6 +26,7 @@
    * [Multiple modules](building/multiple_modules.md)
    * [Webpack](building/webpack.md)
    * [A list of players](building/list_of_players.md)
+* Resources
 * [Routing](routing/cover.md)
    * [Router](routing/router.md)
    * [Main: Actions, Model and Update](routing/main_actions.md)
@@ -39,5 +40,4 @@
    * [Fetching players](fetching_resources/fetching_players.md)
 * Tips and Tricks
    * [Signal map with always](tips-tricks/signal_map_with_always.md)
-* Resources
 
