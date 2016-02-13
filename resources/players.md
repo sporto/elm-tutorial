@@ -1,6 +1,41 @@
-# A list of players
+# The Players resource
 
-Let's create some content for our application.
+Let's create some content for our application. We will create a list of users. 
+
+Our application have three resources:
+- Players
+- Perks
+- PerksPlayers (association between perks and players)
+
+We will organise our application code by the name of this resources. So there will be folders `Players`, `Perks` and `PerksPlayers`.
+
+The `Players` folder will have modules for the components of the Elm architeture, just like what we did with the main level:
+
+- Players/Actions.elm
+- Players/Models.elm
+- Players/Update.elm
+
+However, we will have different views for players: A list and a edit view. So these will be different modules:
+
+- Players/List.elm
+- Players/Edit.elm
+
+## Players actions
+
+Create __src/Players/Actions.elm__
+
+```elm
+module Players.Actions (..) where
+
+import Http
+import Players.Models exposing (PlayerId, Player)
+
+
+type Action
+  = NoOp
+```
+
+Here we will put all the actions related to players.
 
 ## Players Model
 
@@ -43,22 +78,7 @@ is much clearer written as:
 addPerkToPlayer : PerkId -> PlayerId -> Player
 ```
 
-## Players actions
 
-Create __src/Players/Actions.elm__
-
-```elm
-module Players.Actions (..) where
-
-import Http
-import Players.Models exposing (PlayerId, Player)
-
-
-type Action
-  = NoOp
-```
-
-Here we will put all the actions related to players.
 
 ## Players Update
 
@@ -86,5 +106,18 @@ update action model =
 
 This update doesn't do anything at the moment. Also note how it follows the pattern of defining its own model `UpdateModel`, this will allow to pass more attributes later without having to change the function signature.
 
+---
 
+This is the basic pattern that all resources in our application will follow.
 
+```
+Players
+    Actions
+    Models
+    Update
+Perks
+    Actions
+    Models
+    Update
+...
+```
