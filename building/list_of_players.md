@@ -34,13 +34,13 @@ Here we define how a player record looks like, it has an id, a name and a level.
 Also note the definition for `PlayerId`, it is just an alias to `Int`, doing this is useful for clarity later on when we have function that take many ids. For example:
 
 ```elm
-addPerkToPlayer : Int> Int> Player
+addPerkToPlayer : Int -> Int -> Player
 ```
 
 is much clearer written as:
 
 ```elm
-addPerkToPlayer : PerkId> PlayerId> Player
+addPerkToPlayer : PerkId -> PlayerId -> Player
 ```
 
 ## Players actions
@@ -79,7 +79,7 @@ type alias UpdateModel =
   }
 
 
-update : Action> UpdateModel> ( List Player, Effects Action )
+update : Action -> UpdateModel -> ( List Player, Effects Action )
 update action model =
   ( model.players, Effects.none )
 ```
@@ -106,7 +106,7 @@ type alias ViewModel =
   }
 
 
-view : Signal.Address Action> ViewModel> Html.Html
+view : Signal.Address Action -> ViewModel -> Html.Html
 view address model =
   div
     []
@@ -115,14 +115,14 @@ view address model =
     ]
 
 
-nav : Signal.Address Action> ViewModel> Html.Html
+nav : Signal.Address Action -> ViewModel -> Html.Html
 nav address model =
   div
     [ class "clearfix mb2 white bg-black" ]
     [ div [ class "left p2" ] [ text "Players" ] ]
 
 
-list : Signal.Address Action> ViewModel> Html.Html
+list : Signal.Address Action -> ViewModel -> Html.Html
 list address model =
   div
     []
@@ -145,7 +145,7 @@ list address model =
     ]
 
 
-playerRow : Signal.Address Action> ViewModel> Player> Html.Html
+playerRow : Signal.Address Action -> ViewModel -> Player -> Html.Html
 playerRow address model player =
   let
     bonuses =
@@ -172,7 +172,7 @@ This view shows a list of users.
 
 #### ViewModel
 
-This view expects a `ViewModel` as model. Why not simply pass a list of users? That would be fine for many cases, but often in your views you might need additional data. By creating a view model we allow space to evolve without having to refactor too much later.
+This view expects a `ViewModel` as model. Why not just pass a list of users? That would be fine for many cases, but often in your views you might need additional data. By creating a view model we allow space to evolve without having to refactor too much later.
 
 Also note:
 
@@ -228,7 +228,7 @@ import Actions exposing (..)
 import Players.Update
 
 
-update : Action> AppModel> ( AppModel, Effects Action )
+update : Action -> AppModel -> ( AppModel, Effects Action )
 update action model =
   case action of
     PlayersAction subAction>
@@ -268,7 +268,7 @@ view address model =
     [ page address model ]
 
 
-page : Signal.Address Action> AppModel> Html.Html
+page : Signal.Address Action -> AppModel -> Html.Html
 page address model =
   let
     viewModel =
