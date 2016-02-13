@@ -7,11 +7,11 @@ This is a guide for learning to develop single page applications (SPAs) in Elm. 
 - Some Elm foundations
 - Understanding signals in Elm
 - Understanding the Elm architecture
-- Breaking an application in sub components
+- Breaking an application in sub components and resources
 - Integrating CSS
 - Fetching and parsing JSON
 - Routing
-- Testing
+- CRUD operations
 
 Read it online [here](http://www.elm-tutorial.org/).
 
