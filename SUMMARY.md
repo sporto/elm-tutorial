@@ -27,6 +27,7 @@
    * [Webpack](building/webpack.md)
 * [Resources](resources/cover.md)
    * [Players](resources/players.md)
+   * Players List
 * [Routing](routing/cover.md)
    * [Router](routing/router.md)
    * [Main: Actions, Model and Update](routing/main_actions.md)
