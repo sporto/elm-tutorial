@@ -44,4 +44,5 @@
    * Fetching perks
 * Tips and Tricks
    * [Signal map with always](tips-tricks/signal_map_with_always.md)
+* Add and Delete
 
