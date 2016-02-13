@@ -43,6 +43,7 @@
    * [Fetching players](fetching_resources/fetching_players.md)
    * Showing Errors
    * Fetching perks
+   * Calculating bonuses
 * Add and Delete
    * Add a player
    * Delete a player
