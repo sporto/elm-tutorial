@@ -105,4 +105,6 @@ Try it by running elm reactor:
 elm reactor
 ```
 
-And browsing to `http://localhost:8000/src/Main.elm`. Your application code should look like <https://github.com/sporto/elm-tutorial-app/tree/0110-initial-app>.
+And browsing to `http://localhost:8000/src/Main.elm`. 
+
+Your application code should look like <https://github.com/sporto/elm-tutorial-app/tree/0110-initial-app>.
