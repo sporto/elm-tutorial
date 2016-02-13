@@ -26,6 +26,7 @@
    * [Multiple modules](building/multiple_modules.md)
    * [Webpack](building/webpack.md)
 * Resources
+   * Players
 * [A list of players](building/list_of_players.md)
 * [Routing](routing/cover.md)
    * [Router](routing/router.md)
