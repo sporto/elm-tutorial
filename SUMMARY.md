@@ -25,7 +25,7 @@
    * [Initial code](building/initial_code.md)
    * [Multiple modules](building/multiple_modules.md)
    * [Webpack](building/webpack.md)
-   * [A list of players](building/list_of_players.md)
+* [A list of players](building/list_of_players.md)
 * Resources
 * [Routing](routing/cover.md)
    * [Router](routing/router.md)
