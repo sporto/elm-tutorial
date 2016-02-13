@@ -135,7 +135,7 @@ Also __elm-package.json__ needs to be changed:
 
 Without this the Elm compiler will try to find the imports in the root of our project and fail.
 
-You can find the code here <https://github.com/sporto/elm-tutorial-app/tree/120-multiple-modules>
+You can find the code here <https://github.com/sporto/elm-tutorial-app/tree/0120-multiple-modules>
 
 ---
 
