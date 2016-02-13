@@ -29,7 +29,7 @@
    * [Players](resources/players.md)
    * [Players List](resources/players_list.md)
    * [Main](resources/main.md)
-   * Main View
+   * [Main View](resources/main_view.md)
 * [Routing](routing/cover.md)
    * [Router](routing/router.md)
    * [Main: Actions, Model and Update](routing/main_actions.md)
