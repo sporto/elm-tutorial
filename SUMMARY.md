@@ -41,6 +41,7 @@
    * [Navigation from Edit to List](routing/navigation_from_edit_to_list.md)
 * [Fetching resources](fetching_resources/cover.md)
    * [Fetching players](fetching_resources/fetching_players.md)
+   * Fetching perks
 * Tips and Tricks
    * [Signal map with always](tips-tricks/signal_map_with_always.md)
 
