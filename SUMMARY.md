@@ -19,7 +19,7 @@
    * [Tasks](effects/tasks.md)
    * [Effects](effects/effects.md)
    * [StartApp with effects](effects/startapp_with_effects.md)
-* [Building an app](building/cover.md)
+* [Starting an app](building/cover.md)
    * [Planning](building/planning.md)
    * [Backend](building/backend.md)
    * [Initial code](building/initial_code.md)
