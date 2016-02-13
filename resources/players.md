@@ -90,7 +90,7 @@ This update doesn't do anything at the moment. Also note how it follows the patt
 
 Create __src/Players/List.elm__
 
-<https://github.com/sporto/elm-tutorial-app/blob/0140-players/src/Players/List.elm>
+<https://github.com/sporto/elm-tutorial-app/blob/0200-players/src/Players/List.elm>
 
 ```elm
 module Players.List (..) where
@@ -286,4 +286,4 @@ Also note how we create the necessary `viewModel` to pass to `Players.List.view`
 
 When you run the application you should see a list with one user.
 
-The application should look like <https://github.com/sporto/elm-tutorial-app/tree/0140-players>
+The application should look like <https://github.com/sporto/elm-tutorial-app/tree/0200-players>
