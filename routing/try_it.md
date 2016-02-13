@@ -15,7 +15,7 @@ In summary:
 - The Routing module sets the view to `PlayerEditView` in the model
 - StartApp then re-renders the application using the new model
 
-At this point your application code should look like <https://github.com/sporto/elm-tutorial-app/tree/150-routing>
+At this point your application code should look like <https://github.com/sporto/elm-tutorial-app/tree/0410-routing>
 
 
 Next step is to add some navigation.
