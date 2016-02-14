@@ -20,3 +20,5 @@ The problem is in __src/Players/Update.elm__:
 ```
 
 This just throws the error away. We need some way to show the error.
+
+As errors are a common thing that could happen across modules we want a shared outlet where to show messages in our main view.
