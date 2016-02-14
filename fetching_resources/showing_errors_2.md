@@ -115,4 +115,6 @@ update action model =
     ...
 ```
 
-The last value could be a root effect. In this way we could call the `ShowError` action that we set in main directly from here.
+The last value could be a root effect. In this way we could call the `ShowError` action that we set in main directly from here. 
+
+However, this adds external knowledge to Players.Update. This module would need to import the Main action and would need to know that `ShowError` exists. This adds tighter coupling, which is not great.
