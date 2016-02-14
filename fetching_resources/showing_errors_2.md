@@ -43,7 +43,24 @@ Now we expect a `showErrorAddress` address that can receive a message.
 
 Change the `FetchAllDone` branch so we send a message to this address:
 
+```elm
+    FetchAllDone result ->
+      case result of
+        Ok players ->
+          ( players, Effects.none )
 
+        Err error ->
+          let
+            message =
+              toString error
+
+            fx =
+              Signal.send model.showErrorAddress message
+                |> Effects.task
+                |> Effects.map TaskDone
+          in
+            ( model.players, fx )
+```
 
 
 ---
