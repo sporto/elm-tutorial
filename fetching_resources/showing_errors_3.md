@@ -65,6 +65,5 @@ import Mailboxes exposing (..)
           Players.Update.update subAction updateModel
       in
         ( { model | players = updatedPlayers }, Effects.map PlayersAction fx )
-
 ```
 
