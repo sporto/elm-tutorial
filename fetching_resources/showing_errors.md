@@ -93,4 +93,6 @@ And update __src/Update.elm__ to include this action. Add a new branch to the ca
       ( { model | errorMessage = message }, Effects.none )
 ```
 
+We have half of the wiring for showing an error message. Now we need some way to trigger this `ShowError` action from Players/Update.
+
 
