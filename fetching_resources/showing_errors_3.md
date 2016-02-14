@@ -20,4 +20,4 @@ actionsMailbox =
   Signal.mailbox NoOp
 ```
 
-Here we have a mailbox where we can send any action we want to run.
+Here we have a mailbox where we can send any root action we want to run.
