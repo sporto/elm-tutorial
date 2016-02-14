@@ -52,16 +52,18 @@ Change the `FetchAllDone` branch so we send a message to this address:
 
         Err error ->
           let
-            message =
+            errorMessage =
               toString error
 
             fx =
-              Signal.send model.showErrorAddress message
+              Signal.send model.showErrorAddress errorMessage
                 |> Effects.task
                 |> Effects.map TaskDone
           in
             ( model.players, fx )
 ```
+
+`Signal.send` creates a task that when run send a message to an address. So here we are asking to send the `errorMessage` to the `showErrorAddress` address.
 
 
 ---
