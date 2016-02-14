@@ -67,3 +67,7 @@ import Mailboxes exposing (..)
         ( { model | players = updatedPlayers }, Effects.map PlayersAction fx )
 ```
 
+We added `showErrorAddress = Signal.forwardTo actionsMailbox.address ShowError` to `updateModel`.
+
+
+
