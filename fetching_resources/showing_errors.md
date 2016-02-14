@@ -78,4 +78,18 @@ And add the flash messages to the `view` function in the same file:
 
 ## Action to show the error
 
+In __src/Actions.elm__ add a new action:
+
+```elm
+  ...
+  | ShowError String
+```
+
+And update __src/Update.elm__ to include this action. Add a new branch to the case expresion:
+
+```elm
+    ShowError message ->
+      ( { model | errorMessage = message }, Effects.none )
+```
+
 
