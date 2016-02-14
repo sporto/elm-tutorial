@@ -44,6 +44,7 @@ Now we expect a `showErrorAddress` address that can receive a message.
 Change the `FetchAllDone` branch so we send a message to this address:
 
 ```elm
+    ...
     FetchAllDone result ->
       case result of
         Ok players ->
