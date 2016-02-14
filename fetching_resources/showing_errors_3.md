@@ -16,7 +16,9 @@ module Mailboxes (..) where
 import Actions exposing (..)
 
 
-eventsMailbox : Signal.Mailbox Action
-eventsMailbox =
+actionsMailbox : Signal.Mailbox Action
+actionsMailbox =
   Signal.mailbox NoOp
 ```
+
+Here we have a mailbox where we can send any action we want to run.
