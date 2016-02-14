@@ -52,7 +52,19 @@ Note the new input `actionsMailbox.signal` to StartApp. Now message going to `ac
 ...
 import Mailboxes exposing (..)
 
+
 ...
+    PlayersAction subAction ->
+      let
+        updateModel =
+          { players = model.players
+          , showErrorAddress = Signal.forwardTo actionsMailbox.address ShowError
+          }
+
+        ( updatedPlayers, fx ) =
+          Players.Update.update subAction updateModel
+      in
+        ( { model | players = updatedPlayers }, Effects.map PlayersAction fx )
 
 ```
 
