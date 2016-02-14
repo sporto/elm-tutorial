@@ -74,7 +74,13 @@ notFoundView =
 
 ```
 
-Now we have a function `page` which has a case expression to show the correct view dependending on what is in `model.routing.view`.
+Now we have a function `page` which has a case expression to show the correct view depending on what is in `model.routing.view`.
+
+```elm
+_ =
+      Debug.log "model" model
+```
+---
 
 When hitting the edit player view (e.g. `/players/3/edit`) we may or may not have a player with that id.
     
