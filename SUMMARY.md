@@ -41,7 +41,7 @@
    * [Navigation from Edit to List](routing/navigation_from_edit_to_list.md)
 * [Fetching resources](fetching_resources/cover.md)
    * [Fetching players](fetching_resources/fetching_players.md)
-   * Showing Errors
+   * [Showing Errors](fetching_resources/showing_errors.md)
    * Fetching perks
    * Calculating bonuses
 * Add and Delete
