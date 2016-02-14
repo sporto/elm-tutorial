@@ -99,7 +99,7 @@ Try what we have so far by adding a hard coded error in __src/Models.elm__, add 
 
 ```
 ...
-, errorMessage = "Error"
+  , errorMessage = "Error"
 ```
 
 Refresh and you should see this error message. Put it back to "".
