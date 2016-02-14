@@ -78,5 +78,5 @@ We pass an address that will tag all messages with the `ShowError` action. This 
 
 ---
 
-Try it! When you refresh your browser you should see an error message in the page.
+Try it! When you refresh your browser you should see an error message in the page (as long as the API server is not running).
 
