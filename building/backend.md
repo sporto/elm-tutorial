@@ -34,7 +34,7 @@ console.log('Listening at 4000')
 server.listen(4000)
 ```
 
-Add `db.json` at the root.
+Add __db.json__ at the root.
 You can grab a copy from here <https://github.com/sporto/elm-tutorial-app/blob/0100-fake-api/db.json>
 
 ```
@@ -61,7 +61,7 @@ You can grab a copy from here <https://github.com/sporto/elm-tutorial-app/blob/0
 
 ```
 
-Start the server by doing:
+Start the server by running:
 
 ```bash
 node api.js
@@ -69,9 +69,9 @@ node api.js
 
 Test this fake API by going to:
 
-- <http://localhost:3000/players>
-- <http://localhost:3000/perks>
-- <http://localhost:3000/perksPlayers>
+- <http://localhost:4000/players>
+- <http://localhost:4000/perks>
+- <http://localhost:4000/perksPlayers>
 
 At this stage your app should look like:
 <https://github.com/sporto/elm-tutorial-app/tree/0100-fake-api>
