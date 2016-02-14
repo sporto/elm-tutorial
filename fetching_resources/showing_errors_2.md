@@ -18,7 +18,7 @@ update action model =
           ( model.players, Effects.none )
 ```
 
-In here we can't set the 
+In here we can't set the `errorMessage` which is in the mail model as we are in deeper level. We also can't return a root effect as StartApp expects a PlayersAction.
 
 This is the approach we will take:
 
