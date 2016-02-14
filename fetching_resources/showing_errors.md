@@ -71,8 +71,8 @@ And add the flash messages to the `view` function in the same file:
 
 ```elm
     ...
-      [ page address model
-      , flash address model
+      [ flash address model
+      , page address model
       ]
 ```
 
