@@ -65,7 +65,17 @@ Change the `FetchAllDone` branch so we send a message to this address:
 
 `Signal.send` creates a task that when run send a message to an address. So here we are asking to send the `errorMessage` to the `showErrorAddress` address. 
 
-We need to return an effect, not a task, so we convert this task to an effect by using `|> Effect.task`. And the effect needs to be of type Players Action. 
+We need to return an effect, not a task, so we convert this task to an effect by using `|> Effect.task`. And the effect needs to be of type Players Action. So we map it to a new action `TaskDone`.
+
+### Players Actions
+
+We need this new `TaskDone` action in __src/Players/Actions.elm:
+
+Add:
+
+```elm
+  | TaskDone ()
+```
 
 
 ---
