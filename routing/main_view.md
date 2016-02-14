@@ -13,6 +13,7 @@ import Models exposing (..)
 import Routing
 import Players.List
 import Players.Edit
+import Debug
 
 
 view : Signal.Address Action -> AppModel -> Html
@@ -76,10 +77,22 @@ notFoundView =
 
 Now we have a function `page` which has a case expression to show the correct view depending on what is in `model.routing.view`.
 
+Note these lines in `view`:
+
 ```elm
-_ =
+import Debug
+...
+
+view address model =
+  let
+    _ =
       Debug.log "model" model
+  in
+    ..
 ```
+
+This is just a handy of printing the current model to the console, very useful for debugging our application while developing.
+
 ---
 
 When hitting the edit player view (e.g. `/players/3/edit`) we may or may not have a player with that id.
