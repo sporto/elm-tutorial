@@ -74,8 +74,11 @@ We need this new `TaskDone` action in __src/Players/Actions.elm:
 Add:
 
 ```elm
+  ...
   | TaskDone ()
 ```
+
+This action has a payload that we just ignore `()`. 
 
 
 ---
