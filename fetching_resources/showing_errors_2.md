@@ -63,9 +63,9 @@ Change the `FetchAllDone` branch so we send a message to this address:
             ( model.players, fx )
 ```
 
-`Signal.send` creates a task that when run send a message to an address. So here we are asking to send the `errorMessage` to the `showErrorAddress` address. 
+`Signal.send` creates a task that when run send a message to an address. We are asking to send the `errorMessage` to the `showErrorAddress` address. 
 
-We need to return an effect, not a task, so we convert this task to an effect by using `|> Effect.task`. And the effect needs to be of type Players Action. So we map it to a new action `TaskDone`.
+We need to return an effect, not a task, so we convert this task to an effect by using `|> Effect.task`. And the effect needs to be of type Players Action, so we map it to a new action `TaskDone`.
 
 ### Players Actions
 
@@ -79,6 +79,10 @@ Add:
 ```
 
 This action has a payload that we just ignore `()`. 
+
+Back in __src/Players/Update.elm__ this action `TaskDone` has to be accounted for. Add a new branch:
+
+
 
 
 ---
