@@ -11,3 +11,12 @@ fetchAllUrl =
 ```
 
 When you refresh you will see an empty list and no indication of the error that just happened.
+
+The problem is in __src/Players/Update.elm__:
+
+```elm
+        Err error ->
+          ( model.players, Effects.none )
+```
+
+This just throws the error away.
