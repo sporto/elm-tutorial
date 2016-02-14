@@ -109,7 +109,7 @@ In a terminal run `elm repl`. Import the Json.Decoder module:
 Then define a string of json:
 
 ```elm
-> json = "{\"id\":99}"
+> json = "{\"id\":99, \"name\":\"Sam\"}"
 ```
 
 And define a decoder to extract the `id`:
@@ -142,7 +142,20 @@ In Elm you can create a record calling a type as a function. e.g. `Player 1 "Sam
 { id = 1, name = "Sam" } : Repl.Player
 ```
 
+With these two concepts let's create a complete decoder:
 
+```elm
+> nameDecoder = ("name" := string)
+> playerDecoder = object2 Player idDecoder nameDecoder
+```
+
+`object2` takes a function as first argument (Player in this case) and two decoders. Then it runs the decoders and passes the results as the arguments to the function (Player).
+
+Try it:
+```elm
+
+```
+result = decodeString playerDecoder json
 ---
 
 TODO explain how it works
