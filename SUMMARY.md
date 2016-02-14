@@ -41,7 +41,7 @@
    * [Navigation from Edit to List](routing/navigation_from_edit_to_list.md)
 * [Fetching resources](fetching_resources/cover.md)
    * [Fetching players](fetching_resources/fetching_players.md)
-   * [Showing Errors](fetching_resources/showing_errors.md)
+   * [Showing Errors 1](fetching_resources/showing_errors.md)
    * [Showing Errors 2](fetching_resources/showing_errors_2.md)
    * [Showing Errors 3](fetching_resources/showing_errors_3.md)
    * Fetching perks
