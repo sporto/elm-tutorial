@@ -16,10 +16,22 @@ Install __json-server__:
 npm i json-server -S
 ```
 
-Make `index.js` in the root of the project:
+Make __api.js__ in the root of the project:
 
 ```js
-ss
+var jsonServer = require('json-server')
+
+// Returns an Express server
+var server = jsonServer.create()
+
+// Set default middlewares (logger, static, cors and no-cache)
+server.use(jsonServer.defaults())
+
+var router = jsonServer.router('db.json')
+server.use(router)
+
+console.log('Listening at 4000')
+server.listen(4000)
 ```
 
 Add `db.json` at the root.
