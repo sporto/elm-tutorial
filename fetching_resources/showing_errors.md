@@ -67,8 +67,11 @@ flash address model =
       [ text model.errorMessage ]
 ```
 
-And add the flash messages to the main view in the same file:
+And add the flash messages to the `view` function in the same file:
 
 ```elm
-
+    ...
+      [ page address model
+      , flash address model
+      ]
 ```
