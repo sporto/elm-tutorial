@@ -44,6 +44,7 @@
    * [Showing Errors](fetching_resources/showing_errors.md)
    * Fetching perks
    * Calculating bonuses
+   * Showing Errors 2
 * Add and Delete
    * Add a player
    * Delete a player
