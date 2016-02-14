@@ -98,7 +98,7 @@ Let's test our setup
 In one terminal window run:
 
 ```
-npm run api`
+npm run api
 ```
 
 You should be able to access `http://localhost:4000/players` and see a list of players.
