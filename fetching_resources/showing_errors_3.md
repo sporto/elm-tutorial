@@ -42,5 +42,5 @@ app =
     }
 ```
 
-Note the new input `actionsMailbox.signal` to StartApp. Now message going to `actionsMailbox` will be re-broadcasted and picked up by `app`.
+Note the new input `actionsMailbox.signal` to StartApp. Now message going to `actionsMailbox.address` will be re-broadcasted and picked up by `app`.
 
