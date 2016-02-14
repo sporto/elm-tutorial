@@ -106,7 +106,7 @@ In a terminal run `elm repl`. Import the Json.Decoder module:
 > import Json.Decode exposing (..)
 ```
 
-Then define a string of json:
+Then define a Json string:
 
 ```elm
 > json = "{\"id\":99, \"name\":\"Sam\"}"
@@ -127,15 +127,17 @@ Run this decoder to see the result:
 Ok 99 : Result.Result String Int
 ```
 
-We see `Ok 99` meaning that decoding was successful and we got 99. So this is what `("id" := Decode.int)` does, it creates a decoder for a single key. This is one part of the equation.
+We see `Ok 99` meaning that decoding was successful and we got 99. So this is what `("id" := Decode.int)` does, it creates a decoder for a single key. 
 
-Now to the second part, define a type:
+This is one part of the equation. Now for the second part, define a type:
 
 ```
 > type alias Player = { id: Int, name: String }
 ```
 
-In Elm you can create a record calling a type as a function. e.g. `Player 1 "Sam"` creates a player record. Note that the order of parameters is important as any other function. Try it:
+In Elm you can create a record calling a type as a function. Foe example `Player 1 "Sam"` creates a player record. Note that the order of parameters is important as any other function. 
+
+Try it:
 
 ```
 > Player 1 "Sam"
@@ -153,16 +155,14 @@ With these two concepts let's create a complete decoder:
 
 Try it:
 ```elm
-
+> result = decodeString playerDecoder json
+Ok { id = 99, name = "Sam" } : Result.Result String Repl.Player
 ```
-result = decodeString playerDecoder json
+
 ---
 
-TODO explain how it works
-- object3 applies a function, the function is Player
 
-
-`collectionDecoder` applies `memberDecoder` to each record on a JSON array. 
+Then `collectionDecoder` applies `memberDecoder` to each record on a JSON array. 
 
 And we have `fetchAll`:
 
