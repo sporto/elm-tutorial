@@ -19,4 +19,4 @@ The problem is in __src/Players/Update.elm__:
           ( model.players, Effects.none )
 ```
 
-This just throws the error away.
+This just throws the error away. We need some way to show the error.
