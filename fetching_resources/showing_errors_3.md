@@ -24,3 +24,20 @@ Here we have a mailbox where we can send any root action we want to run.
 
 ## Hook into StartApp
 
+In __src/Main.elm__ add:
+
+```elm
+...
+import Mailboxes exposing (..)
+
+...
+
+app : StartApp.App AppModel
+app =
+  StartApp.start
+    { init = init
+    , inputs = [ routerSignal, actionsMailbox.signal ]
+    , update = update
+    , view = view
+    }
+```
