@@ -42,7 +42,7 @@
 * [Fetching resources](fetching_resources/cover.md)
    * [Fetching players](fetching_resources/fetching_players.md)
    * [Showing Errors](fetching_resources/showing_errors.md)
-   * Showing Errors 2
+   * [Showing Errors 2](fetching_resources/showing_errors_2.md)
    * Fetching perks
    * Calculating bonuses
 * Add and Delete
