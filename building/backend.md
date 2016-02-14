@@ -67,7 +67,7 @@ Start the server by running:
 node api.js
 ```
 
-Test this fake API by going to:
+Test this fake API by browsing to:
 
 - <http://localhost:4000/players>
 - <http://localhost:4000/perks>
