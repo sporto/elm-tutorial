@@ -64,7 +64,7 @@ You can grab a copy from here <https://github.com/sporto/elm-tutorial-app/blob/0
 Start the server by doing:
 
 ```bash
-node index.js
+node api.js
 ```
 
 Test this fake API by going to:
