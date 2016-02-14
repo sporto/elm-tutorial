@@ -95,12 +95,61 @@ memberDecoder =
     ("level" := Decode.int)
 ```
 
-`memberDecoder` creates a Json decoder that returns a `Player` record. 
+`memberDecoder` creates a JSON decoder that returns a `Player` record. 
+
+---
+To understand how the decoder works let's play with the elm repl.
+
+In a terminal run `elm repl`. Import the Json.Decoder module:
+
+```elm
+> import Json.Decode exposing (..)
+```
+
+Then define a string of json:
+
+```elm
+> json = "{\"id\":99}"
+```
+
+And define a decoder to extract the `id`:
+
+```
+> idDecoder = ("id" := int)
+```
+
+This creates a decoder that given a string tries to extract the `id` key and parse it into a integer.
+
+Run this decoder to see the result:
+
+```
+> result = decodeString idDecoder  json
+Ok 99 : Result.Result String Int
+```
+
+We see `Ok 99` meaning that decoding was successful and we got 99. So this is what `("id" := Decode.int)` does, it creates a decoder for a single key. This is one part of the equation.
+
+Now to the second part, define a type:
+
+```
+> type alias Player = { id: Int, name: String }
+```
+
+In Elm you can create a record calling a type as a function. e.g. `Player 1 "Sam"` creates a player record. Note that the order of parameters is important as any other function. Try it:
+
+```
+> Player 1 "Sam"
+{ id = 1, name = "Sam" } : Repl.Player
+```
+
+
+---
 
 TODO explain how it works
 - object3 applies a function, the function is Player
 
-`collectionDecoder` applies `memberDecoder` to each record on the Json array. 
+
+`collectionDecoder` applies `memberDecoder` to each record on a JSON array. 
 
 And we have `fetchAll`:
 
@@ -112,7 +161,7 @@ fetchAll =
     |> Effects.task
 ```
 
-`Http.get` takes a decoder and a url string. It:
+`Http.get` takes a decoder and a url string. Then it:
 - creates a task that makes an ajax request
 - when done parses the result body through the decoder
 - and returns another task with result `Task.Task Http.Error value`
@@ -120,7 +169,9 @@ fetchAll =
 Remember that none of this actually executes until it is send to a port.
 
 - In `Task.toResult` we convert this `Task.Task Http.Error value` to a task that resolves with a `Result`. At this point the result of the task would be `Result Http.Error value`
+
 - Then we map this task to `FetchAllDone`. So now the result of the task would be `FetchAllDone (Result Http.Error value)`.
+
 - And lastly we convert the task to an effect.
 
 ## Main
