@@ -49,7 +49,14 @@ Let's add the flash message outlet in our main view. In __src/View.elm__ add:
 
 
 ```elm
-flash : Signal.Address Actions.Action -> Models.Model -> Html.Html
+
+...
+import Html.Attributes exposing (..)
+import String
+...
+
+
+flash : Signal.Address Action -> AppModel -> Html
 flash address model =
   if String.isEmpty model.errorMessage then
     span [] []
