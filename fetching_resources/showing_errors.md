@@ -9,3 +9,5 @@ fetchAllUrl : String
 fetchAllUrl =
   "http://localhost:4000/playerx"
 ```
+
+When you refresh you will see an empty list and no indication of the error that just happened.
