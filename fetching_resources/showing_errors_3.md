@@ -49,6 +49,10 @@ Note the new input `actionsMailbox.signal` to StartApp. Now message going to `ac
 `Players.Udpate` expects a `showErrorAddress` so we need to pass that. Modify __src/Update.elm__ to pass that in the `PlayersAction` branch:
 
 ```elm
+...
+import Mailboxes exposing (..)
+
+...
 
 ```
 
