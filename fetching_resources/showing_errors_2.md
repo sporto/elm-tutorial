@@ -88,7 +88,31 @@ Back in __src/Players/Update.elm__ this new action `TaskDone` has to be accounte
       ( model.players, Effects.none )
 ```
 
+So far:
+
+- We require an address where to send an error message
+- On error we return an effect that sends the error message to this address
+
+In the next section we will add the rest of the setup, which means providing this address to Players.Update.
 
 ---
 
 ## An alternative approach
+
+The Elm architecture is flexible, we don't necessary have to return always a tuple with two elements in update. So instead of 
+
+```elm
+update : Action -> UpdateModel -> ( List Player, Effects Action )
+update action model =
+    ...
+```
+
+We could return a tuple with three values:
+
+```elm
+update : Action -> UpdateModel -> ( List Player, Effects Action, Effects MainAction )
+update action model =
+    ...
+```
+
+The last value could be a root effect. In this way we could call the `ShowError` action that we set in main directly from here.
