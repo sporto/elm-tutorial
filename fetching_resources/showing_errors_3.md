@@ -24,7 +24,7 @@ Here we have a mailbox where we can send any root action we want to run.
 
 ## Hook into StartApp
 
-In __src/Main.elm__ add:
+In __src/Main.elm__ add `actionsMailbox` as an input to StartApp:
 
 ```elm
 ...
@@ -41,3 +41,6 @@ app =
     , view = view
     }
 ```
+
+Note the new input `actionsMailbox.signal` to StartApp. Now all message going to `actionsMailbox` will be re-broadcasted and picked up by `app`.
+
