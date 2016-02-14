@@ -1,6 +1,6 @@
 # Showing Errors
 
-Our application fetches a list of users but it doesn't account for errors. Kill the fake api server to try this.
+Our application fetches a list of users but it doesn't account for errors. Kill the fake API server to try this.
 
 When you refresh you will see an empty list and no indication of the error that just happened.
 
