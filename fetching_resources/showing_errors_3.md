@@ -6,4 +6,4 @@ We need to provide this address and do map it to the main action we want (`ShowE
 
 ## Auxiliary mailbox
 
-Unfortunately StartApp doesn't give a mechanism to send messages to its address from `update`. 
+Unfortunately StartApp doesn't give a mechanism to send messages to its address from `update`. We need to provide our own mailbox for this.
