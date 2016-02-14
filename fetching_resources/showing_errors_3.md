@@ -69,5 +69,14 @@ import Mailboxes exposing (..)
 
 We added `showErrorAddress = Signal.forwardTo actionsMailbox.address ShowError` to `updateModel`.
 
+We pass an address that will tag all messages with the `ShowError` action. This is what we have:
 
+- Players.Update gets an error, sends a message to `showErrorAddress` (through an effect)
+- All messages coming through `showErrorAddress` are tagged as `ShowError`
+- Main Update picks up `ShowError` and modifies the main model adding the message to `errorMessage`
+- The Main View shows this error message.
+
+---
+
+Try it! When you refresh your browser you should see an error message in the page.
 
