@@ -28,7 +28,7 @@ This is the approach we will take:
 - The main update will then receive the action and set the error message in the main model.
 
 
-## Require an address where to send the error message
+## Players Update
 
 In __src/Players/Update__ change `UpdateModel` to require an address:
 
@@ -40,6 +40,11 @@ type alias UpdateModel =
 ```
 
 Now we expect a `showErrorAddress` address that can receive a message.
+
+Change the `FetchAllDone` branch so we send a message to this address:
+
+
+
 
 ---
 
