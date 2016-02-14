@@ -82,7 +82,10 @@ This action has a payload that we just ignore `()`.
 
 Back in __src/Players/Update.elm__ this action `TaskDone` has to be accounted for. Add a new branch:
 
-
+```
+    TaskDone () ->
+      ( model.players, Effects.none )
+```
 
 
 ---
