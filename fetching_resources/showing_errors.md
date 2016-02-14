@@ -88,6 +88,7 @@ In __src/Actions.elm__ add a new action:
 And update __src/Update.elm__ to include this action. Add a new branch to the case expresion:
 
 ```elm
+    ...
     ShowError message ->
       ( { model | errorMessage = message }, Effects.none )
 ```
