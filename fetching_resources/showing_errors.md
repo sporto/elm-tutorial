@@ -102,6 +102,8 @@ Try what we have so far by adding a hard coded error in __src/Models.elm__, add 
 , errorMessage = "Error"
 ```
 
+Refresh and you should see this error message. Put it back to "".
+
 We have half of the wiring for showing an error message. Now we need some way to trigger this `ShowError` action from Players/Update.
 
 
