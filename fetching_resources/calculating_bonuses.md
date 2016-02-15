@@ -42,3 +42,7 @@ bonusesForPlayerId perksPlayers perks playerId =
 
 - `perkIdsForPlayerId` returns a list of perk ids for a player.
 
+- Using this list of ids, `perksForPlayerId` returns a list of perks for a player.
+
+- And using this list of perks, `bonusesForPlayerId` returns the total bonus amount for a player.
+
