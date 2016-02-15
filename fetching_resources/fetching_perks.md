@@ -4,7 +4,7 @@ For __perks__ and __perksPlayers__ we will follow the same pattern as players.
 
 ## Perks Models
 
-Add __src/Perks/Models.elm__:
+Add __src/Perks/Models.elm__
 
 <https://github.com/sporto/elm-tutorial-app/blob/0520-fetch-rest/src/Perks/Models.elm>
 
@@ -26,7 +26,9 @@ type alias Perk =
 
 ## Perks Actions
 
-__src/Perks/Actions.elm__:
+__src/Perks/Actions.elm__
+
+<https://github.com/sporto/elm-tutorial-app/blob/0520-fetch-rest/src/Perks/Actions.elm>
 
 ```elm
 module Perks.Actions (..) where
@@ -44,7 +46,9 @@ type Action
 
 ## Perks Effects
 
-__src/Perks/Effects.elm__:
+__src/Perks/Effects.elm__
+
+<https://github.com/sporto/elm-tutorial-app/blob/0520-fetch-rest/src/Perks/Effects.elm>
 
 ```elm
 module Perks.Effects (..) where
@@ -91,7 +95,9 @@ memberDecoder =
 
 ## Perks Update
 
-__src/Perks/Update.elm__:
+__src/Perks/Update.elm__
+
+<https://github.com/sporto/elm-tutorial-app/blob/0520-fetch-rest/src/Perks/Update.elm>
 
 ```elm
 module Perks.Update (..) where
