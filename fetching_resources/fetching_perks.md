@@ -325,12 +325,17 @@ We added `perks` and `perksPlayers`.
 
 __src/Update.elm__ needs to include branches for both perks and perksPlayers actions:
 
+<https://github.com/sporto/elm-tutorial-app/blob/0520-fetch-rest/src/Update.elm>
+
 ```elm
 ...
 import Perks.Update
 import PerksPlayers.Update
 
-...
+update : Action -> AppModel -> ( AppModel, Effects Action )
+update action model =
+  case (Debug.log "action" action) of
+    ...
     PerksAction subAction ->
       let
         updateModel =
@@ -358,6 +363,10 @@ import PerksPlayers.Update
 ```
 
 ## Main
+
+Finally, we want to fetch both collection when the application starts. So we need to add the corresponding effects to the application init. In __src/Main.elm__ add:
+
+
 
 ---
 
