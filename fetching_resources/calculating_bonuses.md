@@ -76,10 +76,14 @@ type alias ViewModel =
 And call the `bonusesForPlayerId` function:
 
 ```elm
-form address model =
+playerRow : Signal.Address Action -> ViewModel -> Player -> Html.Html
+playerRow address model player =
   let
     bonuses =
-      bonusesForPlayerId model.perksPlayers model.perks model.player.id
+      bonusesForPlayerId model.perksPlayers model.perks player.id
+
+    strength =
+      bonuses + player.level
 ```
 
 ## Players Edit
