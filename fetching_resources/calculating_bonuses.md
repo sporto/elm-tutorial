@@ -90,7 +90,29 @@ playerRow address model player =
 
 ## Players Edit
 
-Let's add the bonuses to the player edit view as well:
+Let's add the bonuses to the player edit view as well, update __src/Players/Edit.elm__:
+
+```elm
+...
+import Perks.Models exposing (Perk)
+import PerksPlayers.Models exposing (PerkPlayer)
+import PerksPlayers.Utils exposing (bonusesForPlayerId)
+
+type alias ViewModel =
+  { player : Player
+  , perks : List Perk
+  , perksPlayers : List PerkPlayer
+  }
+
+...
+
+form : Signal.Address Action -> ViewModel -> Html.Html
+form address model =
+  let
+    bonuses =
+      bonusesForPlayerId model.perksPlayers model.perks model.player.id
+    ...
+```
 
 
 
