@@ -6,6 +6,8 @@ For __perks__ and __perksPlayers__ we will follow the same pattern as players.
 
 Add __src/Perks/Models.elm__:
 
+<https://github.com/sporto/elm-tutorial-app/blob/0520-fetch-rest/src/Perks/Models.elm>
+
 ```elm
 module Perks.Models (..) where
 
