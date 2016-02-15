@@ -279,6 +279,10 @@ update action model =
 
 ## Main Actions
 
+__src/Actions.elm__ needs to include actions for perks and perksPlayers:
+
+
+
 ## Main Models
 
 ## Main Update
