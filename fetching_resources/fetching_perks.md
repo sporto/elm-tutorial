@@ -1,4 +1,4 @@
-# Fetching perks
+# Fetching the rest
 
 For __perks__ and __perksPlayers__ we will follow the same pattern as players. 
 
