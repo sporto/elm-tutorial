@@ -138,6 +138,7 @@ page address model =
 And the view model for the edit view:
 
 ```elm
+        ...
         case maybePlayer of
           Just player ->
             let
