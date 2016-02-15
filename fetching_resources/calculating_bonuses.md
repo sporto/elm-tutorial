@@ -116,7 +116,9 @@ form address model =
 
 ## Main View
 
-We need to update the view models in __src/View.elm__/
+We need to update the view models in __src/View.elm__
+
+<https://github.com/sporto/elm-tutorial-app/blob/0530-calc-bonuses/src/View.elm>
 
 View model for the list:
 
