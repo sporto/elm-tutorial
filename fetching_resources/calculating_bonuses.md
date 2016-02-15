@@ -123,34 +123,32 @@ We need to update the view models in __src/View.elm__
 View model for the list:
 
 ```elm
-page : Signal.Address Action -> AppModel -> Html.Html
-page address model =
-  case model.routing.view of
-    Routing.PlayersView ->
-      let
-        viewModel =
-          { players = model.players
-          , perks = model.perks
-          , perksPlayers = model.perksPlayers
-          }
-      in
-        Players.List.view (Signal.forwardTo address PlayersAction) viewModel
+playersPage : Signal.Address Action -> AppModel -> Html.Html
+playersPage address model =
+  let
+    viewModel =
+      { players = model.players
+      , perks = model.perks
+      , perksPlayers = model.perksPlayers
+      }
+  in
+    Players.List.view (Signal.forwardTo address PlayersAction) viewModel
 ```
 
-And the view model for the edit view:
+And the view model in `playerEditPage`:
 
 ```elm
         ...
-        case maybePlayer of
-          Just player ->
-            let
-              viewModel =
-                { player = player
-                , perks = model.perks
-                , perksPlayers = model.perksPlayers
-                }
-            in
-              Players.Edit.view (Signal.forwardTo address PlayersAction) 
+    case maybePlayer of
+      Just player ->
+        let
+          viewModel =
+            { player = player
+            , perks = model.perks
+            , perksPlayers = model.perksPlayers
+            }
+        in
+          Players.Edit.view (Signal.forwardTo address PlayersAction) viewModel
 ```
 
 ---
