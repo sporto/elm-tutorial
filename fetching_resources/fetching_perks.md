@@ -1,6 +1,6 @@
 # Fetching perks
 
-For perks and perksPlayers we will follow the same pattern as players.
+For __perks__ and __perksPlayers__ we will follow the same pattern as players. 
 
 ## Perks Models
 
@@ -28,7 +28,10 @@ For perks and perksPlayers we will follow the same pattern as players.
 
 ## Main Update
 
-## Main 
+## Main
+
+---
+
 
 
 
