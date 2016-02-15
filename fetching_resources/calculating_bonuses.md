@@ -124,4 +124,6 @@ We need to update the view models in __src/View.elm__:
 
 If you refresh you should see the calculated bonuses in the players' list and a player's edit view.
 
+At this point your code should look as <https://github.com/sporto/elm-tutorial-app/tree/0530-calc-bonuses>
+
 
