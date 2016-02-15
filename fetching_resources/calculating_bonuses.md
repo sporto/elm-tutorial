@@ -40,3 +40,5 @@ bonusesForPlayerId perksPlayers perks playerId =
     |> List.foldl (\perk acc -> acc + perk.bonus) 0
 ```
 
+`perkIdsForPlayerId` 
+
