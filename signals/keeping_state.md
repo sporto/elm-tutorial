@@ -98,4 +98,4 @@ The __accumulation__ function above takes the input from `Mouse.clicks` and the 
 
 The input from `Mouse.clicks` is always `()` which is called the unit type in Elm. We don't need to do anything with this value, so we ignore it by using `_`.
 
-As mentioned an empty tuple `()` in Elm is called the unit type. Read more about the unit type [here](http://stackoverflow.com/questions/33949145/what-do-the-empty-parentheses-mean-in-elm).
+As mentioned an empty tuple `()` in Elm is called the unit type. Read more about it [here](http://stackoverflow.com/questions/33949145/what-do-the-empty-parentheses-mean-in-elm).
