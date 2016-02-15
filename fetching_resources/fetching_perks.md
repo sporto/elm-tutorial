@@ -4,7 +4,9 @@ For __perks__ and __perksPlayers__ we will follow the same pattern as players.
 
 ## Perks Models
 
-/src/Perks/Models.elm
+Add __src/Perks/Models.elm__:
+
+
 
 ## Perks Actions
 
