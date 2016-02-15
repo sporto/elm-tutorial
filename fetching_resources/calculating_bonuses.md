@@ -116,9 +116,39 @@ form address model =
 
 ## Main View
 
-We need to update the view models in __src/View.elm__:
+We need to update the view models in __src/View.elm__/
 
+View model for the list:
 
+```elm
+page : Signal.Address Action -> AppModel -> Html.Html
+page address model =
+  case model.routing.view of
+    Routing.PlayersView ->
+      let
+        viewModel =
+          { players = model.players
+          , perks = model.perks
+          , perksPlayers = model.perksPlayers
+          }
+      in
+        Players.List.view (Signal.forwardTo address PlayersAction) viewModel
+```
+
+And the view model for the edit view:
+
+```elm
+        case maybePlayer of
+          Just player ->
+            let
+              viewModel =
+                { player = player
+                , perks = model.perks
+                , perksPlayers = model.perksPlayers
+                }
+            in
+              Players.Edit.view (Signal.forwardTo address PlayersAction) 
+```
 
 ---
 
