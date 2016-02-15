@@ -138,7 +138,7 @@ playersPage address model =
 And the view model in `playerEditPage`:
 
 ```elm
-        ...
+    ...
     case maybePlayer of
       Just player ->
         let
