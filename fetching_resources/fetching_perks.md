@@ -366,12 +366,33 @@ update action model =
 
 Finally, we want to fetch both collection when the application starts. So we need to add the corresponding effects to the application init. In __src/Main.elm__ add:
 
+<https://github.com/sporto/elm-tutorial-app/blob/0520-fetch-rest/src/Main.elm>
 
+```elm
+...
+import Perks.Effects
+import PerksPlayers.Effects
+
+...
+init : ( AppModel, Effects Action )
+init =
+  let
+    fxs =
+      [ Effects.map PlayersAction Players.Effects.fetchAll
+      , Effects.map PerksAction Perks.Effects.fetchAll
+      , Effects.map PerksPlayersAction PerksPlayers.Effects.fetchAll
+      ]
+
+    fx =
+      Effects.batch fxs
+  in
+    ( Models.initialModel, fx )
+```
 
 ---
 
-
 This is how your application code should look at this point <https://github.com/sporto/elm-tutorial-app/tree/0520-fetch-rest>.
 
+Now if you open the developer console and refresh you should see the application model including perks and perksPlayers.
 
 
