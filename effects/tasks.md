@@ -1,6 +1,6 @@
 # Tasks
 
-In Elm, __tasks__ allow us to make asynchronous operations. A task might success or fail. They are similar to promises in JavaScript.
+In Elm, __tasks__ allow us to make asynchronous operations. A task might succeed or fail. They are similar to promises in JavaScript.
 
 Let's start with an application that displays a message every second:
 
@@ -161,7 +161,7 @@ port runner =
 
 <https://github.com/sporto/elm-tutorial-assets/blob/master/effects/Tasks02.elm>
 
-If you open this application using Elm Reactor you will see a random number changing every second. This random number is coming from the __node__ server we created above.
+If you open this application using Elm Reactor you will see a random number changing every two seconds. This random number is coming from the __node__ server we created above.
 
 Let's dissect this code:
 
