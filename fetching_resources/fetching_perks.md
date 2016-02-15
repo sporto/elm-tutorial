@@ -141,7 +141,9 @@ Just like in the Players.Update module we send a message to `showErrorAddress` i
 
 ## PerksPlayers Models
 
-__/src/PerksPlayers/Models.elm__:
+__src/PerksPlayers/Models.elm__
+
+<https://github.com/sporto/elm-tutorial-app/blob/0520-fetch-rest/src/PerksPlayers/Models.elm>
 
 ```elm
 module PerksPlayers.Models (..) where
@@ -164,7 +166,9 @@ type alias PerkPlayer =
 
 ## PerksPlayers Actions
 
-__src/PerksPlayers/Actions.elm__:
+__src/PerksPlayers/Actions.elm__
+
+<https://github.com/sporto/elm-tutorial-app/blob/0520-fetch-rest/src/PerksPlayers/Actions.elm>
 
 ```elm
 module PerksPlayers.Actions (..) where
@@ -182,7 +186,9 @@ type Action
 
 ## PerksPlayers Effects
 
-__/src/PerksPlayers/Effects.elm__:
+__/src/PerksPlayers/Effects.elm__
+
+<https://github.com/sporto/elm-tutorial-app/blob/0520-fetch-rest/src/PerksPlayers/Effects.elm>
 
 ```elm
 module PerksPlayers.Effects (..) where
@@ -229,7 +235,9 @@ memberDecoder =
 
 ## PerksPlayers Update
 
-__/src/PerksPlayers/Update.elm__:
+__src/PerksPlayers/Update.elm__
+
+<https://github.com/sporto/elm-tutorial-app/blob/0520-fetch-rest/src/PerksPlayers/Update.elm>
 
 ```elm
 module PerksPlayers.Update (..) where
