@@ -323,6 +323,40 @@ We added `perks` and `perksPlayers`.
 
 ## Main Update
 
+__src/Update.elm__ needs to include branches for both perks and perksPlayers actions:
+
+```elm
+...
+import Perks.Update
+import PerksPlayers.Update
+
+...
+    PerksAction subAction ->
+      let
+        updateModel =
+          { perks = model.perks
+          , showErrorAddress = Signal.forwardTo actionsMailbox.address ShowError
+          }
+
+        ( updatedPerks, fx ) =
+          Perks.Update.update subAction updateModel
+      in
+        ( { model | perks = updatedPerks }, Effects.map PerksAction fx )
+
+    PerksPlayersAction subAction ->
+      let
+        updateModel =
+          { perksPlayers = model.perksPlayers
+          , showErrorAddress = Signal.forwardTo actionsMailbox.address ShowError
+          }
+
+        ( updatedPerksPlayers, fx ) =
+          PerksPlayers.Update.update subAction updateModel
+      in
+        ( { model | perksPlayers = updatedPerksPlayers }, Effects.map PerksPlayersAction fx )
+
+```
+
 ## Main
 
 ---
