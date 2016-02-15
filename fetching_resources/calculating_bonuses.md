@@ -82,5 +82,7 @@ form address model =
       bonusesForPlayerId model.perksPlayers model.perks model.player.id
 ```
 
+If you refresh you should see the calculated bonuses in the players' list.
+
 
 
