@@ -46,3 +46,9 @@ bonusesForPlayerId perksPlayers perks playerId =
 
 - And using this list of perks, `bonusesForPlayerId` returns the total bonus amount for a player.
 
+## Players List
+
+Let's call this function from __src/Players/List.elm__:
+
+
+
