@@ -129,6 +129,8 @@ update action model =
       ( model.perks, Effects.none )
 ```
 
+Just like in the Players.Update module we send a message to `showErrorAddress` in case of an error.
+
 ## PerksPlayers Models
 
 __/src/PerksPlayers/Models.elm__:
@@ -269,6 +271,8 @@ update action model =
 
 ---
 
+
+This is how your application code should look at this point <https://github.com/sporto/elm-tutorial-app/tree/0520-fetch-rest>.
 
 
 
