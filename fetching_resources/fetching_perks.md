@@ -281,9 +281,19 @@ update action model =
 
 __src/Actions.elm__ needs to include actions for perks and perksPlayers:
 
+```elm
+...
+import Perks.Actions
+import PerksPlayers.Actions
 
+...
+  | PerksAction Perks.Actions.Action
+  | PerksPlayersAction PerksPlayers.Actions.Action
+```
 
 ## Main Models
+
+
 
 ## Main Update
 
