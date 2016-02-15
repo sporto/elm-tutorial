@@ -171,7 +171,7 @@ The view display the given message.
 
 #### clockSignal
 
-Just before we will use this `clockSignal` for refreshing the view. Every 2 seconds in this case.
+Just as before we will use this `clockSignal` for refreshing the view. Every 2 seconds in this case.
 
 #### mb
 
@@ -236,7 +236,7 @@ taskSignal =
   Signal.map (always runTask) clockSignal
 ```
 
-Here we take the clockSignal, which gives us a heartbeat every 2 seconds and we map it through `runTask`.
+Here we take the clockSignal, which gives us a heartbeat every two seconds and we map it through `runTask`.
 
 - We don't really care about the value given by `clockSignal` this is why we use `(always runTask)`. EXPLIAN MORE ON ALWAYS
 - This function return a signal of the tasks. As `runTask` has the signature of `Task.Task Http.Error ()`, then the signal has the signature of `Signal (Task.Task Http.Error ())`.
