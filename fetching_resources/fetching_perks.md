@@ -89,13 +89,68 @@ memberDecoder =
 
 ## Perks Update
 
-__src/Perks/Update.elm__
+__src/Perks/Update.elm__:
+
+```elm
+module Perks.Update (..) where
+
+import Effects exposing (Effects)
+import Perks.Actions exposing (..)
+import Perks.Models exposing (Perk)
 
 
+type alias UpdateModel =
+  { perks : List Perk
+  , showErrorAddress : Signal.Address String
+  }
+
+
+update : Action -> UpdateModel -> ( List Perk, Effects Action )
+update action model =
+  case action of
+    FetchAllDone result ->
+      case result of
+        Ok perks ->
+          ( perks, Effects.none )
+
+        Err error ->
+          let
+            message =
+              toString error
+
+            fx =
+              Signal.send model.showErrorAddress message
+                |> Effects.task
+                |> Effects.map TaskDone
+          in
+            ( model.perks, fx )
+
+    _ ->
+      ( model.perks, Effects.none )
+```
 
 ## PerksPlayers Models
 
-/src/Perks/Models.elm
+__/src/PerksPlayers/Models.elm__:
+
+```elm
+module PerksPlayers.Models (..) where
+
+import Players.Models exposing (PlayerId)
+import Perks.Models exposing (PerkId)
+
+
+type alias PerkPlayerId =
+  Int
+
+
+type alias PerkPlayer =
+  { id : PerkPlayerId
+  , perkId : PerkId
+  , playerId : PlayerId
+  }
+
+```
 
 ## PerksPlayers Actions
 
