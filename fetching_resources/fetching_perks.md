@@ -11,3 +11,24 @@ For perks and perksPlayers we will follow the same pattern as players.
 ## Perks Effects
 
 ## Perks Update
+
+## PerksPlayers Models
+
+/src/Perks/Models.elm
+
+## PerksPlayers Actions
+
+## PerksPlayers Effects
+
+## PerksPlayers Update
+
+## Main Actions
+
+## Main Models
+
+## Main Update
+
+## Main 
+
+
+
