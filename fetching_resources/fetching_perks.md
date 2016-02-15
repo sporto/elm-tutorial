@@ -6,7 +6,21 @@ For __perks__ and __perksPlayers__ we will follow the same pattern as players.
 
 Add __src/Perks/Models.elm__:
 
+```elm
+module Perks.Models (..) where
 
+
+type alias PerkId =
+  Int
+
+
+type alias Perk =
+  { id : PerkId
+  , name : String
+  , bonus : Int
+  , description : String
+  }
+```
 
 ## Perks Actions
 
