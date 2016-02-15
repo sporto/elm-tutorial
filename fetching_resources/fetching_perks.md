@@ -7,3 +7,7 @@ For perks and perksPlayers we will follow the same pattern as players.
 /src/Perks/Models.elm
 
 ## Perks Actions
+
+## Perks Effects
+
+## Perks Update
