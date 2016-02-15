@@ -73,5 +73,14 @@ type alias ViewModel =
   }
 ```
 
+And call the `bonusesForPlayerId` function:
+
+```elm
+form address model =
+  let
+    bonuses =
+      bonusesForPlayerId model.perksPlayers model.perks model.player.id
+```
+
 
 
