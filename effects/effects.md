@@ -176,7 +176,7 @@ In this application we are passing __Effects__ around. So we convert the `httpTa
 
 `httpTask |> Task.toResult`
 
-httpTask by itself is a task that may fail or succeed. `Task.toResult` converts it to a task that only succeeds, but the success value is a `Result` type. This result can be either `(Err Http.Error)` or `(ok String)`. In this way we don't throw away the error.
+httpTask by itself is a task that may fail or succeed. `Task.toResult` converts it to a task that only succeeds, but the success value is a `Result` type. This result can be either `(Err Http.Error)` or `(Ok String)`. In this way we don't throw away the error.
 
 `|> Task.map OnRefresh`
 
