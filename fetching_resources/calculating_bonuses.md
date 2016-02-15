@@ -14,10 +14,11 @@ import Perks.Models exposing (PerkId, Perk)
 import PerksPlayers.Models exposing (PerkPlayerId, PerkPlayer)
 
 
-bonusesForPlayerId : List PerkPlayer -> List Perk -> PlayerId -> Int
-bonusesForPlayerId perksPlayers perks playerId =
-  perksForPlayerId perksPlayers perks playerId
-    |> List.foldl (\perk acc -> acc + perk.bonus) 0
+perkIdsForPlayerId : List PerkPlayer -> PlayerId -> List Int
+perkIdsForPlayerId perksPlayers playerId =
+  perksPlayers
+    |> List.filter (\perkPlayer -> perkPlayer.playerId == playerId)
+    |> List.map (\perkPlayer -> perkPlayer.perkId)
 
 
 perksForPlayerId : List PerkPlayer -> List Perk -> PlayerId -> List Perk
@@ -33,11 +34,9 @@ perksForPlayerId perksPlayers perks playerId =
       |> List.filter included
 
 
-perkIdsForPlayerId : List PerkPlayer -> PlayerId -> List Int
-perkIdsForPlayerId perksPlayers playerId =
-  perksPlayers
-    |> List.filter (\perkPlayer -> perkPlayer.playerId == playerId)
-    |> List.map (\perkPlayer -> perkPlayer.perkId)
-
+bonusesForPlayerId : List PerkPlayer -> List Perk -> PlayerId -> Int
+bonusesForPlayerId perksPlayers perks playerId =
+  perksForPlayerId perksPlayers perks playerId
+    |> List.foldl (\perk acc -> acc + perk.bonus) 0
 ```
 
