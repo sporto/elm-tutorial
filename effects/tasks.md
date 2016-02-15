@@ -238,7 +238,8 @@ taskSignal =
 
 Here we take the clockSignal, which gives us a heartbeat every two seconds and we map it through `runTask`.
 
-- We don't really care about the value given by `clockSignal` this is why we use `(always runTask)`. EXPLIAN MORE ON ALWAYS
+- We don't really care about the value given by `clockSignal` this is why we use `(always runTask)`.
+- `(always runTask)` returns run `runTask` regardless of the input. This would be similar to a anonymous function like (\_ -> runTask)
 - This function return a signal of the tasks. As `runTask` has the signature of `Task.Task Http.Error ()`, then the signal has the signature of `Signal (Task.Task Http.Error ())`.
 
 #### main
