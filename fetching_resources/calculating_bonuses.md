@@ -67,7 +67,7 @@ Add `perks` and `perksPlayers` to the `ViewModel`:
 
 ```elm
 type alias ViewModel =
-  { player : Player
+  { players : List Player
   , perks : List Perk
   , perksPlayers : List PerkPlayer
   }
@@ -84,6 +84,8 @@ playerRow address model player =
 
     strength =
       bonuses + player.level
+  in
+    ...
 ```
 
 ## Players Edit
