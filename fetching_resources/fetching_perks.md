@@ -279,7 +279,7 @@ update action model =
 
 ## Main Actions
 
-__src/Actions.elm__ needs to include actions for perks and perksPlayers:
+The main actions need to include actions for perks and perksPlayers. In __src/Actions.elm__ add:
 
 ```elm
 ...
@@ -293,7 +293,33 @@ import PerksPlayers.Actions
 
 ## Main Models
 
+Our main application model needs to have a list for players and a list for perksPlayers. In __src/Models.elm__ add:
 
+```elm
+...
+import Perks.Models exposing (Perk)
+import PerksPlayers.Models exposing (PerkPlayer)
+
+type alias AppModel =
+  { players : List Player
+  , perks : List Perk
+  , perksPlayers : List PerkPlayer
+  , routing : Routing.Model
+  , errorMessage : String
+  }
+
+
+initialModel : AppModel
+initialModel =
+  { players = []
+  , perks = []
+  , perksPlayers = []
+  , routing = Routing.initialModel
+  , errorMessage = ""
+  }
+```
+
+We added `perks` and `perksPlayers`.
 
 ## Main Update
 
