@@ -44,7 +44,7 @@
    * [Showing Errors 1](fetching_resources/showing_errors.md)
    * [Showing Errors 2](fetching_resources/showing_errors_2.md)
    * [Showing Errors 3](fetching_resources/showing_errors_3.md)
-   * [Fetching perks](fetching_resources/fetching_perks.md)
+   * [Fetching the rest](fetching_resources/fetching_perks.md)
    * Calculating bonuses
 * Add and Delete
    * Add a player
