@@ -6,6 +6,8 @@ Now that we are fetching all the resources we can properly calculate the bonuses
 
 Let's add a few functions to calculate the bonuses for a player. Create a new module in __src/PerksPlayers/Utils.elm__:
 
+<https://github.com/sporto/elm-tutorial-app/blob/0530-calc-bonuses/src/PerksPlayers/Utils.elm>
+
 ```elm
 module PerksPlayers.Utils (..) where
 
@@ -49,6 +51,27 @@ bonusesForPlayerId perksPlayers perks playerId =
 ## Players List
 
 Let's call this function from __src/Players/List.elm__:
+
+<https://github.com/sporto/elm-tutorial-app/blob/0530-calc-bonuses/src/Players/List.elm>
+
+Add some imports:
+
+```elm
+...
+import Perks.Models exposing (Perk)
+import PerksPlayers.Models exposing (PerkPlayer)
+import PerksPlayers.Utils exposing (bonusesForPlayerId)
+```
+
+Add `perks` and `perksPlayers` to the `ViewModel`:
+
+```elm
+type alias ViewModel =
+  { player : Player
+  , perks : List Perk
+  , perksPlayers : List PerkPlayer
+  }
+```
 
 
 
