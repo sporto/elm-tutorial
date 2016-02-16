@@ -151,4 +151,17 @@ addBtn address model =
     ]
  ```
 
-This renders a button that when clicked send the `CreatePlayer` action.
+This renders a button that when clicked send the `CreatePlayer` action. Which trigger the effect to create the player in `Players.Update`.
+
+And add the button to the navigation in this module:
+
+```
+...
+nav : Signal.Address Action -> ViewModel -> Html.Html
+nav address model =
+  div
+    [ class "clearfix mb2 white bg-black" ]
+    [ div [ class "left p2" ] [ text "Players" ]
+    , div [ class "right p1" ] [ addBtn address model ]
+    ]
+```
