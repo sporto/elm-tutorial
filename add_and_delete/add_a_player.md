@@ -12,5 +12,9 @@ Add two new actions to __src/Players/Actions.elm__
   | CreatePlayerDone (Result Http.Error Player)
 ```
 
-`CreatePlayer` will trigger the creation of a new player and `CreatePlayerDone` will be called when we get a return from the api.
+`CreatePlayer` will trigger the creation of a new player and `CreatePlayerDone` will be called when we get a return from the API.
+
+## Players Effects
+
+
 
