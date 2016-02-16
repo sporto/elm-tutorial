@@ -131,3 +131,5 @@ Add another branch for `CreatePlayerDone`:
 
 - Also after we added the player we want to navigate to the edit player view. So we return an effect to do this with `Task.succeed (EditPlayer player.id) |> Effects.task`
 
+- In case of error we get `Err error`. We then follow the pattern we had before to show errors in the main view.
+
