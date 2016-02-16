@@ -78,5 +78,19 @@ This function maps the attributes of the `player` record to Json values.
 
 ## Players Update
 
-We need __src/Players/Update.elm__ to account for the new actions created.
+We need __src/Players/Update.elm__ to account for the new actions created. Add some imports:
+
+```elm
+...
+import Task
+import Players.Effects exposing (..)
+```
+
+Add one branch for `CreatePlayer`:
+
+```elm
+    CreatePlayer ->
+      ( model.players, create new )
+
+```
 
