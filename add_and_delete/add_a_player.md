@@ -145,7 +145,7 @@ In __src/Players/List.elm__ add:
 addBtn : Signal.Address Action -> ViewModel -> Html.Html
 addBtn address model =
   button
-    [ class "btn", onClick address (CreatePlayer) ]
+    [ class "btn", onClick address CreatePlayer ]
     [ i [ class "fa fa-user-plus mr1" ] []
     , text "Add player"
     ]
