@@ -47,7 +47,7 @@
    * [Fetching the rest](fetching_resources/fetching_perks.md)
    * [Calculating bonuses](fetching_resources/calculating_bonuses.md)
 * [Add and Delete](add_and_delete/cover.md)
-   * Add a player
+   * [Add a player](add_and_delete/add_a_player.md)
    * Delete a player
    * Using ports
 * Edit
