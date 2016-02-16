@@ -133,3 +133,21 @@ Add another branch for `CreatePlayerDone`:
 
 - In case of error we get `Err error`. We then follow the pattern we had before to show errors in the main view.
 
+## Players List
+
+Finally, let's add the add player button to the players' list.
+
+In __src/Players/List.elm__ add:
+
+```elm
+...
+
+addBtn : Signal.Address Action -> ViewModel -> Html.Html
+addBtn address model =
+  button
+    [ class "btn", onClick address (CreatePlayer) ]
+    [ i [ class "fa fa-user-plus mr1" ] []
+    , text "Add player"
+    ]
+ ```
+
