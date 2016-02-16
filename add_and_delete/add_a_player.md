@@ -76,3 +76,7 @@ memberEncoded player =
 
 This function maps the attributes of the `player` record to Json values.
 
+## Players Update
+
+We need __src/Players/Update.elm__ to account for the new actions created.
+
