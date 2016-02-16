@@ -93,5 +93,5 @@ Add one branch for `CreatePlayer`:
       ( model.players, create new )
 ```
 
-This branch returns the `create` effect from `Players.Effects` we added above.
+This branch returns the `create` effect from `Players.Effects` we added before. `new` comes from `Players.Models`.
 
