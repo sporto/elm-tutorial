@@ -151,3 +151,4 @@ addBtn address model =
     ]
  ```
 
+This renders a button that when clicked send the `CreatePlayer` action.
