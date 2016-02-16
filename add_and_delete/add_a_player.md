@@ -123,6 +123,7 @@ Add another branch for `CreatePlayerDone`:
                 |> Effects.map TaskDone
           in
             ( model.players, fx )
-
 ```
+
+- `result` 
 
