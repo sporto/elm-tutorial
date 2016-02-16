@@ -72,6 +72,7 @@ memberEncoded player =
   in
     list
       |> Encode.object
-
 ```
+
+This function maps the attributes of the `player` record to Json values.
 
