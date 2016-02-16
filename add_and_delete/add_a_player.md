@@ -59,6 +59,19 @@ We create the body of the request by encoding the given player record with `memb
 Add ` memberEncoded` to this module:
 
 ```elm
+...
+
+memberEncoded : Player -> Encode.Value
+memberEncoded player =
+  let
+    list =
+      [ ( "id", Encode.int player.id )
+      , ( "name", Encode.string player.name )
+      , ( "level", Encode.int player.level )
+      ]
+  in
+    list
+      |> Encode.object
 
 ```
 
