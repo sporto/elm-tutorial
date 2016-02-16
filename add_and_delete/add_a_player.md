@@ -54,5 +54,11 @@ createUrl =
 
 `create` takes a `Player` record and returns an effect. At the moment there is no `post` function in the Http module so we need to use `send` instead. Read more about `send` [here](http://package.elm-lang.org/packages/evancz/elm-http/3.0.0/Http).
 
-We create the body of the request by encoding the given player record with a `memberEncoder` that we will define next. `Json.Encode.encode` takes an argument for the indentation in the produced json string and the 
+We create the body of the request by encoding the given player record with `memberEncoded` that we will define next. `Json.Encode.encode` takes an argument for the indentation in the produced JSON string and a `Json.Encode.Value` which `memberEncoded` returns.
+
+Add ` memberEncoded` to this module:
+
+```elm
+
+```
 
