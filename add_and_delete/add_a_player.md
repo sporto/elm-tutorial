@@ -91,6 +91,7 @@ Add one branch for `CreatePlayer`:
 ```elm
     CreatePlayer ->
       ( model.players, create new )
-
 ```
+
+This branch returns the `create` effect from `Players.Effects` we added above.
 
