@@ -46,7 +46,7 @@
    * [Showing Errors 3](fetching_resources/showing_errors_3.md)
    * [Fetching the rest](fetching_resources/fetching_perks.md)
    * [Calculating bonuses](fetching_resources/calculating_bonuses.md)
-* Add and Delete
+* [Add and Delete](add_and_delete/cover.md)
    * Add a player
    * Delete a player
    * Using ports
