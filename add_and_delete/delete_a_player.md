@@ -48,7 +48,7 @@ deleteBtn address player =
 
 This renders a button that when clicked sends the `DeletePlayerIntent` action with the player as payload to the StartApp address.
 
-Add the button the list in `playerRow`:
+Add the button to the list in `playerRow`:
 
 ```elm
 ...
