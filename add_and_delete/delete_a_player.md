@@ -52,8 +52,17 @@ deleteTask playerId =
   in
     Http.send Http.defaultSettings config
       |> Http.fromJson (Decode.succeed ())
+```
 
+`deleteTask` takes a player id and returns a task to delete the player.
 
+`Http.send` returns a task of type `Task.Task Http.RawError Http.Response`. But for consistency with other functions we want `Task.Task Http.Error a` where `a` is the returned Json.
+
+`Http.fromJson (Decode.succeed ())` will parse the returned body into Json and return a type of type `Task.Task Http.Error a`
+
+In the same file also add:
+
+```elm
 delete : PlayerId -> Effects Action
 delete playerId =
   deleteTask playerId
@@ -61,14 +70,6 @@ delete playerId =
     |> Task.map (DeletePlayerDone playerId)
     |> Effects.task
 ```
-
-### deleteTask
-
-`deleteTask` takes a player id and returns a task to delete the player.
-
-`Http.send` returns a task of type `Task.Task Http.RawError Http.Response`. But for consistency with other functions we want `Task.Task Http.Error a` where `a` is the returned Json.
-
-`Http.fromJson (Decode.succeed ())`
 
 ## Players List
 
