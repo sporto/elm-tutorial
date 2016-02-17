@@ -62,6 +62,9 @@ delete playerId =
     |> Effects.task
 ```
 
+### deleteTask
+- `deleteTask` takes a player id and returns a task to delete the player. We use `Http
+
 ## Players List
 
 ## Players Update
