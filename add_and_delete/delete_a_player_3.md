@@ -45,6 +45,8 @@ This is how __src/Main.elm__ looks at this point <https://github.com/sporto/elm-
  
 Now we get the message back from JavaScript and we map it to the `DeletePlayer` players action.
 
+## Players Update
+
 Let's add the code in __src/Players/Update.elm__ to respond to this action, add a new branch:
 
 ```elm
