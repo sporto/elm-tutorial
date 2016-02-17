@@ -67,4 +67,4 @@ playerRow address model player =
 ```
 ---
 
-We have new actions, the `delete` effect and a delete button. In the next section we will add the code for responding to the actions.
+We have new actions and a delete button. In the next section we will add the code for responding to the actions.
