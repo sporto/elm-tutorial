@@ -176,4 +176,6 @@ Then we filter that player out.
 
 Upon clicking delete:
 
-- 
+
+
+Up to this point your application code should look like 
