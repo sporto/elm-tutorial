@@ -100,3 +100,7 @@ delete playerId =
 ```
 
 This takes the previous `deleteTask`, converts the result of the task to a `Result` type. Then wraps the result with the `DeletePlayerDone` action and finally converts it to an effect.
+
+## Players Update
+
+
