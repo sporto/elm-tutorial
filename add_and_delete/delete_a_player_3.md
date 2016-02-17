@@ -54,4 +54,4 @@ Let's add the code in __src/Players/Update.elm__ to respond to this action, add 
       ( model.players, delete playerId )
 ```
 
-This returns the `delete` effect we created before.
+This returns a `delete` effect we will add next.
