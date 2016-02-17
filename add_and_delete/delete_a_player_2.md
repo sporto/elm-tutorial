@@ -83,6 +83,8 @@ port askDeleteConfirmation =
 
 ## index.js
 
+In __src/index.js__ we want to subscribe to this port.
+
 
 
 
