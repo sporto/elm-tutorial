@@ -10,3 +10,17 @@ Add a new port to __src/Main.elm__ so we can get the inbound message:
 port getDeleteConfirmation : Signal Int
 ```
 
+And map this port to a signal:
+
+```
+getDeleteConfirmationSignal : Signal Actions.Action
+getDeleteConfirmationSignal =
+  let
+    toAction id =
+      id
+        |> Players.Actions.DeletePlayer
+        |> PlayersAction
+  in
+    Signal.map toAction getDeleteConfirmation
+```
+
