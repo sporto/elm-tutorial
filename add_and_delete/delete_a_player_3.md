@@ -30,5 +30,14 @@ At the end we finish up with a signal that emits `PlayersAction (Players.Actions
 
 This signal needs to be an input to `app`:
 
-
+```elm
+app : StartApp.App AppModel
+app =
+  StartApp.start
+    { init = init
+    , inputs = [ routerSignal, actionsMailbox.signal, getDeleteConfirmationSignal ]
+    , update = update
+    , view = view
+    }
+ ```
 
