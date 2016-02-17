@@ -24,3 +24,7 @@ getDeleteConfirmationSignal =
     Signal.map toAction getDeleteConfirmation
 ```
 
+Here messages coming from `getDeleteConfirmation` as wrapped as with `Players.Actions.DeletePlayer` first and then `PlayersAction`. 
+
+At the end we end up with a signal that emits `PlayersAction Players.Actions.DeletePlayer playerId`
+
