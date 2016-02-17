@@ -51,3 +51,5 @@ Let's add the code in __src/Players/Update.elm__ to respond to this action, add 
     DeletePlayer playerId ->
       ( model.players, delete playerId )
 ```
+
+This returns the `delete` effect we created before.
