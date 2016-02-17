@@ -96,6 +96,10 @@ app.ports.askDeleteConfirmation.subscribe(function (args) {
 })
 ```
 
+---
+
+Up to this point
+
 
 
 
