@@ -34,6 +34,20 @@ Add the following actions to __src/Players/Actions.elm:
 
 In __src/Players/List.elm__ we want to have a button that triggers `DeletePlayerIntent`.
 
+Add a new function:
+
+```elm
+deleteBtn : Signal.Address Action -> Player -> Html.Html
+deleteBtn address player =
+  button
+    [ class "btn regular mr1"
+    , onClick address (DeletePlayerIntent player)
+    ]
+    [ i [ class "fa fa-trash mr1" ] [], text "Delete" ]
+```
+
+This renders a button that when clicked sends the `DeletePlayerIntent` action with the player as payload.
+
 ## Players Effects
 
 Next, add the effects to delete the player. Add this to __src/Players/Effects.elm__:
