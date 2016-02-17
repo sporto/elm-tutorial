@@ -178,4 +178,4 @@ Upon clicking delete:
 
 
 
-Up to this point your application code should look like 
+Up to this point your application code should look like <https://github.com/sporto/elm-tutorial-app/tree/0610-delete-player>
