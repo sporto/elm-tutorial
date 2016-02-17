@@ -49,8 +49,8 @@
 * [Add and Delete](add_and_delete/cover.md)
    * [Add a player](add_and_delete/add_a_player.md)
    * [Delete a player 1](add_and_delete/delete_a_player.md)
-   * Delete a player 3
    * [Delete a player 2](add_and_delete/delete_a_player_2.md)
+   * Delete a player 3
    * Using ports
 * Edit
    * Change level
