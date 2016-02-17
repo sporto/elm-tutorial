@@ -14,7 +14,7 @@ type alias UpdateModel =
   }
 ```
 
-We now require a `deleteConfirmationAddress`.
+We now require a `deleteConfirmationAddress` where to send the confirmation request.
 
 And add a new branch to `update`:
 
