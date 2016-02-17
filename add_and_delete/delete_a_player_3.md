@@ -10,7 +10,15 @@ Add a new port to __src/Main.elm__ so we can get the inbound message:
 port getDeleteConfirmation : Signal Int
 ```
 
-And map this port to a signal:
+## Index.js
+
+In the JavaScript side we need to send a message upon confirmation to this port:
+
+
+
+## getDeleteConfirmationSignal
+
+Back in __src/main.elm__ map the `getDeleteConfirmation` port to a signal:
 
 ```
 getDeleteConfirmationSignal : Signal Actions.Action
@@ -44,6 +52,7 @@ app =
 This is how __src/Main.elm__ looks at this point <https://github.com/sporto/elm-tutorial-app/blob/0610-delete-player/src/Main.elm>
  
 Now we get the message back from JavaScript and we map it to the `DeletePlayer` players action.
+
 
 ## DeletePlayer
 
