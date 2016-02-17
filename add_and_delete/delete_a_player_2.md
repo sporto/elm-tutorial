@@ -50,7 +50,18 @@ askDeleteConfirmationMailbox =
 
 In __src/Update__ import this mailbox and pass it to `Players.Update`:
 
+```elm
+    ...
+    PlayersAction subAction ->
+      let
+        updateModel =
+          { players = model.players
+          , showErrorAddress = Signal.forwardTo actionsMailbox.address ShowError
+          , deleteConfirmationAddress = askDeleteConfirmationMailbox.address
+          }
+```
 
+We don't need to add an import as we already have `import Mailboxes exposing (..)`.
 
 ## Main
 
