@@ -85,7 +85,16 @@ port askDeleteConfirmation =
 
 ## index.js
 
-In __src/index.js__ we want to subscribe to this port.
+In __src/index.js__ we want to subscribe to this port. Add:
+
+```elm
+app.ports.askDeleteConfirmation.subscribe(function (args) {
+  console.log('askDeleteConfirmation', args);
+  var id = args[0];
+  var message = args[1];
+  var response = window.confirm(message);
+})
+```
 
 
 
