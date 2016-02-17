@@ -14,7 +14,9 @@ port getDeleteConfirmation : Signal Int
 
 In the JavaScript side we need to send a message upon confirmation to this port:
 
+```elm
 
+```
 
 ## getDeleteConfirmationSignal
 
