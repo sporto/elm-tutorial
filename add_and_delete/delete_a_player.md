@@ -30,4 +30,20 @@ Add the following actions to __src/Players/Actions.elm:
 
 - `DeletePlayerDone` will trigger after the delete request to the server. This action has to arguments the playerId and the result from the server. We don't need the actual body from the response so we use `()`. As long as the result is `Ok` we will know that the deletion was successful.
 
+## Players Effects
 
+Next, add the effects to delete the player. Add this to __src/Players/Effects.elm__:
+
+
+
+## Players List
+
+## Players Update
+
+## Main
+
+## Mailbox
+
+## Update
+
+## index.js
