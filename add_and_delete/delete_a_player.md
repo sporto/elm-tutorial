@@ -21,3 +21,5 @@ Add the following actions to __src/Players/Actions.elm:
   | DeletePlayer PlayerId
   | DeletePlayerDone PlayerId (Result Http.Error ())
 ```
+
+`DeletePlayerIntent` will be triggered when hitting the Delete button
