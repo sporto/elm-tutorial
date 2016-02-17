@@ -48,6 +48,22 @@ deleteBtn address player =
 
 This renders a button that when clicked sends the `DeletePlayerIntent` action with the player as payload to the StartApp address.
 
+Add the button the list in `playerRow`:
+
+```elm
+...
+playerRow address model player =
+    ...
+  in
+      ...
+      , td
+          []
+          [ editBtn address player
+          , deleteBtn address player
+          ]
+      ]
+```
+
 ## Players Effects
 
 Next, add the effects to delete the player. Add this to __src/Players/Effects.elm__:
