@@ -58,7 +58,7 @@ deleteTask playerId =
 
 `Http.send` returns a task of type `Task.Task Http.RawError Http.Response`. But for consistency with other functions we want `Task.Task Http.Error a` where `a` is the returned Json.
 
-`Http.fromJson (Decode.succeed ())` will parse the returned body into Json and return a type of type `Task.Task Http.Error a` which is what we want.
+`Http.fromJson decoder` will parse the returned body into Json and return a type of type `Task.Task Http.Error a` which is what we want. We don't care about the returned body so we use `(Decode.succeed ())` as the decoder. This is a decoder that always succeeds and returns empty. So here we are using `Http.fromJson` just for the effect of converting the task to `Task.Task Http.Error a`.
 
 In the same file also add:
 
