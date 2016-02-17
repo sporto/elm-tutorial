@@ -68,6 +68,8 @@ delete playerId =
 
 `Http.send` returns a task of type `Task.Task Http.RawError Http.Response`. But for consistency with other functions we want `Task.Task Http.Error a` where `a` is the returned Json.
 
+`Http.fromJson (Decode.succeed ())`
+
 ## Players List
 
 ## Players Update
