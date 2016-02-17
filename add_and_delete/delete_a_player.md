@@ -111,6 +111,11 @@ delete playerId =
 
 This takes the previous `deleteTask`, converts the result of the task to a `Result` type. Then wraps the result with the `DeletePlayerDone` action and finally converts it to an effect.
 
+---
+
+We have new actions, the `delete` effect and a delete button. In the next section we will add the code for responding to the actions.
+
+
 ## Players Update
 
 __src/Players/Update__ needs to account for the actions we added. For now let's just add `DeletePlayerIntent` so we follow the application flow:
