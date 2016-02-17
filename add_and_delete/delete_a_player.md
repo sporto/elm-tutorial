@@ -10,3 +10,14 @@ The steps for this will be:
 - If the user clicks yes we send a message to Elm via another port
 - This inbound port triggers an action `DeletePlayer`
 - This action triggers the actual deletion
+
+## Players Actions
+
+Add the following actions to __src/Players/Actions.elm:
+
+```elm
+...
+  | DeletePlayerIntent Player
+  | DeletePlayer PlayerId
+  | DeletePlayerDone PlayerId (Result Http.Error ())
+```
