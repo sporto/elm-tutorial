@@ -36,11 +36,27 @@ When `DeletePlayerIntent` is triggered we respond with an effect to send a messa
 
 We need to provide this `deleteConfirmationAddress` to update.
 
-## Main
-
 ## Mailbox
 
+In __src/Mailbox.elm__ add a new mailbox for the confirmation request:
+
+```elm
+askDeleteConfirmationMailbox : Signal.Mailbox ( Int, String )
+askDeleteConfirmationMailbox =
+  Signal.mailbox ( 0, "" )
+```
+
 ## Update
+
+In __src/Update__ import this mailbox and pass it to `Players.Update`:
+
+
+
+## Main
+
+
+
+
 
 ## index.js
 
