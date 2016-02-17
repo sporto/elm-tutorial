@@ -28,3 +28,7 @@ Here messages coming from `getDeleteConfirmation` as wrapped as with `Players.Ac
 
 At the end we finish up with a signal that emits `PlayersAction (Players.Actions.DeletePlayer playerId)`.
 
+This signal needs to be an input to `app`:
+
+
+
