@@ -4,6 +4,16 @@
 
 __src/Players/Update__ needs to account for the actions we added. For now let's just add `DeletePlayerIntent` so we follow the application flow. 
 
+Change the `UpdateModel` model:
+
+```elm
+type alias UpdateModel =
+  { players : List Player
+  , showErrorAddress : Signal.Address String
+  , deleteConfirmationAddress : Signal.Address ( PlayerId, String )
+  }
+```
+
 Add a new branch to `update`:
 
 ```elm
