@@ -40,4 +40,6 @@ app =
     , view = view
     }
  ```
+ 
+ This is how __src/Main.elm__ looks at this point <https://github.com/sporto/elm-tutorial-app/blob/0610-delete-player/src/Main.elm>
 
