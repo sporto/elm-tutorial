@@ -46,7 +46,7 @@ deleteBtn address player =
     [ i [ class "fa fa-trash mr1" ] [], text "Delete" ]
 ```
 
-This renders a button that when clicked sends the `DeletePlayerIntent` action with the player as payload.
+This renders a button that when clicked sends the `DeletePlayerIntent` action with the player as payload to the StartApp address.
 
 ## Players Effects
 
