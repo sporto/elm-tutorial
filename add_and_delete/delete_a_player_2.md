@@ -73,7 +73,9 @@ So
 
 ## Main
 
-In __src/Main.elm__ we want a port that sends the signal from `askDeleteConfirmationMailbox` to JavaScript:
+In Elm __ports__ are the how you communicate between JavaScript and Elm.
+
+We want a port that sends the signal from `askDeleteConfirmationMailbox` to JavaScript. In __src/Main.elm__ add:
 
 ```elm
 port askDeleteConfirmation : Signal ( Int, String )
