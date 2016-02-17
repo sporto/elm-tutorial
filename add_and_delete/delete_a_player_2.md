@@ -73,9 +73,23 @@ So
 
 ## Main
 
+In __src/Main.elm__ we want a port that sends the signal from `askDeleteConfirmationMailbox` to JavaScript:
 
-
-
+```elm
+port askDeleteConfirmation : Signal ( Int, String )
+port askDeleteConfirmation =
+  askDeleteConfirmationMailbox.signal
+```
 
 ## index.js
+
+
+
+
+
+
+
+
+
+
 
