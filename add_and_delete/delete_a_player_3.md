@@ -2,7 +2,7 @@
 
 If the user hits yes we want to send a message back to Elm to delete the player. If they hit cancel we don't send anything and nothing happens.
 
-## Main
+## getDeleteConfirmation port
 
 Add a new port to __src/Main.elm__ so we can get the inbound message:
 
@@ -45,7 +45,7 @@ This is how __src/Main.elm__ looks at this point <https://github.com/sporto/elm-
  
 Now we get the message back from JavaScript and we map it to the `DeletePlayer` players action.
 
-## Players Update
+## DeletePlayer
 
 Let's add the code in __src/Players/Update.elm__ to respond to this action, add a new branch:
 
@@ -56,7 +56,7 @@ Let's add the code in __src/Players/Update.elm__ to respond to this action, add 
 
 This returns a `delete` effect we will add next.
 
-## Players Effects
+## delete effect
 
 Next, add the effects to delete the player. Add this to __src/Players/Effects.elm__:
 
@@ -101,6 +101,6 @@ delete playerId =
 
 This takes the previous `deleteTask`, converts the result of the task to a `Result` type. Then wraps the result with the `DeletePlayerDone` action and finally converts it to an effect.
 
-## Players Update
+## DeletePlayerDone
 
 
