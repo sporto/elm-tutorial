@@ -63,7 +63,10 @@ delete playerId =
 ```
 
 ### deleteTask
-- `deleteTask` takes a player id and returns a task to delete the player. We use `Http
+
+`deleteTask` takes a player id and returns a task to delete the player.
+
+`Http.send` returns a task of type `Task.Task Http.RawError Http.Response`. But for consistency with other functions we want `Task.Task Http.Error ()`
 
 ## Players List
 
