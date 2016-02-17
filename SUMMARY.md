@@ -51,6 +51,7 @@
    * [Delete a player 1](add_and_delete/delete_a_player.md)
    * [Delete a player 2](add_and_delete/delete_a_player_2.md)
    * Using ports
+   * Delete a player 3
 * Edit
    * Change level
    * Change name
