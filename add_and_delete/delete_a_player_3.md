@@ -41,5 +41,7 @@ app =
     }
  ```
  
- This is how __src/Main.elm__ looks at this point <https://github.com/sporto/elm-tutorial-app/blob/0610-delete-player/src/Main.elm>
+This is how __src/Main.elm__ looks at this point <https://github.com/sporto/elm-tutorial-app/blob/0610-delete-player/src/Main.elm>
+ 
+Now we get the message back from JavaScript and we map it to the `DeletePlayer` players action.
 
