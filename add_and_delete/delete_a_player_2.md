@@ -14,7 +14,9 @@ type alias UpdateModel =
   }
 ```
 
-Add a new branch to `update`:
+We now require a `deleteConfirmationAddress`.
+
+And add a new branch to `update`:
 
 ```elm
     DeletePlayerIntent player ->
