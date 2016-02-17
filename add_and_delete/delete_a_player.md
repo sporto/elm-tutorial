@@ -28,6 +28,6 @@ Add the following actions to __src/Players/Actions.elm:
 
 - `DeletePlayer` will trigger after the user confirms their intention to delete the player, we just need the player id
 
-- `DeletePlayerDone` will trigger after the delete request to the server. This action has to arguments the playerId and the result from the server. We don't really need the actual body from the response so we use `()`. As long as the result is `Ok` we will know that the deletion was successful.
+- `DeletePlayerDone` will trigger after the delete request to the server. This action has to arguments the playerId and the result from the server. We don't need the actual body from the response so we use `()`. As long as the result is `Ok` we will know that the deletion was successful.
 
 
