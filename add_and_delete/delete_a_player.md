@@ -30,6 +30,10 @@ Add the following actions to __src/Players/Actions.elm:
 
 - `DeletePlayerDone` will trigger after the delete request to the server. This action has to arguments the playerId and the result from the server. We don't need the actual body from the response so we use `()`. As long as the result is `Ok` we will know that the deletion was successful.
 
+## Players List
+
+In __src/Players/List.elm__ we want to have a button that triggers `DeletePlayerIntent`.
+
 ## Players Effects
 
 Next, add the effects to delete the player. Add this to __src/Players/Effects.elm__:
@@ -74,8 +78,6 @@ delete playerId =
 ```
 
 This takes the previous `deleteTask`, converts the result of the task to a `Result` type. Then wraps the result with the `DeletePlayerDone` action and finally converts it to an effect.
-
-## Players List
 
 ## Players Update
 
