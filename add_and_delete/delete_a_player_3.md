@@ -174,3 +174,6 @@ Then we filter that player out.
 
 ## Try it
 
+Upon clicking delete:
+
+- 
