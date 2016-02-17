@@ -140,3 +140,30 @@ This takes the previous `deleteTask`, converts the result of the task to a `Resu
 
 When the `delete` effect is done `DeletePlayerDone` will be triggered. Add another branch to __src/Players/Update.elm__:
 
+```elm
+    DeletePlayerDone playerId result ->
+      case result of
+        Ok _ ->
+          let
+            notDeleted player =
+              player.id /= playerId
+
+            updatedCollection =
+              List.filter notDeleted model.players
+          in
+            ( updatedCollection, Effects.none )
+
+        Err error ->
+          let
+            message =
+              toString error
+
+            fx =
+              Signal.send model.showErrorAddress message
+                |> Effects.task
+                |> Effects.map TaskDone
+          in
+            ( model.players, fx )
+```
+
+Note how pattern match `playerId` as the first parameter of `DeletePlayerDone` instead of grabbing it form result.
