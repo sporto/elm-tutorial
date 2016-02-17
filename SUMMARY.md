@@ -48,7 +48,7 @@
    * [Calculating bonuses](fetching_resources/calculating_bonuses.md)
 * [Add and Delete](add_and_delete/cover.md)
    * [Add a player](add_and_delete/add_a_player.md)
-   * [Delete a player](add_and_delete/delete_a_player.md)
+   * [Delete a player 1](add_and_delete/delete_a_player.md)
    * Using ports
 * Edit
    * Change level
