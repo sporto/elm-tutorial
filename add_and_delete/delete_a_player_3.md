@@ -41,7 +41,6 @@ Then if the user clicks yes we send a message to the port:
   }
 ```
 
-
 ## getDeleteConfirmationSignal
 
 Back in __src/main.elm__ map the `getDeleteConfirmation` port to a signal:
@@ -138,4 +137,6 @@ This takes the previous `deleteTask`, converts the result of the task to a `Resu
 
 ## DeletePlayerDone
 
+
+When the `delete` effect is done `DeletePlayerDone` will be triggered. Add another branch to __src/Players/Update.elm__:
 
