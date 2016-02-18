@@ -53,7 +53,7 @@
    * [Try it](showing_errors/try_it.md)
 * [Adding players](add/cover.md)
    * [Actions](add/add_1.md)
-   * [Effects](add/effects.md)
+   * [Create Effect](add/effects.md)
    * [Update](add/update.md)
    * [List](add/add_2.md)
    * [Try it](add/try_it.md)
