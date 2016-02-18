@@ -87,6 +87,7 @@ port askDeleteConfirmation : Signal ( Int, String )
 port askDeleteConfirmation =
   askDeleteConfirmationMailbox.signal
 ```
+
 <https://github.com/sporto/elm-tutorial-app/blob/500-delete-player/src/Main.elm>
 
 ## index.js
@@ -101,6 +102,8 @@ app.ports.askDeleteConfirmation.subscribe(function (args) {
   var response = window.confirm(message);
 })
 ```
+
+<https://github.com/sporto/elm-tutorial-app/blob/500-delete-player/src/index.js>
 
 ---
 
