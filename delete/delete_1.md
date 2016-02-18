@@ -1,10 +1,4 @@
-# Deleting a player
-
-
-
-
-
-## Players List
+# Players List
 
 In __src/Players/List.elm__ we want to have a button that triggers `DeletePlayerIntent`.
 
