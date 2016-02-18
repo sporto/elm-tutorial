@@ -1,8 +1,10 @@
 # Players Update
 
+We created to new actions: `CreatePlayer` and `CreatePlayerDone`. We need __src/Players/Update.elm__ to account for these. 
+
 ## Respond to CreatePlayer
 
-We need __src/Players/Update.elm__ to account for the new actions created. Add some imports:
+Add some imports:
 
 ```elm
 ...
