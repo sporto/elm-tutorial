@@ -1,6 +1,6 @@
 # Planning
 
-We will build an application that tracks an imaginary roll playing game.
+We will build an application to track an imaginary role playing game.
 
 This application will demonstrate:
 
