@@ -1,4 +1,4 @@
-# Add and Delete
+# Add players
 
 This chapter cover adding and deleting players.
 
