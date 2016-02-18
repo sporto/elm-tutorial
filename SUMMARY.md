@@ -59,6 +59,7 @@
    * [Try it](add/try_it.md)
 * [Deleting players](delete/cover.md)
    * [Plan](delete/plan.md)
+   * Players Actions
    * [Playes Actions and List](delete/delete_1.md)
    * [Players Update](delete/delete_2.md)
    * [Mailbox and Main](delete/mailbox_and_main.md)
@@ -66,7 +67,6 @@
    * [Delete effect](delete/delete_effect.md)
    * [DeletePlayerDone](delete/deleteplayerdone.md)
    * [Try it](delete/try_it.md)
-   * Players Actions
 * Edit
    * Change level
    * Change name
