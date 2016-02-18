@@ -62,6 +62,7 @@
    * [Players Update](delete/delete_2.md)
    * [Mailbox and Main](delete/mailbox_and_main.md)
    * [Delete 3](delete/delete_3.md)
+   * Getting confirmation
 * Edit
    * Change level
    * Change name
