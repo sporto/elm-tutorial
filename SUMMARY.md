@@ -65,6 +65,7 @@
    * [Delete effect](delete/delete_effect.md)
    * [DeletePlayerDone](delete/deleteplayerdone.md)
    * [Try it](delete/try_it.md)
+   * Plan
 * Edit
    * Change level
    * Change name
