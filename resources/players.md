@@ -2,10 +2,6 @@
 
 Let's create some content for our application. We will create a list of players. 
 
-We will organise our application structure by the name of the resources in our application. Our application only has one resource `Players` So there will be only one sub-folder.  
-
-
-
 The `Players` folder will have modules for the components of the Elm architeture, just like what we did with the main level:
 
 - Players/Actions.elm
