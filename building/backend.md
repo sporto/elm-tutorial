@@ -35,7 +35,7 @@ server.listen(4000)
 ```
 
 Add __db.json__ at the root.
-You can grab a copy from here <https://github.com/sporto/elm-tutorial-app/blob/0100-fake-api/db.json>
+You can grab a copy from here <https://github.com/sporto/elm-tutorial-app/blob/010-fake-api/db.json>
 
 ```
 {
@@ -60,4 +60,4 @@ Test this fake API by browsing to:
 - <http://localhost:4000/players>
 
 At this stage your app should look like:
-<https://github.com/sporto/elm-tutorial-app/tree/0100-fake-api>
+<https://github.com/sporto/elm-tutorial-app/tree/010-fake-api>

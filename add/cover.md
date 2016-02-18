@@ -2,7 +2,7 @@
 
 This chapter cover adding new players.
 
-Up to this point your application code looks like <https://github.com/sporto/elm-tutorial-app/tree/0510-errors>
+Up to this point your application code looks like <https://github.com/sporto/elm-tutorial-app/tree/350-errors>
 
 
 

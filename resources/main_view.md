@@ -36,4 +36,4 @@ Also note how we create the necessary `viewModel` to pass to `Players.List.view`
 
 When you run the application you should see a list with one user.
 
-The application should look like <https://github.com/sporto/elm-tutorial-app/tree/0200-players>
+The application should look like <https://github.com/sporto/elm-tutorial-app/tree/100-players>

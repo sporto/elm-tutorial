@@ -3,7 +3,7 @@
 
 Our main application view needs to show different pages as we change the browser location. Change __src/View.elm__ to:
 
-<https://github.com/sporto/elm-tutorial-app/blob/0400-routing/src/View.elm>
+<https://github.com/sporto/elm-tutorial-app/blob/200-routing/src/View.elm>
 
 ```elm
 module View (..) where
