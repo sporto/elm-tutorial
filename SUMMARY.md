@@ -53,9 +53,6 @@
 * Edit
    * Change level
    * Change name
-* Associations
-   * Showing associations
-   * Edit association
 * Tips and Tricks
    * [Signal map with always](tips-tricks/signal_map_with_always.md)
 
