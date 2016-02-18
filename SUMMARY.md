@@ -44,7 +44,6 @@
    * [Showing Errors 1](fetching_resources/showing_errors.md)
    * [Showing Errors 2](fetching_resources/showing_errors_2.md)
    * [Showing Errors 3](fetching_resources/showing_errors_3.md)
-   * [Calculating bonuses](fetching_resources/calculating_bonuses.md)
 * [Add and Delete](add_and_delete/cover.md)
    * [Add a player](add_and_delete/add_a_player.md)
    * [Delete a player 1](add_and_delete/delete_a_player.md)
