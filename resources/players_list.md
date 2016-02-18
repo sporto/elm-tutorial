@@ -47,8 +47,6 @@ list address model =
                 [ th [] [ text "Id" ]
                 , th [] [ text "Name" ]
                 , th [] [ text "Level" ]
-                , th [] [ text "Bonus" ]
-                , th [] [ text "Strengh" ]
                 , th [] [ text "Actions" ]
                 ]
             ]
@@ -59,25 +57,15 @@ list address model =
 
 playerRow : Signal.Address Action -> ViewModel -> Player -> Html.Html
 playerRow address model player =
-  let
-    bonuses =
-      999
-
-    strength =
-      bonuses + player.level
-  in
-    tr
-      []
-      [ td [] [ text (toString player.id) ]
-      , td [] [ text player.name ]
-      , td [] [ text (toString player.level) ]
-      , td [] [ text (toString bonuses) ]
-      , td [] [ text (toString strength) ]
-      , td
-          []
-          []
-      ]
-
+  tr
+    []
+    [ td [] [ text (toString player.id) ]
+    , td [] [ text player.name ]
+    , td [] [ text (toString player.level) ]
+    , td
+        []
+        []
+    ]
 ```
 
 This view shows a list of users. 
@@ -85,7 +73,3 @@ This view shows a list of users.
 #### ViewModel
 
 This view expects a `ViewModel` as model. Why not just pass a list of users? That would be fine for many cases, but often in your views you might need additional data. By creating a view model we allow space to evolve without having to refactor too much later.
-
-Also note:
-
-- `bonuses` is hardcoded to `999` for now, we will need to get this from other models.
