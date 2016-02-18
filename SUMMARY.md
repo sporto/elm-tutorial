@@ -46,6 +46,7 @@
    * [Messages outlet](showing_errors/messages_outlet.md)
    * [Main Actions](showing_errors/main_actions.md)
    * [Players Update](showing_errors/players_update.md)
+   * Auxiliary mailbox
 * [Adding players](add/cover.md)
    * [Actions](add/add_1.md)
    * [Effects](add/effects.md)
