@@ -47,7 +47,7 @@
 * [Adding players](add/cover.md)
    * [Add 1](add/add_1.md)
    * [Add 2](add/add_2.md)
-* [Delete](delete/cover.md)
+* [Deleting players](delete/cover.md)
    * [Delete 1](delete/delete_1.md)
    * [Delete 2](delete/delete_2.md)
    * [Delete 3](delete/delete_3.md)
