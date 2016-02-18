@@ -69,7 +69,7 @@ We don't need to add an import as we already have `import Mailboxes exposing (..
 <https://github.com/sporto/elm-tutorial-app/blob/500-delete-player/src/Update.elm>
 ---
 
-So 
+So far
 
 - We have a mailbox for delete confirmation requests
 - we pass its address to Players.Update
