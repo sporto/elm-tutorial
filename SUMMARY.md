@@ -46,6 +46,7 @@
    * [Showing Errors 3](fetching_resources/showing_errors_3.md)
 * Showing Errors
    * [Messages outlet](showing_errors/messages_outlet.md)
+   * Main actions
 * [Adding players](add/cover.md)
    * [Actions](add/add_1.md)
    * [Effects](add/effects.md)
