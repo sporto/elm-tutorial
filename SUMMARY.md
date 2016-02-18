@@ -41,7 +41,7 @@
    * [Navigation from Edit to List](routing/navigation_from_edit_to_list.md)
 * [Fetching resources](fetching_resources/cover.md)
    * [Players Actions and Update](fetching_resources/players_actions_and_update.md)
-   * Players Effects
+   * [Players Effects](fetching_resources/players_effects.md)
    * [Fetching players](fetching_resources/fetching_players.md)
 * [Showing Errors](showing_errors/cover.md)
    * [Messages outlet](showing_errors/messages_outlet.md)
