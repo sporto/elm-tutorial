@@ -106,6 +106,9 @@ This update doesn't do anything at the moment. Also note how it follows the patt
 This is the basic pattern that all resources in our application will follow.
 
 ```
+Actions
+Models
+Update
 Players
     Actions
     Models
