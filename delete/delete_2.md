@@ -66,6 +66,7 @@ In __src/Update__ import this mailbox and pass it to `Players.Update`:
 
 We don't need to add an import as we already have `import Mailboxes exposing (..)`.
 
+<https://github.com/sporto/elm-tutorial-app/blob/500-delete-player/src/Update.elm>
 ---
 
 So 
