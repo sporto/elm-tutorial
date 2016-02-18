@@ -1,4 +1,4 @@
-# Delete
+# Deleting players
 
 This chapter covers deleting players.
 
