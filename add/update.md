@@ -4,6 +4,8 @@ We created to new actions: `CreatePlayer` and `CreatePlayerDone`. We need __src/
 
 ## Respond to CreatePlayer
 
+`CreatePlayer` will be called when the user hits the add player button. This action will trigger an effect to create the player on the API.
+
 Add some imports:
 
 ```elm
