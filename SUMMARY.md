@@ -49,6 +49,7 @@
    * [Effects](add/effects.md)
    * [Update](add/update.md)
    * [List](add/add_2.md)
+   * Try it
 * [Deleting players](delete/cover.md)
    * [Delete 1](delete/delete_1.md)
    * [Delete 2](delete/delete_2.md)
