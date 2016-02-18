@@ -46,7 +46,7 @@
    * [Showing Errors 3](fetching_resources/showing_errors_3.md)
 * [Adding players](add/cover.md)
    * [Actions](add/add_1.md)
-   * Effects
+   * [Effects](add/effects.md)
    * [Add 2](add/add_2.md)
 * [Deleting players](delete/cover.md)
    * [Delete 1](delete/delete_1.md)
