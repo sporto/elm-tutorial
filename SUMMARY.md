@@ -46,7 +46,7 @@
    * [Showing Errors 3](fetching_resources/showing_errors_3.md)
 * [Add](add_and_delete/cover.md)
    * [Add 1](add_and_delete/add_a_player.md)
-   * [Add player 2](add_and_delete/add_player_2.md)
+   * [Add 2](add_and_delete/add_player_2.md)
    * [Delete a player 2](add_and_delete/delete_a_player_2.md)
    * [Delete a player 3](add_and_delete/delete_a_player_3.md)
 * Delete
