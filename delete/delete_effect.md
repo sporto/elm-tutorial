@@ -1,4 +1,4 @@
-# Delete effect
+# Responding to DeletePlayer
 
 ## DeletePlayer Action
 
