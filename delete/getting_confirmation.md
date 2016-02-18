@@ -1,5 +1,7 @@
 # Getting confirmation
 
+We create a `askDeleteConfirmationMailbox` where to send request for confirmation to delete a player. This mailbox is connected to a port that send the message to JavaScript. When the JavaScript side receives a message (via this port) it opens a confirmation dialogue
+
 If the user hits yes we want to send a message back to Elm to delete the player. If they hit cancel we don't send anything and nothing happens.
 
 ## getDeleteConfirmation port
