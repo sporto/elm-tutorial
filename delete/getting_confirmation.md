@@ -6,7 +6,7 @@ When the JavaScript side receives a message (via this port) it opens a confirmat
 
 ## getDeleteConfirmation port
 
-Add a new port to __src/Main.elm__ so we can get the inbound message:
+Add a new port to __src/Main.elm__ so we can get the inbound message from JavaScript:
 
 ```elm
 port getDeleteConfirmation : Signal Int
