@@ -44,7 +44,7 @@
    * [Players Effects](fetching_resources/players_effects.md)
    * [Main](fetching_resources/main.md)
    * [Fetching players](fetching_resources/fetching_players.md)
-   * Try it
+   * [Try it](fetching_resources/try_it.md)
 * [Showing Errors](showing_errors/cover.md)
    * [Messages outlet](showing_errors/messages_outlet.md)
    * [Main Actions](showing_errors/main_actions.md)
