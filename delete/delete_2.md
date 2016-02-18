@@ -4,6 +4,8 @@
 
 __src/Players/Update__ needs to account for the actions we added. For now let's just add `DeletePlayerIntent` so we follow the application flow. 
 
+<https://github.com/sporto/elm-tutorial-app/blob/500-delete-player/src/Players/Update.elm>
+
 Change the `UpdateModel` model:
 
 ```elm
@@ -45,6 +47,7 @@ askDeleteConfirmationMailbox : Signal.Mailbox ( Int, String )
 askDeleteConfirmationMailbox =
   Signal.mailbox ( 0, "" )
 ```
+<https://github.com/sporto/elm-tutorial-app/blob/500-delete-player/src/Mailboxes.elm>
 
 ## Update
 
