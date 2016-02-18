@@ -55,7 +55,7 @@
    * [Actions](add/add_1.md)
    * [Create Effect](add/effects.md)
    * [Update](add/update.md)
-   * [List](add/add_2.md)
+   * [Create button in Players List](add/add_2.md)
    * [Try it](add/try_it.md)
 * [Deleting players](delete/cover.md)
    * [Plan](delete/plan.md)
