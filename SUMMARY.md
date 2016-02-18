@@ -46,6 +46,7 @@
 * Showing Errors
    * [Messages outlet](showing_errors/messages_outlet.md)
    * [Main actions](showing_errors/main_actions.md)
+   * Players Update
 * [Adding players](add/cover.md)
    * [Actions](add/add_1.md)
    * [Effects](add/effects.md)
