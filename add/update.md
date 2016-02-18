@@ -25,6 +25,8 @@ This branch returns the `create` effect from `Players.Effects` we added before. 
 
 ## Respond to CreatePlayerDone
 
+After the task to create the player is done and we have a response from the API the action `CreatePlayerDone` will be triggered.
+
 Add another branch for `CreatePlayerDone`:
 
 ```elm
