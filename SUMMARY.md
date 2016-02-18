@@ -41,7 +41,6 @@
    * [Navigation from Edit to List](routing/navigation_from_edit_to_list.md)
 * [Fetching resources](fetching_resources/cover.md)
    * [Fetching players](fetching_resources/fetching_players.md)
-   * [Showing Errors 2](fetching_resources/showing_errors_2.md)
    * [Showing Errors 3](fetching_resources/showing_errors_3.md)
 * Showing Errors
    * [Messages outlet](showing_errors/messages_outlet.md)
