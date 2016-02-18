@@ -47,7 +47,7 @@
    * [Main Actions](showing_errors/main_actions.md)
    * [Players Update](showing_errors/players_update.md)
    * [Auxiliary mailbox](showing_errors/auxiliary_mailbox.md)
-   * Main Update
+   * [Main Update](showing_errors/main_update.md)
 * [Adding players](add/cover.md)
    * [Actions](add/add_1.md)
    * [Effects](add/effects.md)
