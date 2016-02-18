@@ -58,8 +58,6 @@ node api.js
 Test this fake API by browsing to:
 
 - <http://localhost:4000/players>
-- <http://localhost:4000/perks>
-- <http://localhost:4000/perksPlayers>
 
 At this stage your app should look like:
 <https://github.com/sporto/elm-tutorial-app/tree/0100-fake-api>
