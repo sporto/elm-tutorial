@@ -44,18 +44,6 @@ You can grab a copy from here <https://github.com/sporto/elm-tutorial-app/blob/0
     { "id": 2, "name": "Lance", "level": 1 },
     { "id": 3, "name": "Aki", "level": 3 },
     { "id": 4, "name": "Maria", "level": 4 }
-  ],
-  "perks": [
-    { "id": 1, "name": "Steel armor", "strengh": 2 },
-    { "id": 2, "name": "Scroll of protection", "strengh": 2 },
-    { "id": 3, "name": "Steel sword", "strengh": 1 },
-    { "id": 4, "name": "Amulet of luck", "strengh": 1 }
-  ],
-  "perksPlayers": [
-    { "perkId": 1, "playerId": 1 },
-    { "perkId": 2, "playerId": 2 },
-    { "perkId": 3, "playerId": 3 },
-    { "perkId": 4, "playerId": 4 }
   ]
 }
 
