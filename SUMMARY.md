@@ -63,7 +63,6 @@
    * [Mailbox and Main](delete/mailbox_and_main.md)
    * [Getting confirmation](delete/getting_confirmation.md)
    * [Delete effect](delete/delete_effect.md)
-   * [Delete 3](delete/delete_3.md)
    * [DeletePlayerDone](delete/deleteplayerdone.md)
    * [Try it](delete/try_it.md)
 * Edit
