@@ -55,15 +55,17 @@ Add the button to the list in `playerRow` next to the editBtn:
 ```elm
 ...
 playerRow address model player =
-    ...
-  in
-      ...
-      , td
-          []
-          [ editBtn address player
-          , deleteBtn address player
-          ]
-      ]
+  tr
+    []
+    [ td [] [ text (toString player.id) ]
+    , td [] [ text player.name ]
+    , td [] [ text (toString player.level) ]
+    , td
+        []
+        [ editBtn address player
+        , deleteBtn address player
+        ]
+    ]
 ```
 ---
 
