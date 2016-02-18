@@ -50,10 +50,10 @@
    * [Delete a player 1](add_and_delete/delete_a_player.md)
    * [Delete a player 2](add_and_delete/delete_a_player_2.md)
    * [Delete a player 3](add_and_delete/delete_a_player_3.md)
+* Delete
 * Edit
    * Change level
    * Change name
 * Tips and Tricks
    * [Signal map with always](tips-tricks/signal_map_with_always.md)
-* Delete
 
