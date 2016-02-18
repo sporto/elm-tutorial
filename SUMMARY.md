@@ -40,8 +40,8 @@
    * [Navigation from List to Edit](routing/navigation_from_list_to_edit.md)
    * [Navigation from Edit to List](routing/navigation_from_edit_to_list.md)
 * [Fetching resources](fetching_resources/cover.md)
-   * [Fetching players](fetching_resources/fetching_players.md)
    * Players Actions and Update
+   * [Fetching players](fetching_resources/fetching_players.md)
 * [Showing Errors](showing_errors/cover.md)
    * [Messages outlet](showing_errors/messages_outlet.md)
    * [Main Actions](showing_errors/main_actions.md)
