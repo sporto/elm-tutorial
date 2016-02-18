@@ -1,13 +1,10 @@
 # The Players resource
 
-Let's create some content for our application. We will create a list of users. 
+Let's create some content for our application. We will create a list of players. 
 
-Our application have three resources:
-- Players
-- Perks
-- PerksPlayers (association between perks and players)
+We will organise our application structure by the name of the resources in our application. Our application only has one resource `Players` So there will be only one sub-folder.  
 
-We will organise our application code by the name of this resources. So there will be folders `Players`, `Perks` and `PerksPlayers`.
+
 
 The `Players` folder will have modules for the components of the Elm architeture, just like what we did with the main level:
 
