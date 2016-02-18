@@ -44,7 +44,7 @@
    * [Showing Errors 1](fetching_resources/showing_errors.md)
    * [Showing Errors 2](fetching_resources/showing_errors_2.md)
    * [Showing Errors 3](fetching_resources/showing_errors_3.md)
-* [Add and Delete](add_and_delete/cover.md)
+* [Add](add_and_delete/cover.md)
    * [Add player 1](add_and_delete/add_a_player.md)
    * [Add player 2](add_and_delete/add_player_2.md)
    * [Delete a player 1](add_and_delete/delete_a_player.md)
