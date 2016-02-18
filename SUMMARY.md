@@ -62,7 +62,7 @@
    * [Players Actions](delete/players_actions.md)
    * [Delete button on Players List](delete/delete_1.md)
    * [Responding to DeletePlayerIntent](delete/delete_2.md)
-   * [Mailbox and Main](delete/mailbox_and_main.md)
+   * [Showing a confirmation dialogue](delete/mailbox_and_main.md)
    * [Getting confirmation](delete/getting_confirmation.md)
    * [Delete effect](delete/delete_effect.md)
    * [DeletePlayerDone](delete/deleteplayerdone.md)
