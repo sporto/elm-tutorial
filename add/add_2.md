@@ -1,8 +1,4 @@
-# Add player part 2
-
-
-
-## Players List
+# Players List
 
 Finally, let's add the add player button to the players' list.
 
