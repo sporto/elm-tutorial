@@ -1,4 +1,4 @@
-# Delete a player 2
+# Deleting a player 2
 
 ## Players Update
 
