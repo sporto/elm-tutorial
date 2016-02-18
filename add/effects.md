@@ -1,5 +1,7 @@
 # Players Effects
 
+Before adding the code to respond to the action we created let's add the effect we will need to use.
+
 In __src/Players/Effects.elm__ add:
 
 ```elm
