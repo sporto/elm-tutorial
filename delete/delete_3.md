@@ -41,9 +41,11 @@ Then if the user clicks yes we send a message to the port:
   }
 ```
 
+<https://github.com/sporto/elm-tutorial-app/blob/500-delete-player/src/index.js>
+
 ## getDeleteConfirmationSignal
 
-Back in __src/main.elm__ map the `getDeleteConfirmation` port to a signal:
+Back in __src/Main.elm__ map the `getDeleteConfirmation` port to a signal:
 
 ```
 getDeleteConfirmationSignal : Signal Actions.Action
