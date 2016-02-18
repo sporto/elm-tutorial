@@ -74,7 +74,7 @@ app =
     }
  ```
  
-This is how __src/Main.elm__ looks at this point <https://github.com/sporto/elm-tutorial-app/blob/0610-delete-player/src/Main.elm>
+This is how __src/Main.elm__ looks at this point <https://github.com/sporto/elm-tutorial-app/blob/0700-delete-player/src/Main.elm>
  
 Now we get the message back from JavaScript and we map it to the `DeletePlayer` players action.
 
@@ -180,4 +180,4 @@ Upon clicking delete:
 - Hitting yes triggers a delete request to the API
 - And if the request is successful the player disapears from the list
 
-Up to this point your application code should look like <https://github.com/sporto/elm-tutorial-app/tree/0610-delete-player>
+Up to this point your application code should look like <https://github.com/sporto/elm-tutorial-app/tree/0700-delete-player>
