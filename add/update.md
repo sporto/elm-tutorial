@@ -1,5 +1,7 @@
 # Players Update
 
+## Respond to CreatePlayer
+
 We need __src/Players/Update.elm__ to account for the new actions created. Add some imports:
 
 ```elm
@@ -16,6 +18,8 @@ Add one branch for `CreatePlayer`:
 ```
 
 This branch returns the `create` effect from `Players.Effects` we added before. `new` creates an empty player, this comes from `Players.Models`. So we return an effect to create a new empty player.
+
+## Respond to CreatePlayerDone
 
 Add another branch for `CreatePlayerDone`:
 
