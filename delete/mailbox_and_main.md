@@ -1,6 +1,6 @@
 # Showing a confirmation dialogue
 
-`Players.Update` expects a `deleteConfirmationAddress` where to send a request for confirmation.
+`Players.Update` expects a `deleteConfirmationAddress` where to send a request for confirmation. We will do this using a new Mailbox.
 
 ## Mailbox
 
