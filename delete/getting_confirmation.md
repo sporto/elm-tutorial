@@ -14,7 +14,7 @@ port getDeleteConfirmation : Signal Int
 
 ## Index.js
 
-In the JavaScript side we need to send a message upon confirmation to this port:
+In the JavaScript side we need to send a message upon confirmation to the `getDeleteConfirmation` port:
 
 ```elm
 var app = Elm.embed(Elm.Main, mountNode, {getDeleteConfirmation: 0});
