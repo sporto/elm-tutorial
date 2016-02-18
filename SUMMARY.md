@@ -59,9 +59,9 @@
    * [Try it](add/try_it.md)
 * [Deleting players](delete/cover.md)
    * [Playes Actions and List](delete/delete_1.md)
+   * Mailbox and Main
    * [Players Update](delete/delete_2.md)
    * [Delete 3](delete/delete_3.md)
-   * Mailbox and Main
 * Edit
    * Change level
    * Change name
