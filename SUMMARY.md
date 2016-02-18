@@ -63,6 +63,7 @@
    * [Mailbox and Main](delete/mailbox_and_main.md)
    * [Getting confirmation](delete/getting_confirmation.md)
    * [Delete 3](delete/delete_3.md)
+   * Delete effect
 * Edit
    * Change level
    * Change name
