@@ -45,7 +45,7 @@
    * [Showing Errors 2](fetching_resources/showing_errors_2.md)
    * [Showing Errors 3](fetching_resources/showing_errors_3.md)
 * [Add](add/cover.md)
-   * [Add 1](add_and_delete/add_a_player.md)
+   * [Add 1](add/add_1.md)
    * [Add 2](add_and_delete/add_player_2.md)
 * [Delete](delete/cover.md)
    * [Delete 1](delete/delete_1.md)
