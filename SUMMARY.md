@@ -45,7 +45,6 @@
    * [Main](fetching_resources/main.md)
    * [Try it](fetching_resources/try_it.md)
 * [Showing Errors](showing_errors/cover.md)
-   * The problem
    * [Messages outlet](showing_errors/messages_outlet.md)
    * [Main Actions](showing_errors/main_actions.md)
    * [Players Update](showing_errors/players_update.md)
