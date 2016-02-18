@@ -36,8 +36,8 @@ We don't need to add an import as we already have `import Mailboxes exposing (..
 So far
 
 - We have a mailbox for delete confirmation requests
-- we pass its address to Players.Update
-- when the user clicks the delete button we send a message to this mailbox
+- We pass its address to Players.Update
+- When the user clicks the delete button we send a message to this mailbox
 
 ## Main
 
