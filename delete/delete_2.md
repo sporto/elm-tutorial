@@ -2,7 +2,7 @@
 
 We added a new button to Players.List that will trigger the `DeletePlayerIntent` action.
 
-__src/Players/Update__ needs to account for the actions we added. For now let's just add `DeletePlayerIntent` so we follow the application flow. 
+__src/Players/Update__ needs to account for this action. For now let's just add `DeletePlayerIntent` so we follow the application flow. 
 
 Change the `UpdateModel` model:
 
