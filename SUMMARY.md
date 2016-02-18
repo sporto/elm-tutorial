@@ -64,7 +64,7 @@
    * [Getting confirmation](delete/getting_confirmation.md)
    * [Delete effect](delete/delete_effect.md)
    * [Delete 3](delete/delete_3.md)
-   * DeletePlayerDone
+   * [DeletePlayerDone](delete/deleteplayerdone.md)
 * Edit
    * Change level
    * Change name
