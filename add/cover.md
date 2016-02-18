@@ -1,4 +1,4 @@
-# Add players
+# Adding players
 
 This chapter cover adding new players.
 
