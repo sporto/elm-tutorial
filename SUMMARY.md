@@ -52,7 +52,7 @@
 * Delete
    * [Delete 1](delete/delete_1.md)
    * [Delete 2](delete/delete_2.md)
-   * Delete 3
+   * [Delete 3](delete/delete_3.md)
 * Edit
    * Change level
    * Change name
