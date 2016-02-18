@@ -32,7 +32,7 @@ And add a new branch to `update`:
 
 When `DeletePlayerIntent` is triggered we respond with an effect to send a message to `deleteConfirmationAddress`. The message will be tuple with `(playerId, "Are you sure you want to delete name?")`.
 
-We need to provide this `deleteConfirmationAddress` to update.
+We need to provide this `deleteConfirmationAddress` to this `update` function.
 
 <https://github.com/sporto/elm-tutorial-app/blob/500-delete-player/src/Players/Update.elm>
 
