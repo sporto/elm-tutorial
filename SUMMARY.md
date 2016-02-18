@@ -58,7 +58,7 @@
    * [List](add/add_2.md)
    * [Try it](add/try_it.md)
 * [Deleting players](delete/cover.md)
-   * [Delete 1](delete/delete_1.md)
+   * [Playes Actions and List](delete/delete_1.md)
    * [Delete 2](delete/delete_2.md)
    * [Delete 3](delete/delete_3.md)
 * Edit
