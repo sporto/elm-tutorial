@@ -1,4 +1,4 @@
-# Mailbox and Main
+# Showing a confirmation dialogue
 
 ## Mailbox
 
