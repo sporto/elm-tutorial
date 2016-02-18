@@ -1,4 +1,4 @@
-# Deleting a player 2
+# Responding to DeletePlayerIntent
 
 ## Players Update
 
