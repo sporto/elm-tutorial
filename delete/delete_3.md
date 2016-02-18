@@ -118,6 +118,8 @@ deleteTask playerId =
       |> Http.fromJson (Decode.succeed ())
 ```
 
+<https://github.com/sporto/elm-tutorial-app/blob/500-delete-player/src/Players/Effects.elm>
+
 `deleteTask` takes a player id and returns a task to delete the player.
 
 `Http.send` returns a task of type `Task.Task Http.RawError Http.Response`. But for consistency with other effects we want `Task.Task Http.Error a` where `a` is the parsed JSON.
@@ -169,6 +171,8 @@ When the `delete` effect is done `DeletePlayerDone` will be triggered. Add anoth
           in
             ( model.players, fx )
 ```
+
+<https://github.com/sporto/elm-tutorial-app/blob/500-delete-player/src/Players/Update.elm>
 
 Note how pattern match `playerId` as the first parameter of `DeletePlayerDone` instead of grabbing it form result. The result just comes with an empty payload as we don't care about the body from the server response.
 
