@@ -61,8 +61,8 @@
    * [Playes Actions and List](delete/delete_1.md)
    * [Players Update](delete/delete_2.md)
    * [Mailbox and Main](delete/mailbox_and_main.md)
-   * [Delete 3](delete/delete_3.md)
    * [Getting confirmation](delete/getting_confirmation.md)
+   * [Delete 3](delete/delete_3.md)
 * Edit
    * Change level
    * Change name
