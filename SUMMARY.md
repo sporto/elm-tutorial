@@ -47,8 +47,8 @@
 * [Adding players](add/cover.md)
    * [Actions](add/add_1.md)
    * [Effects](add/effects.md)
-   * [Add 2](add/add_2.md)
    * Update
+   * [Add 2](add/add_2.md)
 * [Deleting players](delete/cover.md)
    * [Delete 1](delete/delete_1.md)
    * [Delete 2](delete/delete_2.md)
