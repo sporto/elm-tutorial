@@ -47,7 +47,6 @@
 * [Add](add_and_delete/cover.md)
    * [Add 1](add_and_delete/add_a_player.md)
    * [Add 2](add_and_delete/add_player_2.md)
-   * [Delete a player 2](add_and_delete/delete_a_player_2.md)
    * [Delete a player 3](add_and_delete/delete_a_player_3.md)
 * Delete
    * [Delete 1](delete/delete_1.md)
