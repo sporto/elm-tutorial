@@ -4,8 +4,6 @@
 
 __src/Players/Update__ needs to account for the actions we added. For now let's just add `DeletePlayerIntent` so we follow the application flow. 
 
-<https://github.com/sporto/elm-tutorial-app/blob/500-delete-player/src/Players/Update.elm>
-
 Change the `UpdateModel` model:
 
 ```elm
@@ -37,6 +35,8 @@ And add a new branch to `update`:
 When `DeletePlayerIntent` is triggered we respond with an effect to send a message to `deleteConfirmationAddress`. The message will be tuple with `(playerId, "Are you sure you want to delete name?")`.
 
 We need to provide this `deleteConfirmationAddress` to update.
+
+<https://github.com/sporto/elm-tutorial-app/blob/500-delete-player/src/Players/Update.elm>
 
 ## Mailbox
 
