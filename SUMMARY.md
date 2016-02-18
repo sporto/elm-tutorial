@@ -58,7 +58,7 @@
    * [List](add/add_2.md)
    * [Try it](add/try_it.md)
 * [Deleting players](delete/cover.md)
-   * Plan
+   * [Plan](delete/plan.md)
    * [Playes Actions and List](delete/delete_1.md)
    * [Players Update](delete/delete_2.md)
    * [Mailbox and Main](delete/mailbox_and_main.md)
