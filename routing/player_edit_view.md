@@ -101,7 +101,6 @@ This view show a form with player's:
 - level
 - name
 
-As we did before `bonuses` is just hard coded to `999` for now.
 
 
 
