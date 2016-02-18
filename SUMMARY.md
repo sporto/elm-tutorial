@@ -51,7 +51,7 @@
    * [Delete a player 3](add_and_delete/delete_a_player_3.md)
 * Delete
    * [Delete 1](delete/delete_1.md)
-   * Delete 2
+   * [Delete 2](delete/delete_2.md)
 * Edit
    * Change level
    * Change name
