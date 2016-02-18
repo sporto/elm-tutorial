@@ -65,6 +65,7 @@
    * [Delete effect](delete/delete_effect.md)
    * [Delete 3](delete/delete_3.md)
    * [DeletePlayerDone](delete/deleteplayerdone.md)
+   * Try it
 * Edit
    * Change level
    * Change name
