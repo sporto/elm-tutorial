@@ -31,9 +31,3 @@ We pass an address that will tag all messages with the `ShowError` action. This 
 - Main Update picks up `ShowError` and modifies the main model adding the message to `errorMessage`
 - The Main View shows this error message.
 
----
-
-Try it! When you refresh your browser you should see an error message in the page (as long as the API server is not running).
-
-At this point you application code should look like <https://github.com/sporto/elm-tutorial-app/tree/0510-errors>.
-
