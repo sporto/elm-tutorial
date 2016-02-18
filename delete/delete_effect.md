@@ -1,5 +1,7 @@
 # Responding to DeletePlayer
 
+When the user clicks yes on the confirmation dialogue we receive a message from JavaScript. This message is then mapped to the `DeletePlayer` action.
+
 ## DeletePlayer Action
 
 Let's add the code in __src/Players/Update.elm__ to respond to this action, add a new branch:
