@@ -60,7 +60,7 @@
 * [Deleting players](delete/cover.md)
    * [Playes Actions and List](delete/delete_1.md)
    * [Players Update](delete/delete_2.md)
-   * Mailbox and Main
+   * [Mailbox and Main](delete/mailbox_and_main.md)
    * [Delete 3](delete/delete_3.md)
 * Edit
    * Change level
