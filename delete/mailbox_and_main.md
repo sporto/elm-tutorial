@@ -1,5 +1,7 @@
 # Showing a confirmation dialogue
 
+`Players.Update` expects a `deleteConfirmationAddress` where to send a request for confirmation.
+
 ## Mailbox
 
 In __src/Mailbox.elm__ add a new mailbox for the confirmation request:
