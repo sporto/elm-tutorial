@@ -61,7 +61,7 @@
    * [Plan](delete/plan.md)
    * [Players Actions](delete/players_actions.md)
    * [Delete button on Players List](delete/delete_1.md)
-   * [Players Update](delete/delete_2.md)
+   * [Responding to DeletePlayerIntent](delete/delete_2.md)
    * [Mailbox and Main](delete/mailbox_and_main.md)
    * [Getting confirmation](delete/getting_confirmation.md)
    * [Delete effect](delete/delete_effect.md)
