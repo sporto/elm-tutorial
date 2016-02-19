@@ -24,6 +24,11 @@ A function like `onKeyUp` has the following signature:
 Signal.Address a -> (Int -> a) -> Html.Attribute
 ```
 
+This function:
+
+- Takes an address of any type, represented by `a`
+- A function that takes a string and returns a type `a`
+- And returns an `Html.Attribute`
 
 
 Add a new function:
@@ -36,7 +41,6 @@ onChange address action =
 
 This function takes two parameters:
 
-- takes an address of any type, represented by `a`.
-- A function that takes a string and returns a type `a`
+
 
 Then this function returns an `Html.Attribute`.
