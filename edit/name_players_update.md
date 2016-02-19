@@ -28,3 +28,5 @@ Here we do the same as we did when modifying the level, we return a batch of eff
 
 `save` is the same effect we used for changing the level because we are just updating a property of the player and hitting the same end point on the API.
 
+When the `save` effect is done 
+
