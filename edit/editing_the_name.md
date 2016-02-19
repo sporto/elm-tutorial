@@ -41,6 +41,6 @@ on "change" targetValue (\str -> Signal.message address (ChangeName model.player
 
 1. the name of the event to listen i.e. "change"
 1. a Json decoder that gets information out of the event object
-1. and a function that gets the value and returns a message
+1. and a function that gets this value and returns a `Signal.Message`
 
 `(\str -> Signal.message address (ChangeName model.player.id str))`
