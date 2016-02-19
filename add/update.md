@@ -1,6 +1,12 @@
 # Players Update
 
-We need __src/Players/Update.elm__ to account for the new actions created. Add some imports:
+We created to new actions: `CreatePlayer` and `CreatePlayerDone`. We need __src/Players/Update.elm__ to account for these. 
+
+## Respond to CreatePlayer
+
+`CreatePlayer` will be called when the user hits the add player button. This action will trigger an effect to create the player on the API.
+
+Add some imports:
 
 ```elm
 ...
@@ -16,6 +22,10 @@ Add one branch for `CreatePlayer`:
 ```
 
 This branch returns the `create` effect from `Players.Effects` we added before. `new` creates an empty player, this comes from `Players.Models`. So we return an effect to create a new empty player.
+
+## Respond to CreatePlayerDone
+
+After the task to create the player is done and we have a response from the API the action `CreatePlayerDone` will be triggered.
 
 Add another branch for `CreatePlayerDone`:
 
