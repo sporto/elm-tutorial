@@ -40,7 +40,7 @@ on "change" targetValue (\str -> Signal.message address (ChangeName model.player
 `on` takes:
 
 1. the name of the event to listen i.e. "change"
-1. a Json decoder that gets information out of the event object
-1. and a function that gets this value and returns a `Signal.Message`
 
-`(\str -> Signal.message address (ChangeName model.player.id str))`
+1. 1. a Json decoder that gets information out of the event object. `Html.Events.targetValue` is a Json decoder that gets the value from ``event.target.value`
+
+1. and a function that gets this value and returns a `Signal.Message`. The anonymous function `(\str -> Signal.message address (ChangeName model.player.id str))` is just that.
