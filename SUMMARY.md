@@ -71,7 +71,7 @@
    * [Actions and view](edit/actions_and_effects.md)
    * [Players Effects](edit/players_view_level.md)
    * [Players Update](edit/level_players_update.md)
-   * Try it
+   * [Try it](edit/level_try_it.md)
    * Change name
 * Tips and Tricks
    * [Signal map with always](tips-tricks/signal_map_with_always.md)
