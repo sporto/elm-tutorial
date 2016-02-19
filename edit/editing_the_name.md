@@ -31,6 +31,11 @@ inputName address model =
     []
 ```
 
+Here we added:
+
+```elm
+on "change" targetValue (\str -> Signal.message address (ChangeName model.player.id str))
+```.
 
 
 ### onKeyUp
