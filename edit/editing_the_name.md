@@ -30,6 +30,12 @@ This function:
 - A function that takes a string and returns a type `a`
 - And returns an `Html.Attribute`
 
+This function can be used like this:
+
+```elm
+
+```
+
 
 Add a new function:
 
