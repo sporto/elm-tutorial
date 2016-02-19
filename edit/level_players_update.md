@@ -28,7 +28,7 @@ In __src/Players/Update.elm__ add one branch for this:
         ( model.players, fx )
 ```
 
-Let's see this in more detail:
+
 
 ```elm
           List.map fxForPlayer model.players
