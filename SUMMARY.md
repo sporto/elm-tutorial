@@ -75,7 +75,7 @@
    * [Editing the name](edit/editing_the_name.md)
    * [Players Update](edit/name_players_update.md)
    * [Try it](edit/name_try_it.md)
+* Conclusion
 * Tips and Tricks
    * [Signal map with always](tips-tricks/signal_map_with_always.md)
-* Conclusion
 
