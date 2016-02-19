@@ -49,4 +49,7 @@ save player =
     |> Effects.task
 ```
 
-- `saveTask` 
+### `saveTask`
+
+- encodes the given player
+- 
