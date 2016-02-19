@@ -24,3 +24,5 @@ Add a new branch:
         ( model.players, fx )
 ```
 
+Here we do the same as we did when modifying the level, we return a batch of effects to run. Most of the effects will be `Effects.none` except one for the updated player which will be `save`.
+
