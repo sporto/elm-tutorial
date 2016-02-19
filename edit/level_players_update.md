@@ -5,6 +5,7 @@ We have an `ChangeLevel` that triggers when the user hits both the decrease or i
 In __src/Players/Update.elm__ add one branch for this:
 
 ```elm
+    ...
     ChangeLevel playerId howMuch ->
       let
         fxForPlayer player =
