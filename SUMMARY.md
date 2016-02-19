@@ -68,7 +68,7 @@
    * [DeletePlayerDone](delete/deleteplayerdone.md)
    * [Try it](delete/try_it.md)
 * [Edit](edit/cover.md)
-   * [Actions and effects](edit/actions_and_effects.md)
+   * [Actions and view](edit/actions_and_effects.md)
    * [Players View](edit/players_view_level.md)
    * Change name
 * Tips and Tricks
