@@ -33,10 +33,17 @@ This function:
 This function can be used like this:
 
 ```elm
+
+type alias Action = DoSomething Int
+
 input
     [ onKeyUp address DoSomething ]
     []
 ```
+
+
+
+
 
 
 Add a new function:
