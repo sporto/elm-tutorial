@@ -68,7 +68,7 @@
    * [DeletePlayerDone](delete/deleteplayerdone.md)
    * [Try it](delete/try_it.md)
 * [Edit](edit/cover.md)
-   * Actions and effects
+   * [Actions and effects](edit/actions_and_effects.md)
    * Change name
 * Tips and Tricks
    * [Signal map with always](tips-tricks/signal_map_with_always.md)
