@@ -70,6 +70,7 @@
 * [Edit](edit/cover.md)
    * [Actions and effects](edit/actions_and_effects.md)
    * Change name
+   * Players View
 * Tips and Tricks
    * [Signal map with always](tips-tricks/signal_map_with_always.md)
 
