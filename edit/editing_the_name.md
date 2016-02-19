@@ -23,3 +23,9 @@ onChange address action =
   on "change" targetValue (\str -> Signal.message address (action str))
 ```
 
+This function takes two parameters:
+
+- takes an address of any type, represented by `a`.
+- A function that takes a string and returns a type `a`
+
+Then this function returns an `Html.Attribute`.
