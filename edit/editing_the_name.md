@@ -35,7 +35,14 @@ Here we added:
 
 ```elm
 on "change" targetValue (\str -> Signal.message address (ChangeName model.player.id str))
-```.
+```
+
+`on` takes:
+
+- the name of the event to listen i.e. "change"
+- 
+
+
 
 
 ### onKeyUp
