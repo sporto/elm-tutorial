@@ -69,8 +69,8 @@
    * [Try it](delete/try_it.md)
 * [Edit](edit/cover.md)
    * [Actions and effects](edit/actions_and_effects.md)
-   * Change name
    * Players View
+   * Change name
 * Tips and Tricks
    * [Signal map with always](tips-tricks/signal_map_with_always.md)
 
