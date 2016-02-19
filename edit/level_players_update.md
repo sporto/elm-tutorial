@@ -43,6 +43,8 @@ In here we map through all the players. `fxForPlayer` returns an effect for each
 
 Using `Effects.batch` we convert this list of effects into one `Effects`. Elm will run all these effects one after the other.
 
+### fxForPlayer
+
 ```elm
 fxForPlayer player =
   if player.id /= playerId then
@@ -57,3 +59,5 @@ fxForPlayer player =
       else
         Effects.none
 ```
+
+`fxForPlayer` takes a player a returns and `Effect` for that player. But most of the time we just return `Effects.none`. We only return a `save` effect if this is the player we are updating.
