@@ -2,10 +2,11 @@
 
 We created a `ChangeLevel` action. Let's trigger this action from the player's edit view.
 
-In __src/Players/Edit.elm__ change:
+In __src/Players/Edit.elm__ change `btnLevelIncrease` and `btnLevelIncrease`:
 
 ```elm
-btnLevelDecrease : Signal.Address Action -> ViewModel -> Html.Html
+...
+btnLevelIncrease : Signal.Address Action -> ViewModel -> Html.Html
 btnLevelDecrease address model =
   a
     [ class "btn ml1 h1" ]
@@ -29,4 +30,5 @@ btnLevelIncrease address model =
     ]
 ```
 
+In `
 
