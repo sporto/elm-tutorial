@@ -62,6 +62,8 @@ fxForPlayer player =
 
 `fxForPlayer` takes a player a returns and `Effect` for that player. But most of the time we just return `Effects.none`. We only return a `save` effect if this is the player we are updating.
 
+We also don't want a player level to go less than 1. So we have a `if updatedPlayer.level > 0 then` condition that only returns the `save` effect if the updated player level will be more than 0.
+
 ## SaveDone
 
 
