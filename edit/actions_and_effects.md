@@ -49,7 +49,14 @@ save player =
     |> Effects.task
 ```
 
-### `saveTask`
+### saveTask
 
-- encodes the given player
-- 
+- Encodes the given player
+- Creates a task to send the encoded player to the API
+- And also decodes the response given by the API
+
+### save
+
+- Takes the `saveTask` and converts the response to a `Result` type
+- Then it wraps the result with `SaveDone` type
+- And converts the task to an `Effect` 
