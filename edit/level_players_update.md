@@ -32,7 +32,7 @@ When we get `ChangeLevel` we want to create an effect to save one player on the 
 
 We could try to find this player in `model.players` using `List.filter` so we can build the effects to return. But using `List.filter` would involve adding conditional logic to deal with the potential case of not finding the player we want in the list.
 
-Rather than doing that it is much easier to just map over all the players and return a list of effects.
+Rather than doing that it is much easier to just map over all the players and return a list of effects:
 
 ```elm
           List.map fxForPlayer model.players
