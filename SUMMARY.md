@@ -69,7 +69,7 @@
    * [Try it](delete/try_it.md)
 * [Edit](edit/cover.md)
    * [Actions and effects](edit/actions_and_effects.md)
-   * Players View
+   * [Players View](edit/players_view_level.md)
    * Change name
 * Tips and Tricks
    * [Signal map with always](tips-tricks/signal_map_with_always.md)
