@@ -69,6 +69,8 @@ Upon receiving `ChangeLevel` we return a batch of effects to run (which are a lo
 
 When the request is done we will get `SaveDone (Result Http.Error Player)`.
 
-Let's handle this in __src/Players/Update.elm__:
+Let's handle this in __src/Players/Update.elm__, add new branch:
+
+
 
 
