@@ -64,3 +64,7 @@ fxForPlayer player =
 
 ## SaveDone
 
+
+Upon receiving `ChangeLevel` we return a batch of effects to run (which are a lot of `Effect.none` and one `save`). Elm will run the `save` effect and send the request to the API.
+
+When the request is done we will get `SaveDone (Result Http.Error Player)`
