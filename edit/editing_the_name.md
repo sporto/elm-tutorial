@@ -15,6 +15,8 @@ Create a new action in __src/Players/Actions.elm__:
 
 In __src/Players/Edit.elm__ let's trigger this action.
 
+The `Html.Events` modules has 
+
 Add a new function:
 
 ```elm
