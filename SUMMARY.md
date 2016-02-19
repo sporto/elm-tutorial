@@ -67,7 +67,7 @@
    * [Responding to DeletePlayer](delete/delete_effect.md)
    * [DeletePlayerDone](delete/deleteplayerdone.md)
    * [Try it](delete/try_it.md)
-* Edit
+* [Edit](edit/cover.md)
    * Change level
    * Change name
 * Tips and Tricks
