@@ -43,9 +43,11 @@ input
     []
 ```
 
-As said before `onKeyUp` takes an address and a function `(Int -> a)`. In this case `DoSomething` is our function `(Int -> a)`. Remember how types can be called like functions e.g. `DoSomething 1`
+As said before `onKeyUp` takes an address and a function `(Int -> a)`. 
 
+In this case `DoSomething` is our function `(Int -> a)`. Remember how types can be called like functions e.g. `DoSomething 1`
 
+## onChange
 
 
 Add a new function:
