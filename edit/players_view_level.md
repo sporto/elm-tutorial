@@ -30,5 +30,5 @@ btnLevelIncrease address model =
     ]
 ```
 
-In `
+In these two buttons we added `onClick address (ChangeLevel model.player.id howMuch)`. Where `howMuch` is `-1` to decrease level and `1` to increase.
 
