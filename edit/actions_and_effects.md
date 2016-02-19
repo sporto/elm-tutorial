@@ -18,6 +18,10 @@ Next let's create an effect to save an updated player through our API.
 In __src/Players/Effects.elm__ add:
 
 ```elm
+saveUrl : Int -> String
+saveUrl playerId =
+  "http://localhost:4000/players/" ++ (toString playerId)
+  
 saveTask : Player -> Task.Task Http.Error Player
 saveTask player =
   let
@@ -35,11 +39,6 @@ saveTask player =
   in
     Http.send Http.defaultSettings config
       |> Http.fromJson memberDecoder
-
-
-saveUrl : Int -> String
-saveUrl playerId =
-  "http://localhost:4000/players/" ++ (toString playerId)
 
 
 save : Player -> Effects Action
