@@ -42,4 +42,4 @@ port routeRunTask =
   router.run
 ```
 
-__src/Main.elm__ should look like <https://github.com/sporto/elm-tutorial-app/blob/200-routing/src/Main.elm>
+__src/Main.elm__ should look like <https://github.com/sporto/elm-tutorial-app/blob/060-routing/src/Main.elm>

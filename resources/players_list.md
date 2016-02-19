@@ -2,7 +2,7 @@
 
 Create __src/Players/List.elm__
 
-<https://github.com/sporto/elm-tutorial-app/blob/100-players/src/Players/List.elm>
+<https://github.com/sporto/elm-tutorial-app/blob/050-players/src/Players/List.elm>
 
 ```elm
 module Players.List (..) where

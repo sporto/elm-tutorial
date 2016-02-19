@@ -15,7 +15,7 @@ The steps for this will be:
 
 Add the following actions to __src/Players/Actions.elm:
 
-<https://github.com/sporto/elm-tutorial-app/blob/500-delete-player/src/Players/Actions.elm>
+<https://github.com/sporto/elm-tutorial-app/blob/110-delete-player/src/Players/Actions.elm>
 
 ```elm
 ...
@@ -34,7 +34,7 @@ Add the following actions to __src/Players/Actions.elm:
 
 In __src/Players/List.elm__ we want to have a button that triggers `DeletePlayerIntent`.
 
-<https://github.com/sporto/elm-tutorial-app/blob/500-delete-player/src/Players/List.elm>
+<https://github.com/sporto/elm-tutorial-app/blob/110-delete-player/src/Players/List.elm>
 
 Add a new function:
 
