@@ -36,10 +36,9 @@ This function can be used like this:
 input
     [ class "field-light"
     , value model.player.name
-    , onChange address (ChangeName model.player.id)
+    , onKeyUp address (ChangeName model.player.id)
     ]
     []
-
 ```
 
 
