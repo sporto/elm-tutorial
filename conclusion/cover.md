@@ -4,5 +4,5 @@ Up to this point your application code should look like <https://github.com/spor
 
 I would like to hear your feedback to improve this tutorial. Please open issues at <https://github.com/sporto/elm-tutorial>.
 
-Thanks~
+Thanks!
 
