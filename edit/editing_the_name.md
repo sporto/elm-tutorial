@@ -33,6 +33,12 @@ This function:
 This function can be used like this:
 
 ```elm
+input
+    [ class "field-light"
+    , value model.player.name
+    , onChange address (ChangeName model.player.id)
+    ]
+    []
 
 ```
 
