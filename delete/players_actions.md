@@ -2,7 +2,7 @@
 
 Add the following actions to __src/Players/Actions.elm:
 
-<https://github.com/sporto/elm-tutorial-app/blob/500-delete-player/src/Players/Actions.elm>
+<https://github.com/sporto/elm-tutorial-app/blob/110-delete-player/src/Players/Actions.elm>
 
 ```elm
 ...

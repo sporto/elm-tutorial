@@ -11,7 +11,7 @@ Let's add the code in __src/Players/Update.elm__ to respond to this action, add 
       ( model.players, delete playerId )
 ```
 
-<https://github.com/sporto/elm-tutorial-app/blob/500-delete-player/src/Update.elm>
+<https://github.com/sporto/elm-tutorial-app/blob/110-delete-player/src/Update.elm>
 
 This returns a `delete` effect we will add next.
 
@@ -39,7 +39,7 @@ deleteTask playerId =
       |> Http.fromJson (Decode.succeed ())
 ```
 
-<https://github.com/sporto/elm-tutorial-app/blob/500-delete-player/src/Players/Effects.elm>
+<https://github.com/sporto/elm-tutorial-app/blob/110-delete-player/src/Players/Effects.elm>
 
 `deleteTask` takes a player id and returns a task to delete the player.
 

@@ -43,7 +43,7 @@ Then if the user clicks yes we send a message to the port:
   }
 ```
 
-<https://github.com/sporto/elm-tutorial-app/blob/500-delete-player/src/index.js>
+<https://github.com/sporto/elm-tutorial-app/blob/110-delete-player/src/index.js>
 
 ## getDeleteConfirmationSignal
 
@@ -80,5 +80,5 @@ app =
  
 Now we get the message back from JavaScript and we map it to the `DeletePlayer` players action.
 
-This is how __src/Main.elm__ looks at this point <https://github.com/sporto/elm-tutorial-app/blob/500-delete-player/src/Main.elm>
+This is how __src/Main.elm__ looks at this point <https://github.com/sporto/elm-tutorial-app/blob/110-delete-player/src/Main.elm>
 

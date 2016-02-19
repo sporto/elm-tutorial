@@ -29,7 +29,7 @@ When the `delete` effect is done `DeletePlayerDone` will be triggered. Add anoth
             ( model.players, fx )
 ```
 
-<https://github.com/sporto/elm-tutorial-app/blob/500-delete-player/src/Players/Update.elm>
+<https://github.com/sporto/elm-tutorial-app/blob/110-delete-player/src/Players/Update.elm>
 
 Note how we pattern match `playerId` as the first parameter of `DeletePlayerDone` instead of grabbing it form result. The result just comes with an empty payload as we don't care about the body from the server response.
 

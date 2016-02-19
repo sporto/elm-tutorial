@@ -30,7 +30,7 @@ And add a new branch to `update`:
         ( model.players, fx )
 ```
 
-<https://github.com/sporto/elm-tutorial-app/blob/500-delete-player/src/Players/Update.elm>
+<https://github.com/sporto/elm-tutorial-app/blob/110-delete-player/src/Players/Update.elm>
 
 When `DeletePlayerIntent` is triggered we respond with an effect to send a message to `deleteConfirmationAddress`. The message will be tuple with `(playerId, "Are you sure you want to delete name?")`.
 

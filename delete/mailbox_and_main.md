@@ -11,7 +11,7 @@ askDeleteConfirmationMailbox : Signal.Mailbox ( Int, String )
 askDeleteConfirmationMailbox =
   Signal.mailbox ( 0, "" )
 ```
-<https://github.com/sporto/elm-tutorial-app/blob/500-delete-player/src/Mailboxes.elm>
+<https://github.com/sporto/elm-tutorial-app/blob/110-delete-player/src/Mailboxes.elm>
 
 ## Update
 
@@ -27,7 +27,7 @@ In __src/Update__ import this mailbox and pass it to `Players.Update`:
           , deleteConfirmationAddress = askDeleteConfirmationMailbox.address
           }
 ```
-<https://github.com/sporto/elm-tutorial-app/blob/500-delete-player/src/Update.elm>
+<https://github.com/sporto/elm-tutorial-app/blob/110-delete-player/src/Update.elm>
 
 We don't need to add an import as we already have `import Mailboxes exposing (..)`.
 
@@ -51,7 +51,7 @@ port askDeleteConfirmation =
   askDeleteConfirmationMailbox.signal
 ```
 
-<https://github.com/sporto/elm-tutorial-app/blob/500-delete-player/src/Main.elm>
+<https://github.com/sporto/elm-tutorial-app/blob/110-delete-player/src/Main.elm>
 
 ## index.js
 
@@ -66,7 +66,7 @@ app.ports.askDeleteConfirmation.subscribe(function (args) {
 })
 ```
 
-<https://github.com/sporto/elm-tutorial-app/blob/500-delete-player/src/index.js>
+<https://github.com/sporto/elm-tutorial-app/blob/110-delete-player/src/index.js>
 
 ---
 
