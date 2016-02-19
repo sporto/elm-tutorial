@@ -40,9 +40,10 @@ on "change" targetValue (\str -> Signal.message address (ChangeName model.player
 `on` takes:
 
 - the name of the event to listen i.e. "change"
-- 
+- a Json decoder that gets information out of the event object
+- and a function that gets the value and returns a message
 
-
+`(\str -> Signal.message address (ChangeName model.player.id str))`
 
 
 ### onKeyUp
