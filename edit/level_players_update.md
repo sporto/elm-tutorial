@@ -35,6 +35,6 @@ We could try to find this player in `model.players` using `List.filter` so we ca
 Rather than doing that it is much easier to just map over all the players and return a list of effects:
 
 ```elm
-          List.map fxForPlayer model.players
-            |> Effects.batch
+  List.map fxForPlayer model.players
+    |> Effects.batch
 ```
