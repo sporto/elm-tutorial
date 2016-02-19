@@ -18,6 +18,8 @@ In __src/Players/Edit.elm__ let's trigger this action.
 
 The `Html.Events` modules has convenient functions like `onKeyUp` and `onKeyDown`. But is lacking a function to handle a change on an input field (a `change` event on an input field triggers only when the user hits enter or moves the focus out).
 
+### onKeyUp
+
 A function like `onKeyUp` has the following signature:
 
 ```
@@ -34,14 +36,14 @@ This function can be used like this:
 
 ```elm
 
-type alias Action = DoSomething Int
+type Action = DoSomething Int
 
 input
     [ onKeyUp address DoSomething ]
     []
 ```
 
-
+As said before `onKeyUp` takes an address and a function `(Int -> a)`. In this case `DoSomething` is our function ``(Int -> a)`.
 
 
 
