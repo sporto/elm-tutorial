@@ -61,3 +61,6 @@ fxForPlayer player =
 ```
 
 `fxForPlayer` takes a player a returns and `Effect` for that player. But most of the time we just return `Effects.none`. We only return a `save` effect if this is the player we are updating.
+
+## SaveDone
+
