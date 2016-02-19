@@ -71,6 +71,33 @@ When the request is done we will get `SaveDone (Result Http.Error Player)`.
 
 Let's handle this in __src/Players/Update.elm__, add new branch:
 
+```elm
+    SaveDone result ->
+      case result of
+        Ok player ->
+          let
+            updatedPlayer existing =
+              if existing.id == player.id then
+                player
+              else
+                existing
 
+            updatedCollection =
+              List.map updatedPlayer model.players
+          in
+            ( updatedCollection, Effects.none )
+
+        Err error ->
+          let
+            message =
+              toString error
+
+            fx =
+              Signal.send model.showErrorAddress message
+                |> Effects.task
+                |> Effects.map TaskDone
+          in
+            ( model.players, fx )
+```
 
 
