@@ -34,10 +34,7 @@ This function can be used like this:
 
 ```elm
 input
-    [ class "field-light"
-    , value model.player.name
-    , onKeyUp address (ChangeName model.player.id)
-    ]
+    [ onKeyUp address DoSomething ]
     []
 ```
 
