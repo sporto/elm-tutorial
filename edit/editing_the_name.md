@@ -51,6 +51,8 @@ In this case `DoSomething` is our function `(Int -> a)`. Remember how types can 
 
 We would like to have a function `onChange` that behaves just like `onKeyUp`, so we will do just that.
 
+-----
+
 
 Add a new function:
 
