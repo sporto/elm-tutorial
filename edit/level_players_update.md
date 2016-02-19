@@ -100,4 +100,6 @@ Let's handle this in __src/Players/Update.elm__, add new branch:
             ( model.players, fx )
 ```
 
+If the result is `Ok` then we match the `player.id` and updated that particular player.
+
 
