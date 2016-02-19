@@ -34,4 +34,3 @@ Let's see this in more detail:
           List.map fxForPlayer model.players
             |> Effects.batch
 ```
-
