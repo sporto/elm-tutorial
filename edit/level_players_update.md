@@ -41,4 +41,4 @@ Rather than doing that it is much easier to just map over all the players and re
 
 In here we map through all the players. `fxForPlayer` returns an effect for each player. In the first line we will have a `List` of `Effects`.
 
-Using `Effects.batch` we convert this list of effects into one `Effects`.
+Using `Effects.batch` we convert this list of effects into one `Effects`. Elm will run all these effects one after the other.
