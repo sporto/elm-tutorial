@@ -28,7 +28,7 @@ In __src/Players/Update.elm__ add one branch for this:
         ( model.players, fx )
 ```
 
-
+When we get `ChangeLevel` we want to create an effect to save one player on the API. `ChangeLevel` gives us the player id that we need to update.
 
 ```elm
           List.map fxForPlayer model.players
