@@ -25,3 +25,9 @@ Currently we only handle error messages and we can only show one. Some improveme
 - Have the ability to dismiss a message
 - Remove a message automatically after a few seconds
 
+## Add perks and bonuses
+
+We can add a list of perks that a player can have. These perk would be equipment, apparel, scrolls, accessories, etc. e.g. "Steel sword" would be one. The we would have associations between players and perks.
+
+Each perk would have a bonus associated with it. Then players will have a calculated strength that is their level plus all the bonuses they have.
+
