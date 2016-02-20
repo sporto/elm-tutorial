@@ -1,6 +1,6 @@
 ## Players Actions
 
-Add a new import and action to __src/Players/Actions.elm__
+First let's create an action for when the players are fetched from the API. Add a new import and action to __src/Players/Actions.elm__
 
 ```elm
 ...
