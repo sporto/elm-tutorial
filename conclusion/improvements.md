@@ -25,6 +25,10 @@ Currently we only handle error messages and we can only show one. Some improveme
 - Have the ability to dismiss a message
 - Remove a message automatically after a few seconds
 
+## Validations
+
+We should avoid having players without name. One nice feature would be to have a validation on the player's name so it cannot be empty.
+
 ## Add perks and bonuses
 
 We can add a list of perks that a player can have. These perk would be equipment, apparel, scrolls, accessories, etc. e.g. "Steel sword" would be one. The we would have associations between players and perks.
