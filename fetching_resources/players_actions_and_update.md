@@ -1,6 +1,3 @@
-# Players Actions and Update
-
-
 ## Players Actions
 
 Add a new import and action to __src/Players/Actions.elm__
