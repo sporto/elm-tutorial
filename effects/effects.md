@@ -137,7 +137,7 @@ The `view` display the "Refresh" button and a message (this message will be the 
 
 A mailbox where to send action messages. Note however that this mailbox expects a list of actions, not just one action: `Signal.Mailbox (List Action)`.
 
-This is because the way __effects__ work. `Effects` is a collection of effects, not just one. When effects are ran and translated back to actions they will produce a list of them.
+This is because the way __effects__ work. `Effects` is a collection of effects, not just one. When effects are run and translated back to actions they will produce a list of them.
 
 #### oneActionAddress
 
@@ -245,7 +245,7 @@ taskSignal =
   Signal.map (Effects.toTask actionsMailbox.address) fxSignal
 ```
 
-After a task finishes we want to send its result back to our application. We map the effects coming from `fxSignal` through `(Effects.toTask actionsMailbox.address)`. `Effects.toTask` takes and __address__ and __effects__. When the effects are ran `toTask` sends the resulting messages to the address.
+After a task finishes we want to send its result back to our application. We map the effects coming from `fxSignal` through `(Effects.toTask actionsMailbox.address)`. `Effects.toTask` takes and __address__ and __effects__. When the effects are run `toTask` sends the resulting messages to the address.
 
 An example should make the clearer:
 
@@ -257,7 +257,7 @@ DIAGRAM
 
 ### port runner
 
-Finally, we take the signal produced by `taskSignal` and send it to a __port__. Without this our application wouldn't ran any Ajax requests.
+Finally, we take the signal produced by `taskSignal` and send it to a __port__. Without this our application wouldn't run any Ajax requests.
 
 ## Diagram
 

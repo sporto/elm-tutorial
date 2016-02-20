@@ -114,7 +114,7 @@ Same view as we had in the __Effects__ chapter. This view renders a "Refresh" bu
 
 ### httpTask and refreshFx
 
-These two create an http task and wrap it into an `Effects`. When the effects are ran we will send the `OnRefresh` action. For more details on this code see the previous chapter.
+These two create an http task and wrap it into an `Effects`. When the effects are run we will send the `OnRefresh` action. For more details on this code see the previous chapter.
 
 ### init
 
