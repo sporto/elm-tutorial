@@ -8,4 +8,4 @@ This is the plan:
 
 - When the request is done trigger a `FetchAllDone` with the result of the request.
 
-- 
+- Add a branch to Players Update so it reacts to `FetchAllDone` and adds the fetched players to the application model.
