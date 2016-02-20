@@ -17,7 +17,7 @@ initialModel =
 
 ## Main
 
-Finally we need to run the `fetchAll` when starting the application.
+We want to run the `fetchAll` when starting the application.
 
 Update __src/Main.elm__:
 
