@@ -109,7 +109,7 @@ port runner =
   taskSignal
 ```
 
-<https://github.com/sporto/elm-tutorial-assets/blob/master/effects/Effects.elm>
+<https://github.com/sporto/elm-tutorial-assets/blob/master/code/effects/Effects.elm>
 
 In order to run this app, you will also need to have the __node json-server__, refer to the __Task__ chapter for the instructions on setting it up.
 

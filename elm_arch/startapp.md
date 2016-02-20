@@ -78,7 +78,7 @@ main =
     }
 ```
 
-<https://github.com/sporto/elm-tutorial-assets/blob/master/elm_arch/StartAppSimple.elm>
+<https://github.com/sporto/elm-tutorial-assets/blob/master/code/elm_arch/StartAppSimple.elm>
 
 We have removed two things:
 

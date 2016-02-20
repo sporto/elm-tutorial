@@ -75,7 +75,7 @@ main =
   Signal.map view modelSignal
 ```
 
-<https://github.com/sporto/elm-tutorial-assets/blob/master/elm_arch/Actions.elm>
+<https://github.com/sporto/elm-tutorial-assets/blob/master/code/elm_arch/Actions.elm>
 
 #### actions
 
@@ -194,7 +194,7 @@ main =
   Signal.map view modelSignal
 ```
 
-<https://github.com/sporto/elm-tutorial-assets/blob/master/elm_arch/ActionsMultiple.elm>
+<https://github.com/sporto/elm-tutorial-assets/blob/master/code/elm_arch/ActionsMultiple.elm>
 
 Every mouse click increases the count, every key press decreases the count. Note how we __merge__ the signals (mouseClickSignal and keyPressSignal) into one, as they both are of type `Signal.Signal Action` our folp can handle them.
 
@@ -253,7 +253,7 @@ main =
   Signal.map view modelSignal
 ```
 
-<https://github.com/sporto/elm-tutorial-assets/blob/master/elm_arch/ActionsWithPayload.elm>
+<https://github.com/sporto/elm-tutorial-assets/blob/master/code/elm_arch/ActionsWithPayload.elm>
 
 Note the new __actions__ declaration:
 

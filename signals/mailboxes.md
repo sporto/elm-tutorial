@@ -33,7 +33,7 @@ main =
   Signal.map view messageSignal
 ```
 
-<https://github.com/sporto/elm-tutorial-assets/blob/master/signals/Mailbox01.elm>
+<https://github.com/sporto/elm-tutorial-assets/blob/master/code/signals/Mailbox01.elm>
 
 `view` displays a message and a button for us to click. The button does nothing so far.
 
@@ -112,7 +112,7 @@ main =
   Signal.map (view mb.address) mb.signal
 ```
 
-<https://github.com/sporto/elm-tutorial-assets/blob/master/signals/Mailbox02.elm>
+<https://github.com/sporto/elm-tutorial-assets/blob/master/code/signals/Mailbox02.elm>
 
 #### view
 
