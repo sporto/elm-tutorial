@@ -12,7 +12,7 @@ At the moment all update functions are pesimistic. Meaning that they don't chang
 
 Some parts of the application code is a bit clumsy because I have stuck to Elm core libraries most of the time (with the exception of the router). 
 
-For example using `on` for change events on an input field or using `Http.send`. For example <http://package.elm-lang.org/packages/lukewestby/elm-http-extra/latest> would make doing AJAX simpler.
+For example using `on` for change events on an input field or using `Http.send`. For example <http://package.elm-lang.org/packages/lukewestby/elm-http-extra/latest> would make doing Http requests simpler.
 
 # Possible features
 
