@@ -1,6 +1,8 @@
 # Players Update
 
 
+When the request for players is done we trigger the `FetchAllDone` action.
+
 __src/Players/Update.elm__ should account for this new action. Add a new branch to the case expression:
 
 ```elm
