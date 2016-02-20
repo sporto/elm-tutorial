@@ -1,6 +1,6 @@
 # Elm Tutorial
 
-![Logo](logo-v01.png)
+![](logo-v02.png)
 
 __A tutorial on developing single page web applications (SPAs) with [Elm](http://elm-lang.org/).__
 
