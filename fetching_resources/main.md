@@ -37,4 +37,4 @@ init =
     ( Models.initialModel, fx )
 ```
 
-`init` now returns a list of effects to run when the application starts. For now is a list of one but we will adding more to this list soon. `Effects.batch` batches a list of effects into one `Effects`.
+`init` now returns a list of effects to run when the application starts. For now is a list of one but we could be adding more as the application grows. `Effects.batch` batches a list of effects into one `Effects`.
