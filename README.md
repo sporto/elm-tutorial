@@ -2,7 +2,7 @@
 
 __A tutorial on developing single page web applications with [Elm](http://elm-lang.org/).__
 
-This is a guide for learning to develop single page applications (SPAs) in Elm. This guide covers:
+This is a tutorial for learning to develop single page applications (SPAs) in Elm. This tutorial covers:
 
 - Some Elm foundations
 - Understanding signals in Elm
@@ -18,7 +18,7 @@ Read it online [here](http://www.elm-tutorial.org/).
 ## Code
 
 Code for the examples in the first part of this tutorial can be found at
-<https://github.com/sporto/elm-tutorial-assets>.
+<https://github.com/sporto/elm-tutorial-assets/tree/master/code>.
 
 Code for the example application built in the second part of this tutorial can be
 found at <https://github.com/sporto/elm-tutorial-app>.
