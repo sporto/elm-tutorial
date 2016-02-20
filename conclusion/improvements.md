@@ -35,3 +35,6 @@ We can add a list of perks that a player can have. These perk would be equipment
 
 Each perk would have a bonus associated with it. Then players will have a calculated strength that is their level plus all the bonuses they have.
 
+---
+
+For a more featured version of this application see the master branch of <https://github.com/sporto/elm-tutorial-app>.
