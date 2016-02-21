@@ -19,13 +19,15 @@ PlayerView --> Main
 
 #### How to break it?
 
-In this case what we need to do is move the `Player` model out of `Main`. In a place where it can be imported by both `Main` and `PlayerView`. We will end up with three modules:
+In this case what we need to do is to move the `Player` model out of `Main`, somewhere it can be imported by both `Main` and `PlayerView`. 
+
+To deal with circular dependencies in Elm the easiest thing to do is to split your application into smaller modules. In this particular example we can create another module that can be imported by both `Main` and `PlayerView`:
 
 - Main
 - PlayerView
-- Models (contains Player)
+- Models (contains the Player type)
 
-To deal with circular dependencies in Elm the easiest thing to do is to break your application in smaller modules. Try creating smaller modules for things like __actions__, __models__, __effects__ and __utilities__, which are modules that are usually imported by many components.
+Try creating smaller modules for things like __actions__, __models__, __effects__ and __utilities__, which are modules that are usually imported by many components.
 
 ## Breaking our application
 
