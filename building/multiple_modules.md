@@ -36,7 +36,7 @@ View --> Models
 
 There is no circular dependency anymore.
 
-Try creating smaller modules for things like __actions__, __models__, __effects__ and __utilities__, which are modules that are usually imported by many components.
+Try creating separate modules for things like __actions__, __models__, __effects__ and __utilities__, which are modules that are usually imported by many components.
 
 ## Breaking our application
 
