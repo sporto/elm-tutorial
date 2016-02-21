@@ -27,7 +27,7 @@ To deal with circular dependencies in Elm the easiest thing to do is to split yo
 - View
 - Models (contains the Player type)
 
-Not the dependencies will be
+Now the dependencies will be:
 
 ```
 Main --> Models
