@@ -4,28 +4,37 @@ Our application is going to grow fast, so keeping things in one file will become
 
 ### Circular dependencies
 
-Another issue we are likely to hit at some point will be circular dependencies in Elm. For example we might have:
+Another issue we are likely to hit at some point will be circular dependencies. For example we might have:
 
-- A `Main` module which has a `Player` model on it.
-- A `PlayerView` module that renders a player, this want to use the `Player` model declared in `Main`.
-- `Main` calls `PlayerView` to render the player.
+- A `Main` module which has a `Player` type on it.
+- A `View` module that imports the `Player` type declared in `Main`.
+- `Main` importing `View` to render the view.
 
 We now have a circular dependency:
 
 ```
-Main --> PlayerView
-PlayerView --> Main
+Main --> View
+View --> Main
 ```
 
 #### How to break it?
 
-In this case what we need to do is to move the `Player` model out of `Main`, somewhere it can be imported by both `Main` and `PlayerView`. 
+In this case what we need to do is to move the `Player` type out of `Main`, somewhere it can be imported by both `Main` and `View`. 
 
-To deal with circular dependencies in Elm the easiest thing to do is to split your application into smaller modules. In this particular example we can create another module that can be imported by both `Main` and `PlayerView`:
+To deal with circular dependencies in Elm the easiest thing to do is to split your application into smaller modules. In this particular example we can create another module that can be imported by both `Main` and `View`. We will have three modules:
 
 - Main
-- PlayerView
+- View
 - Models (contains the Player type)
+
+Not the dependencies will be
+
+```
+Main --> Models
+View --> Models
+```
+
+There is no circular dependency anymore.
 
 Try creating smaller modules for things like __actions__, __models__, __effects__ and __utilities__, which are modules that are usually imported by many components.
 
