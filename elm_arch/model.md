@@ -42,7 +42,7 @@ Let's look at what's new.
 ### Model
 
 ```elm
-type alias Model = 
+type alias Model =
   { count : Int }
 ```
 
@@ -52,7 +52,7 @@ Here we introduce a `type alias` called `Model`. This type alias defines the str
 
 ```elm
 initialModel : Model
-initialModel = 
+initialModel =
   { count = 0 }
 ```
 
@@ -84,4 +84,4 @@ The __accumulation__ function in `foldp` takes the previous model and returns a 
 { state | count = state.count + 1 }
 ```
 
-In Elm all data structure are immutable. This syntax above is how you return a new immutable record with one property updated. Read more [here](http://elm-lang.org/docs/syntax#records).
+In Elm all data structures are immutable. This syntax above is how you return a new immutable record with one property updated. Read more [here](http://elm-lang.org/docs/syntax#records).
