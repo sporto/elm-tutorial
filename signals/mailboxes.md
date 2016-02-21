@@ -119,7 +119,7 @@ main =
 The `view` function now takes a `Signal.Address` as first argument.
 
 
-In `Events.onClick address "Hello"` we use this address to send the "Hello" message to.
+In `Events.onClick address "Hello"` we will send the "Hello" message to this given address.
 
 #### main
 
