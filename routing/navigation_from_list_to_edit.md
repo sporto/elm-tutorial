@@ -22,7 +22,13 @@ We will trigger this action when we intent to edit a player.
 
 The players' list needs to show a button for each player that triggers this action.
 
-In __src/Players/List.elm__. Add a new function for this button at the end:
+In __src/Players/List.elm__. Make sure we are importing `onClick`:
+
+```elm
+import Html.Events exposing (onClick)
+```
+
+Add a new function for this button at the end:
 
 ```elm
 editBtn : Signal.Address Action -> Player -> Html.Html
