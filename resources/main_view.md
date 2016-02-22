@@ -11,7 +11,7 @@ import Models exposing (..)
 import Players.List
 
 
-view : Signal.Address Action> AppModel> Html
+view : Signal.Address Action -> AppModel -> Html
 view address model =
   div
     []
