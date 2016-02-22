@@ -33,7 +33,7 @@ main =
 
 <https://github.com/sporto/elm-tutorial-assets/blob/master/code/effects/Tasks01.elm>
 
-In you run this in your browser you will see a number that changes slightly every second. This number is the current time (as a unix timestamp).
+If you run this in your browser you will see a number that changes slightly every second. This number is the current time (as a unix timestamp).
 
 Let's go through the example:
 
