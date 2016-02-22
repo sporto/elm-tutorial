@@ -26,7 +26,7 @@ We also want to use a couple of extra libraries:
 npm i basscss font-awesome -S
 ```
 
-This tutorial uses basscss v 8
+This tutorial uses basscss version 8.
 
 ## Webpack config
 
