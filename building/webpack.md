@@ -23,7 +23,7 @@ We also want to use a couple of extra libraries:
 - [FontAwesome](https://fortawesome.github.io/Font-Awesome/) for icons
 
 ```bash
-npm i basscss font-awesome -S
+npm i basscss@7 font-awesome -S
 ```
 
 This tutorial uses basscss version 7.
