@@ -10,7 +10,7 @@ Webpack is a code bundler. It looks at your dependency tree and only bundles the
 Stop Elm reactor if running and install webpack:
 
 ```bash
-npm i webpack webpack-dev-middleware elm-webpack-loader file-loader style-loader css-loader url-loader -S
+npm i webpack webpack-dev-middleware webpack-dev-server elm-webpack-loader file-loader style-loader css-loader url-loader -S
 ```
 
 This tutorial is using __webpack__ version __1.12__ and __elm-webpack-loader__ version __2.0__.
@@ -28,7 +28,7 @@ npm i basscss font-awesome -S
 
 ## Webpack config
 
-We need to add a __webpack.config.js__ at the root. Copy it from here <https://github.com/sporto/elm-tutorial-app/blob/130-webpack/webpack.config.js>
+We need to add a __webpack.config.js__ at the root. Copy it from here <https://github.com/sporto/elm-tutorial-app/blob/040-webpack/webpack.config.js>
 
 #### Things to note:
 
