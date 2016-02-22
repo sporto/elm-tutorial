@@ -31,4 +31,6 @@ effectsToRun id items =
     |> List.map (\item -> effectFor item)
 ```
 
-Here we filter the items and return a list of effects to run, in this case we will have a list with one item. But the point is that we don't have to use a `case` expression at all.
+Here we filter the items and return a list of effects to run, in this case we will have a list with one item, which is perfectly fine. 
+
+The point is that we can avoid checking for `Maybe/Nothing` by just returning lists as much as we can.
