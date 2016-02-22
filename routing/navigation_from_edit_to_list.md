@@ -44,13 +44,12 @@ nav : Signal.Address Action -> ViewModel -> Html.Html
 nav address model =
   div
     [ class "clearfix mb2 white bg-black p1" ]
-    []
     [ listBtn address model ]
 ```
 
 ## Players Update
 
-Players Update needs to respond to the `ListPlayers` action. In __src/Players/Update.elm__ at more more branch to the case expression:
+Players Update needs to respond to the `ListPlayers` action. In __src/Players/Update.elm__ add one more branch to the case expression:
 
 ```elm
 update action model =
