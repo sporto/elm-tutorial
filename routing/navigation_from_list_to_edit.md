@@ -63,6 +63,9 @@ playerRow address model player =
 Finally, __src/Players/Update.elm__ needs to respond to this action. Add a new branch to the case expression:
 
 ```elm
+...
+import Hop
+
     ...
 
     EditPlayer id ->
