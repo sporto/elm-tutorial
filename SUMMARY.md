@@ -2,7 +2,7 @@
 
 * [Introduction](README.md)
 * [Foundations](010_foundations/cover.md)
-   * [Hello World](100_foundations/hello.md)
+   * [Hello World](010_foundations/hello.md)
    * [Functions](100_foundations/functions.md)
    * [More on functions](100_foundations/more_on_functions.md)
 * [Signals](signals/cover.md)
