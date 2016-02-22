@@ -41,22 +41,15 @@ And change `playersRow` to include this button:
 ```elm
 playerRow : Signal.Address Action -> ViewModel -> Player -> Html.Html
 playerRow address model player =
-  let
-    bonuses =
-      999
-
-    strength =
-      bonuses + player.level
-  in
-    tr
-      []
-      [ td [] [ text (toString player.id) ]
-      , td [] [ text player.name ]
-      , td [] [ text (toString player.level) ]
-      , td
-          []
-          [ editBtn address player ]
-      ]
+  tr
+    []
+    [ td [] [ text (toString player.id) ]
+    , td [] [ text player.name ]
+    , td [] [ text (toString player.level) ]
+    , td
+        []
+        []
+    ]
 ```
 
 ## Players Update
