@@ -26,6 +26,8 @@ We also want to use a couple of extra libraries:
 npm i basscss font-awesome -S
 ```
 
+This tutorial uses basscss v 8
+
 ## Webpack config
 
 We need to add a __webpack.config.js__ at the root. Copy it from here <https://github.com/sporto/elm-tutorial-app/blob/040-webpack/webpack.config.js>
