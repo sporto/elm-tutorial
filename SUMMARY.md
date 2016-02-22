@@ -4,7 +4,7 @@
 * [Foundations](100_foundations/cover.md)
    * [Hello World](100_foundations/hello.md)
    * [Functions](100_foundations/functions.md)
-   * [More on functions](foundations/more_on_functions.md)
+   * [More on functions](100_foundations/more_on_functions.md)
 * [Signals](signals/cover.md)
    * [Introduction to signals](signals/introduction.md)
    * [Keeping state](signals/keeping_state.md)
