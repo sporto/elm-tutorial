@@ -53,8 +53,6 @@ playerRow address model player =
       [ td [] [ text (toString player.id) ]
       , td [] [ text player.name ]
       , td [] [ text (toString player.level) ]
-      , td [] [ text (toString bonuses) ]
-      , td [] [ text (toString strength) ]
       , td
           []
           [ editBtn address player ]
