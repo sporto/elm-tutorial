@@ -2,7 +2,7 @@
 
 We have a view where to show errors and an attribute on the model. This is the plan for adding the errors:
 
-![Flow](flow-v04.png)
+
 ![Flow](flow-v05.png)
 - Upon getting __FetchDone__, if there is an error __Player.Update__ will return an effect that sends a message to a mailbox (`actionsMailbox`)
 - Messages to this mailbox are wrapped with the `ShowError` action
