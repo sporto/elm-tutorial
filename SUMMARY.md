@@ -53,6 +53,7 @@
    * [Auxiliary mailbox](showing_errors/auxiliary_mailbox.md)
    * [Main Update](showing_errors/main_update.md)
    * [Try it](showing_errors/try_it.md)
+   * Flow
 * [Adding players](add/cover.md)
    * [Actions](add/add_1.md)
    * [Create Effect](add/effects.md)
