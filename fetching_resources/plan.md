@@ -4,7 +4,8 @@ The next step is to fetch the list of player from the fake API we set up before.
 
 This is the plan:
 
-![](flow-v01.png)
+
+![Flow](flow-v02.png)
 
 - When the application loads include an effect to initiate an Http request to the API to fetch the players. This will be done in the `init` of StartApp.
 
