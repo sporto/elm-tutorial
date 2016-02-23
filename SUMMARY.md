@@ -48,12 +48,12 @@
    * [Try it](fetching_resources/try_it.md)
 * [Showing Errors](showing_errors/cover.md)
    * [Messages outlet](showing_errors/messages_outlet.md)
+   * Flow
    * [Main Actions](showing_errors/main_actions.md)
    * [Players Update](showing_errors/players_update.md)
    * [Auxiliary mailbox](showing_errors/auxiliary_mailbox.md)
    * [Main Update](showing_errors/main_update.md)
    * [Try it](showing_errors/try_it.md)
-   * Flow
 * [Adding players](add/cover.md)
    * [Actions](add/add_1.md)
    * [Create Effect](add/effects.md)
