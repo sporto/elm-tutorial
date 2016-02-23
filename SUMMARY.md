@@ -48,7 +48,7 @@
    * [Try it](fetching_resources/try_it.md)
 * [Showing Errors](showing_errors/cover.md)
    * [Messages outlet](showing_errors/messages_outlet.md)
-   * Flow
+   * [Flow](showing_errors/flow.md)
    * [Main Actions](showing_errors/main_actions.md)
    * [Players Update](showing_errors/players_update.md)
    * [Auxiliary mailbox](showing_errors/auxiliary_mailbox.md)
