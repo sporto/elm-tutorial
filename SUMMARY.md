@@ -12,7 +12,7 @@
 * [The Elm architecture](030_elm_arch/cover.md)
    * [Model](030_elm_arch/model.md)
    * [Update](030_elm_arch/update.md)
-   * [Actions](elm_arch/actions.md)
+   * [Actions](030_elm_arch/actions.md)
    * [Mailbox](elm_arch/mailbox.md)
    * [StartApp](elm_arch/startapp.md)
 * [Effects](effects/cover.md)
