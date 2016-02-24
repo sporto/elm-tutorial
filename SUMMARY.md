@@ -55,12 +55,12 @@
    * [Main Update](showing_errors/main_update.md)
    * [Try it](showing_errors/try_it.md)
 * [Adding players](add/cover.md)
+   * Flow
    * [Actions](add/add_1.md)
    * [Create Effect](add/effects.md)
    * [Update](add/update.md)
    * [Create button in Players List](add/add_2.md)
    * [Try it](add/try_it.md)
-   * Flow
 * [Deleting players](delete/cover.md)
    * [Plan](delete/plan.md)
    * [Players Actions](delete/players_actions.md)
