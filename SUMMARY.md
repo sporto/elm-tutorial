@@ -28,7 +28,7 @@
 * [Resources](060_resources/cover.md)
    * [Players](060_resources/players.md)
    * [Players List](060_resources/players_list.md)
-   * [Main](resources/main.md)
+   * [Main](060_resources/main.md)
    * [Main View](resources/main_view.md)
 * [Routing](routing/cover.md)
    * [Router](routing/router.md)
