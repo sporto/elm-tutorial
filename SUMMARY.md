@@ -24,7 +24,7 @@
    * [Backend](050_starting/backend.md)
    * [Initial code](050_starting/initial_code.md)
    * [Multiple modules](050_starting/multiple_modules.md)
-   * [Webpack](building/webpack.md)
+   * [Webpack](050_starting/webpack.md)
 * [Resources](resources/cover.md)
    * [Players](resources/players.md)
    * [Players List](resources/players_list.md)
