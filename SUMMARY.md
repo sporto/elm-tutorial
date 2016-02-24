@@ -9,7 +9,7 @@
    * [Introduction to signals](020_signals/introduction.md)
    * [Keeping state](020_signals/keeping_state.md)
    * [Mailboxes](020_signals/mailboxes.md)
-* [The Elm architecture](elm_arch/cover.md)
+* [The Elm architecture](030_elm_arch/cover.md)
    * [Model](elm_arch/model.md)
    * [Update](elm_arch/update.md)
    * [Actions](elm_arch/actions.md)
