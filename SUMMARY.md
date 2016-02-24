@@ -22,7 +22,7 @@
 * [Starting an app](050_starting/cover.md)
    * [Planning](050_starting/planning.md)
    * [Backend](050_starting/backend.md)
-   * [Initial code](building/initial_code.md)
+   * [Initial code](050_starting/initial_code.md)
    * [Multiple modules](building/multiple_modules.md)
    * [Webpack](building/webpack.md)
 * [Resources](resources/cover.md)
