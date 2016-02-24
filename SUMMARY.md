@@ -10,7 +10,7 @@
    * [Keeping state](020_signals/keeping_state.md)
    * [Mailboxes](020_signals/mailboxes.md)
 * [The Elm architecture](030_elm_arch/cover.md)
-   * [Model](elm_arch/model.md)
+   * [Model](030_elm_arch/model.md)
    * [Update](elm_arch/update.md)
    * [Actions](elm_arch/actions.md)
    * [Mailbox](elm_arch/mailbox.md)
