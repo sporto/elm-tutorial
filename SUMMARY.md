@@ -34,7 +34,7 @@
    * [Router](070_routing/router.md)
    * [Main: Actions, Model and Update](070_routing/main_actions.md)
    * [Player edit view](070_routing/player_edit_view.md)
-   * [Main view](routing/main_view.md)
+   * [Main view](070_routing/main_view.md)
    * [Main](routing/main.md)
    * [Try it](routing/try_it.md)
    * [Navigation from List to Edit](routing/navigation_from_list_to_edit.md)
