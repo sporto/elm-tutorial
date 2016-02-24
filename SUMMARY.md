@@ -26,7 +26,7 @@
    * [Multiple modules](050_starting/multiple_modules.md)
    * [Webpack](050_starting/webpack.md)
 * [Resources](060_resources/cover.md)
-   * [Players](resources/players.md)
+   * [Players](060_resources/players.md)
    * [Players List](resources/players_list.md)
    * [Main](resources/main.md)
    * [Main View](resources/main_view.md)
