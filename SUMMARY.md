@@ -23,7 +23,7 @@
    * [Planning](050_starting/planning.md)
    * [Backend](050_starting/backend.md)
    * [Initial code](050_starting/initial_code.md)
-   * [Multiple modules](building/multiple_modules.md)
+   * [Multiple modules](050_starting/multiple_modules.md)
    * [Webpack](building/webpack.md)
 * [Resources](resources/cover.md)
    * [Players](resources/players.md)
