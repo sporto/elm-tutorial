@@ -30,7 +30,7 @@
    * [Players List](060_resources/players_list.md)
    * [Main](060_resources/main.md)
    * [Main View](060_resources/main_view.md)
-* [Routing](routing/cover.md)
+* [Routing](070_routing/cover.md)
    * [Router](routing/router.md)
    * [Main: Actions, Model and Update](routing/main_actions.md)
    * [Player edit view](routing/player_edit_view.md)
