@@ -37,7 +37,7 @@
    * [Main view](070_routing/main_view.md)
    * [Main](070_routing/main.md)
    * [Try it](070_routing/try_it.md)
-   * [Navigation from List to Edit](routing/navigation_from_list_to_edit.md)
+   * [Navigation from List to Edit](070_routing/navigation_from_list_to_edit.md)
    * [Navigation from Edit to List](routing/navigation_from_edit_to_list.md)
 * [Fetching resources](fetching_resources/cover.md)
    * [Plan](fetching_resources/plan.md)
