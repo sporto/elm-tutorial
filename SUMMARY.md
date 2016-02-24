@@ -15,7 +15,7 @@
    * [Actions](030_elm_arch/actions.md)
    * [Mailbox](030_elm_arch/mailbox.md)
    * [StartApp](030_elm_arch/startapp.md)
-* [Effects](effects/cover.md)
+* [Effects](040_effects/cover.md)
    * [Tasks](effects/tasks.md)
    * [Effects](effects/effects.md)
    * [StartApp with effects](effects/startapp_with_effects.md)
