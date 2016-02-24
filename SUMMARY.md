@@ -17,7 +17,7 @@
    * [StartApp](030_elm_arch/startapp.md)
 * [Effects](040_effects/cover.md)
    * [Tasks](040_effects/tasks.md)
-   * [Effects](effects/effects.md)
+   * [Effects](040_effects/effects.md)
    * [StartApp with effects](effects/startapp_with_effects.md)
 * [Starting an app](building/cover.md)
    * [Planning](building/planning.md)
