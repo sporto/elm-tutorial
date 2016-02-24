@@ -55,7 +55,7 @@
    * [Main Update](showing_errors/main_update.md)
    * [Try it](showing_errors/try_it.md)
 * [Adding players](add/cover.md)
-   * Flow
+   * [Flow](add/flow.md)
    * [Actions](add/add_1.md)
    * [Create Effect](add/effects.md)
    * [Update](add/update.md)
