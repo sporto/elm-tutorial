@@ -7,7 +7,7 @@
    * [More on functions](010_foundations/more_on_functions.md)
 * [Signals](020_signals/cover.md)
    * [Introduction to signals](020_signals/introduction.md)
-   * [Keeping state](signals/keeping_state.md)
+   * [Keeping state](020_signals/keeping_state.md)
    * [Mailboxes](signals/mailboxes.md)
 * [The Elm architecture](elm_arch/cover.md)
    * [Model](elm_arch/model.md)
