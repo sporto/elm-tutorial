@@ -60,6 +60,7 @@
    * [Update](add/update.md)
    * [Create button in Players List](add/add_2.md)
    * [Try it](add/try_it.md)
+   * Flow
 * [Deleting players](delete/cover.md)
    * [Plan](delete/plan.md)
    * [Players Actions](delete/players_actions.md)
