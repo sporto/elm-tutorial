@@ -100,8 +100,8 @@ So later we will be able to call respond with:
 respond (Other 123)
 ```
 
-But respond `(Other "Hello")` would fail because `respond` expect an integer in place of `a`.
+But respond `(Other "Hello")` would fail because `respond` expects an integer in place of `a`.
 
 ---
 
-Read more about this [here](http://elm-lang.org/guide/model-the-problem).
+There is a lot more about Union types. Read more about this [here](http://elm-lang.org/guide/model-the-problem).
