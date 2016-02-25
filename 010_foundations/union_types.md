@@ -62,4 +62,14 @@ You can do partial application just like any other function.
 
 You can nest union types and this is very common as well:
 
+```
+type OtherAnswer = DontKnow | Perhaps | Undecided
 
+type Answer = Yes | No | Other OtherAnswer
+```
+
+Then you can pass this to our `respond` function (which expect `Answer`) like this:
+
+```
+respond (Other Perhaps)
+```
