@@ -5,12 +5,15 @@ You can send a payload with your actions:
 ```elm
 module Main (..) where
 
-import Html
+module Main (..) where
+
+import Html exposing (Html)
 import Mouse
 
 
 type alias Model =
-  { count : Int }
+  { count : Int
+  }
 
 
 type Action
@@ -20,10 +23,11 @@ type Action
 
 initialModel : Model
 initialModel =
-  { count = 0 }
+  { count = 0
+  }
 
 
-view : Model -> Html.Html
+view : Model -> Html
 view model =
   Html.text (toString model.count)
 
@@ -34,7 +38,7 @@ update action model =
     MouseClick amount ->
       { model | count = model.count + amount }
 
-    NoOp ->
+    _ ->
       model
 
 
@@ -48,9 +52,10 @@ modelSignal =
   Signal.foldp update initialModel mouseClickSignal
 
 
-main : Signal.Signal Html.Html
+main : Signal.Signal Html
 main =
   Signal.map view modelSignal
+
 ```
 
 <https://github.com/sporto/elm-tutorial-assets/blob/master/code/elm_arch/ActionsWithPayload.elm>
