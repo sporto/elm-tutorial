@@ -111,7 +111,6 @@ mb =
 main : Signal Html
 main =
   Signal.map (view mb.address) mb.signal
-
 ```
 
 <https://github.com/sporto/elm-tutorial-assets/blob/master/code/signals/Mailbox02.elm>
