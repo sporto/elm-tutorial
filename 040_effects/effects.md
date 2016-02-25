@@ -18,6 +18,8 @@ When working with __StartApp__ your components will return `Effects` rather than
 
 ## Examples
 
+## Tasks to effects
+
 Most of the time we will be creating __tasks__ and converting them to effects:
 
 ```elm
@@ -25,6 +27,8 @@ aTask |> Effect.task
 ```
 
 This takes a task and converts it to an effect. See more about this [here](http://package.elm-lang.org/packages/evancz/elm-effects/2.0.1/Effects#task).
+
+## Collection of effects
 
 Other times we will return a collection of effects to run, be we don't return a list of effects, we return just one `Effects`:
 
