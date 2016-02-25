@@ -1,10 +1,9 @@
 # Effects 2
 
-Effects are a higher level abstraction than tasks for anything that produces side effects. An __Effects__ type is always a collection of effects to run (as opposed to a task which is singular). Our components will return __effects__, these effects will be run by the Elm runtime.
 
-Most of the time we will be creating __tasks__ and converting them to effects.
+Following is an example application using `Effects`.
 
-__The example below is complex, if you find it difficult to understand don't worry too much. We will be using StartApp in the next chapter, which simplifies the code__.
+__The example below is complex, if you find it difficult to understand don't worry too much. We will be using StartApp in the next chapter, which simplifies this code__.
 
 ## Sample application
 
@@ -14,7 +13,7 @@ First we need to install `elm-effects`:
 elm package install evancz/elm-effects
 ```
 
-Following is a sample application using Effects. Don't worry too much if this application doesn't make full sense, later on we will use __StartApp__ again, encapsulates a lot of complexity here.
+Application:
 
 ```elm
 import Html
