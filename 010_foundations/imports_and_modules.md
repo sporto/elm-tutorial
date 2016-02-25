@@ -32,7 +32,7 @@ import Html exposing (..)
 
 Then you would be able to use every function and type in that module directly. But this is not recommended most of the time because we end up with ambiguity and possible clashes between modules.
 
-## Types and modules with the same name
+## Modules and types with the same name
 
 Many modules export types with the same name as the module. For example the `Html` module has a `Html` type and the `Signal` module has a `Signal` type.
 
