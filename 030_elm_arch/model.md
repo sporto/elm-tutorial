@@ -35,7 +35,6 @@ modelSignal =
 main : Signal.Signal Html
 main =
   Signal.map view modelSignal
-
 ```
 
 <https://github.com/sporto/elm-tutorial-assets/blob/master/code/elm_arch/Model.elm>
@@ -64,7 +63,7 @@ This function returns the initial model of our application. In this case it retu
 ### view
 
 ```elm
-view : Model -> Html.Html
+view : Model -> Html
 view model =
   Html.text (toString model.count)
 ```
