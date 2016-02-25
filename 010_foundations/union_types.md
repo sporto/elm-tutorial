@@ -33,3 +33,27 @@ respond (Other "Hello")
 ```
 
 You need the parenthesis otherwise Elm will interpret this as passing two arguments to respond.
+
+
+## Calling as functions
+
+Note how we add a payload to `Other`:
+
+```elm
+Other "Hello"
+```
+
+This is just like a function call where `Other` is the function. Union types behave just like functions. For example give a type:
+
+```
+type Answer = Message Int String
+```
+
+You will create a `Message` tag by:
+
+```elm
+
+```
+
+
+## Nesting
