@@ -36,7 +36,7 @@ Then you would be able to use every function and type in that module directly. B
 
 Many modules export types with the same name as the module. For example the `Html` module has a `Html` type and the `Signal` module has a `Signal` type.
 
-So doing:
+So:
 
 ```elm
 import Html
@@ -53,4 +53,4 @@ import Html exposing (Html)
 
 myFunction : Html
 myFunction =
-  ...
+  ...```
