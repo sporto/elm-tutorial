@@ -30,4 +30,4 @@ You can even expose everything in a module:
 import Html exposing (..)
 ```
 
-Then you would be able to use every function and type in that module directly. But this is not recommended most of the time because you can have ambiguity and clashes.
+Then you would be able to use every function and type in that module directly. But this is not recommended most of the time because we end up with ambiguity and possible clashes between modules.
