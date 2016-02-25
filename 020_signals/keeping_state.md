@@ -45,11 +45,11 @@ Here is the application using `foldp`:
 ```elm
 module Main (..) where
 
-import Html
+import Html exposing (Html)
 import Mouse
 
 
-view : Int -> Html.Html
+view : Int -> Html
 view count =
   Html.text (toString count)
 
@@ -59,7 +59,7 @@ countSignal =
   Signal.foldp (\_ state -> state + 1) 0 Mouse.clicks
 
 
-main : Signal.Signal Html.Html
+main : Signal.Signal Html
 main =
   Signal.map view countSignal
 ```
