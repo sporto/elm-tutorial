@@ -5,7 +5,7 @@ Let's do one more refactor:
 ```elm
 module Main (..) where
 
-import Html
+import Html exposing (Html)
 import Mouse
 
 
@@ -18,7 +18,7 @@ initialModel =
   { count = 0 }
 
 
-view : Model -> Html.Html
+view : Model -> Html
 view model =
   Html.text (toString model.count)
 
@@ -33,7 +33,7 @@ modelSignal =
   Signal.foldp update initialModel Mouse.clicks
 
 
-main : Signal.Signal Html.Html
+main : Signal.Signal Html
 main =
   Signal.map view modelSignal
 ```
