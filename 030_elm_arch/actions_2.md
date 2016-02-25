@@ -1,6 +1,4 @@
-# Actions 2
-
-## Additional actions
+# Actions: Multiple
 
 To understand the beauty of using ADTs for actions, imagine what will happen if you have several actions that can happen in your application e.g. mouse clicks, key up, key downs, etc. By converting everything to __actions__ our application can handle all these cases.
 
@@ -72,7 +70,6 @@ modelSignal =
 main : Signal.Signal Html
 main =
   Signal.map view modelSignal
-
 ```
 
 <https://github.com/sporto/elm-tutorial-assets/blob/master/code/elm_arch/ActionsMultiple.elm>
