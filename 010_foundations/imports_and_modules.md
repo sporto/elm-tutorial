@@ -59,3 +59,29 @@ myFunction =
 In the first one we use only import the `Html` module and use the fully qualified path `Html.Html`.
 
 In the second one we expose the `Html` type from the `Html` module. And use the `Html` type directly.
+
+## Modules
+
+When you create a module in Elm you add the `module` declaration at the top:
+
+```
+module Main (..) where
+```
+
+`Main` is the name of the module. `(..)` means that you want to expose all functions and types in this module. Elm expect to find this module in a file called __Main.elm__, so a file with the same name as the module.
+
+You can have deeper file structures in an application, for example the file __Players/Utils.elm__ should have the declaration:
+
+```
+module Players.Utils (..) where
+```
+
+You will be able to import this module from anywhere in your application by:
+
+```
+import Players.Utils
+```
+
+
+
+
