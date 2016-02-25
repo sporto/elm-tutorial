@@ -2,7 +2,7 @@
 
 ## Additional actions
 
-To understand the beauty of this, imagine what will happen if you have several actions that can happen in your application e.g. mouse clicks, key up, key downs, etc. By converting everything to __actions__ our application can handle all these cases.
+To understand the beauty of using ADTs, imagine what will happen if you have several actions that can happen in your application e.g. mouse clicks, key up, key downs, etc. By converting everything to __actions__ our application can handle all these cases.
 
 Here is an application that responds to both mouse clicks and key presses:
 
