@@ -32,6 +32,4 @@ Other times we will return a collection of effects to run, be we don't return a 
 Effect.batch [effect1, effect2]
 ```
 
-`effect1` and `effect2` are of type `Effects`. `Effect.batch` take a list of `Effects` and converts them into one `Effects`.
-
-A group of effects is just another effect.
+`effect1` and `effect2` are of type `Effects`. `Effect.batch` take a list of `Effects` and converts them into one `Effects`. A group of effects is just another effect.
