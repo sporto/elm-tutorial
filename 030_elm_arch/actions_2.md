@@ -2,20 +2,21 @@
 
 ## Additional actions
 
-To understand the beauty of using ADTs, imagine what will happen if you have several actions that can happen in your application e.g. mouse clicks, key up, key downs, etc. By converting everything to __actions__ our application can handle all these cases.
+To understand the beauty of using ADTs for actions, imagine what will happen if you have several actions that can happen in your application e.g. mouse clicks, key up, key downs, etc. By converting everything to __actions__ our application can handle all these cases.
 
 Here is an application that responds to both mouse clicks and key presses:
 
 ```elm
 module Main (..) where
 
-import Html
+import Html exposing (Html)
 import Mouse
 import Keyboard
 
 
 type alias Model =
-  { count : Int }
+  { count : Int
+  }
 
 
 type Action
@@ -26,10 +27,11 @@ type Action
 
 initialModel : Model
 initialModel =
-  { count = 0 }
+  { count = 0
+  }
 
 
-view : Model -> Html.Html
+view : Model -> Html
 view model =
   Html.text (toString model.count)
 
@@ -43,7 +45,7 @@ update action model =
     KeyPress ->
       { model | count = model.count - 1 }
 
-    NoOp ->
+    _ ->
       model
 
 
@@ -67,9 +69,10 @@ modelSignal =
   Signal.foldp update initialModel actionSignal
 
 
-main : Signal.Signal Html.Html
+main : Signal.Signal Html
 main =
   Signal.map view modelSignal
+
 ```
 
 <https://github.com/sporto/elm-tutorial-assets/blob/master/code/elm_arch/ActionsMultiple.elm>
