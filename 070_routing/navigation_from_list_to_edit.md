@@ -9,13 +9,15 @@ Add a new action `EditPlayer` in __src/Players/Actions.elm__
 ```elm
 ...
 
+import Hop
+
 type Action
   = NoOp
   | HopAction Hop.Action
   | EditPlayer PlayerId
 ```
 
-We will trigger this action when we intent to edit a player.
+We will trigger this action when we intend to edit a player.
 
 
 ## Players List
@@ -42,7 +44,7 @@ editBtn address player =
 
 Here we trigger `EditPlayer` with the id of the player that we want to edit. To do this we send the `EditPlayer` with the use id to the address.
 
-And change `playersRow` to include this button:
+And change `playerRow` to include this button:
 
 ```elm
 playerRow : Signal.Address Action -> ViewModel -> Player -> Html.Html
@@ -54,7 +56,7 @@ playerRow address model player =
     , td [] [ text (toString player.level) ]
     , td
         []
-        []
+        [editBtn address player]
     ]
 ```
 
@@ -63,11 +65,9 @@ playerRow address model player =
 Finally, __src/Players/Update.elm__ needs to respond to this action. Add a new branch to the case expression:
 
 ```elm
-...
-import Hop
-
-    ...
-
+update : Action -> UpdateModel -> ( List Player, Effects Action )
+update action model =
+  case action of
     EditPlayer id ->
       let
         path =
@@ -76,10 +76,15 @@ import Hop
         ( model.players, Effects.map HopAction (Hop.navigateTo path) )
 
     NoOp ->
-      ...
+      ( model.players, Effects.none )
+
+    HopAction _ ->
+      ( model.players, Effects.none )
 ```
 
 `Hop.navigateTo path` returns an effect. When this effect is run by Elm the location of the browser will change. You can read more about how this works [here](https://github.com/sporto/hop).
+
+Notice we also had to handle `HopAction` because we added it to **src/Players/Actions.elm**.
 
 ## Test it
 
