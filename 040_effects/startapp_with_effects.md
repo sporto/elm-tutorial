@@ -5,7 +5,7 @@ As discussed __StartApp.Simple__ doesn't allow for having side effects. This sid
 - Changing the browser route
 - Sending an Ajax request
 
-These are definitely necessary things to do when building a web application. We will use the full version of StartApp from now on.
+These are common things to do when building a web application. We will use the full version of StartApp from now on.
 
 ## Using StartApp
 
