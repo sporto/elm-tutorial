@@ -12,8 +12,24 @@ For example a function that is declared like this:
 
 ```elm
 respond : Answer -> String
-respond =
+respond answer =
   ...
 ```
 
 Can either take `Yes` or `No` as the first argument e.g. `respond Yes` is a valid call.
+
+## Payload
+
+Union types can have associated information with them:
+
+```elm
+type Answer = Yes | No | Other String
+```
+
+In this case `Other` will have an associated string. You could call `respond` like this:
+
+```elm
+respond (Other "Hello")
+```
+
+You need the parenthesis otherwise Elm will interpret this as passing two arguments to respond.
