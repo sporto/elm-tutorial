@@ -46,7 +46,7 @@ myFunction =
   ...
 ```
 
-Is equivalent to:
+Which is a function `myFunction` that return an `Html` element. Is equivalent to:
 
 ```elm
 import Html exposing (Html)
