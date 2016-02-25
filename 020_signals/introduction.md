@@ -11,11 +11,11 @@ Let's look at a basic signal:
 ```elm
 module Main (..) where
 
-import Html
+import Html exposing (Html)
 import Mouse
 
 
-view : Int -> Html.Html
+view : Int -> Html
 view x =
   Html.text (toString x)
 
