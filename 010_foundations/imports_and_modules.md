@@ -60,7 +60,7 @@ In the first one we use only import the `Html` module and use the fully qualifie
 
 In the second one we expose the `Html` type from the `Html` module. And use the `Html` type directly.
 
-## Modules
+## Module declarations
 
 When you create a module in Elm you add the `module` declaration at the top:
 
