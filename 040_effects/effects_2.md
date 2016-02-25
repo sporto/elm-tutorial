@@ -1,7 +1,6 @@
 # Effects 2
 
-
-Following is an example application using `Effects`.
+Following is an example application using `Effects` that replicates whan __StartApp__ does under the hood.
 
 __The example below is complex, if you find it difficult to understand don't worry too much. We will be using StartApp in the next chapter, which simplifies this code__.
 
