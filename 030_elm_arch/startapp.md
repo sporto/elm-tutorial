@@ -27,7 +27,7 @@ Let's convert our application to use start app:
 ```elm
 module Main (..) where
 
-import Html
+import Html exposing (Html)
 import Html.Events as Events
 import StartApp.Simple
 
@@ -48,7 +48,7 @@ initialModel =
   }
 
 
-view : Signal.Address Action -> Model -> Html.Html
+view : Signal.Address Action -> Model -> Html
 view address model =
   Html.div
     []
