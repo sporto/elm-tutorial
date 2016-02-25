@@ -20,7 +20,7 @@ view x =
   Html.text (toString x)
 
 
-main : Signal.Signal Html.Html
+main : Signal.Signal Html
 main =
   Signal.map view Mouse.x
 ```
@@ -35,13 +35,13 @@ On the second line we import the `Mouse` module from core. It provides utilities
 
 #### view
 
-`view` is a function that takes an integer and returns an html fragment (`Int -> Html.Html`).
+`view` is a function that takes an integer and returns an HTML fragment (`Int -> Html`).
 
 However, `Html.text` expects a string, so we must convert `x` to a string. This is done with the `toString` function.
 
 #### main
 
-An Elm application's `main` function can return a __static element__ or a __signal__. In this case `main` returns a signal of `Html` (`Signal.Signal Html.Html`). That is, the HTML output by this application can vary over time!
+An Elm application's `main` function can return a __static element__ or a __signal__. In this case `main` returns a signal of `Html` (`Signal.Signal Html`). That is, the HTML output by this application can vary over time!
 
 To understand how this is accomplished, let us deconstruct the last line of the program above (`Signal.map view Mouse.x`).
 
@@ -71,11 +71,11 @@ Going back to our example:
 Signal.map view Mouse.x
 ```
 
-In the example above, the `view` function is used as the transformation, or mapping, function. It takes an `Int` value and outputs `Html.Html`.
+In the example above, the `view` function is used as the transformation, or mapping, function. It takes an `Int` value and outputs `Html`.
 
 The second argument (`Mouse.x`) is a signal of `Int` values.
 
-The result is a signal of `Html.Html` values, which is exactly what we want the `main` function to output.
+The result is a signal of `Html` values, which is exactly what we want the `main` function to output.
 
 `Signal.map` returns a new signal with the result of mapping the values of the source signal through the provided transformation function. As the source signal changes, each new value is transformed into, or mapped to, a value of the target signal type.
 
