@@ -55,5 +55,7 @@ You will create a `Message` tag by:
 Message 1 "Hello"
 ```
 
+You can do partial application just like any other function.
+
 
 ## Nesting
