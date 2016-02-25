@@ -14,9 +14,9 @@
    * [Update](030_elm_arch/update.md)
    * [Actions](030_elm_arch/actions.md)
    * [Actions: Multiple](030_elm_arch/actions_2.md)
+   * Actions: Payload
    * [Mailbox](030_elm_arch/mailbox.md)
    * [StartApp](030_elm_arch/startapp.md)
-   * Actions: Payload
 * [Effects](040_effects/cover.md)
    * [Tasks](040_effects/tasks.md)
    * [Effects](040_effects/effects.md)
