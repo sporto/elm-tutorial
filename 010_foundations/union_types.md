@@ -104,4 +104,4 @@ But respond `(Other "Hello")` would fail because `respond` expects an integer in
 
 ---
 
-There is a lot more about Union types. Read more about this [here](http://elm-lang.org/guide/model-the-problem).
+There is a lot more about Union types. If interested read more about this [here](http://elm-lang.org/guide/model-the-problem).
