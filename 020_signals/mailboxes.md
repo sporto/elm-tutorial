@@ -11,10 +11,10 @@ To understand this better, let's start by creating a page with a button:
 ```elm
 module Main (..) where
 
-import Html
+import Html exposing (Html)
 
 
-view : String -> Html.Html
+view : String -> Html
 view message =
   Html.div
     []
@@ -28,9 +28,10 @@ messageSignal =
   Signal.constant "Hello"
 
 
-main : Signal Html.Html
+main : Signal Html
 main =
   Signal.map view messageSignal
+
 ```
 
 <https://github.com/sporto/elm-tutorial-assets/blob/master/code/signals/Mailbox01.elm>
