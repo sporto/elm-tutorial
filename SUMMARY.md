@@ -18,7 +18,7 @@
 * [Effects](040_effects/cover.md)
    * [Tasks](040_effects/tasks.md)
    * [Effects](040_effects/effects.md)
-   * Effects 2
+   * [Effects 2](040_effects/effects_2.md)
    * [StartApp with effects](040_effects/startapp_with_effects.md)
 * [Starting an app](050_starting/cover.md)
    * [Planning](050_starting/planning.md)
