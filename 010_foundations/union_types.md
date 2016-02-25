@@ -73,3 +73,5 @@ Then you can pass this to our `respond` function (which expect `Answer`) like th
 ```
 respond (Other Perhaps)
 ```
+
+Read more about this [here](http://elm-lang.org/guide/model-the-problem).
