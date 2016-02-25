@@ -59,3 +59,7 @@ You can do partial application just like any other function.
 
 
 ## Nesting
+
+You can nest union types and this is very common as well:
+
+
