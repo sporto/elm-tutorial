@@ -74,7 +74,33 @@ Then you can pass this to our `respond` function (which expect `Answer`) like th
 respond (Other Perhaps)
 ```
 
-## 
+## Type variables
+
+It is also possible to use type variables or stand-ins:
+
+```elm
+type Answer a = Yes | No | Other a
+```
+
+This is an `Answer` that can be used with different types e.g. Int, String.
+
+For example respond could look like this:
+
+```elm
+respond : Answer Int -> String
+respond answer =
+  ...
+```
+
+In here we are saying the the `a` stand-in should be of type `String`. Note the `Answer String` signature.
+
+So later we will be able to call respond with:
+
+```
+respond (Other 123)
+```
+
+But respond `(Other "Hello")` would fail because `respond` expect an integer in place of `a`.
 
 ---
 
