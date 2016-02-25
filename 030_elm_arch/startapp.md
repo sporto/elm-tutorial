@@ -69,7 +69,7 @@ update action model =
       model
 
 
-main : Signal.Signal Html.Html
+main : Signal.Signal Html
 main =
   StartApp.Simple.start
     { model = initialModel
@@ -90,7 +90,7 @@ StartApp provides these two things for us.
 Now we start our application by calling the `start` method of __StartApp.Simple__:
 
 ```elm
-main : Signal.Signal Html.Html
+main : Signal.Signal Html
 main =
   StartApp.Simple.start
     { model = initialModel
