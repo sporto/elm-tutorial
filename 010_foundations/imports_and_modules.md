@@ -36,3 +36,21 @@ Then you would be able to use every function and type in that module directly. B
 
 Many modules export types with the same name as the module. For example the `Html` module has a `Html` type and the `Signal` module has a `Signal` type.
 
+So doing:
+
+```elm
+import Html
+
+myFunction : Html.Html
+myFunction =
+  ...
+```
+
+Is equivalent to:
+
+```elm
+import Html exposing (Html)
+
+myFunction : Html
+myFunction =
+  ...
