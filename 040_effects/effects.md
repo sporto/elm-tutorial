@@ -14,7 +14,11 @@ We can do a lot of things with just `Task`. For example send Http request or cha
 - `None` which means no effect
 - A collection of `Effects`
 
-An __Effects__ type is always a collection of effects to run (as opposed to a task which is singular). Our components will return __effects__, these effects will be run by the Elm runtime.
+When working with __StartApp__ your components will return `Effects` rather than tasks. This effects will then be run by __StartApp__ and the Elm runtime.
 
-Most of the time we will be creating __tasks__ and converting them to effects.
+Most of the time we will be creating __tasks__ and converting them to effects:
+
+```elm
+  aTask |> Effect.task
+```
 
