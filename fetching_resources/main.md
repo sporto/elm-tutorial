@@ -2,7 +2,7 @@
 
 ## Main Model
 
-Remove the hardcoded list of players in __src/Model.elm__
+Remove the hardcoded list of players in __src/Models.elm__
 
 ```elm
 initialModel : AppModel
