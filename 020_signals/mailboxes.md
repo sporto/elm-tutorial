@@ -31,7 +31,6 @@ messageSignal =
 main : Signal Html
 main =
   Signal.map view messageSignal
-
 ```
 
 <https://github.com/sporto/elm-tutorial-assets/blob/master/code/signals/Mailbox01.elm>
@@ -88,17 +87,18 @@ The next step is to use the mailbox in our application so we can send and refres
 ```elm
 module Main (..) where
 
-import Html
+import Html exposing (Html)
 import Html.Events as Events
 
 
-view : Signal.Address String -> String -> Html.Html
+view : Signal.Address String -> String -> Html
 view address message =
   Html.div
     []
     [ Html.div [] [ Html.text message ]
     , Html.button
-        [ Events.onClick address "Hello" ]
+        [ Events.onClick address "Hello"
+        ]
         [ Html.text "Click" ]
     ]
 
@@ -108,9 +108,10 @@ mb =
   Signal.mailbox ""
 
 
-main : Signal Html.Html
+main : Signal Html
 main =
   Signal.map (view mb.address) mb.signal
+
 ```
 
 <https://github.com/sporto/elm-tutorial-assets/blob/master/code/signals/Mailbox02.elm>
