@@ -12,3 +12,22 @@ This imports the `Html` module from core. Then you can use functions and types f
 Html.div [] []
 ```
 
+You can also import modules and expose functions and types on it:
+
+```
+import Html exposing (div)
+```
+
+`div` is mixed in the current scope. So you can use it directly:
+
+```
+div [] []
+```
+
+You can even expose everything in a module:
+
+```
+import Html exposing (..)
+```
+
+Then you would be able to use every function and type in that module directly. But this is not really recommended unless become you can have ambiguity and clashes.
