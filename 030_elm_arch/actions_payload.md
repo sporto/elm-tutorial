@@ -5,8 +5,6 @@ You can send a payload with your actions:
 ```elm
 module Main (..) where
 
-module Main (..) where
-
 import Html exposing (Html)
 import Mouse
 
@@ -55,7 +53,6 @@ modelSignal =
 main : Signal.Signal Html
 main =
   Signal.map view modelSignal
-
 ```
 
 <https://github.com/sporto/elm-tutorial-assets/blob/master/code/elm_arch/ActionsWithPayload.elm>
