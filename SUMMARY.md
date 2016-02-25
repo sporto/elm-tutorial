@@ -5,6 +5,7 @@
    * [Hello World](010_foundations/hello.md)
    * [Functions](010_foundations/functions.md)
    * [More on functions](010_foundations/more_on_functions.md)
+   * Imports and Modules
 * [Signals](020_signals/cover.md)
    * [Introduction to signals](020_signals/introduction.md)
    * [Keeping state](020_signals/keeping_state.md)
