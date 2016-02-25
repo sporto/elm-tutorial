@@ -13,7 +13,7 @@
    * [Model](030_elm_arch/model.md)
    * [Update](030_elm_arch/update.md)
    * [Actions](030_elm_arch/actions.md)
-   * Actions 2
+   * [Actions 2](030_elm_arch/actions_2.md)
    * [Mailbox](030_elm_arch/mailbox.md)
    * [StartApp](030_elm_arch/startapp.md)
 * [Effects](040_effects/cover.md)
