@@ -63,7 +63,7 @@ import Players.Update
 update : Action -> AppModel -> ( AppModel, Effects Action )
 update action model =
   case action of
-    PlayersAction subAction>
+    PlayersAction subAction ->
       let
         updateModel =
           { players = model.players
@@ -74,7 +74,7 @@ update action model =
       in
         ( { model | players = updatedPlayers }, Effects.map PlayersAction fx )
 
-    NoOp>
+    NoOp ->
       ( model, Effects.none )
 ```
 
