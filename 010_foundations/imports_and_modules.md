@@ -46,7 +46,7 @@ myFunction =
   ...
 ```
 
-Which is a function `myFunction` that return an `Html` element. Is equivalent to:
+Which is a function `myFunction` that return an element of type `Html`. Is equivalent to:
 
 ```elm
 import Html exposing (Html)
@@ -55,3 +55,7 @@ myFunction : Html
 myFunction =
   ...
 ```
+
+In the first one we use only import the `Html` module and use the fully qualified path `Html.Html`.
+
+In the second one we expose the `Html` type from the `Html` module. And use the `Html` type directly.
