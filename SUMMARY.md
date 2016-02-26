@@ -78,7 +78,7 @@
    * [Try it](110_delete/try_it.md)
 * [Edit](120_edit/cover.md)
    * [Changing level: Actions and view](120_edit/actions_and_effects.md)
-   * [Players Effects](edit/players_view_level.md)
+   * [Players Effects](120_edit/players_view_level.md)
    * [Players Update](edit/level_players_update.md)
    * [Try it](edit/level_try_it.md)
    * [Editing the name](edit/editing_the_name.md)
