@@ -9,7 +9,11 @@ Add a new action `EditPlayer` in __src/Players/Actions.elm__
 ```elm
 ...
 
+module Players.Actions (..) where
+
+import Players.Models exposing (PlayerId)
 import Hop
+
 
 type Action
   = NoOp
