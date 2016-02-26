@@ -54,7 +54,7 @@
 * [Showing Errors](090_showing_errors/cover.md)
    * [Messages outlet](090_showing_errors/messages_outlet.md)
    * [Flow](090_showing_errors/flow.md)
-   * [Main Actions](showing_errors/main_actions.md)
+   * [Main Actions](090_showing_errors/main_actions.md)
    * [Players Update](showing_errors/players_update.md)
    * [Auxiliary mailbox](showing_errors/auxiliary_mailbox.md)
    * [Main Update](showing_errors/main_update.md)
