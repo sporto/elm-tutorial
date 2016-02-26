@@ -60,7 +60,7 @@
    * [Main Update](090_showing_errors/main_update.md)
    * [Try it](090_showing_errors/try_it.md)
 * [Adding players](100_add/cover.md)
-   * [Flow](080_add/flow.md)
+   * [Flow](100_add/flow.md)
    * [Actions](080_add/add_1.md)
    * [Create Effect](080_add/effects.md)
    * [Update](080_add/update.md)
