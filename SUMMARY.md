@@ -58,7 +58,7 @@
    * [Players Update](090_showing_errors/players_update.md)
    * [Auxiliary mailbox](090_showing_errors/auxiliary_mailbox.md)
    * [Main Update](090_showing_errors/main_update.md)
-   * [Try it](showing_errors/try_it.md)
+   * [Try it](090_showing_errors/try_it.md)
 * [Adding players](080_add/cover.md)
    * [Flow](080_add/flow.md)
    * [Actions](080_add/add_1.md)
