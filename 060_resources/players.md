@@ -22,9 +22,6 @@ Create __src/Players/Actions.elm__
 ```elm
 module Players.Actions (..) where
 
-import Http
-import Players.Models exposing (PlayerId, Player)
-
 
 type Action
   = NoOp
