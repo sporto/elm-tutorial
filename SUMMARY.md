@@ -67,7 +67,7 @@
    * [Create button in Players List](100_add/add_2.md)
    * [Try it](100_add/try_it.md)
 * [Deleting players](110_delete/cover.md)
-   * [Plan](090_delete/plan.md)
+   * [Plan](110_delete/plan.md)
    * [Players Actions](090_delete/players_actions.md)
    * [Delete button on Players List](090_delete/delete_1.md)
    * [Responding to DeletePlayerIntent](090_delete/delete_2.md)
