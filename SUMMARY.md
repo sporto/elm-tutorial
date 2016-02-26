@@ -47,7 +47,7 @@
 * [Fetching resources](080_fetching_resources/cover.md)
    * [Plan](080_fetching_resources/plan.md)
    * [Players Actions](080_fetching_resources/players_actions_and_update.md)
-   * [Players Effects](fetching_resources/players_effects.md)
+   * [Players Effects](080_fetching_resources/players_effects.md)
    * [Main](fetching_resources/main.md)
    * [Players Update](fetching_resources/players_update.md)
    * [Try it](fetching_resources/try_it.md)
