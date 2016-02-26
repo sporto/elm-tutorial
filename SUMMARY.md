@@ -85,7 +85,7 @@
    * [Players Update](120_edit/name_players_update.md)
    * [Try it](120_edit/name_try_it.md)
 * [Conclusion](130_conclusion/cover.md)
-   * [Improvements](conclusion/improvements.md)
+   * [Improvements](130_conclusion/improvements.md)
 * Tips and Tricks
    * [Signal map with always](tips-tricks/signal_map_with_always.md)
    * [List over Maybe](tips-tricks/list_over_maybe.md)
