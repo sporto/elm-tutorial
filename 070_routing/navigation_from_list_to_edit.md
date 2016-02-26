@@ -26,7 +26,7 @@ We added:
 - import for Players.Models
 - import Hop
 - `HopAction Hop.Action` this will be used for triggering a location change
-- `EditPlayer` action that will be triggered when the user hits the edit player button
+- `EditPlayer` action that will trigger when the user hits the edit player button
 
 
 ## Players List
