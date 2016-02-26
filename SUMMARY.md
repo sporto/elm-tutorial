@@ -75,7 +75,7 @@
    * [Getting confirmation](110_delete/getting_confirmation.md)
    * [Responding to DeletePlayer](110_delete/delete_effect.md)
    * [DeletePlayerDone](110_delete/deleteplayerdone.md)
-   * [Try it](090_delete/try_it.md)
+   * [Try it](110_delete/try_it.md)
 * [Edit](edit/cover.md)
    * [Changing level: Actions and view](edit/actions_and_effects.md)
    * [Players Effects](edit/players_view_level.md)
