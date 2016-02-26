@@ -72,7 +72,7 @@
    * [Delete button on Players List](delete/delete_1.md)
    * [Responding to DeletePlayerIntent](090_delete/delete_2.md)
    * [Showing a confirmation dialogue](090_delete/mailbox_and_main.md)
-   * [Getting confirmation](delete/getting_confirmation.md)
+   * [Getting confirmation](090_delete/getting_confirmation.md)
    * [Responding to DeletePlayer](delete/delete_effect.md)
    * [DeletePlayerDone](delete/deleteplayerdone.md)
    * [Try it](delete/try_it.md)
