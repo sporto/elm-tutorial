@@ -90,16 +90,16 @@ update action model =
       in
         ( model.players, Effects.map HopAction (Hop.navigateTo path) )
 
-    NoOp ->
+    HopAction _ ->
       ( model.players, Effects.none )
 
-    HopAction _ ->
+    NoOp ->
       ( model.players, Effects.none )
 ```
 
 `Hop.navigateTo path` returns an effect. When this effect is run by Elm the location of the browser will change. You can read more about how this works [here](https://github.com/sporto/hop).
 
-Notice we also had to handle `HopAction` because we added it to **src/Players/Actions.elm**.
+We also have to handle `HopAction` because we are wrapping the __Hop__ effect with it. After the location changes we will receive a `HopAction` with a payload, but we don't need to do anything with this here.
 
 ## Test it
 
