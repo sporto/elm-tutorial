@@ -55,7 +55,7 @@
    * [Messages outlet](090_showing_errors/messages_outlet.md)
    * [Flow](090_showing_errors/flow.md)
    * [Main Actions](090_showing_errors/main_actions.md)
-   * [Players Update](showing_errors/players_update.md)
+   * [Players Update](090_showing_errors/players_update.md)
    * [Auxiliary mailbox](showing_errors/auxiliary_mailbox.md)
    * [Main Update](showing_errors/main_update.md)
    * [Try it](showing_errors/try_it.md)
