@@ -80,3 +80,4 @@ Finally, `update` uses __pattern matching__ in the case expression to extract th
 case action of
   MouseClick amount ->
     { model | count = model.count + amount }
+```
