@@ -84,7 +84,7 @@
    * [Editing the name](120_edit/editing_the_name.md)
    * [Players Update](120_edit/name_players_update.md)
    * [Try it](120_edit/name_try_it.md)
-* [Conclusion](conclusion/cover.md)
+* [Conclusion](130_conclusion/cover.md)
    * [Improvements](conclusion/improvements.md)
 * Tips and Tricks
    * [Signal map with always](tips-tricks/signal_map_with_always.md)
