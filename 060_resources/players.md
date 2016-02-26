@@ -96,7 +96,9 @@ type alias UpdateModel =
 
 update : Action -> UpdateModel -> ( List Player, Effects Action )
 update action model =
-  ( model.players, Effects.none )
+  case action of
+    NoOp ->
+      ( model.players, Effects.none )
 ```
 
 This update doesn't do anything at the moment. Also note how it follows the pattern of defining its own model `UpdateModel`, this will allow to pass more attributes later without having to change the function signature.
