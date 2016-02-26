@@ -83,7 +83,7 @@
    * [Try it](120_edit/level_try_it.md)
    * [Editing the name](120_edit/editing_the_name.md)
    * [Players Update](120_edit/name_players_update.md)
-   * [Try it](edit/name_try_it.md)
+   * [Try it](120_edit/name_try_it.md)
 * [Conclusion](conclusion/cover.md)
    * [Improvements](conclusion/improvements.md)
 * Tips and Tricks
