@@ -21,7 +21,12 @@ type Action
   | EditPlayer PlayerId
 ```
 
-We will trigger this action when we intend to edit a player.
+We added:
+
+- import for Players.Models
+- import Hop
+- `HopAction Hop.Action` this will be used for triggering a location change
+- `EditPlayer` action that will be triggered when the user hits the edit player button
 
 
 ## Players List
