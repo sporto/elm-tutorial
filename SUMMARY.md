@@ -68,7 +68,7 @@
    * [Try it](080_add/try_it.md)
 * [Deleting players](090_delete/cover.md)
    * [Plan](090_delete/plan.md)
-   * [Players Actions](delete/players_actions.md)
+   * [Players Actions](090_delete/players_actions.md)
    * [Delete button on Players List](delete/delete_1.md)
    * [Responding to DeletePlayerIntent](delete/delete_2.md)
    * [Showing a confirmation dialogue](delete/mailbox_and_main.md)
