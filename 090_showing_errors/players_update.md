@@ -99,7 +99,7 @@ In the next section we will add the rest of the setup, which means providing thi
 
 ## An alternative approach
 
-The Elm architecture is flexible, we don't necessary have to return always a tuple with two elements in update. So instead of 
+The Elm architecture is flexible, we don't necessarily have to return always a tuple with two elements in update. So instead of 
 
 ```elm
 update : Action -> UpdateModel -> ( List Player, Effects Action )
