@@ -45,7 +45,7 @@
    * [Navigation from List to Edit](070_routing/navigation_from_list_to_edit.md)
    * [Navigation from Edit to List](070_routing/navigation_from_edit_to_list.md)
 * [Fetching resources](080_fetching_resources/cover.md)
-   * [Plan](fetching_resources/plan.md)
+   * [Plan](080_fetching_resources/plan.md)
    * [Players Actions](fetching_resources/players_actions_and_update.md)
    * [Players Effects](fetching_resources/players_effects.md)
    * [Main](fetching_resources/main.md)
