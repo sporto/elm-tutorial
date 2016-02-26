@@ -66,7 +66,7 @@
    * [Update](080_add/update.md)
    * [Create button in Players List](080_add/add_2.md)
    * [Try it](080_add/try_it.md)
-* [Deleting players](delete/cover.md)
+* [Deleting players](090_delete/cover.md)
    * [Plan](delete/plan.md)
    * [Players Actions](delete/players_actions.md)
    * [Delete button on Players List](delete/delete_1.md)
