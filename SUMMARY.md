@@ -61,7 +61,7 @@
    * [Try it](090_showing_errors/try_it.md)
 * [Adding players](100_add/cover.md)
    * [Flow](100_add/flow.md)
-   * [Actions](080_add/add_1.md)
+   * [Actions](100_add/add_1.md)
    * [Create Effect](080_add/effects.md)
    * [Update](080_add/update.md)
    * [Create button in Players List](080_add/add_2.md)
