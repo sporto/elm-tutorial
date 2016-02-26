@@ -1,6 +1,6 @@
 # Improvements
 
-## DRY
+## Don't repeat yourself (DRY)
 
 There is a good amount of repeated code in update branches. Specially in error handling. This code could be abstracted but I haven't done that for clarity sake.
 
