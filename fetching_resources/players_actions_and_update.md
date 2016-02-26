@@ -5,6 +5,8 @@ First let's create an action for when the players are fetched from the API. Add 
 ```elm
 ...
 import Http
+import Players.Models exposing (PlayerId, Player)
+import Hop
 
 type Action
     ...
