@@ -65,7 +65,7 @@
    * [Create Effect](080_add/effects.md)
    * [Update](080_add/update.md)
    * [Create button in Players List](080_add/add_2.md)
-   * [Try it](add/try_it.md)
+   * [Try it](080_add/try_it.md)
 * [Deleting players](delete/cover.md)
    * [Plan](delete/plan.md)
    * [Players Actions](delete/players_actions.md)
