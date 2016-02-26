@@ -38,7 +38,6 @@
 * [Routing](070_routing/cover.md)
    * [Router](070_routing/router.md)
    * [Main: Actions, Model and Update](070_routing/main_actions.md)
-   * Players Update
    * [Player edit view](070_routing/player_edit_view.md)
    * [Main view](070_routing/main_view.md)
    * [Main](070_routing/main.md)
