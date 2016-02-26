@@ -71,7 +71,13 @@ playerRow address model player =
 
 ## Players Update
 
-Finally, __src/Players/Update.elm__ needs to respond to this action. Add a new branch to the case expression:
+Finally, __src/Players/Update.elm__ needs to respond to this action. Add a new import:
+
+```elm
+import Hop
+```
+
+And add two new branches to the case expression:
 
 ```elm
 update : Action -> UpdateModel -> ( List Player, Effects Action )
