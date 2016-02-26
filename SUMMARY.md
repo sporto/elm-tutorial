@@ -74,7 +74,7 @@
    * [Showing a confirmation dialogue](090_delete/mailbox_and_main.md)
    * [Getting confirmation](090_delete/getting_confirmation.md)
    * [Responding to DeletePlayer](090_delete/delete_effect.md)
-   * [DeletePlayerDone](delete/deleteplayerdone.md)
+   * [DeletePlayerDone](090_delete/deleteplayerdone.md)
    * [Try it](delete/try_it.md)
 * [Edit](edit/cover.md)
    * [Changing level: Actions and view](edit/actions_and_effects.md)
