@@ -38,13 +38,13 @@
 * [Routing](070_routing/cover.md)
    * [Router](070_routing/router.md)
    * [Main: Actions, Model and Update](070_routing/main_actions.md)
+   * Players Update
    * [Player edit view](070_routing/player_edit_view.md)
    * [Main view](070_routing/main_view.md)
    * [Main](070_routing/main.md)
    * [Try it](070_routing/try_it.md)
    * [Navigation from List to Edit](070_routing/navigation_from_list_to_edit.md)
    * [Navigation from Edit to List](070_routing/navigation_from_edit_to_list.md)
-   * Players Update
 * [Fetching resources](fetching_resources/cover.md)
    * [Plan](fetching_resources/plan.md)
    * [Players Actions](fetching_resources/players_actions_and_update.md)
