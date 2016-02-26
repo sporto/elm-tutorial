@@ -70,7 +70,7 @@
    * [Plan](110_delete/plan.md)
    * [Players Actions](110_delete/players_actions.md)
    * [Delete button on Players List](110_delete/delete_1.md)
-   * [Responding to DeletePlayerIntent](090_delete/delete_2.md)
+   * [Responding to DeletePlayerIntent](110_delete/delete_2.md)
    * [Showing a confirmation dialogue](090_delete/mailbox_and_main.md)
    * [Getting confirmation](090_delete/getting_confirmation.md)
    * [Responding to DeletePlayer](090_delete/delete_effect.md)
