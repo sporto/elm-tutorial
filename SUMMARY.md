@@ -59,7 +59,7 @@
    * [Auxiliary mailbox](090_showing_errors/auxiliary_mailbox.md)
    * [Main Update](090_showing_errors/main_update.md)
    * [Try it](090_showing_errors/try_it.md)
-* [Adding players](080_add/cover.md)
+* [Adding players](100_add/cover.md)
    * [Flow](080_add/flow.md)
    * [Actions](080_add/add_1.md)
    * [Create Effect](080_add/effects.md)
