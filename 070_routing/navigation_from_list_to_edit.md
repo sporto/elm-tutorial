@@ -4,7 +4,7 @@ Next let's add an "Edit" button to the players' list.
 
 ## EditPlayer action
 
-Add a two imports and two new actions `EditPlayer` in __src/Players/Actions.elm__
+Change __src/Players/Actions.elm__ to include two new actions:
 
 ```elm
 ...
