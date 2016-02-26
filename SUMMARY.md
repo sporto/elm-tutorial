@@ -50,7 +50,7 @@
    * [Players Effects](080_fetching_resources/players_effects.md)
    * [Main](080_fetching_resources/main.md)
    * [Players Update](080_fetching_resources/players_update.md)
-   * [Try it](fetching_resources/try_it.md)
+   * [Try it](080_fetching_resources/try_it.md)
 * [Showing Errors](showing_errors/cover.md)
    * [Messages outlet](showing_errors/messages_outlet.md)
    * [Flow](showing_errors/flow.md)
