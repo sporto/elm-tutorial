@@ -117,6 +117,19 @@ main =
 
 #### view
 
+```elm
+view : Signal.Address String -> String -> Html
+view address message =
+  Html.div
+    []
+    [ Html.div [] [ Html.text message ]
+    , Html.button
+        [ Events.onClick address "Hello"
+        ]
+        [ Html.text "Click" ]
+    ]
+```
+
 The `view` function now takes a `Signal.Address` as first argument.
 
 `Events.onClick address "Hello"` setups an event listener so when the user clicks the button we send the "Hello" message to the given address.
