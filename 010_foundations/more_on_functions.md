@@ -1,15 +1,5 @@
 # More on functions
 
-## Functions as arguments
-
-In many code signatures you will see something like:
-
-```elm
-map : (a -> b) -> List a -> List b
-```
-
-
-
 ## Type variables
 
 Consider a function with a type signature like:
@@ -43,3 +33,15 @@ switch (1, 2)
 switch ("A", 2)
 switch (1, ["B"])
 ```
+
+## Functions as arguments
+
+In many code signatures you will see something like:
+
+```elm
+map : (a -> b) -> List a -> List b
+```
+
+The interesting part is the `(a -> b)`.
+
+This functions takes a __function__ and a list of anything and returns a list of something else.
