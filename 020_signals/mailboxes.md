@@ -132,7 +132,7 @@ view address message =
 
 The `view` function now takes a `Signal.Address` as first argument.
 
-`Events.onClick address "Hello"` sets an event listener that listens for clicks on this Html element. `onClick` sends the given message to the given address each time this element is clicked.
+`Events.onClick address "Hello"` sets an event listener that listens for clicks on this Html element. `onClick` sends the given message (e.g. "Hello") to the given address each time this element is clicked.
 
 #### main
 
