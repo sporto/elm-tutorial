@@ -46,7 +46,7 @@ This function:
 
 - takes a function: the `(Int -> String)` part
 - a list of integers
-- and returns a list of interger
+- and returns a list of strings
 
 The interesting part is the `(Int -> String)` fragment. This says that a function must be given conforming to the `(Int -> String)` signature.
 
