@@ -10,7 +10,7 @@ indexOf : String -> Array String -> Int
 
 This hypothetical function takes a string and an array of strings and returns the index where the given string was found in the array or -1 if not found.
 
-But what if we instead have an array of integers? We wouldn't be able to use this function. However, we can make this function __generic__ by using __type variables__ instead of specific types of variables.
+But what if we instead have an array of integers? We wouldn't be able to use this function. However, we can make this function __generic__ by using __type variables__ or __stand-ins__ instead of specific types of variables.
 
 ```elm
 indexOf : a -> Array a -> Int
@@ -36,12 +36,46 @@ switch (1, ["B"])
 
 ## Functions as arguments
 
-In many code signatures you will see something like:
+Consider a signature like:
+
+```elm
+map : (Int -> String) -> List Int -> List String
+```
+
+This function:
+
+- takes a function: the `(Int -> String)` part
+- a list of integers
+- and returns a list of interger
+
+The interesting part is the `(Int -> String)` fragment. This says that a function must be given conforming to the `(Int -> String)` signature.
+
+For example, `toString` from core is such function. So you could call this `map` function like:
+
+```elm
+map toString [1, 2, 3]
+```
+
+But `Int` and `String` are too specific. So most of the time you will see signatures using stand-ins instead:
 
 ```elm
 map : (a -> b) -> List a -> List b
 ```
 
-The interesting part is the `(a -> b)`.
+This function maps a list of `a` to a list of `b`. We don't really care what `a` and `b` represent as long as the given function in the first argument uses the same types.
 
-This functions takes a __function__ and a list of anything and returns a list of something else.
+For example given functions with these signatures:
+
+```elm
+convertStringToInt : String -> Int
+convertIntToString : Int -> String
+convertBoolToInt : Bool -> Int
+```
+
+We can call the generic map like:
+
+```elm
+map convertStringToInt ["Hello", "1"]
+map convertIntToString [1, 2]
+map convertBoolToInt [True, False]
+```
