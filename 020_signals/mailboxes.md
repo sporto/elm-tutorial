@@ -132,11 +132,21 @@ view address message =
 
 The `view` function now takes a `Signal.Address` as first argument.
 
-`Events.onClick address "Hello"` setups an event listener so when the user clicks the button we send the "Hello" message to the given address.
+`Events.onClick address "Hello"` sets an event listener that listens for clicks on this Html element. `onClick` sends the given message to the given address each time this element is clicked.
 
 #### main
 
-`main` now maps the output signal from our __mailbox__ to the view. But we also pass the __mailbox address__ to the view as the first argument, we do this through partial application `(view mb.address)`.
+```elm
+main : Signal Html
+main =
+  Signal.map (view mb.address) mb.signal
+```
+
+In `main` we do two things:
+
+- Create a partially applied view `(view mb.address)`, so the view always gets the `address` of our mailbox as first argument.
+
+- And map the output signal of our __mailbox__ to this partially applied view. `view` will get the value coming from the mailbox signal as second argument.
 
 ### Conclusion
 
