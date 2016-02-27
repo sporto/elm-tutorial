@@ -1,5 +1,15 @@
 # More on functions
 
+## Functions as arguments
+
+In many code signatures you will see something like:
+
+```elm
+map : (a -> b) -> List a -> List b
+```
+
+
+
 ## Type variables
 
 Consider a function with a type signature like:
