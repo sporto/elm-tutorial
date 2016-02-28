@@ -15,7 +15,7 @@ askDeleteConfirmationMailbox =
 
 ## Update
 
-In __src/Update__ import this mailbox and pass it to `Players.Update`:
+In __src/Update.elm__ import this mailbox and pass it to `Players.Update`:
 
 ```elm
     ...
