@@ -2,6 +2,8 @@
 
 We have added the necessary wiring to have a working router.
 
+![screenshot](screenshot-edit-no-nav.png)
+
 Try it:
 
 - Going to `http://localhost:3000/#/players` should show you a list of player
