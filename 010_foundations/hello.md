@@ -22,7 +22,7 @@ main =
   Html.text "Hello"
 ```
 
-<https://github.com/sporto/elm-tutorial-assets/blob/master/code/foundations/Hello.elm>
+<https://github.com/sporto/elm-tutorial-assets/blob/master/code/010_foundations/Hello.elm>
 
 Go to this folder on the terminal and type:
 
