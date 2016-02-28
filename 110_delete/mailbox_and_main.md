@@ -72,6 +72,10 @@ app.ports.askDeleteConfirmation.subscribe(function (args) {
 
 ### Try it
 
+![screenshot List](screenshot-list.png)
+
+![screenshot confirm](screenshot-confirm.png)
+
 When you hit a player's delete button a confirmation dialogue should pop up with the player's name.
 
 
