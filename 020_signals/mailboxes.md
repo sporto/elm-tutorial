@@ -148,6 +148,18 @@ In `main` we do two things:
 
 - And map the output signal of our __mailbox__ to this partially applied view. `view` will get the value coming from the mailbox signal as second argument.
 
+---
+
+Here is a diagram to clarify what is happening:
+
+![](mailbox-flow.png)
+
+- Initially `main` renders the view by passing the mailbox's address and the mailbox initial value (empty string) [1]
+- When the view is rendered we set an event listener on the button by using `onClick` [2]
+- When the button is clicked as message is sent to the mailbox's address [3]
+- Upon receiving the message the mailbox emits a value on its signal [4] which is picked up by main
+- `main` then renders the view again by passing the mailbox's address and the message coming from the mailbox ("Hello") [5]
+
 ### Conclusion
 
 Mailboxes are communication hubs, they receive messages from our UI and broadcast them to other parts of our application. They are an integral building block when creating complex web applications.
