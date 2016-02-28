@@ -1,2 +1,2 @@
-# Mailboxes 2
+# Using the mailbox
 
