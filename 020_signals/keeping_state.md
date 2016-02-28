@@ -26,7 +26,7 @@ main =
   Signal.map view countSignal
 ```
 
-<https://github.com/sporto/elm-tutorial-assets/blob/master/code/signals/Clicks.elm>
+<https://github.com/sporto/elm-tutorial-assets/blob/master/code/020_signals/Clicks.elm>
 
 To introduce things gradually, here is an application that shows `1` all the time.
 
@@ -64,7 +64,7 @@ main =
   Signal.map view countSignal
 ```
 
-<https://github.com/sporto/elm-tutorial-assets/blob/master/code/signals/ClicksWithFoldp.elm>
+<https://github.com/sporto/elm-tutorial-assets/blob/master/code/020_signals/ClicksWithFoldp.elm>
 
 Let's see what happens on the `Signal.foldp` line.
 
