@@ -154,11 +154,11 @@ Here is a diagram to clarify what is happening:
 
 ![](mailbox-flow.png)
 
-- [1] Initially `main` renders the view by passing the mailbox's address and the mailbox initial value (empty string)
-- [2] When the view is rendered we set an event listener on the button by using `onClick`
-- [3] When the button is clicked as message is sent to the mailbox's address
-- [4] Upon receiving the message the mailbox emits a value on its signal which is picked up by main
-- [5] `main` then renders the view again by passing the mailbox's address and the message coming from the mailbox ("Hello")
+- __(1)__ Initially `main` renders the view by passing the mailbox's address and the mailbox initial value (empty string)
+- __(2)__ When the view is rendered we set an event listener on the button by using `onClick`
+- __(3)__ When the button is clicked as message is sent to the mailbox's address
+- __(4)__ Upon receiving the message the mailbox emits a value on its signal which is picked up by main
+- __(5)__ `main` then renders the view again by passing the mailbox's address and the message coming from the mailbox ("Hello")
 
 ### Conclusion
 
