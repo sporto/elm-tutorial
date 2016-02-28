@@ -57,6 +57,6 @@ main =
   Signal.map (view mb.address) modelSignal
 ```
 
-<https://github.com/sporto/elm-tutorial-assets/blob/master/code/elm_arch/Mailbox.elm>
+<https://github.com/sporto/elm-tutorial-assets/blob/master/code/030_elm_arch/Mailbox.elm>
 
 The big difference is the introduction of the __mailbox__. The mailbox provides an address where to send messages and a signal to listen to. See the chapter on Signals/Mailbox for more information.

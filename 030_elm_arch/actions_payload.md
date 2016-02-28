@@ -55,7 +55,7 @@ main =
   Signal.map view modelSignal
 ```
 
-<https://github.com/sporto/elm-tutorial-assets/blob/master/code/elm_arch/ActionsWithPayload.elm>
+<https://github.com/sporto/elm-tutorial-assets/blob/master/code/030_elm_arch/ActionsWithPayload.elm>
 
 Note the new __actions__ declaration:
 
