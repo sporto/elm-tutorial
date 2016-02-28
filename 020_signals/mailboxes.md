@@ -150,7 +150,7 @@ In `main` we do two things:
 
 ---
 
-Here is a diagram to clarify what is happening:
+Here is a diagram to help clarify what is happening:
 
 ![](mailbox-flow.png)
 
