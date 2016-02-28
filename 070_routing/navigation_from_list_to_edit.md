@@ -103,6 +103,8 @@ We also have to handle `HopAction` because we are wrapping the __Hop__ effect wi
 
 ## Test it
 
+![screenshot](screenshot.png)
+
 Go to the list `http://localhost:3000/#/players`. You should now see an Edit button, upon clicking it the location should change to the edit view.
 
 Up to this point your application should look like <https://github.com/sporto/elm-tutorial-app/tree/070-navigation>
