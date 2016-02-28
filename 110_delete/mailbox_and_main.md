@@ -4,7 +4,7 @@
 
 ## Mailbox
 
-In __src/Mailbox.elm__ add a new mailbox for the confirmation request:
+In __src/Mailboxes.elm__ add a new mailbox for the confirmation request:
 
 ```elm
 askDeleteConfirmationMailbox : Signal.Mailbox ( Int, String )
