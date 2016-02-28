@@ -92,7 +92,7 @@ respond answer =
   ...
 ```
 
-In here we are saying that the `a` stand-in should be of type `Int`, note the `Answer Int` signature.
+In here we are saying that the `a` stand-in should be of type `Int` by using  the `Answer Int` signature.
 
 So later we will be able to call respond with:
 
