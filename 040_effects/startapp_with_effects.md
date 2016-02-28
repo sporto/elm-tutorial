@@ -102,7 +102,7 @@ port runner =
   app.tasks
 ```
 
-<https://github.com/sporto/elm-tutorial-assets/blob/master/code/effects/StartApp.elm>
+<https://github.com/sporto/elm-tutorial-assets/blob/master/code/040_effects/StartApp.elm>
 
 ### actions
 

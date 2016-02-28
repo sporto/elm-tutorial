@@ -31,7 +31,7 @@ main =
   Signal.map view messageSignal
 ```
 
-<https://github.com/sporto/elm-tutorial-assets/blob/master/code/effects/Tasks01.elm>
+<https://github.com/sporto/elm-tutorial-assets/blob/master/code/040_effects/Tasks01.elm>
 
 If you run this in your browser you will see a number that changes slightly every second. This number is the current time (as a unix timestamp).
 
@@ -158,7 +158,7 @@ port runner =
   taskSignal
 ```
 
-<https://github.com/sporto/elm-tutorial-assets/blob/master/code/effects/Tasks02.elm>
+<https://github.com/sporto/elm-tutorial-assets/blob/master/code/040_effects/Tasks02.elm>
 
 If you open this application using Elm Reactor you will see a random number changing every two seconds. This random number is coming from the __node__ server we created above.
 
