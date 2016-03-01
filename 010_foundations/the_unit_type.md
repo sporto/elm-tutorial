@@ -41,9 +41,9 @@ So the unit type is commonly used as a placeholder for an empty value.
 
 ## Task
 
-A real world example of this is the `Task` type. When using `Task` you will see the unit type very often:
+A real world example of this is the `Task` type. When using `Task` you will see the unit type very often.
 
-A typical task has an __error__ and a __result:
+A typical task has an __error__ and a __result__:
 
 ```
 Task error result
