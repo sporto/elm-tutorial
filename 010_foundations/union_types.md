@@ -6,7 +6,7 @@ In Elm __Union Types__ are used for many things as they are incredible flexible.
 type Answer = Yes | No
 ```
 
-`Answer` can be either `Yes` or `No`. This `Yes` and `No` are commonly called `tags` in Elm.
+`Answer` can be either `Yes` or `No`. These `Yes` and `No` are commonly called `tags` in Elm.
 
 Union types are useful for making our code more generic. For example a function that is declared like this:
 
@@ -101,6 +101,19 @@ respond (Other 123)
 ```
 
 But respond `(Other "Hello")` would fail because `respond` expects an integer in place of `a`.
+
+## Common uses
+
+One typical use of union types is passing around values in our program where the value can be one of a know set of possible values. 
+
+For example in a typical web application we have actions that can be performed e.g. load users, add user, delete user, etc. Some of these actions would have a payload. It is common to use union types for this:
+
+```elm
+type Action
+  = LoadUsers
+  | 
+  
+```
 
 ---
 
