@@ -102,7 +102,7 @@ respond (Other 123)
 
 But respond `(Other "Hello")` would fail because `respond` expects an integer in place of `a`.
 
-## Common uses
+## A common use
 
 One typical use of union types is passing around values in our program where the value can be one of a know set of possible values. 
 
