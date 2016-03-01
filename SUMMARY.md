@@ -5,7 +5,7 @@
    * [Hello World](010_foundations/hello.md)
    * [Functions](010_foundations/functions.md)
    * [More on functions](010_foundations/more_on_functions.md)
-   * [Imports and Modules](010_foundations/imports_and_modules.md)
+   * [Imports and modules](010_foundations/imports_and_modules.md)
    * [Union types](010_foundations/union_types.md)
    * [The unit type](010_foundations/the_unit_type.md)
 * [Signals](020_signals/cover.md)
