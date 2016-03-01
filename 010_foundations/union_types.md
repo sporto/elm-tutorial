@@ -111,7 +111,9 @@ For example in a typical web application we have actions that can be performed e
 ```elm
 type Action
   = LoadUsers
-  | 
+  | AddUser
+  | EditUser UserId
+  ...
   
 ```
 
