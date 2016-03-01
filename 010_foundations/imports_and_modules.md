@@ -1,4 +1,4 @@
-# Imports and Modules
+# Imports and modules
 
 In Elm you import a module by using the `import` keyword e.g.
 
