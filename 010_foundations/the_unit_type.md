@@ -49,6 +49,6 @@ A typical task has an __error__ and a __result__:
 Task error result
 ```
 
-- Sometimes we want task where the error can be safely ignored `Task () result`
+- Sometimes we want task where the error can be safely ignored: `Task () result`
 - Or the result is ignored: `Tasks error ()`
-- Or both `Task () ()`
+- Or both: `Task () ()`
