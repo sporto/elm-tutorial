@@ -46,7 +46,7 @@ Then you make a value like:
 Correct "My answer"
 ```
 
-We have just tagged the string "My answer" with `Correct`. Thus union type like this are commonly called __tags__.
+We have just tagged the string "My answer" with `Correct`. Thus union types like these are commonly called __tags__.
 
 
 ## Calling as functions
