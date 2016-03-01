@@ -7,7 +7,7 @@
    * [More on functions](010_foundations/more_on_functions.md)
    * [Imports and Modules](010_foundations/imports_and_modules.md)
    * [Union Types](010_foundations/union_types.md)
-   * The unit type
+   * [The unit type](010_foundations/the_unit_type.md)
 * [Signals](020_signals/cover.md)
    * [Introduction to signals](020_signals/introduction.md)
    * [Keeping state](020_signals/keeping_state.md)
