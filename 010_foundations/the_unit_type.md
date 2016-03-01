@@ -39,3 +39,8 @@ This function takes `Message` with an __empty body__. This is not the same as __
 
 So the unit type is commonly used as a placeholder for an empty value.
 
+## Task
+
+Task is one example where you would see the unit type very often:
+
+
