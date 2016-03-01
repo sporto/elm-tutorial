@@ -6,9 +6,7 @@ In Elm __Union Types__ are used for many things as they are incredible flexible.
 type Answer = Yes | No
 ```
 
-`Answer` can be either `Yes` or `No`. These `Yes` and `No` are commonly called `tags` in Elm.
-
-Union types are useful for making our code more generic. For example a function that is declared like this:
+`Answer` can be either `Yes` or `No`. Union types are useful for making our code more generic. For example a function that is declared like this:
 
 ```elm
 respond : Answer -> String
@@ -33,6 +31,22 @@ respond (Other "Hello")
 ```
 
 You need the parenthesis otherwise Elm will interpret this as passing two arguments to respond.
+
+### Tags
+
+Calling a union type with a payload is commonly referred as tagging. For example consider a union type like:
+
+```elm
+type Answer = Correct String | Incorrect String
+```
+
+Then you make a value like:
+
+```
+Correct "My answer"
+```
+
+We have just tagged the string "My answer" with `Correct`.
 
 
 ## Calling as functions
