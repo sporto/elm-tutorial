@@ -49,7 +49,11 @@ Then if the user clicks yes we send a message to the port:
 
 Back in __src/Main.elm__ map the `getDeleteConfirmation` port to a signal:
 
+```elm
+import Players.Actions
 ```
+
+```elm
 getDeleteConfirmationSignal : Signal Actions.Action
 getDeleteConfirmationSignal =
   let
