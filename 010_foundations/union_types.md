@@ -14,7 +14,9 @@ respond answer =
   ...
 ```
 
-Can either take `Yes` or `No` as the first argument e.g. `respond Yes` is a valid call. Union types are also commonly called __tags__ in Elm.
+Can either take `Yes` or `No` as the first argument e.g. `respond Yes` is a valid call. 
+
+Union types are also commonly called __tags__ in Elm.
 
 ## Payload
 
