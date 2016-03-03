@@ -14,7 +14,7 @@ respond answer =
   ...
 ```
 
-Can either take `Yes` or `No` as the first argument e.g. `respond Yes` is a valid call.
+Can either take `Yes` or `No` as the first argument e.g. `respond Yes` is a valid call. Union types are also commonly called __tags__ in Elm.
 
 ## Payload
 
@@ -31,23 +31,6 @@ respond (Other "Hello")
 ```
 
 You need the parenthesis otherwise Elm will interpret this as passing two arguments to respond.
-
-### Tags
-
-Calling a union type with a payload is commonly referred as tagging. For example consider a union type like:
-
-```elm
-type Answer = Correct String | Incorrect String
-```
-
-Then you make a value like:
-
-```
-Correct "My answer"
-```
-
-We have just tagged the string "My answer" with `Correct`. Thus union types like these are commonly called __tags__.
-
 
 ## Calling as functions
 
