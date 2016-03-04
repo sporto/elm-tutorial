@@ -242,7 +242,12 @@ Here is a diagram that illustrates this architecture:
 1. StartApp call `initialModel` on Main
 2. Main call `initialModel` on Widget
 3. Widget returns an initial model
-4. Main returns a composed model
+4. Main returns a composed main model which includes the widget model
+5. StartApp call `view` on Main, passing a root address and the main application model.
+6. Main calls `view` on `Widget`, passing a forwarding address and the widgetModel.
+7. __Widget.view__ returns the rendered Html to __Main__
+8. __Main.view__ returns the rendered Html to __StartApp__
+9. 
 
 
 ---
