@@ -239,12 +239,12 @@ Here is a diagram that illustrates this architecture:
 
 ![Flow](flow.png)
 
-1. StartApp call `initialModel` on Main
-2. Main call `initialModel` on Widget
-3. Widget returns an initial model
-4. Main returns a composed main model which includes the widget model
-5. StartApp call `view` on Main, passing a root address and the main application model.
-6. __Main.view__ calls __Widget.view__, passing a forwarding address and the __widgetModel__.
+1. __StartApp__ calls __Main.initialModel__
+2. __Main__ calls __Widget.initialModel__
+3. __Widget__ returns an initial model
+4. __Main__ returns a composed main model which includes the widget model
+5. __StartApp__ calls __Main.view__, passing the __root address__ and the __root model__.
+6. __Main.view__ calls __Widget.view__, passing a __forwarding address__ and the __widgetModel__.
 7. __Widget.view__ returns the rendered Html to __Main__
 8. __Main.view__ returns the rendered Html to __StartApp__
 9. 
