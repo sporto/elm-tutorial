@@ -181,3 +181,8 @@ initialModel =
 
 ### Actions
 
+```elm
+type Action
+  = WidgetAction Widget.Action
+```
+
