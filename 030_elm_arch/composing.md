@@ -207,3 +207,5 @@ view address model =
     [ Widget.view (Signal.forwardTo address WidgetAction) model.widgetModel
     ]
 ```
+
+The main application `view` renders the `Widget.view`. But `Widget.view` expects an address of type `Widget.Action`. And expects a model of type `Widget.Model`.
