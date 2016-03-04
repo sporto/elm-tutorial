@@ -175,8 +175,9 @@ Or we could have multiple children components of the same type:
 ```
 initialModel : AppModel
 initialModel =
-  { navModel = Nav.initialModel,
-  , sidebarModel = Sidebar.initialModel,
-  , widgetModel = Widget.initialModel
+  { widgetModels = [Widget.initialModel]
   }
 ```
+
+### Actions
+
