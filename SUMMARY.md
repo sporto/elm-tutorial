@@ -21,7 +21,7 @@
    * [Actions: Payload](030_elm_arch/actions_payload.md)
    * [Mailbox](030_elm_arch/mailbox.md)
    * [StartApp](030_elm_arch/startapp.md)
-   * Composing
+   * [Composing](030_elm_arch/composing.md)
 * [Effects](040_effects/cover.md)
    * [Tasks](040_effects/tasks.md)
    * [Effects](040_effects/effects.md)
