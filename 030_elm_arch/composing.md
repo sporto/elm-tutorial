@@ -227,6 +227,8 @@ update action model =
         { model | widgetModel = updatedWidgetModel }
 ```
 
-When a `WidgetAction` is received by `update` we use pattern matching to extract the `subAction`. This `subAction` is of the type the `Widget.update` function expects.
+When a `WidgetAction` is received by `update` we delegate the update to the children component. But the children component will only update what it cares about, which is the `widgetModel` attribute.
 
-Using this subAction and `model.widgetModel` we call `Widget.update`. This will gives an updated `widgetModel` that can be used to replace the existing attribute in the main model.
+We use pattern matching to extract the `subAction` from `WidgetAction`. This `subAction` will be the type that `Widget.update` expects.
+
+Using this `subAction` and `model.widgetModel` we call `Widget.update`. This will return an updated `widgetModel` that can be used to replace the existing attribute in the main model.
