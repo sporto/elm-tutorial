@@ -74,6 +74,8 @@ Note how the component only knows about things declared here. Both `view` and `u
 
 This is the code for the parent component.
 
+<https://github.com/sporto/elm-tutorial-assets/blob/master/code/C030ElmArch/Composing/App.elm>
+
 ```elm
 module Main (..) where
 
