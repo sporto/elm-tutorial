@@ -235,6 +235,10 @@ Using this `subAction` and `model.widgetModel` we call `Widget.update`. This wil
 
 ---
 
+Here is a diagram that illustrates this architecture:
+
+---
+
 ## Key points
 
 - The Elm architecture offers a clean way to compose (or nest) components as many levels as you need.
