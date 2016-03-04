@@ -232,3 +232,7 @@ When a `WidgetAction` is received by `update` we delegate the update to the chil
 We use pattern matching to extract the `subAction` from `WidgetAction`. This `subAction` will be the type that `Widget.update` expects.
 
 Using this `subAction` and `model.widgetModel` we call `Widget.update`. This will return an updated `widgetModel` that can be used to replace the existing attribute in the main model.
+
+---
+
+
