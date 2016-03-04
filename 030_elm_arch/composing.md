@@ -24,16 +24,14 @@ type alias Model =
   }
 
 
-type Action
-  = Increase
-
-
 initialModel : Model
 initialModel =
   { count = 0
   }
 
 
+type Action
+  = Increase
 
 -- VIEW
 
