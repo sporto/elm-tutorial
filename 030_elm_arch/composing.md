@@ -196,3 +196,4 @@ type Action
   | SidebarAction Sidebar.Action
   | WidgetAction Widget.Action
 ```
+
