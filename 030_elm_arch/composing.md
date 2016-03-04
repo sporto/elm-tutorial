@@ -192,5 +192,7 @@ In an application with multiple chilren components we may have something like:
 
 ```elm
 type Action
-  = WidgetAction Widget.Action
+  = NavAction Nav.Action
+  | SidebarAction Sidebar.Action
+  | WidgetAction Widget.Action
 ```
