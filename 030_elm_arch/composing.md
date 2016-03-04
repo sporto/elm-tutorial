@@ -211,3 +211,4 @@ view address model =
 The main application `view` renders the `Widget.view`. But `Widget.view` expects an address of type `Widget.Action`. And expects a model of type `Widget.Model`.
 
 - We use `Signal.forwardTo` to create the expected address by the children component.
+- We only pass the part of the model that the children component cares about i.e. `model.widgetModel`.
