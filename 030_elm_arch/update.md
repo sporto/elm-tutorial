@@ -38,7 +38,7 @@ main =
   Signal.map view modelSignal
 ```
 
-<https://github.com/sporto/elm-tutorial-assets/blob/master/code/030_elm_arch/Update.elm>
+<https://github.com/sporto/elm-tutorial-assets/blob/master/code/C030ElmArch/Update.elm>
 
 Here we have introduced an __update__ function.
 
