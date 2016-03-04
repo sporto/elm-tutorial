@@ -157,3 +157,4 @@ initialModel =
   }
 ```
 
+When creating the initial application model, we simply call `Widget.initialModel` from here.
