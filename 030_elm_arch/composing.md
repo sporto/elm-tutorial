@@ -152,4 +152,4 @@ type alias AppModel =
   }
 ```
 
-The parent component has its own model. One of the attribute on the model contains the `Widget.Model`.
+The parent component has its own model. One of the attribute on the model contains the `Widget.Model`. Note how this parent component doesn't need to know about what `Widget.Model` is.
