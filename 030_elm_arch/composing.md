@@ -65,4 +65,5 @@ This component has:
 
 - a `Model`
 - actions i.e. `Increase`
-- a `view` that displays 
+- a `view` that displays the counter and a button for increasing it
+- an `update` function that responds to the `Increase` action and changes the model
