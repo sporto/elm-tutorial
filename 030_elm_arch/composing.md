@@ -244,3 +244,4 @@ Here is a diagram that illustrates this architecture:
 - The Elm architecture offers a clean way to compose (or nest) components as many levels as you need.
 - Children components do not need to know anything about the parent. They define their own types and actions.
 - If a child components needs something in particular (e.g. an additional address) it "asks" for it by using the function signatures. The parent is responsible for providing what the children need.
+- A parent doesn't need to know what is in its children models or what their actions are.  It only needs to provide what its children asks.
