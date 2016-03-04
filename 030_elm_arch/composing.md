@@ -244,10 +244,14 @@ Here is a diagram that illustrates this architecture:
 3. __Widget__ returns an initial model
 4. __Main__ returns a composed main model which includes the widget model
 5. __StartApp__ calls __Main.view__, passing the __root address__ and the __main model__
-6. __Main.view__ calls __Widget.view__, passing a __forwarding address__ and the __widgetModel__
+6. __Main.view__ calls __Widget.view__, passing a __forwarding address__ and the __widgetModel__ part from the main model
 7. __Widget.view__ returns the rendered Html to __Main__
 8. __Main.view__ returns the rendered Html to __StartApp__
-9. 
+9. Upon clicking on the increase button the action __Increase__ is send to __StartApp__ through the forwarding address set before. This address tags the action with __WidgetAction__
+10. __StartApp__ calls __Main.update__ with this action and the main model
+11. As the action was tagged with __WidgetAction__, __Main.update__ delegates the update to __Widget.update__, sending along the way the __widgetModel__ part of the main model
+12. __Widget.update__ modifies the model according to the given action, in this case __Increase__. And returns the modifies __widgetModel__ to __Main.update__
+13. __Main.update__ 
 
 
 ---
