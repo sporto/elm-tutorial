@@ -238,5 +238,5 @@ Using this `subAction` and `model.widgetModel` we call `Widget.update`. This wil
 ## Key points
 
 - The Elm architecture offers a clean way to compose (or nest) components as many levels as you need.
-- Children components do not need to know anything about the parent. They define their own types and needs.
+- Children components do not need to know anything about the parent. They define their own types and actions.
 - If a child components needs something in particular (e.g. an additional address) it "asks" for it by using the function signatures. The parent is responsible for providing what the children need.
