@@ -143,3 +143,11 @@ main =
 ```
 
 Let's break this down.
+
+### Model
+
+```elm
+type alias AppModel =
+  { widgetModel : Widget.Model
+  }
+```
