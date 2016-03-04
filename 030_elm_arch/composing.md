@@ -74,14 +74,14 @@ Note how the component only knows about things declared here. Both `view` and `u
 
 ## The parent component
 
-This is the code for the parent component. __App.elm__:
+This is the code for the parent component. __Main.elm__:
 
 ```elm
 module Main (..) where
 
 import Html exposing (Html)
 import StartApp.Simple
-import C030ElmArch.Composing.Widget as Widget
+import Widget as Widget
 
 
 -- MODEL
