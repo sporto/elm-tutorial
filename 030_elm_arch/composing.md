@@ -212,3 +212,4 @@ The main application `view` renders the `Widget.view`. But `Widget.view` expects
 
 - We use `Signal.forwardTo` to create the expected address by the children component.
 - We only pass the part of the model that the children component cares about i.e. `model.widgetModel`.
+
