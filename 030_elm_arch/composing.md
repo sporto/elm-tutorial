@@ -5,6 +5,8 @@ One of the big benefits from using the Elm architecture is the way it handles co
 - We will have a parent component `App`
 - And a child component `Widget`
 
+## Children component
+
 This is the code for the __Widget.elm__ component:
 
 ```elm
