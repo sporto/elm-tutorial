@@ -7,7 +7,7 @@ One of the big benefits from using the Elm architecture is the way it handles co
 
 ## Children component
 
-This is the code for the __Widget.elm__ component:
+Let's begin with the children component. This is the code for the __Widget.elm__ component:
 
 ```elm
 module Widget (..) where
