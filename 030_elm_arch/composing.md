@@ -226,3 +226,7 @@ update action model =
       in
         { model | widgetModel = updatedWidgetModel }
 ```
+
+When a `WidgetAction` is received by `update` we use pattern matching to extract the `subAction`. This `subAction` is of the type the `Widget.update` function expects.
+
+Using this subAction and `model.widgetModel` we call `Widget.update`. This will gives an updated `widgetModel` that can be used to replace the existing attribute in the main model.
