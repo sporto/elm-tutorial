@@ -186,4 +186,11 @@ type Action
   = WidgetAction Widget.Action
 ```
 
-We use an __union type__ that wraps `Widget.Action` to indicate that an action belongs to that component.
+We use an __union type__ that wraps `Widget.Action` to indicate that an action belongs to that component. 
+
+In an application with multiple chilren components we may have something like:
+
+```elm
+type Action
+  = WidgetAction Widget.Action
+```
