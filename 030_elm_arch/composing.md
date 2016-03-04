@@ -7,7 +7,9 @@ One of the big benefits from using the Elm architecture is the way it handles co
 
 ## Children component
 
-Let's begin with the children component. This is the code for __Widget.elm__:
+Let's begin with the children component. This is the code for __Widget.elm__.
+
+<https://github.com/sporto/elm-tutorial-assets/blob/master/code/C030ElmArch/Composing/Widget.elm>
 
 ```elm
 module Widget (..) where
