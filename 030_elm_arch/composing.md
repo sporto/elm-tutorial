@@ -73,3 +73,71 @@ This component has:
 Note how the component only knows about things declared here. Both `view` and `update` only use types declared within the component (`Action` and `Model`).
 
 ## The parent component
+
+This is the code for the parent component. __App.elm__:
+
+```elm
+module Main (..) where
+
+import Html exposing (Html)
+import StartApp.Simple
+import C030ElmArch.Composing.Widget as Widget
+
+
+-- MODEL
+
+
+type alias AppModel =
+  { widgetModel : Widget.Model
+  }
+
+
+type Action
+  = WidgetAction Widget.Action
+
+
+initialModel : AppModel
+initialModel =
+  { widgetModel = Widget.initialModel
+  }
+
+
+
+-- VIEW
+
+
+view : Signal.Address Action -> AppModel -> Html
+view address model =
+  Html.div
+    []
+    [ Widget.view (Signal.forwardTo address WidgetAction) model.widgetModel
+    ]
+
+
+
+-- UPDATE
+
+
+update : Action -> AppModel -> AppModel
+update action model =
+  case action of
+    WidgetAction subAction ->
+      let
+        updatedWidgetModel =
+          Widget.update subAction model.widgetModel
+      in
+        { model | widgetModel = updatedWidgetModel }
+
+
+
+-- START APP
+
+
+main : Signal.Signal Html
+main =
+  StartApp.Simple.start
+    { model = initialModel
+    , view = view
+    , update = update
+    }
+```
