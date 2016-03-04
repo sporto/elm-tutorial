@@ -238,6 +238,13 @@ Using this `subAction` and `model.widgetModel` we call `Widget.update`. This wil
 Here is a diagram that illustrates this architecture:
 
 ![Flow](flow.png)
+
+1. StartApp call `initialModel` on Main
+2. Main call `initialModel` on Widget
+3. Widget returns an initial model
+4. Main returns a composed model
+
+
 ---
 
 ## Key points
