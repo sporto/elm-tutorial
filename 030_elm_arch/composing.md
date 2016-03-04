@@ -61,7 +61,7 @@ update action model =
       { model | count = model.count + 1 }
 ```
 
-This component should be straighforward to understand as it is nearly identical to the application that we made in the last section. 
+This component should be straightforwardto understand as it is nearly identical to the application that we made in the last section. 
 
 This component has:
 
