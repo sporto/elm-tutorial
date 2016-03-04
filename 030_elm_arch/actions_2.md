@@ -72,7 +72,7 @@ main =
   Signal.map view modelSignal
 ```
 
-<https://github.com/sporto/elm-tutorial-assets/blob/master/code/030_elm_arch/ActionsMultiple.elm>
+<https://github.com/sporto/elm-tutorial-assets/blob/master/code/C030ElmArch/ActionsMultiple.elm>
 
 Every mouse click increases the count, every key press decreases the count. Note how we __merge__ the signals (mouseClickSignal and keyPressSignal) into one, as they both are of type `Signal.Signal Action` our foldp can handle them.
 
