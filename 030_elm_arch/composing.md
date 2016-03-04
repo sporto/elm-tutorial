@@ -67,3 +67,8 @@ This component has:
 - actions i.e. `Increase`
 - a `view` that displays the counter and a button for increasing it
 - an `update` function that responds to the `Increase` action and changes the model
+
+Note how the component only knows about things declared here:
+
+- `view` requires an `Address` of the type `Action` declared above
+- `view` requires a model of the type `Model` declared inside the component  
