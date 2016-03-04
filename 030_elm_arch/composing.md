@@ -237,6 +237,7 @@ Using this `subAction` and `model.widgetModel` we call `Widget.update`. This wil
 
 Here is a diagram that illustrates this architecture:
 
+![Flow](flow.png)
 ---
 
 ## Key points
