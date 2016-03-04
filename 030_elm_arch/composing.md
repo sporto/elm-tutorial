@@ -74,7 +74,7 @@ Note how the component only knows about things declared here. Both `view` and `u
 
 ## The parent component
 
-This is the code for the parent component. __Main.elm__:
+This is the code for the parent component.
 
 ```elm
 module Main (..) where
@@ -141,3 +141,5 @@ main =
     , update = update
     }
 ```
+
+Let's break this down.
