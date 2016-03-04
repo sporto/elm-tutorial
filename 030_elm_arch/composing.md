@@ -71,3 +71,5 @@ This component has:
 - an `update` function that responds to the `Increase` action and changes the model
 
 Note how the component only knows about things declared here. Both `view` and `update` only use types declared within the component (`Action` and `Model`).
+
+## The parent component
