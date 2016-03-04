@@ -8,7 +8,7 @@ One of the big benefits from using the Elm architecture is the way it handles co
 This is the code for the __Widget.elm__ component:
 
 ```elm
-module C030ElmArch.Composing.Widget (..) where
+module Widget (..) where
 
 import Html exposing (Html)
 import Html.Events as Events
@@ -59,3 +59,8 @@ update action model =
       { model | count = model.count + 1 }
 ```
 
+It should be very straighforward to understand. This component has:
+
+- a `Model`
+- actions i.e. `Increase`
+- a `view` that displays 
