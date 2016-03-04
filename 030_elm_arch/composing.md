@@ -237,7 +237,7 @@ Using this `subAction` and `model.widgetModel` we call `Widget.update`. This wil
 
 Here is a diagram that illustrates this architecture:
 
-![Flow](flow.png)
+![Flow](flow-v01.png)
 
 1. __StartApp__ calls __Main.initialModel__
 2. __Main__ calls __Widget.initialModel__
@@ -251,7 +251,8 @@ Here is a diagram that illustrates this architecture:
 10. __StartApp__ calls __Main.update__ with this action and the main model
 11. As the action was tagged with __WidgetAction__, __Main.update__ delegates the update to __Widget.update__, sending along the way the __widgetModel__ part of the main model
 12. __Widget.update__ modifies the model according to the given action, in this case __Increase__. And returns the modifies __widgetModel__ to __Main.update__
-13. __Main.update__ 
+13. __Main.update__ updates the main model and returns it to __StartApp__
+14. __StartApp__ then renders the views again
 
 
 ---
