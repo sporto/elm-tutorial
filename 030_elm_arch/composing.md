@@ -197,3 +197,13 @@ type Action
   | WidgetAction Widget.Action
 ```
 
+### view
+
+```elm
+view : Signal.Address Action -> AppModel -> Html
+view address model =
+  Html.div
+    []
+    [ Widget.view (Signal.forwardTo address WidgetAction) model.widgetModel
+    ]
+```
