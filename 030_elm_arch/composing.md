@@ -158,3 +158,14 @@ initialModel =
 ```
 
 When creating the initial application model, we simply call `Widget.initialModel` from here.
+
+If you were to have multiple children components you would do the same for each, for example:
+
+```
+initialModel : AppModel
+initialModel =
+  { navModel = Nav.initialModel,
+  , sidebarModel = Sidebar.initialModel,
+  , widgetModel = Widget.initialModel
+  }
+```
