@@ -92,16 +92,14 @@ type alias AppModel =
   }
 
 
-type Action
-  = WidgetAction Widget.Action
-
-
 initialModel : AppModel
 initialModel =
   { widgetModel = Widget.initialModel
   }
 
 
+type Action
+  = WidgetAction Widget.Action
 
 -- VIEW
 
