@@ -151,3 +151,5 @@ type alias AppModel =
   { widgetModel : Widget.Model
   }
 ```
+
+The parent component has its own model. One of the attribute on the model contains the `Widget.Model`.
