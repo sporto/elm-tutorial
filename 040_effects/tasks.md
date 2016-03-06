@@ -49,7 +49,7 @@ Now, instead of displaying the current timestamp every second, we want to displa
 
 ## Adding a fake server
 
-We will use node for our fake server, because if you are reading this is quite likely that you already have node installed and are familiar with it.
+We will use Node for our fake server, because if you are reading this it is quite likely that you already have Node installed and that you are familiar with it.
 
 In another terminal go to the same folder with your Elm code and start a node project with all the defaults:
 
