@@ -18,7 +18,9 @@ update action model =
           ( model.players, Effects.none )
 ```
 
-In this function we can't set the `errorMessage` which is in the mail model as we are in deeper level. We also can't return a root effect as StartApp expects a PlayersAction. We could however add one more return value to the tuple (see An alternative approach below), but we won't do as it adds too much coupling between our modules.
+In this function we can't set the `errorMessage`, which is in the main model, because we are in a deeper level.
+
+We also can't return a root effect as StartApp expects a PlayersAction. We could however add one more return value to the tuple (see An alternative approach below), but we won't do as it adds too much coupling between our modules.
 
 This is the approach we will take:
 
@@ -63,7 +65,7 @@ Change the `FetchAllDone` branch so we send a message to this address:
             ( model.players, fx )
 ```
 
-`Signal.send` creates a task that when run send a message to an address. We are asking to send the `errorMessage` to the `showErrorAddress` address. 
+`Signal.send` creates a task that when run sends a message to an address. We are asking to send the `errorMessage` to the `showErrorAddress` address. 
 
 We need to return an effect, not a task, so we convert this task to an effect by using `|> Effect.task`. And the effect needs to be of type Players Action, so we map it to a new action `TaskDone`.
 
