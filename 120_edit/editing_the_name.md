@@ -21,6 +21,10 @@ The `Html.Events` modules has convenient functions like `onKeyUp` and `onKeyDown
 We need to use the generic `on` function instead. Change `inputName` to:
 
 ```elm
+import Html.Events exposing (on, onClick, targetValue)
+
+...
+
 inputName : Signal.Address Action -> ViewModel -> Html.Html
 inputName address model =
   input
