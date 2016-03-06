@@ -178,7 +178,7 @@ port runner =
   app.tasks
 ```
 
-Finally we need to create a `port`. `runner` is the name of the port. This port is necessary so any task send via effects are actually run. If this port is omitted then any effects that we return in __update__ won't be run.
+Finally we need to create a `port`. `runner` is the name of the port. This port is necessary so any task sent via effects are actually run. If this port is omitted then any effects that we return in __update__ won't be run.
 
 ## Conclusion
 
