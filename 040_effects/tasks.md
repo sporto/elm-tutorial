@@ -274,8 +274,7 @@ Here is a diagram that should help clarify what is happening:
 1. `runTask` executes the next step after `andThen`
 1. We send the result of the task to the mailbox
 1. The mailbox broadcasts an output signal
-1. `main` picks up the signal from the mailbox and renders a view, this view
-   shows the result of the tasks
+1. `main` picks up the signal from the mailbox and renders a view, this view shows the result of the tasks
 
 ## Conclusion
 
