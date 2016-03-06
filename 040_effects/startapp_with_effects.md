@@ -106,7 +106,7 @@ port runner =
 
 ### actions
 
-As previously, `Refresh` is send to trigger a refresh, `OnRefresh` is send when the Ajax request has completed.
+As previously, `Refresh` is sent to trigger a refresh, `OnRefresh` is sent when the Ajax request has completed.
 
 ### view
 
