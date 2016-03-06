@@ -1,7 +1,7 @@
 
 # Effects
 
-We learnt about __StartApp simple__ in the previous chapter. But there is a more featured version which is just called __StartApp__. 
+We learned about __StartApp simple__ in the previous chapter. But there is a more featured version which is just called __StartApp__. 
 
 When building Elm application you are likely to use __StartApp__ as the base. __StartApp__ relies on `Effects` heavily, so we need to learn about `Effects`.
 
