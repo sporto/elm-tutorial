@@ -92,7 +92,7 @@ Run `json-server`:
 node index.js
 ```
 
-Open `http://localhost:3000/` in your browser, you should see a random number, if you refresh you will get a different one. We will use call this from Elm. Keep this server running.
+Open `http://localhost:3000/` in your browser, you should see a random number, if you refresh you will get a different one. We will call this from Elm. Keep this server running.
 
 ## Using tasks for http
 
