@@ -90,8 +90,8 @@ Finally we want to add some npm scripts so we can run our servers easily. In __p
 
 - So now `npm run api` will run our fake server.
 - `npm run build` will create a webpack build and put the bundles in `dist`.
-- `npm run watch` runs the webpack watcher which puts the bundles in `dist` as we change our source.
-- `npm run dev` runs the webpack dev server
+- `npm run watch` runs the webpack watcher which puts the bundles in `dist` as we change our source code.
+- `npm run dev` runs the webpack dev server.
 
 ## Test it
 
