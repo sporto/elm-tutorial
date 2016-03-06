@@ -245,7 +245,7 @@ taskSignal =
 
 After a task finishes we want to send its result back to our application. We map the effects coming from `fxSignal` through `(Effects.toTask actionsMailbox.address)`. `Effects.toTask` takes and __address__ and __effects__. When the effects are run `toTask` sends the resulting messages to the address.
 
-#### main
+### main
 
 `main` maps the model signal through the view.
 
