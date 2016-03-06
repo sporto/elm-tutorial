@@ -6,7 +6,7 @@ We need to provide this address to Players.Update. This address needs to map to 
 
 ---
 
-Unfortunately StartApp doesn't give a mechanism to send messages to its address from `update`. We need to provide our own mailbox for this.
+Unfortunately, StartApp doesn't give us a mechanism to send messages to its address from `update`. We need to provide our own mailbox for this.
 
 Create __src/Mailboxes.elm__:
 
