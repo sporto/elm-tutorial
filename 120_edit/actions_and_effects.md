@@ -17,11 +17,11 @@ We will add a couple of new actions for changing a player's level. In __src/Play
 
 We created a `ChangeLevel` action. Let's trigger this action from the player's edit view.
 
-In __src/Players/Edit.elm__ change `btnLevelIncrease` and `btnLevelIncrease`:
+In __src/Players/Edit.elm__ change `btnLevelDecrease` and `btnLevelIncrease`:
 
 ```elm
 ...
-btnLevelIncrease : Signal.Address Action -> ViewModel -> Html.Html
+btnLevelDecrease : Signal.Address Action -> ViewModel -> Html.Html
 btnLevelDecrease address model =
   a
     [ class "btn ml1 h1" ]
