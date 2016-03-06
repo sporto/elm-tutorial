@@ -1,6 +1,6 @@
 # Effects 2
 
-Following is an example application using `Effects` that replicates whan __StartApp__ does under the hood.
+Following is an example application using `Effects` that replicates what __StartApp__ does under the hood.
 
 __The example below is complex, if you find it difficult to understand don't worry too much. We will be using StartApp in the next chapter, which simplifies this code__.
 
@@ -129,7 +129,7 @@ When the request is finished we will trigger a `OnRefresh` action. This `OnRefre
 
 #### view
 
-The `view` display the "Refresh" button and a message (this message will be the response from the server). When the "Refresh" button is clicked we send a `Refresh` action to the provided address.
+The `view` displays the "Refresh" button and a message (this message will be the response from the server). When the "Refresh" button is clicked we send a `Refresh` action to the provided address.
 
 #### actionsMailbox
 
