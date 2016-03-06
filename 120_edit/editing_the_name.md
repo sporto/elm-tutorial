@@ -18,7 +18,7 @@ In __src/Players/Edit.elm__ let's trigger this action.
 
 The `Html.Events` modules has convenient functions like `onKeyUp` and `onKeyDown`. But is lacking a function to handle a change on an input field (a `change` event on an input field triggers only when the user hits enter or moves the focus out). 
 
-We need to use the generic `on` function instead. Change `inputName` to:
+We need to use the generic `on` function instead. Import `on` from Html.Events and change `inputName` to:
 
 ```elm
 import Html.Events exposing (on, onClick, targetValue)
