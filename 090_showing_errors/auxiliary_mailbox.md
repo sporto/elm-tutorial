@@ -2,7 +2,7 @@
 
 In the previous section we required a `showErrorAddress` in Players.Update.
 
-We need to provide this address to Players.Update and map it to the main action we want (`ShowError`).
+We need to provide this address to Players.Update. This address needs to map to the main action `ShowError`.
 
 ---
 
