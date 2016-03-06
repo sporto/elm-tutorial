@@ -25,8 +25,8 @@ We also can't return a root effect as StartApp expects a PlayersAction. We could
 This is the approach we will take:
 
 - Players Update will receive a model that includes an address where to send a message when an error occurs.
-- On error we will send a message to this address.
-- The message will go a mailbox that will be an input for our application.
+- When an error happens we will send a message to this address.
+- This message will go to a mailbox that will be an input for our application.
 - The main update will then receive the action and set the error message in the main model.
 
 
