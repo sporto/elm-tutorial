@@ -5,7 +5,7 @@ In the application folder install the Elm modules we will be using:
 ```bash
 elm package install evancz/start-app
 elm package install evancz/elm-http
-elm package install sporto/hop
+elm package install sporto/hop 2.1
 ```
 
 `sporto/hop` is the router we will be using in this tutorial.
