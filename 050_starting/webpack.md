@@ -4,11 +4,13 @@ __Elm reactor__ is great for prototyping simple applications, but for a bigger a
 
 Webpack is a code bundler. It looks at your dependency tree and only bundles the code that is imported. Webpack can also import CSS and other assets inside a bundle. Read more about Webpack [here](https://webpack.github.io/).
 
-There are many alternatives that can achieve the same as Webpack, for example:
+There are many alternatives that you can use to achive the same a Webpack, for example:
 
-- Browserify
-- Gulp
-- StealJS
+- [Browserify](http://browserify.org/)
+- [Gulp](http://gulpjs.com/)
+- [StealJS](http://stealjs.com/)
+- [JSPM](http://jspm.io/)
+- Or if using a framework like Rails or Phoenix you can bundle the Elm code and CSS using them.
 
 
 ## Installing webpack and loaders
