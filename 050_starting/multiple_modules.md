@@ -40,6 +40,20 @@ Try creating separate modules for things like __actions__, __models__, __effects
 
 ## Breaking the application
 
+We will be adding all our source code in the `src` folder, so we need to tell Elm where to search for dependencies. In __elm-package.json__ change:
+
+```json
+...
+"source-directories": [
+    "src"
+],
+...
+```
+
+Without this the Elm compiler will try to find the imports in the root of our project and fail.
+
+---
+
 Let's break the application in smaller modules:
 
 __src/Actions.elm__
@@ -133,18 +147,6 @@ port runner : Signal (Task.Task Never ())
 port runner =
   app.tasks
 ```
-
-Also __elm-package.json__ needs to be changed:
-
-```json
-...
-"source-directories": [
-    "src"
-],
-...
-```
-
-Without this the Elm compiler will try to find the imports in the root of our project and fail.
 
 You can find the code here <https://github.com/sporto/elm-tutorial-app/tree/030-multiple-modules>
 
