@@ -15,7 +15,7 @@ elm package install sporto/hop 2.1
 Libraries change and major updates could be release. So it is worth mentioning what versions this tutorial is using:
 
 - StartApp : `2.0.2`
-- Hop : `2.1`
+- Hop : `2.1.2`
 - Http : `3.0`
 
 #### Additional entries
