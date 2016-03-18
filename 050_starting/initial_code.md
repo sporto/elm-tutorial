@@ -16,7 +16,7 @@ Libraries change and major updates could be release. So it is worth mentioning w
 
 - StartApp : `2.0.2`
 - Hop : `2.1.2`
-- Http : `3.0`
+- Http : `3.0.0`
 
 #### Additional entries
 
