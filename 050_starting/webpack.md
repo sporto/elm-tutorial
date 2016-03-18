@@ -34,7 +34,7 @@ We also want to use a couple of extra libraries:
 npm i basscss@7 font-awesome -S
 ```
 
-This tutorial uses basscss version 7.
+This tutorial uses basscss version __7__.
 
 ## Webpack config
 
