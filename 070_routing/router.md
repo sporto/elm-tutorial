@@ -1,6 +1,12 @@
 # Router
 
-Let's add a router for our application. We will be using [Hop](https://github.com/sporto/hop) version 2.1.
+Let's add a router for our application. We will be using [Hop](https://github.com/sporto/hop) version 3.0.
+
+First install Hop:
+
+```
+elm package install sporto/hop 3.0.0
+```
 
 ## Routing
 
