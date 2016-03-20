@@ -58,7 +58,7 @@ update action model =
     ListPlayers ->
       let
         path =
-          "/players/"
+          "/players"
       in
         ( model.players, Effects.map HopAction (navigateTo path) )
     ...
