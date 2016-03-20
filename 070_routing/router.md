@@ -21,6 +21,8 @@ In this module we define:
 
 Please read the comments to understand what this code does. It should be clear from the comments.  In __src/Routing.elm__:
 
+<https://github.com/sporto/elm-tutorial-app/blob/060-routing/src/Routing.elm>
+
 ```elm
 module Routing (..) where
 
