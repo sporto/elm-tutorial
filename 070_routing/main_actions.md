@@ -1,5 +1,22 @@
 # Main: Actions, Model and Update
 
+## Main Actions
+
+In __src/Actions.elm__ we need to add a new action so we can route actions coming from the router:
+
+```elm
+module Actions (..) where
+
+import Players.Actions
+import Routing
+
+
+type Action
+  = NoOp
+  | RoutingAction Routing.Action
+  | PlayersAction Players.Actions.Action
+```
+
 ## Main Model
 
 The main application model needs to be change to include the routing model. Change __src/Models.elm__ to:
@@ -22,23 +39,6 @@ initialModel =
   { players = [ Player 1 "Sam" 1 ]
   , routing = Routing.initialModel
   }
-```
-
-## Main Actions
-
-In __src/Actions.elm__ we need to add a new action so we can route actions coming from the router:
-
-```elm
-module Actions (..) where
-
-import Players.Actions
-import Routing
-
-
-type Action
-  = NoOp
-  | RoutingAction Routing.Action
-  | PlayersAction Players.Actions.Action
 ```
 
 ## Main Update
