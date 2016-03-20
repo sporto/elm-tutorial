@@ -9,7 +9,7 @@ Import the `Routing` module:
 import Routing
 ```
 
-The `router` coming from this module exposes a signal. This signal carries all events coming from the router. For example showing a new view when the location changes.
+Back when defining Routing we added a `signal` function. This signal carries all events coming from the router. For example showing a new view when the location changes.
 
 We need to map this signal to an action that our Main module can use. Add a function:
 
