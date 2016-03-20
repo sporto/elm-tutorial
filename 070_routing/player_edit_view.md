@@ -96,7 +96,7 @@ inputName address model =
 
 ```
 
-This view show a form with the player's level and name. And some dummy buttons e.g. `btnLevelIncrease`.
+This view show a form with the player's level and name. And some dummy buttons that will be implemented later e.g. `btnLevelIncrease`.
 
 
 
