@@ -180,7 +180,9 @@ signal =
 
 ```
 
-The code should be clear from the comments. In this module we:
+Please read the comments to understand what this code does. It should be clear from the comments. 
+
+In this module we:
 
 - define actions that can happen when a location changes, see `Action`
 - define available views, see `AvailableViews`
