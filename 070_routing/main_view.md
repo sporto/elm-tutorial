@@ -81,7 +81,7 @@ notFoundView =
 
 ```
 
-Now we have a function `page` which has a case expression to show the correct view depending on what is in `model.routing.route`.
+---
 
 Note these lines in `view`:
 
@@ -100,6 +100,10 @@ view address model =
 This is a handy trick for printing the current model to the console, very useful for debugging our application while developing.
 
 ---
+
+Now we have a function `page` which has a case expression to show the correct view depending on what is in `model.routing.route`.
+
+
 
 When hitting the edit player view (e.g. `/players/3/edit`) we may or may not have a player with that id.
     
