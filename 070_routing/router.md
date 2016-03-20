@@ -17,9 +17,9 @@ In this module we define:
 - the routes for our application
 - some actions related to routing
 - how to react to these actions in update
-- how to match browser paths to routes using path matchers
+- how to match browser paths to routes using path matchers.
 
-Please read the comments to understand what this code does. It should be clear from the comments. 
+Please read the comments to understand what this code does. It should be clear from the comments.  In __src/Routing.elm__:
 
 ```elm
 module Routing (..) where
