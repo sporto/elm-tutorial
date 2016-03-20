@@ -1,3 +1,5 @@
+> This tutorial has been upgraded from Hop 2.1 to Hop 3.0 on 20-03-2016, if you started the Routing chapter before that please review from the back to the beginning of the chapter.
+
 # Try it
 
 We have added the necessary wiring to have a working router.
