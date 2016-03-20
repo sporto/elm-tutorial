@@ -74,7 +74,7 @@ playerRow address model player =
 Finally, __src/Players/Update.elm__ needs to respond to this action. Add a new import:
 
 ```elm
-import Hop
+import Hop.Navigate exposing (navigateTo)
 ```
 
 And add two new branches to the case expression:
@@ -88,7 +88,7 @@ update action model =
         path =
           "/players/" ++ (toString id) ++ "/edit"
       in
-        ( model.players, Effects.map HopAction (Hop.navigateTo path) )
+        ( model.players, Effects.map HopAction (navigateTo path) )
 
     HopAction _ ->
       ( model.players, Effects.none )
@@ -97,7 +97,7 @@ update action model =
       ( model.players, Effects.none )
 ```
 
-`Hop.navigateTo path` returns an effect. When this effect is run by Elm the location of the browser will change. You can read more about how this works [here](https://github.com/sporto/hop).
+`Hop.Navigate.navigateTo path` returns an effect. When this effect is run by Elm the location of the browser will change. You can read more about how this works [here](https://github.com/sporto/hop).
 
 We also have to handle `HopAction` because we are wrapping the __Hop__ effect with it. After the location changes we will receive a `HopAction` with a payload, but we don't need to do anything with this here.
 
