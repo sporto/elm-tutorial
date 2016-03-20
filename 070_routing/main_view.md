@@ -81,7 +81,7 @@ notFoundView =
 
 ```
 
-Now we have a function `page` which has a case expression to show the correct view depending on what is in `model.routing.view`.
+Now we have a function `page` which has a case expression to show the correct view depending on what is in `model.routing.route`.
 
 Note these lines in `view`:
 
@@ -97,7 +97,7 @@ view address model =
     ..
 ```
 
-This is just a handy of printing the current model to the console, very useful for debugging our application while developing.
+This is a handy trick for printing the current model to the console, very useful for debugging our application while developing.
 
 ---
 
