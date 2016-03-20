@@ -6,7 +6,7 @@ Import the `Routing` module:
 
 ```elm
 ...
-import Routing exposing (router)
+import Routing
 ```
 
 The `router` coming from this module exposes a signal. This signal carries all events coming from the router. For example showing a new view when the location changes.
