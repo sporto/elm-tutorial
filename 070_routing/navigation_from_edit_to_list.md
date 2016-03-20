@@ -60,7 +60,7 @@ update action model =
         path =
           "/players/"
       in
-        ( model.players, Effects.map HopAction (Hop.navigateTo path) )
+        ( model.players, Effects.map HopAction (navigateTo path) )
     ...
 ```
 
