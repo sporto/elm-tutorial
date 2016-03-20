@@ -96,7 +96,7 @@ inputName address model =
 
 ```
 
-This view show a form with player's:
+This view show a form with the player's:
 
 - level
 - name
