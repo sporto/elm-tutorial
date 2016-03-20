@@ -34,7 +34,7 @@ app =
 
 Note `inputs = [ routerSignal ]`.
 
-Finally in order to get location changes on the browser we need to tell Elm to run tasks coming from the router. Add a port for this:
+Finally, in order to get location changes on the browser we need to tell Elm to run tasks coming from the router. Add a port for this:
 
 ```elm
 port routeRunTask : Task.Task () ()
