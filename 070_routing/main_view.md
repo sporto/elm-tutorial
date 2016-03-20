@@ -121,9 +121,29 @@ Now we have a function `page` which has a case expression to show the correct vi
 
 When the player edit route matches (e.g. `/playes/2/edit`) we will get the player id in the route i.e. `PlayerEditRoute playerId`.
 
+### Finding the player
 
+```
+playerEditPage : Signal.Address Action -> AppModel -> PlayerId -> Html.Html
+playerEditPage address model playerId =
+  let
+    maybePlayer =
+      model.players
+        |> List.filter (\player -> player.id == playerId)
+        |> List.head
+  in
+    case maybePlayer of
+      Just player ->
+        let
+          viewModel =
+            { player = player
+            }
+        in
+          Players.Edit.view (Signal.forwardTo address PlayersAction) viewModel
 
--  We get the `id` from `model.routing.routerPayload.params`.
--  Then we filter the `model.players` collection to find that id.
--  Then we add a case expression that either shows the edit view or a 'not found view' if the player is not found.
+      Nothing ->
+        notFoundView
+```
+
+We have the `playerId`, but we might not have the actual player record for that id. We to filter the players' list by that id and a case expression that show the correct view depending if the player is found or not.
 
