@@ -59,6 +59,9 @@ import Players.Update
 update : Action -> AppModel -> ( AppModel, Effects Action )
 update action model =
   case (Debug.log "action" action) of
+    
+    ...
+    
     RoutingAction subAction ->
       let
         ( updatedRouting, fx ) =
@@ -66,19 +69,7 @@ update action model =
       in
         ( { model | routing = updatedRouting }, Effects.map RoutingAction fx )
 
-    PlayersAction subAction ->
-      let
-        updateModel =
-          { players = model.players
-          }
-
-        ( updatedPlayers, fx ) =
-          Players.Update.update subAction updateModel
-      in
-        ( { model | players = updatedPlayers }, Effects.map PlayersAction fx )
-
-    NoOp ->
-      ( model, Effects.none )
+    ...
 ```
 
 Here we added `RoutingAction`. We follow the same pattern as before and send those actions to the `Routing` module and then replace `.routing` in our main model.
