@@ -101,12 +101,28 @@ This is a handy trick for printing the current model to the console, very useful
 
 ---
 
-Now we have a function `page` which has a case expression to show the correct view depending on what is in `model.routing.route`.
+### Showing the correct view
+
+```elm
+page : Signal.Address Action -> AppModel -> Html.Html
+page address model =
+  case model.routing.route of
+    Routing.PlayersRoute ->
+      playersPage address model
+
+    Routing.PlayerEditRoute playerId ->
+      playerEditPage address model playerId
+
+    Routing.NotFoundRoute ->
+      notFoundView
+```
+
+Now we have a function `page` which has a case expression to show the correct view depending on what is in `model.routing.route`. 
+
+When the player edit route matches (e.g. `/playes/2/edit`) we will get the player id in the route i.e. `PlayerEditRoute playerId`.
 
 
 
-When hitting the edit player view (e.g. `/players/3/edit`) we may or may not have a player with that id.
-    
 -  We get the `id` from `model.routing.routerPayload.params`.
 -  Then we filter the `model.players` collection to find that id.
 -  Then we add a case expression that either shows the edit view or a 'not found view' if the player is not found.
