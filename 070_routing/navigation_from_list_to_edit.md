@@ -17,7 +17,7 @@ import Hop
 
 type Action
   = NoOp
-  | HopAction Hop.Action
+  | HopAction ()
   | EditPlayer PlayerId
 ```
 
