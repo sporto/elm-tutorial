@@ -101,6 +101,8 @@ update action model =
 
 We also have to handle `HopAction` because we are wrapping the __Hop__ effect with it. After the location changes we will receive a `HopAction` with a payload, but we don't need to do anything with this here.
 
+Hop also has helper functions for __reverse routing__ meaning converting a path matcher to a path so we don't have to write `"/players/" ++ (toString id) ++ "/edit"` here. But for the sake of keeping this tutorial simple this is not included.
+
 ## Test it
 
 ![screenshot](screenshot.png)
