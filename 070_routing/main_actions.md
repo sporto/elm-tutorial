@@ -1,5 +1,7 @@
 # Main: Actions, Model and Update
 
+> This tutorial has been upgraded from Hop 2.1 to Hop 3.0 on 20-03-2016, if you started the Routing chapter before that please review from the back to the beginning of the chapter.
+
 ## Main Actions
 
 In __src/Actions.elm__ we need to add a new action so we can route actions coming from the router:
