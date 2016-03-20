@@ -10,7 +10,16 @@ elm package install sporto/hop 3.0.0
 
 ## Routing
 
-Create a module for defining the application routing configuration. In __src/Routing.elm__:
+Create a module __src/Routing.elm__ for defining the application routing configuration. 
+
+In this module we define:
+
+- the routes for our application
+- some actions related to routing
+- how to react to these actions in update
+- how to match browser paths to routes using path matchers
+
+Please read the comments to understand what this code does. It should be clear from the comments. 
 
 ```elm
 module Routing (..) where
@@ -180,14 +189,6 @@ signal =
 
 ```
 
-Please read the comments to understand what this code does. It should be clear from the comments. 
-
-In this module we:
-
-- define the routes on our application, see `Route`
-- define available views, see `AvailableViews`
-- define how to react to the actions, see `update`
-- define how browser locations map to actions, see `routes`.
 
 
 
