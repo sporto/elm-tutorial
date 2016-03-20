@@ -184,7 +184,7 @@ Please read the comments to understand what this code does. It should be clear f
 
 In this module we:
 
-- define actions that can happen when a location changes, see `Action`
+- define the routes on our application, see `Route`
 - define available views, see `AvailableViews`
 - define how to react to the actions, see `update`
 - define how browser locations map to actions, see `routes`.
