@@ -41,7 +41,7 @@ Finally, in order to get location changes on the browser we need to tell Elm to 
 ```elm
 port routeRunTask : Task.Task () ()
 port routeRunTask =
-  router.run
+  Routing.run
 ```
 
 __src/Main.elm__ should look like <https://github.com/sporto/elm-tutorial-app/blob/060-routing/src/Main.elm>
