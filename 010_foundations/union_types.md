@@ -1,6 +1,6 @@
 # Union types
 
-In Elm __Union Types__ are used for many things as they are incredible flexible. A union type looks like:
+In Elm __Union Types__ are used for many things as they are incredibly flexible. A union type looks like:
 
 ```elm
 type Answer = Yes | No
