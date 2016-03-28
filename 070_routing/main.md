@@ -18,7 +18,7 @@ We need to map this signal to an action that our Main module can use. Add a func
 ```elm
 routerSignal : Signal Action
 routerSignal =
-  Signal.map RoutingAction router.signal
+  Signal.map RoutingAction Routing.signal
 ```
 
 This signal needs to be an input for StartApp. Change the `app` definition to:
