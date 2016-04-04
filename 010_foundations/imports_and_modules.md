@@ -56,7 +56,7 @@ myFunction =
   ...
 ```
 
-In the first one we use only import the `Html` module and use the fully qualified path `Html.Html`.
+In the first one we only import the `Html` module and use the fully qualified path `Html.Html`.
 
 In the second one we expose the `Html` type from the `Html` module. And use the `Html` type directly.
 
