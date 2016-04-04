@@ -4,7 +4,7 @@ When the user clicks yes on the confirmation dialogue we receive a message from 
 
 ## DeletePlayer Action
 
-Let's add the code in __src/Players/Update.elm__ to respond to this action, add a new branch:
+Let's add the code in __src/Players/Update.elm__ to respond to this action, change the branch to:
 
 ```elm
     DeletePlayer playerId ->
