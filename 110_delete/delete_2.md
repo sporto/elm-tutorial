@@ -28,6 +28,8 @@ And add a new branch to `update`:
             |> Effects.map TaskDone
       in
         ( model.players, fx )
+    DeletePlayer ->
+      (model.players, Effects.none)
 ```
 
 <https://github.com/sporto/elm-tutorial-app/blob/110-delete-player/src/Players/Update.elm>
