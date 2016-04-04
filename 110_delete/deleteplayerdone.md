@@ -1,7 +1,7 @@
 # DeletePlayerDone
 
 
-When the `delete` effect is done `DeletePlayerDone` will be triggered. Add another branch to __src/Players/Update.elm__:
+When the `delete` effect is done `DeletePlayerDone` will be triggered. Change the branch to __src/Players/Update.elm__:
 
 ```elm
     DeletePlayerDone playerId result ->
