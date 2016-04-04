@@ -31,6 +31,9 @@ And add a new branch to `update`:
     
     DeletePlayer playerId ->
       (model.players, Effects.none)
+      
+    DeletePlayerDone playerId result ->
+      (model.players, Effects.none)
 ```
 
 <https://github.com/sporto/elm-tutorial-app/blob/110-delete-player/src/Players/Update.elm>
