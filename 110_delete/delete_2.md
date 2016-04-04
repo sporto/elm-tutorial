@@ -42,7 +42,7 @@ When `DeletePlayerIntent` is triggered we respond with an effect to send a messa
 
 We need to provide this `deleteConfirmationAddress` to this `update` function.
 
-In order to compile the code we also need to account for `DeletePlayer` and `DeletePlayerDone`, so for now we just add two branches that return the model and Effects.none.
+In order to compile the code we also need to account for `DeletePlayer` and `DeletePlayerDone`, so for now we just add two branches that return the model and `Effects.none`.
 
 
 
