@@ -56,7 +56,7 @@ This function is equivalent to what we had before:
 (\_ state -> { state | count = state.count + 1 })
 ```
 
-But instead of an inline function it is now an standalone one. __update__ takes the unit type (given by Mouse.clicks), the previous `Model`, and returns a new `Model`.
+But instead of an inline function it is now a standalone one. __update__ takes the unit type (given by Mouse.clicks), the previous `Model`, and returns a new `Model`.
 
 #### foldp
 
