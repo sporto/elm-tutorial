@@ -257,7 +257,7 @@ port runner =
   taskSignal
 ```
 
-Finally, this is where the magic happens. Without this part the application will do nothing. __port__ tell Elm to take the `taskSignal` and actually run the tasks coming from it.
+Finally, this is where the magic happens. Without this part the application will do nothing. __port__ tells Elm to take the `taskSignal` and actually run the tasks coming from it.
 
 - `runner` is the name of the port, it could be anything you want.
 
