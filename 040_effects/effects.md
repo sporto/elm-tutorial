@@ -30,7 +30,7 @@ This takes a task and converts it to an effect. See more about this [here](http:
 
 ## Collection of effects
 
-Other times we will return a collection of effects to run, be we don't return a list of effects, we return just one `Effects`:
+Other times we will return a collection of effects to run, but we don't return a list of effects, we return just one `Effects`:
 
 ```elm
 Effect.batch [effect1, effect2]
