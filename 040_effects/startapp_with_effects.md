@@ -145,7 +145,7 @@ We have a new function `app`. This function bootstraps StartApp.
 
 #### inputs
 
-`inputs` are additional signals to listen to. StartApp will listen to these signals and merge them with any signals coming from the internal __mailbox__. What this mean is that these additional signals need to be of the same type as the main model signal.
+`inputs` are additional signals to listen to. StartApp will listen to these signals and merge them with any signals coming from the internal __mailbox__. What this means is that these additional signals need to be of the same type as the main model signal.
 
 This function returns an __StartApp__ record like:
 
