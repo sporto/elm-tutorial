@@ -7,7 +7,7 @@ We need to create links from:
 ```
 Main Actions   --->    Players Actions
 Main Models    --->    Players Models
-Main Update    --->    Main Update
+Main Update    --->    Players Update
 ```
 
 ## Main Actions
