@@ -14,6 +14,8 @@ This tutorial covers:
 - Fetching and parsing JSON
 - Routing
 - CRUD operations
+ 
+__This tutorial covers Elm 0.16__. I plan to start migrating to 0.17 as soon as possible.
 
 Read it online [here](http://www.elm-tutorial.org/).
 
