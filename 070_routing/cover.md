@@ -1,3 +1,5 @@
+> Note: Elm 0.16 version
+
 # Routing
 
 This chapter covers adding a router to our application. 
