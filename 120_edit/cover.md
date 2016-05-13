@@ -1,3 +1,5 @@
+> Note: Elm 0.16 version
+
 # Edit
 
 In this chapter we will add functionality to:
