@@ -1,3 +1,5 @@
+> Note: Elm 0.16 version
+
 # Adding players
 
 This chapter cover adding new players.
