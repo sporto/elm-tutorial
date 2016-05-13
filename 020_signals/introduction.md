@@ -1,3 +1,5 @@
+> Note: Elm 0.16 version
+
 # Introduction to signals
 
 In Elm, __signals__ are one of the basic building blocks for creating applications. You can think of a signal as a stream of values that change over time.
