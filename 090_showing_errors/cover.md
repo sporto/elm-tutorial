@@ -1,3 +1,5 @@
+> Note: Elm 0.16 version
+
 # Showing Errors
 
 This chapter covers showing shared application errors.
