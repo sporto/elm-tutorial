@@ -1,3 +1,5 @@
+> Note: Elm 0.16 version
+
 # Fetching resources
 
 This chapter covers fetching the initial players' collection from the fake API.
