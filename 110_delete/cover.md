@@ -1,3 +1,5 @@
+> Note: Elm 0.16 version
+ 
 # Deleting players
 
 This chapter covers deleting players.
