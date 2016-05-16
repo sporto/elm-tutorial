@@ -4,7 +4,7 @@
 
 __A tutorial on developing single page web applications (SPAs) with [Elm](http://elm-lang.org/).__
 
-__I'm in the process of updating this tutorial to 0.17.__ This is a work in progress. Please see notes above each page to know what covers 0.17 already.
+__I'm in the process of updating this tutorial to Elm 0.17.__ This is a work in progress. Please see notes above each page to know what covers 0.17 already.
 
 This tutorial covers:
 
