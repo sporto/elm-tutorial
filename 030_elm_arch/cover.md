@@ -4,6 +4,7 @@
 
 This chapter covers:
 
+- Overview of the Elm architecture
 - Adding an application Model
 - Adding an update function
 - Adding actions
