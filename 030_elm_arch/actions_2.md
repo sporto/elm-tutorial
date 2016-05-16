@@ -1,3 +1,5 @@
+> Note: Elm 0.16 version
+
 # Actions: Multiple
 
 To understand the beauty of using ADTs for actions, imagine what will happen if you have several actions that can happen in your application e.g. mouse clicks, key up, key downs, etc. By converting everything to __actions__ our application can handle all these cases.
