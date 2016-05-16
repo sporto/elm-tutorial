@@ -4,6 +4,8 @@
 
 __A tutorial on developing single page web applications (SPAs) with [Elm](http://elm-lang.org/).__
 
+__I'm in the process of updating this tutorial to 0.17.__ This is a work in progress. Please see notes above each page to know what covers 0.17 already.
+
 This tutorial covers:
 
 - Some Elm foundations
@@ -14,8 +16,6 @@ This tutorial covers:
 - Fetching and parsing JSON
 - Routing
 - CRUD operations
- 
-__This tutorial covers Elm 0.16__. I plan to start migrating to 0.17 as soon as possible.
 
 Read it online [here](http://www.elm-tutorial.org/).
 
