@@ -65,10 +65,10 @@ In the second one we expose the `Html` type from the `Html` module. And use the 
 When you create a module in Elm you add the `module` declaration at the top:
 
 ```
-module Main (..) where
+module Main exposing (..)
 ```
 
-`Main` is the name of the module. `(..)` means that you want to expose all functions and types in this module. Elm expect to find this module in a file called __Main.elm__, so a file with the same name as the module.
+`Main` is the name of the module. `exposing (..)` means that you want to expose all functions and types in this module. Elm expect to find this module in a file called __Main.elm__, so a file with the same name as the module.
 
 You can have deeper file structures in an application, for example the file __Players/Utils.elm__ should have the declaration:
 
