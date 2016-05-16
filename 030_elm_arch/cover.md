@@ -5,9 +5,8 @@
 This chapter covers:
 
 - Overview of the Elm architecture
-- Adding an application Model
-- Adding an update function
-- Adding actions
-- Adding a mailbox
-- Using start app
-- Using start app with effects
+- Introduction to Html.program
+- Application Model
+- The update function
+- Messages
+- Commands
