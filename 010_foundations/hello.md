@@ -15,11 +15,11 @@ elm package install elm-lang/html
 This will install the _html_ module. Then add a `Hello.elm` file, with the following code:
 
 ```elm
-import Html
+import Html exposing (text)
 
-main : Html.Html
+main : Html.Html a
 main =
-  Html.text "Hello"
+  text "Hello"
 ```
 
 Go to this folder on the terminal and type:
@@ -37,9 +37,13 @@ Listening on http://0.0.0.0:8000/
 
 Open `http://0.0.0.0:8000/` on a browser. And click on `Hello.elm`. You should see `Hello` on your browser.
 
+Let's review what is happening here:
+
 ### imports
 
-In Elm you need to import the __modules__  you want to use explicitly. In this case we want to use the __Html__ module. This module has many functions to work with html. We will be using `.text`.
+In Elm you need to import the __modules__  you want to use explicitly. In this case we want to use the __Html__ module. 
+
+This module has many functions to work with html. We will be using `.text` so we import this function into the current namespace by using `exposing`.
 
 ### main
 
