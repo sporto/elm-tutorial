@@ -1,4 +1,4 @@
-> Updated to 0.17
+> Covers Elm 0.17
 
 # Imports and modules
 
