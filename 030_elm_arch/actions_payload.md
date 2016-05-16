@@ -1,3 +1,5 @@
+> Note: Elm 0.16 version
+
 # Actions: Payload
 
 You can send a payload with your actions:
