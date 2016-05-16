@@ -1,3 +1,5 @@
+> Note: Elm 0.16 version
+
 # Actions
 
 We created an `update` function.
