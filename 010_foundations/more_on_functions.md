@@ -1,3 +1,5 @@
+> Covers Elm 0.17
+ 
 # More on functions
 
 ## Type variables
