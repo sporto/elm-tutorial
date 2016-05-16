@@ -9,6 +9,7 @@
    * [Union types](010_foundations/union_types.md)
    * [The unit type](010_foundations/the_unit_type.md)
 * [The Elm architecture](030_elm_arch/cover.md)
+   * Introduction
    * [Model](030_elm_arch/model.md)
    * [Update](030_elm_arch/update.md)
    * [Actions](030_elm_arch/actions.md)
@@ -17,7 +18,6 @@
    * [Mailbox](030_elm_arch/mailbox.md)
    * [StartApp](030_elm_arch/startapp.md)
    * [Composing](030_elm_arch/composing.md)
-   * Introduction
 * [Effects](040_effects/cover.md)
    * [Tasks](040_effects/tasks.md)
    * [Effects](040_effects/effects.md)
