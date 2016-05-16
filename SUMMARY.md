@@ -1,15 +1,15 @@
 # Summary
 
 * [Introduction](README.md)
-* [Foundations](010_foundations/cover.md)
-   * [Hello World](010_foundations/hello.md)
-   * [Functions](010_foundations/functions.md)
-   * [More on functions](010_foundations/more_on_functions.md)
-   * [Imports and modules](010_foundations/imports_and_modules.md)
-   * [Union types](010_foundations/union_types.md)
-   * [The unit type](010_foundations/the_unit_type.md)
+* [Foundations](010-foundations/cover.md)
+   * [Hello World](010-foundations/010-hello.md)
+   * [Functions](010-foundations/020-functions.md)
+   * [More on functions](010-foundations/030-functions-2.md)
+   * [Imports and modules](010-foundations/040-imports-and-modules.md)
+   * [Union types](010-foundations/050-union-types.md)
+   * [The unit type](010-foundations/070-unit-type.md)
 * [The Elm architecture](030_elm_arch/cover.md)
-   * Introduction
+   * [Introduction](020_elm_arch/010_introduction.md)
    * [Model](020_elm_arch/model.md)
    * [Update](020_elm_arch/update.md)
    * [Actions](020_elm_arch/actions.md)
