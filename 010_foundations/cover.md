@@ -1,3 +1,5 @@
+> Updated to 0.17
+ 
 # Foundations
 
 This chapter covers:
