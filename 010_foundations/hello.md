@@ -46,9 +46,7 @@ This module has many functions to work with html. We will be using `.text` so we
 
 ### main
 
-Front end applications in Elm starts on a `main` function. `main` is a function that returns an element to draw into the page. In this case it returns Html of type `a`.
-
-should be a function that returns a static element or a signal of elements (more on signals later). In this case `main` just returns an `Html.Html` element (Html element from the Html module).
+Front end applications in Elm starts on a `main` function. `main` is a function that returns an element to draw into the page. In this case it returns an Html element (created by using `text`).
 
 ### elm reactor
 
