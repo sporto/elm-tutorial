@@ -21,6 +21,20 @@ Read it online [here](http://www.elm-tutorial.org/).
 
 You can also download offline version [here (PDF, ePub, Mobi)](https://www.gitbook.com/book/sporto/elm-tutorial/details).
 
+## Transitions status to 0.17
+
+- Foundations ✔
+- Elm architecture
+- Starting an app
+- Resources
+- Routing
+- Fetching resources
+- Showing Errors
+- Adding players
+- Deleting players
+- Editing players
+- Conclusion
+
 ## Code
 
 Code for the examples in the first part of this tutorial can be found at
