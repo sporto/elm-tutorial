@@ -1,3 +1,5 @@
+> Note: Elm 0.16 version
+
 # Update
 
 Let's do one more refactor:
