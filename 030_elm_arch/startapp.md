@@ -1,3 +1,5 @@
+> Note: Elm 0.16 version
+
 # StartApp
 
 In this chapter we have added:
