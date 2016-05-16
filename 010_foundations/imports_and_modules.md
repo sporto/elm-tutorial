@@ -68,12 +68,12 @@ When you create a module in Elm you add the `module` declaration at the top:
 module Main exposing (..)
 ```
 
-`Main` is the name of the module. `exposing (..)` means that you want to expose all functions and types in this module. Elm expect to find this module in a file called __Main.elm__, so a file with the same name as the module.
+`Main` is the name of the module. `exposing (..)` means that you want to expose all functions and types in this module. Elm expect to find this module in a file called __Main.elm__, i.e. a file with the same name as the module.
 
 You can have deeper file structures in an application, for example the file __Players/Utils.elm__ should have the declaration:
 
 ```
-module Players.Utils (..) where
+module Players.Utils exposing (..)
 ```
 
 You will be able to import this module from anywhere in your application by:
