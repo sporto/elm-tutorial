@@ -1,5 +1,3 @@
-> Note: Elm 0.16 version
-
 # Composing
 
 One of the big benefits from using the Elm architecture is the way it handles composition of components. To understand this let's build an example:
