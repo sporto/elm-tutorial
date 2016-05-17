@@ -12,7 +12,8 @@
    * [Introduction](02-elm-arch/01-introduction.md)
    * [Structure](02-elm-arch/02-structure.md)
    * [Messages](02-elm-arch/03-messages.md)
-   * [Flow](02-elm-arch/04-flow.md)
+   * [Application flow](02-elm-arch/04-flow.md)
+   * [Messages with payload](02-elm-arch/05-msg-payload.md)
 * Tips and Tricks
    * [Signal map with always](tips-tricks/signal_map_with_always.md)
    * [List over Maybe](tips-tricks/list_over_maybe.md)

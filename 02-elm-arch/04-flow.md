@@ -1,4 +1,4 @@
-# Html.App Flow
+# Application flow
 
 The following diagram illustrates how the pieces of our application interact with Html.App.
 
