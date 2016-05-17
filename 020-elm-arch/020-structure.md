@@ -1,6 +1,6 @@
 # Structure of Html.App
 
-### imports
+### Imports
 
 ```elm
 import Html exposing (Html, div, text)
@@ -99,7 +99,7 @@ main =
 
 Finally `Html.App.program` wires everything together and returns an html element that we can render in the page. `program` takes our `input`, `view`, `update` and `subscriptions`.
 
-Next let's see how __Html.App__ orchestrates these pieces together.
+
 
 
 

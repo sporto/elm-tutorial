@@ -11,7 +11,8 @@
 * [The Elm architecture](020-elm-arch/cover.md)
    * [Introduction](020-elm-arch/010-introduction.md)
    * [Structure](020-elm-arch/020-structure.md)
-   * [Flow](020-elm-arch/030-flow.md)
+   * [Messages](020-elm-arch/030-messages.md)
+   * [Flow](020-elm-arch/040-flow.md)
 * Tips and Tricks
    * [Signal map with always](tips-tricks/signal_map_with_always.md)
    * [List over Maybe](tips-tricks/list_over_maybe.md)
