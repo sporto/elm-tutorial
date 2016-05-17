@@ -1,5 +1,3 @@
-> Covers Elm 0.17
-
 # Hello World
 
 ## Installing Elm

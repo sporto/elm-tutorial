@@ -1,5 +1,3 @@
-> Covers 0.17
-
 # Introduction
 
 When building front end applications in Elm we use the pattern known as the Elm architeture. This pattern provides a way of creating self contained components that can be composed indefinitely.

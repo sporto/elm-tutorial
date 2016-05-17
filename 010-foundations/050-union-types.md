@@ -1,5 +1,3 @@
-> Covers Elm 0.17
-
 # Union types
 
 In Elm __Union Types__ are used for many things as they are incredibly flexible. A union type looks like:

@@ -1,5 +1,3 @@
-> Covers Elm 0.17
-
 # The unit type
 
 The empty tuple `()` called the __unit type__ is so prevalent in Elm that it deserves some explanation.

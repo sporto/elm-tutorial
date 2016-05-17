@@ -1,5 +1,3 @@
-> Covers 0.17
-
 # Structure of Html.App
 
 ### imports

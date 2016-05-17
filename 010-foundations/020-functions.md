@@ -1,5 +1,3 @@
-> Covers Elm 0.17
- 
 # Function basics
 
 This chapter covers basic Elm syntax that is important to get familiar with: functions, function signatures, partial application and the pipe operator.

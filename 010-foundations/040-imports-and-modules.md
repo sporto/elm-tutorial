@@ -1,5 +1,3 @@
-> Covers Elm 0.17
-
 # Imports and modules
 
 In Elm you import a module by using the `import` keyword e.g.
