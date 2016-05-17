@@ -5,7 +5,7 @@
 This chapter covers:
 
 - Overview of the Elm architecture
-- Introduction to Html.program
+- Introduction to Html.App.program
 - Application Model
 - The update function
 - Messages

@@ -71,7 +71,37 @@ Next we define an `update` function, this function will be called by Html.App ea
 
 In this example we only respond to `NoOp` and return the unchanged model and `Cmd.none` (meaning no command to perform).
 
-Next let's see how __Html.App__ wires these pieces together.
+### Subscriptions
+
+```elm
+subscriptions : Model -> Sub Msg
+subscriptions model =
+  Sub.none
+```
+
+We use subscriptions to listen for external input on our application. Some examples of subscriptions may be:
+
+- Mouse movements
+- Keyboard events
+- Browser location changes
+
+In this case we are not interested in any external input so we use `Sub.none`. Note the type signature `Sub Msg`. Subscriptions in a component should all be of the same type.
+
+### Main
+
+```elm
+main =
+  Html.App.program
+    { init = init
+    , view = view
+    , update = update
+    , subscriptions = subscriptions
+    }
+```
+
+Finally `Html.App.program` wires everything together and returns an html element that we can render in the page. `program` takes our `input`, `view`, `update` and `subscriptions`.
+
+Next let's see how __Html.App__ orchestrates these pieces together.
 
 
 
