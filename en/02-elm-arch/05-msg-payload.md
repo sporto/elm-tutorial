@@ -26,9 +26,9 @@ type Msg
 
 view : Model -> Html Msg
 view model =
-    div []
-      [ button [ onClick (Increment 2) ] [ text "+" ]
-      , text (toString model) ]
+  div []
+    [ button [ onClick (Increment 2) ] [ text "+" ]
+    , text (toString model) ]
 
 -- UPDATE
 
