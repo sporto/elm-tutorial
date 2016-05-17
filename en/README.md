@@ -1,5 +1,5 @@
 
-![Logo](logo-v02.png)
+![Logo](../logo-v02.png)
 # Elm Tutorial
 
 __A tutorial on developing single page web applications (SPAs) with [Elm](http://elm-lang.org/).__
