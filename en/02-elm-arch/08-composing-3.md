@@ -1,10 +1,10 @@
 # Composing
 
-Here is a diagram that illustrates this architecture:
-
-![Flow](06-composing.png)
+Here are two diagram that illustrates this architecture:
 
 ### Intial render
+
+![Flow](06-composing.png)
 
 (1) __App__ calls __Main.initialModel__ to get the intial model for the application
 
@@ -24,23 +24,27 @@ Here is a diagram that illustrates this architecture:
 
 (9) __App__ renders this to the browser.
 
+---
+
 ### User interaction
 
-(10) User clicks on the increase button
+![Flow](06-composing_001.png)
 
-(11) __Widget.view__ emits an __Increase__ message which is picked up by __Main.view__.
+(1) User clicks on the increase button
 
-(12) __Main.view__ tags this message so it becomes (WidgetMsg Increase) and it is send along to __App__ 
+(2) __Widget.view__ emits an __Increase__ message which is picked up by __Main.view__.
 
-(13) __App__ calls __Main.update__ with this message and the main model
+(3) __Main.view__ tags this message so it becomes (WidgetMsg Increase) and it is send along to __App__ 
 
-(14) As the message was tagged with __WidgetMsg__, __Main.update__ delegates the update to __Widget.update__, sending along the way the __widgetModel__ part of the main model
+(4) __App__ calls __Main.update__ with this message and the main model
 
-(15) __Widget.update__ modifies the model according to the given message, in this case __Increase__. And returns the modifies __widgetModel__ plus a comomand
+(5) As the message was tagged with __WidgetMsg__, __Main.update__ delegates the update to __Widget.update__, sending along the way the __widgetModel__ part of the main model
 
-(16) __Main.update__ updates the main model and returns it to __App__
+(6) __Widget.update__ modifies the model according to the given message, in this case __Increase__. And returns the modifies __widgetModel__ plus a comomand
 
-(17) __App__ then renders the view again passing the update main model
+(7) __Main.update__ updates the main model and returns it to __App__
+
+(8) __App__ then renders the view again passing the update main model
 
 ## Key points
 

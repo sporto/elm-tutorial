@@ -1,5 +1,5 @@
 @startuml
-autonumber
+autonumber "<b>(#)"
 participant User #white
 participant App #white
 participant Main.initialModel as Mim #white
@@ -18,8 +18,10 @@ MV -> WV : widgetModel
 WV --> MV : Html
 MV --> App : Html
 App -> User : Html
-|||
-|||
+
+newpage
+
+autonumber 1 "<b>(#)"
 User -> WV : Click
 WV -> MV: Increase
 MV -> App: (WidgetMsg Increase)
