@@ -1,6 +1,10 @@
 # Tasks
 
-In Elm, __tasks__ allow us to make asynchronous operations. A task might succeed or fail. They are similar to promises in JavaScript.
+In Elm, __tasks__ allow us to make asynchronous operations. A task might succeed or fail and can be chained. They are similar to promises in JavaScript.
+
+
+
+---
 
 Let's start with an application that displays a message every second:
 
