@@ -24,7 +24,7 @@ You can also download offline version [here (PDF, ePub, Mobi)](https://www.gitbo
 ## Transitions status to 0.17
 
 - Foundations ✔
-- Elm architecture
+- Elm architecture ✔
 - Subscriptions and commands
 - Starting an app
 - Resources
