@@ -14,6 +14,9 @@
    * [Messages](02-elm-arch/03-messages.md)
    * [Application flow](02-elm-arch/04-flow.md)
    * [Messages with payload](02-elm-arch/05-msg-payload.md)
+   * [Composing](02-elm-arch/06-composing.md)
+   * [Composing - Parent](02-elm-arch/07-composing-2.md)
+   * [Composing - Flow](02-elm-arch/08-composing-3.md)
 * Tips and Tricks
    * [Signal map with always](tips-tricks/signal_map_with_always.md)
    * [List over Maybe](tips-tricks/list_over_maybe.md)
