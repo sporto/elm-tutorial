@@ -67,26 +67,28 @@ main =
     }
 ```
 
+---
+
 Let's review the important sections of this code.
 
 ### Model
 
 ```elm
 type alias AppModel =
-  { widgetModel : Widget.Model
+  { widgetModel : Widget.Model ➊
   }
 ```
 
-The parent component has its own model. One of the attribute on this model contains the `Widget.Model`. Note how this parent component doesn't need to know about what `Widget.Model` is.
+The parent component has its own model. One of the attribute on this model contains the `Widget.Model` ➊. Note how this parent component doesn't need to know about what `Widget.Model` is.
 
 ```elm
 initialModel : AppModel
 initialModel =
-  { widgetModel = Widget.initialModel
+  { widgetModel = Widget.initialModel ➋
   }
 ```
 
-When creating the initial application model, we simply call `Widget.initialModel` from here.
+When creating the initial application model, we simply call `Widget.initialModel` ➋ from here.
 
 If you were to have multiple children components you would do the same for each, for example:
 
@@ -126,42 +128,42 @@ type Action
   | WidgetMsg Widget.Msg
 ```
 
-### view
+### View
 
 ```elm
 view : AppModel -> Html Msg
 view model =
   Html.div
     []
-    [ Html.App.map WidgetMsg (Widget.view model.widgetModel)
+    [ Html.App.map➊ WidgetMsg➋ (Widget.view➌ model.widgetModel➍)
     ]
 ```
 
-The main application `view` renders the `Widget.view`. But `Widget.view` emmits `Widget.Msg` so is incompatible with this view which emits `Main.Msg`.
+The main application `view` renders the `Widget.view` ➌. But `Widget.view` emmits `Widget.Msg` so is incompatible with this view which emits `Main.Msg`.
 
-- We use `Html.App.map` to map emitted messages from Widget.view to the type we expect (Msg). `Html.App.map` tags messages comming from the sub view using the `WidgetMsg` tag.
-- We only pass the part of the model that the children component cares about i.e. `model.widgetModel`.
+- We use `Html.App.map` ➊ to map emitted messages from Widget.view to the type we expect (Msg). `Html.App.map` tags messages comming from the sub view using the `WidgetMsg` ➋ tag.
+- We only pass the part of the model that the children component cares about i.e. `model.widgetModel` ➍.
 
-### update
+### Update
 
 ```elm
 update : Msg -> AppModel -> (AppModel, Cmd Msg)
 update message model =
   case message of
-    WidgetMsg subMsg ->
+    WidgetMsg➊ subMsg➋ ->
       let
-        (updatedWidgetModel, widgetCmd) =
-          Widget.update subMsg model.widgetModel
+        (updatedWidgetModel, widgetCmd)➍ =
+          Widget.update➌ subMsg model.widgetModel
       in
-        ({ model | widgetModel = updatedWidgetModel }, Cmd.map WidgetMsg widgetCmd)
+        ({ model | widgetModel = updatedWidgetModel }, Cmd.map➎ WidgetMsg widgetCmd)
 ```
 
-When a `WidgetMsg` is received by `update` we delegate the update to the children component. But the children component will only update what it cares about, which is the `widgetModel` attribute.
+When a `WidgetMsg` ➊ is received by `update` we delegate the update to the children component. But the children component will only update what it cares about, which is the `widgetModel` attribute.
 
-We use pattern matching to extract the `subMessage` from `WidgetMsg`. This `subMessage` will be the type that `Widget.update` expects.
+We use pattern matching to extract the `subMsg` ➋ from `WidgetMsg`. This `subMsg` will be the type that `Widget.update` expects.
 
-Using this `subMessage` and `model.widgetModel` we call `Widget.update`. This will return a tuple with an updated `widgetModel` and a command.
+Using this `subMsg` and `model.widgetModel` we call `Widget.update` ➌. This will return a tuple with an updated `widgetModel` and a command.
 
-We use pattern matching again to destructure the respond from `Widget.update`.
+We use pattern matching again to destructure ➍ the respond from `Widget.update`.
 
-Finally we need to map the command returned by `Widget.update` to the right type. We use `Cmd.map` for this and tag the command with `WidgetMsg`, similar to what we did in the view.
+Finally we need to map the command returned by `Widget.update` to the right type. We use `Cmd.map` ➎ for this and tag the command with `WidgetMsg`, similar to what we did in the view.
