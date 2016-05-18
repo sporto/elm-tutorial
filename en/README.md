@@ -38,9 +38,6 @@ You can also download offline version [here (PDF, ePub, Mobi)](https://www.gitbo
 
 ## Code
 
-Code for the examples in the first part of this tutorial can be found at
-<https://github.com/sporto/elm-tutorial-assets/tree/master/code>.
-
 Code for the example application built in the second part of this tutorial can be
 found at <https://github.com/sporto/elm-tutorial-app>.
 
