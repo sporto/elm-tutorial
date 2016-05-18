@@ -20,6 +20,5 @@
 * [Subscriptions and commands](03-subs-cmds/cover.md)
    * [Subscriptions](03-subs-cmds/01-subs.md)
 * Tips and Tricks
-   * [Signal map with always](tips-tricks/signal_map_with_always.md)
    * [List over Maybe](tips-tricks/list_over_maybe.md)
 
