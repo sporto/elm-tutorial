@@ -103,7 +103,7 @@ But respond `(Other "Hello")` would fail because `respond` expects an integer in
 
 ## A common use
 
-One typical use of union types is passing around values in our program where the value can be one of a know set of possible values. 
+One typical use of union types is passing around values in our program where the value can be one of a known set of possible values. 
 
 For example in a typical web application we have actions that can be performed e.g. load users, add user, delete user, etc. Some of these actions would have a payload. 
 

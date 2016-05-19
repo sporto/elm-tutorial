@@ -19,7 +19,7 @@ readMessage message =
   ...
 ```
 
-Or a function that expect a `Message` with the `body` as List of Integers:
+Or a function that expects a `Message` with the `body` as List of Integers:
 
 ```elm
 readMessage : Message (List Int) -> String
