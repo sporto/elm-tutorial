@@ -4,7 +4,7 @@ import Html exposing (Html, div, button, text)
 import Html.Events exposing (onClick)
 import Html.App
 import Http
-import Task
+import Task exposing (Task)
 import Json.Decode as Decode
 
 -- MODEL
@@ -34,13 +34,17 @@ decode : Decode.Decoder String
 decode =
   Decode.at ["name"] Decode.string
 
-fetch : Cmd Msg
-fetch =
-  let
-    url =
-      "http://swapi.co/api/planets/1/"
-  in
-    Task.perform FetchError FetchSuccess (Http.get decode url)
+url : String
+url = 
+  "http://swapi.co/api/planets/1/"
+
+fetchTask : Task Http.Error String
+fetchTask =
+  Http.get decode url
+
+fetchCmd : Cmd Msg
+fetchCmd =
+  Task.perform FetchError FetchSuccess fetchTask
 
 -- UPDATE
 
@@ -48,17 +52,11 @@ update : Msg -> Model -> (Model, Cmd Msg)
 update msg model =
   case msg of
     Fetch ->
-      (model, fetch)
+      (model, fetchCmd)
     FetchSuccess name ->
       (name, Cmd.none)
     FetchError _ ->
       (model, Cmd.none)
-
--- SUBSCRIPTIONS
-
-subscriptions : Model -> Sub Msg
-subscriptions model =
-  Sub.none
 
 -- MAIN
 
@@ -67,5 +65,5 @@ main =
     { init = init
     , view = view
     , update = update
-    , subscriptions = subscriptions
+    , subscriptions = (always Sub.none)
     }

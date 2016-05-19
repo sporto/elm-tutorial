@@ -20,6 +20,7 @@
 * [Subscriptions and commands](03-subs-cmds/cover.md)
    * [Subscriptions](03-subs-cmds/01-subs.md)
    * [Commands](03-subs-cmds/02-commands.md)
+   * [Tasks](03-subs-cmds/03-tasks.md)
 * Tips and Tricks
    * [List over Maybe](tips-tricks/list_over_maybe.md)
 
