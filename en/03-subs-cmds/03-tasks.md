@@ -122,7 +122,7 @@ decode =
   Decode.at ["name"] Decode.string
 ```
 
-This piece of code creates a decoder for the returned Json from the API.
+This piece of code creates a decoder for the returned Json from the API. For building decoders [this tool]((http://noredink.github.io/json-to-elm/)) is incredibly valuable.
 
 ### Task
 
