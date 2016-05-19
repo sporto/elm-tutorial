@@ -1,0 +1,95 @@
+# Commands
+
+In Elm commands (Cmd) are how we tell the runtime to execute things that involve side effects. For example:
+
+- Generate a random number
+- Make an http request
+- Save something into local storage
+
+A `Cmd` can be one or a collection of things to do. We use commands to gather all the things that need to happen and handle them to the runtime. Then runtime will execute them and feed the results back to the application.
+
+Let's try an example app using commands:
+
+```elm
+module Main exposing (..)
+
+import Html exposing (Html, div, button, text)
+import Html.Events exposing (onClick)
+import Html.App
+import Random
+
+-- MODEL
+
+type alias Model = Int
+
+init : (Model, Cmd Msg)
+init =
+  (1 , Cmd.none)
+
+-- MESSAGES
+
+type Msg
+  = Roll
+  | OnResult Int
+
+-- VIEW
+
+view : Model -> Html Msg
+view model =
+  div []
+    [ button [ onClick Roll ] [ text "Roll" ]
+    , text (toString model) ]
+
+-- UPDATE
+
+update : Msg -> Model -> (Model, Cmd Msg)
+update msg model =
+  case msg of
+    Roll ->
+      (model, Random.generate OnResult (Random.int 1 6))
+    OnResult res ->
+      (res, Cmd.none)
+
+-- MAIN
+
+main =
+  Html.App.program
+    { init = init
+    , view = view
+    , update = update
+    , subscriptions = (always Sub.none)
+    }
+```
+
+If you run this application it will show a button that will generate a random number each time you click it.
+
+---
+
+Let's review the relevant parts:
+
+
+### Messages
+
+```elm
+type Msg
+  = Roll
+  | OnResult Int
+```
+
+We have two possible messages in our application. `Roll` for rolling a new number. `OnResult` for getting a generated number back from the `Random` library.
+
+### Update
+
+```elm
+update : Msg -> Model -> (Model, Cmd Msg)
+update msg model =
+  case msg of
+    Roll ->
+      (model, Random.generate➊ OnResult (Random.int 1 6))
+    OnResult res ->
+      (res, Cmd.none)
+```
+
+➊ `Random.generate` creates a command that will generate random numbers. This function requires the first argument to be a constructor for the message that will be fed back to our application. In this case our constructor is `OnResult`.
+
+So when the command is run Elm will call `OnResult` with the generated number, producing `OnResult 2` for example. Then __Html.App__ will feed this message back to application.
