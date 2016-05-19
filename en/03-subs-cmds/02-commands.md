@@ -93,3 +93,11 @@ update msg model =
 ➊ `Random.generate` creates a command that will generate random numbers. This function requires the first argument to be a constructor for the message that will be fed back to our application. In this case our constructor is `OnResult`.
 
 So when the command is run Elm will call `OnResult` with the generated number, producing `OnResult 2` for example. Then __Html.App__ will feed this message back to application.
+
+---
+
+In a bigger application with many nested components we can potentially send many commands at once to __Html.App__. Take this diagram for example:
+
+![Flow](02-commands.png)
+
+Here we collect commands from three different levels. At the end we send all these commands to __Elm.App__ to run.
