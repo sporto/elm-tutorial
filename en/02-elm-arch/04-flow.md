@@ -2,7 +2,7 @@
 
 The following diagram illustrates how the pieces of our application interact with Html.App.
 
-![Flow](040-flow.png)
+![Flow](04-flow.png)
 
 1. Html.App calls our view function with the initial model and renders that.
 1. When the user click on the Expand button, the view triggers the `Expand` message.
