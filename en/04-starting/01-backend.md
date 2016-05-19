@@ -2,6 +2,8 @@
 
 We will need a backend for our application, we can use __json-server__ for this.
 
+[json-server](https://github.com/typicode/json-server) is an npm package that provides a quick way to create fake APIs. 
+
 Start a new node project:
 
 ```
@@ -34,8 +36,7 @@ console.log('Listening at 4000')
 server.listen(4000)
 ```
 
-Add __db.json__ at the root.
-You can grab a copy from here <https://github.com/sporto/elm-tutorial-app/blob/010-fake-api/db.json>
+Add __db.json__ at the root:
 
 ```
 {
@@ -58,6 +59,3 @@ node api.js
 Test this fake API by browsing to:
 
 - <http://localhost:4000/players>
-
-At this stage your app should look like:
-<https://github.com/sporto/elm-tutorial-app/tree/010-fake-api>
