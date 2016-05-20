@@ -21,6 +21,9 @@
    * [Subscriptions](03-subs-cmds/01-subs.md)
    * [Commands](03-subs-cmds/02-commands.md)
    * [Tasks](03-subs-cmds/03-tasks.md)
+* [Starting an application](04-starting/cover.md)
+   * [Planning](04-starting/01-planning.md)
+   * [Backend](04-starting/02-backend.md)
 * Tips and Tricks
    * [List over Maybe](tips-tricks/list_over_maybe.md)
 
