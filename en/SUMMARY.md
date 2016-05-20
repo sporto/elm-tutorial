@@ -24,6 +24,7 @@
 * [Starting an application](04-starting/cover.md)
    * [Planning](04-starting/01-planning.md)
    * [Backend](04-starting/02-backend.md)
+   * [Webpack](04-starting/03-webpack.md)
 * Tips and Tricks
    * [List over Maybe](tips-tricks/list_over_maybe.md)
 
