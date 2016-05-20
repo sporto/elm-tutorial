@@ -26,6 +26,7 @@
    * [Backend](04-starting/02-backend.md)
    * [Webpack](04-starting/03-webpack.md)
    * [Webpack 2](04-starting/04-webpack-2.md)
+   * [Multiple modules](04-starting/05-multiple-modules.md)
 * Tips and Tricks
    * [List over Maybe](tips-tricks/list_over_maybe.md)
 
