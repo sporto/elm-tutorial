@@ -25,6 +25,7 @@
    * [Planning](04-starting/01-planning.md)
    * [Backend](04-starting/02-backend.md)
    * [Webpack](04-starting/03-webpack.md)
+   * [Webpack 2](04-starting/04-webpack-2.md)
 * Tips and Tricks
    * [List over Maybe](tips-tricks/list_over_maybe.md)
 
