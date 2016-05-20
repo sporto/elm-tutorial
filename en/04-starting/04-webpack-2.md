@@ -98,7 +98,7 @@ main =
     , view = view
     , update = update
     , subscriptions = subscriptions
-    }TODO
+    }
 ```
 
 ## package.json
