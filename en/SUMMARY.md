@@ -27,6 +27,13 @@
    * [Webpack](04-starting/03-webpack.md)
    * [Webpack 2](04-starting/04-webpack-2.md)
    * [Multiple modules](04-starting/05-multiple-modules.md)
+* [Resources](05-resources/cover.md)
+   * [Intro](05-resources/01-intro.md)
+   * [Players](05-resources/02-players.md)
+   * [Players list](05-resources/03-players-list.md)
+   * [Main modules](05-resources/04-main-mods.md)
+   * [Main view](05-resources/05-main-view.md)
+   * [Main](05-resources/06-main.md)
 * Tips and Tricks
    * [List over Maybe](tips-tricks/list_over_maybe.md)
 
