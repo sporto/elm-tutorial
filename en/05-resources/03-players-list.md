@@ -29,9 +29,9 @@ nav players =
 list : List Player -> Html Msg
 list players =
   div
-    []
+    [ class "p2" ]
     [ table
-        [ class "table-light" ]
+        [ ]
         [ thead
             []
             [ tr
