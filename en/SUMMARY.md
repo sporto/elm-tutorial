@@ -7,6 +7,7 @@
    * [More on functions](01-foundations/03-functions-2.md)
    * [Imports and modules](01-foundations/04-imports-and-modules.md)
    * [Union types](01-foundations/05-union-types.md)
+   * [Type aliases](01-foundations/06-type-aliases.md)
    * [The unit type](01-foundations/07-unit-type.md)
 * [The Elm architecture](02-elm-arch/cover.md)
    * [Introduction](02-elm-arch/01-introduction.md)
