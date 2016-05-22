@@ -34,7 +34,7 @@ Then you would be able to use every function and type in that module directly. B
 
 ## Modules and types with the same name
 
-Many modules export types with the same name as the module. For example the `Html` module has a `Html` type and the `Signal` module has a `Signal` type.
+Many modules export types with the same name as the module. For example the `Html` module has a `Html` type and the `Task` module has a `Task` type.
 
 So this function that returns an `Html` element:
 
