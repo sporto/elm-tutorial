@@ -15,6 +15,8 @@ elm package install elm-lang/html
 This will install the _html_ module. Then add a `Hello.elm` file, with the following code:
 
 ```elm
+module Main exposing (..)
+
 import Html exposing (text)
 
 main =
