@@ -34,7 +34,7 @@ respond (Other "Hello")
 
 You need the parenthesis otherwise Elm will interpret this as passing two arguments to respond.
 
-## Calling as functions
+## As constructor functions
 
 Note how we add a payload to `Other`:
 
@@ -54,8 +54,7 @@ You will create a `Message` tag by:
 Message 1 "Hello"
 ```
 
-You can do partial application just like any other function.
-
+You can do partial application just like any other function. These are commonly called `constructors` because you can use this to construct complete types i.e. use `Message` as a function to construct `(Message 1 "Hello")`.
 
 ## Nesting
 
