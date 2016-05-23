@@ -1,18 +1,22 @@
 @startuml
-participant "port runner" as PR
-participant Main.Update as MU
-participant Main.View as MV
-participant Players.Update as PU
-participant Players.List as PL
 
-SA -> PR : 1. fetchAll
-PR -> SA : 2. response
-SA -> MU : 3. PlayersActions (FetchAllDone result)
-MU -> PU : 4. FetchAllDone result
-PU --> MU : 5. updated collection
-MU --> SA : 6. updated main model
-SA -> MV : 7. main model
-MV -> PL : 8. players
-PL --> MV : 9. rendered view
-MV --> SA : 10. rendered view
+autonumber "<b>(#)"
+
+participant App #white
+participant init #white
+participant Main.Update as MU #white
+participant Main.View as MV #white
+participant Players.Update as PU #white
+participant Players.List as PL #white
+
+App -> init
+init --> App : fetchAll
+App -> MU : (model, PlayersMsg (FetchAllDone players))
+MU -> PU : (currentPlayers, FetchAllDone players)
+PU --> MU : Updated players' collection
+MU --> App : Updated app model
+App -> MV : App model
+MV -> PL : Players
+PL --> MV :Rendered view
+MV --> App : Rendered view
 @enduml

@@ -4,15 +4,13 @@ The next step is to fetch the list of player from the fake API we created before
 
 This is the plan:
 
-![](flow-v03.png)
+![Plan](01-plan.png)
 
-- When the application loads we trigger a command to initiate an Http request to fetch the players. This will be done in the `init` of Html.App.
+(1-2) When the application loads we trigger a command to initiate an Http request to fetch the players. This will be done in the `init` of Html.App.
 
-- When the request is done trigger a `FetchAllDone` with the result of the request.
+(3-6) When the request is done we trigger a `FetchAllDone` with the data, this message flows down to `Players.Update` which updates the collection of players.
 
-- Add a branch to Players Update so it reacts to `FetchAllDone` and adds the fetched players to the application model.
-
-- Then the application renders with the updated player list.
+(7-10) Then the application renders with the updated player list.
 
 ## Dependencies
 

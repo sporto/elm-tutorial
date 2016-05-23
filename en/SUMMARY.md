@@ -35,6 +35,13 @@
    * [Main modules](05-resources/04-main-mods.md)
    * [Main view](05-resources/05-main-view.md)
    * [Main](05-resources/06-main.md)
+* [Fetching](06-fetching-resources/cover.md)
+   * [Plan](06-fetching-resources/01-plan.md)
+   * [Players messages](06-fetching-resources/02-players-messages.md)
+   * [Players update](06-fetching-resources/03-players-update.md)
+   * [Players commands](06-fetching-resources/04-players-cmds.md)
+   * [Main](06-fetching-resources/05-main.md)
+   * [Try it](06-fetching-resources/06-try-it.md)
 * Tips and Tricks
    * [List over Maybe](tips-tricks/list_over_maybe.md)
 
