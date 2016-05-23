@@ -1,40 +1,64 @@
-# Players Effects
+# Players commands
 
-Now we need to create the tasks and effects to fetch the players from the server. Create __src/Players/Effects.elm__:
+Now we need to create the tasks and command to fetch the players from the server. Create __src/Players/Commands.elm__:
 
 ```elm
-module Players.Effects (..) where
+module Players.Commands exposing (..)
 
-import Effects exposing (Effects)
 import Http
 import Json.Decode as Decode exposing ((:=))
 import Task
 import Players.Models exposing (PlayerId, Player)
-import Players.Actions exposing (..)
+import Players.Messages exposing (..)
 
-
-fetchAll : Effects Action
+fetchAll : Cmd Msg
 fetchAll =
   Http.get collectionDecoder fetchAllUrl
-    |> Task.toResult
-    |> Task.map FetchAllDone
-    |> Effects.task
-
+    |> Task.perform FetchAllFail FetchAllDone
 
 fetchAllUrl : String
 fetchAllUrl =
   "http://localhost:4000/players"
 
-
-
 -- DECODERS
-
 
 collectionDecoder : Decode.Decoder (List Player)
 collectionDecoder =
   Decode.list memberDecoder
 
+memberDecoder : Decode.Decoder Player
+memberDecoder =
+  Decode.object3
+    Player
+    ("id" := Decode.int)
+    ("name" := Decode.string)
+    ("level" := Decode.int)
+```
+---
 
+Let's go through this code.
+
+```elm
+fetchAll : Cmd Msg
+fetchAll =
+  Http.get collectionDecoder fetchAllUrl
+    |> Task.perform FetchAllFail FetchAllDone
+```
+
+Here we create a command for our application to run.
+
+- `Http.get` creates a task 
+- We then send this task to `Task.perform` which wraps it in a command
+
+```elm
+collectionDecoder : Decode.Decoder (List Player)
+collectionDecoder =
+  Decode.list memberDecoder
+```
+
+This decoder delegates the decoding of each member of a list to `memberDecoder`
+
+```elm
 memberDecoder : Decode.Decoder Player
 memberDecoder =
   Decode.object3
@@ -110,28 +134,4 @@ Ok { id = 99, name = "Sam" } : Result.Result String Repl.Player
 
 ---
 
-
-Then `collectionDecoder` applies `memberDecoder` to each record on a JSON array. 
-
-And we have `fetchAll`:
-
-```elm
-fetchAll =
-  Http.get collectionDecoder fetchAllUrl
-    |> Task.toResult
-    |> Task.map FetchAllDone
-    |> Effects.task
-```
-
-`Http.get` takes a decoder and a url string. Then it:
-- creates a task that makes an ajax request
-- when done parses the result body through the decoder
-- and returns another task with result `Task.Task Http.Error value`
-
-Remember that none of this actually executes until it is send to a port.
-
-- In `Task.toResult` we convert this `Task.Task Http.Error value` to a task that resolves with a `Result`. At this point the result of the task would be `Result Http.Error value`
-
-- Then we map this task to `FetchAllDone`. So now the result of the task would be `FetchAllDone (Result Http.Error value)`.
-
-- And lastly we convert the task to an effect.
+Remember that none of this actually executes until we send the command to __Html.App__.

@@ -1,0 +1,18 @@
+@startuml
+participant "port runner" as PR
+participant Main.Update as MU
+participant Main.View as MV
+participant Players.Update as PU
+participant Players.List as PL
+
+SA -> PR : 1. fetchAll
+PR -> SA : 2. response
+SA -> MU : 3. PlayersActions (FetchAllDone result)
+MU -> PU : 4. FetchAllDone result
+PU --> MU : 5. updated collection
+MU --> SA : 6. updated main model
+SA -> MV : 7. main model
+MV -> PL : 8. players
+PL --> MV : 9. rendered view
+MV --> SA : 10. rendered view
+@enduml

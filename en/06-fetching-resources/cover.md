@@ -1,7 +1,5 @@
-> Note: Elm 0.16 version
-
 # Fetching resources
 
-This chapter covers fetching the initial players' collection from the fake API.
+This chapter covers fetching the players' collection from the fake API.
 
-Up to this point your application code looks like <https://github.com/sporto/elm-tutorial-app/tree/075-navigation-to-list>
+Up to this point your application code looks like <https://github.com/sporto/elm-tutorial-app/tree/04-resources>
