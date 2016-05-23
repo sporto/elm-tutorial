@@ -16,4 +16,4 @@ update action players =
 
 The message `FetchAllDone` has the fetched players, so we return that payload to update the players collection.
 
-`FetchAllFail` matches in the case of an error. We will deal with that in the next chapter, for now we just return what we had before.
+`FetchAllFail` matches in the case of an error. For now we will just return what we had before.
