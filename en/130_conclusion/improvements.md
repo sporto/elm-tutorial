@@ -1,29 +1,29 @@
 # Improvements
 
-## Don't repeat yourself (DRY)
+Here is a list of possible improvement you can try on this app.
 
-There is a good amount of repeated code in update branches. Specially in error handling. This code could be abstracted but I haven't done that for clarity sake.
+## Create and delete players
+
+I have left this off in order to keep the tutorial short, definitely an important feature.
+
+## Change the name of a player
+
+## Show an error message when an Http request fails
+
+At the moment if fetching or saving players fail we do nothing. It would be nice to show an error message to the user.
+
+## Even better error messages
+
+Even better that just showing error messages it would be great to:
+
+- Show different types of flash messages e.g. error and info
+- Show several flash messages at the same time
+- Have the ability to dismiss a message
+- Remove a message automatically after a few seconds
 
 ## Optimistic updates
 
 At the moment all update functions are pesimistic. Meaning that they don't change the models until there is a succesful response from the server. One big improvement to the application would be to add optimistic creation, update and deletion. But this will also mean better error handling.
-
-## Other libraries
-
-Some parts of the application code is a bit clumsy because I have stuck to Elm core libraries most of the time (with the exception of the router). 
-
-For example using `on` for change events on an input field or using `Http.send`. For example <http://package.elm-lang.org/packages/lukewestby/elm-http-extra/latest> would make doing Http requests simpler.
-
-# Possible features
-
-## Better flash messages
-
-Currently we only handle error messages and we can only show one. Some improvements would be:
-
-- Show different types of flash messages e.g. error and info
-- Show several flash messages
-- Have the ability to dismiss a message
-- Remove a message automatically after a few seconds
 
 ## Validations
 
