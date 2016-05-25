@@ -43,5 +43,6 @@
    * [Main](06-fetching-resources/05-main.md)
    * [Try it](06-fetching-resources/06-try-it.md)
 * Tips and Tricks
-   * [List over Maybe](tips-tricks/list_over_maybe.md)
+   * [Context](tips-tricks/context.md)
+   * [List over Maybe](tips-tricks/list-over-maybe.md)
 
