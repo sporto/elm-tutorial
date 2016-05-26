@@ -1,6 +1,6 @@
 # Tasks
 
-We have seen how we use commands to garther things that need to be done. But commands don't a concept of success or failure, they also don't have the concept of sequencing. Commands are just a bag of things to do.
+We have seen how we use commands to garther things that need to be done. But commands don't have a concept of success or failure, they also don't have the concept of sequencing. Commands are just a bag of things to do.
 
 In Elm we use __tasks__ for asynchronous operations that can succeed or fail and need chaining e.g. do this, then do that. They are similar to promises in JavaScript.
 
