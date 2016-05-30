@@ -28,7 +28,7 @@ You can also download offline version [here (PDF, ePub, Mobi)](https://www.gitbo
 - Subscriptions and commands ✔
 - Starting an app ✔
 - Resources ✔
-- Fetching resources  ✔
+- Fetching resources ✔
 - Routing
 - Editing players
 - Conclusion

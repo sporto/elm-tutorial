@@ -47,7 +47,7 @@ type alias Player = { id: Int
 label: Player -> String
 ```
 
-Here we create a `Player` type alias that points to a record definition. The we use that type alias in our function signature.
+Here we create a `Player` type alias that points to a record definition. Then we use that type alias in our function signature.
 
 ## Constructors
 
@@ -59,7 +59,7 @@ type alias Player = { id: Int
   }
   
 Player 1 "Sam"
-==> { id = 1, name = "Hello" }
+==> { id = 1, name = "Sam" }
 ```
 
 Here we create a `Player` type alias. Then call `Player` as a function with two parameters, this gives us back a record with the proper attributes. Note that the order of the arguments is important in this case.

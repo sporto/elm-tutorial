@@ -60,4 +60,4 @@ playerRow player =
     ]
 ```
 
-This view shows a list of users.
+This view shows a list of players.
