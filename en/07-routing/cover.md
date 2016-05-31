@@ -1,7 +1,5 @@
-> Note: Elm 0.16 version
-
 # Routing
 
-This chapter covers adding a router to our application. 
+This chapter covers adding routing to our application. 
 
-Up to this point the application code looks like <https://github.com/sporto/elm-tutorial-app/tree/050-players>
+Up to this point the application code looks like <https://github.com/sporto/elm-tutorial-app/tree/05-fetch>

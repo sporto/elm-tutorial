@@ -42,6 +42,13 @@
    * [Players commands](06-fetching-resources/04-players-cmds.md)
    * [Main](06-fetching-resources/05-main.md)
    * [Try it](06-fetching-resources/06-try-it.md)
+* [Routing](07-routing/cover.md)
+   * [Navigation](07-routing/01-navigation.md)
+   * [Navigation](07-routing/02-player-edit.md)
+   * [Navigation](07-routing/03-main-model.md)
+   * [Navigation](07-routing/04-main-view.md)
+   * [Navigation](07-routing/05-main.md)
+   * [Navigation](07-routing/06-try-it.md)
 * Tips and Tricks
    * [Context](tips-tricks/context.md)
    * [List over Maybe](tips-tricks/list-over-maybe.md)
