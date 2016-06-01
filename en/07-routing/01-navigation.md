@@ -1,15 +1,15 @@
 # Navigation
 
-Let's add a routing to our application. We will be using the [Elm Navigation package](http://package.elm-lang.org/packages/elm-lang/navigation/1.0.0/) and [Hop](https://github.com/sporto/hop) version 5.0.
+Let's add a routing to our application. We will be using the [Elm Navigation package](http://package.elm-lang.org/packages/elm-lang/navigation/) and [UrlParser](http://package.elm-lang.org/packages/evancz/url-parser/).
 
 - Navigation provides the means to change the browser location and respond to changes
-- Hop provides route matchers
+- UrlParser provides route matchers
 
 First install the packages:
 
 ```
 elm package install elm-lang/navigation 1.0.0
-elm package install sporto/hop 5.0.0
+elm package install evancz/url-parser 1.0.0
 ```
 
 ## Routing
@@ -22,104 +22,136 @@ In this module we define:
 - how to match browser paths to routes using path matchers
 - how to react to routing messages
 
-Please read the comments to understand what this code does. It should be clear from the comments. In __src/Routing.elm__:
+In __src/Routing.elm__:
 
 ```elm
 module Routing exposing (..)
 
+import String
 import Navigation
-import Hop exposing (matchUrl)
-import Hop.Types exposing (Config, Location, PathMatcher, Router, newLocation)
-import Hop.Matchers exposing (match1, match2, match3, int)
-import Messages exposing (Msg)
+import UrlParser exposing (..)
 import Players.Models exposing (PlayerId)
 
 
-{-|
-   Available routes in our application.
-   NotFound is necessary when no route matches the browser path.
--}
 type Route
     = PlayersRoute
     | PlayerRoute PlayerId
     | NotFoundRoute
 
 
-{-|
-   Create a routing model where to store the current location and route
--}
-type alias Model =
-    { location : Location
-    , route : Route
-    }
-
-
-{-|
-   Route matchers
-
-   This are in charge of matching the browser path to our routes defined above.
-   e.g. "/players" --> PlayersRoute
--}
-indexMatcher : PathMatcher Route
-indexMatcher =
-    match1 PlayersRoute ""
-
-
-{-|
-   This matcher will match "/players" which is the list of players
--}
-playersMatcher : PathMatcher Route
-playersMatcher =
-    match1 PlayersRoute "/players"
-
-
-{-|
-   This matcher will match something like "/players/1"
-   Which is the view for a particular player
--}
-playerEditMatch : PathMatcher Route
-playerEditMatch =
-    match2 PlayerRoute "/players/" int
-
-
-matchers : List (PathMatcher Route)
+matchers : Parser (Route -> a) a
 matchers =
-    [ indexMatcher
-    , playersMatcher
-    , playerEditMatch
-    ]
+    oneOf
+        [ format PlayersRoute (s "")
+        , format PlayerRoute (s "players" </> int)
+        , format PlayersRoute (s "players")
+        ]
 
 
-{-|
-   Create a router configuration record
-   We will use hash routing
-   notFound is the message we will receive when there are no matches
--}
-routerConfig : Config Route
-routerConfig =
-    { hash = True
-    , basePath = ""
-    , matchers = matchers
-    , notFound = NotFoundRoute
-    }
+hashParser : Navigation.Location -> Result String Route
+hashParser location =
+    location.hash
+        |> String.dropLeft 1
+        |> parse identity matchers
 
 
-{-|
-   The Navigation package expects a parser for the current location
-   Each time the location changes in the browser this package
-   will gives us a Navigation.Location record
-
-  In this parser:
-
-  - We extract the .href attribute from the given Location record
-  - Send this attribute to Hop.matchUrl
-
-  Hop.matchUrl will return back a tuple with the matched route
-  and a Hop.Types.Location record
-
--}
-parser : Navigation.Parser ( Route, Hop.Types.Location )
+parser : Navigation.Parser (Result String Route)
 parser =
-    Navigation.makeParser (.href >> matchUrl routerConfig)
+    Navigation.makeParser hashParser
 
+
+routeFromResult : Result String Route -> Route
+routeFromResult result =
+    case result of
+        Ok route ->
+            route
+
+        Err string ->
+            NotFoundRoute
 ```
+
+---
+
+Let's go over this module.
+
+### Routes
+
+```elm
+type Route
+    = PlayersRoute
+    | PlayerRoute PlayerId
+    | NotFoundRoute
+```
+
+Thi are the available routes in our application.
+`NotFound` will be used when no route matches the browser path.
+
+### Matchers
+
+```elm
+matchers : Parser (Route -> a) a
+matchers =
+    oneOf
+        [ format PlayersRoute (s "")
+        , format PlayerRoute (s "players" </> int)
+        , format PlayersRoute (s "players")
+        ]
+```
+
+Here we define route matchers. These parsers are provided by the from url-parser library.
+
+We want three matchers:
+
+- One for an empty route which will resolve to `PlayersRoute`
+- One for `/players` which will resolve to `PlayersRoute` as well
+- And one for `/players/id` which will resolve to `PlayerRoute id`
+
+Note that the order is important.
+
+See more details about this library here <http://package.elm-lang.org/packages/evancz/url-parser>.
+
+### Hash parser
+
+```elm
+hashParser : Navigation.Location -> Result String Route
+hashParser location ➊ =
+    location.hash ➋
+        |> String.dropLeft 1 ➌
+        |> parse identity matchers ➍
+```
+
+Each time the browser location changes, the Navigation library will give us a `Navigation.Location` record.
+
+`hashParser` is a function that:
+
+- Takes this `Navigation.Location` record ➊
+- Extracts the `.hash` part of it ➋
+- Removes the first character (the `#`) 
+- Sends this string string to `parse` with our defined matchers ➍
+
+This parser returns a `Result` value. If the parser succeeds we will get the matched `Route`, otherwise we will get an error as a string.
+
+### Parser
+
+```elm
+parser : Navigation.Parser (Result String Route)
+parser =
+    Navigation.makeParser hashParser
+```
+
+The Navigation package expects a parser for the current location, each time the location changes in the browser Navigation will call this parser. We pass our `hashParser` to `Navigation.makeParser`.
+
+### Result to route
+
+```elm
+routeFromResult : Result String Route -> Route
+routeFromResult result =
+    case result of
+        Ok route ->
+            route
+
+        Err string ->
+            NotFoundRoute
+```
+
+Finally when we get a result from the parser we want to extract the route. If all matchers fail we return `NotFoundRoute` instead.

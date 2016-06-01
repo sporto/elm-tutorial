@@ -25,7 +25,7 @@ view model =
 
 page : Model -> Html Msg
 page model =
-    case model.routing.route of
+    case model.route of
         PlayersRoute ->
             Html.App.map PlayersMsg (Players.List.view model.players)
 
@@ -66,7 +66,7 @@ notFoundView =
 ```elm
 page : Model -> Html Msg
 page model =
-    case model.routing.route of
+    case model.route of
         PlayersRoute ->
             Html.App.map PlayersMsg (Players.List.view model.players)
 
@@ -77,9 +77,9 @@ page model =
             notFoundView
 ```
 
-Now we have a function `page` which has a case expression to show the correct view depending on what is in `model.routing.route`. 
+Now we have a function `page` which has a case expression to show the correct view depending on what is in `model.route`. 
 
-When the player edit route matches (e.g. `/playes/2`) we will get the player id from the route i.e. `PlayerRoute playerId`.
+When the player edit route matches (e.g. `#playes/2`) we will get the player id from the route i.e. `PlayerRoute playerId`.
 
 ### Finding the player
 
