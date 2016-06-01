@@ -1,6 +1,6 @@
 # Messsages
 
-We create an application using Html.App that was just static Html. Let's create an application that responds to user interaction using messages.
+In the last section, we created an application using Html.App that was just static Html. Now let's create an application that responds to user interaction using messages.
 
 ```elm
 module Flow exposing (..)
@@ -65,7 +65,7 @@ main =
 
 This program is very similar to the previous program we did, but now we have two messages: `Expand` and `Collapse`. You can run this program by copying it into a file and opening it using Elm reactor. 
 
-Let's looks closer into the view and the update function.
+Let's look more closely at the `view` and `update` functions.
 
 ### View
 
@@ -98,6 +98,6 @@ update msg model =
       (False, Cmd.none)
 ```
 
-`update` responds the possible messages, depending on the message it returns the desired state. So when the message is `Expand` the new state would be `True` (expanded). 
+`update` responds to the possible messages. Depending on the message, it returns the desired state. When the message is `Expand`, the new state will be `True` (expanded). 
 
 Next let's see how __Html.App__ orchestrates these pieces together.
