@@ -1,6 +1,6 @@
 # The unit type
 
-The empty tuple `()` called the __unit type__ is so prevalent in Elm that it deserves some explanation.
+The empty tuple `()` is called the __unit type__ in Elm.  It is so prevalent that it deserves some explanation.
 
 Consider a type alias with a __type variable__ (represented by `a`):
 
@@ -19,7 +19,7 @@ readMessage message =
   ...
 ```
 
-Or a function that expects a `Message` with the `body` as List of Integers:
+Or a function that expects a `Message` with the `body` as a List of Integers:
 
 ```elm
 readMessage : Message (List Int) -> String
@@ -41,7 +41,7 @@ So the unit type is commonly used as a placeholder for an empty value.
 
 ## Task
 
-A real world example of this is the `Task` type. When using `Task` you will see the unit type very often.
+A real world example of this is the `Task` type. When using `Task`, you will see the unit type very often.
 
 A typical task has an __error__ and a __result__:
 
@@ -49,6 +49,6 @@ A typical task has an __error__ and a __result__:
 Task error result
 ```
 
-- Sometimes we want task where the error can be safely ignored: `Task () result`
+- Sometimes we want a task where the error can be safely ignored: `Task () result`
 - Or the result is ignored: `Tasks error ()`
 - Or both: `Task () ()`

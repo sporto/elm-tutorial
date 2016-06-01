@@ -1,6 +1,6 @@
 # Type aliases
 
-A __type alias__ in Elm is as its name say an alias to something else. For example in Elm you have the core `Int` and `String` types. You can create aliases for them:
+A __type alias__ in Elm is, as its name says, an alias for something else. For example, in Elm you have the core `Int` and `String` types. You can create aliases for them:
 
 ```elm
 type alias PlayerId = Int
@@ -20,7 +20,7 @@ You can write it like:
 label: PlayerId -> PlayerName
 ```
 
-In this way it is much clearer what the function is asking for.
+In this way, it is much clearer what the function is asking for.
 
 ## Records
 
@@ -30,8 +30,9 @@ A record definition in Elm looks like:
 { id: Int
 ,  name: String
 }
+```
 
-If you were to have a function that takes a record you would have to write a signature like:
+If you were to have a function that takes a record, you would have to write a signature like:
 
 ```elm
 label: {id: Int, name: String} -> String
@@ -62,4 +63,4 @@ Player 1 "Sam"
 ==> { id = 1, name = "Sam" }
 ```
 
-Here we create a `Player` type alias. Then call `Player` as a function with two parameters, this gives us back a record with the proper attributes. Note that the order of the arguments is important in this case.
+Here we create a `Player` type alias. Then, we call `Player` as a function with two parameters. This gives us back a record with the proper attributes. Note that the order of the arguments determines which values will be assigned to which attributes.
