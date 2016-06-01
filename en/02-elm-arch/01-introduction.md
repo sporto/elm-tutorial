@@ -1,6 +1,6 @@
 # Introduction
 
-When building front end applications in Elm we use the pattern known as the Elm architeture. This pattern provides a way of creating self contained components that can be composed indefinitely.
+When building front end applications in Elm, we use the pattern known as the Elm architeture. This pattern provides a way of creating self contained components that can be reused, combined, and composed in endless variety.
 
 Elm provides the `Html.App` module for this. This is easier to understand by building a small app.
 
@@ -71,5 +71,5 @@ elm reactor
 
 And opening http://localhost:8000/App.elm
 
-This program show "Hello". This a lot of code for just doing that! But don't mind, let's go through the program to understand the structure of an Elm application.
+This is a lot of code for just showing "Hello", but it will help us understand the structure of even very complicated Elm applications.
 
