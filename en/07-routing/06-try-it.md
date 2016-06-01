@@ -23,3 +23,7 @@ If you go to `http://localhost:3000/#players/2` then you should see one user.
 ![screenshot](06-edit.png)
 
 Next we will add some navigation.
+
+--- 
+
+There are several others routing matching libraries you can use instead of UrlParser, check [Hop](https://github.com/sporto/hop) for example.
