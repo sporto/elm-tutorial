@@ -20,12 +20,12 @@ init =
   ( "Hello" , Cmd.none )
 ```
 
-- First we define our application model as a type alias, in this kind it is just a string.
-- Then we define an `init` function, this function provides the initial input for the application. 
+- First we define our application model as a type alias, in this kind. Here it is just a `String`.
+- Then we define an `init` function. This function provides the initial input for the application. 
 
-__Html.App__ expects a tuple with `(model, command)`. The first element in this tuple is our initial state e.g. "Hello". The second element is an initial command to run, more on this later.
+__Html.App__ expects a tuple with `(model, command)`. The first element in this tuple is our initial state, e.g. "Hello". The second element is an initial command to run. More on this later.
 
-When using the elm architecture we compose all components models into a single state tree. More on this later.
+When using the elm architecture, we compose all components models into a single state tree. More on this later too.
 
 ### Messages
 
@@ -34,9 +34,9 @@ type Msg
   = NoOp
 ```
 
-Messages are things that happen in our applications and our component responds to. In this case the application doesn't do anything so we only have a messages called `NoOp`.
+Messages are things that happen in our applications that our component responds to. In this case, the application doesn't do anything, so we only have a message called `NoOp`.
 
-Another example of messages could be `Expand` or `Collapse` to show and hide a widget. We use union types for messages:
+Other examples of messages could be `Expand` or `Collapse` to show and hide a widget. We use union types for messages:
 
 ```elm
 type Msg
@@ -53,7 +53,7 @@ view model =
     [ text model ]
 ```
 
-The function `view` renders an Html element using our application model. Note how the type signature say `Html Msg`, this means that this Html element would produce messages tagged with Msg. We will see this when we introduce some interaction.
+The function `view` renders an Html element using our application model. Note that the type signature is `Html Msg`. This means that this Html element would produce messages tagged with Msg. We will see this when we introduce some interaction.
 
 ### Update
 
@@ -67,7 +67,7 @@ update msg model =
 
 Next we define an `update` function, this function will be called by Html.App each time a message is received. This update function responds to messages updating the model and returning commands as needed. 
 
-In this example we only respond to `NoOp` and return the unchanged model and `Cmd.none` (meaning no command to perform).
+In this example, we only respond to `NoOp` and return the unchanged model and `Cmd.none` (meaning no command to perform).
 
 ### Subscriptions
 
@@ -77,13 +77,13 @@ subscriptions model =
   Sub.none
 ```
 
-We use subscriptions to listen for external input on our application. Some examples of subscriptions may be:
+We use subscriptions to listen for external input to our application. Some examples of subscriptions are:
 
 - Mouse movements
 - Keyboard events
 - Browser location changes
 
-In this case we are not interested in any external input so we use `Sub.none`. Note the type signature `Sub Msg`. Subscriptions in a component should all be of the same type.
+In this case, we are not interested in any external input so we use `Sub.none`. Note the type signature `Sub Msg`. Subscriptions in a component should all be of the same type.
 
 ### Main
 

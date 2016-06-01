@@ -79,7 +79,7 @@ type alias AppModel =
   }
 ```
 
-The parent component has its own model. One of the attribute on this model contains the `Widget.Model` ➊. Note how this parent component doesn't need to know about what `Widget.Model` is.
+The parent component has its own model. One of the attributes on this model contains the `Widget.Model` ➊. Note how this parent component doesn't need to know about what `Widget.Model` is.
 
 ```elm
 initialModel : AppModel
@@ -90,7 +90,7 @@ initialModel =
 
 When creating the initial application model, we simply call `Widget.initialModel` ➋ from here.
 
-If you were to have multiple children components you would do the same for each, for example:
+If you were to have multiple children components, you would do the same for each, for example:
 
 ```
 initialModel : AppModel

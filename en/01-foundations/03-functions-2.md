@@ -16,7 +16,7 @@ But what if we instead have an array of integers? We wouldn't be able to use thi
 indexOf : a -> Array a -> Int
 ```
 
-By replacing `String` with `a`, the signature now says that `indexOf` takes a value of any type `a` and an array of that same type `a` and returns an integer. As long as the types match the compiler will be happy. You can call `indexOf` with a `String` and an array of `String`, or a `Int` and an array of `Int`, and it will work.
+By replacing `String` with `a`, the signature now says that `indexOf` takes a value of any type `a` and an array of that same type `a` and returns an integer. As long as the types match the compiler will be happy. You can call `indexOf` with a `String` and an array of `String`, or an `Int` and an array of `Int`, and it will work.
 
 This way functions can be made more generic. You can have several __type variables__ as well:
 
@@ -64,7 +64,7 @@ map : (a -> b) -> List a -> List b
 
 This function maps a list of `a` to a list of `b`. We don't really care what `a` and `b` represent as long as the given function in the first argument uses the same types.
 
-For example given functions with these signatures:
+For example, given functions with these signatures:
 
 ```elm
 convertStringToInt : String -> Int

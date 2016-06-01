@@ -1,6 +1,6 @@
 # Union types
 
-In Elm __Union Types__ are used for many things as they are incredibly flexible. A union type looks like:
+In Elm, __Union Types__ are used for many things as they are incredibly flexible. A union type looks like:
 
 ```elm
 type Answer = Yes | No
@@ -26,7 +26,7 @@ Union types can have associated information with them:
 type Answer = Yes | No | Other String
 ```
 
-In this case the tag `Other` will have an associated string. You could call `respond` like this:
+In this case, the tag `Other` will have an associated string. You could call `respond` like this:
 
 ```elm
 respond (Other "Hello")
@@ -54,11 +54,11 @@ You will create a `Message` tag by:
 Message 1 "Hello"
 ```
 
-You can do partial application just like any other function. These are commonly called `constructors` because you can use this to construct complete types i.e. use `Message` as a function to construct `(Message 1 "Hello")`.
+You can do partial application just like any other function. These are commonly called `constructors` because you can use this to construct complete types, i.e. use `Message` as a function to construct `(Message 1 "Hello")`.
 
 ## Nesting
 
-You can nest union types and this is very common as well:
+It is very common to 'nest' one union type in another.
 
 ```
 type OtherAnswer = DontKnow | Perhaps | Undecided
@@ -80,9 +80,9 @@ It is also possible to use type variables or stand-ins:
 type Answer a = Yes | No | Other a
 ```
 
-This is an `Answer` that can be used with different types e.g. Int, String.
+This is an `Answer` that can be used with different types, e.g. Int, String.
 
-For example respond could look like this:
+For example, respond could look like this:
 
 ```elm
 respond : Answer Int -> String
@@ -90,7 +90,7 @@ respond answer =
   ...
 ```
 
-In here we are saying that the `a` stand-in should be of type `Int` by using  the `Answer Int` signature.
+Here we are saying that the `a` stand-in should be of type `Int` by using  the `Answer Int` signature.
 
 So later we will be able to call respond with:
 
@@ -104,7 +104,7 @@ But respond `(Other "Hello")` would fail because `respond` expects an integer in
 
 One typical use of union types is passing around values in our program where the value can be one of a known set of possible values. 
 
-For example in a typical web application we have actions that can be performed e.g. load users, add user, delete user, etc. Some of these actions would have a payload. 
+For example, in a typical web application, we have actions that can be performed, e.g. load users, add user, delete user, etc. Some of these actions would have a payload. 
 
 It is common to use union types for this:
 

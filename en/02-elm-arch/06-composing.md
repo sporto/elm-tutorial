@@ -1,6 +1,6 @@
 # Composing
 
-One of the big benefits from using the Elm architecture is the way it handles composition of components. To understand this let's build an example:
+One of the big benefits of using the Elm architecture is the way it handles composition of components. To understand this, let's build an example:
 
 - We will have a parent component `App`
 - And a child component `Widget`
@@ -52,7 +52,7 @@ This component is nearly identical to the application that we made in the last s
 
 - Defines its own messages (Msg)
 - Defines its own model
-- Provides an `update` function that responds to its own messages e.g. `Increase`.
+- Provides an `update` function that responds to its own messages, e.g. `Increase`.
 
 Note how the component only knows about things declared here. Both `view` and `update` only use types declared within the component (`Msg` and `Model`).
 

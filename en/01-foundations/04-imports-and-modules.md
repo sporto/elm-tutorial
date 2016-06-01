@@ -34,7 +34,7 @@ Then you would be able to use every function and type in that module directly. B
 
 ## Modules and types with the same name
 
-Many modules export types with the same name as the module. For example the `Html` module has a `Html` type and the `Task` module has a `Task` type.
+Many modules export types with the same name as the module. For example, the `Html` module has an `Html` type and the `Task` module has a `Task` type.
 
 So this function that returns an `Html` element:
 
@@ -62,15 +62,15 @@ In the second one we expose the `Html` type from the `Html` module. And use the 
 
 ## Module declarations
 
-When you create a module in Elm you add the `module` declaration at the top:
+When you create a module in Elm, you add the `module` declaration at the top:
 
 ```
 module Main exposing (..)
 ```
 
-`Main` is the name of the module. `exposing (..)` means that you want to expose all functions and types in this module. Elm expect to find this module in a file called __Main.elm__, i.e. a file with the same name as the module.
+`Main` is the name of the module. `exposing (..)` means that you want to expose all functions and types in this module. Elm expects to find this module in a file called __Main.elm__, i.e. a file with the same name as the module.
 
-You can have deeper file structures in an application, for example the file __Players/Utils.elm__ should have the declaration:
+You can have deeper file structures in an application. For example, the file __Players/Utils.elm__ should have the declaration:
 
 ```
 module Players.Utils exposing (..)
