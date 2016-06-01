@@ -1,4 +1,4 @@
-# Navigation from List to Edit
+# Navigation
 
 Next let's add an "Edit" button to the players' list.
 
