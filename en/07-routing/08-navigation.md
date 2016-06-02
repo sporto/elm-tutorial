@@ -1,6 +1,6 @@
 # Navigation
 
-Next let's add an "Edit" button to the players' list.
+Next let's add buttons to navigate between views.
 
 ## EditPlayer action
 
