@@ -37,15 +37,15 @@ new =
   }
 ```
 
-Here we define how a player record looks like, it has an id, a name and a level. 
+Here we define how a player record looks. It has an id, a name and a level.
 
-Also note the definition for `PlayerId`, it is just an alias to `Int`, doing this is useful for clarity later on when we have function that take many ids. For example:
+Also note the definition for `PlayerId`, it is just an alias to `Int`, doing this is useful for clarity later on when we have function that takes many ids. For example:
 
 ```elm
 addPerkToPlayer : Int -> Int -> Player
 ```
 
-is much clearer written as:
+is much clearer when written as:
 
 ```elm
 addPerkToPlayer : PerkId -> PlayerId -> Player
@@ -71,7 +71,7 @@ update action players =
 This update doesn't do anything at the moment.
 ---
 
-This is the basic pattern that all resources in a bigger application could follow:
+This is the basic pattern that all resources in a bigger application would follow:
 
 ```
 Messages

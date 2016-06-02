@@ -108,7 +108,7 @@ This is one part of the equation. Now for the second part, define a type:
 > type alias Player = { id: Int, name: String }
 ```
 
-In Elm you can create a record calling a type as a function. Foe example `Player 1 "Sam"` creates a player record. Note that the order of parameters is important as any other function. 
+In Elm you can create a record calling a type as a function. For example, `Player 1 "Sam"` creates a player record. Note that the order of parameters is significant like any other function. 
 
 Try it:
 
