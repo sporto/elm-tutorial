@@ -1,19 +1,19 @@
 # Tasks
 
-We have seen how we use commands to garther things that need to be done. But commands don't have a concept of success or failure, they also don't have the concept of sequencing. Commands are just a bag of things to do.
+We have seen how we can use commands to gather results from activities involving side effects. But commands don't have a concept of success or failure. They also don't have the concept of sequencing. Commands are just bags of things to do.
 
-In Elm we use __tasks__ for asynchronous operations that can succeed or fail and need chaining e.g. do this, then do that. They are similar to promises in JavaScript.
+In Elm we use __tasks__ for asynchronous operations that can succeed or fail and need chaining, e.g. do this, then do that. They are similar to promises in JavaScript.
 
 A task has the signature: `Task errorValue successValue`. The first argument is the error type and the second the success type. For example:
 
-- `Task Http.Error String` is a task that fails with a Http.Error or succeeds with a String
+- `Task Http.Error String` is a task that fails with an Http.Error or succeeds with a String
 - `Task Never Result` is a task that never fails, and always succeeds with a `Result`.
 
 Task are usually returned from functions that want to do async operations, e.g. sending an Http request.
 
 ## Relation to commands
 
-When we get a task from a library we need to wrap that task into a command so we can send the command to __Html.App__.
+When we get a task from a library, we need to wrap that task into a command so we can send the command to __Html.App__.
 
 Let's see an example, first install some additional packages:
 
@@ -166,4 +166,4 @@ In update we return the fetch command when initiating a fetch. And respond to `F
 
 ---
 
-There is a lot more to tasks, it is worth browsing the documentation at <http://package.elm-lang.org/packages/elm-lang/core/4.0.0/Task>
+There is a lot more to tasks, it is worth browsing the documentation at <http://package.elm-lang.org/packages/elm-lang/core/4.0.1/Task>
