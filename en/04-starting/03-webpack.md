@@ -1,6 +1,6 @@
 # Webpack
 
-__Elm reactor__ is great for prototyping simple applications, but for a bigger app it falls short. At it is now  __reactor__ doesn't support talking with external JavaScript or importing external CSS. To overcome these issues we will use __Webpack__ to compile our Elm code instead of Elm reactor.
+__Elm reactor__ is great for prototyping simple applications, but for a bigger app it falls short. As it is now, __reactor__ doesn't support talking with external JavaScript or importing external CSS. To overcome these issues we will use __Webpack__ to compile our Elm code instead of Elm reactor.
 
 Webpack is a code bundler. It looks at your dependency tree and only bundles the code that is imported. Webpack can also import CSS and other assets inside a bundle. Read more about Webpack [here](https://webpack.github.io/).
 
