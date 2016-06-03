@@ -1,6 +1,6 @@
 # Commands
 
-In Elm commands (Cmd) are how we tell the runtime to execute things that involve side effects. For example:
+In Elm, commands (Cmd) are how we tell the runtime to execute things that involve side effects. For example:
 
 - Generate a random number
 - Make an http request

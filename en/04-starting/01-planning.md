@@ -14,7 +14,7 @@ The application will have two views:
 
 ### Screen 1
 
-Will show a list of players, from here you can:
+Will show a list of players. From here you can:
 
 - Navigate to edit a player
 
