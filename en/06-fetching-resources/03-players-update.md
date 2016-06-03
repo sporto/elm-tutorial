@@ -1,6 +1,6 @@
 # Players Update
 
-When the request for players is done we trigger the `FetchAllDone` message.
+When the request for players is done, we trigger the `FetchAllDone` message.
 
 __src/Players/Update.elm__ should account for this new message. Change `update` to:
 
