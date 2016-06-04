@@ -51,6 +51,13 @@
    * [Main](07-routing/06-main.md)
    * [Try it](07-routing/07-try-it.md)
    * [Navigation](07-routing/08-navigation.md)
+* [Editing](08-edit/cover.md)
+   * [Messages](08-edit/02-messages.md)
+   * [Player edit](08-edit/03-player-edit.md)
+   * [Commands](08-edit/04-commands.md)
+   * [Update](08-edit/05-update.md)
+* [Conclusion](09-conclusion/cover.md)
+   * [Improvements](09-conclusion/01-improvements.md)
 * Tips and Tricks
    * [Context](tips-tricks/context.md)
    * [List over Maybe](tips-tricks/list-over-maybe.md)
