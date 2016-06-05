@@ -61,8 +61,9 @@ __src/Messages.elm__
 ```
 module Messages exposing (..)
 
+
 type Msg
-  = NoOp
+    = NoOp
 ```
 
 __src/Models.elm__
@@ -70,7 +71,9 @@ __src/Models.elm__
 ```elm
 module Models exposing (..)
 
-type alias Model = String
+
+type alias Model =
+    String
 ```
 
 __src/Update.elm__
@@ -81,11 +84,12 @@ module Update exposing (..)
 import Messages exposing (Msg(..))
 import Models exposing (Model)
 
-update : Msg -> Model -> (Model, Cmd Msg)
+
+update : Msg -> Model -> ( Model, Cmd Msg )
 update msg model =
-  case msg of
-    NoOp ->
-      (model, Cmd.none)
+    case msg of
+        NoOp ->
+            ( model, Cmd.none )
 ```
 
 __src/View.elm__
@@ -97,10 +101,11 @@ import Html exposing (Html, div, text)
 import Messages exposing (Msg)
 import Models exposing (Model)
 
+
 view : Model -> Html Msg
 view model =
-  div []
-    [ text model ]
+    div []
+        [ text model ]
 ```
 
 __src/Main.elm__
@@ -114,23 +119,29 @@ import Models exposing (Model)
 import View exposing (view)
 import Update exposing (update)
 
-init : (Model, Cmd Msg)
+
+init : ( Model, Cmd Msg )
 init =
-  ("Hello" , Cmd.none)
+    ( "Hello", Cmd.none )
+
 
 subscriptions : Model -> Sub Msg
 subscriptions model =
-  Sub.none
+    Sub.none
+
+
 
 -- MAIN
 
+
+main : Program Never
 main =
-  Html.App.program
-    { init = init
-    , view = view
-    , update = update
-    , subscriptions = subscriptions
-    }
+    Html.App.program
+        { init = init
+        , view = view
+        , update = update
+        , subscriptions = subscriptions
+        }
 ```
 
 You can find the code here <https://github.com/sporto/elm-tutorial-app/tree/03-multiple-modules>
