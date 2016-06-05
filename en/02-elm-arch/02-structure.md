@@ -13,11 +13,13 @@ import Html.App
 ### Model
 
 ```elm
-type alias Model = String
+type alias Model =
+    String
 
-init : (Model, Cmd Msg)
+
+init : ( Model, Cmd Msg )
 init =
-  ( "Hello" , Cmd.none )
+    ( "Hello", Cmd.none )
 ```
 
 - First we define our application model as a type alias, in this kind. Here it is just a `String`.
@@ -31,7 +33,7 @@ When using the elm architecture, we compose all components models into a single 
 
 ```elm
 type Msg
-  = NoOp
+    = NoOp
 ```
 
 Messages are things that happen in our applications that our component responds to. In this case, the application doesn't do anything, so we only have a message called `NoOp`.
@@ -40,8 +42,8 @@ Other examples of messages could be `Expand` or `Collapse` to show and hide a wi
 
 ```elm
 type Msg
-  = Expand
-  | Collapse
+    = Expand
+    | Collapse
 ```
 
 ### View
@@ -49,8 +51,8 @@ type Msg
 ```elm
 view : Model -> Html Msg
 view model =
-  div []
-    [ text model ]
+    div []
+        [ text model ]
 ```
 
 The function `view` renders an Html element using our application model. Note that the type signature is `Html Msg`. This means that this Html element would produce messages tagged with Msg. We will see this when we introduce some interaction.
@@ -58,11 +60,11 @@ The function `view` renders an Html element using our application model. Note th
 ### Update
 
 ```elm
-update : Msg -> Model -> (Model, Cmd Msg)
+update : Msg -> Model -> ( Model, Cmd Msg )
 update msg model =
-  case msg of
-    NoOp ->
-      (model, Cmd.none)
+    case msg of
+        NoOp ->
+            ( model, Cmd.none )
 ```
 
 Next we define an `update` function, this function will be called by Html.App each time a message is received. This update function responds to messages updating the model and returning commands as needed. 
@@ -74,7 +76,7 @@ In this example, we only respond to `NoOp` and return the unchanged model and `C
 ```elm
 subscriptions : Model -> Sub Msg
 subscriptions model =
-  Sub.none
+    Sub.none
 ```
 
 We use subscriptions to listen for external input to our application. Some examples of subscriptions are:
@@ -88,13 +90,14 @@ In this case, we are not interested in any external input so we use `Sub.none`. 
 ### Main
 
 ```elm
+main : Program Never
 main =
-  Html.App.program
-    { init = init
-    , view = view
-    , update = update
-    , subscriptions = subscriptions
-    }
+    Html.App.program
+        { init = init
+        , view = view
+        , update = update
+        , subscriptions = subscriptions
+        }
 ```
 
 Finally `Html.App.program` wires everything together and returns an html element that we can render in the page. `program` takes our `input`, `view`, `update` and `subscriptions`.
