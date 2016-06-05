@@ -43,7 +43,7 @@ import Html
 
 myFunction : Html.Html
 myFunction =
-  ...
+    ...
 ```
 
 Is equivalent to:
@@ -53,7 +53,7 @@ import Html exposing (Html)
 
 myFunction : Html
 myFunction =
-  ...
+    ...
 ```
 
 In the first one we only import the `Html` module and use the fully qualified path `Html.Html`.

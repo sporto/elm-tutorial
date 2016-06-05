@@ -11,7 +11,7 @@ type Answer = Yes | No
 ```elm
 respond : Answer -> String
 respond answer =
-  ...
+    ...
 ```
 
 Can either take `Yes` or `No` as the first argument e.g. `respond Yes` is a valid call. 
@@ -87,7 +87,7 @@ For example, respond could look like this:
 ```elm
 respond : Answer Int -> String
 respond answer =
-  ...
+    ...
 ```
 
 Here we are saying that the `a` stand-in should be of type `Int` by using  the `Answer Int` signature.
@@ -110,10 +110,10 @@ It is common to use union types for this:
 
 ```elm
 type Action
-  = LoadUsers
-  | AddUser
-  | EditUser UserId
-  ...
+    = LoadUsers
+    | AddUser
+    | EditUser UserId
+    ...
   
 ```
 

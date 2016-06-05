@@ -56,8 +56,8 @@ Type aliases can be used as __constructor__ functions. Meaning that we can creat
 
 ```elm
 type alias Player = { id: Int
-  ,  name: String
-  }
+    ,  name: String
+    }
   
 Player 1 "Sam"
 ==> { id = 1, name = "Sam" }

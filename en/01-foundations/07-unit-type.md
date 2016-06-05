@@ -5,10 +5,10 @@ The empty tuple `()` is called the __unit type__ in Elm.  It is so prevalent tha
 Consider a type alias with a __type variable__ (represented by `a`):
 
 ```elm
-type alias Message a = {
-    code: String,
-    body: a
-  }
+type alias Message a =
+    { code : String
+    , body : a
+    }
 ```
 
 You can make a function that expects a `Message` with the `body` as a `String` like this:
@@ -16,7 +16,7 @@ You can make a function that expects a `Message` with the `body` as a `String` l
 ```elm
 readMessage : Message String -> String
 readMessage message =
-  ...
+    ...
 ```
 
 Or a function that expects a `Message` with the `body` as a List of Integers:
@@ -24,7 +24,7 @@ Or a function that expects a `Message` with the `body` as a List of Integers:
 ```elm
 readMessage : Message (List Int) -> String
 readMessage message =
-  ...
+    ...
 ```
 
 But what about a function that doesn't need a value in the body? We use the unit type for indicating that the body should be empty:
@@ -32,7 +32,7 @@ But what about a function that doesn't need a value in the body? We use the unit
 ```elm
 readMessage : Message () -> String
 readMessage message =
-  ...
+    ...
 ```
 
 This function takes `Message` with an __empty body__. This is not the same as __any value__, just an __empty__ one. 

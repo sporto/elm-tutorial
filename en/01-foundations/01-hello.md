@@ -20,7 +20,7 @@ module Main exposing (..)
 import Html exposing (text)
 
 main =
-  text "Hello"
+    text "Hello"
 ```
 
 Go to this folder on the terminal and type:

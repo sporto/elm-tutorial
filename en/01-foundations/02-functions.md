@@ -9,7 +9,7 @@ Let's have a look at a function in Elm:
 ```elm
 add : Int -> Int -> Int
 add x y =
-  x + y
+    x + y
 ```
 
 The first line in the example is the function signature. This signature is optional in Elm, but recommended because it makes the intention of your function clearer.
@@ -75,8 +75,8 @@ This code is difficult to read, because it resolves inside out. The pipe operato
 
 ```elm
 3
-  |> multiply 2
-  |> add 1
+    |> multiply 2
+    |> add 1
 ```
 
 This relies heavily on partial application. In this example the value `3` is passed to a partially applied function `multiply 2`. Its result is in turn passed to another partially applied function `add 1`.
@@ -85,7 +85,7 @@ Using the pipe operator the complex example above would be written like:
 
 ```elm
 records
-  |> map getCost
-  |> filter (isOver 100)
-  |> sum
+    |> map getCost
+    |> filter (isOver 100)
+    |> sum
 ```
