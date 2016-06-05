@@ -52,6 +52,7 @@
    * [Try it](07-routing/07-try-it.md)
    * [Navigation](07-routing/08-navigation.md)
 * [Editing](08-edit/cover.md)
+   * [Plan](08-edit/01-plan.md)
    * [Messages](08-edit/02-messages.md)
    * [Player edit](08-edit/03-player-edit.md)
    * [Commands](08-edit/04-commands.md)

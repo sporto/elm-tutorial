@@ -13,4 +13,5 @@ pu-fetch:
 pu-routing:
 	java -jar /usr/local/bin/plantuml.jar en/07-routing/01-intro.pu
 
-
+pu-edit:
+	java -jar /usr/local/bin/plantuml.jar en/08-edit/01-plan.pu

@@ -1,0 +1,25 @@
+@startuml
+
+autonumber "<b>(#)"
+
+participant Html.App as App #white
+participant Main.Update as MU #white
+participant Main.View as MV #white
+participant Players.Update as PU #white
+participant Players.Edit as PE #white
+
+PE -> App : PlayersMsg (ChangeLevel playerId howMuch)
+App -> MU : PlayersMsg (ChangeLevel playerId howMuch)
+MU -> PU : ChangeLevel playerId howMuch
+PU --> MU : Command to save
+MU --> App : Command to save
+|||
+App -> MU : PlayersMsg (SaveSuccess player)
+MU -> PU : (SaveSuccess player)
+PU --> MU : Updated players
+MU --> App : Updated model
+App -> MV : Updated model
+
+
+@enduml
+
