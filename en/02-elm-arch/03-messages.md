@@ -1,4 +1,4 @@
-# Messsages
+# Messages
 
 In the last section, we created an application using Html.App that was just static Html. Now let's create an application that responds to user interaction using messages.
 
