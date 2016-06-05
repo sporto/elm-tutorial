@@ -26,55 +26,76 @@ import Html.App
 import Mouse
 import Keyboard
 
+
 -- MODEL
 
-type alias Model = Int
 
-init : (Model, Cmd Msg)
+type alias Model =
+    Int
+
+
+init : ( Model, Cmd Msg )
 init =
-  (0 , Cmd.none)
-  
+    ( 0, Cmd.none )
+
+
+
 -- MESSAGES
 
+
 type Msg
-  = MouseMsg Mouse.Position
-  | KeyMsg Keyboard.KeyCode
+    = MouseMsg Mouse.Position
+    | KeyMsg Keyboard.KeyCode
+
+
 
 -- VIEW
 
+
 view : Model -> Html Msg
 view model =
-  div []
-    [ text (toString model) ]
+    div []
+        [ text (toString model) ]
+
+
 
 -- UPDATE
 
-update : Msg -> Model -> (Model, Cmd Msg)
+
+update : Msg -> Model -> ( Model, Cmd Msg )
 update msg model =
-  case msg of
-    MouseMsg position ->
-      (model + 1, Cmd.none)
-    KeyMsg code ->
-      (model + 2, Cmd.none)
+    case msg of
+        MouseMsg position ->
+            ( model + 1, Cmd.none )
+
+        KeyMsg code ->
+            ( model + 2, Cmd.none )
+
+
 
 -- SUBSCRIPTIONS
 
+
 subscriptions : Model -> Sub Msg
 subscriptions model =
-  Sub.batch
-    [ Mouse.clicks MouseMsg
-    , Keyboard.presses KeyMsg
-    ]
+    Sub.batch
+        [ Mouse.clicks MouseMsg
+        , Keyboard.presses KeyMsg
+        ]
+
+
 
 -- MAIN
 
+
+main : Program Never
 main =
-  Html.App.program
-    { init = init
-    , view = view
-    , update = update
-    , subscriptions = subscriptions
-    }
+    Html.App.program
+        { init = init
+        , view = view
+        , update = update
+        , subscriptions = subscriptions
+        }
 ```
 
 Run this program with Elm reactor, each time you click the mouse you will see the counter increasing by one, each time you press a key you will see the counter increasing by 2.
@@ -87,8 +108,8 @@ Let's review the important parts relevant to subscriptions in this program.
 
 ```elm
 type Msg
-  = MouseMsg Mouse.Position
-  | KeyMsg Keyboard.KeyCode
+    = MouseMsg Mouse.Position
+    | KeyMsg Keyboard.KeyCode
 ```
 
 We have two possible messages `MouseMsg` and `KeyMsg`. This will trigger when the mouse or the keyboard are pressed accordingly.
@@ -96,13 +117,14 @@ We have two possible messages `MouseMsg` and `KeyMsg`. This will trigger when th
 ### Update
 
 ```elm
-update : Msg -> Model -> (Model, Cmd Msg)
+update : Msg -> Model -> ( Model, Cmd Msg )
 update msg model =
-  case msg of
-    MouseMsg position ->
-      (model + 1, Cmd.none)
-    KeyMsg code ->
-      (model + 2, Cmd.none)
+    case msg of
+        MouseMsg position ->
+            ( model + 1, Cmd.none )
+
+        KeyMsg code ->
+            ( model + 2, Cmd.none )
 ```
 
 Our update function responds to each message differently, so it increases the counter by one when we press the mouse or by two when we press a key.
@@ -112,10 +134,10 @@ Our update function responds to each message differently, so it increases the co
 ```elm
 subscriptions : Model -> Sub Msg
 subscriptions model =
-  Sub.batch ➌
-    [ Mouse.clicks MouseMsg ➊
-    , Keyboard.presses KeyMsg ➋
-    ]
+    Sub.batch ➌
+        [ Mouse.clicks MouseMsg ➊
+        , Keyboard.presses KeyMsg ➋
+        ]
 ```
 
 Here we declare the things we want to listen to. We want to listen to `Mouse.clicks` ➊ and `Keyboard.presses` ➋. Both of these functions take a message constructor and return a subscription.

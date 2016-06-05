@@ -33,66 +33,90 @@ import Http
 import Task exposing (Task)
 import Json.Decode as Decode
 
+
 -- MODEL
 
-type alias Model = String
 
-init : (Model, Cmd Msg)
+type alias Model =
+    String
+
+
+init : ( Model, Cmd Msg )
 init =
-  ("" , Cmd.none)
+    ( "", Cmd.none )
+
+
 
 -- MESSAGES
 
+
 type Msg
-  = Fetch
-  | FetchSuccess String
-  | FetchError Http.Error
+    = Fetch
+    | FetchSuccess String
+    | FetchError Http.Error
+
+
 
 -- VIEW
 
+
 view : Model -> Html Msg
 view model =
-  div []
-    [ button [ onClick Fetch ] [ text "Fetch" ]
-    , text model ]
+    div []
+        [ button [ onClick Fetch ] [ text "Fetch" ]
+        , text model
+        ]
+
 
 decode : Decode.Decoder String
 decode =
-  Decode.at ["name"] Decode.string
+    Decode.at [ "name" ] Decode.string
+
 
 url : String
-url = 
-  "http://swapi.co/api/planets/1/"
+url =
+    "http://swapi.co/api/planets/1/"
+
 
 fetchTask : Task Http.Error String
 fetchTask =
-  Http.get decode url
+    Http.get decode url
+
 
 fetchCmd : Cmd Msg
 fetchCmd =
-  Task.perform FetchError FetchSuccess fetchTask
+    Task.perform FetchError FetchSuccess fetchTask
+
+
 
 -- UPDATE
 
-update : Msg -> Model -> (Model, Cmd Msg)
+
+update : Msg -> Model -> ( Model, Cmd Msg )
 update msg model =
-  case msg of
-    Fetch ->
-      (model, fetchCmd)
-    FetchSuccess name ->
-      (name, Cmd.none)
-    FetchError _ ->
-      (model, Cmd.none)
+    case msg of
+        Fetch ->
+            ( model, fetchCmd )
+
+        FetchSuccess name ->
+            ( name, Cmd.none )
+
+        FetchError _ ->
+            ( model, Cmd.none )
+
+
 
 -- MAIN
 
+
+main : Program Never
 main =
-  Html.App.program
-    { init = init
-    , view = view
-    , update = update
-    , subscriptions = (always Sub.none)
-    }
+    Html.App.program
+        { init = init
+        , view = view
+        , update = update
+        , subscriptions = (always Sub.none)
+        }
 ```
 
 This application fetches a planet name from the swapi (Star Wars API). As it is now it always fetches planet 1 which is Tatooine.
@@ -103,9 +127,9 @@ Let's review it:
 
 ```elm
 type Msg
-  = Fetch
-  | FetchSuccess String
-  | FetchError Http.Error
+    = Fetch
+    | FetchSuccess String
+    | FetchError Http.Error
 ```
 
 We have three messages. 
@@ -119,7 +143,7 @@ We have three messages.
 ```
 decode : Decode.Decoder String
 decode =
-  Decode.at ["name"] Decode.string
+    Decode.at ["name"] Decode.string
 ```
 
 This piece of code creates a decoder for the returned Json from the API. For building decoders [this tool](http://noredink.github.io/json-to-elm/) is incredibly valuable.
@@ -129,7 +153,7 @@ This piece of code creates a decoder for the returned Json from the API. For bui
 ```elm
 fetchTask : Task Http.Error String
 fetchTask =
-  Http.get decode url
+    Http.get decode url
 ```
 
 `Http.get` takes a decoder and a url and returns a task.
@@ -139,7 +163,7 @@ fetchTask =
 ```elm
 fetchCmd : Cmd Msg
 fetchCmd =
-  Task.perform FetchError FetchSuccess fetchTask
+    Task.perform FetchError FetchSuccess fetchTask
 ```
 
 We use `Task.perform` to transform a task into a command. This function takes: 
@@ -151,15 +175,17 @@ We use `Task.perform` to transform a task into a command. This function takes:
 ### Update
 
 ```elm
-update : Msg -> Model -> (Model, Cmd Msg)
+update : Msg -> Model -> ( Model, Cmd Msg )
 update msg model =
-  case msg of
-    Fetch ->
-      (model, fetchCmd)
-    FetchSuccess name ->
-      (name, Cmd.none)
-    FetchError _ ->
-      (model, Cmd.none)
+    case msg of
+        Fetch ->
+            ( model, fetchCmd )
+
+        FetchSuccess name ->
+            ( name, Cmd.none )
+
+        FetchError _ ->
+            ( model, Cmd.none )
 ```
 
 In update we return the fetch command when initiating a fetch. And respond to `FetchSuccess` and `FetchError`.
