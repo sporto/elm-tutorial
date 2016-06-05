@@ -7,8 +7,9 @@ Create __src/Players/Messages.elm__
 ```elm
 module Players.Messages exposing (..)
 
+
 type Msg
-  = NoOp
+    = NoOp
 ```
 
 Here we will put all the messages related to players.
@@ -20,21 +21,24 @@ Create __src/Players/Models.elm__
 ```elm
 module Players.Models exposing (..)
 
+
 type alias PlayerId =
-  Int
+    Int
+
 
 type alias Player =
-  { id : PlayerId
-  , name : String
-  , level : Int
-  }
+    { id : PlayerId
+    , name : String
+    , level : Int
+    }
+
 
 new : Player
 new =
-  { id = 0
-  , name = ""
-  , level = 1
-  }
+    { id = 0
+    , name = ""
+    , level = 1
+    }
 ```
 
 Here we define how a player record looks. It has an id, a name and a level.
@@ -61,11 +65,12 @@ module Players.Update exposing (..)
 import Players.Messages exposing (Msg(..))
 import Players.Models exposing (Player)
 
+
 update : Msg -> List Player -> ( List Player, Cmd Msg )
 update action players =
-  case action of
-    NoOp ->
-      ( players, Cmd.none )
+    case action of
+        NoOp ->
+            ( players, Cmd.none )
 ```
 
 This update doesn't do anything at the moment.
