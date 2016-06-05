@@ -7,11 +7,12 @@ __src/Players/Update.elm__ should account for this new message. Change `update` 
 ```elm
 update : Msg -> List Player -> ( List Player, Cmd Msg )
 update action players =
-  case action of
-    FetchAllDone newPlayers ->
-      ( newPlayers, Cmd.none )
-    FetchAllFail error ->
-      ( players, Cmd.none )
+    case action of
+        FetchAllDone newPlayers ->
+            ( newPlayers, Cmd.none )
+
+        FetchAllFail error ->
+            ( players, Cmd.none )
 ```
 
 The message `FetchAllDone` has the fetched players, so we return that payload to update the players collection.

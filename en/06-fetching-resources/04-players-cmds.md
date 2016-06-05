@@ -11,28 +11,29 @@ import Task
 import Players.Models exposing (PlayerId, Player)
 import Players.Messages exposing (..)
 
+
 fetchAll : Cmd Msg
 fetchAll =
-  Http.get collectionDecoder fetchAllUrl
-    |> Task.perform FetchAllFail FetchAllDone
+    Http.get collectionDecoder fetchAllUrl
+        |> Task.perform FetchAllFail FetchAllDone
+
 
 fetchAllUrl : String
 fetchAllUrl =
-  "http://localhost:4000/players"
+    "http://localhost:4000/players"
 
--- DECODERS
 
 collectionDecoder : Decode.Decoder (List Player)
 collectionDecoder =
-  Decode.list memberDecoder
+    Decode.list memberDecoder
+
 
 memberDecoder : Decode.Decoder Player
 memberDecoder =
-  Decode.object3
-    Player
-    ("id" := Decode.int)
-    ("name" := Decode.string)
-    ("level" := Decode.int)
+    Decode.object3 Player
+        ("id" := Decode.int)
+        ("name" := Decode.string)
+        ("level" := Decode.int)
 ```
 ---
 
@@ -41,8 +42,8 @@ Let's go through this code.
 ```elm
 fetchAll : Cmd Msg
 fetchAll =
-  Http.get collectionDecoder fetchAllUrl
-    |> Task.perform FetchAllFail FetchAllDone
+    Http.get collectionDecoder fetchAllUrl
+        |> Task.perform FetchAllFail FetchAllDone
 ```
 
 Here we create a command for our application to run.
@@ -53,7 +54,7 @@ Here we create a command for our application to run.
 ```elm
 collectionDecoder : Decode.Decoder (List Player)
 collectionDecoder =
-  Decode.list memberDecoder
+    Decode.list memberDecoder
 ```
 
 This decoder delegates the decoding of each member of a list to `memberDecoder`
@@ -61,11 +62,10 @@ This decoder delegates the decoding of each member of a list to `memberDecoder`
 ```elm
 memberDecoder : Decode.Decoder Player
 memberDecoder =
-  Decode.object3
-    Player
-    ("id" := Decode.int)
-    ("name" := Decode.string)
-    ("level" := Decode.int)
+    Decode.object3 Player
+        ("id" := Decode.int)
+        ("name" := Decode.string)
+        ("level" := Decode.int)
 ```
 
 `memberDecoder` creates a JSON decoder that returns a `Player` record. 

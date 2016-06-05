@@ -9,9 +9,10 @@ module Players.Messages exposing (..)
 import Http
 import Players.Models exposing (PlayerId, Player)
 
+
 type Msg
-  = FetchAllDone (List Player)
-  | FetchAllFail Http.Error
+    = FetchAllDone (List Player)
+    | FetchAllFail Http.Error
 ```
 
 `FetchAllDone` will be called when we get the response from the server. This message will carry the list of fetched players.

@@ -7,8 +7,8 @@ Remove the hardcoded list of players in __src/Models.elm__
 ```elm
 initialModel : Model
 initialModel =
-  { players = [ ]
-  }
+    { players = []
+    }
 ```
 
 ## Main
@@ -23,9 +23,9 @@ import Messages exposing (Msg(..))
 ...
 import Players.Commands exposing(fetchAll)
 
-init : (Model, Cmd Msg)
+init : ( Model, Cmd Msg )
 init =
-  ( initialModel, Cmd.map PlayersMsg fetchAll )
+    ( initialModel, Cmd.map PlayersMsg fetchAll )
 ```
 
 Now `init` returns a list of commands to run when the application starts.
