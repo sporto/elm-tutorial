@@ -74,9 +74,9 @@ saveTask player =
             |> Http.fromJson memberDecoder ➎
 ```
 
-➊ Encodes the given player, converting the record to a `Value`.
+➊ Encodes the given player, converting the record to a `Value`. A `Value` in this context is a type that encapsulates a JavaScript value (number, string, null, boolean, array, object).
 
-➋ `Encode.encode` converts the `Value` to a string.
+➋ `Encode.encode` converts the `Value` to a Json string.
 Similar to `JSON.stringify` in JavaScript. `0` indicates the indentation on the resulting string.
 <http://package.elm-lang.org/packages/elm-lang/core/4.0.1/Json-Encode#encode>
 
