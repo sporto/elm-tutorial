@@ -60,8 +60,8 @@ saveTask player =
     let
         body =
             memberEncoded player ➊
-                |> Encode.encode 0
-                |> Http.string
+                |> Encode.encode 0 ➋
+                |> Http.string ➌
 
         config =
             { verb = "PATCH"
@@ -70,13 +70,23 @@ saveTask player =
             , body = body
             }
     in
-        Http.send Http.defaultSettings config ➋
-            |> Http.fromJson memberDecoder ➌
+        Http.send Http.defaultSettings config ➍
+            |> Http.fromJson memberDecoder ➎
 ```
 
-- ➊ Encodes the given player 
-- ➋ Creates a task to send the encoded player to the API
-- ➌ And decodes the response given by the API
+➊ Encodes the given player, converting the record to a `Value`.
+
+➋ `Encode.encode` converts the `Value` to a string.
+Similar to `JSON.stringify` in JavaScript. `0` indicates the indentation on the resulting string.
+<http://package.elm-lang.org/packages/elm-lang/core/4.0.1/Json-Encode#encode>
+
+➌ Creates a Http request body using the given string. <http://package.elm-lang.org/packages/evancz/elm-http/3.0.1/Http#string>
+
+➍ Creates a task to send the encoded player to the API.
+<http://package.elm-lang.org/packages/evancz/elm-http/3.0.1/Http#send>
+
+➎ This takes the previous task and chains it with a new task that will decode the response given by the API and give us the decoded value.
+<http://package.elm-lang.org/packages/evancz/elm-http/3.0.1/Http#fromJson>
 
 ### Save
 
