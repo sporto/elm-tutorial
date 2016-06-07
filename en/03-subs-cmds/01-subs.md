@@ -3,13 +3,13 @@
 In Elm __subscriptions__ is how your application can listen for external input. Some examples are:
 
 - Keyboard events
-- Mouse movement
+- Mouse movements
 - Browser locations changes
 - Websocket events
 
 To illustrate this let's create an application that responds to both keyboard and mouse events.
 
-First installed required libraries
+First install the required libraries
 
 ```bash
 elm package install elm-lang/mouse
