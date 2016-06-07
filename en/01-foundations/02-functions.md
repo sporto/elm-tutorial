@@ -50,7 +50,7 @@ This returns another function with the value `2` bound as the first parameter. C
 
 ```elm
 add2 = add 2
-add2 3 ==> 5
+add2 3 -- result 5
 ```
 
 Another way to think about a function signature like `add : Int -> Int -> Int` is that it is a function that takes one integer as argument and returns another function. The returned function takes another integer and returns an integer.
