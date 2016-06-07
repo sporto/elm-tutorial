@@ -40,7 +40,7 @@ Here are two diagram that illustrates this architecture:
 
 (5) As the message was tagged with __WidgetMsg__, __Main.update__ delegates the update to __Widget.update__, sending along the way the __widgetModel__ part of the main model
 
-(6) __Widget.update__ modifies the model according to the given message, in this case __Increase__. And returns the modifies __widgetModel__ plus a comomand
+(6) __Widget.update__ modifies the model according to the given message, in this case __Increase__. And returns the modified __widgetModel__ plus a command
 
 (7) __Main.update__ updates the main model and returns it to __App__
 
