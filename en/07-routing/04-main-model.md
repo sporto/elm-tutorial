@@ -1,6 +1,6 @@
 # Main model
 
-In our main application model we want to store the current route
+In our main application model we want to store the current route.
 Change __src/Models.elm__ to:
 
 ```elm
