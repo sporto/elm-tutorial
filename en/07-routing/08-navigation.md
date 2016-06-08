@@ -22,7 +22,7 @@ We added `ShowPlayers` and `ShowPlayer`.
 
 The players' list needs to show a button for each player to trigger the `ShowPlayer` message.
 
-In __src/Players/List.elm__. First `Html.Events`:
+In __src/Players/List.elm__. First add `Html.Events`:
 
 ```elm
 import Html.Events exposing (onClick)
