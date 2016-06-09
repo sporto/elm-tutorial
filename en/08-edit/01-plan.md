@@ -4,7 +4,7 @@ The plan for changing a player's level is as follow:
 
 ![Flow](01-plan.png)
 
-(1) Then the user clicks the increase or decrease button we trigger a message `ChangeLevel` with the `playerId` and `howMuch` as payload.
+(1) When the user clicks the increase or decrease button we trigger a message `ChangeLevel` with the `playerId` and `howMuch` as payload.
 
 (2) __Html.App__ (which Navigation wraps) will send this message back to `Main.Update` which will route it to `Players.Update` (3).
 
