@@ -139,7 +139,7 @@ We use a __union type__ that wraps `Widget.Msg` to indicate that a message belon
 In an application with multiple chidlren components we could have something like:
 
 ```elm
-type Action
+type Msg
     = NavMsg Nav.Msg
     | SidebarMsg Sidebar.Msg
     | WidgetMsg Widget.Msg
