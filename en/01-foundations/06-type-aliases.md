@@ -27,23 +27,24 @@ In this way, it is much clearer what the function is asking for.
 A record definition in Elm looks like:
 
 ```elm
-{ id: Int
-,  name: String
+{ id : Int
+, name : String
 }
 ```
 
 If you were to have a function that takes a record, you would have to write a signature like:
 
 ```elm
-label: {id: Int, name: String} -> String
+label: { id : Int, name : String } -> String
 ```
 
 Quite verbose, but type aliases help a lot with this:
 
 ```elm
-type alias Player = { id: Int
-  ,  name: String
-  }
+type alias Player =
+    { id : Int
+    , name : String
+    }
   
 label: Player -> String
 ```
@@ -55,8 +56,9 @@ Here we create a `Player` type alias that points to a record definition. Then we
 Type aliases can be used as __constructor__ functions. Meaning that we can create a real record by using the type alias as a function.
 
 ```elm
-type alias Player = { id: Int
-    ,  name: String
+type alias Player =
+    { id : Int
+    , name : String
     }
   
 Player 1 "Sam"
