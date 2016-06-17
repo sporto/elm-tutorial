@@ -2,7 +2,7 @@
 
 Let's start by adding the messages we will need.
 
-In __src/Players/Commands.elm__ add:
+In __src/Players/Messages.elm__ add:
 
 ```elm
 type Msg
