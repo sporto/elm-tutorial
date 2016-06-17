@@ -24,6 +24,13 @@ You can also download offline version [here (PDF, ePub, Mobi)](https://www.gitbo
 Code for the example application built in the second part of this tutorial can be
 found at <https://github.com/sporto/elm-tutorial-app>.
 
+## Requirements
+
+For this tutorial you will need:
+
+- Elm version 0.17 (Installation is covered later in the tutorial)
+- Node JS version 4 +
+
 ## Contributing
 
 Please open issues and send PRs at <https://github.com/sporto/elm-tutorial>.
