@@ -12,6 +12,11 @@ There are many alternatives that you can use to achieve the same as Webpack, for
 - [JSPM](http://jspm.io/)
 - Or if using a framework like Rails or Phoenix you can bundle the Elm code and CSS using them.
 
+## Requirements
+
+Your will need Node JS version 4 or more for these libraries to work as expected.
+
+
 ## Installing webpack and loaders
 
 Install webpack and associated packages:
