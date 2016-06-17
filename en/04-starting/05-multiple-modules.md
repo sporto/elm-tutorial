@@ -38,20 +38,6 @@ There is no circular dependency anymore.
 
 Try creating separate modules for things like __messages__, __models__, __commands__ and __utilities__, which are modules that are usually imported by many components.
 
-## Breaking the application
-
-We will be adding all our source code in the `src` folder, so we need to tell Elm where to search for dependencies. In __elm-package.json__ change:
-
-```json
-...
-"source-directories": [
-    "src"
-],
-...
-```
-
-Without this the Elm compiler will try to find the imports in the root of our project and fail.
-
 ---
 
 Let's break the application in smaller modules:
