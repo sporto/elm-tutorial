@@ -4,7 +4,7 @@ When building front end applications in Elm, we use the pattern known as the Elm
 
 Elm provides the `Html.App` module for this. This is easier to understand by building a small app.
 
-Install elm-http:
+Install elm-html:
 
 ```elm
 elm package install elm-lang/html

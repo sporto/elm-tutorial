@@ -1,6 +1,6 @@
 # Composing
 
-Here are two diagram that illustrates this architecture:
+Here are two diagrams that illustrate this architecture:
 
 ### Intial render
 

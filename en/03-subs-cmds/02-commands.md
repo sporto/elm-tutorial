@@ -6,7 +6,7 @@ In Elm, commands (Cmd) are how we tell the runtime to execute things that involv
 - Make an http request
 - Save something into local storage
 
-A `Cmd` can be one or a collection of things to do. We use commands to gather all the things that need to happen and handle them to the runtime. Then the runtime will execute them and feed the results back to the application.
+A `Cmd` can be one or a collection of things to do. We use commands to gather all the things that need to happen and hand them to the runtime. Then the runtime will execute them and feed the results back to the application.
 
 Let's try an example app using commands:
 

@@ -1,6 +1,6 @@
 # Subscriptions
 
-In Elm __subscriptions__ is how your application can listen for external input. Some examples are:
+In Elm, using __subscriptions__ is how your application can listen for external input. Some examples are:
 
 - Keyboard events
 - Mouse movements
