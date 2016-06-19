@@ -79,7 +79,7 @@ page model =
 
 Now we have a function `page` which has a case expression to show the correct view depending on what is in `model.route`. 
 
-When the player edit route matches (e.g. `#playes/2`) we will get the player id from the route i.e. `PlayerRoute playerId`.
+When the player edit route matches (e.g. `#players/2`) we will get the player id from the route i.e. `PlayerRoute playerId`.
 
 ### Finding the player
 
