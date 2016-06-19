@@ -100,7 +100,7 @@ main =
         }
 ```
 
-Finally `Html.App.program` wires everything together and returns an html element that we can render in the page. `program` takes our `input`, `view`, `update` and `subscriptions`.
+Finally `Html.App.program` wires everything together and returns an html element that we can render in the page. `program` takes our `init`, `view`, `update` and `subscriptions`.
 
 
 
