@@ -180,6 +180,6 @@ We use pattern matching to extract the `subMsg` ➋ from `WidgetMsg`. This `subM
 
 Using this `subMsg` and `model.widgetModel` we call `Widget.update` ➌. This will return a tuple with an updated `widgetModel` and a command.
 
-We use pattern matching again to destructure ➍ the respond from `Widget.update`.
+We use pattern matching again to destructure ➍ the response from `Widget.update`.
 
 Finally we need to map the command returned by `Widget.update` to the right type. We use `Cmd.map` ➎ for this and tag the command with `WidgetMsg`, similar to what we did in the view.

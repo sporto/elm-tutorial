@@ -5,7 +5,7 @@ The main level needs to be hooked up with the Players modules we created.
 We need to create links from:
 
 ```
-Main Actions   --->    Players Actions
+Main Messages  --->    Players Messages
 Main Models    --->    Players Models
 Main Update    --->    Players Update
 ```
