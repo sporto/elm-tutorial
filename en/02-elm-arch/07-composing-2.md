@@ -31,6 +31,10 @@ init =
     ( initialModel, Cmd.none )
 
 
+
+-- MESSAGES
+
+
 type Msg
     = WidgetMsg Widget.Msg
 
