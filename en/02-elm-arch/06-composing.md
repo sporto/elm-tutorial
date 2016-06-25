@@ -30,6 +30,10 @@ initialModel =
     }
 
 
+
+-- MESSAGES
+
+
 type Msg
     = Increase
 
