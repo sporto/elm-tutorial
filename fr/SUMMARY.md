@@ -4,7 +4,7 @@
 * [Fondations](01-fondations/cover.md)
    * [Hello World](01-fondations/01-hello.md)
    * [Fonctions : les bases](01-fondations/02-functions.md)
-   * [More on functions](01-fondations/03-functions-2.md)
+   * [Fonctions : la suite](01-fondations/03-functions-2.md)
    * [Imports and modules](01-fondations/04-imports-and-modules.md)
    * [Union types](01-fondations/05-union-types.md)
    * [Type aliases](01-fondations/06-type-aliases.md)
