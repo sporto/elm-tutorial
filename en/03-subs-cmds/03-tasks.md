@@ -75,7 +75,7 @@ decode =
 
 url : String
 url =
-    "http://swapi.co/api/planets/1/"
+    "http://swapi.co/api/planets/1/?format=json"
 
 
 fetchTask : Task Http.Error String
