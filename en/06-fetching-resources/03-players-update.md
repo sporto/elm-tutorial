@@ -6,8 +6,8 @@ __src/Players/Update.elm__ should account for this new message. Change `update` 
 
 ```elm
 update : Msg -> List Player -> ( List Player, Cmd Msg )
-update action players =
-    case action of
+update message players =
+    case message of
         FetchAllDone newPlayers ->
             ( newPlayers, Cmd.none )
 

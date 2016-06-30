@@ -62,8 +62,8 @@ This function will be used when we receive an updated player from the API via `S
 Add new branches to the `update` function:
 
 ```elm
-update action players =
-    case action of
+update message players =
+    case message of
         ...
 
         ChangeLevel id howMuch ->

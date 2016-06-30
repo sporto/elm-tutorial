@@ -2,7 +2,7 @@
 
 Next let's add buttons to navigate between views.
 
-## EditPlayer action
+## EditPlayer message
 
 Change __src/Players/Messages.elm__ to include two new actions:
 
@@ -101,8 +101,8 @@ And add two new branches to the case expression:
 
 ```elm
 update : Msg -> List Player -> ( List Player, Cmd Msg )
-update action players =
-    case action of
+update message players =
+    case message of
         FetchAllDone newPlayers ->
             ( newPlayers, Cmd.none )
 
