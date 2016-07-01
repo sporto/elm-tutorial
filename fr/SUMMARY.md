@@ -8,7 +8,7 @@
    * [Imports et modules](01-fondations/04-imports-and-modules.md)
    * [Types d'union](01-fondations/05-union-types.md)
    * [Alias de type](01-fondations/06-type-aliases.md)
-   * [The unit type](01-fondations/07-unit-type.md)
+   * [Le type _unit_](01-fondations/07-unit-type.md)
 * [The Elm architecture](02-elm-arch/cover.md)
    * [Introduction](02-elm-arch/01-introduction.md)
    * [Structure](02-elm-arch/02-structure.md)
