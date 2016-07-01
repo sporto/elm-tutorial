@@ -24,7 +24,7 @@ De cette manière, il est beaucoup plus simple de comprendre ce qu'attend la fon
 
 ## Enregistrements (records)
 
-A record definition in Elm looks like:
+La définition d'un enregistrement en Elm ressemble à ça :
 
 ```elm
 { id : Int
@@ -32,13 +32,13 @@ A record definition in Elm looks like:
 }
 ```
 
-If you were to have a function that takes a record, you would have to write a signature like:
+Lorsque vous voudrez écrire une fonction qui prendra en paramètre un enregistrement, sa signature ressemblera à ça :
 
 ```elm
 label: { id : Int, name : String } -> String
 ```
 
-Quite verbose, but type aliases help a lot with this:
+Plutôt verbeux, mais heureusement, les alias de type sont là pour nous aider :
 
 ```elm
 type alias Player =
@@ -49,11 +49,11 @@ type alias Player =
 label: Player -> String
 ```
 
-Here we create a `Player` type alias that points to a record definition. Then we use that type alias in our function signature.
+Ici nous créeons un alias de type `Player` qui pointe vers la définition d'un enregistrement. Ensuite nous utilisons cet alias de type dans la signature de notre fonction.
 
-## Constructors
+## Constructeurs
 
-Type aliases can be used as __constructor__ functions. Meaning that we can create a real record by using the type alias as a function.
+Les alias de type peuvent être utilisés comme __constructeurs__ de fonctions. C'est à dire que l'on peut créer un véritable enregistrement en utilisant l'alias de type comme fonction.
 
 ```elm
 type alias Player =
@@ -65,4 +65,4 @@ Player 1 "Sam"
 ==> { id = 1, name = "Sam" }
 ```
 
-Here we create a `Player` type alias. Then, we call `Player` as a function with two parameters. This gives us back a record with the proper attributes. Note that the order of the arguments determines which values will be assigned to which attributes.
+Ici nous créons un alias de type `Player`. Ensuite nous appelons `Player` comme une fonction en lui passant deux paramètres. Elle nous retourne un enregistrement avec les bons attributs. Notez que l'ordre des arguments détermine quelles valeurs vont être assignées à quels attributs.
