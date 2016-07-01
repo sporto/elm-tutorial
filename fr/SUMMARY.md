@@ -9,7 +9,7 @@
    * [Types d'union](01-fondations/05-union-types.md)
    * [Alias de type](01-fondations/06-type-aliases.md)
    * [Le type _unit_](01-fondations/07-unit-type.md)
-* [The Elm architecture](02-elm-arch/cover.md)
+* [L'architecture Elm](02-elm-arch/cover.md)
    * [Introduction](02-elm-arch/01-introduction.md)
    * [Structure](02-elm-arch/02-structure.md)
    * [Messages](02-elm-arch/03-messages.md)
