@@ -34,7 +34,7 @@ Lorsque vous voulez appeler une fonction avec le résulat de l'appel d'une autre
 add 1 (divide 12 3)
 ```
 
-Ici, le résaltat de `divide 12 3` est passé en second paramètre de la fonction `add`.
+Ici, le résultat de `divide 12 3` est passé en second paramètre de la fonction `add`.
 
 En comparaison, beaucoup d'autres langages écriraient la même chose de cette façon :
 
