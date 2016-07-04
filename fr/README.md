@@ -33,7 +33,7 @@ Pour ce tutoriel vous allez avoir besoin de :
 
 ## Contribuer
 
-N'hésitez-pas à ouvrir des tickets ou envoyer des Pull Requests sur la page github : <https://github.com/sporto/elm-tutorial>.é
+N'hésitez-pas à ouvrir des tickets ou envoyer des Pull Requests sur la page github : <https://github.com/sporto/elm-tutorial>.
 
 ---
 
