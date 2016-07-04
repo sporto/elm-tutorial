@@ -17,6 +17,10 @@ found at <https://github.com/sporto/elm-tutorial-app>.
 
 Please open issues and send PRs at <https://github.com/sporto/elm-tutorial>.
 
+## Translations
+
+French translation by Vincent Jousse [@vjousse](https://twitter.com/intent/user?screen_name=vjousse)
+
 ---
 
 [Share on Twitter](https://twitter.com/intent/tweet?&text=Elm%20Tutorial&url=http%3A%2F%2Fwww.elm-tutorial.org&via=sebasporto) | [Follow @sebasporto](https://twitter.com/intent/user?screen_name=sebasporto)
