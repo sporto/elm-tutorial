@@ -13,7 +13,7 @@
    * [Introduction](02-elm-arch/01-introduction.md)
    * [Structure](02-elm-arch/02-structure.md)
    * [Messages](02-elm-arch/03-messages.md)
-   * [Application flow](02-elm-arch/04-flow.md)
+   * [Flux d'une application](02-elm-arch/04-flux.md)
    * [Messages with payload](02-elm-arch/05-msg-payload.md)
    * [Composing](02-elm-arch/06-composing.md)
    * [Composing - Parent](02-elm-arch/07-composing-2.md)

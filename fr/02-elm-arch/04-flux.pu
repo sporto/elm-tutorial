@@ -1,0 +1,13 @@
+@startuml
+autonumber
+participant App #white
+participant update #white
+participant view #white
+
+App -> view : Render view
+|||
+view -> App : Trigger message e.g. Expand
+App -> update : Send message with the current state
+update --> App : Return updated state and command
+App -> view : Render view
+@enduml
