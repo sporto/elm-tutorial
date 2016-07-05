@@ -76,7 +76,7 @@ main =
         }
 ```
 
-Notez la manière par laquelle le message `Increment` requiert un entier :
+Notez la manière dont le message `Increment` requiert un entier :
 
 ```elm
 type Msg
@@ -89,7 +89,7 @@ Ensuite dans la vue, nous déclenchons ce message en lui attachant des données 
 onClick (Increment 2)
 ```
 
-Et finalement, dans la fonction `update`, nous utilisons le __pattern matching__ pour extraire les données :
+Et finalement, dans la fonction `update`, nous utilisons du __pattern matching__ pour extraire les données :
 
 ```elm
 update msg model =
