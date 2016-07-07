@@ -6,13 +6,13 @@ In __src/Players/Edit.elm__ change `btnLevelDecrease` and `btnLevelIncrease`:
 
 ```elm
 ...
-btnLevelDecrease : Player -> Html.Html Msg
+btnLevelDecrease : Player -> Html Msg
 btnLevelDecrease player =
     a [ class "btn ml1 h1", onClick (ChangeLevel player.id -1) ]
         [ i [ class "fa fa-minus-circle" ] [] ]
 
 
-btnLevelIncrease : Player -> Html.Html Msg
+btnLevelIncrease : Player -> Html Msg
 btnLevelIncrease player =
     a [ class "btn ml1 h1", onClick (ChangeLevel player.id 1) ]
         [ i [ class "fa fa-plus-circle" ] [] ]
