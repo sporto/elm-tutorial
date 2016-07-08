@@ -4,10 +4,10 @@ participant App #white
 participant update #white
 participant view #white
 
-App -> view : Render view
+App -> view : Affiche la vue
 |||
-view -> App : Trigger message e.g. Expand
-App -> update : Send message with the current state
-update --> App : Return updated state and command
-App -> view : Render view
+view -> App : Déclenche un message, i.e. Expand
+App -> update : Envoie le message avec l'état courant
+update --> App : Renvoie l'état mis à jour + des commandes
+App -> view : Affiche la vue
 @enduml
