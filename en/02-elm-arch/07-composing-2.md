@@ -159,7 +159,7 @@ view model =
         ]
 ```
 
-The main application `view` renders the `Widget.view` ➌. But `Widget.view` emmits `Widget.Msg` so is incompatible with this view which emits `Main.Msg`.
+The main application `view` renders the `Widget.view` ➌. But `Widget.view` emits `Widget.Msg` so is incompatible with this view which emits `Main.Msg`.
 
 - We use `Html.App.map` ➊ to map emitted messages from Widget.view to the type we expect (Msg). `Html.App.map` tags messages comming from the sub view using the `WidgetMsg` ➋ tag.
 - We only pass the part of the model that the children component cares about i.e. `model.widgetModel` ➍.
