@@ -140,7 +140,7 @@ type Msg
 
 We use a __union type__ that wraps `Widget.Msg` to indicate that a message belongs to that component. This allows our application to route messages to the relevant components (This will become clear looking at the update function).
 
-In an application with multiple chidlren components we could have something like:
+In an application with multiple children components we could have something like:
 
 ```elm
 type Msg
