@@ -101,8 +101,8 @@ update msg model =
         FetchSuccess name ->
             ( name, Cmd.none )
 
-        FetchError _ ->
-            ( model, Cmd.none )
+        FetchError error ->
+            ( toString error, Cmd.none )
 
 
 
@@ -184,8 +184,8 @@ update msg model =
         FetchSuccess name ->
             ( name, Cmd.none )
 
-        FetchError _ ->
-            ( model, Cmd.none )
+        FetchError error ->
+            ( toString error, Cmd.none )
 ```
 
 In update we return the fetch command when initiating a fetch. And respond to `FetchSuccess` and `FetchError`.
