@@ -75,8 +75,8 @@ update msg model =
         FetchSuccess name ->
             ( name, Cmd.none )
 
-        FetchError _ ->
-            ( model, Cmd.none )
+        FetchError error ->
+            ( toString error, Cmd.none )
 
 
 
