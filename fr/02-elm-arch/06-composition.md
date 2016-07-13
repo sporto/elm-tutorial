@@ -1,6 +1,6 @@
 # Composition
 
-Un des grands avantages d'utiliser l'architecture Elm est la façon dans la composition des composants est gérée. Voyons cela avec un exemple :
+Un des grands avantages d'utiliser l'architecture Elm est la façon dont la relation entre les composants est gérée. Voyons cela avec un exemple :
 
 - Nous allons avoir un composant parent `App`
 - Et un composant enfant `Widget`
