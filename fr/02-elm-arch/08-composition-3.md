@@ -1,54 +1,54 @@
-# Composing
+# Composition
 
-Here are two diagrams that illustrate this architecture:
+Ci-dessous deux diagrammes qui illustrent cette architecture :
 
-### Intial render
+### Affichage initial
 
 ![Flow](06-composing.png)
 
-(1) __App__ calls __Main.initialModel__ to get the intial model for the application
+(1) __App__ appelle __Main.initialModel__ pour obtenir le modèle initial de l'application.
 
-(2) __Main__ calls __Widget.initialModel__
+(2) __Main__ appelle __Widget.initialModel__
 
-(3) __Widget__ returns its initial model
+(3) __Widget__ retourne son modèle initial
 
-(4) __Main__ returns a composed main model which includes the widget model
+(4) __Main__ retourne un modèle principal composé, qui inclut le modèle du widget
 
-(5) __App__ calls __Main.view__, passing the __main model__
+(5) __App__ appelle __Main.view__ en lui passant le modèle principal __mainModel__
 
-(6) __Main.view__ calls __Widget.view__, passing the __widgetModel__ from the main model
+(6) __Main.view__ appelle __Widget.view__, en lui passant __widgetModel__ du modèle principal
 
-(7) __Widget.view__ returns the rendered Html to __Main__
+(7) __Widget.view__ retourne l'Html calculé à __Main__
 
-(8) __Main.view__ returns the rendered Html to __App__
+(8) __Main.view__ retourne l'Html calculé à __App__
 
-(9) __App__ renders this to the browser.
+(9) __App__ affiche le tout dans le navigateur.
 
 ---
 
-### User interaction
+### Interactions avec l'utilisateur
 
 ![Flow](06-composing_001.png)
 
-(1) User clicks on the increase button
+(1) L'utilisateur clique sur le bouton _increase_.
 
-(2) __Widget.view__ emits an __Increase__ message which is picked up by __Main.view__.
+(2) __Widget.view__ émet un message __Increase__ qui est récupéré par __Main.view__.
 
-(3) __Main.view__ tags this message so it becomes (WidgetMsg Increase) and it is send along to __App__ 
+(3) __Main.view__ étiquette ce message de manière à ce qu'il devienne `WidgetMsg Increase` et il est ensuite envoyé à __App__ 
 
-(4) __App__ calls __Main.update__ with this message and the main model
+(4) __App__ appelle __Main.update__ avec ce message et le modèle principal
 
-(5) As the message was tagged with __WidgetMsg__, __Main.update__ delegates the update to __Widget.update__, sending along the way the __widgetModel__ part of the main model
+(5) Puisque le message a été étiqueté avec  __WidgetMsg__, __Main.update__ délègue la mise à jour à  __Widget.update__, qu'il prend soin d'appeler avec la partie __widgetModel__ du modèle principal
 
-(6) __Widget.update__ modifies the model according to the given message, in this case __Increase__. And returns the modified __widgetModel__ plus a command
+(6) __Widget.update__ modifie le modèle en fonction du message reçu, dans notre cas, __Increase__. Il retourne ensuite le __widgetModel__ modifié plus une commande
 
-(7) __Main.update__ updates the main model and returns it to __App__
+(7) __Main.update__ met à jour le modèle principal et le retourne à  __App__
 
-(8) __App__ then renders the view again passing the update main model
+(8) Ensuite __App__ affiche de nouveau la vue en passant le modèle principal mis à jour
 
-## Key points
+## Points clés
 
-- The Elm architecture offers a clean way to compose (or nest) components at as many levels as you need.
-- Children components do not need to know anything about the parent. They define their own types and messages.
-- If a child component needs something in particular (e.g. an additional model) it "asks" for it by using the function signatures. The parent is responsible for providing what the children need.
-- A parent doesn't need to know what is in its children models or what their messages are.  It only needs to provide what its children asks.
+- L'architecture Elm offre une manière propre de composer (ou d'imbriquer) des éléments sur autant de niveaux qu'on le souhaite.
+- Les composants enfants n'ont pas besoin de connaitre quoi que ce soit du parent. Ils définissent leurs propres types et leurs propres messages.
+- Si un composant enfant à besoin de quelque chose en particulier (par exemple, un modèle additionnel), il le « demande » en utilisant les signatures de fonction. C'est le parent qui a la responsabilité de fournir ce dont l'enfant a besoin.
+- Un parent n'a pas besoin de savoir ce qui se passe dans les modèles de ses enfants, ou quels sont leurs messages. Il a juste en charge de fournir ce que les enfants demandent.
