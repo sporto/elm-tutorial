@@ -1,8 +1,8 @@
-# Composing
+# Composition
 
-## The parent component
+## Le composant parent
 
-This is the code for the parent component.
+Voici le code du composant parent :
 
 ```elm
 module Main exposing (..)
@@ -90,9 +90,9 @@ main =
 
 ---
 
-Let's review the important sections of this code.
+Passons en revue les parties importantes de ce code.
 
-### Model
+### Modèle
 
 ```elm
 type alias AppModel =
@@ -100,7 +100,7 @@ type alias AppModel =
     }
 ```
 
-The parent component has its own model. One of the attributes on this model contains the `Widget.Model` ➊. Note how this parent component doesn't need to know about what `Widget.Model` is.
+Le composant parent a son propre modèle. Un des attributs de ce modèle contient `Widget.Model` ➊. Notez que le composant parent n'a pas besoin de savoir ce que `Widget.Model` est.
 
 ```elm
 initialModel : AppModel
@@ -109,9 +109,9 @@ initialModel =
     }
 ```
 
-When creating the initial application model, we simply call `Widget.initialModel` ➋ from here.
+Lorsque nous créons le modèle initial de notre application, nous appelons simplement `Widget.initialModel` ➋.
 
-If you were to have multiple children components, you would do the same for each, for example:
+Si vous aviez à gérer plusieurs composants enfants, vous feriez de même pour chaque, à savoir :
 
 ```
 initialModel : AppModel
@@ -122,7 +122,7 @@ initialModel =
     }
 ```
 
-Or we could have multiple children components of the same type:
+Ou nous pourrions aussi avoir de multiples composants enfants du même type :
 
 ```
 initialModel : AppModel
@@ -138,9 +138,9 @@ type Msg
     = WidgetMsg Widget.Msg
 ```
 
-We use a __union type__ that wraps `Widget.Msg` to indicate that a message belongs to that component. This allows our application to route messages to the relevant components (This will become clear looking at the update function).
+Nous utilisons un __type d'union__ qui encapsule `Widget.Msg` pour indique que ce message appartient à ce composant. Cela permet à notre application de diriger les messages vers les bons composants (ça sera plus clair lorsque que nous verrons la fonction `update`).
 
-In an application with multiple chidlren components we could have something like:
+Dans une application avec de multiples composants enfants, nous pourrions avoir quelque chose de ce type :
 
 ```elm
 type Msg
@@ -149,7 +149,7 @@ type Msg
     | WidgetMsg Widget.Msg
 ```
 
-### View
+### Vue
 
 ```elm
 view : AppModel -> Html Msg
@@ -159,12 +159,12 @@ view model =
         ]
 ```
 
-The main application `view` renders the `Widget.view` ➌. But `Widget.view` emmits `Widget.Msg` so is incompatible with this view which emits `Main.Msg`.
+La fonction `view` de l'application affiche `Widget.view` ➌. Mais `Widget.view` émet des messages de type `Widget.Msg` qui ne sont pas compatibles avec cette vue, qui elle émet des messages du type `Main.Msg`.
 
-- We use `Html.App.map` ➊ to map emitted messages from Widget.view to the type we expect (Msg). `Html.App.map` tags messages comming from the sub view using the `WidgetMsg` ➋ tag.
-- We only pass the part of the model that the children component cares about i.e. `model.widgetModel` ➍.
+- Nous utilisons `Html.App.map` ➊  pour transformer les messages émis de `Widget.view` vers le type que nous attendons (Msg). `Html.App.map` étiquette les messages venant de la sous-vue en utilisant l'étiquette `WidgetMsg` ➋.
+- Nous passons uniquement la partie du modèle qui concerne le composant enfant, à savoir `model.widgetModel` ➍.
 
-### Update
+### Mise à jour
 
 ```elm
 update : Msg -> AppModel -> (AppModel, Cmd Msg)
@@ -178,12 +178,12 @@ update message model =
                 ({ model | widgetModel = updatedWidgetModel }, Cmd.map➎ WidgetMsg widgetCmd)
 ```
 
-When a `WidgetMsg` ➊ is received by `update` we delegate the update to the children component. But the children component will only update what it cares about, which is the `widgetModel` attribute.
+Lorsqu'un `WidgetMsg` ➊  est reçu par `update`, nous déléguons la mise à jour au composant enfant. Mais le composant enfant ne mettra à jour que ce qui l'intéresse, c'est à dire l'attribut `widgetModel` de notre modèle.
 
-We use pattern matching to extract the `subMsg` ➋ from `WidgetMsg`. This `subMsg` will be the type that `Widget.update` expects.
+Nous utilisons du pattern matching pour extraire le `subMsg` ➋ de `WidgetMsg`. Ce `subMsg` sera du type que `Widget.update` attend.
 
-Using this `subMsg` and `model.widgetModel` we call `Widget.update` ➌. This will return a tuple with an updated `widgetModel` and a command.
+Nous appelons `Widget.update` ➌ en utilisant notre `subMsg` et notre `model.widgetModel`. Cela va nous retourner un tuple avec un `widgetModel` mis à jour et une commande.
 
-We use pattern matching again to destructure ➍ the response from `Widget.update`.
+Nous utilisons de nouveau le pattern matching pour déconstruire ➍ la réponse de `Widget.update`.
 
-Finally we need to map the command returned by `Widget.update` to the right type. We use `Cmd.map` ➎ for this and tag the command with `WidgetMsg`, similar to what we did in the view.
+Enfin, nous avons besoin de faire correspondre la commande retournée par `Widget.update` au type adéquat. Pour ce faire nous utilisons `Cmd.map` ➎ et nous étiquetons la commande avec `WidgetMsg`, de la même manière que pour la vue.
