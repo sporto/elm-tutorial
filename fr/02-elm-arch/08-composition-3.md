@@ -4,7 +4,7 @@ Ci-dessous deux diagrammes qui illustrent cette architecture :
 
 ### Affichage initial
 
-![Flow](06-composing.png)
+![Flow](06-composition.png)
 
 (1) __App__ appelle __Main.initialModel__ pour obtenir le modèle initial de l'application.
 
@@ -28,7 +28,7 @@ Ci-dessous deux diagrammes qui illustrent cette architecture :
 
 ### Interactions avec l'utilisateur
 
-![Flow](06-composing_001.png)
+![Flow](06-composition_001.png)
 
 (1) L'utilisateur clique sur le bouton _increase_.
 
