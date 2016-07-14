@@ -1,0 +1,13 @@
+@startuml
+autonumber
+participant App #white
+participant update #white
+participant view #white
+
+App -> view : Affiche la vue
+|||
+view -> App : Déclenche un message, i.e. Expand
+App -> update : Envoie le message avec l'état courant
+update --> App : Renvoie l'état mis à jour + des commandes
+App -> view : Affiche la vue
+@enduml
