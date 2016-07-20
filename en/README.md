@@ -7,7 +7,7 @@ __A tutorial on developing single page web applications (SPAs) with [Elm](http:/
 This tutorial covers:
 
 - Some Elm foundations
-- Understanding signals in Elm
+- Understanding commands and subscriptions in Elm
 - Understanding the Elm architecture
 - Breaking an application in sub components and resources
 - Integrating CSS
