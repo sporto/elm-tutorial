@@ -135,7 +135,7 @@ type Msg
 We have three messages. 
 
 - `Fetch` for initiating a request to the API.
-- `FetchSuccess` for when we get a succesful response from the API.
+- `FetchSuccess` for when we get a successful response from the API.
 - `FetchError` when we fail to reach the API or fail to parse the returned response.
 
 ### Json decoder
