@@ -31,7 +31,7 @@ import Html.Events exposing (onClick)
 Add a new function for this button at the end:
 
 ```elm
-editBtn : Player -> Html.Html Msg
+editBtn : Player -> Html Msg
 editBtn player =
     button
         [ class "btn regular"
@@ -83,7 +83,7 @@ Here we send the `ShowPlayers` when the button is clicked.
 And add this button to the list, change the `nav` function to:
 
 ```elm
-nav : Player -> Html.Html Msg
+nav : Player -> Html Msg
 nav model =
     div [ class "clearfix mb2 white bg-black p1" ]
         [ listBtn ]
