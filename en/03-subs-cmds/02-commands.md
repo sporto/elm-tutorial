@@ -8,6 +8,8 @@ In Elm, commands (Cmd) are how we tell the runtime to execute things that involv
 
 A `Cmd` can be one or a collection of things to do. We use commands to gather all the things that need to happen and hand them to the runtime. Then the runtime will execute them and feed the results back to the application.
 
+In other words, every function returns a value in a functional language such as Elm.  Function side effects in the traditional sense are forbidden by the language design and Elm takes an alternative approach to modeling them.  Essentially, a function returns a command value which names the desired effect.  Due to the Elm architecture, the main Html.App program we've been using is the ultimate recipient of this command value.  The update method of the Html.App program then contains the logic to execute the named command.
+
 Let's try an example app using commands:
 
 ```elm
@@ -113,6 +115,8 @@ update msg model =
 ➊ `Random.generate` creates a command that will generate random numbers. This function requires the first argument to be a constructor for the message that will be fed back to our application. In this case our constructor is `OnResult`.
 
 So when the command is run Elm will call `OnResult` with the generated number, producing `OnResult 2` for example. Then __Html.App__ will feed this message back to application.
+
+In case you're wondering, `OnResult res` denotes a message, OnResult, containing an additional payload of information, the Integer 'res' in this case.  This pattern is known as parameterized types.
 
 ---
 
