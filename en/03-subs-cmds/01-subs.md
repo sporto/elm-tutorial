@@ -2,8 +2,8 @@
 
 In Elm, using __subscriptions__ is how your application can listen for external input. Some examples are:
 
-- Keyboard events
-- Mouse movements
+- [Keyboard events](http://package.elm-lang.org/packages/elm-lang/keyboard/latest/Keyboard)
+- [Mouse movements](http://package.elm-lang.org/packages/elm-lang/mouse/latest/Mouse)
 - Browser locations changes
 - Websocket events
 
