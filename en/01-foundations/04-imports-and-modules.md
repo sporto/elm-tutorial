@@ -12,7 +12,7 @@ This imports the `Html` module from core. Then you can use functions and types f
 Html.div [] []
 ```
 
-You can also import modules and expose functions and types on it:
+You can also import a module and expose specific functions and types from it:
 
 ```
 import Html exposing (div)
