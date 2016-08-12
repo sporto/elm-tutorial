@@ -110,13 +110,13 @@ update message players =
             ( players, Cmd.none )
 
         ShowPlayers ->
-            ( players, Navigation.modifyUrl "#players" )
+            ( players, Navigation.newUrl "#players" )
 
         ShowPlayer id ->
-            ( players, Navigation.modifyUrl ("#players/" ++ (toString id)) )
+            ( players, Navigation.newUrl ("#players/" ++ (toString id)) )
 ```
 
-`Navigation.modifyUrl` returns a command. When this command is run by Elm the location of the browser will change.
+`Navigation.newUrl` returns a command. When this command is run by Elm the location of the browser will change.
 
 ## Test it
 
