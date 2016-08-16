@@ -46,7 +46,7 @@ view : Model -> Html Msg
 view model =
     div []
         [ div [] [ text (toString model.count) ]
-        , button [ onClick Increase ] [ Html.text "Click" ]
+        , button [ onClick Increase ] [ text "Click" ]
         ]
 
 
