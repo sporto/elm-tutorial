@@ -12,7 +12,7 @@ Cela a pour effet d'importer le module `Html` fourni avec Elm. Vous pouvez alors
 Html.div [] []
 ```
 
-Vous pouvez aussi importer des modules et exposer des fonctions ou des types de ce module :
+Vous pouvez aussi importer un module et exposer des fonctions spécifiques ou des types de ce module :
 
 ```
 import Html exposing (div)

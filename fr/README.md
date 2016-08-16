@@ -8,7 +8,7 @@ __Un tutoriel sur le développement d'applications monopage (SPAs / Single Page 
 Les sujets abordés sont:
 
 - Les bases d'Elm
-- Comprendre les signaux avec Elm
+- Comprendre les commandes et les souscriptions avec Elm
 - Comprendre l'architecture Elm
 - Séparer une application en sous-composants et ressources
 - Intégration CSS
