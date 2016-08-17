@@ -9,7 +9,7 @@ A task has the signature: `Task errorValue successValue`. The first argument is 
 - `Task Http.Error String` is a task that fails with an Http.Error or succeeds with a String
 - `Task Never Result` is a task that never fails, and always succeeds with a `Result`.
 
-Task are usually returned from functions that want to do async operations, e.g. sending an Http request.
+Tasks are usually returned from functions that want to do async operations, e.g. sending an Http request.
 
 ## Relation to commands
 

@@ -44,7 +44,7 @@ Here are two diagrams that illustrate this architecture:
 
 (7) __Main.update__ updates the main model and returns it to __App__
 
-(8) __App__ then renders the view again passing the update main model
+(8) __App__ then renders the view again passing the updated main model
 
 ## Key points
 
