@@ -45,7 +45,7 @@ A real world example of this is the `Task` type. When using `Task`, you will see
 
 A typical task has an __error__ and a __result__:
 
-```
+```elm
 Task error result
 ```
 

@@ -12,7 +12,7 @@ Another issue we are likely to hit at some point will be circular dependencies. 
 
 We now have a circular dependency:
 
-```
+```elm
 Main --> View
 View --> Main
 ```
@@ -29,7 +29,7 @@ To deal with circular dependencies in Elm the easiest thing to do is to split yo
 
 Now the dependencies will be:
 
-```
+```elm
 Main --> Models
 View --> Models
 ```
@@ -44,7 +44,7 @@ Let's break the application in smaller modules:
 
 __src/Messages.elm__
 
-```
+```elm
 module Messages exposing (..)
 
 

@@ -4,7 +4,7 @@ Finally we need to account for the new messages in our `update` function. In __s
 
 Add a new import:
 
-```elm
+```bash
 import Players.Commands exposing (save)
 import Players.Models exposing (Player, PlayerId)
 ```
@@ -13,7 +13,7 @@ import Players.Models exposing (Player, PlayerId)
 
 Add a helper function for creating commands for saving a player to the API.
 
-```
+```elm
 changeLevelCommands : PlayerId -> Int -> List Player -> List (Cmd Msg)
 changeLevelCommands playerId howMuch =
     let

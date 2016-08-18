@@ -2,7 +2,7 @@
 
 Try it! Run the fake API in one terminal using:
 
-```
+```bash
 npm run api
 ```
 

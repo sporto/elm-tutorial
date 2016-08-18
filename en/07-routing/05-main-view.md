@@ -83,7 +83,7 @@ When the player edit route matches (e.g. `#players/2`) we will get the player id
 
 ### Finding the player
 
-```
+```elm
 playerEditPage : Model -> PlayerId -> Html Msg
 playerEditPage model playerId =
     let

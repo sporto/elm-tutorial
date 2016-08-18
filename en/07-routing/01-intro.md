@@ -7,7 +7,7 @@ Let's add a routing to our application. We will be using the [Elm Navigation pac
 
 First install the packages:
 
-```
+```bash
 elm package install elm-lang/navigation 1.0.0
 elm package install evancz/url-parser 1.0.0
 ```

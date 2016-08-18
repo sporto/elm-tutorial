@@ -17,7 +17,7 @@ When we get a task from a library, we need to wrap that task into a command so w
 
 Let's see an example, first install some additional packages:
 
-```
+```bash
 elm package install evancz/elm-http
 ```
 
@@ -132,7 +132,7 @@ type Msg
     | FetchError Http.Error
 ```
 
-We have three messages. 
+We have three messages.
 
 - `Fetch` for initiating a request to the API.
 - `FetchSuccess` for when we get a successful response from the API.
@@ -140,7 +140,7 @@ We have three messages.
 
 ### Json decoder
 
-```
+```elm
 decode : Decode.Decoder String
 decode =
     Decode.at ["name"] Decode.string
@@ -166,7 +166,7 @@ fetchCmd =
     Task.perform FetchError FetchSuccess fetchTask
 ```
 
-We use `Task.perform` to transform a task into a command. This function takes: 
+We use `Task.perform` to transform a task into a command. This function takes:
 
 - A constructor for the failure message
 - A constructor for the success message

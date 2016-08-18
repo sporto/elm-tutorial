@@ -18,8 +18,8 @@ update message model =
 
 It is very easy to get stuck in thinking that you need to pass only the `Model` that belongs to this component. Sometimes you need extra information and is perfectly fine to ask for it. For example:
 
-```
-type alias Context = 
+```elm
+type alias Context =
   { model : Model
   , time : Time
   }

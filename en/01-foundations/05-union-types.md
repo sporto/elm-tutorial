@@ -14,7 +14,7 @@ respond answer =
     ...
 ```
 
-Can either take `Yes` or `No` as the first argument e.g. `respond Yes` is a valid call. 
+Can either take `Yes` or `No` as the first argument e.g. `respond Yes` is a valid call.
 
 Union types are also commonly called __tags__ in Elm.
 
@@ -44,7 +44,7 @@ Other "Hello"
 
 This is just like a function call where `Other` is the function. Union types behave just like functions. For example give a type:
 
-```
+```elm
 type Answer = Message Int String
 ```
 
@@ -60,7 +60,7 @@ You can do partial application just like any other function. These are commonly 
 
 It is very common to 'nest' one union type in another.
 
-```
+```elm
 type OtherAnswer = DontKnow | Perhaps | Undecided
 
 type Answer = Yes | No | Other OtherAnswer
@@ -68,7 +68,7 @@ type Answer = Yes | No | Other OtherAnswer
 
 Then you can pass this to our `respond` function (which expect `Answer`) like this:
 
-```
+```elm
 respond (Other Perhaps)
 ```
 
@@ -94,7 +94,7 @@ Here we are saying that the `a` stand-in should be of type `Int` by using  the `
 
 So later we will be able to call respond with:
 
-```
+```elm
 respond (Other 123)
 ```
 
@@ -102,7 +102,7 @@ But respond `(Other "Hello")` would fail because `respond` expects an integer in
 
 ## A common use
 
-One typical use of union types is passing around values in our program where the value can be one of a known set of possible values. 
+One typical use of union types is passing around values in our program where the value can be one of a known set of possible values.
 
 For example, in a typical web application, we have actions that can be performed, e.g. load users, add user, delete user, etc. Some of these actions would have a payload.
 
@@ -114,7 +114,7 @@ type Action
     | AddUser
     | EditUser UserId
     ...
-  
+
 ```
 
 ---
