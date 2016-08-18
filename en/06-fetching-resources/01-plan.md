@@ -16,6 +16,6 @@ This is the plan:
 
 We will need the `http`, install it using:
 
-```
+```bash
 elm package install evancz/elm-http
 ```

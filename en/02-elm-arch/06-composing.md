@@ -59,7 +59,6 @@ update message model =
     case message of
         Increase ->
             ( { model | count = model.count + 1 }, Cmd.none )
-
 ```
 
 This component is nearly identical to the application that we made in the last section, except for subscriptions and main. This component:

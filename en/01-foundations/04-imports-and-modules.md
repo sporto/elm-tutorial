@@ -2,31 +2,31 @@
 
 In Elm you import a module by using the `import` keyword e.g.
 
-```
+```elm
 import Html
 ```
 
 This imports the `Html` module from core. Then you can use functions and types from this module by using its fully qualified path:
 
-```
+```elm
 Html.div [] []
 ```
 
 You can also import a module and expose specific functions and types from it:
 
-```
+```elm
 import Html exposing (div)
 ```
 
 `div` is mixed in the current scope. So you can use it directly:
 
-```
+```elm
 div [] []
 ```
 
 You can even expose everything in a module:
 
-```
+```elm
 import Html exposing (..)
 ```
 
@@ -64,7 +64,7 @@ In the second one we expose the `Html` type from the `Html` module. And use the 
 
 When you create a module in Elm, you add the `module` declaration at the top:
 
-```
+```elm
 module Main exposing (..)
 ```
 
@@ -72,13 +72,13 @@ module Main exposing (..)
 
 You can have deeper file structures in an application. For example, the file __Players/Utils.elm__ should have the declaration:
 
-```
+```elm
 module Players.Utils exposing (..)
 ```
 
 You will be able to import this module from anywhere in your application by:
 
-```
+```elm
 import Players.Utils
 ```
 

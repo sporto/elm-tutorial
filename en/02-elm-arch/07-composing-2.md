@@ -113,7 +113,7 @@ When creating the initial application model, we simply call `Widget.initialModel
 
 If you were to have multiple children components, you would do the same for each, for example:
 
-```
+```elm
 initialModel : AppModel
 initialModel =
     { navModel = Nav.initialModel,
@@ -124,7 +124,7 @@ initialModel =
 
 Or we could have multiple children components of the same type:
 
-```
+```elm
 initialModel : AppModel
 initialModel =
     { widgetModels = [Widget.initialModel]

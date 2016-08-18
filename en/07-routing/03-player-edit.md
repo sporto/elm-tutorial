@@ -59,7 +59,6 @@ btnLevelIncrease : Player -> Html Msg
 btnLevelIncrease player =
     a [ class "btn ml1 h1" ]
         [ i [ class "fa fa-plus-circle" ] [] ]
-
 ```
 
 This view show a form with the player's level. At the moment we have some dummy buttons that will be implemented later e.g. `btnLevelIncrease`.

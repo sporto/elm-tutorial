@@ -2,11 +2,11 @@
 
 We will need a backend for our application, we can use __json-server__ for this.
 
-[json-server](https://github.com/typicode/json-server) is an npm package that provides a quick way to create fake APIs. 
+[json-server](https://github.com/typicode/json-server) is an npm package that provides a quick way to create fake APIs.
 
 Start a new node project:
 
-```
+```bash
 npm init
 ```
 
@@ -14,7 +14,7 @@ Accept all the defaults.
 
 Install __json-server__:
 
-```
+```bash
 npm i json-server -S
 ```
 
@@ -38,7 +38,7 @@ server.listen(4000)
 
 Add __db.json__ at the root:
 
-```
+```json
 {
   "players": [
     { "id": 1, "name": "Sally", "level": 2 },
@@ -47,7 +47,6 @@ Add __db.json__ at the root:
     { "id": 4, "name": "Maria", "level": 4 }
   ]
 }
-
 ```
 
 Start the server by running:

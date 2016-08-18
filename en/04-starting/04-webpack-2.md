@@ -42,7 +42,7 @@ var app = Elm.Main.embed(mountNode);
 
 Run:
 
-```
+```bash
 elm package install elm-lang/html
 ```
 
@@ -159,7 +159,7 @@ Let's test our setup
 
 In a terminal window run:
 
-```
+```bash
 npm run dev
 ```
 
