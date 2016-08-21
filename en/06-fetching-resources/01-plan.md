@@ -1,6 +1,6 @@
 # Plan
 
-The next step is to fetch the list of player from the fake API we created before.
+The next step is to fetch the list of players from the fake API we created before.
 
 This is the plan:
 
@@ -10,7 +10,7 @@ This is the plan:
 
 (3-6) When the request is done, we trigger a `FetchAllDone` with the data, this message flows down to `Players.Update` which updates the collection of players.
 
-(7-10) Then the application renders with the updated player list.
+(7-10) Then the application renders with the updated players' list.
 
 ## Dependencies
 
