@@ -6,7 +6,7 @@ Here are two diagrams that illustrate this architecture:
 
 ![Flow](06-composing.png)
 
-(1) __App__ calls __Main.initialModel__ to get the intial model for the application
+(1) __App__ calls __Main.initialModel__ to get the initial model for the application
 
 (2) __Main__ calls __Widget.initialModel__
 
@@ -34,7 +34,7 @@ Here are two diagrams that illustrate this architecture:
 
 (2) __Widget.view__ emits an __Increase__ message which is picked up by __Main.view__.
 
-(3) __Main.view__ tags this message so it becomes (WidgetMsg Increase) and it is send along to __App__ 
+(3) __Main.view__ tags this message so it becomes (WidgetMsg Increase) and it is send along to __App__
 
 (4) __App__ calls __Main.update__ with this message and the main model
 
