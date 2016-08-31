@@ -21,7 +21,7 @@ Update __src/Main.elm__:
 ...
 import Messages exposing (Msg(..))
 ...
-import Players.Commands exposing(fetchAll)
+import Players.Commands exposing (fetchAll)
 
 init : ( Model, Cmd Msg )
 init =
