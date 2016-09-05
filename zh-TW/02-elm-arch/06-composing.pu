@@ -1,0 +1,36 @@
+@startuml
+autonumber "<b>(#)"
+participant User #white
+participant App #white
+participant Main.initialModel as Mim #white
+participant Main.view as MV #white
+participant Main.update as MU #white
+participant Widget.initialModel as Wim #white
+participant Widget.view as WV #white
+participant Widget.update as WU #white
+
+App -> Mim: initialModel
+Mim -> Wim: initialModel
+Wim --> Mim: widgetModel
+Mim --> App: mainModel
+App -> MV : mainModel
+MV -> WV : widgetModel
+WV --> MV : Html
+MV --> App : Html
+App -> User : Html
+
+newpage
+
+autonumber 1 "<b>(#)"
+User -> WV : Click
+WV -> MV: Increase
+MV -> App: (WidgetMsg Increase)
+App -> MU: (WidgetMsg Increase) mainModel
+MU -> WU : Increase widgetModel
+WU --> MU: (updated widgetModel, command)
+MU --> App: (updated mainModel, command)
+App -> MV : mainModel
+MV -> WV : widgetModel
+WV --> MV : Html
+MV --> App : Html
+@enduml

@@ -1,8 +1,19 @@
 
-![Logo](en/logo.png)
+![Logo](logo.png)
 # Elm Tutorial
 
 __A tutorial on developing single page web applications (SPAs) with [Elm](http://elm-lang.org/).__
+
+This tutorial covers:
+
+- Some Elm foundations
+- Understanding commands and subscriptions in Elm
+- Understanding the Elm architecture
+- Breaking an application in sub components and resources
+- Integrating CSS
+- Fetching and parsing JSON
+- Routing
+- CRUD operations
 
 Read it online [here](http://www.elm-tutorial.org/).
 
@@ -13,15 +24,16 @@ You can also download offline version [here (PDF, ePub, Mobi)](https://www.gitbo
 Code for the example application built in the second part of this tutorial can be
 found at <https://github.com/sporto/elm-tutorial-app>.
 
+## Requirements
+
+For this tutorial you will need:
+
+- Elm version 0.17 (Installation is covered later in the tutorial)
+- Node JS version 4 +
+
 ## Contributing
 
 Please open issues and send PRs at <https://github.com/sporto/elm-tutorial>.
-
-## Translations
-
-French translation by Vincent Jousse [@vjousse](https://twitter.com/intent/user?screen_name=vjousse) and Augustin Ragon [@augustin82](https://twitter.com/intent/user?screen_name=augustin82). 
-Japanese translation by UEHARA Junji [@uehaj](https://twitter.com/intent/user?screen_name=uehaj).
-* 中文(繁體) translation by Jih-Chi Lee [@jihchi](https://github.com/jihchi)
 
 ---
 
@@ -30,4 +42,3 @@ Japanese translation by UEHARA Junji [@uehaj](https://twitter.com/intent/user?sc
 <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" /></a><br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License</a>.
 
 © Sebastian Porto 2016
-
