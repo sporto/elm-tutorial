@@ -1,44 +1,43 @@
 
 ![Logo](logo.png)
-# Elm Tutorial
+# Elm 教學課程
 
-__A tutorial on developing single page web applications (SPAs) with [Elm](http://elm-lang.org/).__
+__[Elm](http://elm-lang.org/) 開發單頁網頁應用程式（single page web applications）教學課程。__
 
-This tutorial covers:
+此教學課程包含：
 
-- Some Elm foundations
-- Understanding commands and subscriptions in Elm
-- Understanding the Elm architecture
-- Breaking an application in sub components and resources
-- Integrating CSS
-- Fetching and parsing JSON
-- Routing
-- CRUD operations
+- 某些 Elm 基礎
+- 瞭解 Elm 的  commands 以及 subscriptions
+- 瞭解 Elm architecture（架構）
+- 拆解應用程式成多個子元件（sub components）及資源（resouces）
+- 整合 CSS
+- 抓取（Fetch）並剖析 JSON
+- 路由（Routing）
+- 增刪改查（CRUD）操作
 
-Read it online [here](http://www.elm-tutorial.org/).
+[點此](http://www.elm-tutorial.org/)線上閱讀。
 
-You can also download offline version [here (PDF, ePub, Mobi)](https://www.gitbook.com/book/sporto/elm-tutorial/details).
+[點此](https://www.gitbook.com/book/sporto/elm-tutorial/details)下載離線版本（PDF、ePub、Mobi）。
 
-## Code
+## 程式原始碼
 
-Code for the example application built in the second part of this tutorial can be
-found at <https://github.com/sporto/elm-tutorial-app>.
+第二部份的範例應用程式碼可以在此取得：<https://github.com/sporto/elm-tutorial-app>
 
-## Requirements
+## 系統需求
 
-For this tutorial you will need:
+本教學課程需要：
 
-- Elm version 0.17 (Installation is covered later in the tutorial)
-- Node JS version 4 +
+- Elm 0.17 版（安裝說明稍候將會納入課程）
+- Node JS 4 以上版本
 
-## Contributing
+## 需求貢獻
 
-Please open issues and send PRs at <https://github.com/sporto/elm-tutorial>.
+請在 <https://github.com/sporto/elm-tutorial> 開啟議題及發送 PR。
 
 ---
 
-[Share on Twitter](https://twitter.com/intent/tweet?&text=Elm%20Tutorial&url=http%3A%2F%2Fwww.elm-tutorial.org&via=sebasporto) | [Follow @sebasporto](https://twitter.com/intent/user?screen_name=sebasporto)
+[分享於 Twitter](https://twitter.com/intent/tweet?&text=Elm%20Tutorial&url=http%3A%2F%2Fwww.elm-tutorial.org&via=sebasporto) | [追隨 @sebasporto](https://twitter.com/intent/user?screen_name=sebasporto)
 
-<a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" /></a><br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License</a>.
+<a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="創用 CC 授權條款" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" /></a><br />本著作係採用<a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">創用 CC 姓名標示-非商業性-相同方式分享 4.0 國際 授權條款</a>授權.
 
 © Sebastian Porto 2016
