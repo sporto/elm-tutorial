@@ -61,4 +61,5 @@
    * [Improvements](09-conclusion/01-improvements.md)
 * Tips and Tricks
    * [Context](tips-tricks/context.md)
+   * [Troubleshooting](tips-tricks/troubleshooting.md)
 
