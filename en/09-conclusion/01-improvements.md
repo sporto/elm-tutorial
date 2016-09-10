@@ -14,7 +14,7 @@ At the moment if fetching or saving players fail we do nothing. It would be nice
 
 ## Even better error messages
 
-Even better that just showing error messages it would be great to:
+Even better than just showing error messages it would be great to:
 
 - Show different types of flash messages e.g. error and info
 - Show several flash messages at the same time
