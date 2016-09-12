@@ -87,7 +87,7 @@ divide 5 2 == 2.5
 However, this is not quite true, in Elm all functions take exactly one argument and return a result. This result can be another function. 
 Let's explain this using the function above.
 
-```
+```elm
 -- When we do:
 
 divide 5 2
@@ -99,7 +99,7 @@ divide 5 2
 -- First `divide 5` is evaluated.
 -- The argument `5` is applied to `divide`, resulting in an intermediate function.
 
-divide 5 --> intermediate function
+divide 5 -- -> intermediate function
 
 -- Let's call this intermediate function `divide5`.
 -- If we could see the signature and body of this intermediate function, it would look like:
