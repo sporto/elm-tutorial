@@ -6,8 +6,21 @@ This chapter covers basic Elm syntax that is important to get familiar with: fun
 
 Elm supports two kind of functions:
 
-- named functions
 - anonymous functions
+- named functions
+
+### Anonymous function
+
+An anonymous function, as its name implies, is a function we create without a name:
+
+```elm
+\x -> x + 1
+
+\x y -> x + y
+```
+
+Between the backslash and the arrow, you list the arguments of the function, and on the right of the arrow, you say what to do with those arguments.
+
 
 ### Named functions
 
@@ -19,8 +32,8 @@ add1 x =
   x + 1
 ```
 
-The first line in the example is the function signature. This signature is optional in Elm, but recommended because it makes the intention of your function clearer.
-The rest is the implementation of the function. The implementation must follow the signature defined above.
+- The first line in the example is the function signature. This signature is optional in Elm, but recommended because it makes the intention of your function clearer.
+- The rest is the implementation of the function. The implementation must follow the signature defined above.
 
 In this case the signature is saying: Given an integer (Int) as argument return another integer.
 
@@ -32,6 +45,22 @@ add1 3
 
 In Elm we use *whitespace* to denote function application (instead of using parenthesis).
 
+Here is another named function:
+
+```elm
+add : Int -> Int -> Int
+add x y =
+  x + y
+```
+
+This function takes two arguments (both Int) and returns another Int. You call this function like:
+
+```elm
+add 2 3
+```
+
+### No arguments
+
 A function that takes no arguments is a constant in Elm:
 
 ```elm
@@ -39,60 +68,56 @@ name =
   "Sam"
 ```
 
-### Functions return other functions
+### How functions are applied
 
-A function that takes two arguments looks like:
+As shown above a function that takes two arguments may look like:
 
 ```elm
-add : Int -> Int -> Int
-add x y =
-    x + y
+divide : Float -> Float -> Float
+divide x y =
+    x / y
 ```
 
-You can think of this signature as a function that takes two integers and returns another integer:
+We can think of this signature as a function that takes two floats and returns another float:
 
 ```elm
-add 1 2 == 3
+divide 5 2 == 2.5
 ```
 
-However, in Elm all functions take exactly one argument and return either another function or a result.
+However, this is not quite true, in Elm all functions take exactly one argument and return a result. This result can be another function. 
+Let's explain this using the function above.
 
-- The first argument is applied returning an intermediate function or a result.
-- Then the next argument is applied to that intermediate function returning another function or a result.
-- And so on until we run out of arguments to apply.
-
-Let's see an example to understand this:
-
-```elm
-add 3 2
 ```
+-- When we do:
 
-First the `3` is applied to `add`.
-We get an anonymous partially applied function, let's call this intermediate function `add3`.
+divide 5 2
 
-Then the 2 is applied to that intermediate function, giving the final result 5.
+-- This is evaluated as:
 
-```elm
-add3 2
-```
+((divide 5) 2)
 
-Another way to visualise this is by using parenthesis:
+-- First `divide 5` is evaluated.
+-- The argument `5` is applied to `divide`, resulting in an intermediate function.
 
-```elm
-((add 3) 2)
+divide 5 --> intermediate function
+
+-- Let's call this intermediate function `divide5`.
+-- If we could see the signature and body of this intermediate function, it would look like:
+
+divide5 : Float -> Float
+divide5 y =
+  5 / y
+
+-- So we have a function that has the `5` already applied.
+
+-- Then the next argument is applied i.e. `2`
+
+divide5 2
+
+-- And this returns the final result
 ```
 
 The reason we can avoid writing the parenthesis is because function application **associates to the left**.
-
-### Anonymous function
-
-An anonymous function, as its name implies, is a function we create without a name:
-
-```elm
-\n -> n + 1
-```
-
-Between the backslash and the arrow, you list the arguments of the function, and on the right of the arrow, you say what to do with those arguments.
 
 ### Grouping with parentheses
 
