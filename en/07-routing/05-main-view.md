@@ -101,24 +101,3 @@ playerEditPage model playerId =
 ```
 
 We have the `playerId`, but we might not have the actual player record for that id. We filter the players' list by that id and have a case expression that show the correct view depending if the player is found or not.
-
-#### Note: Anonymous functions
-
-```elm
-\player -> player.id == playerId
-```
-
-This snippet above is an anonymous function in Elm, it takes a `player` as the only argument and compares the `id` with a `playerId`.
-
-Other examples or anonymous are:
-
-```elm
-\_ -> 2
-
--- Ignore the first argument and always return 2
-
-\a b -> a + b
-
--- Take two numbers and add them
-
-```
