@@ -5,6 +5,7 @@ When the request for players is done, we trigger the `FetchAllDone` message.
 __src/Players/Update.elm__ should account for this new message. Change `update` to:
 
 ```elm
+...
 update : Msg -> List Player -> ( List Player, Cmd Msg )
 update message players =
     case message of
