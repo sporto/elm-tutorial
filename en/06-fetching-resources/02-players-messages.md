@@ -3,7 +3,6 @@
 First let's create the messages we need for fetching players. Add a new import and message to __src/Players/Messages.elm__
 
 ```elm
-...
 module Players.Messages exposing (..)
 
 import Http
