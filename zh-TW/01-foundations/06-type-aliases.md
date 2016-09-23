@@ -1,4 +1,4 @@
-# Type aliases
+# 型別別名（aliases）
 
 A __type alias__ in Elm is, as its name says, an alias for something else. For example, in Elm you have the core `Int` and `String` types. You can create aliases for them:
 
@@ -45,7 +45,7 @@ type alias Player =
     { id : Int
     , name : String
     }
-  
+
 label: Player -> String
 ```
 
@@ -60,7 +60,7 @@ type alias Player =
     { id : Int
     , name : String
     }
-  
+
 Player 1 "Sam"
 ==> { id = 1, name = "Sam" }
 ```

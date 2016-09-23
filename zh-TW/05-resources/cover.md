@@ -1,4 +1,4 @@
-# Resources
+# 資源（Resources）
 
 Up to this point your code should look like <https://github.com/sporto/elm-tutorial-app/tree/03-multiple-modules>
 

@@ -1,4 +1,4 @@
-# Players Update
+# 玩家更新（Update）
 
 Finally we need to account for the new messages in our `update` function. In __src/Players/Update.elm__:
 

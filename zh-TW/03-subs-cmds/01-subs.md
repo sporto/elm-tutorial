@@ -1,4 +1,4 @@
-# Subscriptions
+# 訂閱（Subscriptions）
 
 In Elm, using __subscriptions__ is how your application can listen for external input. Some examples are:
 

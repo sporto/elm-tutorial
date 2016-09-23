@@ -1,4 +1,4 @@
-# More on functions
+# 更多函式
 
 ## Type variables
 

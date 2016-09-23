@@ -1,4 +1,4 @@
-# Composing
+# 組成（Composing）
 
 One of the big benefits of using the Elm architecture is the way it handles composition of components. To understand this, let's build an example:
 

@@ -1,4 +1,4 @@
-# The Elm architecture
+# Elm 架構
 
 This chapter covers:
 

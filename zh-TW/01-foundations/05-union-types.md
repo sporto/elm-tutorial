@@ -1,4 +1,4 @@
-# Union types
+# 聯集型別（Union types）
 
 In Elm, __Union Types__ are used for many things as they are incredibly flexible. A union type looks like:
 

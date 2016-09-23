@@ -1,4 +1,4 @@
-# Starting an application
+# 開始應用程式
 
 In this chapter we start building an example Elm application.
 

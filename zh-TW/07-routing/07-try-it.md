@@ -1,4 +1,4 @@
-# Try it
+# 試試看
 
 Let's try what we have so far. Run the application by doing:
 

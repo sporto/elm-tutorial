@@ -1,6 +1,6 @@
-# Multiple modules
+# 多重（Multiple）模組
 
-Our application is going to grow soon, so keeping things in one file will become hard to maintain quite fast. 
+Our application is going to grow soon, so keeping things in one file will become hard to maintain quite fast.
 
 ### Circular dependencies
 
@@ -19,7 +19,7 @@ View --> Main
 
 #### How to break it?
 
-In this case what we need to do is to move the `Player` type out of `Main`, somewhere it can be imported by both `Main` and `View`. 
+In this case what we need to do is to move the `Player` type out of `Main`, somewhere it can be imported by both `Main` and `View`.
 
 To deal with circular dependencies in Elm the easiest thing to do is to split your application into smaller modules. In this particular example we can create another module that can be imported by both `Main` and `View`. We will have three modules:
 
@@ -135,5 +135,3 @@ You can find the code here <https://github.com/sporto/elm-tutorial-app/tree/03-m
 ---
 
 There are lots of little modules now, this is overkill for a trivial application. But for a bigger application splitting it makes it easier to work with.
-
-

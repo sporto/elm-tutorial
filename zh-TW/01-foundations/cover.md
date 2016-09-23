@@ -1,4 +1,4 @@
-# Foundations
+# 基礎
 
 This chapter covers:
 

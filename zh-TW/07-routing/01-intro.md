@@ -1,4 +1,4 @@
-# Routing introduction
+# 簡介
 
 Let's add a routing to our application. We will be using the [Elm Navigation package](http://package.elm-lang.org/packages/elm-lang/navigation/) and [UrlParser](http://package.elm-lang.org/packages/evancz/url-parser/).
 
@@ -42,5 +42,3 @@ Here are a couple of diagrams to understand how routing will work.
 1. `Navigation` then calls a `urlUpdate` function that we provide passing the matched route
 1. In `urlUpdate` we store the matched route in the application model and return the update model
 1. Navigation then renders the application as normal
-
-

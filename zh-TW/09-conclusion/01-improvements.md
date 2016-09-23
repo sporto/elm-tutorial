@@ -1,4 +1,4 @@
-# Improvements
+# 改進
 
 Here is a list of possible improvement you can try on this app.
 

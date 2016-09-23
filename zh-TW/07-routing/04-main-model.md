@@ -1,4 +1,4 @@
-# Main model
+# 主模型（Main model）
 
 In our main application model we want to store the current route.
 Change __src/Models.elm__ to:

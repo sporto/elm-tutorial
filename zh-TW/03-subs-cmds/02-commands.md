@@ -1,4 +1,4 @@
-# Commands
+# 命令（Commands）
 
 In Elm, commands (Cmd) are how we tell the runtime to execute things that involve side effects. For example:
 

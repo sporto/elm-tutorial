@@ -1,4 +1,4 @@
-# Main
+# 主模組（Main modules）
 
 The main level needs to be hooked up with the Players modules we created.
 

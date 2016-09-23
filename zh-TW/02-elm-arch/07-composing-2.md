@@ -1,6 +1,6 @@
-# Composing
+# 組合
 
-## The parent component
+## 父子關係
 
 This is the code for the parent component.
 

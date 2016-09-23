@@ -1,4 +1,4 @@
-# Players Update
+# 玩家更新（Players update）
 
 When the request for players is done, we trigger the `FetchAllDone` message.
 

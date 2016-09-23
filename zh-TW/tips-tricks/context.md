@@ -1,4 +1,4 @@
-# Contexts
+# 內容
 
 Typical `update` or `view` functions look like:
 
@@ -30,4 +30,3 @@ view context =
 ```
 
 This function asks for the component model plus a `time` which is defined in its parent's model.
-

@@ -1,4 +1,4 @@
-# Main View
+# 主視界（Main view）
 
 Modify __src/View.elm__ to include the list of players:
 
@@ -22,4 +22,3 @@ page : Model -> Html Msg
 page model =
     Html.App.map PlayersMsg (Players.List.view model.players)
 ```
-

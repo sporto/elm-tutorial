@@ -1,4 +1,4 @@
-# Tasks
+# 任務（Tasks）
 
 We have seen how we can use commands to gather results from activities involving side effects. But commands don't have a concept of success or failure. They also don't have the concept of sequencing. Commands are just bags of things to do.
 

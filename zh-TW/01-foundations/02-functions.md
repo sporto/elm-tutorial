@@ -1,4 +1,4 @@
-# Function basics
+# 函式
 
 This chapter covers basic Elm syntax that is important to get familiar with: functions, function signatures, partial application and the pipe operator.
 
@@ -84,7 +84,7 @@ We can think of this signature as a function that takes two floats and returns a
 divide 5 2 == 2.5
 ```
 
-However, this is not quite true, in Elm all functions take exactly one argument and return a result. This result can be another function. 
+However, this is not quite true, in Elm all functions take exactly one argument and return a result. This result can be another function.
 Let's explain this using the function above.
 
 ```elm

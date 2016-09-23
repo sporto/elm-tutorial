@@ -1,4 +1,4 @@
-## Player edit view
+## 玩家編輯（Player edit）
 
 We created a `ChangeLevel` message. Let's trigger this message from the player's edit view.
 

@@ -1,4 +1,4 @@
-# Fetching resources
+# 擷取（Fetching）資源
 
 This chapter covers fetching the players' collection from the fake API.
 

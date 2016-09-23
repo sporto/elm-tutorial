@@ -1,4 +1,4 @@
-# Players Commands
+# 玩家命令（Commands）
 
 Next let's create tasks and commands to save an updated player through our API.
 
@@ -98,5 +98,3 @@ save player =
 ```
 
 Takes the `saveTask` ➊ and converts it to a command using `Task.perform` ➋. This command will resolve on the `SaveFail` message on failure or `SaveSuccess` message on success.
-
-

@@ -1,6 +1,6 @@
-# Routing
+# 路由
 
-Create a module __src/Routing.elm__ for defining the application routing configuration. 
+Create a module __src/Routing.elm__ for defining the application routing configuration.
 
 In this module we define:
 
@@ -112,7 +112,7 @@ Each time the browser location changes, the Navigation library will give us a `N
 
 - Takes this `Navigation.Location` record ➊
 - Extracts the `.hash` part of it ➋
-- Removes the first character (the `#`) 
+- Removes the first character (the `#`)
 - Sends this string to `parse` with our defined matchers ➍
 
 This parser returns a `Result` value. If the parser succeeds we will get the matched `Route`, otherwise we will get an error as a string.

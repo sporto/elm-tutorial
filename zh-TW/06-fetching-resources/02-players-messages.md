@@ -1,4 +1,4 @@
-# Players messages
+# 玩家訊息（Players messages）
 
 First let's create the messages we need for fetching players. Add a new import and message to __src/Players/Messages.elm__
 
@@ -17,4 +17,3 @@ type Msg
 `FetchAllDone` will be called when we get the response from the server. This message will carry the list of fetched players.
 
 `FetchAllFail` will be called if there is a problem fetching the data.
-

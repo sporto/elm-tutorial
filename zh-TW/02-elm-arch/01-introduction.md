@@ -1,4 +1,4 @@
-# Introduction
+# 簡介
 
 When building front end applications in Elm, we use the pattern known as the Elm architecture. This pattern provides a way of creating self contained components that can be reused, combined, and composed in endless variety.
 
@@ -92,4 +92,3 @@ elm reactor
 And opening http://localhost:8000/App.elm
 
 This is a lot of code for just showing "Hello", but it will help us understand the structure of even very complicated Elm applications.
-

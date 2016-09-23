@@ -1,4 +1,4 @@
-# Main
+# 主程式（Main）
 
 Finally modify __src/Main.elm__ to call `initialModel`:
 
@@ -39,4 +39,3 @@ When you run the application you should see a list with one user.
 ![Screenshot](screenshot.png)
 
 The application should look like <https://github.com/sporto/elm-tutorial-app/tree/04-resources>
-

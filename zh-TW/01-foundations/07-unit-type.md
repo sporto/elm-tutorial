@@ -1,4 +1,4 @@
-# The unit type
+# 單位型別（The unit type）
 
 The empty tuple `()` is called the __unit type__ in Elm.  It is so prevalent that it deserves some explanation.
 
@@ -35,7 +35,7 @@ readMessage message =
     ...
 ```
 
-This function takes `Message` with an __empty body__. This is not the same as __any value__, just an __empty__ one. 
+This function takes `Message` with an __empty body__. This is not the same as __any value__, just an __empty__ one.
 
 So the unit type is commonly used as a placeholder for an empty value.
 

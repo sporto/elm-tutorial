@@ -1,4 +1,4 @@
-# Imports and modules
+# 匯入（Imports）與模組（Modules）
 
 In Elm you import a module by using the `import` keyword e.g.
 
@@ -81,7 +81,3 @@ You will be able to import this module from anywhere in your application by:
 ```elm
 import Players.Utils
 ```
-
-
-
-

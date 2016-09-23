@@ -1,4 +1,4 @@
-# Messages
+# 訊息（Messages）
 
 In the last section, we created an application using Html.App that was just static Html. Now let's create an application that responds to user interaction using messages.
 
@@ -83,7 +83,7 @@ main =
         }
 ```
 
-This program is very similar to the previous program we did, but now we have two messages: `Expand` and `Collapse`. You can run this program by copying it into a file and opening it using Elm reactor. 
+This program is very similar to the previous program we did, but now we have two messages: `Expand` and `Collapse`. You can run this program by copying it into a file and opening it using Elm reactor.
 
 Let's look more closely at the `view` and `update` functions.
 
@@ -102,7 +102,7 @@ view model =
             [ button [ onClick Expand ] [ text "Expand" ] ]
 ```
 
-Depending on the state of the model we show either the collapsed or the expanded view. 
+Depending on the state of the model we show either the collapsed or the expanded view.
 
 Note the `onClick` function. As this view is of type `Html Msg` we can trigger messages of that type using `onClick`. Collapse and Expand are both of type Msg.
 
@@ -119,6 +119,6 @@ update msg model =
             ( False, Cmd.none )
 ```
 
-`update` responds to the possible messages. Depending on the message, it returns the desired state. When the message is `Expand`, the new state will be `True` (expanded). 
+`update` responds to the possible messages. Depending on the message, it returns the desired state. When the message is `Expand`, the new state will be `True` (expanded).
 
 Next let's see how __Html.App__ orchestrates these pieces together.

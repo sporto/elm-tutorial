@@ -1,4 +1,4 @@
-# Players commands
+# 玩家命令（Players commands）
 
 Now we need to create the tasks and command to fetch the players from the server. Create __src/Players/Commands.elm__:
 

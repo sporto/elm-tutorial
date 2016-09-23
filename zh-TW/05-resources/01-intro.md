@@ -1,4 +1,4 @@
-# The Players resource
+# 玩家（Players）資源
 
 We will organise our application structure by the name of the resources in our application. In this app, we only have one resource (`Players`) so there will be only a `Players` directory.
 
@@ -12,4 +12,3 @@ However, we will have different views for players: A list and a edit view. Each 
 
 - Players/List.elm
 - Players/Edit.elm
-

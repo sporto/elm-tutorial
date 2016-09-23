@@ -1,4 +1,4 @@
-# Main
+# 主程式
 
 Finally we need to wire everything in the Main module.
 

@@ -1,4 +1,4 @@
-# Planning
+# 規劃
 
 We will build a basic application to track an imaginary role playing game.
 

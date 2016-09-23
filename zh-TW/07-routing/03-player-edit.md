@@ -1,4 +1,4 @@
-# Player edit view
+# 玩家編輯的視界（Player edit view）
 
 We need a new view to show when hitting `/players/3`.
 
@@ -62,8 +62,3 @@ btnLevelIncrease player =
 ```
 
 This view shows a form with the player's level. At the moment we have some dummy buttons that will be implemented later e.g. `btnLevelIncrease`.
-
-
-
-
-

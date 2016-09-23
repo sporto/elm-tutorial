@@ -1,4 +1,4 @@
-# Edit
+# 編輯（Editing）
 
 In this last chapter of the tutorial we will edit a player's level and save it to the backend.
 

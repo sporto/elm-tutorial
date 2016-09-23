@@ -1,4 +1,4 @@
-# Navigation
+# 導覽（Navigation）
 
 Next let's add buttons to navigate between views.
 

@@ -1,4 +1,4 @@
-# Structure of Html.App
+# Html.App 的結構
 
 ### Imports
 
@@ -8,7 +8,7 @@ import Html.App
 ```
 
 - We will use the `Html` type from the `Html` module, plus a couple of functions `div` and `text`.
-- We also import `Html.App` which is the glue that will orchestrate our application. This is the equivalent to StartApp if you have used Elm 0.16. 
+- We also import `Html.App` which is the glue that will orchestrate our application. This is the equivalent to StartApp if you have used Elm 0.16.
 
 ### Model
 
@@ -23,7 +23,7 @@ init =
 ```
 
 - First we define our application model as a type alias, in this kind. Here it is just a `String`.
-- Then we define an `init` function. This function provides the initial input for the application. 
+- Then we define an `init` function. This function provides the initial input for the application.
 
 __Html.App__ expects a tuple with `(model, command)`. The first element in this tuple is our initial state, e.g. "Hello". The second element is an initial command to run. More on this later.
 
@@ -67,7 +67,7 @@ update msg model =
             ( model, Cmd.none )
 ```
 
-Next we define an `update` function, this function will be called by Html.App each time a message is received. This update function responds to messages updating the model and returning commands as needed. 
+Next we define an `update` function, this function will be called by Html.App each time a message is received. This update function responds to messages updating the model and returning commands as needed.
 
 In this example, we only respond to `NoOp` and return the unchanged model and `Cmd.none` (meaning no command to perform).
 
@@ -101,10 +101,3 @@ main =
 ```
 
 Finally `Html.App.program` wires everything together and returns an html element that we can render in the page. `program` takes our `init`, `view`, `update` and `subscriptions`.
-
-
-
-
-
-
- 

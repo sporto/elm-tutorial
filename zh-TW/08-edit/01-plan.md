@@ -1,4 +1,4 @@
-# Plan
+# 規劃
 
 The plan for changing a player's level is as follow:
 
