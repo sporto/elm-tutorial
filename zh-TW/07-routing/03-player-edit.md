@@ -61,7 +61,7 @@ btnLevelIncrease player =
         [ i [ class "fa fa-plus-circle" ] [] ]
 ```
 
-This view show a form with the player's level. At the moment we have some dummy buttons that will be implemented later e.g. `btnLevelIncrease`.
+This view shows a form with the player's level. At the moment we have some dummy buttons that will be implemented later e.g. `btnLevelIncrease`.
 
 
 

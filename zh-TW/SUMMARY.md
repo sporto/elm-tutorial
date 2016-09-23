@@ -2,7 +2,7 @@
 
 * [簡介](README.md)
 * [基礎](01-foundations/cover.md)
-   * [哈嘍世界](01-foundations/01-hello.md)
+   * [Hello World](01-foundations/01-hello.md)
    * [函式](01-foundations/02-functions.md)
    * [更多函式](01-foundations/03-functions-2.md)
    * [匯入（Imports）與模組（Modules）](01-foundations/04-imports-and-modules.md)
@@ -21,7 +21,7 @@
 * [訂閱（Subscriptions）與命令（Commands）](03-subs-cmds/cover.md)
    * [訂閱（Subscriptions）](03-subs-cmds/01-subs.md)
    * [命令（Commands）](03-subs-cmds/02-commands.md)
-   * [工作（Tasks）](03-subs-cmds/03-tasks.md)
+   * [任務（Tasks）](03-subs-cmds/03-tasks.md)
 * [開始應用程式](04-starting/cover.md)
    * [規劃](04-starting/01-planning.md)
    * [後端](04-starting/02-backend.md)
@@ -61,4 +61,5 @@
    * [改進](09-conclusion/01-improvements.md)
 * 秘訣和訣竅
    * [內容](tips-tricks/context.md)
+   * [故障檢修](tips-tricks/troubleshooting.md)
 

@@ -101,4 +101,3 @@ playerEditPage model playerId =
 ```
 
 We have the `playerId`, but we might not have the actual player record for that id. We filter the players' list by that id and have a case expression that show the correct view depending if the player is found or not.
-

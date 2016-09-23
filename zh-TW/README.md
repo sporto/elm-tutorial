@@ -4,7 +4,7 @@
 
 __[Elm](http://elm-lang.org/) 開發單頁網頁應用程式（single page web applications）教學課程。__
 
-此教學課程包含：
+此課程包含：
 
 - 某些 Elm 基礎
 - 瞭解 Elm 的  commands 以及 subscriptions
@@ -15,11 +15,11 @@ __[Elm](http://elm-lang.org/) 開發單頁網頁應用程式（single page web a
 - 路由（Routing）
 - 增刪改查（CRUD）操作
 
-[點此](http://www.elm-tutorial.org/)線上閱讀。
+線上閱讀請到[這裡](http://www.elm-tutorial.org/)。
 
-[點此](https://www.gitbook.com/book/sporto/elm-tutorial/details)下載離線版本（PDF、ePub、Mobi）。
+你也可以在[這裡](https://www.gitbook.com/book/sporto/elm-tutorial/details)下載離線版本（PDF、ePub、Mobi）。
 
-## 程式原始碼
+## 程式碼
 
 第二部份的範例應用程式碼可以在此取得：<https://github.com/sporto/elm-tutorial-app>
 

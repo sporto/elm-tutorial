@@ -4,27 +4,120 @@ This chapter covers basic Elm syntax that is important to get familiar with: fun
 
 ## Functions
 
-Let's have a look at a function in Elm:
+Elm supports two kind of functions:
+
+- anonymous functions
+- named functions
+
+### Anonymous function
+
+An anonymous function, as its name implies, is a function we create without a name:
+
+```elm
+\x -> x + 1
+
+\x y -> x + y
+```
+
+Between the backslash and the arrow, you list the arguments of the function, and on the right of the arrow, you say what to do with those arguments.
+
+
+### Named functions
+
+A named function in Elm looks like this:
+
+```elm
+add1 : Int -> Int
+add1 x =
+  x + 1
+```
+
+- The first line in the example is the function signature. This signature is optional in Elm, but recommended because it makes the intention of your function clearer.
+- The rest is the implementation of the function. The implementation must follow the signature defined above.
+
+In this case the signature is saying: Given an integer (Int) as argument return another integer.
+
+You call it like:
+
+```
+add1 3
+```
+
+In Elm we use *whitespace* to denote function application (instead of using parenthesis).
+
+Here is another named function:
 
 ```elm
 add : Int -> Int -> Int
 add x y =
-    x + y
+  x + y
 ```
 
-The first line in the example is the function signature. This signature is optional in Elm, but recommended because it makes the intention of your function clearer.
-
-This function called `add` takes two integers (`Int -> Int`) and returns another integer (The third `-> Int`).
-
-The second line is the function declaration. The parameters are `x` and `y`.
-
-Then we have the body of the function `x + y` which just returns the sum of the parameters.
-
-You call this function by writing:
+This function takes two arguments (both Int) and returns another Int. You call this function like:
 
 ```elm
-add 1 2
+add 2 3
 ```
+
+### No arguments
+
+A function that takes no arguments is a constant in Elm:
+
+```elm
+name =
+  "Sam"
+```
+
+### How functions are applied
+
+As shown above a function that takes two arguments may look like:
+
+```elm
+divide : Float -> Float -> Float
+divide x y =
+    x / y
+```
+
+We can think of this signature as a function that takes two floats and returns another float:
+
+```elm
+divide 5 2 == 2.5
+```
+
+However, this is not quite true, in Elm all functions take exactly one argument and return a result. This result can be another function. 
+Let's explain this using the function above.
+
+```elm
+-- When we do:
+
+divide 5 2
+
+-- This is evaluated as:
+
+((divide 5) 2)
+
+-- First `divide 5` is evaluated.
+-- The argument `5` is applied to `divide`, resulting in an intermediate function.
+
+divide 5 -- -> intermediate function
+
+-- Let's call this intermediate function `divide5`.
+-- If we could see the signature and body of this intermediate function, it would look like:
+
+divide5 : Float -> Float
+divide5 y =
+  5 / y
+
+-- So we have a function that has the `5` already applied.
+
+-- Then the next argument is applied i.e. `2`
+
+divide5 2
+
+-- And this returns the final result
+```
+
+The reason we can avoid writing the parenthesis is because function application **associates to the left**.
 
 ### Grouping with parentheses
 
@@ -44,16 +137,16 @@ add(1, divide(12, 3))
 
 ## Partial application
 
-In Elm you can take a function, like `add` above, and call it with only one argument, e.g. `add 2`.
+As explained above every function takes only one argument and returns another function or a result.
+This means you can call a function like `add` above with only one argument, e.g. `add 2` and get a *partially applied function** back.
+This resulting function has a signature `Int -> Int`.
 
-This returns another function with the value `2` bound as the first parameter. Calling the returned function with a second value returns `2 + ` the second value:
+`add 2` returns another function with the value `2` bound as the first parameter. Calling the returned function with a second value returns `2 + ` the second value:
 
 ```elm
 add2 = add 2
 add2 3 -- result 5
 ```
-
-Another way to think about a function signature like `add : Int -> Int -> Int` is that it is a function that takes one integer as argument and returns another function. The returned function takes another integer and returns an integer.
 
 Partial application is incredibly useful in Elm for making your code more readable and passing state between functions in your application.
 
@@ -79,7 +172,7 @@ This code is difficult to read, because it resolves inside out. The pipe operato
     |> add 1
 ```
 
-This relies heavily on partial application. In this example the value `3` is passed to a partially applied function `multiply 2`. Its result is in turn passed to another partially applied function `add 1`.
+This relies heavily on partial application as explained before. In this example the value `3` is passed to a partially applied function `multiply 2`. Its result is in turn passed to another partially applied function `add 1`.
 
 Using the pipe operator the complex example above would be written like:
 
