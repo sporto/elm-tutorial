@@ -1,17 +1,17 @@
 # 函式
 
-This chapter covers basic Elm syntax that is important to get familiar with: functions, function signatures, partial application and the pipe operator.
+本章節包含了基本的 Elm 語法，重要必須熟悉：函式，函式標記式（function signatures），部份套用（partial application）及輸送運算子（pipe operator）。
 
-## Functions
+## 函式
 
-Elm supports two kind of functions:
+Elm 支援兩種函式：
 
-- anonymous functions
-- named functions
+- 匿名函式（anonymous functions）
+- 具名函式（named functions）
 
-### Anonymous function
+### 匿名函式
 
-An anonymous function, as its name implies, is a function we create without a name:
+顧名思義，沒有函式名稱的函式：
 
 ```elm
 \x -> x + 1
@@ -19,12 +19,11 @@ An anonymous function, as its name implies, is a function we create without a na
 \x y -> x + y
 ```
 
-Between the backslash and the arrow, you list the arguments of the function, and on the right of the arrow, you say what to do with those arguments.
+反斜線與箭頭之間為函式的引數（傳給函式的值），箭頭右邊則是你希望作的事情。
 
+### 具名函式
 
-### Named functions
-
-A named function in Elm looks like this:
+Elm 的具名函式看起來像似：
 
 ```elm
 add1 : Int -> Int
@@ -32,20 +31,20 @@ add1 x =
   x + 1
 ```
 
-- The first line in the example is the function signature. This signature is optional in Elm, but recommended because it makes the intention of your function clearer.
-- The rest is the implementation of the function. The implementation must follow the signature defined above.
+- 範例中第一行為函式的標記式。雖然標記式是選擇性的（optional）加入，但建議加入。這讓你的函式的意圖更加清楚。
+- 剩下的部份則是函式的實作。實作必須遵循標記式。
 
-In this case the signature is saying: Given an integer (Int) as argument return another integer.
+此例中標記式描述：給定一個整數（Int）作為引數，傳回另一個整數。
 
-You call it like:
+呼叫方法類似：
 
 ```
 add1 3
 ```
 
-In Elm we use *whitespace* to denote function application (instead of using parenthesis).
+Elm 使用*空白*來表示函式套用（而非括號）
 
-Here is another named function:
+下面是另一個具名函式：
 
 ```elm
 add : Int -> Int -> Int
@@ -53,24 +52,24 @@ add x y =
   x + y
 ```
 
-This function takes two arguments (both Int) and returns another Int. You call this function like:
+此函式取得兩個引數（皆為 Int），傳回另一個 Int。呼叫如下：
 
 ```elm
 add 2 3
 ```
 
-### No arguments
+### 無引數
 
-A function that takes no arguments is a constant in Elm:
+無引數的函式是一個常數：
 
 ```elm
 name =
   "Sam"
 ```
 
-### How functions are applied
+### 如何套用函式
 
-As shown above a function that takes two arguments may look like:
+上述取得兩個引數的函式像是：
 
 ```elm
 divide : Float -> Float -> Float
@@ -78,93 +77,94 @@ divide x y =
     x / y
 ```
 
-We can think of this signature as a function that takes two floats and returns another float:
+我們可以想做這個標記式為一個函式，取得兩個浮點數的引數，傳回另一個浮點數：
 
 ```elm
 divide 5 2 == 2.5
 ```
 
-However, this is not quite true, in Elm all functions take exactly one argument and return a result. This result can be another function.
-Let's explain this using the function above.
+然而，這並不完全正確，Elm 中所有函式都只取得一個引數，傳回一個結果。結果可以是另一個函式。
+讓我用上述函式解釋。
 
 ```elm
--- When we do:
+-- 當我們用：
 
 divide 5 2
 
--- This is evaluated as:
+-- 這會被核定成：
 
 ((divide 5) 2)
 
--- First `divide 5` is evaluated.
--- The argument `5` is applied to `divide`, resulting in an intermediate function.
+-- 首先，`divide 5` 會先求值。
+-- 引數 `5` 套用到 `divide`，傳回一個中間的函式。
 
-divide 5 -- -> intermediate function
+divide 5 -- -> 中間的函式
 
--- Let's call this intermediate function `divide5`.
--- If we could see the signature and body of this intermediate function, it would look like:
+-- 接著呼叫這個中間的函式 `divide5`。
+-- 如果看得到中間函式的標記式，那會長的像似：
 
 divide5 : Float -> Float
 divide5 y =
   5 / y
 
--- So we have a function that has the `5` already applied.
+-- 會有個函式已經套用了 `5`。
 
--- Then the next argument is applied i.e. `2`
+-- 接著，下一個引數套用，舉例 `2`
 
 divide5 2
 
--- And this returns the final result
+-- 這將會傳回最後結果
 ```
 
-The reason we can avoid writing the parenthesis is because function application **associates to the left**.
+避免撰寫括號的原因就是因為套用函式是**從左聯繫**。
 
-### Grouping with parentheses
+### 括號用來分組（Grouping）
 
-When you want to call a function with the result of another function call you need to use parentheses for grouping the calls:
+當你需要呼叫函式，引數的值來自另一個函式傳回的結果，你需要括號來分組呼叫：
 
 ```elm
 add 1 (divide 12 3)
 ```
 
-Here the result of `divide 12 3` is given to `add` as the second parameter.
+這裡 `divide 12 3` 傳回的結果，帶入 `add` 的第二個引數。
 
-In contrast, in many other languages it would be written:
+相較之下，其他語言可能會寫成：
 
 ```js
 add(1, divide(12, 3))
 ```
 
-## Partial application
+## 部份套用（Partial application）
 
-As explained above every function takes only one argument and returns another function or a result.
-This means you can call a function like `add` above with only one argument, e.g. `add 2` and get a *partially applied function** back.
-This resulting function has a signature `Int -> Int`.
+如上述說明，每個函式只取一個引數，傳回另一個函式或者結果。k.
+表示你呼叫類似上述 `add` 函式並帶入一個引數，例如 `add 2`，傳回的是*部份套用的函式*。
+傳回的函式標記式為 `Int -> Int`。
 
-`add 2` returns another function with the value `2` bound as the first parameter. Calling the returned function with a second value returns `2 + ` the second value:
+`add 2` 傳回另一個函式，其中 `2` 的值綁定為第一個引數值。
+呼叫傳回的函式並帶入第二個引數值，傳回 `2 +` 第二個引數值的結果：
 
 ```elm
 add2 = add 2
-add2 3 -- result 5
+add2 3 -- 結果為 5
 ```
 
-Partial application is incredibly useful in Elm for making your code more readable and passing state between functions in your application.
+部份套用在 Elm 非常地有用，讓你的程式碼更容易閱讀，並在應用程式內的函式之間傳遞狀態（state）。
 
-## The pipe operator
+## 輸送運算子（The pipe operator）
 
-As shown above you can nest functions like:
+如上述所示，你可以呼叫巢狀函式，像是：
 
 ```elm
 add 1 (multiply 2 3)
 ```
 
-This is a trivial example, but consider a more complex example:
+這只是個平凡的範例，但考慮到更複雜的範例：
 
 ```elm
 sum (filter (isOver 100) (map getCost records))
 ```
 
-This code is difficult to read, because it resolves inside out. The pipe operator allows us to write such expressions in a more readable way:
+這樣的程式碼難以閱讀，因為需要從裡到外解決。輸送運算子允許撰寫出更好閱讀的方式：
 
 ```elm
 3
@@ -172,9 +172,9 @@ This code is difficult to read, because it resolves inside out. The pipe operato
     |> add 1
 ```
 
-This relies heavily on partial application as explained before. In this example the value `3` is passed to a partially applied function `multiply 2`. Its result is in turn passed to another partially applied function `add 1`.
+這十分依賴先前提到的部份套用。這個範例中，`3` 這個值傳遞到部份套用函式 `multiply 2`。接著，其結果值再傳遞到部份套用函式 `add 1`。
 
-Using the pipe operator the complex example above would be written like:
+若使用輸送運算子，上述複雜的範例可寫成：
 
 ```elm
 records
