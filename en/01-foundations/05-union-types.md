@@ -98,7 +98,7 @@ So later we will be able to call respond with:
 respond (Other 123)
 ```
 
-But respond `(Other "Hello")` would fail because `respond` expects an integer in place of `a`.
+But `respond (Other "Hello")` would fail because `respond` expects an integer in place of `a`.
 
 ## A common use
 
