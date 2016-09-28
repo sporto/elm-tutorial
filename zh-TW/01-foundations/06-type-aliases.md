@@ -1,6 +1,6 @@
 # 型別別名（aliases）
 
-A __type alias__ in Elm is, as its name says, an alias for something else. For example, in Elm you have the core `Int` and `String` types. You can create aliases for them:
+顧名思義，型別別名一種別名功能。舉例來說，Elm 核心有 `Int` 及 `String` 兩種型別。你可以為它們新增別名：
 
 ```elm
 type alias PlayerId = Int
@@ -8,23 +8,23 @@ type alias PlayerId = Int
 type alias PlayerName = String
 ```
 
-Here we have created a couple of type alias that simply point to other core types. This is useful because of having a function like:
+上述中新增了幾個型別別名，單純指到別的核心型別。這個十分有用，當函式看起來像是：
 
 ```elm
 label: Int -> String
 ```
 
-You can write it like:
+你可以寫成：
 
 ```elm
 label: PlayerId -> PlayerName
 ```
 
-In this way, it is much clearer what the function is asking for.
+這樣一來，函式更加清楚明瞭。
 
-## Records
+## 紀錄（Records）
 
-A record definition in Elm looks like:
+紀錄定義看起來像是：
 
 ```elm
 { id : Int
@@ -32,13 +32,13 @@ A record definition in Elm looks like:
 }
 ```
 
-If you were to have a function that takes a record, you would have to write a signature like:
+如果你希望函式使用紀錄，你可以像這樣撰寫標記式：
 
 ```elm
 label: { id : Int, name : String } -> String
 ```
 
-Quite verbose, but type aliases help a lot with this:
+有點冗長，型別別名這時候就十分有幫助：
 
 ```elm
 type alias Player =
@@ -49,11 +49,11 @@ type alias Player =
 label: Player -> String
 ```
 
-Here we create a `Player` type alias that points to a record definition. Then we use that type alias in our function signature.
+上述新增 `Player` 型別別名，指到一個紀錄的定義。接著在函式標記式使用。
 
-## Constructors
+## 建構子（Constructors）
 
-Type aliases can be used as __constructor__ functions. Meaning that we can create a real record by using the type alias as a function.
+型別別名也可以作為__建構子__函式。表示我們也可以把型別別名當作函式一樣使用，用來新增實際的紀錄。
 
 ```elm
 type alias Player =
@@ -65,4 +65,4 @@ Player 1 "Sam"
 ==> { id = 1, name = "Sam" }
 ```
 
-Here we create a `Player` type alias. Then, we call `Player` as a function with two parameters. This gives us back a record with the proper attributes. Note that the order of the arguments determines which values will be assigned to which attributes.
+上述新增 `Player` 型別別名。接著，呼叫 `Player` 型別別名，就如同函式一般，帶入兩個參數。這會傳回一個紀錄並帶有適當的屬性。注意到參數的順序決定了哪個屬性該有什麼值。
