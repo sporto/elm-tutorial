@@ -1,42 +1,42 @@
 # 匯入（Imports）與模組（Modules）
 
-In Elm you import a module by using the `import` keyword e.g.
+Elm 匯入模組使用 `import` 關鍵字，例如：
 
 ```elm
 import Html
 ```
 
-This imports the `Html` module from core. Then you can use functions and types from this module by using its fully qualified path:
+這從核心中匯入了 `Html` 模組。接著，可以用完整資格修飾路徑（fully qualified path）來使用這個模組的函式及型別。
 
 ```elm
 Html.div [] []
 ```
 
-You can also import a module and expose specific functions and types from it:
+也可以匯入模組的特定函式或型別：
 
 ```elm
 import Html exposing (div)
 ```
 
-`div` is mixed in the current scope. So you can use it directly:
+`div` 被混合到目前作用域（scope）之中。你可以直接使用：
 
 ```elm
 div [] []
 ```
 
-You can even expose everything in a module:
+你甚至可以將模組的所有東西匯出：
 
 ```elm
 import Html exposing (..)
 ```
 
-Then you would be able to use every function and type in that module directly. But this is not recommended most of the time because we end up with ambiguity and possible clashes between modules.
+這樣就可以直接用模組所有的函式及型別。但在大多情況下並不建議這樣使用，最終造成歧異或模組之間的衝突。
 
-## Modules and types with the same name
+## 模組與型別相同名稱
 
-Many modules export types with the same name as the module. For example, the `Html` module has an `Html` type and the `Task` module has a `Task` type.
+許多模組會匯出與其模組名稱相同的型別。例如，`Html` 模組有個 `Html` 型別，`Task` 模組有個 `Task` 型別。
 
-So this function that returns an `Html` element:
+下列函式傳回 `Html` 元素：
 
 ```elm
 import Html
@@ -46,7 +46,7 @@ myFunction =
     ...
 ```
 
-Is equivalent to:
+同等於：
 
 ```elm
 import Html exposing (Html)
@@ -56,27 +56,27 @@ myFunction =
     ...
 ```
 
-In the first one we only import the `Html` module and use the fully qualified path `Html.Html`.
+第一個例子只匯入 `Html` 模組並使用完整資格修飾路徑 `Html.Html`。
 
-In the second one we expose the `Html` type from the `Html` module. And use the `Html` type directly.
+第二個例子從 `Html` 模組中匯出 `Html` 型別。直接使用 `Html` 型別。
 
-## Module declarations
+## 模組宣告
 
-When you create a module in Elm, you add the `module` declaration at the top:
+當你新建一個模組，需要在檔案最上方加入 `module` 宣告：
 
 ```elm
 module Main exposing (..)
 ```
 
-`Main` is the name of the module. `exposing (..)` means that you want to expose all functions and types in this module. Elm expects to find this module in a file called __Main.elm__, i.e. a file with the same name as the module.
+`Main` 是模組名稱。`exposing (..)` 表示匯出模組中所有函式及型別。Elm 預期檔案名稱為 __Main.elm__，換言之，檔案名稱與模組名稱相同。
 
-You can have deeper file structures in an application. For example, the file __Players/Utils.elm__ should have the declaration:
+應用程式可以有深層檔案結構。例如，__Players/Utils.elm__ 檔案的模組宣告為：
 
 ```elm
 module Players.Utils exposing (..)
 ```
 
-You will be able to import this module from anywhere in your application by:
+應用程式其他地方可以用下列語句匯入該模組：
 
 ```elm
 import Players.Utils
