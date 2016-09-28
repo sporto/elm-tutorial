@@ -1,6 +1,6 @@
 # 基礎
 
-This chapter covers:
+此章節包含：
 
-- Running a basic Elm application
-- Basic of functions and types in Elm
+- 執行基本的 Elm 應用程式
+- Elm 基本的函式與型別
