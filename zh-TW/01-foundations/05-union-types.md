@@ -1,12 +1,12 @@
 # 聯集型別（Union types）
 
-In Elm, __Union Types__ are used for many things as they are incredibly flexible. A union type looks like:
+Elm 中，__聯集型別__非常地彈性並廣泛在許多地方。聯集型別看起來像是：
 
 ```elm
 type Answer = Yes | No
 ```
 
-`Answer` can be either `Yes` or `No`. Union types are useful for making our code more generic. For example a function that is declared like this:
+`Answer` 可以是 `Yes` 或 `No`。聯集型別非常有用，讓程式碼更加泛用。舉例來說，函式可以定義成：
 
 ```elm
 respond : Answer -> String
@@ -14,51 +14,51 @@ respond answer =
     ...
 ```
 
-Can either take `Yes` or `No` as the first argument e.g. `respond Yes` is a valid call.
+第一個引數接受 `Yes` 或 `No`，例如 `respond Yes` 就是個合法呼叫。
 
-Union types are also commonly called __tags__ in Elm.
+聯集型別通常也稱之為__標籤（tags）__。
 
-## Payload
+## 裝載（Payload）
 
-Union types can have associated information with them:
+聯集型別可以附屬額外的訊息：
 
 ```elm
 type Answer = Yes | No | Other String
 ```
 
-In this case, the tag `Other` will have an associated string. You could call `respond` like this:
+上述例子中，`Other` 標籤有個附屬字串。你可以像這樣呼叫 `respond`：
 
 ```elm
 respond (Other "Hello")
 ```
 
-You need the parenthesis otherwise Elm will interpret this as passing two arguments to respond.
+這裡要用括號包起來，不然 Elm 會當作傳遞 2 個參數到 `respond` 函數。
 
-## As constructor functions
+## 如同函式建構子
 
-Note how we add a payload to `Other`:
+注意到我們如何裝載 `Other`：
 
 ```elm
 Other "Hello"
 ```
 
-This is just like a function call where `Other` is the function. Union types behave just like functions. For example give a type:
+就只是個函式呼叫，而 `Other` 是個函式。聯集型別表現像是函式。舉例來說，給定某型別：
 
 ```elm
 type Answer = Message Int String
 ```
 
-You will create a `Message` tag by:
+你可以用下列語法新增 `Message` 標籤：
 
 ```elm
 Message 1 "Hello"
 ```
 
-You can do partial application just like any other function. These are commonly called `constructors` because you can use this to construct complete types, i.e. use `Message` as a function to construct `(Message 1 "Hello")`.
+你也可以相其他函式一樣使用套用函式。通常稱之為 `建構子（constructors）`，因為你用這個方式來建構完整的型別，換言之，使用 `Message` 作為函式來建構 `(Message 1 "Hello")`。
 
-## Nesting
+## 巢狀
 
-It is very common to 'nest' one union type in another.
+聯集型別用巢狀引用其他聯集型別十分常見。
 
 ```elm
 type OtherAnswer = DontKnow | Perhaps | Undecided
@@ -66,23 +66,23 @@ type OtherAnswer = DontKnow | Perhaps | Undecided
 type Answer = Yes | No | Other OtherAnswer
 ```
 
-Then you can pass this to our `respond` function (which expect `Answer`) like this:
+這樣你就可以傳遞到 `respond` 函式（預期 `Answer`），像是：
 
 ```elm
 respond (Other Perhaps)
 ```
 
-## Type variables
+## 型別變數（Type variables）
 
-It is also possible to use type variables or stand-ins:
+你也可能需要用到型別變數或替身（stand-ins）
 
 ```elm
 type Answer a = Yes | No | Other a
 ```
 
-This is an `Answer` that can be used with different types, e.g. Int, String.
+`Answer` 就可以使用不同的型別，例如 Int、String。
 
-For example, respond could look like this:
+舉例來說，`respond` 可能看起來像是：
 
 ```elm
 respond : Answer Int -> String
@@ -90,23 +90,23 @@ respond answer =
     ...
 ```
 
-Here we are saying that the `a` stand-in should be of type `Int` by using  the `Answer Int` signature.
+透過使用 `Answer Int` 標記式，表示 `a` 為型別 `Int` 的替身。
 
-So later we will be able to call respond with:
+所以當我們需要呼叫 `respond` 時，語句為：
 
 ```elm
 respond (Other 123)
 ```
 
-But respond `(Other "Hello")` would fail because `respond` expects an integer in place of `a`.
+但是，`(Other "Hello")` 語句則會失效，因為 `respond` 預期 `a` 的位置是個整數。
 
-## A common use
+## 常見用法
 
-One typical use of union types is passing around values in our program where the value can be one of a known set of possible values.
+一個常見的用法是，使用聯集型別來互相傳遞資料，這樣就可以知道可能的型別值。
 
-For example, in a typical web application, we have actions that can be performed, e.g. load users, add user, delete user, etc. Some of these actions would have a payload.
+舉理來說，典型的網頁應用程式中，包含了許多動作，例如：讀取使用者、新增使用者、刪除使用者⋯等。某些動作可能會裝載其他資料。
 
-It is common to use union types for this:
+聯集型別常見用法為：
 
 ```elm
 type Action
@@ -119,4 +119,4 @@ type Action
 
 ---
 
-There is a lot more about Union types. If interested read more about this [here](http://elm-lang.org/guide/model-the-problem).
+聯集型別還有更多細節。如果有興趣請參考[這裡](http://elm-lang.org/guide/model-the-problem)。
