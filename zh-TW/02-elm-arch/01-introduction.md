@@ -1,16 +1,16 @@
 # 簡介
 
-When building front end applications in Elm, we use the pattern known as the Elm architecture. This pattern provides a way of creating self contained components that can be reused, combined, and composed in endless variety.
+當使用 Elm 建構前端應用程式時，我們使用常見的樣式：Elm 架構（The Elm Architecture）。這個樣式提供了一種建立自我包含的元件（self contained components）的方式，能夠再利用（reused）、合併（combined）、組成（composed）達到無止境的變化。
 
-Elm provides the `Html.App` module for this. This is easier to understand by building a small app.
+Elm 提供了 `Html.App` 模組。透過建置一個小的應用程式比較容易理解。
 
-Install elm-html:
+安裝 elm-html：
 
 ```elm
 elm package install elm-lang/html
 ```
 
-Create a file called __App.elm__:
+新增 __App.elm__ 檔案：
 
 ```elm
 module App exposing (..)
@@ -83,12 +83,12 @@ main =
         }
 ```
 
-You can run this program running:
+執行下列命令來啟動程式：
 
 ```bash
 elm reactor
 ```
 
-And opening http://localhost:8000/App.elm
+接著使用瀏覽器開啟網址 http://localhost:8000/App.elm
 
-This is a lot of code for just showing "Hello", but it will help us understand the structure of even very complicated Elm applications.
+上述程式碼很多，只顯示了 "Hello"，但幫助我們了解整體架構，甚至是非常複雜的 Elm 應用程式也一樣。
