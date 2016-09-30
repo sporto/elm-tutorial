@@ -8,7 +8,7 @@ type alias PlayerId = Int
 type alias PlayerName = String
 ```
 
-Here we have created a couple of type alias that simply point to other core types. This is useful because of having a function like:
+Here we have created a couple of type alias that simply point to other core types. This is useful because instead of having a function like:
 
 ```elm
 label: Int -> String
