@@ -1,6 +1,6 @@
 # 裝載訊息（Messages with payload）
 
-You can send a payload in your message:
+你可以在訊息上裝載額外資料：
 
 ```elm
 module Main exposing (..)
@@ -10,7 +10,7 @@ import Html.Events exposing (onClick)
 import Html.App
 
 
--- MODEL
+-- 模型
 
 
 type alias Model =
@@ -23,7 +23,7 @@ init =
 
 
 
--- MESSAGES
+-- 訊息
 
 
 type Msg
@@ -31,7 +31,7 @@ type Msg
 
 
 
--- VIEW
+-- 視界
 
 
 view : Model -> Html Msg
@@ -43,7 +43,7 @@ view model =
 
 
 
--- UPDATE
+-- 更新
 
 
 update : Msg -> Model -> ( Model, Cmd Msg )
@@ -54,7 +54,7 @@ update msg model =
 
 
 
--- SUBSCRIPTIONS
+-- 訂閱
 
 
 subscriptions : Model -> Sub Msg
@@ -63,7 +63,7 @@ subscriptions model =
 
 
 
--- MAIN
+-- 主程式
 
 
 main : Program Never
@@ -76,20 +76,20 @@ main =
         }
 ```
 
-Note how the `Increment` message requires an integer:
+注意到以下 `Increment` 訊息要求額外的整數：
 
 ```elm
 type Msg
     = Increment Int
 ```
 
-Then in the view we trigger that message with a payload:
+接著，在 view 函式裡面，觸發該訊息並裝載額外資料：
 
 ```elm
 onClick (Increment 2)
 ```
 
-And finally in update we use __pattern matching__ to extract the payload:
+最後在 update 函式中，使用__樣式對應__取出裝載資料： 
 
 ```elm
 update msg model =
