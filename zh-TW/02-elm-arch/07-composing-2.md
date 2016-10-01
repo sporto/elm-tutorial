@@ -2,7 +2,7 @@
 
 ## 父子關係
 
-This is the code for the parent component.
+下列為父元件的程式碼。
 
 ```elm
 module Main exposing (..)
@@ -12,7 +12,7 @@ import Html.App
 import Widget
 
 
--- MODEL
+-- 模型
 
 
 type alias AppModel =
@@ -32,7 +32,7 @@ init =
 
 
 
--- MESSAGES
+-- 訊息
 
 
 type Msg
@@ -40,7 +40,7 @@ type Msg
 
 
 
--- VIEW
+-- 視界
 
 
 view : AppModel -> Html Msg
@@ -51,7 +51,7 @@ view model =
 
 
 
--- UPDATE
+-- 更新
 
 
 update : Msg -> AppModel -> ( AppModel, Cmd Msg )
@@ -66,7 +66,7 @@ update message model =
 
 
 
--- SUBSCIPTIONS
+-- 訂閱
 
 
 subscriptions : AppModel -> Sub Msg
@@ -75,7 +75,7 @@ subscriptions model =
 
 
 
--- APP
+-- 應用程式
 
 
 main : Program Never
@@ -90,9 +90,9 @@ main =
 
 ---
 
-Let's review the important sections of this code.
+開始回顧程式碼重要的部份。
 
-### Model
+### 模型
 
 ```elm
 type alias AppModel =
@@ -100,7 +100,7 @@ type alias AppModel =
     }
 ```
 
-The parent component has its own model. One of the attributes on this model contains the `Widget.Model` ➊. Note how this parent component doesn't need to know about what `Widget.Model` is.
+父元件有自己的模型。模型裡面的一個屬性包含 `Widget.Model` ➊。注意到此父元件並不知道 `Widget.Model` 是什麼。
 
 ```elm
 initialModel : AppModel
@@ -109,9 +109,9 @@ initialModel =
     }
 ```
 
-When creating the initial application model, we simply call `Widget.initialModel` ➋ from here.
+當建立初始的應用程式模型時，只需要簡單呼叫 `Widget.initialModel`。
 
-If you were to have multiple children components, you would do the same for each, for example:
+如果你有多個子元件，依樣畫葫蘆，例如：
 
 ```elm
 initialModel : AppModel
@@ -122,7 +122,7 @@ initialModel =
     }
 ```
 
-Or we could have multiple children components of the same type:
+或者，多個子元件有相同型別：
 
 ```elm
 initialModel : AppModel
@@ -131,16 +131,16 @@ initialModel =
     }
 ```
 
-### Messages
+### 訊息
 
 ```elm
 type Msg
     = WidgetMsg Widget.Msg
 ```
 
-We use a __union type__ that wraps `Widget.Msg` to indicate that a message belongs to that component. This allows our application to route messages to the relevant components (This will become clear looking at the update function).
+我們使用__聯集型別__包裝 `Widget.Msg`，標示該元件的訊息。這讓應用程式得以轉送訊息到相關元件（看看更新函式會更清楚一些）
 
-In an application with multiple children components we could have something like:
+若應用程式有多個子元件，可以像是：
 
 ```elm
 type Msg
@@ -149,7 +149,7 @@ type Msg
     | WidgetMsg Widget.Msg
 ```
 
-### View
+### 視界
 
 ```elm
 view : AppModel -> Html Msg
@@ -159,12 +159,12 @@ view model =
         ]
 ```
 
-The main application `view` renders the `Widget.view` ➌. But `Widget.view` emits `Widget.Msg` so is incompatible with this view which emits `Main.Msg`.
+主應用程式 `view` 轉譯 `Widget.view` ➌。但是 `Widget.view` 發出的是 `Widget.Msg`，跟目前視界發出的 `Main.Msg` 並不相容。
 
-- We use `Html.App.map` ➊ to map emitted messages from Widget.view to the type we expect (Msg). `Html.App.map` tags messages coming from the sub view using the `WidgetMsg` ➋ tag.
-- We only pass the part of the model that the children component cares about i.e. `model.widgetModel` ➍.
+- 我們使用 `Html.App.map` ➊ 將 Widget.view 發出的訊息映射到預期的（Msg）。`Html.App.map` 將來自於子視界訊息加上 `WidgetMsg` ➋  標籤
+- 我們只傳遞子元件所關心的部份模型進去，換言之就是 `model.widgetModel` ➍。
 
-### Update
+### 更新
 
 ```elm
 update : Msg -> AppModel -> (AppModel, Cmd Msg)
@@ -178,12 +178,12 @@ update message model =
                 ({ model | widgetModel = updatedWidgetModel }, Cmd.map➎ WidgetMsg widgetCmd)
 ```
 
-When a `WidgetMsg` ➊ is received by `update` we delegate the update to the children component. But the children component will only update what it cares about, which is the `widgetModel` attribute.
+當 `update` 收到 `WidgetMsg` ➊ 時，將會代理送到子元件。子元件只會更新它所關心的部份，亦即 `widgetModel` 屬性。
 
-We use pattern matching to extract the `subMsg` ➋ from `WidgetMsg`. This `subMsg` will be the type that `Widget.update` expects.
+我們使用樣式對應將 `subMsg` ➋ 從 `WidgetMsg` 取出。`subMsg` 將會是 `Widget.update` 所預期的型別。
 
-Using this `subMsg` and `model.widgetModel` we call `Widget.update` ➌. This will return a tuple with an updated `widgetModel` and a command.
+使用 `subMsg` 及 `model.widgetModel` 呼叫 `Widget.update` ➌。這會傳回一個 tuple，包含更新的 `widgetModel` 及命令。
 
-We use pattern matching again to destructure ➍ the response from `Widget.update`.
+再次使用樣式對應解構來自 `Widget.update` 的結果 ➍。
 
-Finally we need to map the command returned by `Widget.update` to the right type. We use `Cmd.map` ➎ for this and tag the command with `WidgetMsg`, similar to what we did in the view.
+最後，我們需要映射來自 `Widget.update` 的命令到正確的型別。我們使用 `Cmd.map` ➎ 及 `WidgetMsg` 標籤，相似於先前在視界的作法。
