@@ -1,13 +1,13 @@
 # 組成（Composing）
 
-One of the big benefits of using the Elm architecture is the way it handles composition of components. To understand this, let's build an example:
+使用 Elm 架構其中一大好處是它處理元件組成的方式。讓我們建構一個範例來了解它：
 
-- We will have a parent component `App`
-- And a child component `Widget`
+- 我們有一個父元件 `App`
+- 以及一個子元件 `Widget`
 
-## Child component
+## 子元件
 
-Let's begin with the child component. This is the code for __Widget.elm__.
+讓我們從子元件開始。下列為 __Widget.elm__ 程式碼：
 
 ```elm
 module Widget exposing (..)
@@ -16,7 +16,7 @@ import Html exposing (Html, button, div, text)
 import Html.Events exposing (onClick)
 
 
--- MODEL
+-- 模型
 
 
 type alias Model =
@@ -31,7 +31,7 @@ initialModel =
 
 
 
--- MESSAGES
+-- 訊息
 
 
 type Msg
@@ -39,7 +39,7 @@ type Msg
 
 
 
--- VIEW
+-- 視界
 
 
 view : Model -> Html Msg
@@ -51,7 +51,7 @@ view model =
 
 
 
--- UPDATE
+-- 更新
 
 
 update : Msg -> Model -> ( Model, Cmd Msg )
@@ -61,12 +61,12 @@ update message model =
             ( { model | count = model.count + 1 }, Cmd.none )
 ```
 
-This component is nearly identical to the application that we made in the last section, except for subscriptions and main. This component:
+此元件與上一章節所做的應用程式幾乎一致，除了訂閱及主程式之外。此元件：
 
-- Defines its own messages (Msg)
-- Defines its own model
-- Provides an `update` function that responds to its own messages, e.g. `Increase`.
+- 定義了自己的訊息（Msg）
+- 定義了自己的模型
+- 提供處理自己訊息的 `update` 函式，例如：`Increase`。
 
-Note how the component only knows about things declared here. Both `view` and `update` only use types declared within the component (`Msg` and `Model`).
+注意到元件只知道本身定義的東西。`view` 及 `update` 只用元件內所定義的型別（`Msg` 及 `Model`）。
 
-In the next section we will create the parent component.
+下個章節我們將建立父元件。
