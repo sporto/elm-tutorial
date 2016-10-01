@@ -178,7 +178,7 @@ update message model =
                 ({ model | widgetModel = updatedWidgetModel }, Cmd.map➎ WidgetMsg widgetCmd)
 ```
 
-當 `update` 收到 `WidgetMsg` ➊ 時，將會代理送到子元件。子元件只會更新它所關心的部份，亦即 `widgetModel` 屬性。
+當 `update` 收到 `WidgetMsg` ➊ 時，將會委派給子元件。子元件只會更新它所關心的部份，亦即 `widgetModel` 屬性。
 
 我們使用樣式對應將 `subMsg` ➋ 從 `WidgetMsg` 取出。`subMsg` 將會是 `Widget.update` 所預期的型別。
 
