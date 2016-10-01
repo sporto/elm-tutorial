@@ -5,7 +5,7 @@ import Html.Events exposing (onClick)
 import Html.App
 
 
--- MODEL
+-- 模型
 
 
 type alias Model =
@@ -18,7 +18,7 @@ init =
 
 
 
--- MESSAGES
+-- 訊息
 
 
 type Msg
@@ -27,7 +27,7 @@ type Msg
 
 
 
--- VIEW
+-- 視界
 
 
 view : Model -> Html Msg
@@ -43,7 +43,7 @@ view model =
 
 
 
--- UPDATE
+-- 更新
 
 
 update : Msg -> Model -> ( Model, Cmd Msg )
@@ -57,7 +57,7 @@ update msg model =
 
 
 
--- SUBSCRIPTIONS
+-- 訂閱
 
 
 subscriptions : Model -> Sub Msg
@@ -66,7 +66,7 @@ subscriptions model =
 
 
 
--- MAIN
+-- 主程式
 
 
 main =
