@@ -1,9 +1,9 @@
 # 訂閱（Subscriptions）與命令（Commands）
 
-In order to listen to external input and create __side effects__ in our application we need to learn about __Subscriptions__, __Commands__ and __Task__.
+為了在應用程式中監聽外部輸入且創造__副作用__，我們需要學習__訂閱__、__命令__及__任務__。
 
-This chapter covers:
+此章節包含：
 
-- Subscriptions
-- Commands
-- Tasks
+- 訂閱
+- 命令
+- 任務
