@@ -1,16 +1,16 @@
 # 命令（Commands）
 
-In Elm, commands (Cmd) are how we tell the runtime to execute things that involve side effects. For example:
+Elm 中，命令（Cmd）是用來告訴執行期（runtime）如何執行副作用（side effects）。例如：
 
-- Generate a random number
-- Make an http request
-- Save something into local storage
+- 產生一組隨機數字
+- 發送 http 請求
+- 儲存某些東西到 local storage
 
-A `Cmd` can be one or a collection of things to do. We use commands to gather all the things that need to happen and hand them to the runtime. Then the runtime will execute them and feed the results back to the application.
+`Cmd` 可以是一個或多個要做的事情。我們使用命令聚集所有要發生的事情，交給執行期。接著執行期將會執行它們並將結果提供回應用程式。
 
-In other words, every function returns a value in a functional language such as Elm.  Function side effects in the traditional sense are forbidden by the language design and Elm takes an alternative approach to modeling them.  Essentially, a function returns a command value which names the desired effect.  Due to the Elm architecture, the main Html.App program we've been using is the ultimate recipient of this command value.  The update method of the Html.App program then contains the logic to execute the named command.
+換句話說，如同 Elm，函數式語言的每個函式都傳回一個值。語言設計的傳統思維中，函式是禁止產生副作用的，Elm 用替代方式來模塑（modeling）它。本質上，函式傳回一個命令值（command value），給予期望作用一個名稱。由於 Elm 的架構，主要的 Html.App 程式，是命令值最終的收件人。Html.App 程式的更新函式，包含了如何執行該名稱命令的邏輯。
 
-Let's try an example app using commands:
+讓我們用一個範例來試試命令：
 
 ```elm
 module Main exposing (..)
@@ -21,7 +21,7 @@ import Html.App
 import Random
 
 
--- MODEL
+-- 模型
 
 
 type alias Model =
@@ -34,7 +34,7 @@ init =
 
 
 
--- MESSAGES
+-- 訊息
 
 
 type Msg
@@ -43,7 +43,7 @@ type Msg
 
 
 
--- VIEW
+-- 視界
 
 
 view : Model -> Html Msg
@@ -55,7 +55,7 @@ view model =
 
 
 
--- UPDATE
+-- 更新
 
 
 update : Msg -> Model -> ( Model, Cmd Msg )
@@ -69,7 +69,7 @@ update msg model =
 
 
 
--- MAIN
+-- 主程式
 
 
 main : Program Never
@@ -82,14 +82,13 @@ main =
         }
 ```
 
-If you run this application it will show a button that will generate a random number each time you click it.
+如果你執行了應用程式，它會顯示一個按鈕，當你點擊後會產生一個隨機的數字。
 
 ---
 
-Let's review the relevant parts:
+讓我們回顧相關部份：
 
-
-### Messages
+### 訊息
 
 ```elm
 type Msg
@@ -97,9 +96,9 @@ type Msg
     | OnResult Int
 ```
 
-We have two possible messages in our application. `Roll` for rolling a new number. `OnResult` for getting a generated number back from the `Random` library.
+我們應用程式裡有兩個訊息。`Roll` 表示骰出新數字。`OnResult` 表示從 `Random` 函式庫取得產生出來的結果。
 
-### Update
+### 更新
 
 ```elm
 update : Msg -> Model -> ( Model, Cmd Msg )
@@ -112,16 +111,16 @@ update msg model =
             ( res, Cmd.none )
 ```
 
-➊ `Random.generate` creates a command that will generate random numbers. This function requires the first argument to be a constructor for the message that will be fed back to our application. In this case our constructor is `OnResult`.
+➊ `Random.generate` 製造一個命令，這個命令將會產生一個隨機數字。函式第一個參數必須是訊息的建構子，用來提供結果給我們的應用程式。這個例子的建構子是 `OnResult`。
 
-So when the command is run Elm will call `OnResult` with the generated number, producing `OnResult 2` for example. Then __Html.App__ will feed this message back to application.
+所以，當命令執行，Elm 將會呼叫 `OnResult` 伴隨著產生出來的數字，例如產出 `OnResult 2`。接著 __Html.App__ 會將此訊息提供給應用程式。
 
-In case you're wondering, `OnResult res` denotes a message, OnResult, containing an additional payload of information, the Integer 'res' in this case.  This pattern is known as parameterized types.
+如果你感到疑惑，`OnResult res` 表示一個訊息，OnResult 裝載額外的訊息，即這個例子中的整數 'res'。這種樣式也就是所謂的參數化型別（parameterized types）。
 
 ---
 
-In a bigger application with many nested components we can potentially send many commands at once to __Html.App__. Take this diagram for example:
+大型應用程式中常有許多巢狀元件，很有可能一次送出許多命令到 __Html.App__。以下列圖例為例：
 
 ![Flow](02-commands.png)
 
-Here we collect commands from three different levels. At the end we send all these commands to __Elm.App__ to run.
+這裡從三個不同階層收集命令。最後將發送這所有命令到 __Elm.App__ 執行。
