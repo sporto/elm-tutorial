@@ -1,27 +1,27 @@
 # 任務（Tasks）
 
-We have seen how we can use commands to gather results from activities involving side effects. But commands don't have a concept of success or failure. They also don't have the concept of sequencing. Commands are just bags of things to do.
+我們已經見到如何使用命令，收集副作用的結果。但是命令並沒有成功或失敗的概念。也沒有連續的概念。命令只是一包東西要做。
 
-In Elm we use __tasks__ for asynchronous operations that can succeed or fail and need chaining, e.g. do this, then do that. They are similar to promises in JavaScript.
+Elm 中，使用__任務__給非同步操作，任務可以成功或失敗，還可以串接。例如：先做這，再做那。這跟 JavaScript 的 promises 十分相似。
 
-A task has the signature: `Task errorValue successValue`. The first argument is the error type and the second the success type. For example:
+任務有個標記式：`Task errorValue successValue`。第一個引數為失敗型別，第二個為成功型別。例如：
 
-- `Task Http.Error String` is a task that fails with an Http.Error or succeeds with a String
-- `Task Never Result` is a task that never fails, and always succeeds with a `Result`.
+- `Task Http.Error String` 任務失敗為 Http.Error 或成功為字串
+- `Task Never Result` 任務從不失敗，永會成功帶著 `Result`。
 
-Tasks are usually returned from functions that want to do async operations, e.g. sending an Http request.
+任務通常從函式傳回，函式希望做些非同步的操作，例如：發送一個 Http 請求。
 
-## Relation to commands
+## 與命令的關係
 
-When we get a task from a library, we need to wrap that task into a command so we can send the command to __Html.App__.
+當我們從函式庫得到一個任務，需要將任務包裝成一個命令，這樣才可以命令送到 __Html.App__。
 
-Let's see an example, first install some additional packages:
+讓我們來看個範例，首先，安裝額外的函式庫：
 
 ```bash
 elm package install evancz/elm-http
 ```
 
-And here is the application:
+接著是應用程式：
 
 ```elm
 module Main exposing (..)
@@ -34,7 +34,7 @@ import Task exposing (Task)
 import Json.Decode as Decode
 
 
--- MODEL
+-- 模型
 
 
 type alias Model =
@@ -47,7 +47,7 @@ init =
 
 
 
--- MESSAGES
+-- 訊息
 
 
 type Msg
@@ -57,7 +57,7 @@ type Msg
 
 
 
--- VIEW
+-- 視界
 
 
 view : Model -> Html Msg
@@ -89,7 +89,7 @@ fetchCmd =
 
 
 
--- UPDATE
+-- 更新
 
 
 update : Msg -> Model -> ( Model, Cmd Msg )
@@ -106,7 +106,7 @@ update msg model =
 
 
 
--- MAIN
+-- 主程式
 
 
 main : Program Never
@@ -119,11 +119,11 @@ main =
         }
 ```
 
-This application fetches a planet name from the swapi (Star Wars API). As it is now it always fetches planet 1 which is Tatooine.
+此應用程式從 swapi（星際大戰（Star Wars）API）擷取一個行星名稱。目前只會擷取行星 1 的名稱，名稱為 Tatooine。
 
 ---
 
-Let's review it:
+讓我們來回顧：
 
 ```elm
 type Msg
@@ -132,13 +132,13 @@ type Msg
     | FetchError Http.Error
 ```
 
-We have three messages.
+這裡有三個訊息。
 
-- `Fetch` for initiating a request to the API.
-- `FetchSuccess` for when we get a successful response from the API.
-- `FetchError` when we fail to reach the API or fail to parse the returned response.
+- `Fetch` 初始一個到 API 的請求
+- `FetchSuccess` 成功從 API 擷取回應。
+- `FetchError` 無法從 API 擷取回應或無法剖析取回的回應。.
 
-### Json decoder
+### Json 解碼器
 
 ```elm
 decode : Decode.Decoder String
@@ -146,9 +146,9 @@ decode =
     Decode.at ["name"] Decode.string
 ```
 
-This piece of code creates a decoder for the returned Json from the API. For building decoders [this tool](http://noredink.github.io/json-to-elm/) is incredibly valuable.
+上述程式碼新增一個解碼器給 API 擷取來的回應使用。建構解碼器可以使用[這個工具](http://noredink.github.io/json-to-elm/)，十分有用。
 
-### Task
+### 任務
 
 ```elm
 fetchTask : Task Http.Error String
@@ -156,9 +156,9 @@ fetchTask =
     Http.get decode url
 ```
 
-`Http.get` takes a decoder and a url and returns a task.
+`Http.get` 取用一個解碼器及一個網址，傳回一個任務。
 
-### Fetch command
+### 擷取命令
 
 ```elm
 fetchCmd : Cmd Msg
@@ -166,13 +166,13 @@ fetchCmd =
     Task.perform FetchError FetchSuccess fetchTask
 ```
 
-We use `Task.perform` to transform a task into a command. This function takes:
+使用 `Task.perform` 來轉換任務成命令。此函式要求：
 
-- A constructor for the failure message
-- A constructor for the success message
-- And the task to run
+- 失敗的訊息建構子
+- 成功的訊息建構子
+- 欲執行的任務
 
-### Update
+### 更新
 
 ```elm
 update : Msg -> Model -> ( Model, Cmd Msg )
@@ -188,8 +188,8 @@ update msg model =
             ( toString error, Cmd.none )
 ```
 
-In update we return the fetch command when initiating a fetch. And respond to `FetchSuccess` and `FetchError`.
+更新函式中，初始化擷取會傳回擷取命令。以及 `FetchSuccess` 與 `FetchError` 的反應。
 
 ---
 
-There is a lot more to tasks, it is worth browsing the documentation at <http://package.elm-lang.org/packages/elm-lang/core/4.0.1/Task>
+還有許多關於任務，值得一覽文件：<http://package.elm-lang.org/packages/elm-lang/core/4.0.1/Task>
