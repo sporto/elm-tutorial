@@ -1,22 +1,22 @@
 # 訂閱（Subscriptions）
 
-In Elm, using __subscriptions__ is how your application can listen for external input. Some examples are:
+Elm 中，使用__訂閱__來監聽外部輸入。例如：
 
-- [Keyboard events](http://package.elm-lang.org/packages/elm-lang/keyboard/latest/Keyboard)
-- [Mouse movements](http://package.elm-lang.org/packages/elm-lang/mouse/latest/Mouse)
-- Browser locations changes
-- [Websocket events](http://package.elm-lang.org/packages/elm-lang/websocket/latest/WebSocket)
+- [鍵盤事件](http://package.elm-lang.org/packages/elm-lang/keyboard/latest/Keyboard)
+- [滑鼠活動](http://package.elm-lang.org/packages/elm-lang/mouse/latest/Mouse)
+- 瀏覽器的網址更動
+- [Websocket 事件](http://package.elm-lang.org/packages/elm-lang/websocket/latest/WebSocket)
 
-To illustrate this let's create an application that responds to both keyboard and mouse events.
+讓我們建置一個應用程式來描繪如何回應鍵盤及滑鼠事件。
 
-First install the required libraries
+首先，安裝必要函式庫
 
 ```bash
 elm package install elm-lang/mouse
 elm package install elm-lang/keyboard
 ```
 
-And create this program
+接著建立程式
 
 ```elm
 module Main exposing (..)
@@ -27,7 +27,7 @@ import Mouse
 import Keyboard
 
 
--- MODEL
+-- 模型
 
 
 type alias Model =
@@ -40,7 +40,7 @@ init =
 
 
 
--- MESSAGES
+-- 訊息
 
 
 type Msg
@@ -49,7 +49,7 @@ type Msg
 
 
 
--- VIEW
+-- 視界
 
 
 view : Model -> Html Msg
@@ -59,7 +59,7 @@ view model =
 
 
 
--- UPDATE
+-- 更新
 
 
 update : Msg -> Model -> ( Model, Cmd Msg )
@@ -73,7 +73,7 @@ update msg model =
 
 
 
--- SUBSCRIPTIONS
+-- 訂閱
 
 
 subscriptions : Model -> Sub Msg
@@ -85,7 +85,7 @@ subscriptions model =
 
 
 
--- MAIN
+-- 主程式
 
 
 main : Program Never
@@ -98,13 +98,13 @@ main =
         }
 ```
 
-Run this program with Elm reactor, each time you click the mouse you will see the counter increasing by one, each time you press a key you will see the counter increasing by 2.
+使用 Elm reactor 執行此程式，每當你按下滑鼠，計數器會加一，每當你按下鍵盤按鍵，計數器會加二。
 
 ---
 
-Let's review the important parts relevant to subscriptions in this program.
+讓我們回顧這程式中與訂閱相關的重要部份。
 
-### Messages
+### 訊息
 
 ```elm
 type Msg
@@ -112,9 +112,9 @@ type Msg
     | KeyMsg Keyboard.KeyCode
 ```
 
-We have two possible messages `MouseMsg` and `KeyMsg`. This will trigger when the mouse or the keyboard are pressed accordingly.
+我們兩個訊息 `MouseMsg` 及 `KeyMsg`。當滑鼠按下或鍵盤按下時會觸發。
 
-### Update
+### 更新
 
 ```elm
 update : Msg -> Model -> ( Model, Cmd Msg )
@@ -127,9 +127,9 @@ update msg model =
             ( model + 2, Cmd.none )
 ```
 
-Our update function responds to each message differently, so it increases the counter by one when we press the mouse or by two when we press a key.
+更新程式對於各訊息反應不同，當按下滑鼠計數器加一，按下鍵盤計數器加二。
 
-### Subscriptions
+### 訂閱
 
 ```elm
 subscriptions : Model -> Sub Msg
@@ -140,6 +140,6 @@ subscriptions model =
         ]
 ```
 
-Here we declare the things we want to listen to. We want to listen to `Mouse.clicks` ➊ and `Keyboard.presses` ➋. Both of these functions take a message constructor and return a subscription.
+這裡宣告了我們希望監聽的事件。我們希望監聽 `Mouse.clicks` ➊ 以及 `Keyboard.presses` ➋。兩者函式都是接受訊息建構子（message constructor），傳回訂閱。
 
-We use `Sub.batch` ➌ so we can listen to both of them. Batch takes a list of subscriptions and returns one subscription which includes all of them.
+我們使用 `Sub.batch` ➌ 來同時監聽兩件事。Batch 接受訂閱串列，傳回一個訂閱，此訂閱包含所有的訂閱。
