@@ -1,14 +1,14 @@
 # 玩家（Players）資源
 
-We will organise our application structure by the name of the resources in our application. In this app, we only have one resource (`Players`) so there will be only a `Players` directory.
+我們根據資源的名稱來組織應用程式架構。這個應用程式中，只有一個資源（`Players`），所以只有一個 `Players` 資料夾。
 
-The `Players` directory will have modules just like the main level, one module per component of the Elm architecture:
+`Players` 資料夾將會有跟主階層相同的模組，Elm 架構的一個元件一個模組：
 
 - Players/Messages.elm
 - Players/Models.elm
 - Players/Update.elm
 
-However, we will have different views for players: A list and a edit view. Each view will have its own Elm module:
+然而，也會有玩家不同的視界：列表及編輯視界。每個視界都會有自己的 Elm 模組：
 
 - Players/List.elm
 - Players/Edit.elm
