@@ -1,46 +1,46 @@
 # 多重（Multiple）模組
 
-Our application is going to grow soon, so keeping things in one file will become hard to maintain quite fast.
+我們應用程式成長快速，很快地把所有東西放在一個檔案將變得難以維護。
 
-### Circular dependencies
+### 相依循環
 
-Another issue we are likely to hit at some point will be circular dependencies. For example we might have:
+另一個可能在某個時間點上會碰到的是相依循環。舉例來說，我們有：
 
-- A `Main` module which has a `Player` type on it.
-- A `View` module that imports the `Player` type declared in `Main`.
-- `Main` importing `View` to render the view.
+- `Main` 模組有個 `Player` 型別。
+- `View` 模組從 `Main` 模組匯入 `Player` 型別。
+- `Main` 匯入 `View` 來轉譯視界。
 
-We now have a circular dependency:
+因此造成了相依循環的問題：
 
 ```elm
 Main --> View
 View --> Main
 ```
 
-#### How to break it?
+#### 如何拆解？
 
-In this case what we need to do is to move the `Player` type out of `Main`, somewhere it can be imported by both `Main` and `View`.
+這種情況我們需要將 `Player` 型別從 `Main` 中移走，移到可以同時被 `Main` 及 `View` 所匯入的地方。
 
-To deal with circular dependencies in Elm the easiest thing to do is to split your application into smaller modules. In this particular example we can create another module that can be imported by both `Main` and `View`. We will have three modules:
+Elm 中處理相依循環最簡單的方式就是切割應用程式成更小的模組。這個例子中，我們可以另外新增一個模組給 `Main` 及 `View` 匯入。因此有三個模組：
 
 - Main
 - View
-- Models (contains the Player type)
+- Models（包含了 Player 型別）
 
-Now the dependencies will be:
+現在相依變成了：
 
 ```elm
 Main --> Models
 View --> Models
 ```
 
-There is no circular dependency anymore.
+這樣一來就沒有相依循環。
 
-Try creating separate modules for things like __messages__, __models__, __commands__ and __utilities__, which are modules that are usually imported by many components.
+試著分割模組成類似__訊息__、__模型__、__命令__或__工具__，這些模組通常會被許多元件所匯入。
 
 ---
 
-Let's break the application in smaller modules:
+讓我們將應用程式切割成更小的模組：
 
 __src/Messages.elm__
 
@@ -117,7 +117,7 @@ subscriptions model =
 
 
 
--- MAIN
+-- 主程式
 
 
 main : Program Never
@@ -130,8 +130,8 @@ main =
         }
 ```
 
-You can find the code here <https://github.com/sporto/elm-tutorial-app/tree/03-multiple-modules>
+你可以在此找到程式碼 <https://github.com/sporto/elm-tutorial-app/tree/03-multiple-modules>
 
 ---
 
-There are lots of little modules now, this is overkill for a trivial application. But for a bigger application splitting it makes it easier to work with.
+現在多了許多小模組，對於不重要的應用程式來說有點殺雞用牛刀。但對於較大的應用程式來說，分割會讓工作更輕鬆。
