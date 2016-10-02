@@ -1,13 +1,13 @@
 # 開始應用程式
 
-In this chapter we start building an example Elm application.
+本章節我們開始建置一個 Elm 應用程式。
 
-This tutorial will cover the following aspects about building an application:
+內容將會包括下列各個應用程式面向：
 
-- Application structure
-- Fetching resources
-- Views
-- Routing
-- User interaction and saving changes
+- 應用程式結構
+- 擷取資源
+- 視界
+- 路由
+- 使用者互動與儲存更改
 
-See next page for details about the application.
+下一頁有關更詳細的應用程式。
