@@ -1,6 +1,6 @@
 # 玩家列表（Players list）
 
-Create __src/Players/List.elm__
+新增 __src/Players/List.elm__
 
 ```elm
 module Players.List exposing (..)
@@ -53,4 +53,4 @@ playerRow player =
         ]
 ```
 
-This view shows a list of players.
+這個視界顯示玩家列表。
