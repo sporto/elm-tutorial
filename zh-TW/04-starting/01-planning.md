@@ -1,35 +1,35 @@
 # 規劃
 
-We will build a basic application to track an imaginary role playing game.
+我們將建造一個基本的應用程式，用來追蹤一個想像的角色扮演遊戲。
 
-### Resources
+### 資源（Resources）
 
-During the rest of this guide I will use the word __resources__ to refer to models that are the subject of our application. These are __players__ in this application. Using the word __model__ can be confusing because component specific state is also a model (for example the expanded / collapse state of a component).
+因為應用程式的關係，接下來的章節我將會使用__資源__來表示模型。應用程式中有__玩家（players）__。使用__模型__可能會造成混淆，因為元件特定狀態也是一種模型（例如展開/收合的元件狀態）。
 
-## Wireframes
+## 線框圖（Wireframes）
 
-The application will have two views:
+應用程式有兩個畫面：
 
 ![Plan](01-planning.png)
 
-### Screen 1
+### 畫面 1
 
-Will show a list of players. From here you can:
+顯示玩家列表頁面。從這可以：
 
-- Navigate to edit a player
+- 瀏覽到玩家編輯頁面
 
-### Screen 2
+### 畫面 2
 
-Shows the edit view for a player. In this screen you can:
+顯示玩家編輯頁面。這個畫面中可以：
 
-- Change the level
+- 更改階層
 
-This is a very simple application that will demonstrate:
+這個簡單的應用程式，將會展示：
 
-- Multiple views
-- Nested components
-- Breaking the application into resources
-- Routing
-- Shared state across the application
-- Read and edit operation on the records
-- Ajax requests
+- 多個視界
+- 巢狀元件
+- 拆解應用程式成資源
+- 路由
+- 應用程式中分享狀態
+- 讀取及編輯紀錄
+- Ajax 請求
