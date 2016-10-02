@@ -1,32 +1,32 @@
 # 後端
 
-We will need a backend for our application, we can use __json-server__ for this.
+我們使用 __json-server__ 作為應用程式的後端。
 
-[json-server](https://github.com/typicode/json-server) is an npm package that provides a quick way to create fake APIs.
+[json-server](https://github.com/typicode/json-server) 是個 npm 包，提供快速建立假的 API 的方法。
 
-Start a new node project:
+開始新的 node 專案：
 
 ```bash
 npm init
 ```
 
-Accept all the defaults.
+接受所有預設值。
 
-Install __json-server__:
+安裝 __json-server__：
 
 ```bash
 npm i json-server -S
 ```
 
-Make __api.js__ in the root of the project:
+專案根目錄下新增 __api.js__：
 
 ```js
 var jsonServer = require('json-server')
 
-// Returns an Express server
+// 傳回 Express 伺服端
 var server = jsonServer.create()
 
-// Set default middlewares (logger, static, cors and no-cache)
+// 設定預設中介層（logger、靜態、cors 及 no-cache）
 server.use(jsonServer.defaults())
 
 var router = jsonServer.router('db.json')
@@ -36,7 +36,7 @@ console.log('Listening at 4000')
 server.listen(4000)
 ```
 
-Add __db.json__ at the root:
+專案根目錄下新增 __db.json__：
 
 ```json
 {
@@ -49,12 +49,12 @@ Add __db.json__ at the root:
 }
 ```
 
-Start the server by running:
+啟動伺服端：
 
 ```bash
 node api.js
 ```
 
-Test this fake API by browsing to:
+瀏覽下列網址測試假的 API：
 
 - <http://localhost:4000/players>
