@@ -1,18 +1,18 @@
 # 主模組（Main modules）
 
-The main level needs to be hooked up with the Players modules we created.
+這個主層級需要鉤上先前所建立的 Players 模組。
 
-We need to create links from:
+我們需要建立連結：
 
 ```elm
-Main Messages  --->    Players Messages
-Main Models    --->    Players Models
-Main Update    --->    Players Update
+主訊息    --->    玩家訊息
+主模型    --->    玩家模型
+主更新    --->    玩家更新
 ```
 
-## Main Messages
+## 主訊息
 
-Modify __src/Messages.elm__ to include players messages:
+修改 __src/Messages.elm__ 來包含玩家訊息：
 
 ```elm
 module Messages exposing (..)
@@ -24,9 +24,9 @@ type Msg
     = PlayersMsg Players.Messages.Msg
 ```
 
-## Main Models
+## 主模型
 
-Modify __src/Models.elm__ to include players:
+修改 __src/Models.elm__ 來包含玩家：
 
 ```elm
 module Models exposing (..)
@@ -45,11 +45,11 @@ initialModel =
     }
 ```
 
-Here we have a hardcoded player for now.
+這裡暫時寫死玩家。
 
-## Main Update
+## 主更新
 
-Change __src/Update.elm__ to:
+更改 __src/Update.elm__ 成：
 
 ```elm
 module Update exposing (..)
@@ -70,8 +70,8 @@ update msg model =
                 ( { model | players = updatedPlayers }, Cmd.map PlayersMsg cmd )
 ```
 
-Here we follow the Elm architecture:
+這裡我們遵循 Elm 架構：
 
-- All `PlayersMsg` are routed to `Players.Update`.
-- We extract the result for `Players.Update` using pattern matching
-- Return the model with the updated player list and any command that needs to run.
+- 所有 `PlayersMsg` 發送到 `Players.Update`。
+- 使用樣式對應取出結果給 `Players.Update`
+- 傳回模型，包含更新後玩家列表及需要執行的命令。
