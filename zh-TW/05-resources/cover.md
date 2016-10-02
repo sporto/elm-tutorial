@@ -1,5 +1,5 @@
 # 資源（Resources）
 
-Up to this point your code should look like <https://github.com/sporto/elm-tutorial-app/tree/03-multiple-modules>
+目前為止，你的程式碼看起來像是 <https://github.com/sporto/elm-tutorial-app/tree/03-multiple-modules>
 
-In this chapter we will add the first resource to our application: Players.
+這個章節將會加入第一個資源到應用程式：玩家。
