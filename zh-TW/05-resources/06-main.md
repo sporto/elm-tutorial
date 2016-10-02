@@ -1,6 +1,6 @@
 # 主程式（Main）
 
-Finally modify __src/Main.elm__ to call `initialModel`:
+最後，修改 __src/Main.elm__ 呼叫 `initialModel`：
 
 ```elm
 module Main exposing (..)
@@ -19,7 +19,7 @@ subscriptions : Model -> Sub Msg
 subscriptions model =
   Sub.none
 
--- MAIN
+-- 主程式
 
 main =
   Html.App.program
@@ -30,12 +30,12 @@ main =
     }
 ```
 
-Here we added `initialModel` in the import and `init`.
+這裡在匯入及 `init` 新增了 `initialModel`。
 
 ---
 
-When you run the application you should see a list with one user.
+當執行應用程式時，你會看見列表中有一位用戶。
 
 ![Screenshot](screenshot.png)
 
-The application should look like <https://github.com/sporto/elm-tutorial-app/tree/04-resources>
+應用程式看起來像是 <https://github.com/sporto/elm-tutorial-app/tree/04-resources>
