@@ -2,7 +2,7 @@
 
 ## Players messages
 
-Create __src/Players/Messages.elm__
+新增 __src/Players/Messages.elm__
 
 ```elm
 module Players.Messages exposing (..)
@@ -12,11 +12,11 @@ type Msg
     = NoOp
 ```
 
-Here we will put all the messages related to players.
+這裡放置了所有關於玩家的訊息。
 
-## Players Model
+## 玩家模型
 
-Create __src/Players/Models.elm__
+新增 __src/Players/Models.elm__
 
 ```elm
 module Players.Models exposing (..)
@@ -41,23 +41,23 @@ new =
     }
 ```
 
-Here we define how a player record looks. It has an id, a name and a level.
+這裡定義了玩家紀錄。包含了 id、name 及 level。
 
-Also note the definition for `PlayerId`, it is just an alias to `Int`, doing this is useful for clarity later on when we have function that takes many ids. For example:
+注意到 `PlayerID` 的定義，就只是個 `Int` 的型別別名，這樣對清晰上非常有幫助，尤其當有函式需要許多 ids 的時候。舉例：
 
 ```elm
 addPerkToPlayer : Int -> Int -> Player
 ```
 
-is much clearer when written as:
+用下列寫法更加清晰：
 
 ```elm
 addPerkToPlayer : PerkId -> PlayerId -> Player
 ```
 
-## Players Update
+## 更新玩家
 
-Add __src/Players/Update.elm__
+新增 __src/Players/Update.elm__
 
 ```elm
 module Players.Update exposing (..)
@@ -73,10 +73,10 @@ update message players =
             ( players, Cmd.none )
 ```
 
-This update doesn't do anything at the moment.
+此更新目前沒有要作什麼事。
 ---
 
-This is the basic pattern that all resources in a bigger application would follow:
+這是個基本樣式，大型應用程式的所有資源都會遵循：
 
 ```
 Messages
