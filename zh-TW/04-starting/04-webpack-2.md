@@ -2,7 +2,7 @@
 
 ## index.html
 
-As we are not using Elm reactor anymore we will need to create our own HTML for containing the application. Create __src/index.html__:
+因為我們不再使用 Elm reactor，所以我們需要自己新增 HTML 來包含應用程式。新增 __src/index.html__：
 
 ```html
 <!DOCTYPE html>
@@ -20,7 +20,7 @@ As we are not using Elm reactor anymore we will need to create our own HTML for 
 
 ## index.js
 
-This is the entry point that Webpack will look for when creating a bundle. Add __src/index.js__:
+這是 Webpack 在建立綑綁的時候會看的進入點。新增 __src/index.js__：
 
 ```js
 'use strict';
@@ -28,27 +28,27 @@ This is the entry point that Webpack will look for when creating a bundle. Add _
 require('ace-css/css/ace.css');
 require('font-awesome/css/font-awesome.css');
 
-// Require index.html so it gets copied to dist
+// 引入 index.html，這樣才會被複製到 dist 目錄
 require('./index.html');
 
 var Elm = require('./Main.elm');
 var mountNode = document.getElementById('main');
 
-// The third value on embed are the initial values for incomming ports into Elm
+// 第三個值放入 embed 的值，是一個初始值給進入埠（incoming ports）到 Elm 使用
 var app = Elm.Main.embed(mountNode);
 ```
 
-## Install Elm packages
+## 安裝 Elm 包
 
-Run:
+執行：
 
 ```bash
 elm package install elm-lang/html
 ```
 
-## Source directory
+## 程式碼目錄
 
-We will be adding all our source code in the `src` folder, so we need to tell Elm where to search for dependencies. In __elm-package.json__ change:
+我們將會把所有程式碼都放在 `src` 目錄底下，所以需要告訴 Elm 去哪兒找相依套件。對 __elm-package.json__ 做修改：
 
 ```json
 ...
@@ -58,11 +58,11 @@ We will be adding all our source code in the `src` folder, so we need to tell El
 ...
 ```
 
-Without this the Elm compiler will try to find the imports in the root of our project and fail.
+少了這個設定，Elm 編譯器將會試著從專案根目錄開始找起匯入，因此會失敗。
 
-## Initial Elm app
+## 初始化 Elm 應用程式
 
-Create a basic Elm app. In __src/Main.elm__:
+建立一個基本的 Elm 應用程式。修改 __src/Main.elm__：
 
 ```elm
 module Main exposing (..)
@@ -71,7 +71,7 @@ import Html exposing (Html, div, text)
 import Html.App
 
 
--- MODEL
+-- 模型
 
 
 type alias Model =
@@ -84,7 +84,7 @@ init =
 
 
 
--- MESSAGES
+-- 訊息
 
 
 type Msg
@@ -92,7 +92,7 @@ type Msg
 
 
 
--- VIEW
+-- 視界
 
 
 view : Model -> Html Msg
@@ -102,7 +102,7 @@ view model =
 
 
 
--- UPDATE
+-- 更新
 
 
 update : Msg -> Model -> ( Model, Cmd Msg )
@@ -113,7 +113,7 @@ update msg model =
 
 
 
--- SUBSCRIPTIONS
+-- 訂閱
 
 
 subscriptions : Model -> Sub Msg
@@ -122,7 +122,7 @@ subscriptions model =
 
 
 
--- MAIN
+-- 主程式
 
 
 main : Program Never
@@ -137,7 +137,7 @@ main =
 
 ## package.json
 
-Finally we want to add some npm scripts so we can run our servers easily. In __package.json__ replace `scripts` with:
+最後，為了更容易執行伺服端，加入一些 npm scripts。修改 __package.json__ 將 `scripts` 替換成：
 
 ```json
 "scripts": {
@@ -148,24 +148,21 @@ Finally we want to add some npm scripts so we can run our servers easily. In __p
 },
 ```
 
-- So now `npm run api` will run our fake server.
-- `npm run build` will create a webpack build and put the bundles in `dist`.
-- `npm run watch` runs the webpack watcher which puts the bundles in `dist` as we change our source code.
-- `npm run dev` runs the webpack dev server.
+- 現在，執行 `npm run api` 便可啟動假的後端伺服端。
+- `npm run build` 執行 webpack 建置並將綑綁結果放在 `dist` 目錄。
+- `npm run watch` 啟動 webpack 看守，當程式碼異動時，將會把綑綁結果放在 `dist` 目錄。
+- `npm run dev` 啟動 webpack 開發伺服端。
 
-## Test it
+## 試試看
 
-Let's test our setup
+讓我們來試試看。
 
-In a terminal window run:
+在終端機視窗下執行：
 
 ```bash
 npm run dev
 ```
 
-If you browse to `http://localhost:3000/` you should see our application, which outputs "Hello".
+如果你瀏覽 `http://localhost:3000/`，你會看到我們的應用程式輸出 "Hello"。
 
-Your application code should look like <https://github.com/sporto/elm-tutorial-app/tree/02-webpack>.
-
-
-
+你的應用程式原始碼會像是 <https://github.com/sporto/elm-tutorial-app/tree/02-webpack>.
