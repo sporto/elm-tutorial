@@ -1,6 +1,6 @@
 # 主視界（Main view）
 
-Modify __src/View.elm__ to include the list of players:
+修改 __src/View.elm__ 包含玩家列表：
 
 ```elm
 module View exposing (..)
