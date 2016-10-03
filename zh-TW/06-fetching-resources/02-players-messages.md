@@ -1,6 +1,6 @@
 # 玩家訊息（Players messages）
 
-First let's create the messages we need for fetching players. Add a new import and message to __src/Players/Messages.elm__
+首先，建立用來擷取玩家的訊息。新增一個匯入及訊息到 __src/Players/Messages.elm__
 
 ```elm
 module Players.Messages exposing (..)
@@ -14,6 +14,6 @@ type Msg
     | FetchAllFail Http.Error
 ```
 
-`FetchAllDone` will be called when we get the response from the server. This message will carry the list of fetched players.
+`FetchAllDone` 當從伺服端取得回應後呼叫。訊息帶著擷取到的玩家列表。
 
-`FetchAllFail` will be called if there is a problem fetching the data.
+`FetchAllFail` 如果擷取過程中有問題便會呼叫此函式。
