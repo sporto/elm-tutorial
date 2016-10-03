@@ -1,20 +1,20 @@
 # 規劃
 
-The next step is to fetch the list of players from the fake API we created before.
+接下來是從假的 API 擷取玩家清單。
 
-This is the plan:
+這是規劃：
 
 ![Plan](01-plan.png)
 
-(1-2) When the application loads, we trigger a command to initiate an Http request to fetch the players. This will be done in the `init` of Html.App.
+(1-2) 當應用程式載入，觸發擷取玩家的 Http 請求。這部份在 Html.App 的 `init` 完成。
 
-(3-6) When the request is done, we trigger a `FetchAllDone` with the data, this message flows down to `Players.Update` which updates the collection of players.
+(3-6) 當請求完成，觸發 `FetchAllDone` 伴隨著資料，訊息流到 `Players.Update`，將會更新玩家的集合。
 
-(7-10) Then the application renders with the updated players' list.
+(7-10) 接著，應用程式轉譯更新後的玩家列表。
 
-## Dependencies
+## 函式依賴
 
-We will need the `http`, install it using:
+我們需要 `http`，執行下列指令安裝：
 
 ```bash
 elm package install evancz/elm-http
