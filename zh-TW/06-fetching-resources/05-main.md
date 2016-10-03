@@ -1,8 +1,8 @@
 # 主程式
 
-## Main Model
+## 主模型
 
-Remove the hardcoded list of players in __src/Models.elm__
+將 __src/Models.elm__ 檔案內，寫死的玩家清單刪除
 
 ```elm
 initialModel : Model
@@ -11,11 +11,11 @@ initialModel =
     }
 ```
 
-## Main
+## 主程式
 
-Finally, we want to run the `fetchAll` when starting the application.
+最後，希望應用程式啟動時執行 `fetchAll`。
 
-Update __src/Main.elm__:
+更新 __src/Main.elm__：
 
 ```elm
 ...
@@ -28,4 +28,4 @@ init =
     ( initialModel, Cmd.map PlayersMsg fetchAll )
 ```
 
-Now `init` returns a list of commands to run when the application starts.
+現在，當應用程式啟動時，`init` 傳回命令列表。
