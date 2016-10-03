@@ -1,6 +1,6 @@
 # 玩家命令（Players commands）
 
-Now we need to create the tasks and command to fetch the players from the server. Create __src/Players/Commands.elm__:
+現在新增任務及命令，用來從伺服端擷取玩家。新增 __src/Players/Commands.elm__：
 
 ```elm
 module Players.Commands exposing (..)
@@ -37,7 +37,7 @@ memberDecoder =
 ```
 ---
 
-Let's go through this code.
+讓我們一步步來看。
 
 ```elm
 fetchAll : Cmd Msg
@@ -46,10 +46,10 @@ fetchAll =
         |> Task.perform FetchAllFail FetchAllDone
 ```
 
-Here we create a command for our application to run.
+這裡新增一個命令讓應用程式去執行。
 
-- `Http.get` creates a task
-- We then send this task to `Task.perform` which wraps it in a command
+- `Http.get` 新增一個任務
+- 接著傳送任務到 `Task.perform`，將會包裝成命令
 
 ```elm
 collectionDecoder : Decode.Decoder (List Player)
@@ -57,7 +57,7 @@ collectionDecoder =
     Decode.list memberDecoder
 ```
 
-This decoder delegates the decoding of each member of a list to `memberDecoder`
+此解譯器代理解譯列表中每個成員成為 `memberDecoder`
 
 ```elm
 memberDecoder : Decode.Decoder Player
@@ -68,65 +68,65 @@ memberDecoder =
         ("level" := Decode.int)
 ```
 
-`memberDecoder` creates a JSON decoder that returns a `Player` record.
+`memberDecoder` 建立一個 JSON 解譯器，傳回 `Player` 紀錄。
 
 ---
-To understand how the decoder works let's play with the elm repl.
+為了瞭解解譯器的運作，讓我們玩玩 elm repl。
 
-In a terminal run `elm repl`. Import the Json.Decoder module:
+終端機內執行 `elm repl`。匯入 Json.Decoder 模組：
 
 ```bash
 > import Json.Decode exposing (..)
 ```
 
-Then define a Json string:
+定義一個 Json 字串：
 
 ```bash
 > json = "{\"id\":99, \"name\":\"Sam\"}"
 ```
 
-And define a decoder to extract the `id`:
+接著，定義一個解譯器來取出 `id`：
 
 ```bash
 > idDecoder = ("id" := int)
 ```
 
-This creates a decoder that given a string tries to extract the `id` key and parse it into a integer.
+這會新增一個解譯器，給定一個字串，試著取出 `id` 鍵的值並剖析成為整數。
 
-Run this decoder to see the result:
+執行解譯器看結果：
 
 ```bash
 > result = decodeString idDecoder  json
 Ok 99 : Result.Result String Int
 ```
 
-We see `Ok 99` meaning that decoding was successful and we got 99. So this is what `("id" := Decode.int)` does, it creates a decoder for a single key.
+看到 `Ok 99` 表示解譯已經成功，得到了 99。這就是 `("id" := Decode.int)` 做的事，為單一鍵建立解譯器。
 
-This is one part of the equation. Now for the second part, define a type:
+這是其中一個問題。現在第二個問題，定義一個型別：
 
 ```bash
 > type alias Player = { id: Int, name: String }
 ```
 
-In Elm you can create a record calling a type as a function. For example, `Player 1 "Sam"` creates a player record. Note that the order of parameters is significant like any other function.
+Elm 中可以新增紀錄可以像函式一般呼叫型別。例如，`Player 1 "Sam"` 新增一個玩家紀錄。注意到參數順序如同其他函式一般，有其意義。
 
-Try it:
+試試：
 
 ```bash
 > Player 1 "Sam"
 { id = 1, name = "Sam" } : Repl.Player
 ```
 
-With these two concepts let's create a complete decoder:
+根據這兩個概念，讓我們建立一個完整的解譯器：
 
 ```bash
 > nameDecoder = ("name" := string)
 > playerDecoder = object2 Player idDecoder nameDecoder
 ```
 
-`object2` takes a function as first argument (Player in this case) and two decoders. Then it runs the decoders and passes the results as the arguments to the function (Player).
+`object2` 取用函數作為第一個參數（這個案例為 Player）及兩個解譯器。接著執行解譯器並將結果作為參數帶到（Player）函式。
 
-Try it:
+試試：
 ```bash
 > result = decodeString playerDecoder json
 Ok { id = 99, name = "Sam" } : Result.Result String Repl.Player
@@ -134,4 +134,4 @@ Ok { id = 99, name = "Sam" } : Result.Result String Repl.Player
 
 ---
 
-Remember that none of this actually executes until we send the command to __Html.App__.
+記住，這些都不會執行，直到發送命令到 __Html.App__。
