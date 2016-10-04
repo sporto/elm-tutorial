@@ -40,7 +40,7 @@ Add another helper function for updating a player when we receive the response f
 
 ```elm
 updatePlayer : Player -> List Player -> List Player
-updatePlayer updatedPlayer =
+updatePlayer updatedPlayer players =
     let
         select existingPlayer =
             if existingPlayer.id == updatedPlayer.id then
@@ -48,7 +48,7 @@ updatePlayer updatedPlayer =
             else
                 existingPlayer
     in
-        List.map select
+        List.map select players
 ```
 
 This function will be used when we receive an updated player from the API via `SaveSuccess`. This function:
