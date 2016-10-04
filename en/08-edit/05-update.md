@@ -15,7 +15,7 @@ Add a helper function for creating commands for saving a player to the API.
 
 ```elm
 changeLevelCommands : PlayerId -> Int -> List Player -> List (Cmd Msg)
-changeLevelCommands playerId howMuch =
+changeLevelCommands playerId howMuch players =
     let
         cmdForPlayer existingPlayer =
             if existingPlayer.id == playerId then
@@ -23,7 +23,7 @@ changeLevelCommands playerId howMuch =
             else
                 Cmd.none
     in
-        List.map cmdForPlayer
+        List.map cmdForPlayer players
 ```
 
 This function will be called when we receive the `ChangeLevel` message. This function:
