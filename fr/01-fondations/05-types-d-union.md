@@ -99,7 +99,7 @@ Nous serons ensuite capable d'appeler `respond` comme ceci :
 respond (Other 123)
 ```
 
-Mais respond `(Other "Hello")` échouera car `respond` s'attend à recevoir un entier en lieu et place de `a`.
+Mais `respond (Other "Hello")` échouera car `respond` s'attend à recevoir un entier en lieu et place de `a`.
 
 ## Cas d'usage habituel
 

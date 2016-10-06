@@ -5,18 +5,18 @@
 Considérez une fonction avec la signature suivante :
 
 ```elm
-indexOf : String -> Array String -> Int
+indexOf : String -> List String -> Int
 ```
 
-Cette fonction hypothétique prend une chaîne de caractères et un tableau de chaînes de caractères en paramètre et retourne l'index où la chaîne de caractère donnée à été trouvée dans le tableau, ou -1 si la chaîne n'a pas été trouvée.
+Cette fonction hypothétique prend une chaîne de caractères et une liste de chaînes de caractères en paramètre et retourne l'index où la chaîne de caractère donnée à été trouvée dans la liste, ou -1 si la chaîne n'a pas été trouvée.
 
-Mais que se passe-t-il si à la place, nous avions un tableau d'entiers ? Nous ne pourrions pas utiliser cette fonction. En revanche, nous pouvons rendre cette fonction __générique__ en utilisant des __variables de types__ aussi appelées __stand-ins__ à la place des types spécifiques des variables.
+Mais que se passe-t-il si à la place, nous avions une liste d'entiers ? Nous ne pourrions pas utiliser cette fonction. En revanche, nous pouvons rendre cette fonction __générique__ en utilisant des __variables de types__ aussi appelées __stand-ins__ à la place des types spécifiques des variables.
 
 ```elm
-indexOf : a -> Array a -> Int
+indexOf : a -> List a -> Int
 ```
 
-En remplaçant `String` par `a`, la signature indique maintenant que `indexOf` prend une valeur de n'importe quel type `a` et un tableau du même type `a` et retourne un entier. À partir du moment où les types correspondent, le compilateur sera heureux. Vous pouvez appeler `indexOf` avec un `String` et un tableau de `String`, ou un `Int` et un tableau de `Int`, ça marchera dans les deux cas.
+En remplaçant `String` par `a`, la signature indique maintenant que `indexOf` prend une valeur de n'importe quel type `a` et une liste du même type `a` et retourne un entier. À partir du moment où les types correspondent, le compilateur sera heureux. Vous pouvez appeler `indexOf` avec un `String` et une liste de `String`, ou un `Int` et une liste de `Int`, ça marchera dans les deux cas.
 
 De cette façon, les fonctions peuvent être rendues plus génériques. Il est aussi possible d'avoir plusieurs __variables de type__ :
 
@@ -32,6 +32,12 @@ Cette fonction prend en paramètre un tuple de type `a`, `b` et retourne un tupl
 switch (1, 2)
 switch ("A", 2)
 switch (1, ["B"])
+```
+
+Remarque : n'importe quel nom de variable en minuscules peut être utilisé pour une __variable de type__, `a` et `b` ne sont que des conventions. Par exemple, la signature ci-dessous est parfaitement valable :
+
+```
+indexOf : -> thing -> List thing -> Int
 ```
 
 ## Fonctions en tant que paramètres
