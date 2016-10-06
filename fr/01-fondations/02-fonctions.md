@@ -4,7 +4,49 @@ Ce chapitre couvre la syntaxe de base d'Elm avec laquelle il est important de se
 
 ## Fonctions
 
-Voici à quoi ressemble une fonction en Elm :
+Elm supporte deux types de fonctions :
+
+- les fonctions anonymes
+- les fonctions nommées
+
+### Fonctions anonymes
+
+Une fonction anonyme, comme son nom l'indique, est une fonction créée sans nom :
+
+```elm
+\x -> x + 1
+
+\x y -> x + y
+```
+
+On place les arguments entre la barre oblique inversée et la flèche, et on dit quoi faire de ces arguments à droite de la flèche.
+
+
+### Fonctions nommées
+
+Une fonction nommée en Elm ressemble à cela :
+
+```elm
+add1 : Int -> Int
+add1 x =
+    x + 1
+```
+
+- La première ligne de cet exemple est la signature de la fonction. Cette signature est optionnelle, mais il est recommandé de la fournir : cela permet d'exprimer directement l'intention de la fonction.
+- Le reste est le corps de la fonction. L'implémentation doit se conformer à la signature définie plus haut.
+
+Dans le cas de cette fonction, la signature dit ceci : si l'on passe en argument à cette fonction un entier (Int), elle retourne un entier.
+
+Cette fonction s'appelle de la manière suivante :
+
+```elm
+add1 3
+```
+
+
+En Elm, on utilise des *espaces* pour exprimer l'application d'une fonction (plutôt que des parenthèses, par exemple).
+
+Voilà une autre fonction nommée :
 
 ```elm
 add : Int -> Int -> Int
@@ -12,19 +54,73 @@ add x y =
     x + y
 ```
 
-La première ligne de cet exemple est la signature de la fonction. Cette signature est optionnelle, mais il est recommandé de la fournir : cela permet de se rendre directement compte de l'intention de la fonction.
 
-Cette fonction nommée `add` prend deux entiers en argument (`Int -> Int`) et retourne un autre entier (le troisième `-> Int`).
-
-La deuxième ligne est la déclaration de la fonction. Les paramètres sont `x` et `y`.
-
-Ensuite nous avons le corps de la fonction `x + y` qui retourne juste la somme des paramètres.
-
-Cette fonction s'appelle de la manière suivante :
+Cette fonction prend deux arguments (deux Int) et retourne un Int. Elle s'appelle comme ceci :
 
 ```elm
-add 1 2
+add 2 3
 ```
+
+### Pas d'argument
+
+En Elm, une fonction qui ne prend pas d'argument est une constante :
+
+```elm
+name =
+  "Sam"
+```
+
+
+### Comment sont appliquées les fonctions
+
+Comme expliqué ci-dessus, une fonction qui prend deux arguments ressemble à cela :
+
+```elm
+divide : Float -> Float -> Float
+divide x y =
+    x / y
+```
+
+On peut interpréter cette signature comme signifiant que la fonction prend deux Float (nombre à virgule flottante) et retourne un Float.
+
+```elm
+divide 5 2 == 2.5
+```
+
+Ce n'est pourtant pas tout à fait exact. En effet, en Elm, toutes les fonctions prennent exactement un argument et retournent un résultat, qui peut être une autre fonction. Voyons le cas de la fonction ci-dessus :
+
+ ```elm
+-- Quand on fait :
+
+divide 5 2
+
+-- C'est comme si on faisait :
+
+((divide 5) 2)
+
+-- D'abord, `divide 5` est évalué.
+-- L'argument `5` est appliqué à `divide`, ce qui produit une fonction intermédiaire.
+
+divide 5 -- -> fonction intermédiaire
+
+-- Appelons cette fonction intermédiaire `divide5`.
+-- Si on pouvait voir la signature et le corps de cette fonction, ça donnerait quelque chose comme ça :
+
+divide5 : Float -> Float
+divide5 y =
+  5 / y
+
+-- On dispose d'une fonction à laquelle le `5` a déjà été appliqué.
+
+-- Puis, le second argument est appliqué, ici `2`
+
+divide5 2
+
+-- Ce qui retourne le résultat final
+```
+
+Si on écrit habituellement ça sans les parenthèses, c'est parce que l'application de fonction est **associative à gauche**.
+
 
 ### Grouper avec les parenthèses
 
@@ -44,18 +140,18 @@ add(1, divide(12, 3))
 
 ## Application partielle de fonction
 
-Avec Elm il est possible d'appeler une fonction, comme la fonction `add` ci-dessus, en ne lui donnant qu'un argument, par exemple `add 2`.
+Comme expliqué plus haut, toute fonction accepte un unique argument et retourne une autre fonction ou un résultat.
+Cela signifie qu'il est possible d'appeler une fonction, comme la fonction `add` ci-dessus, en ne lui donnant qu'un argument, par exemple `add 2`, et d'obtenir en retour une **fonction partiellement appliquée**.
+Cette fonction résultante a pour signature `Int -> Int`.
 
-Ceci retourne une autre fonction avec la valeur `2` liée au premier argument. Appeler cette nouvelle fonction avec une seconde valeur retournera `2 + ` la seconde valeur :
+`add 2` retourne une autre fonction avec la valeur `2` liée au premier argument. Appeler cette nouvelle fonction avec une seconde valeur retournera `2 + ` la seconde valeur :
 
 ```elm
 add2 = add 2
 add2 3 -- result 5
 ```
 
-Une autre façon de voir une fonction avec une signature du type `add : Int -> Int -> Int` est de se dire que c'est une fonction qui prend un entier en paramètre et retourne une autre fonction. Cette autre fonction prend un autre entier en paramètre et retourne un entier.
-
-Ce principe est appelé application partielle de fonction. Il est incroyablement utile en Elm pour rendre le code plus lisible et pour permettre le passage d'états entre les différentes fonctions de votre application.
+L'application partielle de fonction est incroyablement utile en Elm pour rendre le code plus lisible et pour permettre le passage d'états entre les différentes fonctions de votre application.
 
 ## L'opérateur _pipe_
 
