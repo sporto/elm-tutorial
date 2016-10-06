@@ -18,3 +18,7 @@
    * [Composition](02-elm-arch/06-composition.md)
    * [Composition - Parent](02-elm-arch/07-composition-2.md)
    * [Composition - Flux](02-elm-arch/08-composition-3.md)
+* Tips and Tricks
+   * [Context](tips-tricks/context.md)
+   * [Point free style](tips-tricks/point-free-style.md)
+   * [Troubleshooting](tips-tricks/troubleshooting.md)
