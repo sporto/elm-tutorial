@@ -1,0 +1,16 @@
+@startuml
+autonumber "<b>(#)"
+
+participant App #white
+participant Main.update as MU #white
+participant Enfant.update as EU #white
+participant PetitEnfant.update as PE #white
+
+App -> MU: update
+MU -> EU: update
+EU -> PE: update
+PE --> EU: (model, command)
+EU --> MU: (model, command)
+MU -> App : (model, command)
+
+@enduml
