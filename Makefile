@@ -7,6 +7,7 @@ pu-comp:
 	
 pu-comd:
 	java -jar /usr/local/bin/plantuml.jar en/03-subs-cmds/02-commands.pu
+	java -jar /usr/local/bin/plantuml.jar fr/03-subs-cmds/02-commandes.pu
 	
 pu-fetch:
 	java -jar /usr/local/bin/plantuml.jar en/06-fetching-resources/01-plan.pu

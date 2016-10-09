@@ -124,6 +124,6 @@ Si vous vous posez la question, sachez que `OnResult res` représente un message
 
 Dans une plus grande application avec de nombreux composants imbriqués, on peut potentiellement envoyer plusieurs commandes à la fois à __Html.App__, comme on le voit dans ce diagramme :
 
-![Flow](02-commands.png)
+![Flow](02-commandes.png)
 
 Ici, on collecte les commandes de trois différents niveaux. Ces commandes sont ensuite envoyées à __Elm.App__ pour être exécutées.
