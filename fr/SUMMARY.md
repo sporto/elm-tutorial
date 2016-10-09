@@ -28,6 +28,13 @@
    * [Webpack](04-commencer/03-webpack.md)
    * [Webpack 2](04-commencer/04-webpack-2.md)
    * [Plusieurs modules](04-commencer/05-plusieurs-modules.md)
+* [Resources](05-ressources/cover.md)
+   * [Introduction](05-ressources/01-intro.md)
+   * [Joueurs](05-ressources/02-joueurs.md)
+   * [Liste des joueurs](05-ressources/03-liste-joueurs.md)
+   * [Modules principaux](05-ressources/04-modules-principaux.md)
+   * [Vue principale](05-ressources/05-vue-principale.md)
+   * [Programme](05-ressources/06-main.md)
 * Trucs et Astuces
    * [Contextes](tips-tricks/context.md)
    * [Programmation tacite ('point-free style')](tips-tricks/point-free-style.md)
