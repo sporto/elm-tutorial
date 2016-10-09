@@ -35,6 +35,13 @@
    * [Modules principaux](05-ressources/04-modules-principaux.md)
    * [Vue principale](05-ressources/05-vue-principale.md)
    * [Programme](05-ressources/06-main.md)
+* [Récupération des ressources](06-recuperation-ressources/cover.md)
+   * [Plan](06-recuperation-ressources/01-plan.md)
+   * [Players messages](06-recuperation-ressources/02-messages-joueurs.md)
+   * [Players update](06-recuperation-ressources/03-mise-a-jour-joueurs.md)
+   * [Players commands](06-recuperation-ressources/04-commandes-joueurs.md)
+   * [Main](06-recuperation-ressources/05-main.md)
+   * [Try it](06-recuperation-ressources/06-essayez.md)
 * Trucs et Astuces
    * [Contextes](tips-tricks/context.md)
    * [Programmation tacite ('point-free style')](tips-tricks/point-free-style.md)

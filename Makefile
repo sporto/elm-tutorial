@@ -11,6 +11,7 @@ pu-comd:
 	
 pu-fetch:
 	java -jar /usr/local/bin/plantuml.jar en/06-fetching-resources/01-plan.pu
+	java -jar /usr/local/bin/plantuml.jar fr/06-recuperation-ressources/01-plan.pu
 
 pu-routing:
 	java -jar /usr/local/bin/plantuml.jar en/07-routing/01-intro.pu
