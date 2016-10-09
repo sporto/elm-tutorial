@@ -22,7 +22,7 @@
    * [Souscriptions](03-subs-cmds/01-subs.md)
    * [Commandes](03-subs-cmds/02-commands.md)
    * [Tâches](03-subs-cmds/03-tasks.md)
-* Tips and Tricks
-   * [Context](tips-tricks/context.md)
-   * [Point free style](tips-tricks/point-free-style.md)
-   * [Troubleshooting](tips-tricks/troubleshooting.md)
+* Tructs et Astuces
+   * [Contextes](tips-tricks/context.md)
+   * [Programmation tacite ('point-free style')](tips-tricks/point-free-style.md)
+   * [Résolution de problèmes](tips-tricks/troubleshooting.md)
