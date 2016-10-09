@@ -34,7 +34,7 @@ require('./index.html');
 var Elm = require('./Main.elm');
 var mountNode = document.getElementById('main');
 
-// The third value on embed are the initial values for incomming ports into Elm
+// The optional second argument to .embed() can be an object describing the data we need to start a program, i.e. a userID or some token
 var app = Elm.Main.embed(mountNode);
 ```
 
@@ -166,6 +166,3 @@ npm run dev
 If you browse to `http://localhost:3000/` you should see our application, which outputs "Hello".
 
 Your application code should look like <https://github.com/sporto/elm-tutorial-app/tree/02-webpack>.
-
-
-
