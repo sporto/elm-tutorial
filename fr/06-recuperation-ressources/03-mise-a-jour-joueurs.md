@@ -16,6 +16,6 @@ update message players =
             ( players, Cmd.none )
 ```
 
-Le message `FetchAllDone` a la liste des Joueurs récupérés : on renvoie donc cetee donnée pour mettre à jour la collection des Joueurs.
+Le message `FetchAllDone` a la liste des Joueurs récupérés : on renvoie donc cette donnée pour mettre à jour la collection des Joueurs.
 
 `FetchAllFail` est utilisé en cas d'erreur. Pour l'instant, nous nous contenterons de retourner la liste que nous avions avant la requête qui a échoué.
