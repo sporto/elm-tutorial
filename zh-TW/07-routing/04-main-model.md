@@ -1,7 +1,7 @@
 # 主模型（Main model）
 
-In our main application model we want to store the current route.
-Change __src/Models.elm__ to:
+我們希望在主應用程式模型中儲存目前的路由。
+更改 __src/Models.elm__ 成：
 
 ```elm
 module Models exposing (..)
@@ -23,7 +23,7 @@ initialModel route =
     }
 ```
 
-Here we:
+這裡我們：
 
-- added `route` to the model
-- changed `initialModel` so it takes a `route`
+- 新增 `route` 到模型
+- 更改 `initialModel` 取得一個 `route`
