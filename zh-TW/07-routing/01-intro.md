@@ -1,44 +1,44 @@
 # 簡介
 
-Let's add a routing to our application. We will be using the [Elm Navigation package](http://package.elm-lang.org/packages/elm-lang/navigation/) and [UrlParser](http://package.elm-lang.org/packages/evancz/url-parser/).
+讓我們加入路由到應用程式。我們將使用 [Elm Navigation 包](http://package.elm-lang.org/packages/elm-lang/navigation/) 及 [UrlParser](http://package.elm-lang.org/packages/evancz/url-parser/)。
 
-- Navigation provides the means to change the browser location and respond to changes
-- UrlParser provides route matchers
+- Navigation 提供了更改瀏覽器網址及對應的方法
+- UrlParser 提供路由比對器
 
-First install the packages:
+首先進行安裝：
 
 ```bash
 elm package install elm-lang/navigation 1.0.0
 elm package install evancz/url-parser 1.0.0
 ```
 
- `Navigation` is a library that wraps `Html.App`. It has all the functionality of `Html.App` plus several extra things:
+ `Navigation` 函式庫包裝 `Html.App`。包含了 `Html.App` 所有功能並額外加上：
 
- - Listens for location changes on the browser
- - Calls functions that we provide when the location changes
- - Provides a way of changing the browser location
+ - 監聽瀏覽器網址的更改
+ - 當更改時，呼叫我們提供的函式
+ - 提供改變瀏覽器網址的方法
 
-## Flow
+## 流程
 
-Here are a couple of diagrams to understand how routing will work.
+以下幾張圖表用來了解路由的運作。
 
-### Initial render
+### 初始轉譯
 
-![Flow](01-intro.png)
+![流程](01-intro.png)
 
-1. When the page first loads the `Navigation` module will fetch the current URL and send it to a `parse` function that we will provide.
-1. This `parse` function will return a `Route` that matches.
-1. Navigation then sends this matched `Route` to our application `init` function.
-1. In `init` we create the application model, we store the matched route there.
-1. Navigation then sends the initial model to the view to render the application.
+1. 當第一次讀取 `Navigation` 模組，將會擷取目前 URL 並送到我們所提供的 `parse` 函式。
+1. `parse` 函式將會傳回符合的 `Route`。
+1. Navigation 接著將符合的 `Route` 送到應用程式的 `init` 函式。
+1. `init` 中我們建立應用程式模型。符合的路由儲存在此。
+1. Navigation 接著發送初始的模型到視界進行應用程式轉譯。
 
-### When the location changes
+### 當網址改變
 
-![Flow](01-intro_001.png)
+![流程](01-intro_001.png)
 
-1. When the browser location changes the Navigation library receives an event
-1. The new location is send to our `parse` function as before
-1. `parse` returns the matched route
-1. `Navigation` then calls a `urlUpdate` function that we provide passing the matched route
-1. In `urlUpdate` we store the matched route in the application model and return the update model
-1. Navigation then renders the application as normal
+1. 當瀏覽器網址改變時，Navigation 函式庫接收到事件
+1. 新的網址送到與先前相同的 `parse` 函式
+1. `parse` 傳回符合的路由
+1. `Navigation` 接著呼叫我們提供的 `urlUpdate` 函式並帶入符合的路由
+1. `urlUpdate` 中我們儲存符合的路由至應用程式模型並傳回更新後的模型
+1. Navigation 接著如平常般轉譯應用程式
