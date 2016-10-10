@@ -1,14 +1,14 @@
 # 路由
 
-Create a module __src/Routing.elm__ for defining the application routing configuration.
+新增 __src/Routing.elm__ 模組，用來定義應用程式的路由設置。
 
-In this module we define:
+此模組定義：
 
-- the routes for our application
-- how to match browser paths to routes using path matchers
-- how to react to routing messages
+- 應用程式的路由
+- 多少個路徑比對
+- 如何反應路由訊息
 
-In __src/Routing.elm__:
+__src/Routing.elm__ 檔案：
 
 ```elm
 module Routing exposing (..)
@@ -58,9 +58,9 @@ routeFromResult result =
 
 ---
 
-Let's go over this module.
+讓我們仔細檢查這個模組。
 
-### Routes
+### 路由
 
 ```elm
 type Route
@@ -69,10 +69,10 @@ type Route
     | NotFoundRoute
 ```
 
-These are the available routes in our application.
-`NotFound` will be used when no route matches the browser path.
+這些是應用程式內可用的路由。
+當沒有任何符合的路徑，使用 `NotFound。
 
-### Matchers
+### 比對器
 
 ```elm
 matchers : Parser (Route -> a) a
@@ -84,19 +84,19 @@ matchers =
         ]
 ```
 
-Here we define route matchers. These parsers are provided by the url-parser library.
+這是我們的比對器。使用由 url-parser 函式庫提供剖析器。
 
-We want three matchers:
+我們想要三個比對：
 
-- One for an empty route which will resolve to `PlayersRoute`
-- One for `/players` which will resolve to `PlayersRoute` as well
-- And one for `/players/id` which will resolve to `PlayerRoute id`
+- 空的路由解析成 `PlayersRoute`
+- 單一 `/players` 路徑解析成 `PlayersRoute`
+- 任意 `/players/id` 路徑解析成 `PlayerRoute id`
 
-Note that the order is important.
+注意到順序很重要。
 
-See more details about this library here <http://package.elm-lang.org/packages/evancz/url-parser>.
+更多詳細細節請見 <http://package.elm-lang.org/packages/evancz/url-parser>。
 
-### Hash parser
+### Hash 剖析器
 
 ```elm
 hashParser : Navigation.Location -> Result String Route
@@ -106,18 +106,18 @@ hashParser location ➊ =
         |> parse identity matchers ➍
 ```
 
-Each time the browser location changes, the Navigation library will give us a `Navigation.Location` record.
+每當瀏覽器網址更動時，Navigation 函式庫會給予 `Navigation.Location` 紀錄。
 
-`hashParser` is a function that:
+`hashParser` 函式則是：
 
-- Takes this `Navigation.Location` record ➊
-- Extracts the `.hash` part of it ➋
-- Removes the first character (the `#`)
-- Sends this string to `parse` with our defined matchers ➍
+- 取用 `Navigation.Location` 紀錄 ➊
+- 取出 `.hash` 的部份 ➋
+- 移除第一個字元（`#`）
+- 將字串及比對器送到 `parse` ➍
 
-This parser returns a `Result` value. If the parser succeeds we will get the matched `Route`, otherwise we will get an error as a string.
+parser 傳回 `Result` 值。當剖析成功得到符合的 `Route`，失敗得到錯誤訊息字串。
 
-### Parser
+### 剖析器
 
 ```elm
 parser : Navigation.Parser (Result String Route)
@@ -125,9 +125,9 @@ parser =
     Navigation.makeParser hashParser
 ```
 
-The Navigation package expects a parser for the current location, each time the location changes in the browser Navigation will call this parser. We pass our `hashParser` to `Navigation.makeParser`.
+Navigation 預期一個目前位置的剖析器，每當位置更動時，Navigation 將會呼叫此剖析器。我們傳遞 `hashParser` 至 `Navigation.makeParser`。
 
-### Result to route
+### 路由結果
 
 ```elm
 routeFromResult : Result String Route -> Route
@@ -140,4 +140,4 @@ routeFromResult result =
             NotFoundRoute
 ```
 
-Finally when we get a result from the parser we want to extract the route. If all matchers fail we return `NotFoundRoute` instead.
+最後，當我們從剖析器取得結果，我們希望取出路由。如果沒有一個比對符合，則傳回 `NotFoundRoute`。
