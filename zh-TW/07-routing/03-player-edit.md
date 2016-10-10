@@ -1,8 +1,8 @@
 # 玩家編輯的視界（Player edit view）
 
-We need a new view to show when hitting `/players/3`.
+當點擊 `/players/3` 時，需要顯示一個新的視界。
 
-Create __src/Players/Edit.elm__:
+新增 __src/Players/Edit.elm__：
 
 ```elm
 module Players.Edit exposing (..)
@@ -61,4 +61,4 @@ btnLevelIncrease player =
         [ i [ class "fa fa-plus-circle" ] [] ]
 ```
 
-This view shows a form with the player's level. At the moment we have some dummy buttons that will be implemented later e.g. `btnLevelIncrease`.
+此視界顯示玩家等級的表單。此刻只有一些虛擬的按鈕，稍候會實作。例如 `btnLevelIncrease`。
