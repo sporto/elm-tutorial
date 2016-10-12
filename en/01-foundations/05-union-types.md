@@ -42,7 +42,7 @@ Note how we add a payload to `Other`:
 Other "Hello"
 ```
 
-This is just like a function call where `Other` is the function. Union types behave just like functions. For example give a type:
+This is just like a function call where `Other` is the function. Union types behave just like functions. For example given a type:
 
 ```elm
 type Answer = Message Int String

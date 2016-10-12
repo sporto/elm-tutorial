@@ -1,6 +1,6 @@
 # Plan
 
-The plan for changing a player's level is as follow:
+The plan for changing a player's level is as follows:
 
 ![Flow](01-plan.png)
 
