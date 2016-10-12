@@ -37,7 +37,7 @@ Here are a couple of diagrams to understand how routing will work.
 ![Flow](01-intro_001.png)
 
 1. When the browser location changes the Navigation library receives an event
-1. The new location is send to our `parse` function as before
+1. The new location is sent to our `parse` function as before
 1. `parse` returns the matched route
 1. `Navigation` then calls a `urlUpdate` function that we provide passing the matched route
 1. In `urlUpdate` we store the matched route in the application model and return the update model
