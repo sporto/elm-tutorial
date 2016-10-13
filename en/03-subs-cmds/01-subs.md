@@ -80,7 +80,7 @@ subscriptions : Model -> Sub Msg
 subscriptions model =
     Sub.batch
         [ Mouse.clicks MouseMsg
-        , Keyboard.presses KeyMsg
+        , Keyboard.downs KeyMsg
         ]
 
 
@@ -136,10 +136,10 @@ subscriptions : Model -> Sub Msg
 subscriptions model =
     Sub.batch ➌
         [ Mouse.clicks MouseMsg ➊
-        , Keyboard.presses KeyMsg ➋
+        , Keyboard.downs KeyMsg ➋
         ]
 ```
 
-Here we declare the things we want to listen to. We want to listen to `Mouse.clicks` ➊ and `Keyboard.presses` ➋. Both of these functions take a message constructor and return a subscription.
+Here we declare the things we want to listen to. We want to listen to `Mouse.clicks` ➊ and `Keyboard.downs` ➋. Both of these functions take a message constructor and return a subscription.
 
 We use `Sub.batch` ➌ so we can listen to both of them. Batch takes a list of subscriptions and returns one subscription which includes all of them.
