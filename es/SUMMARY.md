@@ -2,7 +2,7 @@
 
 * [Introducción](README.md)
 * [Fundamentos](01-fundamentos/cover.md)
-   * [Hola Mundo](01-fundamentos/01-holaMundo.md)
+   * [Hola Mundo](01-fundamentos/01-hola-mundo.md)
    * [Funciones](01-fundamentos/02-funciones.md)
    * [Más sobre functiones](01-fundamentos/03-functiones-2.md)
    * [Imports y modules](01-fundamentos/04-imports-y-modules.md)
