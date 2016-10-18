@@ -59,7 +59,7 @@ subscriptions : Model -> Sub Msg
 subscriptions model =
     Sub.batch
         [ Mouse.clicks MouseMsg
-        , Keyboard.presses KeyMsg
+        , Keyboard.downs KeyMsg
         ]
 
 
