@@ -1,6 +1,6 @@
 # Conceptos básicos de función
 
-Este capítulo trata sobre la sintaxis básica de Elm ya que es importante familiarizarse con: funciones, firmas de función, aplicación parcial y el operador pipe.
+Este capítulo trata la sintaxis básica de Elm, ya que es importante familiarizarse con: funciones, firmas de función, aplicación parcial y el operador "pipe".
 
 ## Funciones
 
@@ -11,7 +11,7 @@ Elm soporta dos tipos de funciones:
 
 ### Funciones anónimas
 
-Una función anónima, como su nombre lo indica, es una función que creamos sin nombre:
+Una función anónima, como su nombre lo indica, es una función sin nombre:
 
 ```elm
 \x -> x + 1
@@ -19,11 +19,11 @@ Una función anónima, como su nombre lo indica, es una función que creamos sin
 \x y -> x + y
 ```
 
-Entre los backslash y la flecha, se listan los argumentos de la función, y en la derecha de la flecha, usted dice qué hacer con esos argumentos.
+Entre la barra invertida y la flecha, se listan los argumentos de la función, y a la derecha de la flecha, decimos qué hacer con esos argumentos.
 
 ### Funciones nombradas
 
-Una función nombrada en Elm, se parece a esto:
+Una función nombrada en Elm luce como:
 
 ```elm
 add1 : Int -> Int
@@ -31,18 +31,18 @@ add1 x =
   x + 1
 ```
 
-- La primer línea en el ejemplo es la firma de la función. Esta firma es opcional en Elm, pero es recomendable por que hace más clara la implementación de tus funciones.
+- La primer línea en este ejemplo es la firma de la función. Esta firma es opcional en Elm, pero es recomendable por que hace más clara la implementación de tus funciones.
 - El resto es la implementación de la función, la implementación debe seguir la firma definida arriba.
 
 En este caso la firma dice: Dado un entero (Int) como un argumento regresa otro entero.
 
-Tu puedes llamar la función como:
+Tu puedes llamar esta función haciendo:
 
 ```
 add1 3
 ```
 
-En Elm usamos *whitespace* para denotar la aplicación de funciones (en vez de usar paréntesis).
+En Elm usamos *espacio* para denotar la aplicación de funciones (en vez de usar paréntesis).
 
 Aqui otra función nombrada:
 
@@ -52,7 +52,7 @@ add x y =
   x + y
 ```
 
-Esta función toma dos argumentos (ambos enteros) y regresa otro entero. Tu puedes llamar esta función como:
+Esta función toma dos argumentos (ambos enteros) y regresa otro entero. Tu puedes llamar esta función haciendo:
 
 ```elm
 add 2 3
@@ -69,7 +69,7 @@ name =
 
 ### Como son aplicadas las funciones
 
-Como se muestra arriba una función que toma dos argumentos debe parecer como:
+Como se muestra arriba una función que toma dos argumentos podría lucir como:
 
 ```elm
 divide : Float -> Float -> Float
@@ -79,12 +79,13 @@ divide x y =
 
 Podemos pensar en esta firma como una función que toma dos flotantes y regresa otro flotante:
 
-'¡```elm
+```elm
 divide 5 2 == 2.5
 ```
 
 Sin embargo, esto no es del todo cierto, en Elm todas las funciones toman exactamente un argumento y devuelven un resultado. Este resultado puede ser otra función.
-Vamos a explicar esto usando la función anterior
+
+Vamos a explicar esto usando la función anterior:
 
 
 ```elm
@@ -97,7 +98,7 @@ divide 5 2
 ((divide 5) 2)
 
 -- Primero `divide 5` es evaluado.
--- El argumento `5` es aplicado en `divide`, resultando en un intermediario de la función.
+-- El argumento `5` es aplicado en `divide`, resultando en una función intermediaria.
 
 divide 5 -- -> función intermediaria
 
@@ -110,23 +111,24 @@ divide5 y =
 
 -- Por tanto tenemos una función que ya tiene aplicado el argumento `5`.
 
--- Entonces el siguiente argumento `2` es aplicado
+-- Luego el siguiente argumento `2` es aplicado
 
 divide5 2
 
 -- Y esto regresa el resultado final
 ```
-La razón por la que podemos evitar escribir paréntesis se debe a la aplicación de funciones **asociados a la izquierda**.
+
+La razón por la que podemos evitar escribir paréntesis se debe a que la aplicación de funciones **asocia a la izquierda**.
 
 ### Agrupación con paréntesis
 
-Cuando se quiere llamar a una función con el resultado de otra función llamada es necesario utilizar paréntesis para agrupar las llamadas:
+Cuando se quiere llamar a una función con el resultado de otra función, es necesario utilizar paréntesis para agrupar las llamadas:
 
 ```elm
 add 1 (divide 12 3)
 ```
 
-Aquí el resultado de `divide 12 3` es dato para `add` como el segundo parámetro.
+Aquí el resultado de `divide 12 3` es dado a `add` como el segundo parámetro.
 
 En contraste, en muchos otros lenguages esto podría haber sido escrito como:
 
@@ -138,18 +140,22 @@ add(1, divide(12, 3))
 
 Como se explicó anteriormente cada función sólo toma un argumento y devuelve otra función o resultado.
 Esto significa que puedes llamar a una función como `add` con sólo un argumento, por ejemplo `add 2` y obtener una *función parcialmente aplicada** de regreso.
-Esta función resultante tiene una firma `Int -> Int`.
 
-`add 2` devuelve otra función con el valor `2` como el primer parámetro. Llamando a la función devuelta con un segundo valor `2 + `:
+Esta función resultante tiene una firma `Int -> Int`.
 
 ```elm
 add2 = add 2
+```
+
+`add 2` devuelve otra función con el valor `2` como el primer parámetro. Al usar esta funcion intermediaria con un segundo valor obtenemos un resultado final.
+
+```elm
 add2 3 -- regresa 5
 ```
 
-La aplicación parcial es increíblemente útil en Elm para hacer el código más legible y pasar estados entre las funciones de la aplicación.
+La aplicación parcial es increíblemente útil en Elm para hacer el código más legible y pasar estado entre las funciones de la aplicación.
 
-## El operador pipe
+## El operador "pipe"
 
 Como se muestra arriba se pueden anidar funciones como:
 
@@ -163,7 +169,7 @@ Esto es un ejemplo trivial, pero considera un ejemplo más complejo:
 sum (filter (isOver 100) (map getCost records))
 ```
 
-Este código es difícil de leer, ya que resuelve adentro hacia afuera. El operador pipe nos permite escribir estas expresiones de una manera más fácil de leer:
+Este código es difícil de leer, ya que resuelve de adentro hacia afuera. El operador pipe nos permite escribir estas expresiones de una manera más legible:
 
 ```elm
 3
@@ -171,9 +177,9 @@ Este código es difícil de leer, ya que resuelve adentro hacia afuera. El opera
     |> add 1
 ```
 
-Esto depende en gran medida de la aplicación parcial como se ha explicado antes. En este ejemplo el valor `3` se pasa a una función aplicada parcialmente `multiply 2`. Su resultado es a su vez pasado a otra función aplicada parcialmente `add 1`.
+Esto posible gracias a la aplicación parcial como se ha explicado antes. En este ejemplo el valor `3` se pasa a una función aplicada parcialmente `multiply 2`. Su resultado es a su vez pasado a otra función aplicada parcialmente `add 1`.
 
-Utilización del operador pipe el ejemplo complejo anterior se escribiría como:
+Utilización del operador "pipe" el ejemplo complejo anterior se escribiría como:
 
 ```elm
 records
