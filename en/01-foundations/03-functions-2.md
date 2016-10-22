@@ -37,7 +37,7 @@ switch (1, ["B"])
 Note that any lowercase identifier can be used for type variables, `a` and `b` are just a common convention. For example the following signature is perfectly valid:
 
 ```
-indexOf : -> thing -> List thing -> Int
+indexOf : thing -> List thing -> Int
 ```
 
 ## Functions as arguments
