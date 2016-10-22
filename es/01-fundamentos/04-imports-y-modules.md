@@ -6,13 +6,13 @@ En Elm puedes importar un módulo usando la palabra `import`, por ejemplo:
 import Html
 ```
 
-Esto importa el módulo `html` del núcleo. A continuación, puede utilizar las funciones y tipos de este módulo utilizando la ruta de acceso completa:
+Esto importa el módulo `html`. A continuación, puedes utilizar las funciones y tipos de este módulo utilizando la ruta de acceso completa:
 
 ```elm
 Html.div [] []
 ```
 
-También puedes importar un módulo y exponer funciones y tipos específicos de ella:
+También puedes importar un módulo y exponer funciones y tipos específicos:
 
 ```elm
 import Html exposing (div)
@@ -30,7 +30,7 @@ Incluso puedes exponer todo en un módulo:
 import Html exposing (..)
 ```
 
-De allí tendría que ser capaz de utilizar todas las funciones y escribir en ese módulo directamente. Pero esto no es recomendable la mayor parte del tiempo, porque nos encontramos con la ambigüedad y posibles enfrentamientos entre módulos.
+Asi podrias utilizar todas las funciones y tipos de este módulo directamente. Pero esto no es siempre recomendable, porque puede haber ambigüedad y posibles conflictos entre módulos.
 
 ## Módulos y tipos con el mismo nombre
 
@@ -62,13 +62,13 @@ En el segundo, se expone el tipo `Html` desde el módulo` Html`. Utilizando este
 
 ## Declaraciones del módulo
 
-Cuando creas un módulo en Elm, y agregas la declaración `module` en la parte superior:
+Cuando creas un módulo en Elm, debes agregar la declaración `module` en la parte superior:
 
 ```elm
 module Main exposing (..)
 ```
 
-`Main` es el nombre del módulo. `exposing (..)` significa que desea exponer a todas las funciones y tipos en este módulo. Elm espera encontrar este módulo en un archivo llamado __Main.elm__, es decir, un archivo con el mismo nombre que el módulo.
+`Main` es el nombre del módulo. `exposing (..)` significa que desea exponer todas las funciones y tipos en este módulo. Elm espera encontrar este módulo en un archivo llamado __Main.elm__, es decir, un archivo con el mismo nombre que el módulo.
 
 Puedes tener estructuras más profundas de archivos en una aplicación. Por ejemplo, el archivo
 __Players/Utils.elm__ debe tener la declaración:
@@ -77,7 +77,7 @@ __Players/Utils.elm__ debe tener la declaración:
 module Players.Utils exposing (..)
 ```
 
-Serás capaz de importar este módulo desde cualquier lugar de tu aplicación por:
+Serás capaz de importar este módulo desde cualquier lugar de tu aplicación usando:
 
 ```elm
 import Players.Utils

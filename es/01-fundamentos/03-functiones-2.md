@@ -2,7 +2,7 @@
 
 ## Tipos de variables
 
-Considera una función con una tipo de firma como:
+Considera una función con una firma como:
 
 ```elm
 indexOf : String -> List String -> Int
