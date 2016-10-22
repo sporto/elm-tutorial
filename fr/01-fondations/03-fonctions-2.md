@@ -37,7 +37,7 @@ switch (1, ["B"])
 Remarque : n'importe quel nom de variable en minuscules peut être utilisé pour une __variable de type__, `a` et `b` ne sont que des conventions. Par exemple, la signature ci-dessous est parfaitement valable :
 
 ```
-indexOf : -> thing -> List thing -> Int
+indexOf : thing -> List thing -> Int
 ```
 
 ## Fonctions en tant que paramètres

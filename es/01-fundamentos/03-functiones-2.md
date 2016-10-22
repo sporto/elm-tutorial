@@ -37,7 +37,7 @@ switch (1, ["B"])
 Ten en cuenta que cualquier identificador en minúsculas se puede utilizar para las variables de tipo, `a` y `b` son sólo una convención común. Por ejemplo la siguiente firma es perfectamente válida:
 
 ```
-indexOf : -> thing -> List thing -> Int
+indexOf : thing -> List thing -> Int
 ```
 
 ## Funciones como argumentos
