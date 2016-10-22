@@ -44,7 +44,9 @@ Créez __db.json__ à la racine :
     { "id": 1, "name": "Sally", "level": 2 },
     { "id": 2, "name": "Lance", "level": 1 },
     { "id": 3, "name": "Aki", "level": 3 },
-    { "id": 4, "name": "Maria", "level": 4 }
+    { "id": 4, "name": "Maria", "level": 4 },
+    { "id": 5, "name": "Julian", "level": 1 },
+    { "id": 6, "name": "Jaime", "level": 1 }
   ]
 }
 ```
