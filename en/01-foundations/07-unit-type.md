@@ -50,5 +50,5 @@ Task error result
 ```
 
 - Sometimes we want a task where the error can be safely ignored: `Task () result`
-- Or the result is ignored: `Tasks error ()`
+- Or the result is ignored: `Task error ()`
 - Or both: `Task () ()`
