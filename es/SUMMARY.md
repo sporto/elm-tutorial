@@ -9,3 +9,4 @@
    * [Tipos Union](01-fundamentos/05-tipos-union.md)
    * [Tipos aliases](01-fundamentos/06-tipos-aliases.md)
    * [Tipo unidad](01-fundamentos/07-tipos-unit.md)
+* [La arquitectura Elm](02-elm-arch/cover.md)
