@@ -138,7 +138,7 @@ type Msg
     = WidgetMsg Widget.Msg
 ```
 
-We use a __union type__ that wraps `Widget.Msg` to indicate that a message belongs to that component. This allows our application to route messages to the relevant components (This will become clear looking at the update function).
+We use a __union type__ that wraps `Widget.Msg` to indicate that a message belongs to that component. This allows our application to route messages to the relevant components (This will become clearer after looking at the update function).
 
 In an application with multiple children components we could have something like:
 
@@ -159,7 +159,7 @@ view model =
         ]
 ```
 
-The main application `view` renders the `Widget.view` ➌. But `Widget.view` emits `Widget.Msg` so is incompatible with this view which emits `Main.Msg`.
+The main application `view` renders the `Widget.view` ➌. But `Widget.view` emits `Widget.Msg` so it is incompatible with this view which emits `Main.Msg`.
 
 - We use `Html.App.map` ➊ to map emitted messages from Widget.view to the type we expect (Msg). `Html.App.map` tags messages coming from the sub view using the `WidgetMsg` ➋ tag.
 - We only pass the part of the model that the children component cares about i.e. `model.widgetModel` ➍.
