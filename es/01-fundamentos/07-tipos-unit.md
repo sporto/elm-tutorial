@@ -1,8 +1,8 @@
 # El tipo unidad
 
-En Elm la tupla vacia `()` llama a la __unit type__ .  Es tan frecuente que se merece alguna explicación.
+En Elm la tupla vacia `()` se llama __unit type__ . Es tan frecuente que merece alguna explicación.
 
-Considere un alias de tipo con una __type variable__ (representada por `a`):
+Considera un alias de tipo con una __variable de tipo__ (representada por `a`):
 
 ```elm
 type alias Message a =
@@ -11,7 +11,7 @@ type alias Message a =
     }
 ```
 
-Se puede hacer una función que espera un `Message` con el `body` como un `String` como esto:
+Se puede hacer una función que espera un `Message` con el `body` como un `String` de esta forma:
 
 ```elm
 readMessage : Message String -> String
@@ -35,20 +35,20 @@ readMessage message =
     ...
 ```
 
-Esta función toma a `Message` con un __empty body__. Esto no es lo mismo que __any value__, solo un  __empty__.
+Esta función toma un `Message` con un __cuerpo vacio__.
 
-Por lo que el tipo de unidad se usa comúnmente como un marcador de posición para un valor vacío.
+El tipo de unidad se usa comúnmente para pasar un valor vacío.
 
 ## Tarea
 
 Un ejemplo real de esto es el tipo `Task`. Cuando usamos `Task`, verá el tipo de unidad muy a menudo.
 
-Una tarea tipica tiene un __error__ y un __result__:
+Una tarea tipica tiene un __error__ y un __resultado (result)__:
 
 ```elm
 Task error result
 ```
 
-- A veces queremos una tarea en la que puede hacer caso omiso del error: `Task () result`
+- A veces queremos una tarea en la que se hace caso omiso del error: `Task () result`
 - O el resultado es ignorado: `Tasks error ()`
 - O ambos: `Task () ()`
