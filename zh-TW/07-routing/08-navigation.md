@@ -1,10 +1,10 @@
 # 導覽（Navigation）
 
-Next let's add buttons to navigate between views.
+接著讓我們新增按鈕，用來切換不同視界。
 
-## EditPlayer message
+## EditPlayer 訊息
 
-Change __src/Players/Messages.elm__ to include two new actions:
+修改 __src/Players/Messages.elm__ 檔案引入兩個動作：
 
 ```elm
 ...
@@ -16,19 +16,19 @@ type Msg
     | ShowPlayer PlayerId
 ```
 
-We added `ShowPlayers` and `ShowPlayer`.
+新增 `ShowPlayers` 及 `ShowPlayer`。
 
-## Players List
+## 玩家列表
 
-The players' list needs to show a button for each player to trigger the `ShowPlayer` message.
+玩家列表的每位玩家都需要一個按鈕，用來觸發 `ShowPlayer` 訊息。
 
-In __src/Players/List.elm__. First add `Html.Events`:
+位於 __src/Players/List.elm__ 檔案。新增 `Html.Events`：
 
 ```elm
 import Html.Events exposing (onClick)
 ```
 
-Add a new function for this button at the end:
+最底下給按鈕新增一個函式：
 
 ```elm
 editBtn : Player -> Html Msg
@@ -40,9 +40,9 @@ editBtn player =
         [ i [ class "fa fa-pencil mr1" ] [], text "Edit" ]
 ```
 
-Here we trigger `ShowPlayer` with the id of the player that we want to edit.
+這裡觸發 `ShowPlayer` 伴隨著希望進行編輯的玩家 id。
 
-And change `playerRow` to include this button:
+修改 `playerRow` 引入此按鈕：
 
 ```elm
 playerRow : Player -> Html Msg
@@ -56,17 +56,17 @@ playerRow player =
         ]
 ```
 
-## Player Edit
+## 玩家編輯
 
-Let's add the navigation button to the edit view. In __/src/Players/Edit.elm__:
+新增導覽按鈕至編輯視界。位於 __/src/Players/Edit.elm__ 檔案：
 
-Add one more import:
+再引入一個：
 
 ```elm
 import Html.Events exposing (onClick)
 ```
 
-Add a new function at the end for the list button:
+最底下給按鈕新增一個函式：
 
 ```elm
 listBtn : Html Msg
@@ -78,9 +78,9 @@ listBtn =
         [ i [ class "fa fa-chevron-left mr1" ] [], text "List" ]
 ```
 
-Here we send the `ShowPlayers` when the button is clicked.
+當按鈕點擊後，送出 `ShowPlayers`。
 
-And add this button to the list, change the `nav` function to:
+接著新增此按鈕至列表，修改 `nav` 函式：
 
 ```elm
 nav : Player -> Html Msg
@@ -89,15 +89,15 @@ nav model =
         [ listBtn ]
 ```
 
-## Players Update
+## 玩家更新
 
-Finally, __src/Players/Update.elm__ needs to respond to the new messages.
+最後，__src/Players/Update.elm__ 需要回應新的訊息。
 
 ```elm
 import Navigation
 ```
 
-And add two new branches to the case expression:
+新增兩個分支：
 
 ```elm
 update : Msg -> List Player -> ( List Player, Cmd Msg )
@@ -116,8 +116,8 @@ update message players =
             ( players, Navigation.newUrl ("#players/" ++ (toString id)) )
 ```
 
-`Navigation.newUrl` returns a command. When this command is run by Elm the location of the browser will change.
+`Navigation.newUrl` 傳回一個命令。當 Elm 執行此命令時，瀏覽器網址將會改變。
 
-## Test it
+## 測試
 
-Go to the list `http://localhost:3000/#players`. You should now see an Edit button, upon clicking it the location should change to the edit view.
+前往列表 `http://localhost:3000/#players`。你會看到一個編輯按鈕，點擊按鈕網址會改變，切換到編輯視界。
