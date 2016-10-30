@@ -1,5 +1,5 @@
 # 編輯（Editing）
 
-In this last chapter of the tutorial we will edit a player's level and save it to the backend.
+這個最終的章節，我們將編輯玩家等級並儲存於後端。
 
-Up to this point your application code should look like <https://github.com/sporto/elm-tutorial-app/tree/07-navigation>.
+截至目前為止，你的程式碼應該像是 <https://github.com/sporto/elm-tutorial-app/tree/07-navigation>.
