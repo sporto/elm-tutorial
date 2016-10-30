@@ -1,8 +1,8 @@
 # 玩家訊息（Messages）
 
-Let's start by adding the messages we will need.
+讓我們開始加入需要的訊息。
 
-In __src/Players/Messages.elm__ add:
+在 __src/Players/Messages.elm__ 檔案新增：
 
 ```elm
 type Msg
@@ -12,5 +12,5 @@ type Msg
     | SaveFail Http.Error
 ```
 
-- `ChangeLevel` will trigger when the user wants to change the level. The second parameter is an integer that indicates how much to change the level e.g. -1 to decrease or 1 to increase.
-- Then we will send a request to update the player to the API. `SaveSuccess` will be triggered after a successful response from the API, and `SaveFail` on case of failure.
+- 當使用者希望更改等級時，將會觸發 `ChangeLevel`。第二個參數為整數，指明更改多少等級，例如 -1 表示遞減， 1 表示遞增。
+- 接著，希望能夠發送更新玩家的請求至 API。當 API 回應成功時將會觸發 `SaveSuccess`，失敗則是 `SaveFail`。
