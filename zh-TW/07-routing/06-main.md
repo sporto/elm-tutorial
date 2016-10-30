@@ -1,8 +1,8 @@
 # 主程式
 
-Finally we need to wire everything in the Main module.
+最後，我們需要把所有東西裝到主要模組。
 
-Change __src/Main.elm__ to:
+更改 __src/Main.elm__ 成：
 
 ```elm
 module Main exposing (..)
@@ -52,11 +52,11 @@ main =
 
 ---
 
-### New imports
+### 新增匯入
 
-We added imports for `Navigation` and `Routing`.
+匯入 `Navigation` 及 `Routing`。
 
-### Init
+### 初始
 
 ```elm
 init : Result String Route -> ( Model, Cmd Msg )
@@ -68,12 +68,12 @@ init result =
         ( initialModel currentRoute, Cmd.map PlayersMsg fetchAll )
 ```
 
-Our init function will now take an initial output from the `parser` we added in `Routing`. The parser output is a `Result`. The __Navigation__ module will take care of parsing the initial location and pass the result to `init`. We store this initial __route__ in our model.
+init 函式現在從 `parser` 取得初始結果，我們存入 `Routing`。剖析器輸出是個 `Result`。__Navigation__ 模組會負責剖析初始位置並傳遞結果至 `init`。儲存初始__路由__於模型。
 
 ### urlUpdate
 
-`urlUpdate` will be called by the __Navigation__ package each time the location in the browser changes. Just like in `init`, here we get the result of our parser. All we do here is store the new __route__ in our application model.
+每當瀏覽器網址更改時，__Navigation__ 會呼叫 `urlUpdate`。如同 `init`，這裡從剖析器取得結果。這裡我們所做的事都會一個新的__路由__。
 
 ### main
 
-`main` now uses `Navigation.program` instead of `Html.App.program`.  `Navigation.program` wraps Html.App but adds a `urlUpdate` callback for when the browser location changes.
+`main` 現在改用 `Navigation.program` 而不是 `Html.App.program`。`Navigation.program` 包裝 Html.App，額外加入 `urlUpdate` 供瀏覽器網址更改時呼叫。

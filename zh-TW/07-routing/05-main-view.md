@@ -1,8 +1,8 @@
 # 主視界（Main view）
 
-Our main application view needs to show different pages as we change the browser location.
+當我們更改瀏覽器網址，主應用程式視界需要顯示不同的頁面。
 
-Change __src/View.elm__ to:
+更改 __src/View.elm__ 成：
 
 ```elm
 module View exposing (..)
@@ -61,7 +61,7 @@ notFoundView =
 
 ---
 
-### Showing the correct view
+### 顯示目前視界
 
 ```elm
 page : Model -> Html Msg
@@ -77,11 +77,11 @@ page model =
             notFoundView
 ```
 
-Now we have a function `page` which has a case expression to show the correct view depending on what is in `model.route`.
+現在，`page` 函式中 case 表達式根據 `model.route` 的值顯示正確的視界。
 
-When the player edit route matches (e.g. `#players/2`) we will get the player id from the route i.e. `PlayerRoute playerId`.
+當玩家編輯路由符合（例如 `#players/2`），我們將從路由取得玩家 ID，即 `PlayerRoute playerId`。
 
-### Finding the player
+### 找尋玩家
 
 ```elm
 playerEditPage : Model -> PlayerId -> Html Msg
@@ -100,4 +100,4 @@ playerEditPage model playerId =
                 notFoundView
 ```
 
-We have the `playerId`, but we might not have the actual player record for that id. We filter the players' list by that id and have a case expression that show the correct view depending if the player is found or not.
+有了 `playerId`，但是沒有此 id 的實際玩家紀錄。使用此 id 來過濾玩家列表，並使用 case 表達式來判斷是否有符合玩家，進而顯示正確的視界。
