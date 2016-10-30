@@ -1,19 +1,19 @@
 # 規劃
 
-The plan for changing a player's level is as follow:
+更改某個玩家等級的計畫如下：
 
 ![Flow](01-plan.png)
 
-(1) When the user clicks the increase or decrease button we trigger a message `ChangeLevel` with the `playerId` and `howMuch` as payload.
+(1) 當使用者點擊增加或減少的按鈕，觸發 `ChangeLevel` 訊息並伴隨著 `playerId` 及 `howMuch`。
 
-(2) __Html.App__ (which Navigation wraps) will send this message back to `Main.Update` which will route it to `Players.Update` (3).
+(2) __Html.App__ （由 Navigation 包裝 ）將發送訊息回到 `Main.Update` 進而轉送到 `Players.Update` (3)。
 
-(4) `Players.Update` will return a command to save the player, this command flows up to __Html.App__ (5).
+(4) `Players.Update` 將傳回命令來儲存玩家，此命令往上傳遞到 __Html.App__ (5)。
 
-(6) The Elm runtime executes the command (trigger an API call) and we will get a result back, either a succesful save or a failure. In the success case we trigger a `SaveSuccess` message with the updated player as payload.
+(6) Elm 執行期執行命令（觸發 API 呼叫）並得到成功或失敗的結果。若成功將會觸發 `SaveSuccess` 訊息並伴隨著更新後的玩家。
 
-(7) `Main.Update` routes the `SaveSuccess` message to `Players.Update`.
+(7) `Main.Update` 路由 `SaveSuccess` 訊息至 `Players.Update`。
 
-(8) In `Players.Update` we update the `players` model and return it. This flows back to Html.App (9).
+(8) 在 `Players.Update` 中，我們更新 `players` 模型並傳回。流回到 Html.App (9)。
 
-(10) Then Html.App will render the application with the updated model.
+(10) 接著 Html.App 使用更新後的模型渲染應用程式。
