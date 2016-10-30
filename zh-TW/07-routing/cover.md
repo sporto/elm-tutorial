@@ -1,5 +1,5 @@
 # 路由（Routing）
 
-This chapter covers adding routing to our application.
+本章節涵蓋在應用程式內新增路由。
 
-Up to this point the application code looks like <https://github.com/sporto/elm-tutorial-app/tree/05-fetch>
+截至目前為止，你的程式碼應該像是 <https://github.com/sporto/elm-tutorial-app/tree/05-fetch>
