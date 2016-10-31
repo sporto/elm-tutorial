@@ -52,7 +52,7 @@ playerEditPage model playerId =
                 notFoundView
 
 
-notFoundView : Html msg
+notFoundView : Html Msg
 notFoundView =
     div []
         [ text "Not found"
