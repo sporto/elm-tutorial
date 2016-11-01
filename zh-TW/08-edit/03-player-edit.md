@@ -2,7 +2,9 @@
 
 We created a `ChangeLevel` message. Let's trigger this message from the player's edit view.
 
-In __src/Players/Edit.elm__ change `btnLevelDecrease` and `btnLevelIncrease`:
+新增 `ChangeLevel` 訊息。從玩家編輯視界觸發這個訊息。
+
+編輯 __src/Players/Edit.elm__ 檔案，修改 `btnLevelDecrease` 及 `btnLevelIncrease`：
 
 ```elm
 ...
@@ -18,4 +20,4 @@ btnLevelIncrease player =
         [ i [ class "fa fa-plus-circle" ] [] ]
 ```
 
-In these two buttons we added `onClick (ChangeLevel player.id howMuch)`. Where `howMuch` is `-1` to decrease level and `1` to increase it.
+在這兩個按鈕新增 `onClick (ChangeLevel player.id howMuch)`。其中 `howMuch` 為 `-1` 來遞減等級，`1` 則是遞增。
