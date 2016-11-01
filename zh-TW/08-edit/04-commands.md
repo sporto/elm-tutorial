@@ -1,8 +1,8 @@
 # 玩家命令（Commands）
 
-Next let's create tasks and commands to save an updated player through our API.
+接下來，新增任務及命令，透過 API 儲存更新後玩家。
 
-In __src/Players/Commands.elm__ add:
+位於 __src/Players/Commands.elm__ 檔案：
 
 ```elm
 import Json.Encode as Encode
@@ -52,7 +52,7 @@ memberEncoded player =
             |> Encode.object
 ```
 
-### Save task
+### 儲存任務
 
 ```elm
 saveTask : Player -> Task.Task Http.Error Player
@@ -74,21 +74,21 @@ saveTask player =
             |> Http.fromJson memberDecoder ➎
 ```
 
-➊ Encodes the given player, converting the record to a `Value`. A `Value` in this context is a type that encapsulates a JavaScript value (number, string, null, boolean, array, object).
+➊ 編譯給定的玩家，轉換 record 成一個 `Value`。此文意中的 `Value` 指的一種型別，此型別封裝 JavaScript 的值（number、string、null、boolean、array、object）。
 
-➋ `Encode.encode` converts the `Value` to a Json string.
-Similar to `JSON.stringify` in JavaScript. `0` indicates the indentation on the resulting string.
+➋ `Encode.encode` 轉換 `Value` 成一個 Json 字串。
+類似於 JavaScript 的 `JSON.stringify`。`0` 表示結果字串的縮排格數。
 <http://package.elm-lang.org/packages/elm-lang/core/4.0.1/Json-Encode#encode>
 
-➌ Creates a Http request body using the given string. <http://package.elm-lang.org/packages/evancz/elm-http/3.0.1/Http#string>
+➌ 新增 Http 請求，使用給定字串產生內容。<http://package.elm-lang.org/packages/evancz/elm-http/3.0.1/Http#string>
 
-➍ Creates a task to send the encoded player to the API.
+➍ 新增任務用來傳送編譯後的玩家至 API。
 <http://package.elm-lang.org/packages/evancz/elm-http/3.0.1/Http#send>
 
-➎ This takes the previous task and chains it with a new task that will decode the response given by the API and give us the decoded value.
+➎ 這將前述任務串連上新的任務，新任務將會解譯給定 API 的傳回內容並給予將解譯後的值。
 <http://package.elm-lang.org/packages/evancz/elm-http/3.0.1/Http#fromJson>
 
-### Save
+### 儲存
 
 ```elm
 save : Player -> Cmd Msg
@@ -97,4 +97,4 @@ save player =
         |> Task.perform ➋ SaveFail SaveSuccess
 ```
 
-Takes the `saveTask` ➊ and converts it to a command using `Task.perform` ➋. This command will resolve on the `SaveFail` message on failure or `SaveSuccess` message on success.
+取得 `saveTask` ➊ 並使用 `Task.perform` ➋ 轉換成命令。此命令將會解析出 `SaveFail` 失敗訊息或 `SaveSuccess` 成功訊息。
