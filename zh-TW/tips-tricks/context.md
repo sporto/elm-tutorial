@@ -1,6 +1,6 @@
 # 內容
 
-Typical `update` or `view` functions look like:
+典型的 `update` 或 `view` 函式看起來像似：
 
 ```elm
 view : Model -> Html Msg
@@ -8,7 +8,7 @@ view model =
   ...
 ```
 
-Or
+或者
 
 ```elm
 update : Msg -> Model -> (Model, Cmd Msg)
@@ -16,7 +16,7 @@ update message model =
   ...
 ```
 
-It is very easy to get stuck in thinking that you need to pass only the `Model` that belongs to this component. Sometimes you need extra information and is perfectly fine to ask for it. For example:
+這在思考上很容易走不過去，你只需要傳遞屬於該元件的 `Model`。有時候你需要額外的資訊且這是很正常的事情。舉例來說：
 
 ```elm
 type alias Context =
@@ -29,4 +29,4 @@ view context =
   ...
 ```
 
-This function asks for the component model plus a `time` which is defined in its parent's model.
+這個函式需要元件的模型外加 `time`，這個定義在他的父模型中。
