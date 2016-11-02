@@ -1,40 +1,42 @@
 # 改進
 
-Here is a list of possible improvement you can try on this app.
 
-## Create and delete players
+下列為可能的改善清單，你可以用來改進這個應用程式。
 
-I have left this off in order to keep the tutorial short, definitely an important feature.
+## 新增及刪除玩家
 
-## Change the name of a player
 
-## Show an error message when an Http request fails
+我留下這個為了讓教學能夠短些，當然這是重要功能。
 
-At the moment if fetching or saving players fail we do nothing. It would be nice to show an error message to the user.
+## 更改玩家名稱
 
-## Even better error messages
+## 當 Http 請求失敗顯示錯誤訊息
 
-Even better than just showing error messages it would be great to:
+目前如果獲取或儲存玩家失敗，我們什麼事也沒作。如果能夠顯示錯誤訊息給使用者，那會更好些。
 
-- Show different types of flash messages e.g. error and info
-- Show several flash messages at the same time
-- Have the ability to dismiss a message
-- Remove a message automatically after a few seconds
+## 更甚至是更好的錯誤訊息
 
-## Optimistic updates
+比單純顯示錯誤訊息更好的是：
 
-At the moment all update functions are pesimistic. Meaning that they don't change the models until there is a succesful response from the server. One big improvement to the application would be to add optimistic creation, update and deletion. But this will also mean better error handling.
+- 顯示不同類型的閃現（flash）訊息，例如，錯誤或提示
+- 一次顯示數個閃現訊息
+- 可以忽略訊息
+- 自動在數秒後移除訊息
 
-## Validations
+## 樂觀的更新
 
-We should avoid having players without name. One nice feature would be to have a validation on the player's name so it cannot be empty.
+目前所有的更新函式都是樂觀的。意思是，只有在伺服端成功回應訊息後，才會更改模型。一個重大的改良就是，應用程式能夠加入樂觀的新增、修改及刪除。這就表示更好的錯誤控制。
 
-## Add perks and bonuses
+## 驗證
 
-We can add a list of perks that a player can have. These perk would be equipment, apparel, scrolls, accessories, etc. e.g. "Steel sword" would be one. Then we would have associations between players and perks.
+我們必須避免玩家沒有名稱。一個好的功能就是有玩家名稱的驗證，這樣就不會是空值。
 
-Each perk would have a bonus associated with it. Then players will have a calculated strength that is their level plus all the bonuses they have.
+## 新增津貼及紅利
+
+我們可以新增一個玩家可以擁有的津貼列表。這些津貼有裝備、服裝、條幅（scrolls）、配件等等，例如，"銅劍"。接著，有玩家與津貼之間的關聯。
+
+每一個津貼會關聯一個紅利。玩家將會計算出強度，強度為等級加上紅利。
 
 ---
 
-For a more featured version of this application see the master branch of <https://github.com/sporto/elm-tutorial-app>.
+有關此應用程式的特色版本，請見 <https://github.com/sporto/elm-tutorial-app> 的 master 分支。
