@@ -1,6 +1,6 @@
 # 聯集型別（Union types）
 
-Elm 中，__聯集型別__非常地彈性並廣泛在許多地方。聯集型別看起來像是：
+Elm 的__聯集型別__非常有彈性並廣泛應用在許多地方。聯集型別看起來像是：
 
 ```elm
 type Answer = Yes | No
@@ -16,17 +16,17 @@ respond answer =
 
 第一個引數接受 `Yes` 或 `No`，例如 `respond Yes` 就是個合法呼叫。
 
-聯集型別通常也稱之為__標籤（tags）__。
+聯集型別通常也稱為__標籤（tags）__。
 
 ## 裝載（Payload）
 
-聯集型別可以附屬額外的訊息：
+聯集型別可以關聯額外訊息：
 
 ```elm
 type Answer = Yes | No | Other String
 ```
 
-上述例子中，`Other` 標籤有個附屬字串。你可以像這樣呼叫 `respond`：
+上述例子中，`Other` 標籤有關聯字串。你可以像這樣呼叫 `respond`：
 
 ```elm
 respond (Other "Hello")
@@ -42,7 +42,7 @@ respond (Other "Hello")
 Other "Hello"
 ```
 
-就只是個函式呼叫，而 `Other` 是個函式。聯集型別表現像是函式。舉例來說，給定某型別：
+就像是個函式呼叫，而 `Other` 就是那個函式。聯集型別表現像是函式。舉例來說，給定某一型別：
 
 ```elm
 type Answer = Message Int String
@@ -54,11 +54,11 @@ type Answer = Message Int String
 Message 1 "Hello"
 ```
 
-你也可以相其他函式一樣使用套用函式。通常稱之為 `建構子（constructors）`，因為你用這個方式來建構完整的型別，換言之，使用 `Message` 作為函式來建構 `(Message 1 "Hello")`。
+你也可以相其他函式一樣使用套用函式。通常稱之為 `建構子（constructors）`，因為你可以使用這個方式來建構出完整的型別，換言之，使用 `Message` 作為函式來建構 `(Message 1 "Hello")`。
 
 ## 巢狀
 
-聯集型別用巢狀引用其他聯集型別十分常見。
+聯集型別中巢狀引用其他的聯集型別十分常見。
 
 ```elm
 type OtherAnswer = DontKnow | Perhaps | Undecided
@@ -72,9 +72,9 @@ type Answer = Yes | No | Other OtherAnswer
 respond (Other Perhaps)
 ```
 
-## 型別變數（Type variables）
+## 型別變數
 
-你也可能需要用到型別變數或替身（stand-ins）
+你也可能需要用到型別變數或替身：
 
 ```elm
 type Answer a = Yes | No | Other a
@@ -98,7 +98,7 @@ respond answer =
 respond (Other 123)
 ```
 
-但是，`(Other "Hello")` 語句則會失效，因為 `respond` 預期 `a` 的位置是個整數。
+但是，若語句為 `(Other "Hello")` 則會失效，因為 `respond` 預期 `a` 的位置是個整數。
 
 ## 常見用法
 
