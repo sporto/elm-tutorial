@@ -85,7 +85,7 @@ We use subscriptions to listen for external input to our application. Some examp
 - Keyboard events
 - Browser location changes
 
-In this case, we are not interested in any external input so we use `Sub.none`. Note the type signature `Sub Msg`. Subscriptions in a component should all be of the same type.
+In this case, we are not interested in any external input so we use `Sub.none`.
 
 ### Main
 
