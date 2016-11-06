@@ -101,3 +101,7 @@ playerEditPage model playerId =
 ```
 
 We have the `playerId`, but we might not have the actual player record for that id. We filter the players' list by that id and have a case expression that show the correct view depending if the player is found or not.
+
+### notFoundView
+
+`notFoundView` is shown when no route matches. Note the type `Html msg` instead of `Html Msg`. This is because this view doesn't produce any messages so can use a generic type variable `msg` instead of and specific type `Msg`.
