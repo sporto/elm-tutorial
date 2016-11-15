@@ -1,3 +1,5 @@
+> This page covers Elm 0.17
+
 # Composing
 
 One of the big benefits of using the Elm architecture is the way it handles composition of components. To understand this, let's build an example:

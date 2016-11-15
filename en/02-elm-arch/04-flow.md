@@ -1,3 +1,5 @@
+> This page covers Elm 0.17
+
 # Application flow
 
 The following diagram illustrates how the pieces of our application interact with Html.App.

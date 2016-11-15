@@ -1,3 +1,5 @@
+> This page covers Elm 0.17
+
 # Introduction
 
 When building front end applications in Elm, we use the pattern known as the Elm architecture. This pattern provides a way of creating self contained components that can be reused, combined, and composed in endless variety.

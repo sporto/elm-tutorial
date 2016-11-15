@@ -1,3 +1,5 @@
+> This page covers Elm 0.17
+
 # Composing
 
 Here are two diagrams that illustrate this architecture:
