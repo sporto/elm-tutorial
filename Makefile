@@ -1,4 +1,4 @@
-pu:
+pu-elm-arch-flow:
 	java -jar /usr/local/bin/plantuml.jar en/02-elm-arch/04-flow.pu
 	java -jar /usr/local/bin/plantuml.jar fr/02-elm-arch/04-flux.pu
 
