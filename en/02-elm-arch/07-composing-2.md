@@ -1,4 +1,4 @@
-> This page covers Elm 0.17
+> This page covers Elm 0.18
 
 # Composing
 
@@ -9,8 +9,7 @@ This is the code for the parent component.
 ```elm
 module Main exposing (..)
 
-import Html exposing (Html)
-import Html.App
+import Html exposing (Html, program)
 import Widget
 
 
@@ -80,9 +79,9 @@ subscriptions model =
 -- APP
 
 
-main : Program Never
+main : Program Never Model Msg
 main =
-    Html.App.program
+    program
         { init = init
         , view = view
         , update = update

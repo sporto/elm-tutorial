@@ -1,7 +1,6 @@
 module Main exposing (..)
 
-import Html exposing (Html)
-import Html.App
+import Html exposing (Html, program)
 import Widget
 
 
@@ -67,9 +66,9 @@ subscriptions model =
 -- APP
 
 
-main : Program Never
+main : Program Never Model Msg
 main =
-    Html.App.program
+    program
         { init = init
         , view = view
         , update = update
