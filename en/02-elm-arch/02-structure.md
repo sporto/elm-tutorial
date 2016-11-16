@@ -1,16 +1,14 @@
-> This page covers Elm 0.17
+> This page covers Elm 0.18
 
 # Structure of Html.App
 
 ### Imports
 
 ```elm
-import Html exposing (Html, div, text)
-import Html.App
+import Html exposing (Html, div, text, program)
 ```
 
-- We will use the `Html` type from the `Html` module, plus a couple of functions `div` and `text`.
-- We also import `Html.App` which is the glue that will orchestrate our application. This is the equivalent to StartApp if you have used Elm 0.16. 
+- We will use the `Html` type from the `Html` module, plus a couple of functions `div`, `text` and `program`.
 
 ### Model
 
@@ -27,7 +25,7 @@ init =
 - First we define our application model as a type alias, in this kind. Here it is just a `String`.
 - Then we define an `init` function. This function provides the initial input for the application. 
 
-__Html.App__ expects a tuple with `(model, command)`. The first element in this tuple is our initial state, e.g. "Hello". The second element is an initial command to run. More on this later.
+__Html.program__ expects a tuple with `(model, command)`. The first element in this tuple is our initial state, e.g. "Hello". The second element is an initial command to run. More on this later.
 
 When using the elm architecture, we compose all components models into a single state tree. More on this later too.
 
@@ -92,9 +90,9 @@ In this case, we are not interested in any external input so we use `Sub.none`.
 ### Main
 
 ```elm
-main : Program Never
+main : Program Never Model Msg
 main =
-    Html.App.program
+    program
         { init = init
         , view = view
         , update = update
@@ -102,7 +100,7 @@ main =
         }
 ```
 
-Finally `Html.App.program` wires everything together and returns an html element that we can render in the page. `program` takes our `init`, `view`, `update` and `subscriptions`.
+Finally `Html.program` wires everything together and returns an html element that we can render in the page. `program` takes our `init`, `view`, `update` and `subscriptions`.
 
 
 

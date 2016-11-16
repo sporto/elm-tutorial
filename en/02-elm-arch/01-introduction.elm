@@ -1,6 +1,6 @@
 module App exposing (..)
 
-import Html exposing (Html, div, text)
+import Html exposing (Html, div, text, program)
 
 
 -- MODEL
@@ -59,7 +59,7 @@ subscriptions model =
 
 main : Program Never Model Msg
 main =
-    Html.program
+    program
         { init = init
         , view = view
         , update = update
