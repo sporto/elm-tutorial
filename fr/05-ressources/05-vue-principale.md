@@ -1,3 +1,5 @@
+> This page covers Elm 0.17
+
 # Vue Main
 
 Modifiez __src/View.elm__ pour inclure la liste des joueurs :

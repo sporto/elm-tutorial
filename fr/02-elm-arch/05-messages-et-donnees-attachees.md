@@ -1,3 +1,5 @@
+> This page covers Elm 0.17
+
 # Messages et données attachées
 
 Il est possible d'attacher des données à vos messages :

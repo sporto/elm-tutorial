@@ -1,3 +1,5 @@
+> This page covers Elm 0.17
+
 # Routage
 
 Créez un module __src/Routing.elm__ pour définir la configuration de routage de l'application.

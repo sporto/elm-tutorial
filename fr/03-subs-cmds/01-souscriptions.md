@@ -1,3 +1,5 @@
+> This page covers Elm 0.17
+
 # Souscriptions
 
 En Elm, les __souscriptions__ (*subscriptions*) sont ce qui permet à votre application d'écouter les entrées externes. Par exemple :

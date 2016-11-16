@@ -1,3 +1,5 @@
+> This page covers Elm 0.17
+
 # Main
 
 Finally we need to wire everything in the Main module.

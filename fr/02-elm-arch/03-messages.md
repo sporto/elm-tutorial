@@ -1,3 +1,5 @@
+> This page covers Elm 0.17
+
 # Messages
 
 Dans la dernière section, nous avons créé une application avec Html.App qui ne contenait que de l'Html statique. Créons maintenant une application qui répond aux interactions des utilisateurs en utilisant des messages.

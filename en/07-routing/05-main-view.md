@@ -1,3 +1,5 @@
+> This page covers Elm 0.17
+
 # Main view
 
 Our main application view needs to show different pages as we change the browser location.

@@ -1,3 +1,5 @@
+> This page covers Elm 0.17
+
 # Main
 
 Enfin, il nous reste à brancher tout ça ensemble dans le module Main.

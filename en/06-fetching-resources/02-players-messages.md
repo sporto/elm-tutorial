@@ -1,3 +1,5 @@
+> This page covers Elm 0.17
+
 # Players messages
 
 First let's create the messages we need for fetching players. Add a new import and message to __src/Players/Messages.elm__

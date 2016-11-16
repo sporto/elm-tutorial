@@ -1,3 +1,5 @@
+> This page covers Elm 0.17
+
 # Main
 
 Le programme principal doit être branché au module Joueurs que nous avons créé.

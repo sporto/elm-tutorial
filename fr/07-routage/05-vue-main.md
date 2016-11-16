@@ -1,3 +1,5 @@
+> This page covers Elm 0.17
+
 # Vue Main
 
 La vue de notre application principale doit montrer des pages différentes quand on change l'adresse du navigateur.

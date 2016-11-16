@@ -1,3 +1,5 @@
+> This page covers Elm 0.17
+
 # Players Update
 
 Finally we need to account for the new messages in our `update` function. In __src/Players/Update.elm__:

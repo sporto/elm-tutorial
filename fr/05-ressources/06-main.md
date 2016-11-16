@@ -1,3 +1,5 @@
+> This page covers Elm 0.17
+
 # Main
 
 Enfin, modifiez __src/Main.elm__ pour appeler `initialModel`:

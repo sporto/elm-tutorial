@@ -1,3 +1,5 @@
+> This page covers Elm 0.17
+
 # Player edit view
 
 We need a new view to show when hitting `/players/3`.

@@ -1,3 +1,5 @@
+> This page covers Elm 0.17
+
 # Plusieurs modules
 
 Notre application va bientôt grossir, et si nous gardons tout le code dans un seul fichier, cela va être compliqué à maintenir.

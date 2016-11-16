@@ -1,3 +1,5 @@
+> This page covers Elm 0.17
+
 # Composition
 
 Un des grands avantages d'utiliser l'architecture Elm est la façon dont la relation entre les composants est gérée. Voyons cela avec un exemple :

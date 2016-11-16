@@ -1,3 +1,5 @@
+> This page covers Elm 0.17
+
 # Introduction
 
 Lorsque nous construisons des applications frontend avec Elm, nous utilisons un modèle nommé l'__architecture Elm__. Ce modèle fourni un moyen de créer des composants autonomes qui peuvent être réutilisés, combinés et composés à l'infini.

@@ -1,3 +1,5 @@
+> This page covers Elm 0.17
+
 # Composition
 
 ## Le composant parent

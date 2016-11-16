@@ -1,3 +1,5 @@
+> This page covers Elm 0.17
+
 # Commandes
 
 En Elm, les commandes (Cmd) sont utilisées pour demander à l'environnement Elm d'exécuter des actions qui causent des effets de bord (*side effects*). Par exemple :

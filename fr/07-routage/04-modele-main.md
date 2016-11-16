@@ -1,3 +1,5 @@
+> This page covers Elm 0.17
+
 # Modèle Main
 
 Dans notre modèle d'application principal, on veut stocker la route actuelle.

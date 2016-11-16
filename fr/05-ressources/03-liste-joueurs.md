@@ -1,3 +1,5 @@
+> This page covers Elm 0.17
+
 # Liste des Joueurs
 
 Créez __src/Players/List.elm__ :

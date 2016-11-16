@@ -1,3 +1,5 @@
+> This page covers Elm 0.17
+
 # Players Update
 
 When the request for players is done, we trigger the `FetchAllDone` message.

@@ -1,3 +1,5 @@
+> This page covers Elm 0.17
+
 # Players commands
 
 Now we need to create the tasks and command to fetch the players from the server. Create __src/Players/Commands.elm__:

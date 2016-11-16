@@ -1,3 +1,5 @@
+> This page covers Elm 0.17
+
 # Commandes Joueurs
 
 Maintenant, il nous faut créer les tâches et les commandes pour récupérer les Joueurs sur le serveur. Créez __src/Players/Commands.elm__ :

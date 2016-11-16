@@ -1,3 +1,5 @@
+> This page covers Elm 0.17
+
 # Tâches
 
 Nous avons vu comment utiliser les commandes pour rassembler les résultats d'activités impliquant des effets de bord. Pour autant, les commandes n'intègrent pas la notion de succès ou d'échec, ou même d'ordre d'exécution. Les commandes sont juste un tas de choses à faire.
