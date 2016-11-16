@@ -1,7 +1,6 @@
 module App exposing (..)
 
 import Html exposing (Html, div, text)
-import Html.App
 
 
 -- MODEL
@@ -58,9 +57,9 @@ subscriptions model =
 -- MAIN
 
 
-main : Program Never
+main : Program Never Model Msg
 main =
-    Html.App.program
+    Html.program
         { init = init
         , view = view
         , update = update
