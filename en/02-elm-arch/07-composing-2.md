@@ -156,7 +156,7 @@ type Msg
 view : AppModel -> Html Msg
 view model =
     Html.div []
-        [ Html.App.map➊ WidgetMsg➋ (Widget.view➌ model.widgetModel➍)
+        [ Html.map➊ WidgetMsg➋ (Widget.view➌ model.widgetModel➍)
         ]
 ```
 
