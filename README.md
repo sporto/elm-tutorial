@@ -19,7 +19,8 @@ Please open issues and send PRs at <https://github.com/sporto/elm-tutorial>.
 
 ## Translations
 
-French translation by Vincent Jousse [@vjousse](https://twitter.com/intent/user?screen_name=vjousse) and Augustin Ragon [@augustin82](https://twitter.com/intent/user?screen_name=augustin82).
+French translation by Vincent Jousse [@vjousse](https://twitter.com/intent/user?screen_name=vjousse) and Augustin Ragon [@augustin82](https://twitter.com/intent/user?screen_name=augustin82). 
+Japanese translation by UEHARA Junji [@uehaj](https://twitter.com/intent/user?screen_name=uehaj).
 
 ---
 

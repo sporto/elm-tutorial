@@ -1,0 +1,22 @@
+@startuml
+
+autonumber "<b>(#)"
+
+participant App #white
+participant init #white
+participant Main.Update as MU #white
+participant Main.View as MV #white
+participant Players.Update as PU #white
+participant Players.List as PL #white
+
+App -> init
+init --> App : fetchAll
+App -> MU : (model, PlayersMsg (FetchAllDone players))
+MU -> PU : (currentPlayers, FetchAllDone players)
+PU --> MU : Updated players' collection
+MU --> App : Updated app model
+App -> MV : App model
+MV -> PL : Players
+PL --> MV :Rendered view
+MV --> App : Rendered view
+@enduml
