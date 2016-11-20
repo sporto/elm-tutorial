@@ -1,3 +1,5 @@
+> This page covers Elm 0.18
+
 # Webpack
 
 __Elm reactor__ is great for prototyping simple applications, but for a bigger app it falls short. As it is now, __reactor__ doesn't support talking with external JavaScript or importing external CSS. To overcome these issues we will use __Webpack__ to compile our Elm code instead of Elm reactor.

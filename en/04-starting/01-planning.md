@@ -1,3 +1,5 @@
+> This page covers Elm 0.18
+
 # Planning
 
 We will build a basic application to track an imaginary role playing game.
