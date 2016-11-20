@@ -1,4 +1,4 @@
-> This page covers Elm 0.17
+> This page covers Elm 0.18
 
 # Commands
 
@@ -17,9 +17,8 @@ Let's try an example app using commands:
 ```elm
 module Main exposing (..)
 
-import Html exposing (Html, div, button, text)
+import Html exposing (Html, div, button, text, program)
 import Html.Events exposing (onClick)
-import Html.App
 import Random
 
 
@@ -74,9 +73,9 @@ update msg model =
 -- MAIN
 
 
-main : Program Never
+main : Program Never Model Msg
 main =
-    Html.App.program
+    program
         { init = init
         , view = view
         , update = update
@@ -116,14 +115,14 @@ update msg model =
 
 ➊ `Random.generate` creates a command that will generate random numbers. This function requires the first argument to be a constructor for the message that will be fed back to our application. In this case our constructor is `OnResult`.
 
-So when the command is run Elm will call `OnResult` with the generated number, producing `OnResult 2` for example. Then __Html.App__ will feed this message back to application.
+So when the command is run Elm will call `OnResult` with the generated number, producing `OnResult 2` for example. Then __Html.program__ will feed this message back to application.
 
 In case you're wondering, `OnResult res` denotes a message, OnResult, containing an additional payload of information, the Integer 'res' in this case.  This pattern is known as parameterized types.
 
 ---
 
-In a bigger application with many nested components we can potentially send many commands at once to __Html.App__. Take this diagram for example:
+In a bigger application with many nested components we can potentially send many commands at once to __Html.program__. Take this diagram for example:
 
 ![Flow](02-commands.png)
 
-Here we collect commands from three different levels. At the end we send all these commands to __Elm.App__ to run.
+Here we collect commands from three different levels. At the end we send all these commands to __program__ to run.
