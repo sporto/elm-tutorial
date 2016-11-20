@@ -1,4 +1,4 @@
-> This page covers Elm 0.17
+> This page covers Elm 0.18
 
 # Multiple modules
 
@@ -101,11 +101,11 @@ __src/Main.elm__
 ```elm
 module Main exposing (..)
 
-import Html.App
+import Html exposing (Html, div, text, program)
 import Messages exposing (Msg)
 import Models exposing (Model)
-import View exposing (view)
 import Update exposing (update)
+import View exposing (view)
 
 
 init : ( Model, Cmd Msg )
@@ -122,9 +122,9 @@ subscriptions model =
 -- MAIN
 
 
-main : Program Never
+main : Program Never Model Msg
 main =
-    Html.App.program
+    program
         { init = init
         , view = view
         , update = update
@@ -132,7 +132,7 @@ main =
         }
 ```
 
-You can find the code here <https://github.com/sporto/elm-tutorial-app/tree/03-multiple-modules>
+You can find the code here <https://github.com/sporto/elm-tutorial-app/tree/018-03-multiple-modules>
 
 ---
 
