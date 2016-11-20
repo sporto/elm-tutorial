@@ -1,8 +1,7 @@
 module Main exposing (..)
 
-import Html exposing (Html, div, button, text)
+import Html exposing (Html, div, button, text, program)
 import Html.Events exposing (onClick)
-import Html.App
 import Random
 
 
@@ -57,9 +56,9 @@ update msg model =
 -- MAIN
 
 
-main : Program Never
+main : Program Never Model Msg
 main =
-    Html.App.program
+    program
         { init = init
         , view = view
         , update = update
