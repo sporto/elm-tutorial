@@ -1,4 +1,4 @@
-> This page covers Elm 0.17
+> This page covers Elm 0.18
 
 # Navigation
 
@@ -12,8 +12,7 @@ Change __src/Players/Messages.elm__ to include two new actions:
 ...
 
 type Msg
-    = FetchAllDone (List Player)
-    | FetchAllFail Http.Error
+    = OnFetchAll (Result Http.Error (List Player))
     | ShowPlayers
     | ShowPlayer PlayerId
 ```
@@ -105,17 +104,13 @@ And add two new branches to the case expression:
 update : Msg -> List Player -> ( List Player, Cmd Msg )
 update message players =
     case message of
-        FetchAllDone newPlayers ->
-            ( newPlayers, Cmd.none )
-
-        FetchAllFail error ->
-            ( players, Cmd.none )
+        ...
 
         ShowPlayers ->
             ( players, Navigation.newUrl "#players" )
 
         ShowPlayer id ->
-            ( players, Navigation.newUrl ("#players/" ++ (toString id)) )
+            ( players, Navigation.newUrl ("#players/" ++ id) )
 ```
 
 `Navigation.newUrl` returns a command. When this command is run by Elm the location of the browser will change.
