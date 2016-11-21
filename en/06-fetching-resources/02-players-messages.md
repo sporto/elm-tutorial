@@ -1,4 +1,4 @@
-> This page covers Elm 0.17
+> This page covers Elm 0.18
 
 # Players messages
 
@@ -12,11 +12,7 @@ import Players.Models exposing (PlayerId, Player)
 
 
 type Msg
-    = FetchAllDone (List Player)
-    | FetchAllFail Http.Error
+    = OnFetchAll (Result Http.Error (List Player))
 ```
 
-`FetchAllDone` will be called when we get the response from the server. This message will carry the list of fetched players.
-
-`FetchAllFail` will be called if there is a problem fetching the data.
-
+`OnFetchAll` will be called when we get the response from the server. This message will carry a `Result` which can be either an `Http.Error` or the the list of fetched players.
