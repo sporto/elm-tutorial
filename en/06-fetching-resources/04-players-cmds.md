@@ -1,4 +1,4 @@
-> This page covers Elm 0.17
+> This page covers Elm 0.18
 
 # Players commands
 
@@ -8,16 +8,15 @@ Now we need to create the tasks and command to fetch the players from the server
 module Players.Commands exposing (..)
 
 import Http
-import Json.Decode as Decode exposing ((:=))
-import Task
+import Json.Decode as Decode exposing (field)
 import Players.Models exposing (PlayerId, Player)
 import Players.Messages exposing (..)
 
 
 fetchAll : Cmd Msg
 fetchAll =
-    Http.get collectionDecoder fetchAllUrl
-        |> Task.perform FetchAllFail FetchAllDone
+    Http.get fetchAllUrl collectionDecoder
+        |> Http.send OnFetchAll
 
 
 fetchAllUrl : String
@@ -32,10 +31,10 @@ collectionDecoder =
 
 memberDecoder : Decode.Decoder Player
 memberDecoder =
-    Decode.object3 Player
-        ("id" := Decode.int)
-        ("name" := Decode.string)
-        ("level" := Decode.int)
+    Decode.map3 Player
+        (field "id" Decode.string)
+        (field "name" Decode.string)
+        (field "level" Decode.int)
 ```
 ---
 
@@ -44,14 +43,14 @@ Let's go through this code.
 ```elm
 fetchAll : Cmd Msg
 fetchAll =
-    Http.get collectionDecoder fetchAllUrl
-        |> Task.perform FetchAllFail FetchAllDone
+    Http.get fetchAllUrl collectionDecoder
+        |> Http.send OnFetchAll
 ```
 
 Here we create a command for our application to run.
 
-- `Http.get` creates a task
-- We then send this task to `Task.perform` which wraps it in a command
+- `Http.get` creates a `Request`
+- We then send this request to `Http.send` which wraps it in a command
 
 ```elm
 collectionDecoder : Decode.Decoder (List Player)
@@ -64,16 +63,16 @@ This decoder delegates the decoding of each member of a list to `memberDecoder`
 ```elm
 memberDecoder : Decode.Decoder Player
 memberDecoder =
-    Decode.object3 Player
-        ("id" := Decode.int)
-        ("name" := Decode.string)
-        ("level" := Decode.int)
+    Decode.map3 Player
+        (field "id" Decode.string)
+        (field "name" Decode.string)
+        (field "level" Decode.int)
 ```
 
 `memberDecoder` creates a JSON decoder that returns a `Player` record.
 
 ---
-To understand how the decoder works let's play with the elm repl.
+To understand how the decoder works let's play with the Elm repl.
 
 In a terminal run `elm repl`. Import the Json.Decoder module:
 
@@ -90,7 +89,7 @@ Then define a Json string:
 And define a decoder to extract the `id`:
 
 ```bash
-> idDecoder = ("id" := int)
+> idDecoder = (field "id" int)
 ```
 
 This creates a decoder that given a string tries to extract the `id` key and parse it into a integer.
@@ -102,7 +101,7 @@ Run this decoder to see the result:
 Ok 99 : Result.Result String Int
 ```
 
-We see `Ok 99` meaning that decoding was successful and we got 99. So this is what `("id" := Decode.int)` does, it creates a decoder for a single key.
+We see `Ok 99` meaning that decoding was successful and we got 99. So this is what `(field "id" Decode.int)` does, it creates a decoder for a single key.
 
 This is one part of the equation. Now for the second part, define a type:
 
@@ -122,11 +121,11 @@ Try it:
 With these two concepts let's create a complete decoder:
 
 ```bash
-> nameDecoder = ("name" := string)
-> playerDecoder = object2 Player idDecoder nameDecoder
+> nameDecoder = (field "name" string)
+> playerDecoder = map2 Player idDecoder nameDecoder
 ```
 
-`object2` takes a function as first argument (Player in this case) and two decoders. Then it runs the decoders and passes the results as the arguments to the function (Player).
+`map2` takes a function as first argument (Player in this case) and two decoders. Then it runs the decoders and passes the results as the arguments to the function (Player).
 
 Try it:
 ```bash
@@ -136,4 +135,4 @@ Ok { id = 99, name = "Sam" } : Result.Result String Repl.Player
 
 ---
 
-Remember that none of this actually executes until we send the command to __Html.App__.
+Remember that none of this actually executes until we send the command to __program__.
