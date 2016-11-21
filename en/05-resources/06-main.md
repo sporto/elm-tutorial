@@ -1,4 +1,4 @@
-> This page covers Elm 0.17
+> This page covers Elm 0.18
 
 # Main
 
@@ -7,29 +7,32 @@ Finally modify __src/Main.elm__ to call `initialModel`:
 ```elm
 module Main exposing (..)
 
-import Html.App
+import Html exposing (Html, div, text, program)
 import Messages exposing (Msg)
 import Models exposing (Model, initialModel)
-import View exposing (view)
 import Update exposing (update)
+import View exposing (view)
 
-init : (Model, Cmd Msg)
+
+init : ( Model, Cmd Msg )
 init =
-  (initialModel , Cmd.none)
+    ( initialModel, Cmd.none )
+
 
 subscriptions : Model -> Sub Msg
 subscriptions model =
-  Sub.none
+    Sub.none
 
 -- MAIN
 
+main : Program Never Model Msg
 main =
-  Html.App.program
-    { init = init
-    , view = view
-    , update = update
-    , subscriptions = subscriptions
-    }
+    program
+        { init = init
+        , view = view
+        , update = update
+        , subscriptions = subscriptions
+        }
 ```
 
 Here we added `initialModel` in the import and `init`.
