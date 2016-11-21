@@ -1,4 +1,4 @@
-> This page covers Elm 0.17
+> This page covers Elm 0.18
 
 # Player edit view
 
@@ -11,8 +11,8 @@ module Players.Edit exposing (..)
 
 import Html exposing (..)
 import Html.Attributes exposing (class, value, href)
-import Players.Models exposing (..)
 import Players.Messages exposing (..)
+import Players.Models exposing (..)
 
 
 view : Player -> Html Msg

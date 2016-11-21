@@ -1,3 +1,5 @@
+> This page covers Elm 0.18
+
 # Routing introduction
 
 Let's add a routing to our application. We will be using the [Elm Navigation package](http://package.elm-lang.org/packages/elm-lang/navigation/) and [UrlParser](http://package.elm-lang.org/packages/evancz/url-parser/).
@@ -8,15 +10,15 @@ Let's add a routing to our application. We will be using the [Elm Navigation pac
 First install the packages:
 
 ```bash
-elm package install elm-lang/navigation 1.0.0
-elm package install evancz/url-parser 1.0.0
+elm package install elm-lang/navigation
+elm package install evancz/url-parser
 ```
 
- `Navigation` is a library that wraps `Html.App`. It has all the functionality of `Html.App` plus several extra things:
+ `Navigation` is a library that wraps `Html.program`. It has all the functionality of `Html.program` plus some extra things:
 
  - Listens for location changes on the browser
- - Calls functions that we provide when the location changes
- - Provides a way of changing the browser location
+ - Triggers a message when the location changes
+ - Provides ways of changing the browser location
 
 ## Flow
 
@@ -26,21 +28,19 @@ Here are a couple of diagrams to understand how routing will work.
 
 ![Flow](01-intro.png)
 
-1. When the page first loads the `Navigation` module will fetch the current URL and send it to a `parse` function that we will provide.
-1. This `parse` function will return a `Route` that matches.
-1. Navigation then sends this matched `Route` to our application `init` function.
-1. In `init` we create the application model, we store the matched route there.
-1. Navigation then sends the initial model to the view to render the application.
+- (1) When the page first loads the `Navigation` module will fetch the current `Location` and send it to the application `init` function.
+- (2) In `init` we parse this location and get a matching `Route`.
+- (3, 4) We then store this matched `Route` in our initial model and return this model to `Navigation`.
+- (5, 6) `Navigation` then renders the view by sending this initial model.
 
 ### When the location changes
 
 ![Flow](01-intro_001.png)
 
-1. When the browser location changes the Navigation library receives an event
-1. The new location is sent to our `parse` function as before
-1. `parse` returns the matched route
-1. `Navigation` then calls a `urlUpdate` function that we provide passing the matched route
-1. In `urlUpdate` we store the matched route in the application model and return the update model
-1. Navigation then renders the application as normal
+- (1) When the browser location changes the Navigation library receives an event
+- (2) A `OnLocationChange` message is sent to our `update` function. This message will contain the new `Location`.
+- (3, 4) In `update` we parse the `Location` and return the matching `Route`.
+- (5) From `update` we return the updated model which contains the update `Route`.
+- (6, 7) Navigation then renders the application as normal
 
 

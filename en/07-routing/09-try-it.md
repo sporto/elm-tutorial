@@ -3,16 +3,8 @@
 Let's try what we have so far. Run the application by doing:
 
 ```bash
-npm run dev
+nf start
 ```
-
-in one terminal, and:
-
-```bash
-npm run api
-```
-
-in another terminal.
 
 Then go to `http://localhost:3000` in your browser. You should see the list of users.
 
