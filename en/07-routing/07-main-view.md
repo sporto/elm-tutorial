@@ -1,4 +1,4 @@
-> This page covers Elm 0.17
+> This page covers Elm 0.18
 
 # Main view
 
@@ -10,11 +10,10 @@ Change __src/View.elm__ to:
 module View exposing (..)
 
 import Html exposing (Html, div, text)
-import Html.App
 import Messages exposing (Msg(..))
 import Models exposing (Model)
-import Players.List
 import Players.Edit
+import Players.List
 import Players.Models exposing (PlayerId)
 import Routing exposing (Route(..))
 
