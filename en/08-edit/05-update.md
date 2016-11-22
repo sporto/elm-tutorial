@@ -1,4 +1,4 @@
-> This page covers Elm 0.17
+> This page covers Elm 0.18
 
 # Players Update
 
@@ -7,8 +7,8 @@ Finally we need to account for the new messages in our `update` function. In __s
 Add a new import:
 
 ```bash
-import Players.Commands exposing (save)
 import Players.Models exposing (Player, PlayerId)
+import Players.Commands exposing (save)
 ```
 
 ## Create update commands
@@ -71,18 +71,20 @@ update message players =
         ChangeLevel id howMuch ->
             ( players, changeLevelCommands id howMuch players |> Cmd.batch )
 
-        SaveSuccess updatedPlayer ->
+        OnSave (Ok updatedPlayer) ->
             ( updatePlayer updatedPlayer players, Cmd.none )
 
-        SaveFail error ->
+        OnSave (Err error) ->
             ( players, Cmd.none )
 ```
 
 - In `ChangeLevel` we call the helper function `changeLevelCommands` we defined above. That function return a list of commands to run, so we then batch them into one command using `Cmd.batch`.
-- In `SaveSuccess` we call the helper function `updatePlayer` which will update the relevant player from the list.
+- In `OnSave (Ok updatedPlayer)` we call the helper function `updatePlayer` which will update the relevant player from the list.
 
 ---
 
 # Try it
 
 This is all the setup necessary for changing a player's level. Try it, go to the edit view and click the - and + buttons. You should see the level changing and if you refresh your browser that change should be persisted on the server.
+
+Up to this point your application code should look <https://github.com/sporto/elm-tutorial-app/tree/018-08-edit>.
