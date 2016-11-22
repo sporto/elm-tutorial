@@ -1,3 +1,5 @@
+> This page covers Elm 0.18
+
 ## Player edit view
 
 We created a `ChangeLevel` message. Let's trigger this message from the player's edit view.

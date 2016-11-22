@@ -118,3 +118,5 @@ update message players =
 ## Test it
 
 Go to the list `http://localhost:3000/#players`. You should now see an Edit button, upon clicking it the location should change to the edit view.
+
+Up to this point your application code should look <https://github.com/sporto/elm-tutorial-app/tree/018-07-navigation>.

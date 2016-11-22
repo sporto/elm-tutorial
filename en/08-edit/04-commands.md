@@ -1,8 +1,8 @@
-> This page covers Elm 0.17
+> This page covers Elm 0.18
 
 # Players Commands
 
-Next let's create tasks and commands to save an updated player through our API.
+Next let's create the command to updated the player through our API.
 
 In __src/Players/Commands.elm__ add:
 
@@ -13,39 +13,33 @@ import Json.Encode as Encode
 
 saveUrl : PlayerId -> String
 saveUrl playerId =
-    "http://localhost:4000/players/" ++ (toString playerId)
+    "http://localhost:4000/players/" ++ playerId
 
 
-saveTask : Player -> Task.Task Http.Error Player
-saveTask player =
-    let
-        body =
-            memberEncoded player
-                |> Encode.encode 0
-                |> Http.string
-
-        config =
-            { verb = "PATCH"
-            , headers = [ ( "Content-Type", "application/json" ) ]
-            , url = saveUrl player.id
-            , body = body
-            }
-    in
-        Http.send Http.defaultSettings config
-            |> Http.fromJson memberDecoder
+saveRequest : Player -> Http.Request Player
+saveRequest player =
+    Http.request
+        { body = memberEncoded player |> Http.jsonBody
+        , expect = Http.expectJson memberDecoder
+        , headers = []
+        , method = "PATCH"
+        , timeout = Nothing
+        , url = saveUrl player.id
+        , withCredentials = False
+        }
 
 
 save : Player -> Cmd Msg
 save player =
-    saveTask player
-        |> Task.perform SaveFail SaveSuccess
+    saveRequest player
+        |> Http.send OnSave
 
 
 memberEncoded : Player -> Encode.Value
 memberEncoded player =
     let
         list =
-            [ ( "id", Encode.int player.id )
+            [ ( "id", Encode.string player.id )
             , ( "name", Encode.string player.name )
             , ( "level", Encode.int player.level )
             ]
@@ -54,51 +48,36 @@ memberEncoded player =
             |> Encode.object
 ```
 
-### Save task
+### Save request
 
 ```elm
-saveTask : Player -> Task.Task Http.Error Player
-saveTask player =
-    let
-        body =
-            memberEncoded player ➊
-                |> Encode.encode 0 ➋
-                |> Http.string ➌
-
-        config =
-            { verb = "PATCH"
-            , headers = [ ( "Content-Type", "application/json" ) ]
-            , url = saveUrl player.id
-            , body = body
-            }
-    in
-        Http.send Http.defaultSettings config ➍
-            |> Http.fromJson memberDecoder ➎
+saveRequest : Player -> Http.Request Player
+saveRequest player =
+    Http.request
+        { body = memberEncoded player |> Http.jsonBody ➊
+        , expect = Http.expectJson memberDecoder ➋
+        , headers = []
+        , method = "PATCH" ➌
+        , timeout = Nothing
+        , url = saveUrl player.id
+        , withCredentials = False
+        }
 ```
 
-➊ Encodes the given player, converting the record to a `Value`. A `Value` in this context is a type that encapsulates a JavaScript value (number, string, null, boolean, array, object).
-
-➋ `Encode.encode` converts the `Value` to a Json string.
-Similar to `JSON.stringify` in JavaScript. `0` indicates the indentation on the resulting string.
-<http://package.elm-lang.org/packages/elm-lang/core/4.0.1/Json-Encode#encode>
-
-➌ Creates a Http request body using the given string. <http://package.elm-lang.org/packages/evancz/elm-http/3.0.1/Http#string>
-
-➍ Creates a task to send the encoded player to the API.
-<http://package.elm-lang.org/packages/evancz/elm-http/3.0.1/Http#send>
-
-➎ This takes the previous task and chains it with a new task that will decode the response given by the API and give us the decoded value.
-<http://package.elm-lang.org/packages/evancz/elm-http/3.0.1/Http#fromJson>
+➊ Here we encode the given player and then convert the encoded value to a JSON string
+➋ Here we specify how to parse the response, in this case we want to parse the returned JSON back into and Elm value.
+➌ `PATCH` is the http method that our API expects when updating records.
 
 ### Save
 
 ```elm
 save : Player -> Cmd Msg
 save player =
-    saveTask player ➊
-        |> Task.perform ➋ SaveFail SaveSuccess
+    saveRequest player ➊
+        |> Http.send OnSave ➋
 ```
 
-Takes the `saveTask` ➊ and converts it to a command using `Task.perform` ➋. This command will resolve on the `SaveFail` message on failure or `SaveSuccess` message on success.
+Here we create the save request ➊ and then generate a command to send the request using `Http.send` ➋. 
+`Http.send` takes a message constructor (`OnSave` in this case). After the request is done, Elm will trigger the `OnSave` message with the response for the request.
 
 
