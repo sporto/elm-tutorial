@@ -1,17 +1,11 @@
-> This page covers Elm 0.17
+> This page covers Elm 0.18
 
 # Try it
 
-Try it! Run the fake API in one terminal using:
+Try it! Run the app in one terminal using:
 
 ```bash
-npm run api
-```
-
-And run the application (if not running) in another terminal:
-
-```bash
-npm run dev
+nf start
 ```
 
 Refresh the browser, our application should now fetch the list of players from the server. The app should look like:
