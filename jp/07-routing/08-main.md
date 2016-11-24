@@ -1,4 +1,4 @@
->このページでは、Elm 0.17
+>This page covers Elm 0.18
 
 # メイン
 

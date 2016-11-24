@@ -1,4 +1,4 @@
->このページでは、Elm 0.18
+>This page covers Elm 0.18
 
 # メッセージ
 
