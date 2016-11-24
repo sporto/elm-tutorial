@@ -1,4 +1,6 @@
-# Webpack
+> This page covers Elm 0.18
+
+# Webpackその1
 
 __Elm reactor__は単純なアプリケーションのプロトタイプ作成には最適ですが、より大きなアプリケーションでは不足です。今のところ、__reactor__は外部JavaScriptとの会話や外部CSSの読み込みをサポートしていません。これらの問題を解決するために、__Webpack__を使用してElmの代わりにElmコードをコンパイルします。
 

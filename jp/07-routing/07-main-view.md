@@ -1,4 +1,4 @@
->このページでは、Elm 0.17
+>このページでは、Elm 0.18
 
 # メインビュー
 
@@ -10,11 +10,10 @@ __src/View.elm__を次のように変更します。
 module View exposing (..)
 
 import Html exposing (Html, div, text)
-import Html.App
 import Messages exposing (Msg(..))
 import Models exposing (Model)
-import Players.List
 import Players.Edit
+import Players.List
 import Players.Models exposing (PlayerId)
 import Routing exposing (Route(..))
 

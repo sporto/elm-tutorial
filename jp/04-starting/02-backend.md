@@ -1,3 +1,5 @@
+> This page covers Elm 0.18
+
 # バックエンド
 
 アプリケーションのバックエンドが必要ですが、__json-server__を使用することができます。
@@ -15,7 +17,7 @@ npm init
 __json-server__をインストールします：
 
 ```bash
-npm i json-server -S
+npm i json-server@0.9 -S
 ```
 
 プロジェクトのルートに__api.js__を作成します。
@@ -41,12 +43,12 @@ server.listen(4000)
 ```json
 {
   "players": [
-    { "id": 1, "name": "Sally", "level": 2 },
-    { "id": 2, "name": "Lance", "level": 1 },
-    { "id": 3, "name": "Aki", "level": 3 },
-    { "id": 4, "name": "Maria", "level": 4 },
-    { "id": 5, "name": "Julian", "level": 1 },
-    { "id": 6, "name": "Jaime", "level": 1 }
+    { "id": "1", "name": "Sally", "level": 2 },
+    { "id": "2", "name": "Lance", "level": 1 },
+    { "id": "3", "name": "Aki", "level": 3 },
+    { "id": "4", "name": "Maria", "level": 4 },
+    { "id": "5", "name": "Julian", "level": 1 },
+    { "id": "6", "name": "Jaime", "level": 1 }
   ]
 }
 ```

@@ -1,4 +1,4 @@
->このページでは、Elm 0.17
+>このページでは、Elm 0.18
 
 # Playersコマンド
 
@@ -8,7 +8,7 @@
 module Players.Commands exposing (..)
 
 import Http
-import Json.Decode as Decode exposing ((:=))
+import Json.Decode as Decode exposing (field)
 import Task
 import Players.Models exposing (PlayerId, Player)
 import Players.Messages exposing (..)
@@ -16,8 +16,8 @@ import Players.Messages exposing (..)
 
 fetchAll : Cmd Msg
 fetchAll =
-    Http.get collectionDecoder fetchAllUrl
-        |> Task.perform FetchAllFail FetchAllDone
+    Http.get fetchAllUrl collectionDecoder
+        |> Http.send OnFetchAll
 
 
 fetchAllUrl : String
@@ -32,10 +32,10 @@ collectionDecoder =
 
 memberDecoder : Decode.Decoder Player
 memberDecoder =
-    Decode.object3 Player
-        ("id" := Decode.int)
-        ("name" := Decode.string)
-        ("level" := Decode.int)
+    Decode.map3 Player
+        (field "id" Decode.string)
+        (field "name" Decode.string)
+        (field "level" Decode.int)
 ```
 ---
 
@@ -44,14 +44,14 @@ memberDecoder =
 ```elm
 fetchAll : Cmd Msg
 fetchAll =
-    Http.get collectionDecoder fetchAllUrl
-        |> Task.perform FetchAllFail FetchAllDone
+    Http.get fetchAllUrl collectionDecoder
+        |> Http.send OnFetchAll
 ```
 
 ここでは、アプリケーションを実行するためのコマンドを作成します。
 
-- `Http.get`がタスクを作成します
-- 次に、このタスクを `Task.perform`に送ります。このタスクはコマンドでラップします
+- `Http.get`が`Request`を作成します
+- 次に、このrequestを`Http.send`に送ります。このタスクはコマンドでラップします
 
 ```elm
 collectionDecoder : Decode.Decoder (List Player)
@@ -64,16 +64,16 @@ collectionDecoder =
 ```elm
 memberDecoder : Decode.Decoder Player
 memberDecoder =
-    Decode.object3 Player
-        ("id" := Decode.int)
-        ("name" := Decode.string)
-        ("level" := Decode.int)
+    Decode.map3 Player
+        (field "id" Decode.string)
+        (field "name" Decode.string)
+        (field "level" Decode.int)
 ```
 
 `memberDecoder`は`Player`レコードを返すJSONデコーダを作成します。
 
 ---
-デコーダーの仕組みを理解するために、elm replを使って遊んでみましょう。
+デコーダーの仕組みを理解するために、Elm replを使って遊んでみましょう。
 
 ターミナルで `elm repl`を実行します。 Json.Decoderモジュールをインポートします。
 
@@ -90,7 +90,7 @@ memberDecoder =
 また、 `id`を抽出するデコーダを定義します。
 
 ```bash
-> idDecoder = ("id" := int)
+> idDecoder = (field "id" int)
 ```
 
 これは、文字列が `id`キーを抽出してそれを整数としてパースするデコーダを作成します。
@@ -102,7 +102,7 @@ memberDecoder =
 OK 99：Result.Result String Int
 ```
 
-`Ok 99`はデコードが成功し、99が得られたことを意味しています。これは`("id" := Decode.int)`がやったことであり、単一のキーのデコーダを作成します。
+`Ok 99`はデコードが成功し、99が得られたことを意味しています。これは`(field "id" Decode.int)`がやったことであり、単一のキーのデコーダを作成します。
 
 これは方程式の一部です。つぎに2番目の部分をやってみましょう。まず型を定義してください：
 
@@ -122,11 +122,11 @@ Elmでは、レコード型のエイリアス型名を関数として呼び出�
 これらの2つのコンセプトで完全なデコーダを作成しましょう：
 
 ```bash
-> nameDecoder = ("name" := string)
-> playerDecoder = object2 Player idDecoder nameDecoder
+> nameDecoder = (field "name" string)
+> playerDecoder = map2 Player idDecoder nameDecoder
 ```
 
-`object2`は最初の引数(この場合Player)と2つのデコーダとしての関数をとります。次に、デコーダを実行し、その結果を関数の引数(Player)に渡します。
+`map2`は最初の引数(この場合Player)と2つのデコーダとしての関数をとります。次に、デコーダを実行し、その結果を関数の引数(Player)に渡します。
 
 試してみましょう：
 ```bash
@@ -136,4 +136,4 @@ Ok { id = 99, name = "Sam" } : Result.Result String Repl.Player
 
 ---
 
-__Html.App__にコマンドを送信するまで、実際には実行されません。
+__program__にコマンドを送信するまで、実際には実行されません。

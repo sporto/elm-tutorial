@@ -1,8 +1,8 @@
->このページでは、Elm 0.17
+>このページでは、Elm 0.18
 
 # プレーヤーの更新
 
-プレーヤーのリクエストが完了すると、 `FetchAllDone`メッセージがトリガーされます。
+プレーヤーのリクエストが完了すると、 `OnFetchAll`メッセージがトリガーされます。
 
 __src/Players/Update.elm__は、この新しいメッセージに責任を持つ必要があります。 `update`を以下のように変更してください：
 
@@ -11,13 +11,14 @@ __src/Players/Update.elm__は、この新しいメッセージに責任を持つ
 update : Msg -> List Player -> ( List Player, Cmd Msg )
 update message players =
     case message of
-        FetchAllDone newPlayers ->
+        OnFetchAll (Ok newPlayers) ->
             ( newPlayers, Cmd.none )
 
-        FetchAllFail error ->
+        OnFetchAll (Err error) ->
             ( players, Cmd.none )
 ```
 
-`FetchAllDone`というメッセージは取得したプレーヤーを含んでいるので、そのペイロードを返してプレイヤーコレクションを更新します。
+`OnFetchAll`というメッセージを得たとき、何を実行するかを決定するためにパターンマッチングを使用できます。
 
-`FetchAllFail`はエラーの場合にマッチします。 今のところ、以前と同様にリターンします。
+- `Ok`の場合、取得されたプレーヤーを返して、プレーヤーのコレクションを更新します。
+- `Err`の場合、私たちは今までに持っていたものを返すだけです（もっと良いのはユーザーにエラーを表示することですが、チュートリアルを簡単にするために省略します)。

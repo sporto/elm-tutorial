@@ -17,9 +17,8 @@ Elmなどの関数型言語では、すべての関数は値を返します。�
 ```elm
 module Main exposing (..)
 
-import Html exposing (Html, div, button, text)
+import Html exposing (Html, div, button, text, program)
 import Html.Events exposing (onClick)
-import Html.App
 import Random
 
 
@@ -72,9 +71,9 @@ update msg model =
 -- MAIN
 
 
-main : Program Never
+main : Program Never Model Msg
 main =
-    Html.App.program
+    program
         { init = init
         , view = view
         , update = update
@@ -114,14 +113,14 @@ update msg model =
 
 ➊ `Random.generate`は乱数を生成するコマンドを作成します。この関数は、最初の引数がアプリケーションにフィードバックされるメッセージのコンストラクタである必要があります。この場合、コンストラクタは `OnResult`です。
 
-コマンドが実行されると、Elmは生成された数字で `OnResult`を呼び出し、例えば`OnResult 2`を生成します。 __Html.App__はこのメッセージをアプリケーションに送り返します。
+コマンドが実行されると、Elmは生成された数字で `OnResult`を呼び出し、例えば`OnResult 2`を生成します。 __Html.program__はこのメッセージをアプリケーションに送り返します。
 
 疑問に思うかもしれませんが、`OnResult res`はメッセージOnResultを示します。この場合、情報の追加ペイロードInteger 'res'を含みます。これは「パラメータ化された型」として知られているパターンです。
 
 ---
 
-多くのネストされたコンポーネントを持つより大きなアプリケーションでは、一度に多くのコマンドを__Html.App__に送信する可能性があります。次の図を見てください：
+多くのネストされたコンポーネントを持つより大きなアプリケーションでは、一度に多くのコマンドを__Html.program__に送信する可能性があります。次の図を見てください：
 
 ![Flow](02-commands.png)
 
-ここでは、3つの異なるレベルからコマンドを収集します。最後に、これらのコマンドをすべて__Elm.App__に送信して実行します。
+ここでは、3つの異なるレベルからコマンドを収集します。最後に、これらのコマンドをすべて__Elm.program__に送信して実行します。

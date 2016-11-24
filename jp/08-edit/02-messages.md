@@ -8,9 +8,9 @@ __src/Players/Messages.elm__に以下を追加：
 type Msg
     ...
     | ChangeLevel PlayerId Int
-    | SaveSuccess Player
-    | SaveFail Http.Error
+    | OnSave (Result Http.Error Player)
 ```
 
 - ユーザーがレベルを変更したいときに `ChangeLevel`がトリガーされます。第2のパラメータは、レベルをどれだけ変化させるかを示す整数です。減少する場合は-1、増加する場合は1になります。
-- その後、プレーヤーをAPIに更新するようリクエストします。 `SaveSuccess`はAPIからの成功した応答の後にトリガされ、失敗の場合は`SaveFail`がトリガされます。
+- その後、プレーヤーをAPIに更新するようリクエストします。 `OnSave`はAPIからの成功した応答の後にトリガされます。
+- `OnSave`は成功時には更新されたプレイヤーを運び、失敗時にはHttpエラーを運びます。

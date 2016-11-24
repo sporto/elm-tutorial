@@ -1,3 +1,5 @@
+> This page covers Elm 0.18
+
 # ルーティングの紹介
 
 アプリケーションにルーティングを追加しましょう。 [Elm Navigation package](http://package.elm-lang.org/packages/elm-lang/navigation/)と[UrlParser](http://package.elm-lang.org/packages/evancz/url-parser/)を使用します。
@@ -12,10 +14,10 @@ elm package install elm-lang/navigation 1.0.0
 elm package install evancz/url-parser 1.0.0
 ```
 
-`Navigation`は`Html.App`をラップするライブラリです。 `Html.App`のすべての機能といくつかの余分な機能を備えています：
+`Navigation`は`Html.program`をラップするライブラリです。 `Html.program`のすべての機能といくつかの余分な機能を備えています：
 
  - ブラウザ上でのロケーションの変更を待ち受る
- - 場所が変更されたときに私たちが提供する機能を呼び出す
+ - 場所が変更されたときにメッセージをトリガする
  - ブラウザの場所を変更する方法を提供する
 
 ## フロー
@@ -26,19 +28,17 @@ elm package install evancz/url-parser 1.0.0
 
 ![Flow](01-intro.png)
 
-1. ページが最初に読み込まれるとき、 `Navigation`モジュールは現在のURLを取得し、それを私たちが提供する`parse`関数に送ります。
-1. この`parse`関数は、一致する`Route`を返します。
-1. ナビゲーションは、この一致した `Route`をアプリケーションの`init`関数に送ります。
-1. `init`ではアプリケーションモデルを作成し、そこに一致するルートを格納します。
-1. ナビゲーションは、最初のモデルをビューに送信して、アプリケーションをレンダリングします。
+(1) ページが最初に読み込まれるとき、 `Navigation`モジュールは現在の`Location`を取得し、それをアプリケーションの`init`関数に送ります。
+(2) `init`関数中でこのlocationをパースし一致する`Route`を得ます。
+(3,4) 一致した `Route`をアプリケーションの初期モデルに保存し、このモデルを`Navigation`に返します。
+(5,6) この初期モデルを送ることで`Navigation`はビューをレンダリングします。
 
 ### ロケーションが変更されたとき
 
 ![Flow](01-intro_001.png)
 
-1. ブラウザーの場所が変更されると、ナビゲーション・ライブラリーはイベントを受け取ります
-1. 新しい場所は以前と同じように `parse`関数に送られます
-1. `parse`は一致したルートを返します
-1. 次に、 `Navigation`は`urlUpdate`関数を呼び出して、マッチしたルートを渡します
-1. `urlUpdate`では、マッチしたルートをアプリケーションモデルに格納し、更新モデルを返します
-1. ナビゲーションはアプリケーションを通常通りレンダリングします
+(1) ブラウザの閲覧ロケーションが変更されると、ナビゲーション・ライブラリーはイベントを受け取ります
+(2) `OnLocationChange`メッセージが` update`関数に送られます。このメッセージには新しい`Location`が含まれます。
+(3,4) `update`では、 `Location`を解析し、一致する`Route`を返します。
+(5) `update`からアップデート`Route`を含む更新されたモデルを返します。
+(6,7) `Navigation`は、アプリケーションを通常通りレンダリングします

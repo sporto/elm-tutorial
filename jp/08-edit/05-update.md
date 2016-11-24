@@ -1,4 +1,4 @@
->このページでは、Elm 0.17
+>このページでは、Elm 0.18
 
 # プレーヤーの更新
 
@@ -7,8 +7,8 @@
 新しいimportを追加します：
 
 ```bash
-import Players.Commands exposing (save)
 import Players.Models exposing (Player, PlayerId)
+import Players.Commands exposing (save)
 ```
 
 ## 更新コマンドを作成する
@@ -71,18 +71,20 @@ update message players =
         ChangeLevel id howMuch ->
             ( players, changeLevelCommands id howMuch players |> Cmd.batch )
 
-        SaveSuccess updatedPlayer ->
+        OnSave (Ok updatedPlayer) ->
             ( updatePlayer updatedPlayer players, Cmd.none )
 
-        SaveFail error ->
+        OnSave (Err error) ->
             ( players, Cmd.none )
 ```
 
 - `ChangeLevel`では、上で定義したヘルパー関数`changeLevelCommands`を呼び出します。この関数は実行するコマンドのリストを返すので、 `Cmd.batch`を使用してそれらを1つのコマンドにバッチ実行します。
-- `SaveSuccess`ではヘルパー関数`updatePlayer`を呼び出し、関連するプレイヤーをリストから更新します。
+- `OnSave (Ok updatedPlayer)`ではヘルパー関数`updatePlayer`を呼び出し、関連するプレイヤーをリストから更新します。
 
 ---
 
 # 試してみよう
 
 上記が、プレイヤーのレベルを変更するために必要なすべての設定です。試してみましょう。編集ビューに行き、- ボタンと+ボタンをクリックするとレベルが変更されます。ブラウザを更新しても変更はサーバー上に保存されています。
+
+これまでのアプリケーションコードは<https://github.com/sporto/elm-tutorial-app/tree/018-08-edit>になります。

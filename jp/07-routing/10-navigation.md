@@ -1,4 +1,4 @@
->このページでは、Elm 0.17
+>このページでは、Elm 0.18
 
 # ナビゲーション
 
@@ -12,8 +12,7 @@ __src/Players/Messages.elm__に2つの新しいアクションを追加するよ
 ...
 
 type Msg
-    = FetchAllDone (List Player)
-    | FetchAllFail Http.Error
+    = OnFetchAll (Result Http.Error (List Player))
     | ShowPlayers
     | ShowPlayer PlayerId
 ```
@@ -105,17 +104,13 @@ import Navigation
 update : Msg -> List Player -> ( List Player, Cmd Msg )
 update message players =
     case message of
-        FetchAllDone newPlayers ->
-            ( newPlayers, Cmd.none )
-
-        FetchAllFail error ->
-            ( players, Cmd.none )
+        ...
 
         ShowPlayers ->
             ( players, Navigation.newUrl "#players" )
 
         ShowPlayer id ->
-            ( players, Navigation.newUrl ("#players/" ++ (toString id)) )
+            ( players, Navigation.newUrl ("#players/" ++ id) )
 ```
 
 `Navigation.newUrl`はコマンドを返します。 Elmがこのコマンドを実行すると、ブラウザの閲覧ロケーションが変わります。
@@ -123,3 +118,5 @@ update message players =
 ## テストする
 
 `http://localhost:3000/#players`のリストに行きます。編集ボタンが表示されます。クリックすると、その場所が編集ビューに変わります。
+
+これまでのアプリケーションコードは<https://github.com/sporto/elm-tutorial-app/tree/018-07-navigation>になります。
