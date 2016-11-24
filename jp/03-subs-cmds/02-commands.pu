@@ -1,0 +1,16 @@
+@startuml
+autonumber "<b>(#)"
+
+participant program #white
+participant Main.update as MU #white
+participant Child.update as CU #white
+participant GrandChild.update as GC #white
+
+program -> MU: update
+MU -> CU: update
+CU -> GC: update
+GC --> CU: (model, command)
+CU --> MU: (model, command)
+MU -> program : (model, command)
+
+@enduml
