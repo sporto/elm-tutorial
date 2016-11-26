@@ -39,7 +39,7 @@ memberDecoder =
 
 Also update __src/Players/Models.elm__ to match the types in the Json:
 
-```
+```elm
 ...
 type alias PlayerId = String
 ...
@@ -53,7 +53,7 @@ new =
 
 And __src/Players/List.elm__ to render the `player.id` correctly:
 
-```
+```elm
 playerRow : Player -> Html Msg
 playerRow player =
   tr []
