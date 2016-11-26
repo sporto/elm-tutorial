@@ -1,3 +1,5 @@
+> This page covers Elm 0.18
+
 # Plan
 
 The next step is to fetch the list of players from the fake API we created before.
@@ -17,5 +19,5 @@ This is the plan:
 We will need the `http`, install it using:
 
 ```bash
-elm package install evancz/elm-http
+elm package install elm-lang/http
 ```
