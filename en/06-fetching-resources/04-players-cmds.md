@@ -36,6 +36,33 @@ memberDecoder =
         (field "name" Decode.string)
         (field "level" Decode.int)
 ```
+
+Also update __src/Players/Models.elm__ to match the types in the Json:
+
+```
+...
+type alias PlayerId = String
+...
+new : Player
+new =
+  { id = "0"
+  , name = ""
+  , level = 1
+  }
+```
+
+And __src/Players/List.elm__ to render the `player.id` correctly:
+
+```
+playerRow : Player -> Html Msg
+playerRow player =
+  tr []
+     [ td [] [ text player.id ]
+     , td [] [ text player.name ]
+     , td [] [ text (toString player.level) ]
+     , td [] []
+     ]
+```
 ---
 
 Let's go through this code.
