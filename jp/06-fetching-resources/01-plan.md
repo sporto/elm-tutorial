@@ -17,5 +17,5 @@
 `http`モジュールが必要なのでインストールしておきます：
 
 ```bash
-elm package install evancz/elm-http
+elm package install elm-lang/http
 ```
