@@ -1,8 +1,8 @@
 # 組合
 
-## 父子關係
+## 父元件
 
-下列為父元件的程式碼。
+下列為父元件程式碼。
 
 ```elm
 module Main exposing (..)
@@ -90,7 +90,7 @@ main =
 
 ---
 
-開始回顧程式碼重要的部份。
+細察程式碼重要的部份。
 
 ### 模型
 
@@ -100,7 +100,7 @@ type alias AppModel =
     }
 ```
 
-父元件有自己的模型。模型裡面的一個屬性包含 `Widget.Model` ➊。注意到此父元件並不知道 `Widget.Model` 是什麼。
+父元件也有自己的模型。模型內的一個屬性容納 `Widget.Model` ➊。注意到父元件並不清楚 `Widget.Model` 是什麼。
 
 ```elm
 initialModel : AppModel
@@ -109,9 +109,9 @@ initialModel =
     }
 ```
 
-當建立初始的應用程式模型時，只需要簡單呼叫 `Widget.initialModel`。
+當應用程式建立初始的模型時，只簡單呼叫 `Widget.initialModel` ➋ 即可。
 
-如果你有多個子元件，依樣畫葫蘆，例如：
+若有多個子元件，依樣畫葫蘆，如：
 
 ```elm
 initialModel : AppModel
@@ -122,7 +122,7 @@ initialModel =
     }
 ```
 
-或者，多個子元件有相同型別：
+或者，當多個子元件為相同型別：
 
 ```elm
 initialModel : AppModel
@@ -138,9 +138,9 @@ type Msg
     = WidgetMsg Widget.Msg
 ```
 
-我們使用__聯集型別__包裝 `Widget.Msg`，標示該元件的訊息。這讓應用程式得以轉送訊息到相關元件（看看更新函式會更清楚一些）
+使用__聯集型別__包裝 `Widget.Msg`，標示為該元件的訊息。這讓應用程式得以轉送訊息到相關元件（看更新函式會清楚一些）。
 
-若應用程式有多個子元件，可以像是：
+若應用程式有多個子元件時，可以像這樣做：
 
 ```elm
 type Msg
@@ -161,8 +161,8 @@ view model =
 
 主應用程式 `view` 轉譯 `Widget.view` ➌。但是 `Widget.view` 發出的是 `Widget.Msg`，跟目前視界發出的 `Main.Msg` 並不相容。
 
-- 我們使用 `Html.App.map` ➊ 將 Widget.view 發出的訊息映射到預期的（Msg）。`Html.App.map` 將來自於子視界訊息加上 `WidgetMsg` ➋  標籤
-- 我們只傳遞子元件所關心的部份模型進去，換言之就是 `model.widgetModel` ➍。
+- 使用 `Html.App.map` ➊ 將 Widget.view 發出的訊息映射到預期的（Msg）。`Html.App.map` 將來自於子視界訊息加上 `WidgetMsg` ➋  標籤
+- 只傳遞子元件所關心的部份模型進去，換言之就是 `model.widgetModel` ➍。
 
 ### 更新
 
@@ -178,12 +178,12 @@ update message model =
                 ({ model | widgetModel = updatedWidgetModel }, Cmd.map➎ WidgetMsg widgetCmd)
 ```
 
-當 `update` 收到 `WidgetMsg` ➊ 時，將會委派給子元件。子元件只會更新它所關心的部份，亦即 `widgetModel` 屬性。
+當 `update` 收到 `WidgetMsg` ➊ 時，將會委派給子元件。子元件只會更新它所關心的部份，亦即模型的 `widgetModel` 屬性。
 
-我們使用樣式對應將 `subMsg` ➋ 從 `WidgetMsg` 取出。`subMsg` 將會是 `Widget.update` 所預期的型別。
+使用樣式對應將 `subMsg` ➋ 從 `WidgetMsg` 之中取出。`subMsg` 將會是 `Widget.update` 所預期的型別。
 
-使用 `subMsg` 及 `model.widgetModel` 呼叫 `Widget.update` ➌。這會傳回一個 tuple，包含更新的 `widgetModel` 及命令。
+使用 `subMsg` 及 `model.widgetModel` 呼叫 `Widget.update` ➌。這會傳回一個 tuple，包含更新後的 `widgetModel` 及一個命令。
 
 再次使用樣式對應解構來自 `Widget.update` 的結果 ➍。
 
-最後，我們需要映射來自 `Widget.update` 的命令到正確的型別。我們使用 `Cmd.map` ➎ 及 `WidgetMsg` 標籤，相似於先前在視界的作法。
+最後，將來自 `Widget.update` 的命令映射成正確的型別。使用 `Cmd.map` ➎ 及 `WidgetMsg` 標籤，類似剛剛在視界的處理。

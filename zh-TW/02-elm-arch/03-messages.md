@@ -1,6 +1,6 @@
 # 訊息（Messages）
 
-上一章節中，使用 Html.App 建立一個應用程式，只有靜態 Html。現在，使用訊息讓我們建立可以回應使用者的互動應用程式。
+上一章節中，使用 Html.App 建立一個應用程式，這只有靜態 Html。現在，使用訊息來建構能夠回應使用者的互動程式。
 
 ```elm
 module Main exposing (..)
@@ -83,9 +83,9 @@ main =
         }
 ```
 
-這個程式與先前的十分相似，不同的是兩個新訊息：`Expand` 及 `Collapse`。你可以複製貼上程式碼到某個檔案，執行 Elm reactor 開啟這個檔案。
+這個程式與先前的十分相似，但不同的是，兩個新訊息：`Expand` 及 `Collapse`。你可以複製貼上程式碼到某個檔案，執行 Elm reactor 開啟這個檔案。
 
-讓我們更靠近點看看 `view` 及 `update` 函式。
+更靠近點看 `視界` 及 `更新` 函式。
 
 ### 視界
 
@@ -104,7 +104,7 @@ view model =
 
 根據模型當下的狀態來決定展開或收縮視界。
 
-注意到 `onClick` 函式。因為這個視界的型別是 `Html Msg`，所以可以使用 `onClick` 來觸發該型別的訊息。Collapse 及 Expand 都是 Msg 型別。
+注意到 `onClick` 函式。這個視界的型別是 `Html Msg`，可以使用 `onClick` 來觸發該型別的訊息。Collapse 及 Expand 都是 Msg 型別。
 
 ### 更新
 
@@ -119,6 +119,6 @@ update msg model =
             ( False, Cmd.none )
 ```
 
-`update` 用來回應訊息。根據不同的訊息，傳回要求的狀態。當訊息為 `Expand`，新的狀態將會是 `True`（表示展開）
+`更新` 負責回應訊息。根據不同的訊息，傳回想要的狀態。當訊息為 `Expand`，新的狀態為 `True`（表示展開）
 
-接下來，我們將看看 __Html.App__ 如何將這些片段安排在一起。
+接下來，看看 __Html.App__ 是如何將這些片段安排在一起。

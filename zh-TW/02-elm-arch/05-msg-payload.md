@@ -1,6 +1,6 @@
 # 裝載訊息（Messages with payload）
 
-你可以在訊息上裝載額外資料：
+你可以在訊息上額外裝載資料：
 
 ```elm
 module Main exposing (..)
@@ -83,13 +83,13 @@ type Msg
     = Increment Int
 ```
 
-接著，在 view 函式裡面，觸發該訊息並裝載額外資料：
+接著，在視界函式裡面，觸發該訊息並裝載額外資料：
 
 ```elm
 onClick (Increment 2)
 ```
 
-最後在 update 函式中，使用__樣式對應__取出裝載資料： 
+最後在更新函式中，使用__樣式對應__取出裝載資料： 
 
 ```elm
 update msg model =
