@@ -9,7 +9,7 @@ Change __src/View.elm__ to:
 ```elm
 module View exposing (..)
 
-import Html exposing (Html, div, text)
+import Html exposing (Html, div, text, map)
 import Messages exposing (Msg(..))
 import Models exposing (Model)
 import Players.Edit
@@ -47,7 +47,7 @@ playerEditPage model playerId =
     in
         case maybePlayer of
             Just player ->
-                Html.App.map PlayersMsg (Players.Edit.view player)
+                Html.map PlayersMsg (Players.Edit.view player)
 
             Nothing ->
                 notFoundView
@@ -69,7 +69,7 @@ page : Model -> Html Msg
 page model =
     case model.route of
         PlayersRoute ->
-            Html.App.map PlayersMsg (Players.List.view model.players)
+            Html.map PlayersMsg (Players.List.view model.players)
 
         PlayerRoute id ->
             playerEditPage model id
@@ -78,7 +78,7 @@ page model =
             notFoundView
 ```
 
-Now we have a function `page` which has a case expression to show the correct view depending on what is in `model.route`. 
+Now we have a function `page` which has a case expression to show the correct view depending on what is in `model.route`.
 
 When the player edit route matches (e.g. `#players/2`) we will get the player id from the route i.e. `PlayerRoute playerId`.
 
@@ -95,7 +95,7 @@ playerEditPage model playerId =
     in
         case maybePlayer of
             Just player ->
-                Html.App.map PlayersMsg (Players.Edit.view player)
+                Html.map PlayersMsg (Players.Edit.view player)
 
             Nothing ->
                 notFoundView
