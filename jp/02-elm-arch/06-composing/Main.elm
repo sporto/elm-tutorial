@@ -34,7 +34,7 @@ type Msg
 view : AppModel -> Html Msg
 view model =
     Html.div []
-        [ Html.App.map WidgetMsg (Widget.view model.widgetModel)
+        [ Html.map WidgetMsg (Widget.view model.widgetModel)
         ]
 
 

@@ -16,6 +16,6 @@ The plan for changing a player's level is as follows:
 
 (7) `Main.Update` routes the `SaveSuccess` message to `Players.Update`.
 
-(8) In `Players.Update` we update the `players` model and return it. This flows back to Html.App (9).
+(8) In `Players.Update` we update the `players` model and return it. This flows back to Html.program (9).
 
-(10) Then Html.App will render the application with the updated model.
+(10) Then Html.program will render the application with the updated model.

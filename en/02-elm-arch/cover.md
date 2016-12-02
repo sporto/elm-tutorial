@@ -3,7 +3,7 @@
 This chapter covers:
 
 - Overview of the Elm architecture
-- Introduction to Html.App.program
+- Introduction to Html.program
 - Messages
 - Commands
 - Subscriptions

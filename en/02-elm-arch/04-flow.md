@@ -2,7 +2,7 @@
 
 # Application flow
 
-The following diagram illustrates how the pieces of our application interact with Html.App.
+The following diagram illustrates how the pieces of our application interact with Html.program.
 
 ![Flow](04-flow.png)
 

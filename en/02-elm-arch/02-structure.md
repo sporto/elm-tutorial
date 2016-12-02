@@ -1,6 +1,6 @@
 > This page covers Elm 0.18
 
-# Structure of Html.App
+# Structure of Html.program
 
 ### Imports
 
@@ -67,7 +67,7 @@ update msg model =
             ( model, Cmd.none )
 ```
 
-Next we define an `update` function, this function will be called by Html.App each time a message is received. This update function responds to messages updating the model and returning commands as needed. 
+Next we define an `update` function, this function will be called by `Html.program` each time a message is received. This update function responds to messages updating the model and returning commands as needed. 
 
 In this example, we only respond to `NoOp` and return the unchanged model and `Cmd.none` (meaning no command to perform).
 

@@ -10,7 +10,7 @@ In Elm, commands (Cmd) are how we tell the runtime to execute things that involv
 
 A `Cmd` can be one or a collection of things to do. We use commands to gather all the things that need to happen and hand them to the runtime. Then the runtime will execute them and feed the results back to the application.
 
-In other words, every function returns a value in a functional language such as Elm.  Function side effects in the traditional sense are forbidden by the language design and Elm takes an alternative approach to modeling them.  Essentially, a function returns a command value which names the desired effect.  Due to the Elm architecture, the main Html.App program we've been using is the ultimate recipient of this command value.  The update method of the Html.App program then contains the logic to execute the named command.
+In other words, every function returns a value in a functional language such as Elm.  Function side effects in the traditional sense are forbidden by the language design and Elm takes an alternative approach to modeling them.  Essentially, a function returns a command value which names the desired effect.  Due to the Elm architecture, the main Html.program we've been using is the ultimate recipient of this command value.  The update method of the Html.program then contains the logic to execute the named command.
 
 Let's try an example app using commands:
 

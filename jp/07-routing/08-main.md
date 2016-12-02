@@ -78,4 +78,4 @@ init関数は `Routing`に追加した`parser`から初期的な出力を受け�
 
 ### main
 
-`main`は`Html.App.program`の代わりに `Navigation.program`を使います。 `Navigation.program`はHtml.Appをラップしますが、ブラウザの場所が変更されたときには`urlUpdate`コールバックを追加します。
+`main`は`Html.program`の代わりに `Navigation.program`を使います。 `Navigation.program`はHtml.programをラップしますが、ブラウザの場所が変更されたときには`urlUpdate`コールバックを追加します。
