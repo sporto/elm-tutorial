@@ -49,7 +49,7 @@
    * [Player edit view](07-routing/03-player-edit.md)
    * [Main model](07-routing/04-main-model.md)
    * [Main messages](07-routing/05-main-messages.md)
-   * [Main view](07-routing/06-main-update.md)
+   * [Main update](07-routing/06-main-update.md)
    * [Main view](07-routing/07-main-view.md)
    * [Main](07-routing/08-main.md)
    * [Try it](07-routing/09-try-it.md)
