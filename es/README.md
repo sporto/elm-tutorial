@@ -3,6 +3,7 @@
 # Tutorial Elm
 
 __Un tutorial sobre el desarrollo de aplicaciones web de página única (SPAs) con [Elm](http://elm-lang.org/).__
+__La versión en Español aun no ha sido modificada para Elm 0.18.__
 
 Este tutorial contiene:
 
