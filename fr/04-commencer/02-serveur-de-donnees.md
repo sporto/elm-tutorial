@@ -57,6 +57,6 @@ Démarrez le serveur en tapant :
 node api.js
 ```
 
-Testez cette fause API en vous rendant sur :
+Testez cette fausse API en vous rendant sur :
 
 - <http://localhost:4000/players>
