@@ -67,7 +67,7 @@ update message model =
 
 
 
--- SUBSCIPTIONS
+-- SUBSCRIPTIONS
 
 
 subscriptions : AppModel -> Sub Msg
