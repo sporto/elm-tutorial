@@ -9,16 +9,16 @@ In Elm, using __subscriptions__ is how your application can listen for external 
 - Browser locations changes
 - [Websocket events](http://package.elm-lang.org/packages/elm-lang/websocket/latest/WebSocket)
 
-To illustrate this let's create an application that responds to both keyboard and mouse events.
+To illustrate this, let's create an application that responds to both keyboard and mouse events.
 
-First install the required libraries
+First, install the required libraries:
 
 ```bash
 elm package install elm-lang/mouse
 elm package install elm-lang/keyboard
 ```
 
-And create this program
+Then, create this program:
 
 ```elm
 module Main exposing (..)
@@ -99,7 +99,7 @@ main =
         }
 ```
 
-Run this program with Elm reactor, each time you click the mouse you will see the counter increasing by one, each time you press a key you will see the counter increasing by 2.
+Run this program with Elm reactor. Each time you click the mouse you will see the counter increasing by one; each time you press a key you will see the counter increasing by 2.
 
 ---
 
@@ -113,7 +113,7 @@ type Msg
     | KeyMsg Keyboard.KeyCode
 ```
 
-We have two possible messages `MouseMsg` and `KeyMsg`. This will trigger when the mouse or the keyboard are pressed accordingly.
+We have two possible messages: `MouseMsg` and `KeyMsg`. These will trigger when the mouse or the keyboard are pressed, accordingly.
 
 ### Update
 
@@ -143,4 +143,4 @@ subscriptions model =
 
 Here we declare the things we want to listen to. We want to listen to `Mouse.clicks` ➊ and `Keyboard.downs` ➋. Both of these functions take a message constructor and return a subscription.
 
-We use `Sub.batch` ➌ so we can listen to both of them. Batch takes a list of subscriptions and returns one subscription which includes all of them.
+We use `Sub.batch` ➌ so we can listen to both of them. `batch` takes a list of subscriptions and returns one subscription which includes all of them.
