@@ -4,7 +4,7 @@
 
 Here are two diagrams that illustrate this architecture:
 
-### Intial render
+### Initial render
 
 ![Flow](06-composing.png)
 
