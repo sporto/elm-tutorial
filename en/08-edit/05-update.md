@@ -6,7 +6,7 @@ Finally we need to account for the new messages in our `update` function. In __s
 
 Add a new import:
 
-```bash
+```elm
 import Players.Models exposing (Player, PlayerId)
 import Players.Commands exposing (save)
 ```
