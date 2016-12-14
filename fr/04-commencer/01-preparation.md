@@ -1,3 +1,5 @@
+> Cette page couvre Elm 0.18
+
 # Préparation
 
 Nous allons construire une application de base pour un jeu de rôle imaginaire.

@@ -1,4 +1,4 @@
-> This page covers Elm 0.17
+> Cette page couvre Elm 0.18
 
 # Plusieurs modules
 
@@ -101,11 +101,11 @@ __src/Main.elm__
 ```elm
 module Main exposing (..)
 
-import Html.App
+import Html exposing (Html, div, text, program)
 import Messages exposing (Msg)
 import Models exposing (Model)
-import View exposing (view)
 import Update exposing (update)
+import View exposing (view)
 
 
 init : ( Model, Cmd Msg )
@@ -122,7 +122,7 @@ subscriptions model =
 -- MAIN
 
 
-main : Program Never
+main : Program Never Model Msg
 main =
     Html.App.program
         { init = init
