@@ -1,4 +1,4 @@
-> This page covers Elm 0.17
+> Cette page couvre Elm 0.18
 
 # Composition
 
@@ -9,8 +9,7 @@ Voici le code du composant parent :
 ```elm
 module Main exposing (..)
 
-import Html exposing (Html)
-import Html.App
+import Html exposing (Html, program)
 import Widget
 
 
@@ -48,7 +47,7 @@ type Msg
 view : AppModel -> Html Msg
 view model =
     Html.div []
-        [ Html.App.map WidgetMsg (Widget.view model.widgetModel)
+        [ Html.map WidgetMsg (Widget.view model.widgetModel)
         ]
 
 
@@ -68,7 +67,7 @@ update message model =
 
 
 
--- SUBSCIPTIONS
+-- SUBSCRIPTIONS
 
 
 subscriptions : AppModel -> Sub Msg
@@ -80,7 +79,7 @@ subscriptions model =
 -- APP
 
 
-main : Program Never
+main : Program Never AppModel Msg
 main =
     Html.App.program
         { init = init
@@ -157,13 +156,13 @@ type Msg
 view : AppModel -> Html Msg
 view model =
     Html.div []
-        [ Html.App.map➊ WidgetMsg➋ (Widget.view➌ model.widgetModel➍)
+        [ Html.map➊ WidgetMsg➋ (Widget.view➌ model.widgetModel➍)
         ]
 ```
 
 La fonction `view` de l'application affiche `Widget.view` ➌. Mais `Widget.view` émet des messages de type `Widget.Msg` qui ne sont pas compatibles avec cette vue, qui elle émet des messages du type `Main.Msg`.
 
-- Nous utilisons `Html.App.map` ➊  pour transformer les messages émis de `Widget.view` vers le type que nous attendons (Msg). `Html.App.map` étiquette les messages venant de la sous-vue en utilisant l'étiquette `WidgetMsg` ➋.
+- Nous utilisons `Html.map` ➊  pour transformer les messages émis de `Widget.view` vers le type que nous attendons (Msg). `Html.map` étiquette les messages venant de la sous-vue en utilisant l'étiquette `WidgetMsg` ➋.
 - Nous passons uniquement la partie du modèle qui concerne le composant enfant, à savoir `model.widgetModel` ➍.
 
 ### Mise à jour

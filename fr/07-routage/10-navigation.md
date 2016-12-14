@@ -1,4 +1,4 @@
-> This page covers Elm 0.17
+> This page covers Elm 0.18
 
 # Navigation
 
@@ -12,8 +12,7 @@ Modifiez __src/Players/Messages.elm__ pour inclure deux nouvelles actions :
 ...
 
 type Msg
-    = FetchAllDone (List Player)
-    | FetchAllFail Http.Error
+    = OnFetchAll (Result Http.Error (List Player))
     | ShowPlayers
     | ShowPlayer PlayerId
 ```
@@ -103,17 +102,13 @@ Ajoutez deux nouvelles branches au `case` :
 update : Msg -> List Player -> ( List Player, Cmd Msg )
 update message players =
     case message of
-        FetchAllDone newPlayers ->
-            ( newPlayers, Cmd.none )
-
-        FetchAllFail error ->
-            ( players, Cmd.none )
+        ...
 
         ShowPlayers ->
             ( players, Navigation.newUrl "#players" )
 
         ShowPlayer id ->
-            ( players, Navigation.newUrl ("#players/" ++ (toString id)) )
+            ( players, Navigation.newUrl ("#players/" ++ id) )
 ```
 
 `Navigation.newUrl` renvoie une commande. Quand cette commande sera exécutée par Elm, l'adresse du navigateur changera.
@@ -121,3 +116,5 @@ update message players =
 ## Testez !
 
 Ouvrez `http://localhost:3000/#players`. Vous devriez voir un bouton `Edit`. Si vous le cliquez, l'adresse devrait changer et vous amener à la vue d'édition.
+
+À ce stade, le code de votre application devrait ressembler à ça : <https://github.com/sporto/elm-tutorial-app/tree/018-07-navigation>.

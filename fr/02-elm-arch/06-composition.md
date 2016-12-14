@@ -1,4 +1,4 @@
-> This page covers Elm 0.17
+> Cette page couvre Elm 0.18
 
 # Composition
 

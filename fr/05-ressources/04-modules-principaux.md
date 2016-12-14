@@ -1,4 +1,4 @@
-> This page covers Elm 0.17
+> Cette page couvre Elm 0.18
 
 # Main
 
@@ -43,7 +43,7 @@ type alias Model =
 
 initialModel : Model
 initialModel =
-    { players = [ Player 1 "Sam" 1 ]
+    { players = [ Player "1" "Sam" 1 ]
     }
 ```
 

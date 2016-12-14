@@ -1,6 +1,8 @@
+> Cette page couvre Elm 0.18
+
 # Mise à jour Joueurs
 
-Quand la requête pour les Joueurs est réussie, on envoie le message `FetchAllDone`.
+Quand la requête pour les Joueurs est réussie, on envoie le message `OnFetchAll`.
 
 __src/Players/Update.elm__ doit prendre ce message en compte. Modifiez `update` comme suit :
 
@@ -9,13 +11,15 @@ __src/Players/Update.elm__ doit prendre ce message en compte. Modifiez `update` 
 update : Msg -> List Player -> ( List Player, Cmd Msg )
 update message players =
     case message of
-        FetchAllDone newPlayers ->
+        OnFetchAll (Ok newPlayers) ->
             ( newPlayers, Cmd.none )
 
-        FetchAllFail error ->
+        OnFetchAll (Err error) ->
             ( players, Cmd.none )
 ```
 
-Le message `FetchAllDone` a la liste des Joueurs récupérés : on renvoie donc cette donnée pour mettre à jour la collection des Joueurs.
+Lorsque nous recevons le message `OnFetchAll`, nous pouvons utiliser le pattern matching pour décider la marche à suivre.
 
-`FetchAllFail` est utilisé en cas d'erreur. Pour l'instant, nous nous contenterons de retourner la liste que nous avions avant la requête qui a échoué.
+Dans le cas `Ok`, nous retournons la liste des joueurs récupérés afin de mettre à jour la collection des joueurs.
+
+Dans le cas `Err`, pour l'instant, nous retournons juste la liste que nous avions auparavant. Une meilleure approche serait d'afficher un message d'erreur à l'utilisateur, mais pour garder ce tutoriel simple, nous avons choisi de ne pas le faire.

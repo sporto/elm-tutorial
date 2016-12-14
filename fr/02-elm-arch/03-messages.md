@@ -1,13 +1,13 @@
-> This page covers Elm 0.17
+> Cette page couvre Elm 0.18
 
 # Messages
 
-Dans la dernière section, nous avons créé une application avec Html.App qui ne contenait que de l'Html statique. Créons maintenant une application qui répond aux interactions des utilisateurs en utilisant des messages.
+Dans la dernière section, nous avons créé une application avec `Html.program` qui ne contenait que de l'Html statique. Créons maintenant une application qui répond aux interactions des utilisateurs en utilisant des messages.
 
 ```elm
 module Main exposing (..)
 
-import Html exposing (Html, button, div, text)
+import Html exposing (Html, button, div, text, program)
 import Html.Events exposing (onClick)
 import Html.App
 
@@ -77,7 +77,7 @@ subscriptions model =
 
 
 main =
-    Html.App.program
+    program
         { init = init
         , view = view
         , update = update
@@ -123,5 +123,5 @@ update msg model =
 
 `update` a pour rôle de répondre aux messages possibles. En fonction du message, elle retourne l'état désiré. Par exemple, lorsqu'elle reçoit le message `Expand`, le nouvel état sera `True` (développé).
 
-Voyons ensuite comment __Html.App__ orchestre toutes ces pièces ensemble.
+Voyons ensuite comment __Html.program__ orchestre toutes ces pièces ensemble.
 

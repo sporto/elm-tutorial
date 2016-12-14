@@ -1,19 +1,15 @@
+> Cette page couvre Elm 0.18
+
 # Essayez
 
-Essayez vous-même ! Lancez la fausse API dans un terminal en exécutant :
+Essayez vous-même ! Lancez l'application dans un terminal en exécutant :
 
 ```bash
-npm run api
-```
-
-Puis lancez l'application (si elle n'est pas déjà lancée) dans un autre terminal :
-
-```bash
-npm run dev
+nf start
 ```
 
 Rafraîchissez le navigateur : notre application devrait aller récupérer la liste des joueurs sur le serveur. L'application devrait ressembler à ça.
 
 ![Capture d'écran](capture.png)
 
-Le code de l'application devrait ressembler à cela : <https://github.com/sporto/elm-tutorial-app/tree/05-fetch>.
+Le code de l'application devrait ressembler à cela : <https://github.com/sporto/elm-tutorial-app/tree/018-05-fetch>.

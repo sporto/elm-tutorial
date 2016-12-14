@@ -1,8 +1,7 @@
 module Main exposing (..)
 
-import Html exposing (Html, button, div, text)
+import Html exposing (Html, button, div, text, program)
 import Html.Events exposing (onClick)
-import Html.App
 
 
 -- MODEL
@@ -61,9 +60,9 @@ subscriptions model =
 -- MAIN
 
 
-main : Program Never
+main : Program Never Model Msg
 main =
-    Html.App.program
+    program
         { init = init
         , view = view
         , update = update

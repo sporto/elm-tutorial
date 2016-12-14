@@ -1,4 +1,4 @@
-> This page covers Elm 0.17
+> Cette page couvre Elm 0.18
 
 # Commandes Joueurs
 
@@ -8,16 +8,15 @@ Maintenant, il nous faut créer les tâches et les commandes pour récupérer le
 module Players.Commands exposing (..)
 
 import Http
-import Json.Decode as Decode exposing ((:=))
-import Task
+import Json.Decode as Decode exposing (field)
 import Players.Models exposing (PlayerId, Player)
 import Players.Messages exposing (..)
 
 
 fetchAll : Cmd Msg
 fetchAll =
-    Http.get collectionDecoder fetchAllUrl
-        |> Task.perform FetchAllFail FetchAllDone
+    Http.get fetchAllUrl collectionDecoder 
+        |> Http.send OnFetchAll
 
 
 fetchAllUrl : String
@@ -32,10 +31,10 @@ collectionDecoder =
 
 memberDecoder : Decode.Decoder Player
 memberDecoder =
-    Decode.object3 Player
-        ("id" := Decode.int)
-        ("name" := Decode.string)
-        ("level" := Decode.int)
+    Decode.map3 Player
+        (field "id" Decode.string)
+        (field "name" Decode.string)
+        (field "level" Decode.int)
 ```
 ---
 
@@ -44,8 +43,8 @@ memberDecoder =
 ```elm
 fetchAll : Cmd Msg
 fetchAll =
-    Http.get collectionDecoder fetchAllUrl
-        |> Task.perform FetchAllFail FetchAllDone
+    Http.get fetchAllUrl collectionDecoder 
+        |> Http.send OnFetchAll
 ```
 
 Ici, on crée une commande exécutable par noter application :
@@ -64,10 +63,10 @@ Ce décodeur délègue le décodage de chaque membre de la liste à `memberDecod
 ```elm
 memberDecoder : Decode.Decoder Player
 memberDecoder =
-    Decode.object3 Player
-        ("id" := Decode.int)
-        ("name" := Decode.string)
-        ("level" := Decode.int)
+    Decode.map3 Player
+        (field "id" Decode.string)
+        (field "name" Decode.string)
+        (field "level" Decode.int)
 ```
 
 `memberDecoder` crée un décodeur JSON qui retourne un enregistrement de type `Player`.
@@ -90,7 +89,7 @@ Puis, définissez une chaîne Json :
 Ainsi qu'un décodeur pour extraire l'`id` :
 
 ```bash
-> idDecoder = ("id" := int)
+> idDecoder = (field "id" int)
 ```
 
 Cela crée un décodeur qui, lorsqu'on lui donne une chaîne, essaie d'extraire la clef `id` et de l'interpréter comme un entier.
@@ -102,7 +101,7 @@ Exécutez le décodeur pour voir le résultat :
 Ok 99 : Result.Result String Int
 ```
 
-On obtient `Ok 99`, ce qui signifie que le décodage a réussi et que la valeur obtenue est `99`. Voilà la fonction de `("id" := Decode.int)` : créer un décodeur pour une clef.
+On obtient `Ok 99`, ce qui signifie que le décodage a réussi et que la valeur obtenue est `99`. Voilà le rôle de `(field "id" Decode.int)` : créer un décodeur pour une clef.
 
 Tout ça n'est que la première partie du travail. Pour la deuxième partie, définissez un type :
 
@@ -122,11 +121,11 @@ Pour essayer, faites :
 En utilisant ces deux concepts, créons un décodeur complet :
 
 ```bash
-> nameDecoder = ("name" := string)
-> playerDecoder = object2 Player idDecoder nameDecoder
+> nameDecoder = (field "name" string)
+> playerDecoder = map2 Player idDecoder nameDecoder
 ```
 
-La fonction `object2` prend une fonction (ici, `Player`) en premier argument et deux décodeurs. Puis, elle exécute les décodeurs et passe les résultats en argument à la fonction (`Player`).
+La fonction `map2` prend une fonction (ici, `Player`) en premier argument et deux décodeurs. Puis, elle exécute les décodeurs et passe les résultats en argument à la fonction (`Player`).
 
 Pour essayer, faites :
 
@@ -137,4 +136,4 @@ Ok { id = 99, name = "Sam" } : Result.Result String Repl.Player
 
 ---
 
-Rappelez-vous que rien de tout cela n'est vraiment exécuté tant que la commande n'est pas envoyée à __Html.App__.
+Rappelez-vous que rien de tout cela n'est vraiment exécuté tant que la commande n'est pas envoyée à __program__.

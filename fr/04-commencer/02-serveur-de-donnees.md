@@ -1,3 +1,5 @@
+> Cette page couvre Elm 0.18
+
 # Serveur de données
 
 Il nous faudra un serveur pour les données de notre application.
@@ -15,7 +17,7 @@ Acceptez toutes les valeurs par défaut.
 Installez __json-server__ :
 
 ```bash
-npm i json-server -S
+npm i json-server@0.9 -S
 ```
 
 Créez le fichier __api.js__ à la racine du projet :
@@ -41,12 +43,12 @@ Créez __db.json__ à la racine :
 ```json
 {
   "players": [
-    { "id": 1, "name": "Sally", "level": 2 },
-    { "id": 2, "name": "Lance", "level": 1 },
-    { "id": 3, "name": "Aki", "level": 3 },
-    { "id": 4, "name": "Maria", "level": 4 },
-    { "id": 5, "name": "Julian", "level": 1 },
-    { "id": 6, "name": "Jaime", "level": 1 }
+    { "id": "1", "name": "Sally", "level": 2 },
+    { "id": "2", "name": "Lance", "level": 1 },
+    { "id": "3", "name": "Aki", "level": 3 },
+    { "id": "4", "name": "Maria", "level": 4 },
+    { "id": "5", "name": "Julian", "level": 1 },
+    { "id": "6", "name": "Jaime", "level": 1 }
   ]
 }
 ```
