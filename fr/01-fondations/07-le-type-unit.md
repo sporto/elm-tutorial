@@ -46,10 +46,10 @@ Un exemple concret est le type `Task`. Lorsque vous utiliser `Task`, vous rencon
 
 Une tâche typique contient une __erreur (error)__ et un __résultat (result)__ :
 
-```
+```elm
 Task error result
 ```
 
 - Des fois nous voulons une tâche où l'erreur peut être ignorée en tout tranquillité : `Task () result`
-- Ou alors le résultat est ignoré : `Tasks error ()`
+- Ou alors le résultat est ignoré : `Task error ()`
 - Ou les deux : `Task () ()`

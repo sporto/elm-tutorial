@@ -6,7 +6,7 @@ Avec Elm, vous pouvez importer un module en utilisant le mot-clé `import`:
 import Html
 ```
 
-Cela a pour effet d'importer le module `Html` fourni avec Elm. Vous pouvez alors utiliser des fonctions et des types de ce module en utilisant leur chemin complet :
+Cela a pour effet d'importer le module `Html`. Vous pouvez alors utiliser des fonctions et des types de ce module en utilisant leur chemin complet :
 
 ```
 Html.div [] []
