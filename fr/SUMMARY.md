@@ -54,6 +54,12 @@
    * [Main](07-routing/08-main.md)
    * [Essayez](07-routing/09-essayez.md)
    * [Navigation](07-routing/10-navigation.md)
+* [Edition](08-edition/cover.md)
+   * [Plan](08-edition/01-plan.md)
+   * [Messages](08-edition/02-messages.md)
+   * [Édition d'un joueur](08-edition/03-edition-du-joueur.md)
+   * [Commands](08-edition/04-commandes.md)
+   * [Update](08-edition/05-mise-a-jour.md)
 * Trucs et Astuces
    * [Contextes](tips-tricks/context.md)
    * [Programmation tacite ('point-free style')](tips-tricks/point-free-style.md)
