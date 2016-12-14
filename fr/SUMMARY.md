@@ -21,7 +21,6 @@
 * [Souscriptions et Commandes](03-subs-cmds/cover.md)
    * [Souscriptions](03-subs-cmds/01-souscriptions.md)
    * [Commandes](03-subs-cmds/02-commandes.md)
-   * [Tâches](03-subs-cmds/03-taches.md)
 * [Commencer une application](04-commencer/cover.md)
    * [Préparation](04-commencer/01-preparation.md)
    * [Serveur de données](04-commencer/02-serveur-de-donnees.md)

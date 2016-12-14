@@ -1,4 +1,4 @@
-> This page covers Elm 0.17
+> Cette page couvre Elm 0.18
 
 # Souscriptions
 
@@ -23,8 +23,7 @@ Puis créez ce programme
 ```elm
 module Main exposing (..)
 
-import Html exposing (Html, div, text)
-import Html.App
+import Html exposing (Html, div, text, program)
 import Mouse
 import Keyboard
 
@@ -82,7 +81,7 @@ subscriptions : Model -> Sub Msg
 subscriptions model =
     Sub.batch
         [ Mouse.clicks MouseMsg
-        , Keyboard.presses KeyMsg
+        , Keyboard.downs KeyMsg
         ]
 
 
@@ -90,9 +89,9 @@ subscriptions model =
 -- MAIN
 
 
-main : Program Never
+main : Program Never Model Msg
 main =
-    Html.App.program
+    program
         { init = init
         , view = view
         , update = update
@@ -138,10 +137,10 @@ subscriptions : Model -> Sub Msg
 subscriptions model =
     Sub.batch ➌
         [ Mouse.clicks MouseMsg ➊
-        , Keyboard.presses KeyMsg ➋
+        , Keyboard.downs KeyMsg ➋
         ]
 ```
 
-Ici, on déclare les choses que l'on veut écouter. On souhaite réagir aux `Mouse.clicks` ➊ et aux `Keyboard.presses` ➋. Ces deux fonctions prennent un constructeur de message et retournent une souscription.
+Ici, on déclare les choses que l'on veut écouter. On souhaite réagir aux `Mouse.clicks` ➊ et aux `Keyboard.downs` ➋. Ces deux fonctions prennent un constructeur de message et retournent une souscription.
 
 On utilise `Sub.batch` ➌ pour pouvoir écouter les deux en même temps. `Batch` prend une liste de souscriptions et retourne une seule souscription qui les contient toutes.
