@@ -58,8 +58,10 @@
    * [Plan](08-edition/01-plan.md)
    * [Messages](08-edition/02-messages.md)
    * [Édition d'un joueur](08-edition/03-edition-du-joueur.md)
-   * [Commands](08-edition/04-commandes.md)
-   * [Update](08-edition/05-mise-a-jour.md)
+   * [Commandes](08-edition/04-commandes.md)
+   * [Mise à jour](08-edition/05-mise-a-jour.md)
+* [Conclusion](09-conclusion/cover.md)
+   * [Améliorations](09-conclusion/01-ameliorations.md)
 * Trucs et Astuces
    * [Contextes](tips-tricks/context.md)
    * [Programmation tacite ('point-free style')](tips-tricks/point-free-style.md)
