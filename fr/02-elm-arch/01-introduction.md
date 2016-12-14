@@ -1,10 +1,10 @@
-> This page covers Elm 0.17
+> Cette page couvre Elm 0.18
 
 # Introduction
 
 Lorsque nous construisons des applications frontend avec Elm, nous utilisons un modèle nommé l'__architecture Elm__. Ce modèle fourni un moyen de créer des composants autonomes qui peuvent être réutilisés, combinés et composés à l'infini.
 
-Elm fourni le module `Html.App` pour cela. Le plus simple pour comprendre est de créer une petite application.
+Elm fourni le module `Html` pour cela. Le plus simple pour comprendre est de créer une petite application.
 
 Installez elm-html :
 
@@ -17,8 +17,7 @@ Créez un fichier nommé __App.elm__ :
 ```elm
 module App exposing (..)
 
-import Html exposing (Html, div, text)
-import Html.App
+import Html exposing (Html, div, text, program)
 
 
 -- MODEL
@@ -75,9 +74,9 @@ subscriptions model =
 -- MAIN
 
 
-main : Program Never
+main : Program Never Model Msg
 main =
-    Html.App.program
+    program
         { init = init
         , view = view
         , update = update

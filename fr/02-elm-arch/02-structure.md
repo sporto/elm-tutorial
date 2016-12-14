@@ -1,16 +1,14 @@
-> This page covers Elm 0.17
+> Cette page couvre Elm 0.18
 
-# Structure d'Html.App
+# Structure d'Html.program
 
 ### Imports
 
 ```elm
-import Html exposing (Html, div, text)
-import Html.App
+import Html exposing (Html, div, text, program)
 ```
 
-- Nous allons utiliser le type `Html` du module `Html`, plus d'autres fonctions comme `div` et `text`.
-- Nous importons aussi `Html.App` qui est la glu qui orchestrera toute notre application. C'est l'équivalent de StartApp si vous avez déjà utilisé Elm 0.16.
+- Nous allons utiliser le type `Html` du module `Html`, plus d'autres fonctions comme `div`, `text` et `program`.
 
 ### Modèle
 
@@ -27,7 +25,7 @@ init =
 - Premièrement nous définissons notre modèle d'application avec un alias de type. Ici, c'est juste un `String`.
 - Ensuite, nous définissions une fonction `init`. Cette fonction fournit les données initiales de notre application.
 
-__Html.App__ attend un tuple du type `(model, command)` pour la fonction init. Le premier élément de ce tuple est notre état de départ, à savoir "Hello". Le second élément est une commande à exécuter. Nous reviendrons là dessus un peu plus tard.
+__Html.program__ attend un tuple du type `(model, command)` pour la fonction init. Le premier élément de ce tuple est notre état de départ, à savoir "Hello". Le second élément est une commande à exécuter. Nous reviendrons là dessus un peu plus tard.
 
 
 Lorsque nous utilisons l'architecture Elm, nous regroupons tous les modèles de composants au sein d'un seul arbre d'état. Nous y reviendrons aussi plus tard.
@@ -70,7 +68,7 @@ update msg model =
             ( model, Cmd.none )
 ```
 
-Ensuite nous définissons la fonction de mise à jour `update`, cette fonction va être appelée par Html.App à chaque fois qu'un message est reçu. Cette fonction `update` répond aux messages en mettant à jour le modèle et en retournant des commandes à exécuter.
+Ensuite nous définissons la fonction de mise à jour `update`, cette fonction va être appelée par `Html.program` à chaque fois qu'un message est reçu. Cette fonction `update` répond aux messages en mettant à jour le modèle et en retournant des commandes à exécuter.
 
 Dans cet exemple, nous répondons uniquement à `NoOp` et retournons le modèle intouché et `Cmd.none` (ce qui signifie aucune commande à exécuter).
 
@@ -88,14 +86,14 @@ Nous utilisons les souscriptions (_subscriptions_) pour écouter les entrées ex
 - Évènements du clavier
 - Changement d'url du navigateur
 
-Dans notre cas, nous ne sommes pas intéressés par une quelconque entrée externe, donc nous utilisons `Sub.none`. Notez la signature de la fonction : `Sub Msg`. Les souscriptions d'un composant devraient toutes être de ce même type.
+Dans notre cas, nous ne sommes pas intéressés par une quelconque entrée externe, donc nous utilisons `Sub.none`.
 
 ### Main
 
 ```elm
-main : Program Never
+main : Program Never Model Msg
 main =
-    Html.App.program
+    program
         { init = init
         , view = view
         , update = update
@@ -103,7 +101,7 @@ main =
         }
 ```
 
-Enfin, `Html.App.program` lie le tout et retourne un élément html que nous pouvons afficher dans la page. `program` prend en paramètre nos fonctions `init`, `view`, `update` et `subscriptions`.
+Enfin, `Html.program` lie le tout et retourne un élément html que nous pouvons afficher dans la page. `program` prend en paramètre nos fonctions `init`, `view`, `update` et `subscriptions`.
 
 
 

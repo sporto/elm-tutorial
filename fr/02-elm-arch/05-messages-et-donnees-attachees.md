@@ -1,4 +1,4 @@
-> This page covers Elm 0.17
+> Cette page couvre Elm 0.18
 
 # Messages et données attachées
 
@@ -7,7 +7,7 @@ Il est possible d'attacher des données à vos messages :
 ```elm
 module Main exposing (..)
 
-import Html exposing (Html, button, div, text)
+import Html exposing (Html, button, div, text, program)
 import Html.Events exposing (onClick)
 import Html.App
 
@@ -68,9 +68,9 @@ subscriptions model =
 -- MAIN
 
 
-main : Program Never
+main : Program Never Model Msg
 main =
-    Html.App.program
+    program
         { init = init
         , view = view
         , update = update
