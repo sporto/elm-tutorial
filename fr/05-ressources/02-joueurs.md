@@ -1,4 +1,4 @@
-> This page covers Elm 0.17
+> Cette page couvre Elm 0.18
 
 # Modules Joueurs
 
@@ -25,7 +25,7 @@ module Players.Models exposing (..)
 
 
 type alias PlayerId =
-    Int
+    String
 
 
 type alias Player =
@@ -37,7 +37,7 @@ type alias Player =
 
 new : Player
 new =
-    { id = 0
+    { id = "0"
     , name = ""
     , level = 1
     }
@@ -45,7 +45,7 @@ new =
 
 C'est là que nous définissons à quoi ressemble un enregistrement de joueur : il se compose d'un identifiant (`id`), d'un nom (`name`) et d'un niveau (`level`).
 
-Notez aussi la définition d'un `PlayerId` : il s'agit jsute d'un `Int`, mais cette définition nous sert à clarifier le sens des fonctions qui prendront plusieurs `Int`. Ainsi, la fonction :
+Notez aussi la définition d'un `PlayerId` : il s'agit jsute d'un `String`, mais cette définition nous sert à clarifier le sens des fonctions qui prendront plusieurs `Int`. Ainsi, la fonction :
 
 ```elm
 addPerkToPlayer : Int -> Int -> Player

@@ -1,4 +1,4 @@
-> This page covers Elm 0.17
+> Cette page couvre Elm 0.18
 
 # Liste des Joueurs
 
@@ -47,7 +47,7 @@ list players =
 playerRow : Player -> Html Msg
 playerRow player =
     tr []
-        [ td [] [ text (toString player.id) ]
+        [ td [] [ text player.id ]
         , td [] [ text player.name ]
         , td [] [ text (toString player.level) ]
         , td []
