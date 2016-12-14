@@ -1,4 +1,4 @@
-> This page covers Elm 0.17
+> Cette page couvre Elm 0.18
 
 # Vue Main
 
@@ -10,7 +10,6 @@ Modifiez __src/View.elm__ comme ceci :
 module View exposing (..)
 
 import Html exposing (Html, div, text)
-import Html.App
 import Messages exposing (Msg(..))
 import Models exposing (Model)
 import Players.List
@@ -29,7 +28,7 @@ page : Model -> Html Msg
 page model =
     case model.route of
         PlayersRoute ->
-            Html.App.map PlayersMsg (Players.List.view model.players)
+            Html.map PlayersMsg (Players.List.view model.players)
 
         PlayerRoute id ->
             playerEditPage model id
@@ -48,7 +47,7 @@ playerEditPage model playerId =
     in
         case maybePlayer of
             Just player ->
-                Html.App.map PlayersMsg (Players.Edit.view player)
+                Html.map PlayersMsg (Players.Edit.view player)
 
             Nothing ->
                 notFoundView
@@ -70,7 +69,7 @@ page : Model -> Html Msg
 page model =
     case model.route of
         PlayersRoute ->
-            Html.App.map PlayersMsg (Players.List.view model.players)
+            Html.map PlayersMsg (Players.List.view model.players)
 
         PlayerRoute id ->
             playerEditPage model id
@@ -82,8 +81,6 @@ page model =
 Désormais, nous avons une fonction `page` qui contient un `case` pour déterminer la vue à afficher selon le contenu de `model.route`.
 
 Quand l'adresse correspondra à la route d'édition de Joueur (par exemple, `#players/2`), on récupèrera l'id du Joueur à partir de la route : `PlayerRoute playerId`.
-
-When the player edit route matches (e.g. `#players/2`) we will get the player id from the route i.e. `PlayerRoute playerId`.
 
 ### Trouver le Joueur
 
@@ -98,10 +95,14 @@ playerEditPage model playerId =
     in
         case maybePlayer of
             Just player ->
-                Html.App.map PlayersMsg (Players.Edit.view player)
+                Html.map PlayersMsg (Players.Edit.view player)
 
             Nothing ->
                 notFoundView
 ```
 
 On a le `playerId` mais on ne dispose pas pour autant de l'enregistrement du joueur pour cet id. On va donc filtrer la liste des Joueurs pour trouver cet id et utiliser un `case` pour montrer la vue adaptée, selon qu'on aura ou non trouvé le Joueur dans la liste.
+
+### notFoundView
+
+`notFoundView` est affiché lorsqu'aucune route ne correspond. Notez le type `Html msg` à la place de `Html Msg`. C'est du au fait que cette vue ne produit aucun message, elle peut donc utiliser un type de variable générique `msg` au lieu du type spécifique `Msg`.

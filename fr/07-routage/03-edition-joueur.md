@@ -1,3 +1,5 @@
+> Cette page couvre Elm 0.18
+
 # Vue édition de Joueur
 
 Il nous faut une vue à afficher pour l'adresse `/players/3`.
@@ -9,8 +11,8 @@ module Players.Edit exposing (..)
 
 import Html exposing (..)
 import Html.Attributes exposing (class, value, href)
-import Players.Models exposing (..)
 import Players.Messages exposing (..)
+import Players.Models exposing (..)
 
 
 view : Player -> Html Msg

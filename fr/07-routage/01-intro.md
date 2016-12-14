@@ -1,3 +1,5 @@
+> Cette page couvre Elm 0.18
+
 # Introduction au routage
 
 Ajoutons le routage à notre application. Nous utiliserons les paquets [Elm Navigation package](http://package.elm-lang.org/packages/elm-lang/navigation/) et [UrlParser](http://package.elm-lang.org/packages/evancz/url-parser/).
@@ -8,14 +10,14 @@ Ajoutons le routage à notre application. Nous utiliserons les paquets [Elm Navi
 D'abord, installez les paquets :
 
 ```bash
-elm package install elm-lang/navigation 1.0.0
-elm package install evancz/url-parser 1.0.0
+elm package install elm-lang/navigation
+elm package install evancz/url-parser
 ```
 
- `Navigation` est une bibliothèque qui enveloppe `Html.App`. Elle a toutes les fonctionnalités de `Html.App` mais permet en plus :
+ `Navigation` est une bibliothèque qui enveloppe `Html.program`. Elle a toutes les fonctionnalités de `Html.program` mais permet en plus :
 
  - d'écouter les changements d'adresse du navigateur
- - d'appeler les fonctions que nous fournissons lorsque l'adresse change
+ - déclencher un message lorsque l'adresse change
  - de changer l'adresse du navigateur
 
 ## Processus
@@ -26,19 +28,17 @@ Voilà quelques diagrammes pour illustrer le fonctionnement de notre routage.
 
 ![Processus](01-intro.png)
 
-1. Quand la page se charge pour la première fois, le module `Navigation` va récupérer l'URL actuelle et l'envoyer à la fonction `parse` que nous fournissons.
-1. Cette fonction `parse` va retourner une `Route` qui correspond.
-1. `Navigation` va envoyer cette `Route` a la fonction `init` de notre application.
-1. Dans `init`, nous créons le modèle de l'application et y stockons la `Route`.
-1. `Navigation` envoie ensuite le modèle initial à la vue pour afficher l'application.
+- (1) Quand la page se charge pour la première fois, le module `Navigation` va récupérer la `Location` (l'adresse) actuelle et l'envoyer à la fonction `init` de l'application.
+- (2) Dans la fonction `init` nous traitons cette adresse et obtenons une `Route` correspondante.
+- (3, 4) Nous stockons cette `Route` correspondante dans notre modèle initial et retournons ce modèle au module `Navigation`.
+- (5, 6) `Navigation` affiche ensuite la vue en lui envoyant ce modèle initial.
 
 ### Quand l'adresse change
 
 ![Processus](01-intro_001.png)
 
-1. Quand l'adresse du navigateur change, la bibliothèque `Navigation` reçoit un événement.
-1. La nouvelle adresse est envoyée à notre fonction `parse`, comme précédemment.
-1. `parse` renvoie la `Route` correspondante.
-1. `Navigation` appelle alors la fonction `urlUpdate` que l'on fournit à la `Route`.
-1. Dans `urlUpdate`, on enregistre la `Route` dans le modèle de l'application et l'on retourne le modèle mis à jour
-1. `Navigation` affiche l'application, comme d'habitude.
+- (1) Quand l'adresse du navigateur change, la bibliothèque `Navigation` reçoit un événement.
+- (2) Un message `OnLocationChange` est envoyé à notre fonction `update`. Ce message contiendra la nouvelle `Location`.
+- (3, 4) Dans `update` nous  analysons la `Location` et retournons la `Route` correspondante.
+- (5) Dans `update` nous retournons le modèle qui contient la `Route` mise à jour.
+- (6, 7) `Navigation` affiche ensuite l'application comme d'habitude.
