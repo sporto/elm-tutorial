@@ -33,7 +33,7 @@ elm reactor
 This should show you:
 
 ```
-elm reactor 0.17.0
+elm reactor 0.18.0
 Listening on http://0.0.0.0:8000/
 ```
 
