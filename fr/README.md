@@ -28,7 +28,7 @@ Le code de l'application d'exemple réalisée dans ce tutoriel se trouve ici : <
 
 Pour ce tutoriel vous allez avoir besoin de :
 
-- Elm en version 0.17 (l'installation est un sujet abordé un peu plus loin dans le tutoriel)
+- Elm en version 0.18 (l'installation est un sujet abordé un peu plus loin dans le tutoriel)
 - Node JS en version 4 ou plus
 
 ## Contribuer
