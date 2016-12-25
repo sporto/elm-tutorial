@@ -92,5 +92,5 @@ elm reactor
 
 And opening http://localhost:8000/App.elm
 
-This is a lot of code for just showing "Hello", but it will help us understand the structure of even very complicated Elm applications.
+This is a lot of code for just showing "Hello", but it will help us understand the structure of even very complex Elm applications.
 
