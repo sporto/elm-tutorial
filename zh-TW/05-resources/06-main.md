@@ -30,11 +30,11 @@ main =
     }
 ```
 
-這裡在匯入及 `init` 新增了 `initialModel`。
+在匯入及 `init` 新增 `initialModel`。
 
 ---
 
-當執行應用程式時，你會看見列表中有一位用戶。
+當執行應用程式時，會看見列表中有一位用戶。
 
 ![Screenshot](screenshot.png)
 

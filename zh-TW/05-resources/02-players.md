@@ -1,6 +1,6 @@
 # 玩家（Players）模組
 
-## Players messages
+## 玩家訊息
 
 新增 __src/Players/Messages.elm__
 
@@ -12,7 +12,7 @@ type Msg
     = NoOp
 ```
 
-這裡放置了所有關於玩家的訊息。
+放置了所有關於玩家的訊息。
 
 ## 玩家模型
 
@@ -41,9 +41,9 @@ new =
     }
 ```
 
-這裡定義了玩家紀錄。包含了 id、name 及 level。
+定義了玩家的紀錄。包含了 id、name 及 level。
 
-注意到 `PlayerID` 的定義，就只是個 `Int` 的型別別名，這樣對清晰上非常有幫助，尤其當有函式需要許多 ids 的時候。舉例：
+注意到 `PlayerID` 的定義，就只是個 `Int` 的型別別名，這樣對清晰上非常有幫助，尤其當有函式需要許多個 ids 的時候。例如：
 
 ```elm
 addPerkToPlayer : Int -> Int -> Player
@@ -55,7 +55,7 @@ addPerkToPlayer : Int -> Int -> Player
 addPerkToPlayer : PerkId -> PlayerId -> Player
 ```
 
-## 更新玩家
+## 玩家更新
 
 新增 __src/Players/Update.elm__
 

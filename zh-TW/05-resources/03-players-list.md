@@ -1,4 +1,4 @@
-# 玩家列表（Players list）
+# 玩家列表
 
 新增 __src/Players/List.elm__
 

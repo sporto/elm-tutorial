@@ -2,7 +2,7 @@
 
 這個主層級需要鉤上先前所建立的 Players 模組。
 
-我們需要建立連結：
+建立連結：
 
 ```elm
 主訊息    --->    玩家訊息
@@ -70,7 +70,7 @@ update msg model =
                 ( { model | players = updatedPlayers }, Cmd.map PlayersMsg cmd )
 ```
 
-這裡我們遵循 Elm 架構：
+這裡遵循 Elm 架構：
 
 - 所有 `PlayersMsg` 發送到 `Players.Update`。
 - 使用樣式對應取出結果給 `Players.Update`
