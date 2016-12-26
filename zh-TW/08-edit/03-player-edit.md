@@ -1,7 +1,5 @@
 ## 玩家編輯（Player edit）
 
-We created a `ChangeLevel` message. Let's trigger this message from the player's edit view.
-
 新增 `ChangeLevel` 訊息。從玩家編輯視界觸發這個訊息。
 
 編輯 __src/Players/Edit.elm__ 檔案，修改 `btnLevelDecrease` 及 `btnLevelIncrease`：

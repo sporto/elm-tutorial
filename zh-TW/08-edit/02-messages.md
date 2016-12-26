@@ -1,6 +1,6 @@
 # 玩家訊息（Messages）
 
-讓我們開始加入需要的訊息。
+開始加入需要的訊息。
 
 在 __src/Players/Messages.elm__ 檔案新增：
 

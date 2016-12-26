@@ -15,7 +15,7 @@ import Players.Models exposing (Player, PlayerId)
 
 ```elm
 changeLevelCommands : PlayerId -> Int -> List Player -> List (Cmd Msg)
-changeLevelCommands playerId howMuch =
+changeLevelCommands playerId howMuch players =
     let
         cmdForPlayer existingPlayer =
             if existingPlayer.id == playerId then
@@ -23,7 +23,7 @@ changeLevelCommands playerId howMuch =
             else
                 Cmd.none
     in
-        List.map cmdForPlayer
+        List.map cmdForPlayer players
 ```
 
 當收到 `ChangeLevel` 訊息時，此函式會被呼叫：
@@ -40,7 +40,7 @@ changeLevelCommands playerId howMuch =
 
 ```elm
 updatePlayer : Player -> List Player -> List Player
-updatePlayer updatedPlayer =
+updatePlayer updatedPlayer players =
     let
         select existingPlayer =
             if existingPlayer.id == updatedPlayer.id then
@@ -48,7 +48,7 @@ updatePlayer updatedPlayer =
             else
                 existingPlayer
     in
-        List.map select
+        List.map select players
 ```
 
 當我們從 API 收到 `SaveSuccess` 訊息時將會呼叫此函式：
@@ -76,7 +76,7 @@ update message players =
             ( players, Cmd.none )
 ```
 
-- 在 `ChangeLevel` 呼叫 helper 函式 `changeLevelCommands`。函式傳回欲執行的命令列表，所以我們可以使用 `Cmd.batch` 批次執行命令。
+- 在 `ChangeLevel` 呼叫 helper 函式 `changeLevelCommands`。函式傳回欲執行的命令列表，可以使用 `Cmd.batch` 批次執行命令。
 - 在 `SaveSuccess` 呼叫 helper 函式 `updatePlayer`。函式將會更新列表中相關的玩家。
 
 ---

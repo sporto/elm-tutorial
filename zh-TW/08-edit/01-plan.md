@@ -14,6 +14,6 @@
 
 (7) `Main.Update` 路由 `SaveSuccess` 訊息至 `Players.Update`。
 
-(8) 在 `Players.Update` 中，我們更新 `players` 模型並傳回。流回到 Html.App (9)。
+(8) 在 `Players.Update` 中，更新 `players` 模型並傳回。流回到 Html.App (9)。
 
 (10) 接著 Html.App 使用更新後的模型渲染應用程式。
