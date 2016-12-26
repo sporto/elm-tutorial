@@ -1,10 +1,10 @@
 # Webpack
 
-__Elm reactor__ 非常適合快速原型簡單應用程式，對於大一點的應用程式就略顯不足。而現在就是，__reactor__ 不支援與外部 JavaScript 溝通或匯入外部 CSS。為了解決這個問題，我們使用 __Webpack__ 來編譯 Elm 程式碼，取代原本的 Elm reactor。
+__Elm reactor__ 非常適合快速製造簡單的應用程式原型，但對於大一點的應用程式就略顯不足。現在就是了，__reactor__ 不支援與外部 JavaScript 溝通或匯入外部 CSS。為了解決這個問題，我們使用 __Webpack__ 來編譯 Elm 程式碼，取代原本的 Elm reactor。
 
-Webpack 是個程式碼綑綁器（code bundler）。它看你的相依樹（dependency tree）並只會綑綁被匯入的程式碼。Webpack 也會匯入 CSS 及其他檔案資產。更多關於 Webpack 請參考[這裡](https://webpack.github.io/)。
+Webpack 是個程式碼綑綁器（code bundler）。它會查看你的相依樹（dependency tree）並綑綁被匯入的程式碼。Webpack 也會匯入 CSS 及其他檔案資產。更多關於 Webpack 請參考[這裡](https://webpack.github.io/)。
 
-除了 Webpack 之外也有許多替代方案，例如：
+除了 Webpack 之外，也有許多替代方案，例如：
 
 - [Browserify](http://browserify.org/)
 - [Gulp](http://gulpjs.com/)
@@ -14,7 +14,7 @@ Webpack 是個程式碼綑綁器（code bundler）。它看你的相依樹（dep
 
 ## 基本需求
 
-你需要安裝 Node JS 版本 4 以上，這些函式庫才會如期運作。
+需要安裝 Node JS 版本 4 以上，這些函式庫才會如期運作。
 
 ## 安裝 webpack 及加載器（loaders）
 
@@ -26,7 +26,7 @@ npm i webpack@1 webpack-dev-middleware@1 webpack-dev-server@1 elm-webpack-loader
 
 本課程使用 __webpack__ 版本 __1.13__ 及 __elm-webpack-loader__ 版本 __3.0__。
 
-加載器是種擴充外掛，讓 webpack 能夠加載各式不同的檔案格式。例如：`css-loader` 讓 webpack 能夠加載 .css 檔案。
+加載器是一種外掛，讓 webpack 能夠加載各種不同的檔案格式。例如：`css-loader` 讓 webpack 能夠加載 .css 檔案。
 
 我們也希望使用幾個額外的函式庫：
 
@@ -39,7 +39,7 @@ npm i ace-css@1 font-awesome@4 -S
 
 ## Webpack 配置
 
-我們需要在專案根目錄底下新增 __webpack.config.js__ 檔案：
+在專案根目錄底下新增 __webpack.config.js__ 檔案：
 
 ```js
 var path = require("path");
@@ -98,5 +98,5 @@ module.exports = {
 
 #### 注意事項：
 
-- 配置中加入了 Webpack dev server，請見 `devServer` 鍵。我們使用這個伺服端來取代 Elm reactor。
+- 配置中加入了 Webpack dev server，請見 `devServer` 鍵值。使用這個伺服端來取代 Elm reactor。
 - 應用程式的進入點為 `./src/index.js`，請見 `entry` 鍵。

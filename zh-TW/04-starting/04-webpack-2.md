@@ -2,7 +2,7 @@
 
 ## index.html
 
-因為我們不再使用 Elm reactor，所以我們需要自己新增 HTML 來包含應用程式。新增 __src/index.html__：
+因為不再使用 Elm reactor，所以需要新增 HTML 來引入應用程式。新增 __src/index.html__：
 
 ```html
 <!DOCTYPE html>
@@ -20,7 +20,7 @@
 
 ## index.js
 
-這是 Webpack 在建立綑綁的時候會看的進入點。新增 __src/index.js__：
+這是 Webpack 建立綑綁的進入點。新增 __src/index.js__：
 
 ```js
 'use strict';
@@ -34,7 +34,7 @@ require('./index.html');
 var Elm = require('./Main.elm');
 var mountNode = document.getElementById('main');
 
-// 第三個值放入 embed 的值，是一個初始值給進入埠（incoming ports）到 Elm 使用
+// 第三個放入 embed 的值是程式初始值，例如 userID 或 token。
 var app = Elm.Main.embed(mountNode);
 ```
 
@@ -48,7 +48,7 @@ elm package install elm-lang/html
 
 ## 程式碼目錄
 
-我們將會把所有程式碼都放在 `src` 目錄底下，所以需要告訴 Elm 去哪兒找相依套件。對 __elm-package.json__ 做修改：
+將所有程式碼都放在 `src` 目錄底下，需要告訴 Elm 去哪找相依套件。對 __elm-package.json__ 做修改：
 
 ```json
 ...
@@ -62,7 +62,7 @@ elm package install elm-lang/html
 
 ## 初始化 Elm 應用程式
 
-建立一個基本的 Elm 應用程式。修改 __src/Main.elm__：
+建立基本 Elm 應用程式。修改 __src/Main.elm__：
 
 ```elm
 module Main exposing (..)
@@ -137,7 +137,7 @@ main =
 
 ## package.json
 
-最後，為了更容易執行伺服端，加入一些 npm scripts。修改 __package.json__ 將 `scripts` 替換成：
+最後，為了更容易執行伺服端，加入 npm scripts。修改 __package.json__ 將 `scripts` 替換成：
 
 ```json
 "scripts": {
@@ -148,7 +148,7 @@ main =
 },
 ```
 
-- 現在，執行 `npm run api` 便可啟動假的後端伺服端。
+- 現在，執行 `npm run api` 便可啟動後端伺服端。
 - `npm run build` 執行 webpack 建置並將綑綁結果放在 `dist` 目錄。
 - `npm run watch` 啟動 webpack 看守，當程式碼異動時，將會把綑綁結果放在 `dist` 目錄。
 - `npm run dev` 啟動 webpack 開發伺服端。
@@ -163,6 +163,6 @@ main =
 npm run dev
 ```
 
-如果你瀏覽 `http://localhost:3000/`，你會看到我們的應用程式輸出 "Hello"。
+瀏覽 `http://localhost:3000/` 會看到應用程式輸出 "Hello"。
 
-你的應用程式原始碼會像是 <https://github.com/sporto/elm-tutorial-app/tree/02-webpack>.
+原始碼像是 <https://github.com/sporto/elm-tutorial-app/tree/02-webpack>.
