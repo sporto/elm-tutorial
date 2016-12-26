@@ -65,7 +65,7 @@ saveRequest player =
 ```
 
 ➊ Here we encode the given player and then convert the encoded value to a JSON string
-➋ Here we specify how to parse the response, in this case we want to parse the returned JSON back into and Elm value.
+➋ Here we specify how to parse the response, in this case we want to parse the returned JSON back into an Elm value.
 ➌ `PATCH` is the http method that our API expects when updating records.
 
 ### Save

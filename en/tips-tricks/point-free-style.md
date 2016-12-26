@@ -26,7 +26,7 @@ add10 =
     (+) 10
 ```
 
-Note how `x` is missing as both an input argument to `add10` and argument to `+`. `add10` is still a function that requires and integer to calculate a result. Omitting arguments like this is called __point free style__.
+Note how `x` is missing as both an input argument to `add10` and argument to `+`. `add10` is still a function that requires an integer to calculate a result. Omitting arguments like this is called __point free style__.
 
 ## Some more examples
 
