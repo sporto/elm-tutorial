@@ -58,7 +58,7 @@ routeFromResult result =
 
 ---
 
-讓我們仔細檢查這個模組。
+仔細檢查這個模組。
 
 ### 路由
 
@@ -84,9 +84,9 @@ matchers =
         ]
 ```
 
-這是我們的比對器。使用由 url-parser 函式庫提供剖析器。
+這是比對器。由 url-parser 函式庫提供剖析器。
 
-我們想要三個比對：
+想要三個比對：
 
 - 空的路由解析成 `PlayersRoute`
 - 單一 `/players` 路徑解析成 `PlayersRoute`
@@ -125,7 +125,7 @@ parser =
     Navigation.makeParser hashParser
 ```
 
-Navigation 預期一個目前位置的剖析器，每當位置更動時，Navigation 將會呼叫此剖析器。我們傳遞 `hashParser` 至 `Navigation.makeParser`。
+Navigation 預期一個目前位置的剖析器，每當位置更動時，Navigation 會呼叫此剖析器。傳遞 `hashParser` 至 `Navigation.makeParser`。
 
 ### 路由結果
 
@@ -140,4 +140,4 @@ routeFromResult result =
             NotFoundRoute
 ```
 
-最後，當我們從剖析器取得結果，我們希望取出路由。如果沒有一個比對符合，則傳回 `NotFoundRoute`。
+最後，當剖析器取得結果，希望取出路由。如果沒有符合，則傳回 `NotFoundRoute`。

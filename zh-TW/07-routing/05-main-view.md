@@ -1,6 +1,6 @@
 # 主視界（Main view）
 
-當我們更改瀏覽器網址，主應用程式視界需要顯示不同的頁面。
+當更改瀏覽器網址，主應用程式的視界需要顯示不同的頁面。
 
 更改 __src/View.elm__ 成：
 
@@ -79,7 +79,7 @@ page model =
 
 現在，`page` 函式中 case 表達式根據 `model.route` 的值顯示正確的視界。
 
-當玩家編輯路由符合（例如 `#players/2`），我們將從路由取得玩家 ID，即 `PlayerRoute playerId`。
+當符合玩家編輯路由（例如 `#players/2`）時，從路由取得玩家 ID，即 `PlayerRoute playerId`。
 
 ### 找尋玩家
 
