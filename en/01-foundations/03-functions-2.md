@@ -10,7 +10,7 @@ indexOf : String -> List String -> Int
 
 This hypothetical function takes a string and a list of strings and returns the index where the given string was found in the list or -1 if not found.
 
-But what if we instead have an list of integers? We wouldn't be able to use this function. However, we can make this function __generic__ by using __type variables__ or __stand-ins__ instead of specific types.
+But what if we instead have a list of integers? We wouldn't be able to use this function. However, we can make this function __generic__ by using __type variables__ or __stand-ins__ instead of specific types.
 
 ```elm
 indexOf : a -> List a -> Int
