@@ -1,6 +1,6 @@
-# 玩家命令（Players commands）
+# 玩家命令
 
-現在新增任務及命令，用來從伺服端擷取玩家。新增 __src/Players/Commands.elm__：
+新增任務及命令，從伺服端擷取玩家。新增 __src/Players/Commands.elm__：
 
 ```elm
 module Players.Commands exposing (..)
@@ -46,7 +46,7 @@ fetchAll =
         |> Task.perform FetchAllFail FetchAllDone
 ```
 
-這裡新增一個命令讓應用程式去執行。
+新增一個命令讓應用程式去執行。
 
 - `Http.get` 新增一個任務
 - 接著傳送任務到 `Task.perform`，將會包裝成命令
@@ -57,7 +57,7 @@ collectionDecoder =
     Decode.list memberDecoder
 ```
 
-此解譯器代理解譯列表中每個成員成為 `memberDecoder`
+解譯器代理解譯列表中每個成員到 `memberDecoder`
 
 ```elm
 memberDecoder : Decode.Decoder Player
@@ -71,7 +71,7 @@ memberDecoder =
 `memberDecoder` 建立一個 JSON 解譯器，傳回 `Player` 紀錄。
 
 ---
-為了瞭解解譯器的運作，讓我們玩玩 elm repl。
+為了瞭解解譯器的運作，玩玩看 elm repl。
 
 終端機內執行 `elm repl`。匯入 Json.Decoder 模組：
 
@@ -108,7 +108,7 @@ Ok 99 : Result.Result String Int
 > type alias Player = { id: Int, name: String }
 ```
 
-Elm 中可以新增紀錄可以像函式一般呼叫型別。例如，`Player 1 "Sam"` 新增一個玩家紀錄。注意到參數順序如同其他函式一般，有其意義。
+Elm 中新增紀錄可以像函式般呼叫。例如 `Player 1 "Sam"` 新增玩家紀錄。注意到參數順序如同其他函式有其意義。
 
 試試：
 
@@ -117,7 +117,7 @@ Elm 中可以新增紀錄可以像函式一般呼叫型別。例如，`Player 1 
 { id = 1, name = "Sam" } : Repl.Player
 ```
 
-根據這兩個概念，讓我們建立一個完整的解譯器：
+根據這兩個概念，建立一個完整的解譯器：
 
 ```bash
 > nameDecoder = ("name" := string)

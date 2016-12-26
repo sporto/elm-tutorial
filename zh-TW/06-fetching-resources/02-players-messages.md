@@ -1,4 +1,4 @@
-# 玩家訊息（Players messages）
+# 玩家訊息
 
 首先，建立用來擷取玩家的訊息。新增一個匯入及訊息到 __src/Players/Messages.elm__
 

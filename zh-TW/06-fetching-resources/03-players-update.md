@@ -1,4 +1,4 @@
-# 玩家更新（Players update）
+# 玩家更新
 
 當請求玩家完成，觸發 `FetchAllDone` 訊息。
 
