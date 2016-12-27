@@ -112,7 +112,7 @@ initialModel =
 
 When creating the initial application model, we simply call `Widget.initialModel` ➋ from here.
 
-If you were to have multiple children components, you would do the same for each, for example:
+If you were to have multiple child components, you would do the same for each, for example:
 
 ```elm
 initialModel : AppModel
@@ -123,7 +123,7 @@ initialModel =
     }
 ```
 
-Or we could have multiple children components of the same type:
+Or we could have multiple child components of the same type:
 
 ```elm
 initialModel : AppModel
@@ -141,7 +141,7 @@ type Msg
 
 We use a __union type__ that wraps `Widget.Msg` to indicate that a message belongs to that component. This allows our application to route messages to the relevant components (This will become clearer after looking at the update function).
 
-In an application with multiple children components we could have something like:
+In an application with multiple child components we could have something like:
 
 ```elm
 type Msg
@@ -162,8 +162,8 @@ view model =
 
 The main application `view` renders the `Widget.view` ➌. But `Widget.view` emits `Widget.Msg` so it is incompatible with this view which emits `Main.Msg`.
 
-- We use `Html.map` ➊ to map emitted messages from Widget.view to the type we expect (Msg). `Html.map` tags messages coming from the sub view using the `WidgetMsg` ➋ tag.
-- We only pass the part of the model that the children component cares about i.e. `model.widgetModel` ➍.
+- We use `Html.map` ➊ to map emitted messages from `Widget.view` to the type we expect (Msg). `Html.map` tags messages coming from the sub view using the `WidgetMsg` ➋ tag.
+- We only pass the part of the model that the child component cares about i.e. `model.widgetModel` ➍.
 
 ### Update
 
@@ -179,7 +179,7 @@ update message model =
                 ({ model | widgetModel = updatedWidgetModel }, Cmd.map➎ WidgetMsg widgetCmd)
 ```
 
-When a `WidgetMsg` ➊ is received by `update` we delegate the update to the children component. But the children component will only update what it cares about, which is the `widgetModel` attribute.
+When a `WidgetMsg` ➊ is received by `update` we delegate the update to the child component. But the child component will only update what it cares about, which is the `widgetModel` attribute.
 
 We use pattern matching to extract the `subMsg` ➋ from `WidgetMsg`. This `subMsg` will be the type that `Widget.update` expects.
 
