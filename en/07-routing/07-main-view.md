@@ -105,4 +105,4 @@ We have the `playerId`, but we might not have the actual player record for that 
 
 ### notFoundView
 
-`notFoundView` is shown when no route matches. Note the type `Html msg` instead of `Html Msg`. This is because this view doesn't produce any messages so can use a generic type variable `msg` instead of and specific type `Msg`.
+`notFoundView` is shown when no route matches. Note the type `Html msg` instead of `Html Msg`. This is because this view doesn't produce any messages so can use a generic type variable `msg` instead of a specific type `Msg`.
