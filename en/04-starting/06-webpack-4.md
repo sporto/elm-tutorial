@@ -51,4 +51,4 @@ nf start
 
 If you browse to `http://localhost:3000/` you should see our application, which outputs "Hello". Use `Ctrl-c` to stop the servers.
 
-Your application code should look like <https://github.com/sporto/elm-tutorial-app/tree/02-webpack>.
+Your application code should look like <https://github.com/sporto/elm-tutorial-app/tree/018-02-webpack>.
