@@ -1,3 +1,5 @@
+> 本頁包含 Elm 0.18
+
 # 訂閱（Subscriptions）
 
 Elm 中，使用__訂閱__來監聽外部輸入。例如：
@@ -21,13 +23,12 @@ elm package install elm-lang/keyboard
 ```elm
 module Main exposing (..)
 
-import Html exposing (Html, div, text)
-import Html.App
+import Html exposing (Html, div, text, program)
 import Mouse
 import Keyboard
 
 
--- 模型
+-- MODEL
 
 
 type alias Model =
@@ -40,7 +41,7 @@ init =
 
 
 
--- 訊息
+-- MESSAGES
 
 
 type Msg
@@ -49,7 +50,7 @@ type Msg
 
 
 
--- 視界
+-- VIEW
 
 
 view : Model -> Html Msg
@@ -59,7 +60,7 @@ view model =
 
 
 
--- 更新
+-- UPDATE
 
 
 update : Msg -> Model -> ( Model, Cmd Msg )
@@ -73,7 +74,7 @@ update msg model =
 
 
 
--- 訂閱
+-- SUBSCRIPTIONS
 
 
 subscriptions : Model -> Sub Msg
@@ -85,12 +86,12 @@ subscriptions model =
 
 
 
--- 主程式
+-- MAIN
 
 
-main : Program Never
+main : Program Never Model Msg
 main =
-    Html.App.program
+    program
         { init = init
         , view = view
         , update = update

@@ -1,4 +1,6 @@
-## 玩家編輯（Player edit）
+> 本頁包含 Elm 0.18
+
+## 玩家編輯（Player edit）視界
 
 新增 `ChangeLevel` 訊息。從玩家編輯視界觸發這個訊息。
 

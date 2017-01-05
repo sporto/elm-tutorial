@@ -21,13 +21,13 @@ __[Elm](http://elm-lang.org/) 開發單頁網頁應用程式（single page web a
 
 ## 程式碼
 
-第二部份的範例應用程式碼可以在此取得：<https://github.com/sporto/elm-tutorial-app>
+範例應用程式碼可以在此取得：<https://github.com/sporto/elm-tutorial-app>
 
 ## 系統需求
 
 本教學課程需要：
 
-- Elm 0.17 版（安裝說明稍候將會納入課程）
+- Elm 0.18 版（安裝說明稍候將會納入課程）
 - Node JS 4 以上版本
 
 ## 需求貢獻

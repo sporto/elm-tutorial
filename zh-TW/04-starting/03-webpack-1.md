@@ -1,3 +1,5 @@
+> 本頁包含 Elm 0.18
+
 # Webpack
 
 __Elm reactor__ 非常適合快速製造簡單的應用程式原型，但對於大一點的應用程式就略顯不足。現在就是了，__reactor__ 不支援與外部 JavaScript 溝通或匯入外部 CSS。為了解決這個問題，我們使用 __Webpack__ 來編譯 Elm 程式碼，取代原本的 Elm reactor。
@@ -73,7 +75,7 @@ module.exports = {
       {
         test:    /\.elm$/,
         exclude: [/elm-stuff/, /node_modules/],
-        loader:  'elm-webpack',
+        loader:  'elm-webpack?verbose=true&warn=true',
       },
       {
         test: /\.woff(2)?(\?v=[0-9]\.[0-9]\.[0-9])?$/,

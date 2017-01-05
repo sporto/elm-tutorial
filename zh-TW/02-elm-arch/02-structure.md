@@ -1,10 +1,10 @@
 # Html.App 的結構
+> 本頁包含 Elm 0.18
 
 ### 匯入
 
 ```elm
-import Html exposing (Html, div, text)
-import Html.App
+import Html exposing (Html, div, text, program)
 ```
 
 - 使用 `Html` 模組內的 `Html` 型別，加上 `div` 與 `text` 函式。
@@ -90,9 +90,9 @@ subscriptions model =
 ### 主程式（Main）
 
 ```elm
-main : Program Never
+main : Program Never Model Msg
 main =
-    Html.App.program
+    program
         { init = init
         , view = view
         , update = update

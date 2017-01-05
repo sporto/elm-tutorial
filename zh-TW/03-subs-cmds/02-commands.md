@@ -1,3 +1,5 @@
+> 本頁包含 Elm 0.18
+
 # 命令（Commands）
 
 Elm 中，命令（Cmd）是用來告訴執行期（runtime）如何執行有副作用（side effects）的事情。例如：
@@ -15,13 +17,12 @@ Elm 中，命令（Cmd）是用來告訴執行期（runtime）如何執行有副
 ```elm
 module Main exposing (..)
 
-import Html exposing (Html, div, button, text)
+import Html exposing (Html, div, button, text, program)
 import Html.Events exposing (onClick)
-import Html.App
 import Random
 
 
--- 模型
+-- MODEL
 
 
 type alias Model =
@@ -34,7 +35,7 @@ init =
 
 
 
--- 訊息
+-- MESSAGES
 
 
 type Msg
@@ -43,7 +44,7 @@ type Msg
 
 
 
--- 視界
+-- VIEW
 
 
 view : Model -> Html Msg
@@ -55,7 +56,7 @@ view model =
 
 
 
--- 更新
+-- UPDATE
 
 
 update : Msg -> Model -> ( Model, Cmd Msg )
@@ -69,12 +70,12 @@ update msg model =
 
 
 
--- 主程式
+-- MAIN
 
 
-main : Program Never
+main : Program Never Model Msg
 main =
-    Html.App.program
+    program
         { init = init
         , view = view
         , update = update

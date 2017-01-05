@@ -1,3 +1,5 @@
+> 本頁包含 Elm 0.18
+
 # 多重（Multiple）模組
 
 應用程式快速成長，很快地將所有東西都放在一個檔案將變得難以維護。
@@ -99,11 +101,11 @@ __src/Main.elm__
 ```elm
 module Main exposing (..)
 
-import Html.App
+import Html exposing (Html, div, text, program)
 import Messages exposing (Msg)
 import Models exposing (Model)
-import View exposing (view)
 import Update exposing (update)
+import View exposing (view)
 
 
 init : ( Model, Cmd Msg )
@@ -117,12 +119,12 @@ subscriptions model =
 
 
 
--- 主程式
+-- MAIN
 
 
-main : Program Never
+main : Program Never Model Msg
 main =
-    Html.App.program
+    program
         { init = init
         , view = view
         , update = update

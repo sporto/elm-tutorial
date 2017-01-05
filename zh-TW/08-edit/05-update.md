@@ -1,12 +1,14 @@
+> 本頁包含 Elm 0.18
+
 # 玩家更新（Update）
 
 最後，需要在 `update` 函式中解釋新的訊息。位於 __src/Players/Update.elm__ 檔案：
 
 新增 import：
 
-```bash
-import Players.Commands exposing (save)
+```elm
 import Players.Models exposing (Player, PlayerId)
+import Players.Commands exposing (save)
 ```
 
 ## 新增更新命令
@@ -69,18 +71,20 @@ update message players =
         ChangeLevel id howMuch ->
             ( players, changeLevelCommands id howMuch players |> Cmd.batch )
 
-        SaveSuccess updatedPlayer ->
+        OnSave (Ok updatedPlayer) ->
             ( updatePlayer updatedPlayer players, Cmd.none )
 
-        SaveFail error ->
+        OnSave (Err error) ->
             ( players, Cmd.none )
 ```
 
 - 在 `ChangeLevel` 呼叫 helper 函式 `changeLevelCommands`。函式傳回欲執行的命令列表，可以使用 `Cmd.batch` 批次執行命令。
-- 在 `SaveSuccess` 呼叫 helper 函式 `updatePlayer`。函式將會更新列表中相關的玩家。
+- 在 `OnSave (Ok updatedPlayer)` 呼叫 helper 函式 `updatePlayer`。函式將會更新列表中相關的玩家。
 
 ---
 
 # 試試看
 
 就是這些了，更改玩家等級所需的東西。試試看，前往編輯視界，點擊 - 及 + 按鈕。你會看到等級改變，若重新整理頁面，這些改變持續的儲存在 server。
+
+截至目前為止應用程式要看起來像是 <https://github.com/sporto/elm-tutorial-app/tree/018-08-edit>

@@ -1,3 +1,5 @@
+> 本頁包含 Elm 0.18
+
 # 後端
 
 我們使用 __json-server__ 作為應用程式的後端。
@@ -15,7 +17,7 @@ npm init
 安裝 __json-server__：
 
 ```bash
-npm i json-server -S
+npm i json-server@0.9 -S
 ```
 
 專案根目錄底下新增 __api.js__：
@@ -41,12 +43,12 @@ server.listen(4000)
 ```json
 {
   "players": [
-    { "id": 1, "name": "Sally", "level": 2 },
-    { "id": 2, "name": "Lance", "level": 1 },
-    { "id": 3, "name": "Aki", "level": 3 },
-    { "id": 4, "name": "Maria", "level": 4 },
-    { "id": 5, "name": "Julian", "level": 1 },
-    { "id": 6, "name": "Jaime", "level": 1 }
+    { "id": "1", "name": "Sally", "level": 2 },
+    { "id": "2", "name": "Lance", "level": 1 },
+    { "id": "3", "name": "Aki", "level": 3 },
+    { "id": "4", "name": "Maria", "level": 4 },
+    { "id": "5", "name": "Julian", "level": 1 },
+    { "id": "6", "name": "Jaime", "level": 1 }
   ]
 }
 ```

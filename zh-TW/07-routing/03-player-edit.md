@@ -1,16 +1,18 @@
+> 本頁包含 Elm 0.18
+
 # 玩家編輯的視界（Player edit view）
 
 當點擊 `/players/3` 時，需要顯示一個新的視界。
 
-新增 __src/Players/Edit.elm__：
+新增 __src/Players/Edit.elm__ 檔案：
 
 ```elm
 module Players.Edit exposing (..)
 
 import Html exposing (..)
 import Html.Attributes exposing (class, value, href)
-import Players.Models exposing (..)
 import Players.Messages exposing (..)
+import Players.Models exposing (..)
 
 
 view : Player -> Html Msg

@@ -1,3 +1,5 @@
+> 本頁包含 Elm 0.18
+
 # 主模型（Main model）
 
 希望在主應用程式模型中儲存目前的路由。
@@ -23,7 +25,7 @@ initialModel route =
     }
 ```
 
-這裡我們：
+這裡：
 
 - 新增 `route` 到模型
 - 更改 `initialModel` 取得一個 `route`

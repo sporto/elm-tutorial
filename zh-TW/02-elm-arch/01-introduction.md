@@ -1,3 +1,5 @@
+> 本頁包含 Elm 0.18
+
 # 簡介
 
 當在 Elm 建構前端應用程式時，使用了一種樣式，稱之為 Elm 架構（The Elm Architecture）。此樣式提供了一種能夠建立自我包含的元件（self contained components）的方式，讓再利用（reused）、合併（combined）、組成（composed）達到無止境的變化。
@@ -15,8 +17,7 @@ elm package install elm-lang/html
 ```elm
 module App exposing (..)
 
-import Html exposing (Html, div, text)
-import Html.App
+import Html exposing (Html, div, text, program)
 
 
 -- MODEL
@@ -73,9 +74,9 @@ subscriptions model =
 -- MAIN
 
 
-main : Program Never
+main : Program Never Model Msg
 main =
-    Html.App.program
+    program
         { init = init
         , view = view
         , update = update

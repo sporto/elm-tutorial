@@ -1,10 +1,9 @@
 module App exposing (..)
 
-import Html exposing (Html, div, text)
-import Html.App
+import Html exposing (Html, div, text, program)
 
 
--- 模型
+-- MODEL
 
 
 type alias Model =
@@ -17,7 +16,7 @@ init =
 
 
 
--- 訊息
+-- MESSAGES
 
 
 type Msg
@@ -25,7 +24,7 @@ type Msg
 
 
 
--- 視界
+-- VIEW
 
 
 view : Model -> Html Msg
@@ -35,7 +34,7 @@ view model =
 
 
 
--- 更新
+-- UPDATE
 
 
 update : Msg -> Model -> ( Model, Cmd Msg )
@@ -46,7 +45,7 @@ update msg model =
 
 
 
--- 訂閱
+-- SUBSCRIPTIONS
 
 
 subscriptions : Model -> Sub Msg
@@ -55,12 +54,12 @@ subscriptions model =
 
 
 
--- 主程式
+-- MAIN
 
 
-main : Program Never
+main : Program Never Model Msg
 main =
-    Html.App.program
+    program
         { init = init
         , view = view
         , update = update

@@ -1,3 +1,5 @@
+> 本頁包含 Elm 0.18
+
 # 訊息（Messages）
 
 上一章節中，使用 Html.App 建立一個應用程式，這只有靜態 Html。現在，使用訊息來建構能夠回應使用者的互動程式。
@@ -5,12 +7,11 @@
 ```elm
 module Main exposing (..)
 
-import Html exposing (Html, button, div, text)
+import Html exposing (Html, button, div, text, program)
 import Html.Events exposing (onClick)
-import Html.App
 
 
--- 模型
+-- MODEL
 
 
 type alias Model =
@@ -23,7 +24,7 @@ init =
 
 
 
--- 訊息
+-- MESSAGES
 
 
 type Msg
@@ -32,7 +33,7 @@ type Msg
 
 
 
--- 視界
+-- VIEW
 
 
 view : Model -> Html Msg
@@ -48,7 +49,7 @@ view model =
 
 
 
--- 更新
+-- UPDATE
 
 
 update : Msg -> Model -> ( Model, Cmd Msg )
@@ -62,7 +63,7 @@ update msg model =
 
 
 
--- 訂閱
+-- SUBSCRIPTIONS
 
 
 subscriptions : Model -> Sub Msg
@@ -71,11 +72,11 @@ subscriptions model =
 
 
 
--- 主程式
+-- MAIN
 
 
 main =
-    Html.App.program
+    program
         { init = init
         , view = view
         , update = update

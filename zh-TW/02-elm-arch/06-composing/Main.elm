@@ -1,7 +1,6 @@
 module Main exposing (..)
 
-import Html exposing (Html)
-import Html.App
+import Html exposing (Html, program)
 import Widget
 
 
@@ -35,7 +34,7 @@ type Msg
 view : AppModel -> Html Msg
 view model =
     Html.div []
-        [ Html.App.map WidgetMsg (Widget.view model.widgetModel)
+        [ Html.map WidgetMsg (Widget.view model.widgetModel)
         ]
 
 
@@ -67,9 +66,9 @@ subscriptions model =
 -- APP
 
 
-main : Program Never
+main : Program Never AppModel Msg
 main =
-    Html.App.program
+    program
         { init = init
         , view = view
         , update = update

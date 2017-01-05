@@ -1,3 +1,5 @@
+> 本頁包含 Elm 0.18
+
 # 裝載訊息（Messages with payload）
 
 你可以在訊息上額外裝載資料：
@@ -5,12 +7,11 @@
 ```elm
 module Main exposing (..)
 
-import Html exposing (Html, button, div, text)
+import Html exposing (Html, button, div, text, program)
 import Html.Events exposing (onClick)
-import Html.App
 
 
--- 模型
+-- MODEL
 
 
 type alias Model =
@@ -23,7 +24,7 @@ init =
 
 
 
--- 訊息
+-- MESSAGES
 
 
 type Msg
@@ -31,7 +32,7 @@ type Msg
 
 
 
--- 視界
+-- VIEW
 
 
 view : Model -> Html Msg
@@ -43,7 +44,7 @@ view model =
 
 
 
--- 更新
+-- UPDATE
 
 
 update : Msg -> Model -> ( Model, Cmd Msg )
@@ -54,7 +55,7 @@ update msg model =
 
 
 
--- 訂閱
+-- SUBSCRIPTIONS
 
 
 subscriptions : Model -> Sub Msg
@@ -63,12 +64,12 @@ subscriptions model =
 
 
 
--- 主程式
+-- MAIN
 
 
-main : Program Never
+main : Program Never Model Msg
 main =
-    Html.App.program
+    program
         { init = init
         , view = view
         , update = update

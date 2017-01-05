@@ -41,7 +41,7 @@ type alias Model =
 
 initialModel : Model
 initialModel =
-    { players = [ Player 1 "Sam" 1 ]
+    { players = [ Player "1" "Sam" 1 ]
     }
 ```
 

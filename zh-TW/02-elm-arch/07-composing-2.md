@@ -1,3 +1,5 @@
+> 本頁包含 Elm 0.18
+
 # 組合
 
 ## 父元件
@@ -7,12 +9,11 @@
 ```elm
 module Main exposing (..)
 
-import Html exposing (Html)
-import Html.App
+import Html exposing (Html, program)
 import Widget
 
 
--- 模型
+-- MODEL
 
 
 type alias AppModel =
@@ -32,7 +33,7 @@ init =
 
 
 
--- 訊息
+-- MESSAGES
 
 
 type Msg
@@ -40,18 +41,18 @@ type Msg
 
 
 
--- 視界
+-- VIEW
 
 
 view : AppModel -> Html Msg
 view model =
     Html.div []
-        [ Html.App.map WidgetMsg (Widget.view model.widgetModel)
+        [ Html.map WidgetMsg (Widget.view model.widgetModel)
         ]
 
 
 
--- 更新
+-- UPDATE
 
 
 update : Msg -> AppModel -> ( AppModel, Cmd Msg )
@@ -66,7 +67,7 @@ update message model =
 
 
 
--- 訂閱
+-- SUBSCRIPTIONS
 
 
 subscriptions : AppModel -> Sub Msg
@@ -75,12 +76,12 @@ subscriptions model =
 
 
 
--- 應用程式
+-- APP
 
 
-main : Program Never
+main : Program Never AppModel Msg
 main =
-    Html.App.program
+    program
         { init = init
         , view = view
         , update = update
@@ -155,7 +156,7 @@ type Msg
 view : AppModel -> Html Msg
 view model =
     Html.div []
-        [ Html.App.map➊ WidgetMsg➋ (Widget.view➌ model.widgetModel➍)
+        [ Html.map➊ WidgetMsg➋ (Widget.view➌ model.widgetModel➍)
         ]
 ```
 

@@ -1,3 +1,5 @@
+> 本頁包含 Elm 0.18
+
 # 主程式（Main）
 
 最後，修改 __src/Main.elm__ 呼叫 `initialModel`：
@@ -5,15 +7,17 @@
 ```elm
 module Main exposing (..)
 
-import Html.App
+import Html exposing (Html, div, text, program)
 import Messages exposing (Msg)
 import Models exposing (Model, initialModel)
-import View exposing (view)
 import Update exposing (update)
+import View exposing (view)
 
-init : (Model, Cmd Msg)
+
+init : ( Model, Cmd Msg )
 init =
-  (initialModel , Cmd.none)
+    ( initialModel, Cmd.none )
+
 
 subscriptions : Model -> Sub Msg
 subscriptions model =
@@ -21,8 +25,9 @@ subscriptions model =
 
 -- 主程式
 
+main : Program Never Model Msg
 main =
-  Html.App.program
+    program
     { init = init
     , view = view
     , update = update

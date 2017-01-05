@@ -1,3 +1,5 @@
+> 本頁包含 Elm 0.18
+
 # 規劃
 
 接下來是從 API 擷取玩家清單。
@@ -17,5 +19,5 @@
 我們需要 `http`，執行下列指令安裝：
 
 ```bash
-elm package install evancz/elm-http
+elm package install elm-lang/http
 ```

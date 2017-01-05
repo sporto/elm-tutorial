@@ -1,3 +1,5 @@
+> 本頁包含 Elm 0.18
+
 # 組成（Composing）
 
 使用 Elm 架構一大好處是處理元件組成的方式。讓我們建構一個範例來了解它：
@@ -16,7 +18,7 @@ import Html exposing (Html, button, div, text)
 import Html.Events exposing (onClick)
 
 
--- 模型
+-- MODEL
 
 
 type alias Model =
@@ -31,7 +33,7 @@ initialModel =
 
 
 
--- 訊息
+-- MESSAGES
 
 
 type Msg
@@ -39,7 +41,7 @@ type Msg
 
 
 
--- 視界
+-- VIEW
 
 
 view : Model -> Html Msg
@@ -51,7 +53,7 @@ view model =
 
 
 
--- 更新
+-- UPDATE
 
 
 update : Msg -> Model -> ( Model, Cmd Msg )

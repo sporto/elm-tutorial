@@ -45,7 +45,7 @@ type alias Player =
     { id : Int
     , name : String
     }
-
+  
 label: Player -> String
 ```
 
@@ -60,7 +60,7 @@ type alias Player =
     { id : Int
     , name : String
     }
-
+  
 Player 1 "Sam"
 ==> { id = 1, name = "Sam" }
 ```

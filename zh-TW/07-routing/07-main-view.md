@@ -1,6 +1,8 @@
+> 本頁包含 Elm 0.18
+
 # 主視界（Main view）
 
-當更改瀏覽器網址，主應用程式的視界需要顯示不同的頁面。
+當更改網址時，主視界需要顯示不同的頁面。
 
 更改 __src/View.elm__ 成：
 
@@ -8,11 +10,10 @@
 module View exposing (..)
 
 import Html exposing (Html, div, text)
-import Html.App
 import Messages exposing (Msg(..))
 import Models exposing (Model)
-import Players.List
 import Players.Edit
+import Players.List
 import Players.Models exposing (PlayerId)
 import Routing exposing (Route(..))
 
@@ -27,7 +28,7 @@ page : Model -> Html Msg
 page model =
     case model.route of
         PlayersRoute ->
-            Html.App.map PlayersMsg (Players.List.view model.players)
+            Html.map PlayersMsg (Players.List.view model.players)
 
         PlayerRoute id ->
             playerEditPage model id
@@ -46,7 +47,7 @@ playerEditPage model playerId =
     in
         case maybePlayer of
             Just player ->
-                Html.App.map PlayersMsg (Players.Edit.view player)
+                Html.map PlayersMsg (Players.Edit.view player)
 
             Nothing ->
                 notFoundView
@@ -61,14 +62,14 @@ notFoundView =
 
 ---
 
-### 顯示目前視界
+### 顯示正確視界
 
 ```elm
 page : Model -> Html Msg
 page model =
     case model.route of
         PlayersRoute ->
-            Html.App.map PlayersMsg (Players.List.view model.players)
+            Html.map PlayersMsg (Players.List.view model.players)
 
         PlayerRoute id ->
             playerEditPage model id
@@ -77,11 +78,11 @@ page model =
             notFoundView
 ```
 
-現在，`page` 函式中 case 表達式根據 `model.route` 的值顯示正確的視界。
+現在有個 `page` 函式，裡面有 case 表達式，用來根據 `model.route` 的內容來決定要顯示正確的視界。
 
-當符合玩家編輯路由（例如 `#players/2`）時，從路由取得玩家 ID，即 `PlayerRoute playerId`。
+當有玩家編輯路由符合時（如 `#players/2`），從路由取得玩家 id，例如 `PlayerRoute playerId`。
 
-### 找尋玩家
+### 尋找玩家
 
 ```elm
 playerEditPage : Model -> PlayerId -> Html Msg
@@ -94,10 +95,14 @@ playerEditPage model playerId =
     in
         case maybePlayer of
             Just player ->
-                Html.App.map PlayersMsg (Players.Edit.view player)
+                Html.map PlayersMsg (Players.Edit.view player)
 
             Nothing ->
                 notFoundView
 ```
 
-有了 `playerId`，但是沒有此 id 的實際玩家紀錄。使用此 id 來過濾玩家列表，並使用 case 表達式來判斷是否有符合玩家，進而顯示正確的視界。
+現在有了 `playerId`，但可能實際上沒有此 id 的玩家紀錄。使用 id 來過濾玩家列表，根據玩家存在與否，使用 case 表達式顯示正確的視界。
+
+### notFoundView
+
+當沒有符合路由時會顯示 `notFoundView` 。請注意型別是 `Html msg` 而非 `Html Msg`。這是因為此視界不會產生任何訊息，所以可以使用泛用型別變數 `msg` 取代特定型別 `Msg`。

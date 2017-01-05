@@ -1,3 +1,5 @@
+> 本頁包含 Elm 0.18
+
 # 應用程式流（Application flow）
 
 下圖描繪出 Html.App 如何與應用程式交互作用。

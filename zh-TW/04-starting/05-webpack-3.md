@@ -1,19 +1,27 @@
+> 本頁包含 Elm 0.18
+
+# Webpack 3
+
+## 初始化 Elm 應用程式
+
+建立基本 Elm 應用程式。修改 __src/Main.elm__：
+
+```elm
 module Main exposing (..)
 
-import Html exposing (Html, button, div, text, program)
-import Html.Events exposing (onClick)
+import Html exposing (Html, div, text, program)
 
 
 -- MODEL
 
 
 type alias Model =
-    Bool
+    String
 
 
 init : ( Model, Cmd Msg )
 init =
-    ( False, Cmd.none )
+    ( "Hello", Cmd.none )
 
 
 
@@ -21,8 +29,7 @@ init =
 
 
 type Msg
-    = Expand
-    | Collapse
+    = NoOp
 
 
 
@@ -31,14 +38,8 @@ type Msg
 
 view : Model -> Html Msg
 view model =
-    if model then
-        div []
-            [ button [ onClick Collapse ] [ text "Collapse" ]
-            , text "Widget"
-            ]
-    else
-        div []
-            [ button [ onClick Expand ] [ text "Expand" ] ]
+    div []
+        [ text model ]
 
 
 
@@ -48,11 +49,8 @@ view model =
 update : Msg -> Model -> ( Model, Cmd Msg )
 update msg model =
     case msg of
-        Expand ->
-            ( True, Cmd.none )
-
-        Collapse ->
-            ( False, Cmd.none )
+        NoOp ->
+            ( model, Cmd.none )
 
 
 
@@ -68,6 +66,7 @@ subscriptions model =
 -- MAIN
 
 
+main : Program Never Model Msg
 main =
     program
         { init = init
@@ -75,3 +74,4 @@ main =
         , update = update
         , subscriptions = subscriptions
         }
+```
