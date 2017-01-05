@@ -53,4 +53,4 @@ nf start
 
 瀏覽 `http://localhost:3000/` 會看到應用程式輸出 "Hello"。使用 `Ctrl-c` 停止伺服器。
 
-原始碼像是 <https://github.com/sporto/elm-tutorial-app/tree/02-webpack>.
+原始碼像是 <https://github.com/sporto/elm-tutorial-app/tree/018-02-webpack>。
