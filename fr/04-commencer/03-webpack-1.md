@@ -23,10 +23,10 @@ Il vous faudra NodeJS en version 4 ou supérieure pour que ces bibliothèques fo
 Installez Webpack et les paquets associés :
 
 ```bash
-npm i webpack@1 webpack-dev-middleware@1 webpack-dev-server@1 elm-webpack-loader@3 file-loader@0 style-loader@0 css-loader@0 url-loader@0 -S
+npm i webpack@1 webpack-dev-middleware@1 webpack-dev-server@1 elm-webpack-loader@4 file-loader@0 style-loader@0 css-loader@0 url-loader@0 -S
 ```
 
-Ce tutoriel utilise __Webpack__ version __1.13__ et __elm-webpack-loader__ version __3.0__.
+Ce tutoriel utilise __Webpack__ version __1.13__ et __elm-webpack-loader__ version __4.1__.
 
 Les *loaders* sont des extensions qui permettent à Webpack de charger différents formats. Ainsi, `css-loader` permet à Webpack de charger les fichiers .css.
 

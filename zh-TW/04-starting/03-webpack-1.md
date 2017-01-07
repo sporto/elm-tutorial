@@ -23,10 +23,10 @@ Webpack 是個程式碼綑綁器（code bundler）。它會查看你的相依樹
 安裝 webpack 及附屬包：
 
 ```bash
-npm i webpack@1 webpack-dev-middleware@1 webpack-dev-server@1 elm-webpack-loader@3 file-loader@0 style-loader@0 css-loader@0 url-loader@0 -S
+npm i webpack@1 webpack-dev-middleware@1 webpack-dev-server@1 elm-webpack-loader@4 file-loader@0 style-loader@0 css-loader@0 url-loader@0 -S
 ```
 
-本課程使用 __webpack__ 版本 __1.13__ 及 __elm-webpack-loader__ 版本 __3.0__。
+本課程使用 __webpack__ 版本 __1.13__ 及 __elm-webpack-loader__ 版本 __4.1__。
 
 加載器是一種外掛，讓 webpack 能夠加載各種不同的檔案格式。例如：`css-loader` 讓 webpack 能夠加載 .css 檔案。
 

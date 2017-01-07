@@ -23,10 +23,10 @@ Webpackと同じように実現するために使用できる多くの選択肢�
 Webpackと関連パッケージをインストールする：
 
 ```bash
-npm i webpack@1 webpack-dev-middleware@1 webpack-dev-server@1 elm-webpack-loader@3 file-loader@0 style-loader@0 css-loader@0 url-loader@0 -S
+npm i webpack@1 webpack-dev-middleware@1 webpack-dev-server@1 elm-webpack-loader@4 file-loader@0 style-loader@0 css-loader@0 url-loader@0 -S
 ```
 
-このチュートリアルでは、__webpack__バージョン__1.13__と__elm-webpack-loader__バージョン__3.0__を使用しています。
+このチュートリアルでは、__webpack__バージョン__1.13__と__elm-webpack-loader__バージョン__4.1__を使用しています。
 
 ローダーは、Webpackが異なるフォーマットをロードできるようにする拡張機能です。例えば。 `css-loader`はwebpackに.cssファイルをロードさせます。
 
