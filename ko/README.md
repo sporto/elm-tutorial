@@ -34,6 +34,11 @@ __[Elm](http://elm-lang.org/) 으로 싱글 페이지 웹 어플리케이션 (SP
 
 <https://github.com/sporto/elm-tutorial>에 이슈를 생성하거나 PR 을 보내주세요.
 
+## 번역
+
+- 대응되는 단어가 확실한 경우는 한국어를 사용합니다. (function : 함수, annonymous : 익명 등)
+- 대응되는 단어가 모호하거나 널리 쓰이지 않는다고 판단되는 경우 음차 표기합니다. (union : 유니언, alias : 앨리어스 등)
+
 ---
 
 [Share on Twitter](https://twitter.com/intent/tweet?&text=Elm%20Tutorial&url=http%3A%2F%2Fwww.elm-tutorial.org&via=sebasporto) | [Follow @sebasporto](https://twitter.com/intent/user?screen_name=sebasporto)
