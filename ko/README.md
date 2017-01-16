@@ -27,7 +27,7 @@ __[Elm](http://elm-lang.org/) 으로 싱글 페이지 웹 어플리케이션 (SP
 
 튜토리얼을 진행하려면 아래 항목들이 필요합니다:
 
-- Elm version 0.18 (설치에 대해서는 튜토리얼 뒷부분에)
+- Elm version 0.18
 - Node JS version 4 +
 
 ## 기여
