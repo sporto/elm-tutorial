@@ -1,39 +1,38 @@
 
 ![Logo](logo.png)
-# Elm Tutorial
+# Elm 튜토리얼
 
-__A tutorial on developing single page web applications (SPAs) with [Elm](http://elm-lang.org/).__
+__[Elm](http://elm-lang.org/) 으로 싱글 페이지 웹 어플리케이션 (SPA) 개발하기__
 
-This tutorial covers:
+이 튜토리얼은 아래 내용을 다룹니다:
 
-- Some Elm foundations
-- Understanding commands and subscriptions in Elm
-- Understanding the Elm architecture
-- Breaking an application in sub components and resources
-- Integrating CSS
-- Fetching and parsing JSON
-- Routing
-- CRUD operations
+- 몇가지 Elm 기초지식
+- Elm 의 커맨드와 서브스크립션 이해
+- Elm 아키텍쳐 이해
+- 하나의 어플리케이션을 서브 컴포넌트와 리소스로 분할하기
+- CSS 연동
+- JSON 요청 및 파싱
+- 라우팅
+- CRUD
 
-Read it online [here](http://www.elm-tutorial.org/).
+[여기](http://www.elm-tutorial.org/)서 온라인으로 읽을 수 있습니다.
 
-You can also download offline version [here (PDF, ePub, Mobi)](https://www.gitbook.com/book/sporto/elm-tutorial/details).
+[여기 (PDF, ePub, Mobi)](https://www.gitbook.com/book/sporto/elm-tutorial/details)서 오프라인 버전으로 다운로드도 가능합니다.
 
-## Code
+## 코드
 
-Code for the example application built in the second part of this tutorial can be
-found at <https://github.com/sporto/elm-tutorial-app>.
+튜토리얼의 두번째 파트에서 만드는 예제 애플리케이션 코드는 <https://github.com/sporto/elm-tutorial-app> 에서 찾을 수 있습니다.
 
-## Requirements
+## 필요한 것들
 
-For this tutorial you will need:
+튜토리얼을 진행하려면 아래 항목들이 필요합니다:
 
-- Elm version 0.18 (Installation is covered later in the tutorial)
+- Elm version 0.18 (설치에 대해서는 튜토리얼 뒷부분에)
 - Node JS version 4 +
 
-## Contributing
+## 기여
 
-Please open issues and send PRs at <https://github.com/sporto/elm-tutorial>.
+<https://github.com/sporto/elm-tutorial>에 이슈를 생성하거나 PR 을 보내주세요.
 
 ---
 
