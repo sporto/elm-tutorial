@@ -1,12 +1,13 @@
-# Union types
+# 유니언 타입
 
 In Elm, __Union Types__ are used for many things as they are incredibly flexible. A union type looks like:
+Elm 에서 __유니언 타입__ 은 매우 유연하여 아주 다양하게 사용됩니다. 유니언 타입은 이렇게 생겼습니다:
 
 ```elm
 type Answer = Yes | No
 ```
 
-`Answer` can be either `Yes` or `No`. Union types are useful for making our code more generic. For example a function that is declared like this:
+`Answer` 는 `Yes` 이거나 `No` 입니다. 유니언 타입은 코드를 범용성 있게 만들어 줍니다. 가령 이렇게 선언된 함수는:
 
 ```elm
 respond : Answer -> String
@@ -14,51 +15,51 @@ respond answer =
     ...
 ```
 
-Can either take `Yes` or `No` as the first argument e.g. `respond Yes` is a valid call.
+첫째 인자로 `Yes` 나 `No` 를 받을 수 있는 겁니다. (예: `respond Yes`)
 
-Union types are also commonly called __tags__ in Elm.
+Elm 에서 유니언 타입은 흔히 __태그__ (역주: 혹은 태그드 유니언) 라고도 부릅니다.
 
-## Payload
+## 포함하기 (Payload)
 
-Union types can have associated information with them:
+유니언 타입은 관련된 정보를 포함할 수 있습니다:
 
 ```elm
 type Answer = Yes | No | Other String
 ```
 
-In this case, the tag `Other` will have an associated string. You could call `respond` like this:
+이 경우, `Other` 태그는 관련된 문자열 (String) 을 포함합니다. 다시 위 `respond` 를 이렇게 호출할 수 있습니다:
 
 ```elm
 respond (Other "Hello")
 ```
 
-You need the parenthesis otherwise Elm will interpret this as passing two arguments to respond.
+괄호가 없으면 Elm 은 respond 에 두 인자를 전달하는 것으로 생각할 겁니다.
 
-## As constructor functions
+## 생성자 함수로서 사용
 
-Note how we add a payload to `Other`:
+다시 `Other` 를 어떻게 사용했나 봅시다:
 
 ```elm
 Other "Hello"
 ```
 
-This is just like a function call where `Other` is the function. Union types behave just like functions. For example given a type:
+이는 `Other` 를 함수처럼 호출한 것과 비슷합니다. 유니언 타입은 함수처럼 동작합니다. 이런 타입이 있다면:
 
 ```elm
 type Answer = Message Int String
 ```
 
-You will create a `Message` tag by:
+`Message` 태그는 이런 식으로 사용합니다:
 
 ```elm
 Message 1 "Hello"
 ```
 
-You can do partial application just like any other function. These are commonly called `constructors` because you can use this to construct complete types, i.e. use `Message` as a function to construct `(Message 1 "Hello")`.
+다른 함수처럼 부분 적용도 가능합니다. 이것들은 해당 타입을 생성하는 함수로 이용되기에 보통 `생성자` 라고 부릅니다.
 
-## Nesting
+## 중첩하기
 
-It is very common to 'nest' one union type in another.
+어떤 유니언 타입이 다른 유니언 타입에 '중첩' 되는 경우는 매우 흔합니다.
 
 ```elm
 type OtherAnswer = DontKnow | Perhaps | Undecided
@@ -66,23 +67,23 @@ type OtherAnswer = DontKnow | Perhaps | Undecided
 type Answer = Yes | No | Other OtherAnswer
 ```
 
-Then you can pass this to our `respond` function (which expect `Answer`) like this:
+이걸 아까의 (`Answer` 타입을 받는) `respond` 함수에 이렇게 사용할 수 있습니다:
 
 ```elm
 respond (Other Perhaps)
 ```
 
-## Type variables
+## 타입 변수
 
-It is also possible to use type variables or stand-ins:
+타입 변수를 사용할 수도 있습니다:
 
 ```elm
 type Answer a = Yes | No | Other a
 ```
 
-This is an `Answer` that can be used with different types, e.g. Int, String.
+이는 Int, String 등과 같이 사용 가능한 `Answer` 가 됩니다.
 
-For example, respond could look like this:
+만약 respond 가 이러하다면:
 
 ```elm
 respond : Answer Int -> String
@@ -90,23 +91,23 @@ respond answer =
     ...
 ```
 
-Here we are saying that the `a` stand-in should be of type `Int` by using  the `Answer Int` signature.
+`Answer Int` 시그내쳐를 사용해서 `a` 자리에 `Int` 를 사용하겠다고 말하는 것입니다.
 
-So later we will be able to call respond with:
+이후 respond 를 이렇게 호출 가능합니다:
 
 ```elm
 respond (Other 123)
 ```
 
-But `respond (Other "Hello")` would fail because `respond` expects an integer in place of `a`.
+하지만 `respond (Other "Hello")` 는 실패하는데, 그것은 `respond` 가 `a` 의 자리에는 정수가 올 것으로 기대하기 때문입니다.
 
-## A common use
+## 쓰임새
 
-One typical use of union types is passing around values in our program where the value can be one of a known set of possible values.
+유니언 타입이 자주 쓰이는 경우 중 하나가 몇가지 가능한 경우 중 하나의 값을 프로그램 안에서 주고받는 때 입니다.
 
-For example, in a typical web application, we have actions that can be performed, e.g. load users, add user, delete user, etc. Some of these actions would have a payload.
+웬만한 웹 애플리케이션에는 유저를 불러오고, 추가하고, 삭제하는 등의 기능이 있습니다. 이런 기능 중 몇몇은 다른 데이터를 포함하기도 합니다.
 
-It is common to use union types for this:
+그럴 때 이런 식으로 유니언 타입이 사용됩니다:
 
 ```elm
 type Action
@@ -119,4 +120,4 @@ type Action
 
 ---
 
-There is a lot more about Union types. If interested read more about this [here](http://elm-lang.org/guide/model-the-problem).
+유니언 타입에 대해 더 많이 알고 싶다면 [여기](http://elm-lang.org/guide/model-the-problem)를 읽어보세요.

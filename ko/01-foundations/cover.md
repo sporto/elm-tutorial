@@ -1,6 +1,6 @@
-# Foundations
+# 기초
 
-This chapter covers:
+이 챕터에서는 아래 내용을 다룹니다:
 
-- Running a basic Elm application
-- Basic of functions and types in Elm
+- 기본적인 Elm 어플리케이션 구동
+- Elm 의 함수와 타입 기초

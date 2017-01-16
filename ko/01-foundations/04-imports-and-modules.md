@@ -1,42 +1,42 @@
-# Imports and modules
+# 임포트와 모듈
 
-In Elm you import a module by using the `import` keyword e.g.
+Elm 에서는 아래와 같이 `import` 를 사용하여 모듈을 임포트합니다.
 
 ```elm
 import Html
 ```
 
-This imports the `Html` module. Then you can use functions and types from this module by using its fully qualified path:
+이렇게 `Html` 모듈을 임포트하는 경우 동일한 이름으로 모듈의 함수와 타입을 사용할 수 있습니다.
 
 ```elm
 Html.div [] []
 ```
 
-You can also import a module and expose specific functions and types from it:
+특정 함수나 타입만 명시할 수도 있습니다:
 
 ```elm
 import Html exposing (div)
 ```
 
-`div` is mixed in the current scope. So you can use it directly:
+이 경우 `div` 는 현재 스코프에 포함됩니다. 모듈 이름 없이 사용할 수 있습니다:
 
 ```elm
 div [] []
 ```
 
-You can even expose everything in a module:
+그냥 전부 가져올 수도 있고요:
 
 ```elm
 import Html exposing (..)
 ```
 
-Then you would be able to use every function and type in that module directly. But this is not recommended most of the time because we end up with ambiguity and possible clashes between modules.
+이렇게 하면 모듈의 모든 함수와 타입을 모듈 이름 없이 사용할 수 있지만, 모듈 간 이름 충돌 문제가 따라오므로 추천하지는 않습니다.
 
-## Modules and types with the same name
+## 같은 이름을 가진 모듈과 타입
 
-Many modules export types with the same name as the module. For example, the `Html` module has an `Html` type and the `Task` module has a `Task` type.
+많은 모듈이 모듈과 같은 이름의 타입을 익스포트합니다. `Html` 모듈의 `Html` 타입이나 `Task` 모듈의 `Task` 타입이 그 예입니다.
 
-So this function that returns an `Html` element:
+`Html` 엘리먼트를 리턴하는 이 함수는:
 
 ```elm
 import Html
@@ -46,7 +46,7 @@ myFunction =
     ...
 ```
 
-Is equivalent to:
+이렇게 써도 동일합니다:
 
 ```elm
 import Html exposing (Html)
@@ -56,27 +56,27 @@ myFunction =
     ...
 ```
 
-In the first one we only import the `Html` module and use the fully qualified path `Html.Html`.
+첫 예시에서는 `Html` 모듈만 임포트했으므로 `Html.Html` 로 접근했죠.
 
-In the second one we expose the `Html` type from the `Html` module. And use the `Html` type directly.
+두번째 예시에서는 `Html` 타입을 노출했으므로, 직접 사용했습니다.
 
-## Module declarations
+## 모듈 선언
 
-When you create a module in Elm, you add the `module` declaration at the top:
+Elm 에서 모듈을 생성할 때는, 맨 위에 `module` 선언을 합니다:
 
 ```elm
 module Main exposing (..)
 ```
 
-`Main` is the name of the module. `exposing (..)` means that you want to expose all functions and types in this module. Elm expects to find this module in a file called __Main.elm__, i.e. a file with the same name as the module.
+`Main` 은 모듈의 이름입니다. `exposing (..)` 은 이 모듈의 모든 함수와 타입을 외부로 노출하겠다는 의미입니다. Elm 은 이 모듈을 __Main.elm__ 파일에서 찾으려고 할 것입니다. (모듈과 이름이 같기 때문에)
 
-You can have deeper file structures in an application. For example, the file __Players/Utils.elm__ should have the declaration:
+더 세세하게 구조를 나눌 수도 있습니다. 예를 들면, __Players/Utils.elm__ 파일은 이런 식입니다:
 
 ```elm
 module Players.Utils exposing (..)
 ```
 
-You will be able to import this module from anywhere in your application by:
+어플리케이션 어디에서나 이 모듈을 임포트 할 수 있습니다:
 
 ```elm
 import Players.Utils

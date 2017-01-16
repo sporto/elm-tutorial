@@ -1,6 +1,6 @@
-# Type aliases
+# 타입 앨리어스 (Type aliases)
 
-A __type alias__ in Elm is, as its name says, an alias for something else. For example, in Elm you have the core `Int` and `String` types. You can create aliases for them:
+Elm 에서 __타입 앨리어스__ 란, 이름 그대로, 다른 무언가를 가리키는 별명입니다. Elm 에는 핵심 타입 `Int` 와 `String` 이 있는데, 이렇게 앨리어스를 붙일 수 있습니다:
 
 ```elm
 type alias PlayerId = Int
@@ -8,23 +8,23 @@ type alias PlayerId = Int
 type alias PlayerName = String
 ```
 
-Here we have created a couple of type alias that simply point to other core types. This is useful because instead of having a function like:
+다른 핵심 타입을 가리키는 단순한 타입 앨리어스를 만들었습니다. 그래도 이런 함수를:
 
 ```elm
 label: Int -> String
 ```
 
-You can write it like:
+이렇게 표현할 수 있다는 데서 유용합니다:
 
 ```elm
 label: PlayerId -> PlayerName
 ```
 
-In this way, it is much clearer what the function is asking for.
+덕분에 함수가 요구하는 것이 명확해 집니다.
 
-## Records
+## 레코드
 
-A record definition in Elm looks like:
+Elm 의 레코드는 이런 식입니다:
 
 ```elm
 { id : Int
@@ -32,13 +32,13 @@ A record definition in Elm looks like:
 }
 ```
 
-If you were to have a function that takes a record, you would have to write a signature like:
+레코드를 인자로 받는 함수를 만드려면, 이런 식으로 시그내쳐를 써야겠네요:
 
 ```elm
 label: { id : Int, name : String } -> String
 ```
 
-Quite verbose, but type aliases help a lot with this:
+정말 복잡합니다. 하지만 타입 앨리어스로 이렇게 쓸 수 있습니다:
 
 ```elm
 type alias Player =
@@ -49,11 +49,11 @@ type alias Player =
 label: Player -> String
 ```
 
-Here we create a `Player` type alias that points to a record definition. Then we use that type alias in our function signature.
+레코드 정의를 가리키는 `Player` 타입 앨리어스를 만들었고, 함수 시그내쳐에 이를 사용했습니다.
 
-## Constructors
+## 생성자
 
-Type aliases can be used as __constructor__ functions. Meaning that we can create a real record by using the type alias as a function.
+타입 앨리어스는 __생성자__ 함수로 사용할 수 있습니다.
 
 ```elm
 type alias Player =
@@ -65,4 +65,4 @@ Player 1 "Sam"
 ==> { id = 1, name = "Sam" }
 ```
 
-Here we create a `Player` type alias. Then, we call `Player` as a function with two parameters. This gives us back a record with the proper attributes. Note that the order of the arguments determines which values will be assigned to which attributes.
+`Player` 타입 앨리어스를 만들고, `Player` 를 두 인자를 가진 함수처럼 사용했습니다. 레코드의 속성 순서와 함수의 인자 순서가 같다는 점을 알 수 있습니다.
