@@ -1,6 +1,5 @@
 # 유니언 타입
 
-In Elm, __Union Types__ are used for many things as they are incredibly flexible. A union type looks like:
 Elm 에서 __유니언 타입__ 은 매우 유연하여 아주 다양하게 사용됩니다. 유니언 타입은 이렇게 생겼습니다:
 
 ```elm
