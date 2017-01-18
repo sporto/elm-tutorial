@@ -1,10 +1,10 @@
 > This page covers Elm 0.18
 
-# Composing
+# 조합하기
 
-## The parent component
+## 부모 컴포넌트
 
-This is the code for the parent component.
+이제 부모 컴포넌트를 위한 코드입니다.
 
 ```elm
 module Main exposing (..)
@@ -91,7 +91,7 @@ main =
 
 ---
 
-Let's review the important sections of this code.
+코드의 중요한 부분을 다시 확인해 봅시다.
 
 ### Model
 
@@ -101,7 +101,7 @@ type alias AppModel =
     }
 ```
 
-The parent component has its own model. One of the attributes on this model contains the `Widget.Model` ➊. Note how this parent component doesn't need to know about what `Widget.Model` is.
+이 부모 컴포넌트는 자체 모델을 갖고 있습니다. 모델의 속성 중 하나는 `Widget.Model` ➊ 입니다. 부모 컴포넌트가 `Widget.Model` 의 내용에 대해서 알 필요가 없다는 것이 확인됩니다.
 
 ```elm
 initialModel : AppModel
@@ -110,9 +110,9 @@ initialModel =
     }
 ```
 
-When creating the initial application model, we simply call `Widget.initialModel` ➋ from here.
+앱의 초기 상태를 만들 때, 그냥 `Widget.initialModel` ➋ 를 호출하면 됩니다.
 
-If you were to have multiple child components, you would do the same for each, for example:
+자식 컴포넌트가 여럿이라면, 이처럼 각각에 대해 똑같이 하면 됩니다:
 
 ```elm
 initialModel : AppModel
@@ -123,7 +123,7 @@ initialModel =
     }
 ```
 
-Or we could have multiple child components of the same type:
+자식 컴포넌트들이 같은 타입이라면 이렇게 해도 되겠죠:
 
 ```elm
 initialModel : AppModel
@@ -132,16 +132,16 @@ initialModel =
     }
 ```
 
-### Messages
+### 메시지
 
 ```elm
 type Msg
     = WidgetMsg Widget.Msg
 ```
 
-We use a __union type__ that wraps `Widget.Msg` to indicate that a message belongs to that component. This allows our application to route messages to the relevant components (This will become clearer after looking at the update function).
+`Widget.Msg` 이 해당 컴포넌트에 사용된다는 점을 묶어서 표현하기 위해 __union type__ 을 사용했습니다. 이는 메시지를 관련 컴포넌트로 전달하기 위해서입니다. (update 함수를 보면 이해가 되실 겁니다).
 
-In an application with multiple child components we could have something like:
+여러 자식 컴포넌트를 가진 앱이라면 이런 식입니다:
 
 ```elm
 type Msg
@@ -150,7 +150,7 @@ type Msg
     | WidgetMsg Widget.Msg
 ```
 
-### View
+### 뷰
 
 ```elm
 view : AppModel -> Html Msg
@@ -160,12 +160,12 @@ view model =
         ]
 ```
 
-The main application `view` renders the `Widget.view` ➌. But `Widget.view` emits `Widget.Msg` so it is incompatible with this view which emits `Main.Msg`.
+부모 `view` 에서도 `Widget.view` ➌ 를 그립니다. 하지만 `Widget.view` 는 `Widget.Msg` 를 생성하므로 `Main.Msg` 로 바꾸어 주어야 합니다.
 
-- We use `Html.map` ➊ to map emitted messages from `Widget.view` to the type we expect (Msg). `Html.map` tags messages coming from the sub view using the `WidgetMsg` ➋ tag.
-- We only pass the part of the model that the child component cares about i.e. `model.widgetModel` ➍.
+- `Html.map` ➊ 으로 `Widget.view` 을 매핑합니다 (Msg). `Html.map` 은 하위 뷰의 메시지에 `WidgetMsg` ➋ 태그를 붙입니다.
+- 자식 컴포넌트에 필요한 부분만 모델에서 전달하고 있습니다. (`model.widgetModel` ➍)
 
-### Update
+### 업데이트
 
 ```elm
 update : Msg -> AppModel -> (AppModel, Cmd Msg)
@@ -179,12 +179,12 @@ update message model =
                 ({ model | widgetModel = updatedWidgetModel }, Cmd.map➎ WidgetMsg widgetCmd)
 ```
 
-When a `WidgetMsg` ➊ is received by `update` we delegate the update to the child component. But the child component will only update what it cares about, which is the `widgetModel` attribute.
+`WidgetMsg` ➊ 가 `update` 로 오면 자식 컴포넌트의 update 로 보냅니다. `widgetModel` 속성만 보내면 됩니다.
 
-We use pattern matching to extract the `subMsg` ➋ from `WidgetMsg`. This `subMsg` will be the type that `Widget.update` expects.
+`WidgetMsg` 에서 `subMsg` ➋ 를 패턴 매칭으로 뽑아냅니다. 이 `subMsg` 는 `Widget.update` 에서 전달받는 타입입니다.
 
-Using this `subMsg` and `model.widgetModel` we call `Widget.update` ➌. This will return a tuple with an updated `widgetModel` and a command.
+이 `subMsg` 와 `model.widgetModel` 로 `Widget.update` ➌ 을 호출합니다. 갱신된 `widgetModel` 과 커맨드가 리턴됩니다.
 
-We use pattern matching again to destructure ➍ the response from `Widget.update`.
+`Widget.update` 에서 받은 것을 다시 패턴 매칭합니다 ➍.
 
-Finally we need to map the command returned by `Widget.update` to the right type. We use `Cmd.map` ➎ for this and tag the command with `WidgetMsg`, similar to what we did in the view.
+마지막으로 `Widget.update` 에서 온 커맨드를 매핑해야 합니다. `Cmd.map` ➎ 를 사용하고 `WidgetMsg` 태그를 같이 전달했습니다.

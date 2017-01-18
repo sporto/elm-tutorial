@@ -1,9 +1,9 @@
-# The Elm architecture
+# Elm 아키텍쳐
 
-This chapter covers:
+이 챕터에서 다루는 것들:
 
-- Overview of the Elm architecture
-- Introduction to Html.program
-- Messages
-- Commands
-- Subscriptions
+- Elm 아키텍쳐 전반
+- Html.program
+- 메시지
+- 커맨드
+- 서브스크립션

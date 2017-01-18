@@ -1,18 +1,18 @@
 > This page covers Elm 0.18
 
-# Introduction
+# 들어가며
 
-When building front end applications in Elm, we use the pattern known as the Elm architecture. This pattern provides a way of creating self contained components that can be reused, combined, and composed in endless variety.
+Elm 으로 프론트엔드 어플리케이션을 개발할 때 사용하는 패턴을 Elm 아키텍쳐라 부릅니다. 이는 다양한 상황에서 재사용과 조합이 가능한 독립적인 컴포넌트를 만드는 데 적합한 패턴입니다.
 
-Elm provides the `Html` module for this. This is easier to understand by building a small app.
+Elm 은 이를 위해 `Html` 모듈을 제공합니다. 조그만 어플리케이션 하나를 만들며 알아보도록 하겠습니다.
 
-Install elm-html:
+elm-html 을 설치합니다:
 
 ```elm
 elm package install elm-lang/html
 ```
 
-Create a file called __App.elm__:
+__App.elm__ 파일을 만듭니다:
 
 ```elm
 module App exposing (..)
@@ -84,13 +84,12 @@ main =
         }
 ```
 
-You can run this program running:
+아래 명령으로 프로그램을 구동합니다:
 
 ```bash
 elm reactor
 ```
 
-And opening http://localhost:8000/App.elm
+http://localhost:8000/App.elm 을 열어봅니다.
 
-This is a lot of code for just showing "Hello", but it will help us understand the structure of even very complex Elm applications.
-
+단순히 "Hello" 를 보여주는 것 치고는 꽤 많은 코드지만, 아주 복잡한 Elm 앱이라도 기본 구조는 이와 비슷합니다.

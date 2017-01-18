@@ -1,30 +1,30 @@
 > This page covers Elm 0.18
 
-# Composing
+# 조합하기
 
-Here are two diagrams that illustrate this architecture:
+여기 아키텍쳐를 보여주는 두 다이어그램이 있습니다:
 
-### Initial render
+### 초기 렌더링
 
 ![Flow](06-composing.png)
 
-(1) __program__ calls __Main.initialModel__ to get the initial model for the application
+(1) __program__ 은 __Main.initialModel__ 을 호출해 초기 모델을 가져온다
 
-(2) __Main__ calls __Widget.initialModel__
+(2) __Main__ 은 __Widget.initialModel__ 을 호출한다
 
-(3) __Widget__ returns its initial model
+(3) __Widget__ 은 자체적인 초기 모델을 리턴한다
 
-(4) __Main__ returns a composed main model which includes the widget model
+(4) __Main__ 은 위젯 모델을 포함하는 메인 모델을 리턴한다
 
-(5) __program__ calls __Main.view__, passing the __main model__
+(5) __program__ 은 __Main.view__ 을 호출하여 __main model__ 을 전달한다
 
-(6) __Main.view__ calls __Widget.view__, passing the __widgetModel__ from the main model
+(6) __Main.view__ 는 메인 모델의 __widgetModel__ 를 __Widget.view__ 에 전달하여 호출한다
 
-(7) __Widget.view__ returns the rendered Html to __Main__
+(7) __Widget.view__ 는 __Main__ 에 렌더링될 Html 을 리턴한다
 
-(8) __Main.view__ returns the rendered Html to __program__
+(8) __Main.view__ 는 __program__ 에 렌더링될 Html 을 리턴한다
 
-(9) __program__ renders this to the browser.
+(9) __program__ 은 이를 브라우저에 렌더링한다
 
 ---
 
@@ -32,25 +32,25 @@ Here are two diagrams that illustrate this architecture:
 
 ![Flow](06-composing_001.png)
 
-(1) User clicks on the increase button
+(1) 사용자가 증가 (increase) 버튼을 누른다
 
-(2) __Widget.view__ emits an __Increase__ message which is picked up by __Main.view__.
+(2) __Widget.view__ 는 __Main.view__ 를 통해 전달할 __Increase__ 메시지를 발생시킨다
 
-(3) __Main.view__ tags this message so it becomes (WidgetMsg Increase) and it is sent along to __program__
+(3) __Main.view__ 는 이 메시지를 태그하여 (WidgetMsg Increase) 로 만들고 __program__ 으로 보낸다
 
-(4) __program__ calls __Main.update__ with this message and the main model
+(4) __program__ 은 이 메시지와 메인 모델을 전달하여 __Main.update__ 을 호출한다
 
-(5) As the message was tagged with __WidgetMsg__, __Main.update__ delegates the update to __Widget.update__, sending along the way the __widgetModel__ part of the main model
+(5) 메시지가 __WidgetMsg__ 로 태그 되어 있으므로, __Main.update__ 는 __Widget.update__ 로 메시지와 __widgetModel__ 를 전달하여 처리하게 한다
 
-(6) __Widget.update__ modifies the model according to the given message, in this case __Increase__. And returns the modified __widgetModel__ plus a command
+(6) __Widget.update__ 는 전달된 메시지에 따라 모델에 변경을 가하게 되고 (이 경우는 __Increase__), 갱신된 __widgetModel__ 과 커맨드를 리턴한다
 
-(7) __Main.update__ updates the main model and returns it to __program__
+(7) __Main.update__ 는 메인 모델을 업데이트하고 __program__ 로 리턴한다
 
-(8) __program__ then renders the view again passing the updated main model
+(8) __program__ 는 갱신된 메인 모델을 뷰에 전달하여 그리도록 한다
 
-## Key points
+## 키 포인트
 
-- The Elm architecture offers a clean way to compose (or nest) components at as many levels as you need.
-- A child component does not need to know anything about its parent. Child components define their own types and messages.
-- If a child component needs something in particular (e.g. an additional model) it "asks" for it by using the function signatures. The parent is responsible for providing what the children need.
-- A parent doesn't need to know what is in its children's models, or what their messages are.  It only needs to provide what its children ask.
+- Elm 아키텍쳐는 컴포넌트를 몇 단계로 조합 (혹은 중첩) 하더라도 깔끔한 구조를 제공한다
+- 자식 컴포넌트는 부모에 대해 알 필요가 없다. 각 타입과 메시지는 컴포넌트 자체적으로 가지고 있기 때문.
+- 자식 컴포넌트에 변경사항이 생기면 함수 시그내쳐로 드러나게 된다. 부모 컴포넌트에서 맞춰 주면 된다.
+- 부모 컴포넌트는 자식의 모델이나 메시지의 내용에 대해 알 필요가 없다. 자식 컴포넌트에서 필요한 것만 충족하면 된다.

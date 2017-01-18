@@ -1,8 +1,8 @@
 > This page covers Elm 0.18
 
-# Messages with payload
+# 데이터를 포함하는 메시지 (Messages with payload)
 
-You can send a payload in your message:
+메시지에 데이터를 포함할 수 있습니다:
 
 ```elm
 module Main exposing (..)
@@ -77,20 +77,20 @@ main =
         }
 ```
 
-Note how the `Increment` message requires an integer:
+`Increment` 메시지가 정수를 포함하고 있습니다:
 
 ```elm
 type Msg
     = Increment Int
 ```
 
-Then in the view we trigger that message with a payload:
+뷰에서도 데이터를 전달하여 메시지를 발생시킵니다:
 
 ```elm
 onClick (Increment 2)
 ```
 
-And finally in update we use __pattern matching__ to extract the payload:
+마지막으로 update 에서는 __패턴 매칭__ 으로 데이터를 뽑아냅니다:
 
 ```elm
 update msg model =

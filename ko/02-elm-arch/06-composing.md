@@ -1,15 +1,15 @@
 > This page covers Elm 0.18
 
-# Composing
+# 조합하기
 
-One of the big benefits of using the Elm architecture is the way it handles composition of components. To understand this, let's build an example:
+Elm 아키텍쳐의 강점 중 하나는 컴포넌트를 조합하는 방식입니다. 이해를 위한 예제를 하나 만들어 봅시다:
 
-- We will have a parent component `App`
-- And a child component `Widget`
+- 부모 컴포넌트 `App` 이 있고
+- 자식 컴포넌트 `Widget` 이 있다고 합시다
 
-## Child component
+## 자식 컴포넌트
 
-Let's begin with the child component. This is the code for __Widget.elm__.
+자식 컴포넌트부터 시작합시다. __Widget.elm__ 에 들어갈 코드입니다.
 
 ```elm
 module Widget exposing (..)
@@ -63,12 +63,12 @@ update message model =
             ( { model | count = model.count + 1 }, Cmd.none )
 ```
 
-This component is nearly identical to the application that we made in the last section, except for subscriptions and main. This component:
+서브스크립션과 메인 함수가 없다는 걸 제외하면 이전 프로그램과 거의 동일합니다. 이 컴포넌트는:
 
-- Defines its own messages (Msg)
-- Defines its own model
-- Provides an `update` function that responds to its own messages, e.g. `Increase`.
+- 자체 메시지를 가지고 (Msg)
+- 자체 모델을 가지고
+- 자체 메시지에 대응하는 `update` 함수를 가진다. (예: `Increase`)
 
-Note how the component only knows about things declared here. Both `view` and `update` only use types declared within the component (`Msg` and `Model`).
+컴포넌트가 자체 선언한 데이터만을 다루고 있는 것을 보세요. `view` 와 `update` 에서 사용하는 `Msg` 와 `Model` 가 그렇습니다.
 
-In the next section we will create the parent component.
+다음은 부모 컴포넌트를 만들어 봅시다.

@@ -1,8 +1,8 @@
 > This page covers Elm 0.18
 
-# Messages
+# 메시지
 
-In the last section, we created an application using Html.program that was just static Html. Now let's create an application that responds to user interaction using messages.
+이전 장에서는 단순히 정적 Html 엘리먼트인 앱을 만들었었죠. 이제 메시지를 가지고 상호작용이 가능한 앱을 만들어 봅시다.
 
 ```elm
 module Main exposing (..)
@@ -84,11 +84,11 @@ main =
         }
 ```
 
-This program is very similar to the previous program we did, but now we have two messages: `Expand` and `Collapse`. You can run this program by copying it into a file and opening it using Elm reactor. 
+이전 프로그램과 매우 비슷하지만, 이제 두 메시지를 가지고 있습니다: `Expand` 와 `Collapse` 입니다. 파일로 저장하고 Elm reactor 로 실행해 볼 수 있습니다.
 
-Let's look more closely at the `view` and `update` functions.
+`view` 와 `update` 함수를 좀 더 살펴봅시다.
 
-### View
+### 뷰
 
 ```elm
 view : Model -> Html Msg
@@ -103,11 +103,11 @@ view model =
             [ button [ onClick Expand ] [ text "Expand" ] ]
 ```
 
-Depending on the state of the model we show either the collapsed or the expanded view. 
+모델의 상태에 따라 감춰진 (collapsed) 상태나 펼쳐진 (expanded) 상태로 그립니다.
 
-Note the `onClick` function. As this view is of type `Html Msg` we can trigger messages of that type using `onClick`. Collapse and Expand are both of type Msg.
+`onClick` 함수를 보세요. 뷰의 타입 `Html Msg` 에 쓰인 것 처럼 `onClick` 은 해당 타입에 맞춘 메시지를 보냅니다. Collapse 와 Expand 는 Msg 타입입니다.
 
-### Update
+### 업데이트
 
 ```elm
 update : Msg -> Model -> ( Model, Cmd Msg )
@@ -120,6 +120,6 @@ update msg model =
             ( False, Cmd.none )
 ```
 
-`update` responds to the possible messages. Depending on the message, it returns the desired state. When the message is `Expand`, the new state will be `True` (expanded). 
+`update` 는 각 메시지에 대응하여 갱신된 상태를 리턴합니다. 메시지가 `Expand` 라면, 새로운 상태는 `True` 가 됩니다 (펼쳐진 상태).
 
-Next let's see how __Html.program__ orchestrates these pieces together.
+이후 __Html.program__ 이 이것들을 어떻게 처리하는지 보겠습니다.
