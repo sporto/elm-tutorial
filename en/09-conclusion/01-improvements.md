@@ -23,7 +23,7 @@ Even better than just showing error messages it would be great to:
 
 ## Optimistic updates
 
-At the moment all update functions are pesimistic. Meaning that they don't change the models until there is a succesful response from the server. One big improvement to the application would be to add optimistic creation, update and deletion. But this will also mean better error handling.
+At the moment all update functions are pessimistic. Meaning that they don't change the models until there is a succesful response from the server. One big improvement to the application would be to add optimistic creation, update and deletion. But this will also mean better error handling.
 
 ## Validations
 
