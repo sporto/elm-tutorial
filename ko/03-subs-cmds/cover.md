@@ -1,8 +1,8 @@
-# Subscriptions and Commands
+# 서브스크립션과 커맨드
 
-In order to listen to external input and create __side effects__ in our application we need to learn about __Subscriptions__ and __Commands__.
+외부 입력과 __사이드 이펙트__ 를 처리하기 위해서는 __서브스크립션__ 과 __커맨드__ 에 대해 알아둘 필요가 있습니다.
 
-This chapter covers:
+이번 장에서 다루는 것:
 
-- Subscriptions
-- Commands
+- 서브스크립션
+- 커맨드

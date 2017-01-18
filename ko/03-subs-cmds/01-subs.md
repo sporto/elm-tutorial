@@ -1,24 +1,24 @@
 > This page covers Elm 0.18
 
-# Subscriptions
+# 서브스크립션
 
-In Elm, using __subscriptions__ is how your application can listen for external input. Some examples are:
+Elm 에서는 __subscriptions__ 을 사용하여 외부 입력에 대응합니다. 예:
 
-- [Keyboard events](http://package.elm-lang.org/packages/elm-lang/keyboard/latest/Keyboard)
-- [Mouse movements](http://package.elm-lang.org/packages/elm-lang/mouse/latest/Mouse)
-- Browser locations changes
-- [Websocket events](http://package.elm-lang.org/packages/elm-lang/websocket/latest/WebSocket)
+- [키보드 이벤트](http://package.elm-lang.org/packages/elm-lang/keyboard/latest/Keyboard)
+- [마우스 동작](http://package.elm-lang.org/packages/elm-lang/mouse/latest/Mouse)
+- 브라우저 주소 변경
+- [웹소켓 이벤트](http://package.elm-lang.org/packages/elm-lang/websocket/latest/WebSocket)
 
-To illustrate this, let's create an application that responds to both keyboard and mouse events.
+이해를 위해 키보드와 마우스 이벤트에 반응하는 어플리케이션을 만들어 봅시다.
 
-First, install the required libraries:
+우선 이 라이브러리들을 설치해야 합니다:
 
 ```bash
 elm package install elm-lang/mouse
 elm package install elm-lang/keyboard
 ```
 
-Then, create this program:
+다음, 프로그램을 작성합니다:
 
 ```elm
 module Main exposing (..)
@@ -99,13 +99,13 @@ main =
         }
 ```
 
-Run this program with Elm reactor. Each time you click the mouse you will see the counter increasing by one; each time you press a key you will see the counter increasing by 2.
+Elm reactor 로 프로그램을 돌려봅니다. 마우스를 클릭할 때마다 1 씩, 키보드를 누를 때마다 2 씩 증가하는 카운터를 보실 수 있습니다.
 
 ---
 
-Let's review the important parts relevant to subscriptions in this program.
+서브스크립션과 관련된 부분을 다시 살펴 봅시다.
 
-### Messages
+### 메시지
 
 ```elm
 type Msg
@@ -113,9 +113,9 @@ type Msg
     | KeyMsg Keyboard.KeyCode
 ```
 
-We have two possible messages: `MouseMsg` and `KeyMsg`. These will trigger when the mouse or the keyboard are pressed, accordingly.
+메시지는 두 가지입니다: `MouseMsg` 와 `KeyMsg`. 각각 마우스와 키보드가 눌려졌을 때 발생합니다.
 
-### Update
+### 업데이트
 
 ```elm
 update : Msg -> Model -> ( Model, Cmd Msg )
@@ -128,9 +128,9 @@ update msg model =
             ( model + 2, Cmd.none )
 ```
 
-Our update function responds to each message differently, so it increases the counter by one when we press the mouse or by two when we press a key.
+update 함수에서는 메시지별로 각각 처리를 합니다. 마우스를 누를 때는 1 씩, 키보드를 누를 때는 2 씩 증가하도록 쓰여진 것을 볼 수 있습니다.
 
-### Subscriptions
+### 서브스크립션
 
 ```elm
 subscriptions : Model -> Sub Msg
@@ -141,6 +141,6 @@ subscriptions model =
         ]
 ```
 
-Here we declare the things we want to listen to. We want to listen to `Mouse.clicks` ➊ and `Keyboard.downs` ➋. Both of these functions take a message constructor and return a subscription.
+여기서는 참조하고 싶은 것들을 명시합니다. 우리가 필요한 건 `Mouse.clicks` ➊ 과 `Keyboard.downs` ➋ 입니다. 이 함수들은 메시지 생성자를 인자로 받고, 서브스크립션 타입을 돌려줍니다.
 
-We use `Sub.batch` ➌ so we can listen to both of them. `batch` takes a list of subscriptions and returns one subscription which includes all of them.
+두 이벤트를 참조해야 하므로 `Sub.batch` ➌ 를 사용합니다. `batch` 는 서브스크립션의 리스트를 받아 모두를 포함하는 하나의 서브스크립션을 리턴합니다.
