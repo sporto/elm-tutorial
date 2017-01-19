@@ -1,8 +1,8 @@
 > This page covers Elm 0.18
 
-# Main
+# 메인
 
-Finally modify __src/Main.elm__ to call `initialModel`:
+이제 __src/Main.elm__ 이 `initialModel` 을 호출하게 합니다:
 
 ```elm
 module Main exposing (..)
@@ -35,13 +35,13 @@ main =
         }
 ```
 
-Here we added `initialModel` in the import and `init`.
+`initialModel` 을 임포트와 `init` 에 추가했습니다.
 
 ---
 
-When you run the application you should see a list with one user.
+어플리케이션을 실행하면 유저 하나가 포함된 리스트를 볼 수 있습니다.
 
 ![Screenshot](screenshot.png)
 
-The application should look like <https://github.com/sporto/elm-tutorial-app/tree/018-04-resources>
+현재까지 진행한 코드는 <https://github.com/sporto/elm-tutorial-app/tree/018-04-resources> 와 같습니다.
 

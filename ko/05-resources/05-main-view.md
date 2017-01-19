@@ -1,8 +1,8 @@
 > This page covers Elm 0.18
 
-# Main View
+# 메인 뷰
 
-Modify __src/View.elm__ to include the list of players:
+__src/View.elm__ 를 수정하여 플레이어 리스트를 추가합니다:
 
 ```elm
 module View exposing (..)

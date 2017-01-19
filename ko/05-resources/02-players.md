@@ -1,10 +1,10 @@
 > This page covers Elm 0.18
 
-# Players modules
+# 플레이어 모듈
 
-## Players messages
+## 플레이어 메시지
 
-Create __src/Players/Messages.elm__
+__src/Players/Messages.elm__ 을 만듭니다.
 
 ```elm
 module Players.Messages exposing (..)
@@ -14,11 +14,11 @@ type Msg
     = NoOp
 ```
 
-Here we will put all the messages related to players.
+플레이어 관련 모든 메시지를 여기 넣을 겁니다.
 
-## Players Model
+## 플레이어 모델
 
-Create __src/Players/Models.elm__
+__src/Players/Models.elm__ 을 만듭니다.
 
 ```elm
 module Players.Models exposing (..)
@@ -43,23 +43,23 @@ new =
     }
 ```
 
-Here we define how a player record looks. It has an id, a name and a level.
+플레이어 레코드를 정의합니다. 아이디, 이름, 레벨을 가지고 있습니다.
 
-Also note the definition for `PlayerId`, it is just an alias to `String`, doing this is useful for clarity later on when we have function that takes many ids. For example:
+`PlayerId` 가 `String` 의 앨리어스임을 확인하세요. 이렇게 하는 게 이후 아이디와 관련된 함수들을 깔끔하게 표현합니다. 예를 들면:
 
 ```elm
 addPerkToPlayer : Int -> Int -> Player
 ```
 
-is much clearer when written as:
+는 이렇게 쓰는 게 더 이해가 쉽습니다:
 
 ```elm
 addPerkToPlayer : PerkId -> PlayerId -> Player
 ```
 
-## Players Update
+## 플레이어 업데이트
 
-Add __src/Players/Update.elm__
+__src/Players/Update.elm__ 를 추가합니다.
 
 ```elm
 module Players.Update exposing (..)
@@ -75,10 +75,10 @@ update message players =
             ( players, Cmd.none )
 ```
 
-This update doesn't do anything at the moment.
+이 업데이트는 지금은 딱히 하는 일이 없습니다.
 ---
 
-This is the basic pattern that all resources in a bigger application would follow:
+이게 더 복잡한 어플리케이션에서 리소스가 동작하는 기본적인 패턴입니다:
 
 ```
 Messages

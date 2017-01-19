@@ -1,8 +1,8 @@
 > This page covers Elm 0.18
 
-# Players List
+# 플레이어 리스트
 
-Create __src/Players/List.elm__
+__src/Players/List.elm__ 를 만듭니다.
 
 ```elm
 module Players.List exposing (..)
@@ -55,4 +55,4 @@ playerRow player =
         ]
 ```
 
-This view shows a list of players.
+이 뷰는 플레이어 목록을 보여줍니다.

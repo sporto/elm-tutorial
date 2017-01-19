@@ -1,10 +1,10 @@
 > This page covers Elm 0.18
 
-# Main
+# 메인
 
-The main level needs to be hooked up with the Players modules we created.
+메인 레벨에서 앞에서 만든 플레이어 모듈에 접근해야겠죠.
 
-We need to create links from:
+이렇게 참조할 겁니다:
 
 ```elm
 Main Messages  --->    Players Messages
@@ -12,9 +12,9 @@ Main Models    --->    Players Models
 Main Update    --->    Players Update
 ```
 
-## Main Messages
+## 메인 메시지
 
-Modify __src/Messages.elm__ to include players messages:
+__src/Messages.elm__ 를 플레이어 메시지를 포함하도록 수정합니다:
 
 ```elm
 module Messages exposing (..)
@@ -26,9 +26,9 @@ type Msg
     = PlayersMsg Players.Messages.Msg
 ```
 
-## Main Models
+## 메인 모델
 
-Modify __src/Models.elm__ to include players:
+__src/Models.elm__ 에서 플레이어를 포함하도록 합니다:
 
 ```elm
 module Models exposing (..)
@@ -47,11 +47,11 @@ initialModel =
     }
 ```
 
-Here we have a hardcoded player for now.
+일단은 플레이어 하나를 하드코드 해두겠습니다.
 
-## Main Update
+## 메인 업데이트
 
-Change __src/Update.elm__ to:
+__src/Update.elm__ 를 수정합니다:
 
 ```elm
 module Update exposing (..)
@@ -72,8 +72,8 @@ update msg model =
                 ( { model | players = updatedPlayers }, Cmd.map PlayersMsg cmd )
 ```
 
-Here we follow the Elm architecture:
+여기서도 Elm 아키텍쳐를 따르고 있습니다:
 
-- All `PlayersMsg` are routed to `Players.Update`.
-- We extract the result for `Players.Update` using pattern matching
-- Return the model with the updated player list and any command that needs to run.
+- 모든 `PlayersMsg` 는 `Players.Update` 로 보내집니다.
+- 패턴 매칭으로 `Players.Update` 의 결과를 추출합니다.
+- 새로운 플레이어 리스트와 커맨드를 모델에 포함시켜 리턴합니다.
