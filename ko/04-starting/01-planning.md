@@ -1,37 +1,37 @@
 > This page covers Elm 0.18
 
-# Planning
+# 계획
 
-We will build a basic application to track an imaginary role playing game.
+롤플레잉 게임을 관리하는 기본적인 어플리케이션을 만들어 보겠습니다.
 
-### Resources
+### 리소스
 
-During the rest of this guide I will use the word __resources__ to refer to models that are the subject of our application. These are __players__ in this application. Using the word __model__ can be confusing because component specific state is also a model (for example the expanded / collapse state of a component).
+진행하는 동안 어플리케이션의 중심이 되는 모델을 __리소스__ 라고 하겠습니다. 이 어플리케이션에서는 __플레이어들__ 입니다. 각 컴포넌트의 상태도 __모델__ 이라 부르므로 여기서 오는 혼란을 피하기 위함입니다. (예: 컴포넌트의 펼쳐진/접혀진 상태 등)
 
-## Wireframes
+## 와이어프레임
 
-The application will have two views:
+어플리케이션은 두개의 뷰를 가집니다:
 
 ![Plan](01-planning.png)
 
-### Screen 1
+### 화면 1
 
-Will show a list of players. From here you can:
+플레이어 목록을 보여줍니다. 이런 동작이 가능합니다:
 
-- Navigate to edit a player
+- 편집할 플레이어 선택
 
-### Screen 2
+### 화면 2
 
-Shows the edit view for a player. In this screen you can:
+특정 플레이어의 편집 화면입니다. 이런 동작이 가능합니다:
 
-- Change the level
+- 레벨을 변경
 
-This is a very simple application that will demonstrate:
+이 어플리케이션은 아래 동작을 포함합니다:
 
-- Multiple views
-- Nested components
-- Breaking the application into resources
-- Routing
-- Shared state across the application
-- Read and edit operation on the records
-- Ajax requests
+- 여러 뷰
+- 중첩된 컴포넌트
+- 리소스의 분할
+- 라우팅
+- 어플리케이션에 걸친 상태 공유
+- 레코드 읽기, 쓰기
+- Ajax 요청

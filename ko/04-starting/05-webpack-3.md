@@ -2,9 +2,9 @@
 
 # Webpack 3
 
-## Initial Elm app
+## 기초적인 Elm 앱
 
-Create a basic Elm app. In __src/Main.elm__:
+기본적인 Elm 앱을 만듭니다. __src/Main.elm__ 를 작성합니다:
 
 ```elm
 module Main exposing (..)

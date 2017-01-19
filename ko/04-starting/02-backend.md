@@ -1,26 +1,26 @@
 > This page covers Elm 0.18
 
-# Backend
+# 백엔드
 
-We will need a backend for our application, we can use __json-server__ for this.
+백엔드가 필요할 겁니다. __json-server__ 를 사용하겠습니다.
 
-[json-server](https://github.com/typicode/json-server) is an npm package that provides a quick way to create fake APIs.
+[json-server](https://github.com/typicode/json-server) 는 빠르게 가상의 API 를 만들어 볼 수 있게 해주는 npm 패키지입니다.
 
-Start a new node project:
+새 node 프로젝트를 만듭니다:
 
 ```bash
 npm init
 ```
 
-Accept all the defaults.
+전부 기본 항목으로 넘깁니다.
 
-Install __json-server__:
+__json-server__ 를 설치합니다:
 
 ```bash
 npm i json-server@0.9 -S
 ```
 
-Make __api.js__ in the root of the project:
+폴더 루트에 __api.js__ 를 작성합니다:
 
 ```js
 var jsonServer = require('json-server')
@@ -38,7 +38,7 @@ console.log('Listening at 4000')
 server.listen(4000)
 ```
 
-Add __db.json__ at the root:
+폴더 루트에 __db.json__ 을 추가합니다:
 
 ```json
 {
@@ -53,12 +53,12 @@ Add __db.json__ at the root:
 }
 ```
 
-Start the server by running:
+서버를 실행합니다:
 
 ```bash
 node api.js
 ```
 
-Test this fake API by browsing to:
+API 를 테스트해 볼 수 있습니다:
 
 - <http://localhost:4000/players>

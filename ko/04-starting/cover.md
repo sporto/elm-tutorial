@@ -1,13 +1,13 @@
-# Starting an application
+# 어플리케이션 만들기
 
-In this chapter we start building an example Elm application.
+이 장에서는 새로운 예제 어플리케이션을 하나 만들어 보겠습니다.
 
-This tutorial will cover the following aspects about building an application:
+아래와 같은 내용을 다룹니다:
 
-- Application structure
-- Fetching resources
-- Views
-- Routing
-- User interaction and saving changes
+- 어플리케이션 구조
+- 리소스 요청하기
+- 뷰
+- 라우팅
+- 사용자 상호작용과 변경사항 저장
 
-See next page for details about the application.
+세부사항은 다음 페이지에서 보겠습니다.
