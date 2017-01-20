@@ -1,10 +1,10 @@
 > This page covers Elm 0.18
 
-# Players Update
+# 플레이어 업데이트
 
-When the request for players is done, we trigger the `OnFetchAll` message.
+플레이어 요청이 처리되면 `OnFetchAll` 메시지가 발생합니다.
 
-__src/Players/Update.elm__ should account for this new message. Change `update` to:
+__src/Players/Update.elm__ 에서 이 메시지에 대응할 겁니다. `update` 를 변경합니다:
 
 ```elm
 ...
@@ -18,7 +18,7 @@ update message players =
             ( players, Cmd.none )
 ```
 
-When we get `OnFetchAll` we can use pattern matching to decide what to do. 
+패턴 매칭으로 상황에 따른 동작을 구분합니다.
 
-- In the `Ok` case we return the fetched players in order to update the players collection.
-- In the `Err` case we just return what we had before for now (A better approach would be to show an error to the user, but for simplicity of the tutorial we won't be doing this now).
+- `Ok` 인 경우 가져온 플레이어로 리턴합니다.
+- `Err` 인 경우 일단은 변경 없이 리턴합니다. (에러를 사용자에게 표현하는게 이상적이지만, 튜토리얼을 간소화 하기 위해 생략합니다)

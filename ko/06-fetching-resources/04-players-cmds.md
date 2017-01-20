@@ -1,8 +1,8 @@
 > This page covers Elm 0.18
 
-# Players commands
+# 플레이어 커맨드
 
-Now we need to create the tasks and command to fetch the players from the server. Create __src/Players/Commands.elm__:
+이제 서버에 요청할 커맨드를 작성해야 합니다. __src/Players/Commands.elm__ 를 만듭니다:
 
 ```elm
 module Players.Commands exposing (..)
@@ -38,7 +38,7 @@ memberDecoder =
 ```
 ---
 
-Let's go through this code.
+코드를 살펴봅시다.
 
 ```elm
 fetchAll : Cmd Msg
@@ -47,10 +47,10 @@ fetchAll =
         |> Http.send OnFetchAll
 ```
 
-Here we create a command for our application to run.
+어플리케이션에 사용할 커맨드입니다.
 
-- `Http.get` creates a `Request`
-- We then send this request to `Http.send` which wraps it in a command
+- `Http.get` 은 `리퀘스트` 를 만듭니다.
+- 이 리퀘스트를 `Http.send` 에 전달하여 커맨드로 만듭니다.
 
 ```elm
 collectionDecoder : Decode.Decoder (List Player)
@@ -58,7 +58,7 @@ collectionDecoder =
     Decode.list memberDecoder
 ```
 
-This decoder delegates the decoding of each member of a list to `memberDecoder`
+이 디코더는 리스트의 각 멤버를 `memberDecoder` 로 처리합니다.
 
 ```elm
 memberDecoder : Decode.Decoder Player
@@ -69,65 +69,65 @@ memberDecoder =
         (field "level" Decode.int)
 ```
 
-`memberDecoder` creates a JSON decoder that returns a `Player` record.
+`memberDecoder` 는 `Player` 를 리턴하는 JSON 디코더입니다.
 
 ---
-To understand how the decoder works let's play with the Elm repl.
+디코더 개념을 이해하기 위해 Elm repl 을 사용하겠습니다.
 
-In a terminal run `elm repl`. Import the Json.Decoder module:
+터미널에 `elm repl` 을 실행합니다. Json.Decoder 모듈을 임포트합니다:
 
 ```bash
 > import Json.Decode exposing (..)
 ```
 
-Then define a Json string:
+Json 문자열을 하나 선언합니다:
 
 ```bash
 > json = "{\"id\":99, \"name\":\"Sam\"}"
 ```
 
-And define a decoder to extract the `id`:
+`id` 를 추출할 디코더를 하나 만듭니다:
 
 ```bash
 > idDecoder = (field "id" int)
 ```
 
-This creates a decoder that given a string tries to extract the `id` key and parse it into a integer.
+Json 문자열을 파싱해서 `id` 를 정수형으로 가져오는 디코더입니다.
 
-Run this decoder to see the result:
+디코더를 사용해 봅시다:
 
 ```bash
 > result = decodeString idDecoder  json
 Ok 99 : Result.Result String Int
 ```
 
-We see `Ok 99` meaning that decoding was successful and we got 99. So this is what `(field "id" Decode.int)` does, it creates a decoder for a single key.
+`Ok 99` 는 디코딩에 성공했고 얻은 값은 99 라는 의미입니다. `(field "id" Decode.int)` 는 단일 키를 파싱하는 디코더를 만든 겁니다.
 
-This is one part of the equation. Now for the second part, define a type:
+한 단계는 넘었습니다. 이제 타입을 하나 선언해 봅니다:
 
 ```bash
 > type alias Player = { id: Int, name: String }
 ```
 
-In Elm you can create a record calling a type as a function. For example, `Player 1 "Sam"` creates a player record. Note that the order of parameters is significant like any other function.
+Elm 에서 레코드 타입은 함수처럼 사용 가능합니다. `Player 1 "Sam"` 와 같은 식으로 플레이어 레코드를 만들 수 있습니다. 인자의 순서는 속성의 순서를 따라갑니다.
 
-Try it:
+직접 해 봅시다:
 
 ```bash
 > Player 1 "Sam"
 { id = 1, name = "Sam" } : Repl.Player
 ```
 
-With these two concepts let's create a complete decoder:
+이제 두가지 원리를 알았으니 완전한 디코더를 만들 수 있습니다:
 
 ```bash
 > nameDecoder = (field "name" string)
 > playerDecoder = map2 Player idDecoder nameDecoder
 ```
 
-`map2` takes a function as first argument (Player in this case) and two decoders. Then it runs the decoders and passes the results as the arguments to the function (Player).
+`map2` 는 함수를 첫째 인자로 받고 (이 경우는 Player) 이후 디코더 둘을 인자로 받습니다. 내부적으로는 각 디코더를 실행하고 결과를 함수 (Player) 의 인자로 전달합니다.
 
-Try it:
+써 봅시다:
 ```bash
 > result = decodeString playerDecoder json
 Ok { id = 99, name = "Sam" } : Result.Result String Repl.Player
@@ -135,4 +135,4 @@ Ok { id = 99, name = "Sam" } : Result.Result String Repl.Player
 
 ---
 
-Remember that none of this actually executes until we send the command to __program__.
+커맨드가 __program__ 에 전달되기 전까지는 실제 실행되는 것은 없다는 걸 기억하세요.

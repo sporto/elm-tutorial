@@ -1,22 +1,22 @@
 > This page covers Elm 0.18
 
-# Plan
+# 계획
 
-The next step is to fetch the list of players from the fake API we created before.
+다음 단계는 앞에서 만든 API 로부터 플레이어 목록을 받아오는 겁니다.
 
-This is the plan:
+계획은 이러합니다:
 
 ![Plan](01-plan.png)
 
-(1-2) When the application loads, we trigger a command to initiate an Http request to fetch the players. This will be done in the `init` of Html.program.
+(1-2) 어플리케이션이 준비되는 동시에 플레이어들을 가져오는 Http 요청을 커맨드로 보냅니다. 이는 Html.program 의 `init` 에서 수행합니다.
 
-(3-6) When the request is done, we trigger a `FetchAllDone` with the data, this message flows down to `Players.Update` which updates the collection of players.
+(3-6) 요청이 해결되면 `FetchAllDone` 메시지가 데이터와 함께 호출되고, 이는 `Players.Update` 로 전달되어 플레이어 목록을 갱신하게 됩니다.
 
-(7-10) Then the application renders with the updated players' list.
+(7-10) 어플리케이션은 갱신된 플레이어 목록을 그립니다.
 
-## Dependencies
+## 의존성
 
-We will need the `http`, install it using:
+`http` 모듈이 필요하므로, 아래 명령으로 설치합니다:
 
 ```bash
 elm package install elm-lang/http

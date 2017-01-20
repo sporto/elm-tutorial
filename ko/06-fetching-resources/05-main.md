@@ -1,10 +1,10 @@
 > This page covers Elm 0.18
 
-# Main
+# 메인
 
-## Main Model
+## 메인 모델
 
-Remove the hardcoded list of players in __src/Models.elm__
+__src/Models.elm__ 의 하드코드된 플레이어 목록을 지웁니다
 
 ```elm
 initialModel : Model
@@ -13,11 +13,11 @@ initialModel =
     }
 ```
 
-## Main
+## 메인
 
-Finally, we want to run the `fetchAll` when starting the application.
+이제 어플리케이션 시작과 동시에 `fetchAll` 이 실행되도록 합니다.
 
-Update __src/Main.elm__:
+__src/Main.elm__ 을 수정합니다:
 
 ```elm
 ...
@@ -30,4 +30,4 @@ init =
     ( initialModel, Cmd.map PlayersMsg fetchAll )
 ```
 
-Now `init` returns a list of commands to run when the application starts.
+이제 어플리케이션 시작 시 `init` 에서 커맨드가 전달됩니다.
