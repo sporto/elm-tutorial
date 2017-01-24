@@ -48,6 +48,8 @@ Run:
 elm package install elm-lang/html
 ```
 
+After doing this there should be a file called __elm-package.json__ in the root of your project.
+
 ## Source directory
 
 We will be adding all our source code in the `src` folder, so we need to tell Elm where to search for dependencies. In __elm-package.json__ change:
