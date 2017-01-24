@@ -1,10 +1,10 @@
 > This page covers Elm 0.18
 
-# Players Commands
+# 플레이어 커맨드
 
-Next let's create the command to updated the player through our API.
+API 를 통해 플레이어를 업데이트하는 커맨드를 만듭니다.
 
-In __src/Players/Commands.elm__ add:
+__src/Players/Commands.elm__ 에 아래 내용을 추가합니다:
 
 ```elm
 import Json.Encode as Encode
@@ -48,7 +48,7 @@ memberEncoded player =
             |> Encode.object
 ```
 
-### Save request
+### 저장 요청 (Save request)
 
 ```elm
 saveRequest : Player -> Http.Request Player
@@ -64,11 +64,11 @@ saveRequest player =
         }
 ```
 
-➊ Here we encode the given player and then convert the encoded value to a JSON string
-➋ Here we specify how to parse the response, in this case we want to parse the returned JSON back into an Elm value.
-➌ `PATCH` is the http method that our API expects when updating records.
+➊ 주어진 플레이어를 JSON 문자열로 인코드합니다.
+➋ 돌아오는 응답을 어떻게 파싱할지 지정합니다. 현재는 돌아온 JSON 데이터를 Elm 값으로 디코딩합니다.
+➌ `PATCH` 는 우리 API 에서 레코드의 업데이트를 위해 제공하는 http 메소드입니다.
 
-### Save
+### 저장
 
 ```elm
 save : Player -> Cmd Msg
@@ -77,7 +77,5 @@ save player =
         |> Http.send OnSave ➋
 ```
 
-Here we create the save request ➊ and then generate a command to send the request using `Http.send` ➋. 
-`Http.send` takes a message constructor (`OnSave` in this case). After the request is done, Elm will trigger the `OnSave` message with the response for the request.
-
-
+`Http.send` ➋ 를 사용해 앞에서 만든 메시지와 저장 요청 ➊ 을 엮어 커맨드로 만듭니다.
+`Http.send` 는 메시지 생성자 (이 경우 `OnSave`) 를 인자로 받습니다. 요청이 처리되면, Elm 에서 요청의 결과를 `OnSave` 에 담아 호출합니다.

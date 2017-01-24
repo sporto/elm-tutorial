@@ -1,10 +1,10 @@
 > This page covers Elm 0.18
 
-# Messages
+# 메시지
 
-Let's start by adding the messages we will need.
+필요한 메시지부터 추가해 봅시다.
 
-In __src/Players/Messages.elm__ add:
+__src/Players/Messages.elm__ 에 추가합니다:
 
 ```elm
 type Msg
@@ -13,6 +13,6 @@ type Msg
     | OnSave (Result Http.Error Player)
 ```
 
-- `ChangeLevel` will trigger when the user wants to change the level. The second parameter is an integer that indicates how much to change the level e.g. -1 to decrease or 1 to increase.
-- Then we will send a request to update the player to the API. `OnSave` will be triggered after the response from the API is received.
-- `OnSave` will either carry the updated player on success or the Http error on failure.
+- `ChangeLevel` 은 사용자가 레벨 변경을 시도할 때 생성됩니다. 두번째 인자는 레벨이 얼만큼 변경되어야 하는지를 가리키는 정수입니다. (예: -1 은 감소, 1 은 증가)
+- 이후 API 에 플레이어 업데이트 요청을 보냅니다. API 에서 응답이 오면 `OnSave` 가 호출됩니다.
+- `OnSave` 는 성공인 경우 업데이트된 플레이어를, 실패인 경우 Http 에러 객체를 포함합니다.
