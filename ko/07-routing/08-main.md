@@ -1,10 +1,10 @@
 > This page covers Elm 0.18
 
-# Main
+# 메인
 
-Finally we need to wire everything in the Main module.
+이제 메인 모듈에서 전부 엮어 봅시다.
 
-Change __src/Main.elm__ to:
+__src/Main.elm__ 를 변경합니다:
 
 ```elm
 module Main exposing (..)
@@ -44,11 +44,11 @@ main =
 
 ---
 
-### New imports
+### 새로운 임포트
 
-We added imports for `Navigation` and `Routing`.
+`Navigation` 과 `Routing` 을 추가했습니다.
 
-### Init
+### 초기화
 
 ```elm
 init : Location -> ( Model, Cmd Msg )
@@ -60,8 +60,8 @@ init location =
         ( initialModel currentRoute, Cmd.map PlayersMsg fetchAll )
 ```
 
-Our init function will now take an initial `Location` from the `Navigation`. We parse this `Location` using the `parseLocation` function we created before. Then we store this initial __route__ in our model.
+이제 init 함수는 `Navigation` 으로부터 전달된 `Location` 을 받습니다. 이 `Location` 을 파싱하기 위해 이전에 만든 `parseLocation` 함수를 사용했고, 리턴된 __route__ 는 모델에 저장합니다.
 
 ### main
 
-`main` now uses `Navigation.program` instead of `Html.program`.  `Navigation.program` wraps `Html.program` but also triggers a message when the browser location changes. In our case this message will be `OnLocationChange`.
+`main` 은 이제 `Html.program` 이 아닌 `Navigation.program` 을 사용합니다. `Navigation.program` 은 `Html.program` 을 감싸고 브라우저 경로 변경 시 메시지를 발생시킵니다. 이 앱에서는 `OnLocationChange` 가 그 메시지입니다.

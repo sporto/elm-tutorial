@@ -1,10 +1,10 @@
 > This page covers Elm 0.18
 
-# Player edit view
+# 플레이어 편집 뷰
 
-We need a new view to show when hitting `/players/3`.
+이제 `/players/3` 를 클릭 했을 때 사용할 새로운 뷰가 필요합니다.
 
-Create __src/Players/Edit.elm__:
+__src/Players/Edit.elm__ 를 만듭니다:
 
 ```elm
 module Players.Edit exposing (..)
@@ -63,9 +63,4 @@ btnLevelIncrease player =
         [ i [ class "fa fa-plus-circle" ] [] ]
 ```
 
-This view shows a form with the player's level. At the moment we have some dummy buttons that will be implemented later e.g. `btnLevelIncrease`.
-
-
-
-
-
+이 뷰는 플레이어의 레벨을 편집 가능한 형태로 보여줍니다. `btnLevelIncrease` 와 같은 버튼의 구현은 뒤에서 다루겠습니다.

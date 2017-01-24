@@ -1,12 +1,12 @@
 > This page covers Elm 0.18
 
-# Navigation
+# 이동
 
-Next let's add buttons to navigate between views.
+뷰 간에 이동 가능하도록 버튼을 추가해 봅시다.
 
-## EditPlayer message
+## EditPlayer 메시지
 
-Change __src/Players/Messages.elm__ to include two new actions:
+__src/Players/Messages.elm__ 에 새 메시지 둘을 추가합니다:
 
 ```elm
 ...
@@ -17,19 +17,19 @@ type Msg
     | ShowPlayer PlayerId
 ```
 
-We added `ShowPlayers` and `ShowPlayer`.
+`ShowPlayers` 와 `ShowPlayer` 를 추가했습니다.
 
-## Players List
+## 플레이어 리스트
 
-The players' list needs to show a button for each player to trigger the `ShowPlayer` message.
+플레이어 리스트에는 플레이어 별로 `ShowPlayer` 메시지를 보낼 수 있는 버튼이 필요합니다.
 
-In __src/Players/List.elm__. First add `Html.Events`:
+__src/Players/List.elm__ 에서 `Html.Events` 를 임포트합니다:
 
 ```elm
 import Html.Events exposing (onClick)
 ```
 
-Add a new function for this button at the end:
+버튼을 위한 함수를 맨 아래 추가합니다:
 
 ```elm
 editBtn : Player -> Html Msg
@@ -41,9 +41,9 @@ editBtn player =
         [ i [ class "fa fa-pencil mr1" ] [], text "Edit" ]
 ```
 
-Here we trigger `ShowPlayer` with the id of the player that we want to edit.
+편집할 플레이어 아이디를 `ShowPlayer` 메시지에 담아 생성하고 있습니다.
 
-And change `playerRow` to include this button:
+`playerRow` 에 이 버튼을 추가합니다:
 
 ```elm
 playerRow : Player -> Html Msg
@@ -57,17 +57,17 @@ playerRow player =
         ]
 ```
 
-## Player Edit
+## 플레이어 편집
 
-Let's add the navigation button to the edit view. In __/src/Players/Edit.elm__:
+편집 화면에도 이동 버튼을 추가합시다. __/src/Players/Edit.elm__ 에서:
 
-Add one more import:
+임포트를 추가합니다:
 
 ```elm
 import Html.Events exposing (onClick)
 ```
 
-Add a new function at the end for the list button:
+리스트로 가는 버튼 함수를 마지막에 추가합니다:
 
 ```elm
 listBtn : Html Msg
@@ -79,9 +79,9 @@ listBtn =
         [ i [ class "fa fa-chevron-left mr1" ] [], text "List" ]
 ```
 
-Here we send the `ShowPlayers` when the button is clicked.
+버튼을 클릭하면 `ShowPlayers` 메시지를 보내도록 했습니다.
 
-And add this button to the list, change the `nav` function to:
+`nav` 함수를 변경하여 버튼을 추가합니다:
 
 ```elm
 nav : Player -> Html Msg
@@ -90,15 +90,15 @@ nav model =
         [ listBtn ]
 ```
 
-## Players Update
+## 플레이어 업데이트
 
-Finally, __src/Players/Update.elm__ needs to respond to the new messages.
+__src/Players/Update.elm__ 에서도 새 메시지에 대한 처리가 필요합니다.
 
 ```elm
 import Navigation
 ```
 
-And add two new branches to the case expression:
+case 구문에 두 분기를 추가합니다:
 
 ```elm
 update : Msg -> List Player -> ( List Player, Cmd Msg )
@@ -113,10 +113,10 @@ update message players =
             ( players, Navigation.newUrl ("#players/" ++ id) )
 ```
 
-`Navigation.newUrl` returns a command. When this command is run by Elm the location of the browser will change.
+`Navigation.newUrl` 은 커맨드를 리턴합니다. Elm 에서 이 커맨드를 수행하면 브라우저의 경로가 변경됩니다.
 
-## Test it
+## 테스트
 
-Go to the list `http://localhost:3000/#players`. You should now see an Edit button, upon clicking it the location should change to the edit view.
+`http://localhost:3000/#players` 로 갑니다. Edit 버튼을 누르면 편집 뷰로 이동할 겁니다.
 
-Up to this point your application code should look <https://github.com/sporto/elm-tutorial-app/tree/018-07-navigation>.
+현재까지의 코드는 다음과 같습니다. <https://github.com/sporto/elm-tutorial-app/tree/018-07-navigation>

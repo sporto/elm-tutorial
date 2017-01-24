@@ -1,5 +1,5 @@
-# Routing
+# 라우팅
 
-This chapter covers adding routing to our application. 
+이번 장에서는 어플리케이션에 라우팅을 추가합니다.
 
-Up to this point the application code looks like <https://github.com/sporto/elm-tutorial-app/tree/018-05-fetch>
+현재까지 진행한 코드는 <https://github.com/sporto/elm-tutorial-app/tree/018-05-fetch> 에서도 볼 수 있습니다.

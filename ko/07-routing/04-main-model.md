@@ -1,9 +1,9 @@
 > This page covers Elm 0.18
 
-# Main model
+# 메인 모델
 
-In our main application model we want to store the current route.
-Change __src/Models.elm__ to:
+현재 루트를 메인 어플리케이션 모델에 저장할 겁니다.
+__src/Models.elm__ 을 변경합니다:
 
 ```elm
 module Models exposing (..)
@@ -25,7 +25,7 @@ initialModel route =
     }
 ```
 
-Here we:
+여기서는:
 
-- added `route` to the model
-- changed `initialModel` so it takes a `route`
+- `route` 를 모델에 추가했습니다.
+- `initialModel` 이 `route` 를 받도록 했습니다.
