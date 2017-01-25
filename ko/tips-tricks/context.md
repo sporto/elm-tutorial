@@ -1,6 +1,6 @@
-# Contexts
+# 감싸기
 
-Typical `update` or `view` functions look like:
+일반적으로 `update` 나 `view` 함수는 이렇게 생겼습니다:
 
 ```elm
 view : Model -> Html Msg
@@ -8,7 +8,7 @@ view model =
   ...
 ```
 
-Or
+혹은
 
 ```elm
 update : Msg -> Model -> (Model, Cmd Msg)
@@ -16,7 +16,7 @@ update message model =
   ...
 ```
 
-It is very easy to get stuck in thinking that you need to pass only the `Model` that belongs to this component. Sometimes you need extra information and is perfectly fine to ask for it. For example:
+이 컴포넌트에 속하는 `Model` 만을 인자로 사용해야 한다는 생각에 갇히기 쉽습니다. 가끔은 부가적인 정보가 필요할 때도 있고 이는 물론 가능합니다. 예를 들면:
 
 ```elm
 type alias Context =
@@ -29,5 +29,4 @@ view context =
   ...
 ```
 
-This function asks for the component model plus a `time` which is defined in its parent's model.
-
+이 함수는 컴포넌트의 모델에 추가적으로 부모의 모델로부터 `time` 을 받습니다.

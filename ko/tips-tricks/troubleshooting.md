@@ -1,3 +1,3 @@
-# Troubleshooting
+# 문제 해결
 
-If you find some weird compiler behaviour during development try deleting `elm-stuff/build-artifacts` and compiling again, this usually fixes several issues.
+개발 중 컴파일러가 아무래도 이상하게 동작하는 것 같다면 `elm-stuff/build-artifacts` 를 지우고 다시 컴파일해 보세요. 어지간한 경우 해결됩니다.

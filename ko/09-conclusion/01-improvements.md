@@ -1,40 +1,40 @@
-# Improvements
+# 개선점
 
-Here is a list of possible improvement you can try on this app.
+우리 앱에 적용해 볼 만한 개선점 목록입니다.
 
-## Create and delete players
+## 플레이어 생성과 삭제
 
-I have left this off in order to keep the tutorial short, definitely an important feature.
+튜토리얼을 짧게 유지하기 위해 생략했지만, 매우 중요한 기능입니다.
 
-## Change the name of a player
+## 플레이어 이름 변경
 
-## Show an error message when an Http request fails
+## Http 요청 실패 시 에러 표시
 
-At the moment if fetching or saving players fail we do nothing. It would be nice to show an error message to the user.
+현재 플레이어를 가져오거나 저장하는 데 실패하는 경우 딱히 하는 일이 없습니다. 사용자에게 에러 메시지를 보여 줄 수 있다면 좋을 겁니다.
 
-## Even better error messages
+## 더 나은 에러 메시지
 
-Even better than just showing error messages it would be great to:
+에러 메시지를 그냥 보여주기만 하는 것보다 더 좋은 것은:
 
-- Show different types of flash messages e.g. error and info
-- Show several flash messages at the same time
-- Have the ability to dismiss a message
-- Remove a message automatically after a few seconds
+- 메시지를 타입별로 표시 (예: 에러, 정보 등)
+- 동시에 여러 메시지 표시 가능
+- 메시지 닫기 가능
+- 메시지가 몇 초 지나면 자동으로 사라짐
 
-## Optimistic updates
+## 긍정적 (Optimistic) 업데이트
 
-At the moment all update functions are pesimistic. Meaning that they don't change the models until there is a succesful response from the server. One big improvement to the application would be to add optimistic creation, update and deletion. But this will also mean better error handling.
+현재 모든 업데이트 함수는 비관적입니다. 서버로부터 성공적인 응답을 받을 때까지 모델을 변경하지 않는다는 이야기지요. 긍정적인 생성, 업데이트, 삭제 기능을 넣는다면 큰 개선점이 될 것입니다. 하지만 더 나은 에러 처리도 필요하겠죠.
 
-## Validations
+## 유효성 검사 (Validations)
 
-We should avoid having players without name. One nice feature would be to have a validation on the player's name so it cannot be empty.
+이름이 없는 플레이어는 피해야겠죠. 플레이어 이름이 빈 값이 될 수 없도록 유효성 검사를 한다면 좋은 기능이 될 겁니다.
 
-## Add perks and bonuses
+## 특징과 보너스 추가
 
-We can add a list of perks that a player can have. These perk would be equipment, apparel, scrolls, accessories, etc. e.g. "Steel sword" would be one. Then we would have associations between players and perks.
+플레이어가 갖는 특징의 목록을 만들 수 있을 겁니다. 특징은 장비, 의복, 스크롤, 액세서리 같은 겁니다. (예: "강철 검" 등) 그러면 플레이어와 특징간 연결도 지을 수 있을 겁니다.
 
-Each perk would have a bonus associated with it. Then players will have a calculated strength that is their level plus all the bonuses they have.
+각 특징은 연관 보너스를 가집니다. 플레이어는 각자의 레벨에 보너스의 총합을 더하는 식으로 위력을 계산할 수 있습니다.
 
 ---
 
-For a more featured version of this application see the master branch of <https://github.com/sporto/elm-tutorial-app>.
+기능이 추가된 버전의 앱은 이곳의 마스터 브랜치를 참조하세요. <https://github.com/sporto/elm-tutorial-app>

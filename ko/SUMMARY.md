@@ -60,9 +60,9 @@
    * [플레이어 편집](08-edit/03-player-edit.md)
    * [커맨드](08-edit/04-commands.md)
    * [업데이트](08-edit/05-update.md)
-* [Conclusion](09-conclusion/cover.md)
-   * [Improvements](09-conclusion/01-improvements.md)
-* Tips and Tricks
-   * [Context](tips-tricks/context.md)
-   * [Point free style](tips-tricks/point-free-style.md)
-   * [Troubleshooting](tips-tricks/troubleshooting.md)
+* [마무리](09-conclusion/cover.md)
+   * [개선점](09-conclusion/01-improvements.md)
+* 팁과 트릭
+   * [감싸기](tips-tricks/context.md)
+   * [포인트 프리 스타일](tips-tricks/point-free-style.md)
+   * [문제 해결](tips-tricks/troubleshooting.md)

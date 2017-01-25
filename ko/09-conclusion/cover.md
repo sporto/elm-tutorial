@@ -1,7 +1,7 @@
-# Conclusion
+# 마무리
 
-This concludes this tutorial but keep reading for some ideas on improvements and features.
+튜토리얼은 끝났습니다. 하지만 몇가지 개선과 기능추가에 대한 내용이 있으니 한번 읽어 보세요.
 
-I would like to hear your feedback to improve this tutorial. Please open issues at <https://github.com/sporto/elm-tutorial>.
+저는 이 튜토리얼을 개선하는 데 항상 귀를 기울이고 있습니다. <https://github.com/sporto/elm-tutorial> 에 이슈를 열어 주세요.
 
-Thanks!
+감사합니다!
