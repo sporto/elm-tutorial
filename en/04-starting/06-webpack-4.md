@@ -30,7 +30,7 @@ Install Node Foreman:
 npm install -g foreman
 ```
 
-The create a file called `Procfile` in the root of the project with:
+Then create a file called `Procfile` in the root of the project with:
 
 ```
 api: npm run api

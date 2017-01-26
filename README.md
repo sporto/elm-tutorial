@@ -19,10 +19,10 @@ Please open issues and send PRs at <https://github.com/sporto/elm-tutorial>.
 
 ## Translations
 
-* French translation by Vincent Jousse [@vjousse](https://twitter.com/intent/user?screen_name=vjousse) and Augustin Ragon [@augustin82](https://twitter.com/intent/user?screen_name=augustin82)
-* Japanese translation by UEHARA Junji [@uehaj](https://twitter.com/intent/user?screen_name=uehaj)
-* 中文(繁體) translation by Jih-Chi Lee [@jihchi](https://github.com/jihchi)
-* Korean translation by Remi Gil [@remigil](https://github.com/remigil)
+* French translation by Vincent Jousse [@vjousse](https://twitter.com/intent/user?screen_name=vjousse) and Augustin Ragon [@augustin82](https://twitter.com/intent/user?screen_name=augustin82).
+* Japanese translation by UEHARA Junji [@uehaj](https://twitter.com/intent/user?screen_name=uehaj).
+* 中文(繁體) translation by Jih-Chi Lee [@jihchi](https://github.com/jihchi).
+* Korean translation by Remi Gil [@remigil](https://github.com/remigil).
 
 ---
 
