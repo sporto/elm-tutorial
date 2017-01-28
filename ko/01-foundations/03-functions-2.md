@@ -1,24 +1,24 @@
-# More on functions
+# 함수 더 알아보기
 
-## Type variables
+## 타입 변수
 
-Consider a function with a type signature like:
+어떤 함수가 다음 타입 시그내쳐를 가지고:
 
 ```elm
 indexOf : String -> List String -> Int
 ```
 
-This hypothetical function takes a string and a list of strings and returns the index where the given string was found in the list or -1 if not found.
+문자열과 문자열 리스트를 인자로 받아 리스트 내에 인자로 전달된 문자열과 같은 것이 있으면 그 인덱스를, 없다면 -1 를 리턴하는 함수라고 가정합시다.
 
-But what if we instead have a list of integers? We wouldn't be able to use this function. However, we can make this function __generic__ by using __type variables__ or __stand-ins__ instead of specific types.
+그런데 문자열이 아니라 정수 리스트를 가진 상황에선 이 함수를 쓰기 곤란하겠죠. 다행히 우리는 특정 타입 대신 __타입 변수__ 혹은 __스탠드-인__ 이라 불리는 기능을 써서 이 함수를 __범용적 (generic)__ 으로 만들 수 있습니다.
 
 ```elm
 indexOf : a -> List a -> Int
 ```
 
-By replacing `String` with `a`, the signature now says that `indexOf` takes a value of any type `a` and a list of that same type `a` and returns an integer. As long as the types match the compiler will be happy. You can call `indexOf` with a `String` and a list of `String`, or an `Int` and a list of `Int`, and it will work.
+`String` 을 `a` 로 바꾸면, 이 타입 시그내쳐는 타입 `a` 와 타입 `a` 의 리스트를 인자로 받고 정수를 리턴하는 함수 `indexOf` 라는 의미를 갖습니다. 타입 형태만 같다면 컴파일에는 문제가 없습니다. `String` 과 `String` 의 리스트로 호출하는 것도, `Int` 와 `Int` 의 리스트로 호출하는 것도 가능합니다.
 
-This way functions can be made more generic. You can have several __type variables__ as well:
+범용성을 더 높일 수 있습니다. __타입 변수__ 를 여러개 써도 됩니다:
 
 ```elm
 switch : ( a, b ) -> ( b, a )
@@ -26,7 +26,7 @@ switch ( x, y ) =
   ( y, x )
 ```
 
-This function takes a tuple of types `a`, `b` and returns a tuple of types `b`, `a`. All these are valid calls:
+이 함수는 타입 `a`, `b` 로 이루어진 튜플을 받아 타입 `b`, `a` 의 튜플을 리턴합니다. 아래 전부 유효한 호출입니다:
 
 ```elm
 switch (1, 2)
@@ -34,43 +34,43 @@ switch ("A", 2)
 switch (1, ["B"])
 ```
 
-Note that any lowercase identifier can be used for type variables, `a` and `b` are just a common convention. For example the following signature is perfectly valid:
+타입 변수는 소문자로 써야 하고, `a` 나 `b` 등이 관례적으로 사용됩니다. 다음 형식도 충분히 가능합니다:
 
 ```
 indexOf : thing -> List thing -> Int
 ```
 
-## Functions as arguments
+## 인자로 전달되는 함수
 
-Consider a signature like:
+이런 시그내쳐가 있을 때:
 
 ```elm
 map : (Int -> String) -> List Int -> List String
 ```
 
-This function:
+이 함수는:
 
-- takes a function: the `(Int -> String)` part
-- a list of integers
-- and returns a list of strings
+- 함수를 인자로 받고: `(Int -> String)` 부분
+- 정수 리스트를 인자로 받으며
+- 문자열 리스트를 리턴합니다.
 
-The interesting part is the `(Int -> String)` fragment. This says that a function must be given conforming to the `(Int -> String)` signature.
+흥미로운 부분은 `(Int -> String)` 으로, 인자로 전달받는 함수가 `(Int -> String)` 시그내쳐를 만족해야 한다는 이야기입니다.
 
-For example, `toString` from core is such function. So you could call this `map` function like:
+코어 라이브러리의 `toString` 은 이를 만족하므로, `map` 함수에 사용 가능합니다:
 
 ```elm
 map toString [1, 2, 3]
 ```
 
-But `Int` and `String` are too specific. So most of the time you will see signatures using stand-ins instead:
+사실 `Int` 와 `String` 은 너무 제한적입니다. 대부분의 경우 타입 변수를 사용한 시그내쳐일 겁니다:
 
 ```elm
 map : (a -> b) -> List a -> List b
 ```
 
-This function maps a list of `a` to a list of `b`. We don't really care what `a` and `b` represent as long as the given function in the first argument uses the same types.
+`a` 타입 리스트를 `b` 타입 리스트로 매핑하는 함수입니다. 사실 첫 인자로 전달되는 함수와 사용되는 타입이 같느냐가 중요하지 `a` 와 `b` 가 어떤 타입인지가 중요한 것은 아닙니다.
 
-For example, given functions with these signatures:
+그러면 이렇게 다양한 시그내쳐를 가진 함수들 모두를:
 
 ```elm
 convertStringToInt : String -> Int
@@ -78,7 +78,7 @@ convertIntToString : Int -> String
 convertBoolToInt : Bool -> Int
 ```
 
-We can call the generic map like:
+범용적으로 map 을 통해 사용 가능합니다:
 
 ```elm
 map convertStringToInt ["Hello", "1"]
