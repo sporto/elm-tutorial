@@ -48,7 +48,7 @@ Here we define how a player record looks. It has an id, a name and a level.
 Also note the definition for `PlayerId`, it is just an alias to `String`, doing this is useful for clarity later on when we have function that takes many ids. For example:
 
 ```elm
-addPerkToPlayer : Int -> Int -> Player
+addPerkToPlayer : Int -> String -> Player
 ```
 
 is much clearer when written as:
