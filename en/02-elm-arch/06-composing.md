@@ -2,7 +2,33 @@
 
 # Composing
 
-One of the big benefits of using the Elm architecture is the way it handles composition of components. To understand this, let's build an example:
+The following pages explain a composition pattern in Elm where you split your messages, models and views in logical groups. 
+
+It looks like:
+
+```
+Root
+  - Model
+  - Messages
+  - Update
+  - Views
+
+  Group
+    - Model
+    - Messages
+    - Update
+    - Views
+```
+
+`Group` in this case could be a resource (e.g. users), a UI element (e.g. a dropdown), a sub application.
+
+## Use with care
+
+In general it is recommended that you keep your *models* and *messages* shallow. This allows to have less boilerplate when working with Elm. Don't think in term of "components" in Elm. It is better to think about views on one side and messages and models on another, not necessarily coupled.
+
+## Composition with the Elm Architecture
+
+Sometimes we still want to compose like this. To understand how this works, let's build an example:
 
 - We will have a parent component `App`
 - And a child component `Widget`

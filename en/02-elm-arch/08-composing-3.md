@@ -48,9 +48,6 @@ Here are two diagrams that illustrate this architecture:
 
 (8) __program__ then renders the view again passing the updated main model
 
-## Key points
+---
 
-- The Elm architecture offers a clean way to compose (or nest) components at as many levels as you need.
-- A child component does not need to know anything about its parent. Child components define their own types and messages.
-- If a child component needs something in particular (e.g. an additional model) it "asks" for it by using the function signatures. The parent is responsible for providing what the children need.
-- A parent doesn't need to know what is in its children's models, or what their messages are.  It only needs to provide what its children ask.
+Again, don't reach for this initially as a way to organise your application as "components". If you do this too soon you will end up with plently of boilerplate.
