@@ -34,7 +34,6 @@
    * [Models](05-resources/02-models.md)
    * [Main](05-resources/03-main.md)
    * [Players list](05-resources/04-players-list.md)
-   * [Main modules](05-resources/04-main-mods.md)
    * [Main view](05-resources/05-main-view.md)
 * [Fetching](06-fetching-resources/cover.md)
    * [Plan](06-fetching-resources/01-plan.md)
