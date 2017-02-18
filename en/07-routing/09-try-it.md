@@ -1,3 +1,5 @@
+> This page covers Tutorial v2. Elm 0.18.
+
 # Try it
 
 Let's try what we have so far. Run the application by doing:

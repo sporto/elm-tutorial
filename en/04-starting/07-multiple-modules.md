@@ -1,4 +1,4 @@
-> This page covers Elm 0.18
+> This page covers Tutorial v2. Elm 0.18.
 
 # Multiple modules
 
@@ -132,7 +132,7 @@ main =
         }
 ```
 
-You can find the code here <https://github.com/sporto/elm-tutorial-app/tree/018-03-multiple-modules>
+You can find the code here <https://github.com/sporto/elm-tutorial-app/tree/018-v02-03-multiple-modules>
 
 ---
 

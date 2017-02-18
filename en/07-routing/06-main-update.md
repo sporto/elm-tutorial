@@ -1,4 +1,4 @@
-> This page covers Elm 0.18
+> This page covers Tutorial v2. Elm 0.18.
 
 # Main update
 

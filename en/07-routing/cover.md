@@ -1,3 +1,5 @@
+> This page covers Tutorial v2. Elm 0.18.
+
 # Routing
 
 This chapter covers adding routing to our application. 

@@ -1,3 +1,5 @@
+> This page covers Tutorial v2. Elm 0.18.
+
 # Fetching resources
 
 This chapter covers fetching the players' collection from the fake API.

@@ -1,0 +1,31 @@
+@startuml
+
+autonumber "<b>(#)"
+
+participant Browser #white
+participant Navigation #white
+participant init #white
+participant update #white
+participant parseLocation #white
+participant View #white
+
+Navigation -> init : Current location
+init -> parseLocation : Location
+parseLocation --> init : Matched Route
+init --> Navigation : Initial model
+Navigation -> View : Model
+View --> Navigation : Rendered view
+
+newpage
+
+autonumber 1 "<b>(#)"
+Browser -> Navigation : Location change event
+Navigation -> update : OnLocationChange
+update -> parseLocation : Location
+parseLocation --> update : Matched Route
+update --> Navigation : Updated model
+Navigation -> View : Model
+View --> Navigation : Rendered view
+
+@enduml
+

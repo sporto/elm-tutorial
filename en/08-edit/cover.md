@@ -1,3 +1,5 @@
+> This page covers Tutorial v2. Elm 0.18.
+
 # Edit
 
 In this last chapter of the tutorial we will edit a player's level and save it to the backend.
