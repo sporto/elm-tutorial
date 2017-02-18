@@ -4,19 +4,12 @@ autonumber "<b>(#)"
 
 participant program #white
 participant init #white
-participant Main.Update as MU #white
-participant Main.View as MV #white
-participant Players.Update as PU #white
-participant Players.List as PL #white
+participant Update #white
+participant View #white
 
 program -> init
-init --> program : fetchAll
-program -> MU : (model, PlayersMsg (FetchAllDone players))
-MU -> PU : (currentPlayers, FetchAllDone players)
-PU --> MU : Updated players' collection
-MU --> program : Updated app model
-program -> MV : App model
-MV -> PL : Players
-PL --> MV :Rendered view
-MV --> program : Rendered view
+init --> program : fetchPlayers
+program -> Update : (model, OnFetchPlayers response)
+Update --> program : updated model with response
+program -> View : model
 @enduml

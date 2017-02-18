@@ -10,14 +10,18 @@ This is the plan:
 
 (1-2) When the application loads, we trigger a command to initiate an Http request to fetch the players. This will be done in the `init` of Html.program.
 
-(3-6) When the request is done, we trigger a `FetchAllDone` with the data, this message flows down to `Players.Update` which updates the collection of players.
+(3-4) When the request is done, we trigger a `OnFetchPlayers` with the response, this message flows to `Update` which updates the model by storing the response.
 
-(7-10) Then the application renders with the updated players' list.
+(5) Then the application renders with the updated players' list.
 
 ## Dependencies
 
-We will need the `http`, install it using:
+We will need a few new packages, install them using:
 
 ```bash
-elm package install elm-lang/http
+elm package install elm-lang/http NoRedInk/elm-decode-pipeline krisajenkins/remotedata
 ```
+
+- `elm-lang/http` is used for sending http requests.
+- `NoRedInk/elm-decode-pipeline` offers and alternative and cleaner API for decoding JSON.
+- `krisajenkins/remotedata` offers a robust pattern for handling remote resources, we will more about this later.
