@@ -9,20 +9,20 @@ module Players.List exposing (..)
 
 import Html exposing (..)
 import Html.Attributes exposing (class)
-import Players.Messages exposing (..)
-import Players.Models exposing (Player)
+import Msgs exposing (Msg)
+import Models exposing (Player)
 
 
 view : List Player -> Html Msg
 view players =
     div []
-        [ nav players
+        [ nav
         , list players
         ]
 
 
-nav : List Player -> Html Msg
-nav players =
+nav : Html Msg
+nav =
     div [ class "clearfix mb2 white bg-black" ]
         [ div [ class "left p2" ] [ text "Players" ] ]
 

@@ -2,13 +2,13 @@
 
 # Main
 
-Finally modify __src/Main.elm__ to call `initialModel`:
+We want to use the `initialModel` we created before. Modify __src/Main.elm__ to use this:
 
 ```elm
 module Main exposing (..)
 
-import Html exposing (Html, div, text, program)
-import Messages exposing (Msg)
+import Html exposing (program)
+import Msgs exposing (Msg)
 import Models exposing (Model, initialModel)
 import Update exposing (update)
 import View exposing (view)
@@ -23,7 +23,10 @@ subscriptions : Model -> Sub Msg
 subscriptions model =
     Sub.none
 
+
+
 -- MAIN
+
 
 main : Program Never Model Msg
 main =
@@ -36,12 +39,3 @@ main =
 ```
 
 Here we added `initialModel` in the import and `init`.
-
----
-
-When you run the application you should see a list with one user.
-
-![Screenshot](screenshot.png)
-
-The application should look like <https://github.com/sporto/elm-tutorial-app/tree/018-04-resources>
-
