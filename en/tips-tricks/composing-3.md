@@ -6,7 +6,7 @@ Here are two diagrams that illustrate this architecture:
 
 ### Initial render
 
-![Flow](06-composing.png)
+![Flow](composing-3.png)
 
 (1) __program__ calls __Main.initialModel__ to get the initial model for the application
 
@@ -30,7 +30,7 @@ Here are two diagrams that illustrate this architecture:
 
 ### User interaction
 
-![Flow](06-composing_001.png)
+![Flow](composing-3_001.png)
 
 (1) User clicks on the increase button
 

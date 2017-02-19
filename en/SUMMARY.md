@@ -15,9 +15,6 @@
    * [Messages](02-elm-arch/03-messages.md)
    * [Application flow](02-elm-arch/04-flow.md)
    * [Messages with payload](02-elm-arch/05-msg-payload.md)
-   * [Composing](02-elm-arch/06-composing.md)
-   * [Composing - Parent](02-elm-arch/07-composing-2.md)
-   * [Composing - Flow](02-elm-arch/08-composing-3.md)
 * [Subscriptions and commands](03-subs-cmds/cover.md)
    * [Subscriptions](03-subs-cmds/01-subs.md)
    * [Commands](03-subs-cmds/02-commands.md)
@@ -66,5 +63,7 @@
 * Tips and Tricks
    * [Context](tips-tricks/context.md)
    * [Point free style](tips-tricks/point-free-style.md)
+   * [Composing](tips-tricks/composing-1.md)
+   * [Composing - Parent](tips-tricks/composing-2.md)
+   * [Composing - Flow](tips-tricks/composing-3.md)
    * [Troubleshooting](tips-tricks/troubleshooting.md)
-
