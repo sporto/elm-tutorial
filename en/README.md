@@ -30,6 +30,7 @@ For this tutorial you will need:
 
 - Elm version 0.18 (Installation is covered later in the tutorial)
 - Node JS version 4 +
+- Yarn package manager <https://yarnpkg.com/en/>
 
 ## Contributing
 

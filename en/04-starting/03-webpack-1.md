@@ -23,7 +23,7 @@ You will need Node JS version 4 or more for these libraries to work as expected.
 Install webpack and associated packages:
 
 ```bash
-npm i webpack@1 webpack-dev-middleware@1 webpack-dev-server@1 elm-webpack-loader@4 file-loader@0 style-loader@0 css-loader@0 url-loader@0 -S
+yarn add webpack webpack-dev-middleware webpack-dev-server elm-webpack-loader file-loader style-loader css-loader url-loader
 ```
 
 This tutorial is using __webpack__ version __1.13__ and __elm-webpack-loader__ version __4.1__.
@@ -36,7 +36,7 @@ We also want to use a couple of extra libraries:
 - [FontAwesome](https://fortawesome.github.io/Font-Awesome/) for icons
 
 ```bash
-npm i ace-css@1 font-awesome@4 -S
+yarn add ace-css@1.1 font-awesome@4
 ```
 
 ## Webpack config
@@ -59,10 +59,10 @@ module.exports = {
   },
 
   module: {
-    loaders: [
+    rules: [
       {
         test: /\.(css|scss)$/,
-        loaders: [
+        use: [
           'style-loader',
           'css-loader',
         ]
@@ -70,12 +70,12 @@ module.exports = {
       {
         test:    /\.html$/,
         exclude: /node_modules/,
-        loader:  'file?name=[name].[ext]',
+        loader:  'file-loader?name=[name].[ext]',
       },
       {
         test:    /\.elm$/,
         exclude: [/elm-stuff/, /node_modules/],
-        loader:  'elm-webpack?verbose=true&warn=true',
+        loader:  'elm-webpack-loader?verbose=true&warn=true',
       },
       {
         test: /\.woff(2)?(\?v=[0-9]\.[0-9]\.[0-9])?$/,
@@ -94,6 +94,7 @@ module.exports = {
     inline: true,
     stats: { colors: true },
   },
+
 
 };
 ```

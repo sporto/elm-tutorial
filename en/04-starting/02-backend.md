@@ -9,7 +9,7 @@ We will need a backend for our application, we can use __json-server__ for this.
 Start a new node project:
 
 ```bash
-npm init
+yarn init
 ```
 
 Accept all the defaults.
@@ -17,7 +17,7 @@ Accept all the defaults.
 Install __json-server__:
 
 ```bash
-npm i json-server@0.9 -S
+yarn add json-server@0.9.5
 ```
 
 Make __api.js__ in the root of the project:
