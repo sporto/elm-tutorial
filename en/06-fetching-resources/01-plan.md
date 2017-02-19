@@ -19,7 +19,9 @@ This is the plan:
 We will need a few new packages, install them using:
 
 ```bash
-elm package install elm-lang/http NoRedInk/elm-decode-pipeline krisajenkins/remotedata
+elm package install elm-lang/http 
+elm package install NoRedInk/elm-decode-pipeline 
+elm package install krisajenkins/remotedata
 ```
 
 - `elm-lang/http` is used for sending http requests.
