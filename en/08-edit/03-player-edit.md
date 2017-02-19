@@ -4,20 +4,34 @@
 
 We created a `ChangeLevel` message. Let's trigger this message from the player's edit view.
 
-In __src/Players/Edit.elm__ change `btnLevelDecrease` and `btnLevelIncrease`:
+In __src/Players/Edit.elm__, first add `onClick`:
+
+```elm
+import Html.Events exposing (onClick)
+```
+
+And change `btnLevelDecrease` and `btnLevelIncrease`:
 
 ```elm
 ...
-btnLevelDecrease : Player -> Html Msg
+btnLevelDecrease : Player -> Html.Html Msg
 btnLevelDecrease player =
-    a [ class "btn ml1 h1", onClick (ChangeLevel player.id -1) ]
-        [ i [ class "fa fa-minus-circle" ] [] ]
+    let
+        message =
+            Msgs.ChangeLevel player -1
+    in
+        a [ class "btn ml1 h1", onClick message ]
+            [ i [ class "fa fa-minus-circle" ] [] ]
 
 
-btnLevelIncrease : Player -> Html Msg
+btnLevelIncrease : Player -> Html.Html Msg
 btnLevelIncrease player =
-    a [ class "btn ml1 h1", onClick (ChangeLevel player.id 1) ]
-        [ i [ class "fa fa-plus-circle" ] [] ]
+    let
+        message =
+            Msgs.ChangeLevel player 1
+    in
+        a [ class "btn ml1 h1", onClick message ]
+            [ i [ class "fa fa-plus-circle" ] [] ]
 ```
 
-In these two buttons we added `onClick (ChangeLevel player.id howMuch)`. Where `howMuch` is `-1` to decrease level and `1` to increase it.
+In these two buttons we added `onClick message`. This `message` is `Msgs.ChangeLevel player howMuch`. Where `howMuch` is `-1` to decrease level and `1` to increase it.

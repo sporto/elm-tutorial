@@ -11,55 +11,54 @@ import Json.Encode as Encode
 
 ...
 
-saveUrl : PlayerId -> String
-saveUrl playerId =
+savePlayerUrl : PlayerId -> String
+savePlayerUrl playerId =
     "http://localhost:4000/players/" ++ playerId
 
 
-saveRequest : Player -> Http.Request Player
-saveRequest player =
+savePlayerRequest : Player -> Http.Request Player
+savePlayerRequest player =
     Http.request
-        { body = memberEncoded player |> Http.jsonBody
-        , expect = Http.expectJson memberDecoder
+        { body = playerEncoder player |> Http.jsonBody
+        , expect = Http.expectJson playerDecoder
         , headers = []
         , method = "PATCH"
         , timeout = Nothing
-        , url = saveUrl player.id
+        , url = savePlayerUrl player.id
         , withCredentials = False
         }
 
 
-save : Player -> Cmd Msg
-save player =
-    saveRequest player
-        |> Http.send OnSave
+savePlayerCmd : Player -> Cmd Msg
+savePlayerCmd player =
+    savePlayerRequest player
+        |> Http.send Msgs.OnPlayerSave
 
 
-memberEncoded : Player -> Encode.Value
-memberEncoded player =
+playerEncoder : Player -> Encode.Value
+playerEncoder player =
     let
-        list =
+        attributes =
             [ ( "id", Encode.string player.id )
             , ( "name", Encode.string player.name )
             , ( "level", Encode.int player.level )
             ]
     in
-        list
-            |> Encode.object
+        Encode.object attributes
 ```
 
 ### Save request
 
 ```elm
-saveRequest : Player -> Http.Request Player
-saveRequest player =
+savePlayerRequest : Player -> Http.Request Player
+savePlayerRequest player =
     Http.request
-        { body = memberEncoded player |> Http.jsonBody ➊
-        , expect = Http.expectJson memberDecoder ➋
+        { body = playerEncoder player |> Http.jsonBody ➊
+        , expect = Http.expectJson playerDecoder ➋
         , headers = []
         , method = "PATCH" ➌
         , timeout = Nothing
-        , url = saveUrl player.id
+        , url = savePlayerUrl player.id
         , withCredentials = False
         }
 ```
@@ -71,13 +70,13 @@ saveRequest player =
 ### Save
 
 ```elm
-save : Player -> Cmd Msg
-save player =
-    saveRequest player ➊
-        |> Http.send OnSave ➋
+savePlayerCmd : Player -> Cmd Msg
+savePlayerCmd player =
+    savePlayerRequest player ➊
+        |> Http.send Msgs.OnPlayerSave ➋
 ```
 
 Here we create the save request ➊ and then generate a command to send the request using `Http.send` ➋. 
-`Http.send` takes a message constructor (`OnSave` in this case). After the request is done, Elm will trigger the `OnSave` message with the response for the request.
+`Http.send` takes a message constructor (`OnPlayerSave` in this case). After the request is done, Elm will trigger the `OnPlayerSave` message with the response for the request.
 
 

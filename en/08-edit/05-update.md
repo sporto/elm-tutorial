@@ -4,82 +4,76 @@
 
 Finally we need to account for the new messages in our `update` function. In __src/Players/Update.elm__:
 
-Add a new import:
+Add a new imports:
 
 ```elm
-import Players.Models exposing (Player, PlayerId)
-import Players.Commands exposing (save)
+import Commands exposing (savePlayerCmd)
+import Models exposing (Model, Player)
+import RemoteData
 ```
 
-## Create update commands
+## New messages
 
-Add a helper function for creating commands for saving a player to the API.
-
-```elm
-changeLevelCommands : PlayerId -> Int -> List Player -> List (Cmd Msg)
-changeLevelCommands playerId howMuch players =
-    let
-        cmdForPlayer existingPlayer =
-            if existingPlayer.id == playerId then
-                save { existingPlayer | level = existingPlayer.level + howMuch }
-            else
-                Cmd.none
-    in
-        List.map cmdForPlayer players
-```
-
-This function will be called when we receive the `ChangeLevel` message. This function:
-
-- Receives the player id and the level difference to increase / decrease
-- Receives a list of existing players
-- Maps through each of the players on the list comparing its id with the id of the player we want to change
-- If the id is the one we want then we return a command to change the level of that player
-- And finally returns a list of commands to execute
-
-## Update the players
-
-Add another helper function for updating a player when we receive the response from the server:
+Update branches to update to handle the newly created messages:
 
 ```elm
-updatePlayer : Player -> List Player -> List Player
-updatePlayer updatedPlayer players =
-    let
-        select existingPlayer =
-            if existingPlayer.id == updatedPlayer.id then
-                updatedPlayer
-            else
-                existingPlayer
-    in
-        List.map select players
-```
-
-This function will be used when we receive an updated player from the API via `SaveSuccess`. This function:
-
-- Takes the updated player and a list of existing players
-- Maps through each of the players comparing their ids with the updated player
-- If the ids are the same then we return the updated player, otherwise we return the existing player
-
-## Add branches to update
-
-Add new branches to the `update` function:
-
-```elm
-update message players =
-    case message of
+update : Msg -> Model -> ( Model, Cmd Msg )
+update msg model =
+    case msg of
         ...
 
-        ChangeLevel id howMuch ->
-            ( players, changeLevelCommands id howMuch players |> Cmd.batch )
+        Msgs.ChangeLevel player howMuch ->
+            let
+                updatedPlayer =
+                    { player | level = player.level + howMuch }
+            in
+                ( model, savePlayerCmd updatedPlayer )
 
-        OnSave (Ok updatedPlayer) ->
-            ( updatePlayer updatedPlayer players, Cmd.none )
+        Msgs.OnPlayerSave (Ok player) ->
+            ( updatePlayer model player, Cmd.none )
 
-        OnSave (Err error) ->
-            ( players, Cmd.none )
+        Msgs.OnPlayerSave (Err error) ->
+            ( model, Cmd.none )
 ```
 
-- In `ChangeLevel` we call the helper function `changeLevelCommands` we defined above. That function return a list of commands to run, so we then batch them into one command using `Cmd.batch`.
-- In `OnSave (Ok updatedPlayer)` we call the helper function `updatePlayer` which will update the relevant player from the list.
+### ChangeLevel
+
+In `ChangeLevel` we first update the `level` attribute for the given player and then return a command `savePlayerCmd` to save it.
+
+### OnPlayerSave
+
+When we get `OnPlayerSave` back we pattern match so we handle the success and failure case differently. On the failure case we are just discarding the error and leaving the model as it was. This is not great but for simplicity we will do it like this.
+
+In the success case we are calling a helper function `updatePlayer` to update the changed player, we will write this function next.
+
+## Update the player
+
+Add a helper function to update the player:
+
+```elm
+updatePlayer : Model -> Player -> Model
+updatePlayer model updatedPlayer =
+    let
+        pick currentPlayer =
+            if updatedPlayer.id == currentPlayer.id then
+                updatedPlayer
+            else
+                currentPlayer
+
+        updatePlayerList players =
+            List.map pick players
+
+        updatedPlayers =
+            RemoteData.map updatePlayerList model.players
+    in
+        { model | players = updatedPlayers }
+```
+
+This function is called after we get an updated player from the API. This function needs to swap an existing player in our model for the updated player coming from the API.
+
+We don't know what is in `model.players`, it could be `RemoteData.Loading` or `RemoteData.Success players` or some other case. So first we need to account for this. `RemoteData` provides a `map` function that only applies when we have `RemoteData.Success`. We use this in `updatedPlayers`.
+
+`updatePlayerList` will only be called if `model.players` is `RemoteData.Success players`. `updatePlayerList` is a function that maps over a list of players and swaps the updated player.
 
 ---
 
@@ -87,4 +81,4 @@ update message players =
 
 This is all the setup necessary for changing a player's level. Try it, go to the edit view and click the - and + buttons. You should see the level changing and if you refresh your browser that change should be persisted on the server.
 
-Up to this point your application code should look <https://github.com/sporto/elm-tutorial-app/tree/018-08-edit>.
+Up to this point your application code should look <https://github.com/sporto/elm-tutorial-app/tree/018-v02-08-edit>.
