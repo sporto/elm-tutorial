@@ -12,9 +12,4 @@ We are using hash routing here which is simple. But it is a bit ugly because you
 
 As an alternative you can use "path" routing, which uses push state. Instead of having something like `app.com/#users` you will have `app.com/users`, which is nicer.
 
-You can use path routing in Elm using the `Navigation` module too. To do this you will need:
-
-- Create a message for changing the location e.g. `ChangeLocation String`.
-- Use `Navigation.newUrl` to create a command to change the location.
-- In your links you will need to trigger this message with the new location.
-- If you still want to display the target link using `href`, you will need to prevent the browser default behaviour using `onWithOptions` from `Html.Events`.
+You can use path routing in Elm using the `Navigation` module too. See [this repository for an explanation and example](https://github.com/sporto/elm-navigation-pushstate).
