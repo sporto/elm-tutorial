@@ -69,7 +69,7 @@ __src/Update.elm__
 ```elm
 module Update exposing (..)
 
-import Messages exposing (Msg(..))
+import Msgs exposing (Msg(..))
 import Models exposing (Model)
 
 
@@ -86,7 +86,7 @@ __src/View.elm__
 module View exposing (..)
 
 import Html exposing (Html, div, text)
-import Messages exposing (Msg)
+import Msgs exposing (Msg)
 import Models exposing (Model)
 
 
@@ -102,7 +102,7 @@ __src/Main.elm__
 module Main exposing (..)
 
 import Html exposing (Html, div, text, program)
-import Messages exposing (Msg)
+import Msgs exposing (Msg)
 import Models exposing (Model)
 import Update exposing (update)
 import View exposing (view)
