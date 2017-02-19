@@ -44,10 +44,10 @@ Try creating separate modules for things like __messages__, __models__, __comman
 
 Let's break the application in smaller modules:
 
-__src/Messages.elm__
+__src/Msgs.elm__
 
 ```elm
-module Messages exposing (..)
+module Msgs exposing (..)
 
 
 type Msg

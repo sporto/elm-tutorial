@@ -2,10 +2,10 @@
 
 # Messages
 
-First let's create the messages we need for fetching players. Add a new import and message to __src/Messages.elm__
+First let's create the messages we need for fetching players. Add a new import and message to __src/Msgs.elm__
 
 ```elm
-module Messages exposing (..)
+module Msgs exposing (..)
 
 import Models exposing (Player)
 import RemoteData exposing (WebData)
