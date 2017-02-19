@@ -54,6 +54,7 @@
    * [Main](07-routing/08-main.md)
    * [Try it](07-routing/09-try-it.md)
    * [Navigation](07-routing/10-navigation.md)
+   * [Try it](07-routing/11-try-it.md)
 * [Editing](08-edit/cover.md)
    * [Plan](08-edit/01-plan.md)
    * [Messages](08-edit/02-messages.md)
