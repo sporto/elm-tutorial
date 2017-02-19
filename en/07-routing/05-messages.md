@@ -1,20 +1,21 @@
 > This page covers Tutorial v2. Elm 0.18.
 
-# Main messages
+# Messages
 
-When the browser location changes we will trigger a new message.
+When the browser location changes we will trigger a new `OnLocationChange` message.
 
 Change __src/Messages.elm__ to:
 
 ```elm
-module Messages exposing (..)
+module Msgs exposing (..)
 
+import Models exposing (Player)
 import Navigation exposing (Location)
-import Players.Messages
+import RemoteData exposing (WebData)
 
 
 type Msg
-    = PlayersMsg Players.Messages.Msg
+    = OnFetchPlayers (WebData (List Player))
     | OnLocationChange Location
 ```
 

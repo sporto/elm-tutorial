@@ -1,12 +1,24 @@
 > This page covers Tutorial v2. Elm 0.18.
 
+# Models
+
+In __src/Models.elm__ we will define the possible routes for our application. Add a new type:
+
+```elm
+type Route
+    = PlayersRoute
+    | PlayerRoute PlayerId
+    | NotFoundRoute
+```
+
+`NotFoundRoute` will be used when no route matches the browser path.
+
 # Routing
 
-Create a module __src/Routing.elm__ for defining the application routing configuration. 
+Create a module __src/Routing.elm__ for defining the application routing configuration.
 
 In this module we define:
 
-- the routes for our application
 - how to match browser paths to routes using path matchers
 - how to react to routing messages
 
@@ -16,14 +28,8 @@ In __src/Routing.elm__:
 module Routing exposing (..)
 
 import Navigation exposing (Location)
-import Players.Models exposing (PlayerId)
+import Models exposing (PlayerId, Route(..))
 import UrlParser exposing (..)
-
-
-type Route
-    = PlayersRoute
-    | PlayerRoute PlayerId
-    | NotFoundRoute
 
 
 matchers : Parser (Route -> a) a
@@ -48,18 +54,6 @@ parseLocation location =
 ---
 
 Let's go over this module.
-
-### Routes
-
-```elm
-type Route
-    = PlayersRoute
-    | PlayerRoute PlayerId
-    | NotFoundRoute
-```
-
-These are the available routes in our application.
-`NotFoundRoute` will be used when no route matches the browser path.
 
 ### Matchers
 

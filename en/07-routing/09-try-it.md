@@ -18,5 +18,5 @@ If you go to `http://localhost:3000/#players/2` then you should see one user.
 
 Next we will add some navigation.
 
-Up to this point your application code should look <https://github.com/sporto/elm-tutorial-app/tree/018-06-routing>.
+Up to this point your application code should look <https://github.com/sporto/elm-tutorial-app/tree/018-v02-06-routing>.
 

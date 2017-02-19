@@ -1,8 +1,8 @@
 > This page covers Tutorial v2. Elm 0.18.
 
-# Main update
+# Update
 
-We need our main `update` function to respond to the new `OnLocationChange` message.
+We need our `update` function to respond to the new `OnLocationChange` message.
 
 In __src/Update.elm__ add a new branch:
 
@@ -15,7 +15,7 @@ import Routing exposing (parseLocation)
 update msg model =
     case msg of
         ...
-        OnLocationChange location ->
+        Msgs.OnLocationChange location ->
             let
                 newRoute =
                     parseLocation location

@@ -3,24 +3,20 @@
 # Main model
 
 In our main application model we want to store the current route.
-Change __src/Models.elm__ to:
+In __src/Models.elm__, change `Model` and `initialModel` to:
 
 ```elm
-module Models exposing (..)
-
-import Players.Models exposing (Player)
-import Routing
-
+...
 
 type alias Model =
-    { players : List Player
-    , route : Routing.Route
+    { players : WebData (List Player)
+    , route : Route
     }
 
 
-initialModel : Routing.Route -> Model
+initialModel : Route -> Model
 initialModel route =
-    { players = []
+    { players = RemoteData.Loading
     , route = route
     }
 ```
