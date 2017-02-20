@@ -1,8 +1,8 @@
 > This page covers Tutorial v2. Elm 0.18.
 
-# Players Update
+# Update
 
-Finally we need to account for the new messages in our `update` function. In __src/Players/Update.elm__:
+Finally we need to account for the new messages in our `update` function. In __src/Update.elm__:
 
 Add a new imports:
 
