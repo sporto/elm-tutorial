@@ -4,7 +4,7 @@
 
 Let's start by adding the messages we will need.
 
-In __src/Messages.elm__ add:
+In __src/Msgs.elm__ add:
 
 ```elm
 import Http
