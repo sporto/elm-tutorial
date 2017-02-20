@@ -8,13 +8,13 @@ The attribute `players` was a list of players before (`List Player`), now is `We
 
 Add `RemoteData` import
 
-```
+```elm
 import RemoteData exposing (WebData)
 ```
 
 Change `view` to:
 
-```
+```elm
 view : WebData (List Player) -> Html Msg
 view response =
     div []
