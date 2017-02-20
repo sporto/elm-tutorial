@@ -6,6 +6,12 @@ After receiving the response back we store it in `players`. We now want to displ
 
 The attribute `players` was a list of players before (`List Player`), now is `WebData (List Player`) type. Let's change __src/Players/List.elm__ to handle the new type of `players`.
 
+Add `RemoteData` import
+
+```
+import RemoteData exposing (WebData)
+```
+
 Change `view` to:
 
 ```
