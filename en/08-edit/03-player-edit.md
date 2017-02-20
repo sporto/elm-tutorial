@@ -14,7 +14,7 @@ And change `btnLevelDecrease` and `btnLevelIncrease`:
 
 ```elm
 ...
-btnLevelDecrease : Player -> Html.Html Msg
+btnLevelDecrease : Player -> Html Msg
 btnLevelDecrease player =
     let
         message =
@@ -24,7 +24,7 @@ btnLevelDecrease player =
             [ i [ class "fa fa-minus-circle" ] [] ]
 
 
-btnLevelIncrease : Player -> Html.Html Msg
+btnLevelIncrease : Player -> Html Msg
 btnLevelIncrease player =
     let
         message =
