@@ -63,7 +63,4 @@
 * Tips and Tricks
    * [Context](tips-tricks/context.md)
    * [Point free style](tips-tricks/point-free-style.md)
-   * [Composing](tips-tricks/composing-1.md)
-   * [Composing - Parent](tips-tricks/composing-2.md)
-   * [Composing - Flow](tips-tricks/composing-3.md)
    * [Troubleshooting](tips-tricks/troubleshooting.md)
