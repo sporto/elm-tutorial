@@ -1,22 +1,48 @@
 # Union types
 
-In Elm, __Union Types__ are used for many things as they are incredibly flexible. A union type looks like:
+In Elm, __Union Types__ are used for many things as they are incredibly flexible. They are also called ADT (Algebraic Data Types) in other languages. A simple union type looks like:
 
 ```elm
 type Answer = Yes | No
 ```
 
-`Answer` can be either `Yes` or `No`. Union types are useful for making our code more generic. For example a function that is declared like this:
+The `Answer` type can be either `Yes` or `No`.
+
+## Type and constructors
+
+A union type has the following components:
+
+```elm
+type State = Pending | Done | Failed
+    ^----^   ^---------------------^
+     type        constructors
+```
+
+In this example `State` is the `type`. And `Pending, Done and Failed` are constructors. This are called constructors because you construct a new instance of this type using them. e.g.
+
+```elm
+pendingState = Pending
+```
+
+## Example
+
+For example a function that has this signature:
 
 ```elm
 respond : Answer -> String
-respond answer =
-    ...
 ```
 
 Can either take `Yes` or `No` as the first argument e.g. `respond Yes` is a valid call.
 
-Union types are also commonly called __tags__ in Elm.
+```
+respond : Answer -> String
+respond answer =
+    case answer of
+      Yes ->
+        ...
+      No ->
+        ...
+```
 
 ## Payload
 
@@ -34,7 +60,7 @@ respond (Other "Hello")
 
 You need the parenthesis otherwise Elm will interpret this as passing two arguments to respond.
 
-## As constructor functions
+## Used as functions
 
 Note how we add a payload to `Other`:
 
@@ -48,13 +74,13 @@ This is just like a function call where `Other` is the function. Union types beh
 type Answer = Message Int String
 ```
 
-You will create a `Message` tag by:
+You will create a `Message` instance by:
 
 ```elm
 Message 1 "Hello"
 ```
 
-You can do partial application just like any other function. These are commonly called `constructors` because you can use this to construct complete types, i.e. use `Message` as a function to construct `(Message 1 "Hello")`.
+You can do partial application just like any other function.
 
 ## Nesting
 
@@ -115,6 +141,32 @@ type Msg
     | EditUser UserId
     ...
 ```
+
+## Some common union types
+
+There are some common union types in Elm that you will see very often.
+
+```
+type Bool = True | False
+```
+
+There is no boolean in Elm, it is just a union type.
+
+```
+type Maybe a
+    = Nothing
+    | Just a
+```
+
+`Maybe` represents the possibility of having nothing or something.
+
+```
+type Result error value
+    = Ok value
+    | Err error
+```
+
+`Result` represents the possibility of having two outcomes from an operation. `Ok` with the associated value and `Err` with the associated error.
 
 ---
 
