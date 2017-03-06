@@ -138,7 +138,7 @@ add(1, divide(12, 3))
 ## Partial application
 
 As explained above every function takes only one argument and returns another function or a result.
-This means you can call a function like `add` above with only one argument, e.g. `add 2` and get a *partially applied function** back.
+This means you can call a function like `add` above with only one argument, e.g. `add 2` and get a *partially applied function* back.
 This resulting function has a signature `Int -> Int`.
 
 `add 2` returns another function with the value `2` bound as the first parameter. Calling the returned function with a second value returns `2 + ` the second value:
