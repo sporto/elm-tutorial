@@ -4,7 +4,7 @@
 
 ## package.json
 
-Finally we want to add some npm scripts so we can run our servers easily. In __package.json__ replace `scripts` with:
+Finally we want to add some yarn scripts so we can run our servers easily. In __package.json__ replace `scripts` with:
 
 ```json
 "scripts": {
@@ -15,10 +15,10 @@ Finally we want to add some npm scripts so we can run our servers easily. In __p
 },
 ```
 
-- So now `npm run api` will run our fake server.
-- `npm run build` will create a webpack build and put the bundles in `dist`.
-- `npm run watch` runs the webpack watcher which puts the bundles in `dist` as we change our source code.
-- `npm run dev` runs the webpack dev server.
+- So now `yarn api` will run our fake server.
+- `yarn build` will create a webpack build and put the bundles in `dist`.
+- `yarn watch` runs the webpack watcher which puts the bundles in `dist` as we change our source code.
+- `yarn dev` runs the webpack dev server.
 
 ## Node Foreman
 
@@ -27,14 +27,14 @@ We have two servers to run for developing: the Api and the Frontend, we will nee
 Install Node Foreman:
 
 ```
-npm install -g foreman
+yarn global add foreman
 ```
 
 Then create a file called `Procfile` in the root of the project with:
 
 ```
-api: npm run api
-client: npm run dev
+api: yarn api
+client: yarn dev
 ```
 
 This will give us a cli command called `nf` that allows to launch and kill both processed at the same time.
