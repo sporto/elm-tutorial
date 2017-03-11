@@ -5,7 +5,7 @@
 Let's try what we have so far. Run the application by doing:
 
 ```bash
-nf start
+yarn start
 ```
 
 Then go to `http://localhost:3000` in your browser. You should see the list of users.

@@ -5,7 +5,7 @@
 Try it! Run the app in one terminal using:
 
 ```bash
-nf start
+yarn start
 ```
 
 Refresh the browser, our application should now fetch the list of players from the server. The app should look like:
