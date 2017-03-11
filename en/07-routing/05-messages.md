@@ -4,7 +4,7 @@
 
 When the browser location changes we will trigger a new `OnLocationChange` message.
 
-Change __src/Messages.elm__ to:
+Change __src/Msgs.elm__ to:
 
 ```elm
 module Msgs exposing (..)
