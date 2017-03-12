@@ -18,7 +18,7 @@ type State = Pending | Done | Failed
      type        constructors
 ```
 
-In this example `State` is the `type`. And `Pending, Done and Failed` are constructors. This are called constructors because you construct a new instance of this type using them. e.g.
+In this example `State` is the `type`. And `Pending, Done and Failed` are constructors. These are called constructors because you construct a new instance of this type using them. e.g.
 
 ```elm
 pendingState = Pending
