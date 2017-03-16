@@ -14,7 +14,7 @@ elm package install elm-lang/html
 
 This will inform you that additional packages are needed, show you the proposed upgrade plan, and ask you to confirm the upgrade plan.  If you are running elm 0.18.0, the upgrade plan will include elm-lang/core, elm-/lang/html, and elm-lang/virtual-dom pacakages.
 
-This will create an _elm-package.json_ file and _elm-stuff_ directory in the same project directory, and then install the specified modules. You modules themselves are saved in the _elm-stuff_ directory, while their specifications are saved in the _elm-package.json_ file.
+This will create an _elm-package.json_ file and _elm-stuff_ directory in the same project directory, and then install the specified modules. Your modules themselves are saved in the _elm-stuff_ directory, while their specifications are saved in the _elm-package.json_ file.
 
 Add a `Hello.elm` file, with the following code:
 
