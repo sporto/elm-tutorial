@@ -144,3 +144,5 @@ subscriptions model =
 Here we declare the things we want to listen to. We want to listen to `Mouse.clicks` ➊ and `Keyboard.downs` ➋. Both of these functions take a message constructor and return a subscription.
 
 We use `Sub.batch` ➌ so we can listen to both of them. `batch` takes a list of subscriptions and returns one subscription which includes all of them.
+
+Also note that in this example our subscriptions are static, they don't change during the life our application. But they don't have to be like that. They could change depending on what is in the `model`, this is why we pass the model to `subscriptions`. 
