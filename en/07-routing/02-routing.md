@@ -75,7 +75,7 @@ We want three matchers:
 - One for `/players` which will resolve to `PlayersRoute` as well
 - And one for `/players/id` which will resolve to `PlayerRoute id`
 
-Note that the order is important.
+Note that the order is important as routes defined first will have priority over later definitions.
 
 See more details about this library here <http://package.elm-lang.org/packages/evancz/url-parser>.
 
