@@ -131,4 +131,35 @@ When navigate to a page we have the `playerId`, but we might not have the list o
 
 ### notFoundView
 
-`notFoundView` is shown when no route matches. Note the type `Html msg` instead of `Html Msg`. This is because this view doesn't produce any messages so can use a generic type variable `msg` instead of a specific type `Msg`.
+`notFoundView` is shown when no route matches. Note the type `Html msg` instead of `Html Msg`.
+
+### Html Msg vs Html msg
+
+Many times you will see `Html Msg` and many other times `Html msg`. The difference is that `Msg` is a concrete type and `msg` is a type variable.
+
+__Html Msg__
+
+`Html Msg` means a view that returns Html with a concrete message type. For example:
+
+```elm
+
+type Msg = Increase
+
+view : Model -> Html Msg
+view model =
+    button [ onClick Increase ] [ text "Increase" ]
+```
+
+Here `Increase` is a concrete type, our view emits messages of this type, this is reflected in the signature by using `Html Msg`.
+
+__Html msg__
+
+`Html msg` is a generic type, we use this when we don't need to specify the concrete type for a view.
+
+```
+view : Model -> Html msg
+view model =
+    div [] [ text "Hello" ]
+```
+
+This view doesn't emit messages, so we can use `Html msg` in the signature. This makes the view more reusable.
