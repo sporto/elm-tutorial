@@ -29,7 +29,7 @@ found at <https://github.com/sporto/elm-tutorial-app>.
 For this tutorial you will need:
 
 - Elm version 0.18 (Installation is covered later in the tutorial)
-- Node JS version 4 +
+- Node JS version 5.1 +
 - Yarn package manager <https://yarnpkg.com/en/>
 
 ## Contributing

@@ -16,7 +16,7 @@ There are many alternatives that you can use to achieve the same as Webpack, for
 
 ## Requirements
 
-You will need Node JS version 4 or more for these libraries to work as expected.
+You will need Node JS version 5.1 or more for these libraries to work as expected.
 
 ## Installing webpack and loaders
 
