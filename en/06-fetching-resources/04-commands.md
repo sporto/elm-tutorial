@@ -54,7 +54,7 @@ fetchPlayers =
 Here we create a command for our application to run.
 
 - ➊ `Http.get` takes a url and a decoder. This returns a `Request` type.
-- ➋ We pass this request to `RemoteData.sendRequest`, this function will wrap the request in a `WebData` type and return a `Cmd` to sends the request.
+- ➋ We pass this request to `RemoteData.sendRequest`, this function will wrap the request in a `WebData` type and return a `Cmd` to send the request.
 - ➌ We map the command from `RemoteData` to `OnFetchPlayers`. In that way we can handle the response in our update.
 
 ```elm
