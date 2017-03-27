@@ -47,7 +47,7 @@ fetchAll =
         |> Http.send OnFetchAll
 ```
 
-Ici, on crée une commande exécutable par noter application :
+Ici, on crée une commande exécutable par notre application :
 
 - `Http.get` crée une tâche
 - on envoie ensuite cette tâche à `Task.perform`, qui l'enveloppe dans une commande
