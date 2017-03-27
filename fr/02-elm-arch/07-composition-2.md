@@ -81,7 +81,7 @@ subscriptions model =
 
 main : Program Never AppModel Msg
 main =
-    Html.App.program
+    program
         { init = init
         , view = view
         , update = update
