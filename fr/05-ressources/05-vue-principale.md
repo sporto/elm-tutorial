@@ -8,7 +8,6 @@ Modifiez __src/View.elm__ pour inclure la liste des joueurs :
 module View exposing (..)
 
 import Html exposing (Html, div, text)
-import Html.App
 import Messages exposing (Msg(..))
 import Models exposing (Model)
 import Players.List
