@@ -2,7 +2,7 @@
 
 # Multiple modules
 
-Our application is going to grow soon, so keeping things in one file will become hard to maintain quite fast. 
+Our application is growing, so keeping things in one file will quickly become difficult to maintain.
 
 ### Circular dependencies
 
@@ -19,11 +19,11 @@ Main --> View
 View --> Main
 ```
 
-#### How to break it?
+#### How to break it up?
 
-In this case what we need to do is to move the `Player` type out of `Main`, somewhere it can be imported by both `Main` and `View`. 
+In this case we need to move the `Player` type out of `Main`, to some place where it can be imported by both `Main` and `View`. 
 
-To deal with circular dependencies in Elm the easiest thing to do is to split your application into smaller modules. In this particular example we can create another module that can be imported by both `Main` and `View`. We will have three modules:
+To deal with circular dependencies in Elm, the easiest thing to do is to split your application into smaller modules. In this particular example we can create another module that can be imported by both `Main` and `View`. We will have three modules:
 
 - Main
 - View
@@ -42,7 +42,15 @@ Try creating separate modules for things like __messages__, __models__, __comman
 
 ---
 
-Let's break the application in smaller modules:
+Let's break the application into smaller modules:
+
+First, check your elm-package.json.  Make sure `"source-directories"` points to the directory where our new modules will go.  In this example, it will be the src directory.
+```json
+    "source-directories": [
+        "src"
+    ],
+```
+Now we are ready to create the modules
 
 __src/Msgs.elm__
 
@@ -136,6 +144,6 @@ You can find the code here <https://github.com/sporto/elm-tutorial-app/tree/018-
 
 ---
 
-There are lots of little modules now, this is overkill for a trivial application. But for a bigger application splitting it makes it easier to work with.
+There are lots of little modules now, which is overkill for a trivial application. But for a bigger application splitting it up makes it easier to work with.
 
 
