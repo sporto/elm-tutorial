@@ -45,7 +45,7 @@ var app = Elm.Main.embed(mountNode);
 以下を実行します：
 
 ```bash
-elm package install elm-lang/html
+elm-package install elm-lang/html
 ```
 
 ## ソースディレクトリ

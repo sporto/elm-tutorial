@@ -45,7 +45,7 @@ var app = Elm.Main.embed(mountNode);
 터미널에서 아래 명령을 실행합니다:
 
 ```bash
-elm package install elm-lang/html
+elm-package install elm-lang/html
 ```
 
 ## 소스 디렉터리
