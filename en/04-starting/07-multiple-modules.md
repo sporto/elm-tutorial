@@ -109,7 +109,7 @@ __src/Main.elm__
 ```elm
 module Main exposing (..)
 
-import Html exposing (Html, div, text, program)
+import Html exposing (program)
 import Msgs exposing (Msg)
 import Models exposing (Model)
 import Update exposing (update)
