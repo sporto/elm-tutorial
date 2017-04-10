@@ -132,7 +132,7 @@ main =
         }
 ```
 
-Vous pouvez voir le code ici : <https://github.com/sporto/elm-tutorial-app/tree/03-multiple-modules>
+Vous pouvez voir le code ici : <https://github.com/sporto/elm-tutorial-app/tree/018-03-multiple-modules>
 
 ---
 

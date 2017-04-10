@@ -132,7 +132,7 @@ main =
         }
 ```
 
-你可以在此找到程式碼 <https://github.com/sporto/elm-tutorial-app/tree/03-multiple-modules>
+你可以在此找到程式碼 <https://github.com/sporto/elm-tutorial-app/tree/018-03-multiple-modules>
 
 ---
 
