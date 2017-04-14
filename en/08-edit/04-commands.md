@@ -2,9 +2,9 @@
 
 # Players Commands
 
-Next let's create the command to updated the player through our API.
+Next let's create the command to update the player through our API.
 
-In __src/Players/Commands.elm__ add:
+In __src/Commands.elm__ add:
 
 ```elm
 import Json.Encode as Encode
