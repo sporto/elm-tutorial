@@ -2,7 +2,7 @@
 
 # Update
 
-When the request for players is done, we trigger the `OnFetchAll` message.
+When the request for players is done, we trigger the `OnFetchPlayers` message.
 
 __src/Update.elm__ should account for this new message. Change `update` to:
 
