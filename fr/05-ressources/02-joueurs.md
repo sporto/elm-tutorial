@@ -45,7 +45,7 @@ new =
 
 C'est là que nous définissons à quoi ressemble un enregistrement de joueur : il se compose d'un identifiant (`id`), d'un nom (`name`) et d'un niveau (`level`).
 
-Notez aussi la définition d'un `PlayerId` : il s'agit jsute d'un `String`, mais cette définition nous sert à clarifier le sens des fonctions qui prendront plusieurs `Int`. Ainsi, la fonction :
+Notez aussi la définition d'un `PlayerId` : il s'agit juste d'un `String`, mais cette définition nous sert à clarifier le sens des fonctions qui prendront plusieurs `Int`. Ainsi, la fonction :
 
 ```elm
 addPerkToPlayer : Int -> Int -> Player

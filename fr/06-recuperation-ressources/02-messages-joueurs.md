@@ -15,4 +15,4 @@ type Msg
     = OnFetchAll (Result Http.Error (List Player))
 ```
 
-`OnFetchAll` sera appelé lorsque nous recevrons une réponse du serveur. Ce message contiendra un `Result`, qui sera ou un `Http.Error` ou la liste des joueurs récupérée.
+`OnFetchAll` sera appelé lorsque nous recevrons une réponse du serveur. Ce message contiendra un `Result`, qui sera soit un `Http.Error` soit la liste des joueurs récupérée.

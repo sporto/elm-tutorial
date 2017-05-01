@@ -28,8 +28,8 @@ changeLevelCommands playerId howMuch players =
 
 Cette fonction sera appelée lorsque nous recevrons un message de type `ChangeLevel`. Cette fonction :
 
-- Reçois l'id du joueur et la différence de niveau à appliquer (augmentation / diminution)
-- Reçois une liste joueurs existants
+- Reçoit l'id du joueur et la différence de niveau à appliquer (augmentation / diminution)
+- Reçoit une liste de joueurs existants
 - Parcourt chacun des joueurs de la liste en comparant son id avec l'id du joueur que nous souhaitons modifier
 - Si l'id est celui que nous cherchons alors nous retournons une commande pour changer le niveau de ce joueur
 - Puis nous finissons par retourner une liste de commandes à exécuter.
