@@ -45,7 +45,7 @@
    * [Essayez](06-recuperation-ressources/06-essayez.md)
 * [Routage](07-routage/cover.md)
    * [Intro](07-routage/01-intro.md)
-   * [Routage](07-routage/02-routing.md)
+   * [Routage](07-routage/02-routage.md)
    * [Vue édition de Joueur](07-routage/03-edition-joueur.md)
    * [Modèle Main](07-routage/04-modele-main.md)
    * [Messages Main](07-routage/05-main-messages.md)
