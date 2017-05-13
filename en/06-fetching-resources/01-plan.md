@@ -26,4 +26,4 @@ elm package install krisajenkins/remotedata
 
 - `elm-lang/http` is used for sending http requests.
 - `NoRedInk/elm-decode-pipeline` offers and alternative and cleaner API for decoding JSON.
-- `krisajenkins/remotedata` offers a robust pattern for handling remote resources, we will more about this later.
+- `krisajenkins/remotedata` offers a robust pattern for handling remote resources, we will talk more about this later.
