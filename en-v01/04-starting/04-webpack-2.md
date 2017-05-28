@@ -45,7 +45,7 @@ var app = Elm.Main.embed(mountNode);
 Run:
 
 ```bash
-elm package install elm-lang/html
+elm-package install elm-lang/html
 ```
 
 After doing this there should be a file called __elm-package.json__ in the root of your project.

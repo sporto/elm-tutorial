@@ -44,7 +44,7 @@ var app = Elm.Main.embed(mountNode);
 Exécutez :
 
 ```bash
-elm package install elm-lang/html
+elm-package install elm-lang/html
 ```
 
 ## Répertoire source

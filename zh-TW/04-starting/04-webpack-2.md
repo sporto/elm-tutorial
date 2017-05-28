@@ -45,7 +45,7 @@ var app = Elm.Main.embed(mountNode);
 執行：
 
 ```bash
-elm package install elm-lang/html
+elm-package install elm-lang/html
 ```
 
 ## 程式碼目錄
