@@ -4,14 +4,18 @@
 
 ## package.json
 
-Finally we want to add some npm scripts so we can run our servers easily. In __package.json__ replace `scripts` with:
+Finally we want to add some npm scripts so we can run our servers easily. In __package.json__ add a `scripts` section:
 
 ```json
-"scripts": {
-    "api": "node api.js",
-    "build": "webpack",
-    "client": "webpack-dev-server --port 3000"
-},
+{
+  ...
+  "scripts": {
+      "api": "node api.js",
+      "build": "webpack",
+      "client": "webpack-dev-server --port 3000"
+  },
+  ...
+}
 ```
 
 - So now `yarn api` will run our fake server.
