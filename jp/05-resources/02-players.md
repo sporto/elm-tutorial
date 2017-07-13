@@ -48,7 +48,7 @@ new =
 `PlayerId`の定義にも注意してください。これは`String`の単なるエイリアスです。これは、複数のIDを引数に取る関数を後で導入することになった場合にわかりやすくなり便利です。例えば：
 
 ```elm
-addPerkToPlayer : Int -> Int -> Player
+addPerkToPlayer : Int -> String -> Player
 ```
 
 よりも、次のように書かれているとはるかに明確です。
