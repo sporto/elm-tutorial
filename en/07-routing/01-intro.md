@@ -10,8 +10,8 @@ Let's add a routing to our application. We will be using the [Elm Navigation pac
 First install the packages:
 
 ```bash
-elm package install elm-lang/navigation
-elm package install evancz/url-parser
+elm-package install elm-lang/navigation
+elm-package install evancz/url-parser
 ```
 
  `Navigation` is a library that wraps `Html.program`. It has all the functionality of `Html.program` plus some extra things:

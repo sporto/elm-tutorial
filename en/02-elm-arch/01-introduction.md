@@ -9,7 +9,7 @@ Elm provides the `Html` module for this. This is easier to understand by buildin
 Install elm-html:
 
 ```elm
-elm package install elm-lang/html
+elm-package install elm-lang/html
 ```
 
 Create a file called __App.elm__:

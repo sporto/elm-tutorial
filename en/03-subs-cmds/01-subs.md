@@ -14,8 +14,8 @@ To illustrate this, let's create an application that responds to both keyboard a
 First, install the required libraries:
 
 ```bash
-elm package install elm-lang/mouse
-elm package install elm-lang/keyboard
+elm-package install elm-lang/mouse
+elm-package install elm-lang/keyboard
 ```
 
 Then, create this program:

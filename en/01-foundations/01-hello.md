@@ -9,7 +9,7 @@ Go to http://elm-lang.org/install and download the appropriate installer for you
 Let's write our first Elm application. Create a folder for your application. In this folder run the following command in the terminal:
 
 ```bash
-elm package install elm-lang/html
+elm-package install elm-lang/html
 ```
 
 This will inform you that additional packages are needed, show you the proposed upgrade plan, and ask you to confirm the upgrade plan.  If you are running elm 0.18.0, the upgrade plan will include elm-lang/core, elm-lang/html, and elm-lang/virtual-dom packages.
