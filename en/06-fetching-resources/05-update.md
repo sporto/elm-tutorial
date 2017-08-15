@@ -20,4 +20,4 @@ update msg model =
             ( { model | players = response }, Cmd.none )
 ```
 
-When we get `OnFetchPlayers` we get a response and store it `players`.
+When we get `OnFetchPlayers` we get a response and store it in `players`.
