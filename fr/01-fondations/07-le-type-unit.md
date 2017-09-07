@@ -42,7 +42,7 @@ Ainsi, le type _unit_ est couramment utilisé comme emplacement pour une valeur 
 
 ## Tâche (Task)
 
-Un exemple concret est le type `Task`. Lorsque vous utiliser `Task`, vous rencontrerez le type _unit_ fréquemment.
+Un exemple concret est le type `Task`. Lorsque vous utiliserez `Task`, vous rencontrerez le type _unit_ fréquemment.
 
 Une tâche typique contient une __erreur (error)__ et un __résultat (result)__ :
 
