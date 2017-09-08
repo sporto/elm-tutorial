@@ -86,7 +86,7 @@ main =
 
 Ce programme est très similaire au précédent programme que nous avons réalisé, à la différence prêt qu'il contient deux messages : `Expand` (développer) et `Collapse` (plier/réduire). Vous pouvez exécuter ce programme en le copiant dans un fichier et en l'ouvrant en utilisant Elm reactor.
 
-Jetons un œil de plus prêt aux fonctions `view` et `update`.
+Jetons un œil de plus près aux fonctions `view` et `update`.
 
 ### View
 
