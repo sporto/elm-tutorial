@@ -20,7 +20,7 @@ module App exposing (..)
 import Html exposing (Html, div, text, program)
 
 
--- MODEL
+-- モデル
 
 
 type alias Model =
@@ -33,7 +33,7 @@ init =
 
 
 
--- MESSAGES
+-- メッセージ
 
 
 type Msg
@@ -41,7 +41,7 @@ type Msg
 
 
 
--- VIEW
+-- ビュー
 
 
 view : Model -> Html Msg
@@ -62,7 +62,7 @@ update msg model =
 
 
 
--- SUBSCRIPTIONS
+-- サブスクリプション(購読)
 
 
 subscriptions : Model -> Sub Msg
