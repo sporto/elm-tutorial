@@ -4,8 +4,10 @@
 
 In the last section, we created an application using Html.program that was just static Html. Now let's create an application that responds to user interaction using messages.
 
+Now, edit your **App.elm** file, or create a new one (just remember to give the module the same name that your source file has):
+
 ```elm
-module Main exposing (..)
+module App exposing (..)
 
 import Html exposing (Html, button, div, text, program)
 import Html.Events exposing (onClick)
