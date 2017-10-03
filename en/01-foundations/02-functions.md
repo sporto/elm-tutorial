@@ -40,7 +40,7 @@ In this case the signature is saying: Given an integer (Int) as argument return 
 You call it like:
 
 ```
-add1 3
+add 1 3
 ```
 
 In Elm we use *whitespace* to denote function application (instead of using parenthesis).
