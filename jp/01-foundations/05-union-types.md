@@ -99,7 +99,7 @@ respond answer =
 respond (Other 123)
 ```
 
-しかし、 `respond`は`a`として整数を期待するので、 `respond(Other "Hello")`はコンパイルエラーとなります。
+しかし、 `respond`は`a`として整数を期待するので、 `respond (Other "Hello")`はコンパイルエラーとなります。
 (訳注: 「respond: Anwer a -> String」のようにジェネリックなままで関数を定義することもできます。)
 
 ## 一般的な使用方法
@@ -121,4 +121,4 @@ type Action
 
 ---
 
-ユニオン型については他にも多くの話題があります。興味があればこちら [こちら](http://elm-lang.org/guide/model-the-problem)をご覧ください。
+ユニオン型については他にも多くの話題があります。興味があれば[こちら](http://elm-lang.org/guide/model-the-problem)をご覧ください。
