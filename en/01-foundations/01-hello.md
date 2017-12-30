@@ -28,7 +28,7 @@ main =
     text "Hello"
 ```
 
-Go to this folder on the terminal and type:
+Go to the project folder on the terminal and type:
 
 ```bash
 elm reactor
