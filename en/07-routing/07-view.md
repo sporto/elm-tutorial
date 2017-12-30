@@ -126,7 +126,7 @@ When navigate to a page we have the `playerId`, but we might not have the list o
 
 ➊ So first we check the type of `model.players`, we will only show the list if this attribute is a `RemoteData.Success list`.
 
-➋ Then we filter the players' list by that id and have a case expression that show the correct view depending if the player is found or not.
+➋ Then we filter the players' list by that id and have a case expression that shows the correct view depending if the player is found or not.
 
 ### notFoundView
 
