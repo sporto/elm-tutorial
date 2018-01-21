@@ -10,7 +10,7 @@ Create __src/Players/Edit.elm__:
 module Players.Edit exposing (..)
 
 import Html exposing (..)
-import Html.Attributes exposing (class, value, href)
+import Html.Attributes exposing (class)
 import Msgs exposing (Msg)
 import Models exposing (Player)
 
