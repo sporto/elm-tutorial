@@ -4,7 +4,7 @@
 
 最後に、メインモジュールのすべてを配線する必要があります。
 
-__src/Main.elm__を次のように変更します。
+__src/Main.elm__ を次のように変更します。
 
 ```elm
 module Main exposing (..)
@@ -39,7 +39,7 @@ main =
         , update = update
         , subscriptions = subscriptions
         }
-
+```
 ---
 
 ### 新しいImport
@@ -58,7 +58,7 @@ init location =
         ( initialModel currentRoute, Cmd.map PlayersMsg fetchAll )
 ```
 
-`init`関数は、`Navigation`から`Location`の初期値を取るようになりました。前に作成した`parseLocation`関数を使用してこの`Location`をパースします。次に、この初期化した__route__をモデルに保存します。
+`init`関数は、`Navigation`から`Location`の初期値を取るようになりました。前に作成した`parseLocation`関数を使用してこの`Location`をパースします。次に、この初期化した __route__ をモデルに保存します。
 
 ### main
 
