@@ -1,8 +1,8 @@
 # Languages
 
-* [English - v2](en/)
-* [English - v1](en-v01/)
-* [Français - v1](fr/)
-* [日本語 - v1](jp/)
-* [中文(繁體) - v1](zh-TW/)
-* [한국어 - v1](ko/)
+* [English - v2 (Elm 0.18)](en/)
+* [English - v1 (Elm 0.18)](en-v01/)
+* [Français - v1 (Elm 0.18)](fr/)
+* [日本語 - v1 (Elm 0.18)](jp/)
+* [中文(繁體) - v1 (Elm 0.18)](zh-TW/)
+* [한국어 - v1 (Elm 0.18)](ko/)
