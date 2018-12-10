@@ -1,6 +1,6 @@
 # Languages
 
-* [English - WIP - Elm 0.19](en-v03/)
+* [English - WIP - Elm 0.19](v03/en/)
 * [English - v2 - Elm 0.18](en/)
 * [English - v1 - Elm 0.18](en-v01/)
 * [Français - v1 - Elm 0.18](fr/)
