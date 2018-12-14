@@ -92,7 +92,7 @@ type OtherAnswer = DontKnow | Perhaps | Undecided
 type Answer = Yes | No | Other OtherAnswer
 ```
 
-Then you can pass this to our `respond` function (which expect `Answer`) like this:
+Then you can pass this to our `respond` function (which expects an `Answer`) like this:
 
 ```elm
 respond (Other Perhaps)
