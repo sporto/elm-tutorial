@@ -1,5 +1,5 @@
 
-This tutorial has not been updated to Elm 0.19. At the moment I have no plans to do so.
+**This tutorial has not been updated to Elm 0.19. At the moment I have no plans to do so.**
 
 ![Logo](en/logo.png)
 # Elm Tutorial
