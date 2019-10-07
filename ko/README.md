@@ -15,8 +15,6 @@ __[Elm](http://elm-lang.org/) 으로 싱글 페이지 웹 어플리케이션 (SP
 - 라우팅
 - CRUD
 
-[여기](http://www.elm-tutorial.org/)서 온라인으로 읽을 수 있습니다.
-
 [여기 (PDF, ePub, Mobi)](https://www.gitbook.com/book/sporto/elm-tutorial/details)서 오프라인 버전으로 다운로드도 가능합니다.
 
 ## 코드

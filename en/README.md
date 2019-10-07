@@ -15,13 +15,11 @@ This tutorial covers:
 - Routing
 - CRUD operations
 
-Read it online [here](http://www.elm-tutorial.org/).
-
 You can also download offline version [here (PDF, ePub, Mobi)](https://www.gitbook.com/book/sporto/elm-tutorial/details).
 
 ## Official guide
 
-This tutorial is not the official guide for Elm. You can find that one at <https://guide.elm-lang.org/>. Please also note that currently this tutorial makes some difference choices in structuring an application that the official guide. 
+This tutorial is not the official guide for Elm. You can find that one at <https://guide.elm-lang.org/>. Please also note that currently this tutorial makes some difference choices in structuring an application that the official guide.
 
 ## Code
 
