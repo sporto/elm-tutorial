@@ -16,8 +16,6 @@ Este tutorial contiene:
 - Enrutamiento
 - Operaciones CRUD
 
-Leer en línea [aquí](http://www.elm-tutorial.org/).
-
 También puede descargar la versión en línea [aquí (PDF, ePub, Mobi)](https://www.gitbook.com/book/sporto/elm-tutorial/details).
 
 ## Código

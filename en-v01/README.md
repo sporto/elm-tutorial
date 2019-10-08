@@ -15,8 +15,6 @@ This tutorial covers:
 - Routing
 - CRUD operations
 
-Read it online [here](http://www.elm-tutorial.org/).
-
 You can also download offline version [here (PDF, ePub, Mobi)](https://www.gitbook.com/book/sporto/elm-tutorial/details).
 
 ## Code

@@ -16,8 +16,6 @@ Les sujets abordés sont:
 - Gérer le routing
 - Les opérations CRUD (Create/Retrieve/Update/Delete)
 
-Vous pouvez le lire en ligne [ici](http://www.elm-tutorial.org/).
-
 Vous pouvez aussi télécharger les fichiers pour [lecture ultérieure ici (PDF, ePub, Mobi)](https://www.gitbook.com/book/sporto/elm-tutorial/details).
 
 ## Code
