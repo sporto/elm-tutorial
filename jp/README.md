@@ -15,8 +15,6 @@ __[Elm](http://elm-lang.org/)によるシングルページアプリ開発のチ
  - ルーティング
  - CRUD操作
 
-[こちら](http://www.elm-tutorial.org/)からオンラインで読めます。
-
 オフライン版は[こちら(PDF, ePub, Mobi)](https://www.gitbook.com/book/sporto/elm-tutorial/details)から。
 
 ## コード

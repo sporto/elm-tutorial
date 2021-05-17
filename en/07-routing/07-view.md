@@ -122,11 +122,11 @@ playerEditPage model playerId =
             text (toString err)
 ```
 
-When navigate to a page we have the `playerId`, but we might not have the list of players loaded or the actual player record for that id in the list. We need to account for this two cases. 
+When we navigate to a page we have the `playerId`, but we might not have the list of players loaded or the actual player record for that id in the list. We need to account for these two cases. 
 
 ➊ So first we check the type of `model.players`, we will only show the list if this attribute is a `RemoteData.Success list`.
 
-➋ Then we filter the players' list by that id and have a case expression that show the correct view depending if the player is found or not.
+➋ Then we filter the players' list by that id and have a case expression that shows the correct view depending if the player is found or not.
 
 ### notFoundView
 

@@ -4,7 +4,7 @@
 
 Maintenant que nous avons créé un message `ChangeLevel`, déclenchons le à partir de la vue d'édition du joueur.
 
-Dans __src/Players/Edit.elm__ changez `btnLevelDecrease` en `btnLevelIncrease`:
+Dans __src/Players/Edit.elm__ changez `btnLevelDecrease` et `btnLevelIncrease`:
 
 ```elm
 ...

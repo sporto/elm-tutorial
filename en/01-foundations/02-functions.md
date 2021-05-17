@@ -27,8 +27,8 @@ Between the backslash and the arrow, you list the arguments of the function, and
 A named function in Elm looks like this:
 
 ```elm
-add1 : Int -> Int
-add1 x =
+addOne : Int -> Int
+addOne x =
   x + 1
 ```
 
@@ -40,7 +40,7 @@ In this case the signature is saying: Given an integer (Int) as argument return 
 You call it like:
 
 ```
-add1 3
+addOne 3
 ```
 
 In Elm we use *whitespace* to denote function application (instead of using parenthesis).

@@ -15,8 +15,6 @@ __[Elm](http://elm-lang.org/) 開發單頁網頁應用程式（single page web a
 - 路由（Routing）
 - 增刪改查（CRUD）操作
 
-線上閱讀請到[這裡](http://www.elm-tutorial.org/)。
-
 你也可以在[這裡](https://www.gitbook.com/book/sporto/elm-tutorial/details)下載離線版本（PDF、ePub、Mobi）。
 
 ## 程式碼

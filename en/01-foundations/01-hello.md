@@ -28,7 +28,7 @@ main =
     text "Hello"
 ```
 
-Go to this folder on the terminal and type:
+Go to the project folder on the terminal and type:
 
 ```bash
 elm reactor
@@ -43,7 +43,7 @@ Listening on http://0.0.0.0:8000/
 
 Open `http://0.0.0.0:8000/` on a browser. And click on `Hello.elm`. You should see `Hello` on your browser.
 
-Note to you might see a warning about a missing type annotation for `main`. Ignore this for now, we will get to type annotations later.
+Note that you might see a warning about a missing type annotation for `main`. Ignore this for now, we will get to type annotations later.
 
 Let's review what is happening here:
 

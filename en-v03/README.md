@@ -6,33 +6,17 @@ __A tutorial on developing single page web applications (SPAs) with [Elm](http:/
 
 This tutorial covers:
 
-- Some Elm foundations
-- Understanding commands and subscriptions in Elm
-- Understanding the Elm architecture
-- Breaking an application in sub components and resources
-- Integrating CSS
+- Elm 0.19
+- Organising an Elm SPA
 - Fetching and parsing JSON
-- Routing
-- CRUD operations
+- Navigation
 
 You can also download offline version [here (PDF, ePub, Mobi)](https://www.gitbook.com/book/sporto/elm-tutorial/details).
-
-## Official guide
-
-This tutorial is not the official guide for Elm. You can find that one at <https://guide.elm-lang.org/>. Please also note that currently this tutorial makes some difference choices in structuring an application that the official guide.
 
 ## Code
 
 Code for the example application built in the second part of this tutorial can be
 found at <https://github.com/sporto/elm-tutorial-app>.
-
-## Requirements
-
-For this tutorial you will need:
-
-- Elm version 0.18 (Installation is covered later in the tutorial)
-- Node JS version 5.1 +
-- Yarn package manager <https://yarnpkg.com/en/>
 
 ## Contributing
 
@@ -44,4 +28,4 @@ Please open issues and send PRs at <https://github.com/sporto/elm-tutorial>.
 
 <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" /></a><br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License</a>.
 
-© Sebastian Porto 2016
+© Sebastian Porto 2018
