@@ -51,7 +51,7 @@ type Msg
 
 
 
--- VIEW
+-- ビュー
 
 
 view : Model -> Html Msg

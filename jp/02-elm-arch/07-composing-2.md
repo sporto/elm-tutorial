@@ -40,7 +40,7 @@ type Msg
 
 
 
--- VIEW
+-- ビュー
 
 
 view : AppModel -> Html Msg
