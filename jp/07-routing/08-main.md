@@ -4,7 +4,7 @@
 
 最後に、メインモジュールのすべてを配線する必要があります。
 
-__src/Main.elm__を次のように変更します。
+__src/Main.elm__ を次のように変更します。
 
 ```elm
 module Main exposing (..)
@@ -18,11 +18,11 @@ import Players.Commands exposing (fetchAll)
 import Routing exposing (Route)
 
 
-init : Result String Route -> ( Model, Cmd Msg )
-init result =
+init : Location -> ( Model, Cmd Msg )
+init location =
     let
         currentRoute =
-            Routing.routeFromResult result
+            Routing.parseLocation location
     in
         ( initialModel currentRoute, Cmd.map PlayersMsg fetchAll )
 
@@ -31,27 +31,15 @@ subscriptions : Model -> Sub Msg
 subscriptions model =
     Sub.none
 
-
-urlUpdate : Result String Route -> Model -> ( Model, Cmd Msg )
-urlUpdate result model =
-    let
-        currentRoute =
-            Routing.routeFromResult result
-    in
-        ( { model | route = currentRoute }, Cmd.none )
-
-
 main : Program Never
 main =
     Navigation.program Routing.parser
         { init = init
         , view = view
         , update = update
-        , urlUpdate = urlUpdate
         , subscriptions = subscriptions
         }
 ```
-
 ---
 
 ### 新しいImport
@@ -61,21 +49,17 @@ main =
 ### 初期化
 
 ```elm
-init : Result String Route -> ( Model, Cmd Msg )
-init result =
+init : Location -> ( Model, Cmd Msg )
+init location =
     let
         currentRoute =
-            Routing.routeFromResult result
+            Routing.parseLocation location
     in
         ( initialModel currentRoute, Cmd.map PlayersMsg fetchAll )
 ```
 
-init関数は `Routing`に追加した`parser`から初期的な出力を受け取ります。パーサーの出力は `Result`です。 __Navigation__モジュールは初期ブラウザ閲覧ロケーションを解析し、その結果を `init`に渡します。この__route__初期値をモデルに格納します。
-
-### urlUpdate
-
-`urlUpdate`は、ブラウザの場所が変更されるたびに__Navigation__パッケージによって呼び出されます。 `init`のように、ここではパーサの結果を得ます。ここで行うのは、新しい__route__をアプリケーションモデルに格納することだけです。
+`init`関数は、`Navigation`から`Location`の初期値を取るようになりました。前に作成した`parseLocation`関数を使用してこの`Location`をパースします。次に、この初期化した __route__ をモデルに保存します。
 
 ### main
 
-`main`は`Html.program`の代わりに `Navigation.program`を使います。 `Navigation.program`はHtml.programをラップしますが、ブラウザの場所が変更されたときには`urlUpdate`コールバックを追加します。
+`main`は`Html.program`の代わりに `Navigation.program`を使います。 `Navigation.program`はHtml.programをラップしますが、ブラウザの`Location`が変更されたときにはメッセージを発行します。この場合、メッセージは`OnLocationChange`になるでしょう。
